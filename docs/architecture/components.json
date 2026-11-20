@@ -1,5 +1,28 @@
 {
   "$comment": "System level: the apps, the libraries and the shared datasets of this monorepo (ADR-0010, ADR-0013). Each app's internal components are in apps/<app>/docs/architecture/components.json. Validated and rendered into architecture.md by tools/monorepo/system-map.sh; schema in docs/architecture/metrics/README.md#components-files.",
-  "components": [],
-  "datasets": []
+  "components": [
+    {
+      "name": "generate-pets-and-building-user-manual",
+      "kind": "app",
+      "responsibility": "Holds the instructions used to generate the pets and building user manuals.",
+      "paths": [
+        "apps/generate-pets-and-building-user-manual/**"
+      ],
+      "mayDependOn": [],
+      "reads": [],
+      "writes": [
+        "user-manuals-pets-and-house-rules"
+      ]
+    }
+  ],
+  "datasets": [
+    {
+      "name": "user-manuals-pets-and-house-rules",
+      "owner": "generate-pets-and-building-user-manual",
+      "description": "Dog owner's, cat owner's and building rules manuals, one Markdown file per chapter, with seeded quality issues for testing a manual assistant.",
+      "contract": "libs/contracts/user-manuals-pets-and-house-rules/",
+      "location": "${SHARED_DATA_DIR}/user-manuals-pets-and-house-rules",
+      "git": "commit"
+    }
+  ]
 }
