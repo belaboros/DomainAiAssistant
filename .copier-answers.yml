@@ -1,0 +1,11 @@
+# Written by Copier; do not edit by hand. Used by `copier update`.
+_commit: 45cd786
+_src_path: gh:belaboros/sdd-template-for-monorepo-with-claude
+copyright_holder: belaboros
+description: _Not yet defined._
+github_owner: belaboros
+initial_apps: ''
+license: Apache-2.0
+project_name: DomainAiAssistant
+project_slug: DomainAiAssistant
+visibility: public
