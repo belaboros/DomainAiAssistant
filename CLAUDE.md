@@ -12,7 +12,7 @@ Two levels (ADR-0011): the root describes the **system**, `apps/<app>/` describe
 |------|---------------|
 | [apps/](apps/README.md) | One folder per application: code, `CLAUDE.md`, `.env.example`, and `docs/` (the app's specs, architecture, ADRs, metrics) |
 | [libs/](libs/README.md) | Libraries (`libs/<lib>/`: source code apps and other libraries import or call) and dataset contracts ([libs/contracts/](libs/contracts/README.md)) |
-| [data/](data/README.md) | Default `SHARED_DATA_DIR`: shared datasets at runtime (git-ignored) |
+| [data/](data/README.md) | Default `SHARED_DATA_DIR`: shared datasets at runtime; each `data/<dataset>/` is committed or git-ignored by choice (ADR-0016) |
 | [.env.example](.env.example) | Base environment for every app (Claude API key, model, shared data dir); apps layer their own `.env` on top (ADR-0012) |
 | [docs/ideas/](docs/ideas/) | Every idea, verbatim, with a Q&A log; one number sequence for the whole repo |
 | [docs/specs/](docs/specs/) | Specs that span apps or touch libraries or data, and the index of **all** specs (single-app specs live in `apps/<app>/docs/specs/`) |
@@ -28,6 +28,7 @@ Two levels (ADR-0011): the root describes the **system**, `apps/<app>/` describe
 | [tools/quality/](tools/quality/) | Language registry and quality-gate hooks |
 | [.pre-commit-config.yaml](.pre-commit-config.yaml), [.github/workflows/security.yml](.github/workflows/security.yml) | Security and quality checks, run locally and in CI (ADR-0008) |
 | [tools/bootstrap-github.sh](tools/bootstrap-github.sh) | Applies branch protection and GitHub security settings (ADR-0009) |
+| [tools/git/protect-main-branch.sh](tools/git/protect-main-branch.sh) | Hook that blocks deleting the `main` branch (ADR-0017) |
 | [tools/sessions/](tools/sessions/) | `save-session.sh`, run by `/save-claude-chat-session [name]` and the `SessionEnd` hook; saves each session once (ADR-0014) |
 
 ## How we work: specification-driven development
@@ -45,7 +46,7 @@ idea  ──/idea──▶ docs/ideas/NNNN-slug.md                 (original wor
 - `NNNN` is shared: idea `0003` becomes spec `0003-*`, wherever it lives. Root ADRs and each app's ADRs have their own numbering.
 - **Scope** of an idea is `system` (several apps, libraries, shared data, repo tooling) or one app. `/spec` decides it with the user and records it in the idea and the spec.
 - Run each stage in a **fresh session** (`/clear`), so the files carry the context instead of the chat history.
-- Other skills: `/scaffold` creates an app, library or dataset; `/adr` records a decision; `/arch-metrics` computes and stores metrics; `/add-language` sets up the quality gate for a new programming language.
+- Other skills: `/scaffold` creates an app, library or dataset; `/adr` records a decision; `/arch-metrics` computes and stores metrics; `/add-language` sets up the quality gate for a new programming language; `/commit-push-merge-feature-branch [message]` commits everything, pushes, merges the feature branch into `main` through a PR once its checks pass, and deletes the branch (ADR-0017).
 
 ## Rules
 
@@ -58,7 +59,7 @@ idea  ──/idea──▶ docs/ideas/NNNN-slug.md                 (original wor
 7. **High cohesion, low coupling are enforced, not hoped for**, at both levels. No dependency cycles. Functions stay within the complexity limits in [docs/architecture/metrics/README.md](docs/architecture/metrics/README.md). Don't weaken a threshold or a boundary rule without an ADR.
 8. **Configuration comes from the layered environment** (ADR-0012): process env > `apps/<app>/.env` > root `.env`. Run apps through `tools/env/with-env.sh <app> -- <command>`. A new variable goes into the matching `.env.example` (root if every app needs it, else the app's) in the same change. Never read, print or ask for the contents of a `.env` file; use `with-env.sh <app> --print` to see which keys are set.
 9. **New programming language ⇒ `/add-language` first.** A hook blocks writing source files in a language that is not registered in [tools/quality/languages.json](tools/quality/languages.json). Do not get around it (for example by writing the file through Bash).
-10. **This repo is public.** Never commit secrets, tokens, personal data or shared runtime data. Never bypass the hooks (`--no-verify`). If gitleaks flags something, remove it; only allowlist a confirmed false positive in `.gitleaks.toml`, with a comment.
+10. **This repo is public.** Never commit secrets, tokens or personal data, and commit a `data/<dataset>/` only if its owner chose `commit` (ADR-0016). Never bypass the hooks (`--no-verify`). If gitleaks flags something, remove it; only allowlist a confirmed false positive in `.gitleaks.toml`, with a comment.
 11. **Keep status fields and indexes current**: the `Status:` lines, [docs/ideas/README.md](docs/ideas/README.md), [docs/specs/README.md](docs/specs/README.md) (all specs, both levels), and the ADR index at the level where an ADR was added.
 
 ## Conventions
