@@ -64,6 +64,25 @@ These are the instructions used to generate the dataset [`user-manuals-pets-and-
 > Most of the chapters are single files.
 > But there are 1-2 chapters which are sub-directories holding 2-3 files as sub-chapters.
 
+### A3 · 2026-11-21 · Passages the ontology builder must skip (for idea 0002)
+
+> Let's modify the generated pets manuals.
+>
+> 1. The first file of the dog owner's manual shall start with a nice personal story of the writer with his dog.
+> Limit it to 5-10 sentences.
+>
+> Intention: the OntologyBuilder should recognize that this is an instance-level info and should skip it.
+>
+> 2. The first file of the cat owners manual shall start with a nice story how much and why the Egyptians liked the cats and respected them as holy.
+> Limit it to 5-10 sentences.
+>
+> Intention: the OntologyBuilder should recognize that this is "generic story" and should skip it.
+>
+> 3. The house rule manuals shall be started with a nice quote and a short explanation which expresses that the common intrest shall bne more important that the individual interest for most of the cases and we can live in harmony with each-other as agreeable people.
+> Find a good exampe.
+>
+> Intention: the OntologyBuilder should recognize that this is a quote and generic story and and should skip it.
+
 ## Part B · Conventions added during generation
 
 ### B1 · Structure
@@ -84,7 +103,7 @@ These are the instructions used to generate the dataset [`user-manuals-pets-and-
 
 ### B3 · Writing style
 
-- Keep chapters short: 2 to 6 sentences or a short list.
+- Keep chapters short: 2 to 6 sentences or a short list. The opening passages of B7 come on top of that.
 - State facts as checkable rules: numbers, ages, times, places and obligations ("must", "may not"). The assistant can then chain them across manuals.
 - Write in plain English and use the same word for the same thing within a manual. The leash/lead drift is the only deliberate exception.
 
@@ -105,3 +124,10 @@ The seeded issues, the expected answers and the multi-hop questions are in [docs
 ### B6 · Contract
 
 The layout in B2 is the dataset contract. If you change file names, numbering or the heading format, you change the contract: follow [the contract's versioning rules](../../../libs/contracts/user-manuals-pets-and-house-rules/README.md#versioning).
+
+### B7 · Passages to skip (from A3)
+
+- Each manual's first chapter (dog 1, cat 1, rules 1) opens, right after the heading, with one passage that is not domain knowledge: dog 1 a personal story of the writer and their dog Bodza (instance-level), cat 1 a story about cats in ancient Egypt (generic story), rules 1 a quote by Cicero in a Markdown blockquote plus a short paragraph on the shared interest (quote plus motivational text).
+- Each passage is 5 to 10 sentences. Don't label it ("anecdote", "quote", "skip"): the builder must recognise it from the text.
+- Keep the passages free of rules, numbers or terms that could change a seeded issue or a multi-hop chain. Any number in them (the dog's 13 years) must agree with the manuals.
+- No other chapter gets such a passage. The expected behaviour is in the answer key.

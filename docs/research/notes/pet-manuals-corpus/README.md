@@ -43,6 +43,30 @@ References below use `dog`, `cat` and `rules` plus the chapter number.
 **Question:** "How long may I leave my dog alone?"
 **Expected:** the assistant gives both statements with their sources and says that they conflict: a fixed limit against a limit that depends on training and breed. It must not quietly pick one. A good answer adds that the 2-hour limit for puppies is not contradicted.
 
+### Content to exclude: anecdote, generic story, quote
+
+Added 2026-11-21 for the exclusion step of [idea 0002](../../../ideas/0002-ontology-builder.md) ("ignorable parts which do not belong to the ontology"). Each first chapter opens with a paragraph that is not domain knowledge. The passages carry no label, so the builder has to recognise them from the text itself.
+
+| Where | Passage | Kind | Why it is excluded |
+|-------|---------|------|--------------------|
+| dog 1, first paragraph | The writer's story of Bodza, a shelter dog from Szentendre, who lived with them for 13 years | Instance-level (ABox) anecdote | It is about one specific dog and owner: names, places, events |
+| cat 1, first paragraph | How the ancient Egyptians valued cats: grain guards, Bastet, Bubastis, mummies, mourning, punishment | Generic historical story | Background colour; it states nothing about owning a cat today |
+| rules 1, quote and the paragraph after it | Cicero, *"Salus populi suprema lex esto"*, and a note that the shared interest comes first in most cases | Quote plus motivational text | A value statement, not a rule: it creates no obligation, actor or relation |
+
+**Why the Cicero passage is left out.** It sounds like it belongs, because it talks about rules and gives a principle for the whole building. It still adds nothing the ontology can use:
+
+- **It is not a rule.** A rule in the ontology names who must do what, when, or what is forbidden (for example "a dog on a lead of at most 2 m in the stairwell"). The passage names no actor, action, condition or limit, so nothing can be checked against it.
+- **It is too vague to apply.** "In most cases the shared interest comes first" doesn't say which cases. As a rule it would overlap with every specific rule, or seem to override it, and it would show up as a false contradiction wherever a rule protects what one resident is allowed to do.
+- **The quote is about something else.** Cicero wrote about the laws of a state, not about these buildings. Quoting him supports the rules with authority but defines nothing in this domain.
+- **The concrete rules already carry the idea.** Quiet hours, the shared yard and clear escape routes are where "the common interest" actually becomes something. The ontology captures those rules, not the motive behind them.
+- **It would not help a reader.** A level-1 concept should help a newcomer understand what the domain is about. "Live in harmony" fits any community, so it tells them nothing about this one.
+
+If a reviewer wants to keep the intent, it belongs in a description of the ontology itself (e.g. `dcterms:description` or a `skos:scopeNote` on the house-rules scheme), not in a concept, relation or rule.
+
+**Expected:** the builder marks all three passages `ignorable`, gives a reason (instance-level, generic story, quote), and extracts nothing from them: no `Bodza` concept, no `Bastet` or `Egypt`, and no rule such as "shared interest overrides individual interest". The real content that follows in the same files is still extracted (dog 1: lifespan, registration and microchip after 4 months; cat 1: lifespan, needs; rules 1: buildings A–C, `Resident`, `HouseManagement`).
+
+**Traps:** "13 years" in the dog story fits the 10–15-year lifespan in dog 1, but it must not become evidence for that range or a lifespan statement of its own. The Egyptian penalty for killing a cat must not turn into a legal obligation next to dog 10.
+
 ## Questions that need 3+ hops
 
 | # | Question | Chain of facts | Expected conclusion |
