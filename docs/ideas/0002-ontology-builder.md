@@ -387,3 +387,10 @@ Append one entry per question, oldest first. Never delete entries.
 **Options offered:** Add cli → api (Recommended): add `api` to cli's mayDependOn, Ce 2 → 3; app components.json, architecture.md, .importlinter, ontology-builder/ADR-0010 / Separate serve entry: `api` gets its own console script (e.g. `ontology-builder-serve`), no new edge, the plan's `serve` command is renamed
 **A:** "Add cli → api (Recommended)"
 **Effect:** `cli` may depend on `api` (app `components.json`, `architecture.md`, `.importlinter`); recorded as ontology-builder/ADR-0010; plan (Architecture impact) updated.
+
+### 2026-11-21 · implement · Q47
+**Asked by:** Claude
+**Q:** [add-language · decide] T22: which package manager should the JavaScript/TypeScript quality gate use? One workspace at the repo root, with `apps/ontology-builder/web` as its first member; the Mermaid CLI dev tool moves in too. npm 11 is installed; pnpm is not.
+**Options offered:** npm workspaces (Recommended): already installed, the root `package.json` and `package-lock.json` are npm already, native Dependabot and `npm audit` support / pnpm workspaces: faster, stricter installs and `pnpm-workspace.yaml`, but pnpm must be installed locally and in CI and the lockfile replaced
+**A:** "npm workspaces (Recommended)"
+**Effect:** The JS/TS gate uses npm workspaces at the repo root (`package.json` `workspaces`, one `package-lock.json`); recorded in the root ADR written by `/add-language js-ts`.

@@ -42,8 +42,13 @@ apps/ontology-builder/web/dist/
 /data/.*.staging/
 /data/.*.previous/
 
-# Repo-wide Node dev tools (package.json at the root: the Mermaid CLI for the render test, plan 0002 T15)
-/node_modules/
+# JS/TS (ADR-0021): the npm workspace's packages, build output, test and coverage reports
+node_modules/
+*.tsbuildinfo
+coverage/
+playwright-report/
+test-results/
+blob-report/
 
 # Shared runtime data (ADR-0016): data/ is committed by default. Each data/<dataset>/ that must
 # stay out of git gets its own line below (tools/monorepo/new.sh adds it for `ignore` datasets,

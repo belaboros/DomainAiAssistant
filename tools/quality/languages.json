@@ -3,11 +3,32 @@
   "languages": [
     {
       "name": "python",
-      "extensions": ["py", "pyi", "ipynb"],
+      "extensions": [
+        "py",
+        "pyi",
+        "ipynb"
+      ],
       "added": "2026-11-21",
       "adr": "docs/architecture/adr/0020-introduce-python-and-its-quality-gate.md",
       "lint": "uv run ruff check . && uv run ruff format --check . && uv run mypy && uv run python tools/quality/python/gen_importlinter.py --check && uv run lint-imports && uv run python tools/quality/python/boundaries.py",
       "metrics": "uv run python tools/quality/python/collect_metrics.py <components.json>"
+    },
+    {
+      "name": "js-ts",
+      "extensions": [
+        "js",
+        "jsx",
+        "mjs",
+        "cjs",
+        "ts",
+        "tsx",
+        "mts",
+        "cts"
+      ],
+      "added": "2026-11-21",
+      "adr": "docs/architecture/adr/0021-introduce-javascript-typescript-and-its-quality-gate.md",
+      "lint": "npm run lint",
+      "metrics": "node tools/quality/js-ts/collect_metrics.ts <components.json>"
     }
   ]
 }

@@ -52,6 +52,7 @@ jobs:
       - run: pip install pre-commit==4.7.0
       - name: Run hooks
         env:
-          # gitleaks: covered by the full-history job above; Python hooks: run in python.yml
-          SKIP: gitleaks-system,ruff,ruff-format,mypy,python-cc-report,importlinter-config,lint-imports,python-boundaries,pytest,pip-audit
+          # gitleaks: covered by the full-history job above; Python hooks: run in python.yml;
+          # JS/TS hooks: run in js-ts.yml (ADR-0021)
+          SKIP: gitleaks-system,ruff,ruff-format,mypy,python-cc-report,importlinter-config,lint-imports,python-boundaries,pytest,pip-audit,prettier,eslint,tsc,js-ts-cc-report,depcruise-config,depcruise,js-ts-boundaries,vitest,npm-audit
         run: pre-commit run --all-files --show-diff-on-failure

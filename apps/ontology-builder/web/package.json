@@ -1,0 +1,15 @@
+{
+  "name": "ontology-builder-web",
+  "private": true,
+  "description": "The review GUI of ontology-builder (plan 0002): React + TypeScript, talks to the API only over HTTP.",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run --passWithNoTests",
+    "e2e": "playwright test --pass-with-no-tests",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.1",
+    "vitest": "5.1.0"
+  }
+}

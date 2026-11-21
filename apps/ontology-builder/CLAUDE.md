@@ -21,14 +21,15 @@ This file adds to the root `CLAUDE.md`; everything there applies here too. Purpo
 
 ## Commands
 
-Stack (plan 0002, `ontology-builder/ADR-0002`): a Python back end (FastAPI, LinkML, rdflib, pySHACL, the Anthropic SDK; package `ontology_builder` in `src/`, managed by uv), and a React + TypeScript front end in `web/` (Vite, Vitest, Playwright). Python is set up (root ADR-0020: uv workspace member, Python 3.13; lint, types and boundaries are the repo-wide commands in the root `CLAUDE.md`). TypeScript is added by `/add-language js-ts` (task T22); until then no `.ts` or `.tsx` file may be written.
+Stack (plan 0002, `ontology-builder/ADR-0002`): a Python back end (FastAPI, LinkML, rdflib, pySHACL, the Anthropic SDK; package `ontology_builder` in `src/`, managed by uv), and a React + TypeScript front end in `web/` (Vite, Vitest, Playwright). Python is set up (root ADR-0020: uv workspace member, Python 3.13; lint, types and boundaries are the repo-wide commands in the root `CLAUDE.md`). TypeScript is set up too (root ADR-0021): `web/` is a workspace of the root npm workspace (Node 26, TypeScript 6 strict); lint, types, boundaries and tests are the repo-wide JS/TS commands in the root `CLAUDE.md`.
 
 - Add a back-end dependency: `uv add --package ontology-builder <package>==<version>`
 - Regenerate the Pydantic models after a change to `src/ontology_builder/model/schema/ontology_builder.yaml`: `uv run python apps/ontology-builder/tools/gen_model.py` (never edit `model/_generated.py` by hand; a test fails when it drifts). New slots must be optional (FR-15).
 - Back-end tests: `uv run --package ontology-builder pytest apps/ontology-builder/tests` (add `-m mermaid` for the Mermaid render test)
-- Mermaid render test setup (once): `npm ci --ignore-scripts && npx --no-install puppeteer browsers install chrome-headless-shell` at the repo root. The Mermaid CLI is a root dev tool (`package.json`) until `/add-language js-ts` (T22); CI runs it in its own job.
+- Mermaid render test setup (once): `npm ci --ignore-scripts && npx --no-install puppeteer browsers install chrome-headless-shell` at the repo root. The Mermaid CLI is a dev tool of the root npm workspace (`package.json`); CI runs it in its own job.
 - Export the OpenAPI schema after an API change (the TypeScript client is generated from it; a drift test fails until you do): `uv run python apps/ontology-builder/tools/export_openapi.py` writes `web/openapi.json`
-- Front-end tests: `npm --prefix apps/ontology-builder/web test`; end to end: `npm --prefix apps/ontology-builder/web run e2e`
+- Front-end tests: `npm test --workspace apps/ontology-builder/web` (Vitest; tests next to the code as `src/**/*.test.ts(x)`); end to end: `npm run e2e --workspace apps/ontology-builder/web` (Playwright, `e2e/`)
+- Add a front-end dependency: `npm install --workspace apps/ontology-builder/web --save-exact <package>@<version>`
 - Build the GUI: `npm --prefix apps/ontology-builder/web run build`
 - Create an ontology (domain admin): `tools/env/with-env.sh ontology-builder -- uv run --package ontology-builder ontology-builder create <ontology-name> --scope <scope.yaml> --user <handle>`
 - Run the GUI: `tools/env/with-env.sh ontology-builder -- uv run --package ontology-builder ontology-builder serve <ontology-name> [--port <port>]`

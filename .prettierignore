@@ -1,0 +1,8 @@
+# Prettier checks JS/TS files only (ADR-0021); these folders are generated or not ours.
+node_modules/
+dist/
+coverage/
+playwright-report/
+test-results/
+data/
+apps/*/.work/

@@ -22,7 +22,7 @@ updates:
       python:
         patterns: ["*"]
 
-  # Node dev tools at the root: the Mermaid CLI for the level-N.md render test (plan 0002, T15).
+  # JS/TS: the npm workspace at the root, its workspaces and the dev tools (ADR-0021).
   - package-ecosystem: npm
     directory: /
     schedule:
@@ -30,5 +30,5 @@ updates:
     cooldown:
       default-days: 7
     groups:
-      node-dev-tools:
+      js-ts:
         patterns: ["*"]

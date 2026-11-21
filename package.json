@@ -1,8 +1,36 @@
 {
-  "name": "domain-ai-assistant-dev-tools",
+  "name": "domain-ai-assistant",
   "private": true,
-  "description": "Repo-wide Node dev tools. The Mermaid CLI renders every diagram of the level-N.md releases in the `mermaid` pytest marker (plan 0002, T15). The front-end workspace is added by /add-language js-ts (T22).",
+  "description": "The npm workspace of every JS/TS app and library, and the repo-wide JS/TS quality gate (ADR-0021). The Mermaid CLI renders the diagrams of the level-N.md releases (plan 0002, T15).",
+  "type": "module",
+  "engines": {
+    "node": ">=26"
+  },
+  "workspaces": [
+    "apps/ontology-builder/web"
+  ],
+  "scripts": {
+    "format:check": "prettier --check \"**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}\"",
+    "format": "prettier --write \"**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}\"",
+    "lint:eslint": "eslint --max-warnings 0 .",
+    "typecheck": "tsc -p tsconfig.json && npm run typecheck --workspaces --if-present",
+    "cc": "node tools/quality/js-ts/cc_report.ts",
+    "boundaries": "node tools/quality/js-ts/gen_depcruise.ts --check && depcruise --config .dependency-cruiser.json apps libs tools && node tools/quality/js-ts/boundaries.ts",
+    "lint": "npm run format:check && npm run lint:eslint && npm run typecheck && npm run cc && npm run boundaries",
+    "test": "npm test --workspaces --if-present",
+    "e2e": "npm run e2e --workspaces --if-present",
+    "audit": "tools/quality/js-ts/audit.sh"
+  },
   "devDependencies": {
-    "@mermaid-js/mermaid-cli": "12.2.0"
+    "@eslint/js": "10.0.1",
+    "@mermaid-js/mermaid-cli": "12.2.0",
+    "@types/node": "26.6.6",
+    "dependency-cruiser": "18.7.2",
+    "eslint": "10.15.0",
+    "eslint-plugin-security": "4.2.1",
+    "globals": "17.14.0",
+    "prettier": "3.10.1",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.72.2"
   }
 }

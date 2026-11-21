@@ -1,0 +1,49 @@
+name: js-ts
+
+# The JS/TS quality gate (ADR-0021): formatting, lint and complexity, strict types, boundaries
+# from components.json, tests and the dependency audit. Same commands as the pre-commit hooks.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  gate:
+    name: JS/TS quality gate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+          package-manager-cache: false
+      - name: Install the locked workspace
+        run: npm ci --ignore-scripts
+      - name: Formatting (prettier)
+        run: npm run format:check
+      - name: Lint, complexity and security rules (eslint)
+        run: npm run lint:eslint
+      - name: Types (tsc strict, every workspace)
+        run: npm run typecheck
+      - name: Complexity report (warn band)
+        run: npm run cc
+      - name: Boundaries (dependency-cruiser, component cycles)
+        run: npm run boundaries
+      - name: Tests (vitest, every workspace)
+        run: npm test
+      - name: End-to-end tests (playwright, every workspace)
+        run: npm run e2e
+      - name: Dependency audit
+        run: npm run audit
