@@ -62,12 +62,11 @@ jobs:
       - uses: astral-sh/setup-uv@1db35dd8eee11c5894872e0b383ae6c406cf738d # v10.4.0
         with:
           enable-cache: false
+      # The npm packages are audited by the JS/TS gate (js-ts.yml, ADR-0021).
       - name: Install the locked workspace and the Mermaid CLI
         run: |
           uv sync --locked
           npm ci --ignore-scripts
           npx --no-install puppeteer browsers install chrome-headless-shell
-      - name: Audit the Node dev tools
-        run: npm audit --omit=optional
       - name: Render every diagram
         run: uv run pytest -m mermaid -q
