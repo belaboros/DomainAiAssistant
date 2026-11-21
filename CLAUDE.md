@@ -64,8 +64,16 @@ idea  ──/idea──▶ docs/ideas/NNNN-slug.md                 (original wor
 
 ## Conventions
 
-- After cloning: `brew install gitleaks pre-commit jq && pre-commit install`, then `cp .env.example .env` and fill it in. Check an app's environment: `tools/env/with-env.sh <app> --check`. Run every check: `pre-commit run --all-files`.
+- After cloning: `brew install gitleaks pre-commit jq uv && pre-commit install && uv sync`, then `cp .env.example .env` and fill it in. Check an app's environment: `tools/env/with-env.sh <app> --check`. Run every check: `pre-commit run --all-files`.
 - GitHub protection (once, after the first push): `tools/bootstrap-github.sh`.
 - This project was generated from [sdd-template-for-monorepo-with-claude](https://github.com/belaboros/sdd-template-for-monorepo-with-claude). Pull template improvements with `copier update --trust` on a clean branch, and review the diff. Never edit `.copier-answers.yml` by hand.
 - Names of apps, libraries and datasets are kebab-case. Dates are absolute (`YYYY-MM-DD`). Diagrams are Mermaid in Markdown (ADR-0004).
-- Tech stack, build, test, lint and metrics commands: _added here (repo-wide) or in `apps/<app>/CLAUDE.md` (per app) by `/add-language` and `/plan`._
+- Tech stack, build, test, lint and metrics commands: repo-wide ones below, per-app ones in `apps/<app>/CLAUDE.md` (added by `/add-language` and `/plan`).
+- **Python** (ADR-0020): one uv workspace at the root (`pyproject.toml`, `uv.lock`, Python 3.13). A Python app or library is a workspace member with its own `pyproject.toml` (src layout); add it to `[tool.uv.workspace] members` and to mypy's `files` in the root `pyproject.toml`.
+  - Install: `uv sync`
+  - Lint and complexity: `uv run ruff check . && uv run ruff format --check .`; warn band (CC 11–15): `uv run python tools/quality/python/cc_report.py`
+  - Types: `uv run mypy`
+  - Boundaries: `uv run python tools/quality/python/gen_importlinter.py` (regenerate `.importlinter` after a `components.json` change; `--check` in the gate), `tools/quality/python/lint-imports.sh`, `uv run python tools/quality/python/boundaries.py`
+  - Tests: `uv run pytest`
+  - Dependency audit: `tools/quality/python/audit.sh`
+- **Metrics** (all languages): `uv run python tools/quality/arch_metrics.py [all | system | <app>]` writes the snapshots, `latest.md` and the coupling diagrams (used by `/arch-metrics`).

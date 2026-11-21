@@ -1,0 +1,499 @@
+{
+  "request": {
+    "max_tokens": 16000,
+    "messages": [
+      {
+        "content": "Document: 08-leaving-your-dog-alone.md\nTitle: 8. Leaving Your Dog Alone\n\nSource units:\n\n[U1] paragraph \u00b7 8. Leaving Your Dog Alone\nDogs are social animals. **Never leave an adult dog alone at home for more than 6 hours.** Puppies should not be left alone for more than 2 hours.\n\n[U2] paragraph \u00b7 8. Leaving Your Dog Alone\nBefore you leave, walk the dog, leave water and a safe chew toy, and keep your departure low-key. If your dog barks or howls while you are away, train it to be alone step by step, starting with a few minutes.\n\nThe first step gave the verdicts and the candidates below. Now give only the rules and properties of this document. Refer to these candidates by key, or to keys of other rules and properties you define now; leave every other list out.\n\nCandidates (kind, key: label):\n- statement s.dogs-social: Dogs are social animals\n- statement s.adult-alone-6h: Adult dog alone at most 6 hours\n- statement s.puppy-alone-2h: Puppy alone at most 2 hours\n- statement s.prepare-departure: Preparing before leaving\n- statement s.train-alone: Training a barking dog to be alone\n- term t.dog: dog\n- term t.adult-dog: adult dog\n- term t.puppy: puppy\n- term t.chew-toy: chew toy\n- term t.walk: walk\n- concept c.dog: dog\n- concept c.adult-dog: adult dog\n- concept c.puppy: puppy\n- concept c.owner: owner\n- concept c.leaving-alone: leaving the dog alone\n- concept c.walk: walk\n- concept c.water: water\n- concept c.chew-toy: safe chew toy\n- concept c.barking: barking or howling\n- concept c.alone-training: training to be alone\n- relation r.owner-leaves-dog: leaves alone\n- relation r.owner-walks-dog: walks before leaving\n- relation r.owner-leaves-water: leaves for the dog\n- relation r.owner-leaves-toy: leaves for the dog\n- relation r.training-addresses-barking: addresses\n\nIgnorable units: none\n",
+        "role": "user"
+      }
+    ],
+    "model": "claude-opus-5-5",
+    "output_config": {
+      "format": {
+        "schema": {
+          "$defs": {
+            "CandidateProperty": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence": {
+                  "description": "Aliases (U1, U2, ...) of the source units the candidate comes from.",
+                  "items": {
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "title": "Evidence",
+                  "type": "array"
+                },
+                "key": {
+                  "description": "Local key, unique in one response.",
+                  "title": "Key",
+                  "type": "string"
+                },
+                "label": {
+                  "title": "Label",
+                  "type": "string"
+                },
+                "level": {
+                  "$ref": "#/$defs/Level"
+                },
+                "level_reason": {
+                  "title": "Level Reason",
+                  "type": "string"
+                },
+                "name": {
+                  "title": "Name",
+                  "type": "string"
+                },
+                "of": {
+                  "description": "Key of the candidate the property belongs to.",
+                  "title": "Of",
+                  "type": "string"
+                },
+                "unit": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "{default: None}",
+                  "title": "Unit"
+                },
+                "value": {
+                  "title": "Value",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "key",
+                "label",
+                "evidence",
+                "level",
+                "level_reason",
+                "of",
+                "name",
+                "value"
+              ],
+              "title": "CandidateProperty",
+              "type": "object"
+            },
+            "CandidateRule": {
+              "additionalProperties": false,
+              "properties": {
+                "action": {
+                  "title": "Action",
+                  "type": "string"
+                },
+                "actor": {
+                  "title": "Actor",
+                  "type": "string"
+                },
+                "cardinality": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/$defs/CandidateRuleCardinality"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "{default: None}"
+                },
+                "condition": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "{default: None}",
+                  "title": "Condition"
+                },
+                "evidence": {
+                  "description": "Aliases (U1, U2, ...) of the source units the candidate comes from.",
+                  "items": {
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "title": "Evidence",
+                  "type": "array"
+                },
+                "key": {
+                  "description": "Local key, unique in one response.",
+                  "title": "Key",
+                  "type": "string"
+                },
+                "label": {
+                  "title": "Label",
+                  "type": "string"
+                },
+                "level": {
+                  "$ref": "#/$defs/Level"
+                },
+                "level_reason": {
+                  "title": "Level Reason",
+                  "type": "string"
+                },
+                "limit": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/$defs/Limit"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "{default: None}"
+                },
+                "modality": {
+                  "$ref": "#/$defs/Modality"
+                },
+                "refers_to": {
+                  "anyOf": [
+                    {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "Keys of the candidates the rule refers to.\n\n{default: None}",
+                  "title": "Refers To"
+                }
+              },
+              "required": [
+                "key",
+                "label",
+                "evidence",
+                "level",
+                "level_reason",
+                "modality",
+                "actor",
+                "action"
+              ],
+              "title": "CandidateRule",
+              "type": "object"
+            },
+            "CandidateRuleCardinality": {
+              "additionalProperties": false,
+              "properties": {
+                "max": {
+                  "anyOf": [
+                    {
+                      "description": "{minimum: 0}",
+                      "type": "integer"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "{default: None}",
+                  "title": "Max"
+                },
+                "min": {
+                  "anyOf": [
+                    {
+                      "description": "{minimum: 0}",
+                      "type": "integer"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "{default: None}",
+                  "title": "Min"
+                },
+                "relation": {
+                  "description": "Key of a candidate relation.",
+                  "title": "Relation",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "relation"
+              ],
+              "title": "CandidateRuleCardinality",
+              "type": "object"
+            },
+            "Comparator": {
+              "enum": [
+                "lt",
+                "le",
+                "eq",
+                "ge",
+                "gt"
+              ],
+              "title": "Comparator"
+            },
+            "Level": {
+              "description": "How important an element is for a reader of the domain (FR-13).",
+              "enum": [
+                "level-1",
+                "level-2",
+                "level-3",
+                "ignorable"
+              ],
+              "title": "Level"
+            },
+            "Limit": {
+              "additionalProperties": false,
+              "properties": {
+                "comparator": {
+                  "$ref": "#/$defs/Comparator"
+                },
+                "unit": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "{default: None}",
+                  "title": "Unit"
+                },
+                "value": {
+                  "title": "Value",
+                  "type": "number"
+                }
+              },
+              "required": [
+                "comparator",
+                "value"
+              ],
+              "title": "Limit",
+              "type": "object"
+            },
+            "Modality": {
+              "enum": [
+                "must",
+                "must_not",
+                "may"
+              ],
+              "title": "Modality"
+            }
+          },
+          "additionalProperties": false,
+          "description": "Pass 1, call B for one document; rules and properties.",
+          "properties": {
+            "properties": {
+              "anyOf": [
+                {
+                  "items": {
+                    "$ref": "#/$defs/CandidateProperty"
+                  },
+                  "type": "array"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "{default: None}",
+              "title": "Properties"
+            },
+            "rules": {
+              "anyOf": [
+                {
+                  "items": {
+                    "$ref": "#/$defs/CandidateRule"
+                  },
+                  "type": "array"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "{default: None}",
+              "title": "Rules"
+            }
+          },
+          "title": "RulesOutput",
+          "type": "object"
+        },
+        "type": "json_schema"
+      }
+    },
+    "system": "You extract the building blocks of a domain ontology from one document of a manual.\n\n# The ontology\nName: pets-and-house-rules\nPurpose: Explain what it takes to own a dog or a cat in a residential complex, and which house rules apply to pets and their owners.\nIntended readers: People who consider getting a dog or a cat, pet owners living in the complex, and the house management.\n\n# Levels\nPropose a level for every candidate, with a short reason:\n- level-1: the core concepts, actors, processes, relations and rules that show what the domain is about, quick to grasp without prior knowledge. Here: The core of the domain: dog, cat, owner, resident, house management, and the rules every pet owner in the complex must know (registration, the lead, waste).\n- level-2: what someone taking part in the domain needs for the normal, happy-path case. Here: What an owner needs on a normal day: feeding, walks, vaccination, grooming, leaving the pet alone, the shared spaces.\n- level-3: detail for special cases and error scenarios. Here: Special cases and error scenarios: puppies and kittens, dangerous breeds, moving house, travel, complaints and enforcement.\n- ignorable: not knowledge about the domain.\n\n# Step 1: one verdict per source unit\nGive every unit a verdict. A unit is ignorable when it holds no general knowledge about the domain. Categories:\n- instance_or_anecdote: about one particular person, animal or event (names, places, memories).\n- generic_or_historical_story: background or history that says nothing about the domain today.\n- quote_or_motivational: quotes, slogans and value statements that create no obligation, actor or relation.\n- procedure: step-by-step instructions or commands for one specific tool or task.\n- other: anything else that is not domain knowledge (say why).\nExamples of ignorable content in this ontology:\n- Stories about one particular dog, cat or owner (names, places, memories)\n- History or folklore about animals\n- Quotes and motivational paragraphs that state no rule\nJudge each unit on its own: a unit next to an ignorable one may hold real content. Extract nothing from an ignorable unit and never cite it as evidence, even when it seems to confirm a fact stated elsewhere.\n\n# Step 2: candidates from the other units\n- statements: atomic claims, one fact each, in plain words (label: a short name; text: the claim).\n- concepts: things, roles, places and events of the domain. Label: a singular noun phrase as in a glossary. definition: only when the text gives one. parents: keys of broader concepts the text states (a puppy is a dog).\n- terms: the words the text uses to name concepts. Each term lists its mentions: the unit and the key of the concept the word names there. When one word names different things in different units, its mentions point to different concepts.\n- relations: a link between two concepts (subject and object are concept keys); the label is the predicate (\"is registered with\"). Give a cardinality only when the text states a number.\n- rules: who (actor) must, must_not or may do what (action), under which condition. A numeric limit becomes limit {comparator: lt|le|eq|ge|gt, value, unit}; \"a lead of at most 2 m\" is limit le 2 m. A limit on how many things one may have becomes a cardinality on a relation. refers_to: keys of the concepts and relations the rule is about.\n- properties: a value of a concept or another candidate (of: its key), such as a lifespan of 10 to 15 years: name, value, unit.\n\n# Keys, evidence, faithfulness\n- Every candidate has a key, unique in your answer, made of letters, digits and _ . : - (for example c.leash, r.lead-limit). Refer to other candidates only by keys defined in your answer.\n- evidence lists the aliases (U1, U2, ...) of every unit the candidate comes from, exactly as shown. Never cite an ignorable unit.\n- Stay close to the text: no abstractions, generalisations or facts it does not state.\n"
+  },
+  "response": {
+    "data": {
+      "properties": [
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "p.dog-social",
+          "label": "Dogs are social animals",
+          "level": "level-2",
+          "level_reason": "Explains why dogs should not be left alone long.",
+          "name": "nature",
+          "of": "c.dog",
+          "value": "social animal"
+        },
+        {
+          "evidence": [
+            "U2"
+          ],
+          "key": "p.alone-training-start",
+          "label": "Alone training starts with a few minutes",
+          "level": "level-3",
+          "level_reason": "Detail of handling a problem scenario.",
+          "name": "starting duration",
+          "of": "c.alone-training",
+          "value": "a few minutes"
+        }
+      ],
+      "rules": [
+        {
+          "action": "leave an adult dog alone at home for more than 6 hours",
+          "actor": "owner",
+          "evidence": [
+            "U1"
+          ],
+          "key": "ru.adult-alone-limit",
+          "label": "Adult dog alone at most 6 hours",
+          "level": "level-2",
+          "level_reason": "Leaving the pet alone is normal-day knowledge for owners.",
+          "limit": {
+            "comparator": "le",
+            "unit": "hours",
+            "value": 6
+          },
+          "modality": "must_not",
+          "refers_to": [
+            "c.adult-dog",
+            "c.owner",
+            "c.leaving-alone",
+            "r.owner-leaves-dog"
+          ]
+        },
+        {
+          "action": "leave a puppy alone for more than 2 hours",
+          "actor": "owner",
+          "evidence": [
+            "U1"
+          ],
+          "key": "ru.puppy-alone-limit",
+          "label": "Puppy alone at most 2 hours",
+          "level": "level-3",
+          "level_reason": "Puppies are a special case.",
+          "limit": {
+            "comparator": "le",
+            "unit": "hours",
+            "value": 2
+          },
+          "modality": "must_not",
+          "refers_to": [
+            "c.puppy",
+            "c.owner",
+            "c.leaving-alone",
+            "r.owner-leaves-dog"
+          ]
+        },
+        {
+          "action": "walk the dog",
+          "actor": "owner",
+          "condition": "before leaving the dog alone",
+          "evidence": [
+            "U2"
+          ],
+          "key": "ru.walk-before-leaving",
+          "label": "Walk the dog before leaving",
+          "level": "level-2",
+          "level_reason": "Normal-day preparation for leaving the dog alone.",
+          "modality": "must",
+          "refers_to": [
+            "c.owner",
+            "c.dog",
+            "c.walk",
+            "r.owner-walks-dog"
+          ]
+        },
+        {
+          "action": "leave water for the dog",
+          "actor": "owner",
+          "condition": "before leaving the dog alone",
+          "evidence": [
+            "U2"
+          ],
+          "key": "ru.leave-water",
+          "label": "Leave water",
+          "level": "level-2",
+          "level_reason": "Normal-day preparation for leaving the dog alone.",
+          "modality": "must",
+          "refers_to": [
+            "c.owner",
+            "c.water",
+            "r.owner-leaves-water"
+          ]
+        },
+        {
+          "action": "leave a safe chew toy for the dog",
+          "actor": "owner",
+          "condition": "before leaving the dog alone",
+          "evidence": [
+            "U2"
+          ],
+          "key": "ru.leave-chew-toy",
+          "label": "Leave a safe chew toy",
+          "level": "level-2",
+          "level_reason": "Normal-day preparation for leaving the dog alone.",
+          "modality": "must",
+          "refers_to": [
+            "c.owner",
+            "c.chew-toy",
+            "r.owner-leaves-toy"
+          ]
+        },
+        {
+          "action": "keep the departure low-key",
+          "actor": "owner",
+          "condition": "when leaving the dog alone",
+          "evidence": [
+            "U2"
+          ],
+          "key": "ru.low-key-departure",
+          "label": "Keep departure low-key",
+          "level": "level-2",
+          "level_reason": "Normal-day advice for leaving the dog alone.",
+          "modality": "must",
+          "refers_to": [
+            "c.owner",
+            "c.leaving-alone"
+          ]
+        },
+        {
+          "action": "train the dog to be alone step by step, starting with a few minutes",
+          "actor": "owner",
+          "condition": "if the dog barks or howls while the owner is away",
+          "evidence": [
+            "U2"
+          ],
+          "key": "ru.train-alone",
+          "label": "Train a barking dog to be alone",
+          "level": "level-3",
+          "level_reason": "Barking or howling while alone is a problem scenario.",
+          "modality": "must",
+          "refers_to": [
+            "c.owner",
+            "c.dog",
+            "c.alone-training",
+            "c.barking",
+            "r.training-addresses-barking"
+          ]
+        }
+      ]
+    },
+    "input_tokens": 4405,
+    "model": "claude-opus-5-5",
+    "output_tokens": 1270
+  }
+}

@@ -25,6 +25,26 @@ secrets*.json
 /gitleaks
 gitleaks.tar.gz
 
+# Python (ADR-0020)
+.venv/
+__pycache__/
+*.py[cod]
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.import_linter_cache/
+.grimp_cache/
+
+# ontology-builder (plan 0002): work folder, front-end build output, and the store's swap folders
+apps/ontology-builder/.work/
+apps/ontology-builder/web/node_modules/
+apps/ontology-builder/web/dist/
+/data/.*.staging/
+/data/.*.previous/
+
+# Repo-wide Node dev tools (package.json at the root: the Mermaid CLI for the render test, plan 0002 T15)
+/node_modules/
+
 # Shared runtime data (ADR-0016): data/ is committed by default. Each data/<dataset>/ that must
 # stay out of git gets its own line below (tools/monorepo/new.sh adds it for `ignore` datasets,
 # tools/monorepo/system-map.sh checks it against "git" in docs/architecture/components.json).

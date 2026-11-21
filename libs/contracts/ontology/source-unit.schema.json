@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:domain-ai-assistant:contracts:ontology:0.1.0:source-unit",
+  "title": "Source unit",
+  "description": "One source unit of an ontology dataset (contract 'ontology' 0.1.0). Corpus units are the items of 00_sources/<NN>_<slug>/units/<doc-id>.yaml (a YAML list, in document order); a user statement is one file 00_sources/90_user_statements/<su-id>.yaml. Readers must ignore properties they do not know.",
+  "type": "object",
+  "required": ["id", "kind", "content_hash", "text"],
+  "properties": {
+    "id": {
+      "description": "Minted, opaque, stable ID: 'su_' + ULID. Never derived from the text or the position, never reused.",
+      "$ref": "#/$defs/unitId"
+    },
+    "document_id": {
+      "description": "ID of the document the unit belongs to: 'doc_' + ULID. Absent for user statements.",
+      "type": "string",
+      "pattern": "^doc_[0-9A-HJKMNP-TV-Z]{26}$"
+    },
+    "kind": {
+      "enum": ["paragraph", "list_item", "blockquote", "table_row", "user_statement"]
+    },
+    "location": {
+      "description": "Where the unit is in its document. Absent for user statements.",
+      "type": "object",
+      "required": ["path", "heading_path", "index_in_section"],
+      "properties": {
+        "path": {
+          "description": "Path of the Markdown file, relative to the corpus source folder.",
+          "type": "string"
+        },
+        "heading_path": {
+          "description": "The headings above the unit, outermost first. Empty when the document has no headings.",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "index_in_section": {
+          "description": "0-based position of the unit among the units of its section.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "line_start": { "type": "integer", "minimum": 1 },
+        "line_end": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "content_hash": {
+      "description": "'sha256:' + hex SHA-256 of the text after Unicode NFC and whitespace normalisation (runs of whitespace become one space; leading and trailing whitespace removed). Two units with the same text share a hash and keep separate IDs.",
+      "$ref": "#/$defs/hash"
+    },
+    "text": {
+      "description": "The normalised text of the unit (for a user statement: of its latest revision).",
+      "type": "string"
+    },
+    "ignorable": {
+      "description": "Present when the unit was proposed as ignorable. Nothing is extracted from a unit whose verdict is proposed or confirmed.",
+      "type": "object",
+      "required": ["proposed", "category", "reason", "status"],
+      "properties": {
+        "proposed": { "type": "boolean" },
+        "category": {
+          "enum": ["instance_or_anecdote", "generic_or_historical_story", "quote_or_motivational", "procedure", "other"]
+        },
+        "reason": { "type": "string" },
+        "status": {
+          "description": "proposed by the LLM; confirmed by a person; rejected = a person marked it not ignorable.",
+          "enum": ["proposed", "confirmed", "rejected"]
+        }
+      }
+    },
+    "author": { "description": "User handle of a user statement.", "type": "string", "minLength": 1 },
+    "created_at": { "type": "string", "format": "date-time" },
+    "revisions": {
+      "description": "Every revision of a user statement, oldest first. The ID never changes.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["rev", "text", "content_hash", "author", "at"],
+        "properties": {
+          "rev": { "type": "integer", "minimum": 1 },
+          "text": { "type": "string" },
+          "content_hash": { "$ref": "#/$defs/hash" },
+          "author": { "type": "string", "minLength": 1 },
+          "at": { "type": "string", "format": "date-time" }
+        }
+      }
+    }
+  },
+  "if": { "properties": { "kind": { "const": "user_statement" } } },
+  "then": { "required": ["author", "created_at", "revisions"] },
+  "else": { "required": ["document_id", "location"] },
+  "$defs": {
+    "unitId": { "type": "string", "pattern": "^su_[0-9A-HJKMNP-TV-Z]{26}$" },
+    "hash": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" }
+  }
+}

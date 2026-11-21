@@ -44,3 +44,60 @@ repos:
         language: script
         pass_filenames: false
         files: ^(docs/architecture/|apps/|libs/)
+
+  # Python quality gate (ADR-0020). Every hook runs through uv on the workspace in uv.lock.
+  - repo: local
+    hooks:
+      - id: ruff
+        name: ruff (lint, complexity, security rules)
+        entry: uv run --quiet ruff check
+        language: system
+        types_or: [python, pyi]
+      - id: ruff-format
+        name: ruff format
+        entry: uv run --quiet ruff format --check
+        language: system
+        types_or: [python, pyi]
+      - id: mypy
+        name: mypy (strict)
+        entry: uv run --quiet mypy
+        language: system
+        pass_filenames: false
+        types_or: [python, pyi]
+      - id: python-cc-report
+        name: python complexity report (warns at CC 11-15, fails above 15)
+        entry: uv run --quiet python tools/quality/python/cc_report.py
+        language: system
+        pass_filenames: false
+        verbose: true
+        types_or: [python, pyi]
+      - id: importlinter-config
+        name: .importlinter matches components.json
+        entry: uv run --quiet python tools/quality/python/gen_importlinter.py --check
+        language: system
+        pass_filenames: false
+        files: (\.py|components\.json|\.importlinter)$
+      - id: lint-imports
+        name: import-linter (boundaries from components.json)
+        entry: tools/quality/python/lint-imports.sh
+        language: system
+        pass_filenames: false
+        files: (\.py|components\.json|\.importlinter)$
+      - id: python-boundaries
+        name: python boundaries (public entry points, cycles, app -> app)
+        entry: uv run --quiet python tools/quality/python/boundaries.py
+        language: system
+        pass_filenames: false
+        files: (\.py|components\.json)$
+      - id: pytest
+        name: pytest
+        entry: uv run --quiet pytest -q
+        language: system
+        pass_filenames: false
+        files: (\.py|\.ya?ml|\.json|\.md|pyproject\.toml|uv\.lock)$
+      - id: pip-audit
+        name: pip-audit (locked Python dependencies)
+        entry: tools/quality/python/audit.sh
+        language: system
+        pass_filenames: false
+        files: (pyproject\.toml|uv\.lock)$

@@ -46,7 +46,11 @@ flowchart TB
 ## 4. Coupling and modularity
 
 <!-- coupling:begin (generated, do not edit) -->
-_No code has been measured yet._
+_No dependencies between components measured yet._ _Nodes: name, Ca·Ce·I. Edges: number of import statements. Red: violation._
+
+```mermaid
+flowchart TD
+```
 <!-- coupling:end -->
 
 ## 5. Key runtime flows

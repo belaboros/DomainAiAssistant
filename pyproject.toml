@@ -1,0 +1,78 @@
+# Root of the uv workspace for every Python app and library (ADR-0020).
+# Each member has its own pyproject.toml; one lock file (uv.lock) and one quality gate serve them all.
+[project]
+name = "domain-ai-assistant-workspace"
+version = "0.0.0"
+description = "Workspace root: dev tools and the quality gate. Not a package."
+requires-python = ">=3.13,<3.14"
+dependencies = ["ontology-builder"]
+
+[dependency-groups]
+dev = [
+  "ruff==0.17.6",
+  "mypy==2.4.1",
+  "import-linter==2.17",
+  "grimp==3.20",
+  "radon==6.0.1",
+  "pytest==9.2.0",
+  "pip-audit==2.10.1",
+  "types-jsonschema==4.26.0.20261006",
+  "types-pyyaml==6.0.12.20261113",
+  "linkml==1.12.1",
+  "pyshacl==0.40.2",
+  "httpx==0.28.1",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.workspace]
+members = ["apps/ontology-builder"]
+
+[tool.uv.sources]
+ontology-builder = { workspace = true }
+
+# ---- Lint and complexity (ADR-0020; thresholds: docs/architecture/metrics/README.md) ----
+[tool.ruff]
+target-version = "py313"
+line-length = 100
+extend-exclude = [".work", "node_modules", "docs", "data"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "S", "PL", "C90", "SIM", "RUF"]
+preview = true
+explicit-preview-rules = true
+extend-select = ["PLR1702"]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 15   # fail above 15; 11-15 is the warn band, reported by tools/quality/python/cc_report.py
+
+[tool.ruff.lint.pylint]
+max-branches = 12
+max-args = 6
+max-statements = 50
+max-nested-blocks = 4
+
+[tool.ruff.lint.per-file-ignores]
+"**/tests/**" = ["S101", "PLR2004"]   # asserts and literal values are what tests are made of
+
+# ---- Types ----
+[tool.mypy]
+python_version = "3.13"
+strict = true
+files = ["apps/ontology-builder/src", "apps/ontology-builder/tests", "apps/ontology-builder/tools", "tools/quality"]
+mypy_path = "tools/quality/python"
+explicit_package_bases = true
+
+# ---- Tests ----
+[tool.pytest.ini_options]
+testpaths = ["apps/ontology-builder/tests"]
+addopts = ["--import-mode=importlib", "-m", "not mermaid and not live"]
+markers = [
+  "mermaid: renders Mermaid diagrams with the Mermaid CLI (needs Node and headless Chromium)",
+  "live: calls a live external service (never in the gate)",
+]
+
+[[tool.mypy.overrides]]
+module = ["radon.*"]   # radon ships no type information
+ignore_missing_imports = true

@@ -1,0 +1,8 @@
+{
+  "name": "domain-ai-assistant-dev-tools",
+  "private": true,
+  "description": "Repo-wide Node dev tools. The Mermaid CLI renders every diagram of the level-N.md releases in the `mermaid` pytest marker (plan 0002, T15). The front-end workspace is added by /add-language js-ts (T22).",
+  "devDependencies": {
+    "@mermaid-js/mermaid-cli": "12.2.0"
+  }
+}

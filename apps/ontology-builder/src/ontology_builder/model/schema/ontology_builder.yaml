@@ -1,0 +1,558 @@
+# LinkML schema of every record the ontology-builder writes (plan 0002, ontology-builder/ADR-0001).
+# The Pydantic models in ../_generated.py are generated from this file; never edit them by hand.
+# Regenerate: uv run python apps/ontology-builder/tools/gen_model.py
+# Every new slot must be optional, so old records stay valid (FR-15).
+id: urn:domain-ai-assistant:ontology-builder:model
+name: ontology_builder
+title: OntologyBuilder records
+description: >-
+  Records of one ontology dataset (scope, corpora, documents, source units, the six element
+  types, decisions, runs) and the structured output the LLM returns.
+version: 0.1.0
+license: MIT
+prefixes:
+  linkml: https://w3id.org/linkml/
+  dai: urn:domain-ai-assistant:vocab#
+default_prefix: dai
+default_range: string
+imports:
+  - linkml:types
+
+enums:
+  Level:
+    description: How important an element is for a reader of the domain (FR-13).
+    permissible_values:
+      level-1: {description: "Core knowledge every newcomer needs first."}
+      level-2: {description: "Everyday knowledge that builds on level-1."}
+      level-3: {description: "Full detail, special cases and error scenarios."}
+      ignorable: {description: "Not domain knowledge; left out of every level."}
+  ElementStatus:
+    description: Review status of an element (FR-23).
+    permissible_values:
+      proposed: {description: "Proposed by the LLM, not yet reviewed."}
+      included: {description: "Accepted by a user or authored; waiting for approval."}
+      excluded: {description: "Excluded by a user, with a reason."}
+      approved: {description: "Approved by a domain admin."}
+      rejected: {description: "Rejected by a domain admin, with a reason."}
+      deprecated: {description: "Formerly approved; kept, optionally with a replacement."}
+  ElementType:
+    permissible_values:
+      statement: {}
+      term: {}
+      concept: {}
+      relation: {}
+      rule: {}
+      property: {}
+  OriginKind:
+    permissible_values:
+      llm: {description: "Proposed by the LLM during an ingestion run."}
+      user: {description: "Authored by a person."}
+  UnitKind:
+    permissible_values:
+      paragraph: {}
+      list_item: {}
+      blockquote: {}
+      table_row: {}
+      user_statement: {}
+  IgnorableCategory:
+    description: Why a whole source unit is proposed as ignorable (FR-14).
+    permissible_values:
+      instance_or_anecdote: {}
+      generic_or_historical_story: {}
+      quote_or_motivational: {}
+      procedure: {}
+      other: {}
+  IgnorableStatus:
+    permissible_values:
+      proposed: {description: "Proposed by the LLM."}
+      confirmed: {description: "Confirmed by a person."}
+      rejected: {description: "A person marked the unit not ignorable."}
+  Modality:
+    permissible_values:
+      must: {}
+      must_not: {}
+      may: {}
+  Comparator:
+    permissible_values:
+      lt: {description: "less than"}
+      le: {description: "at most"}
+      eq: {description: "exactly"}
+      ge: {description: "at least"}
+      gt: {description: "more than"}
+  Role:
+    permissible_values:
+      user: {description: "Reviews, corrects and authors."}
+      domain_admin: {description: "Also approves, rejects, deprecates and publishes."}
+  DecisionAction:
+    permissible_values:
+      create: {}
+      include: {}
+      exclude: {}
+      correct: {}
+      level: {}
+      merge: {}
+      split: {}
+      reassign: {}
+      approve: {}
+      reject: {}
+      deprecate: {}
+      author: {}
+      confirm_ignorable: {}
+      not_ignorable: {}
+      edit_scope: {}
+      publish: {}
+  RunKind:
+    permissible_values:
+      ingestion: {}
+      on_demand: {}
+  RunStatus:
+    permissible_values:
+      running: {}
+      completed: {}
+      failed: {}
+
+types:
+  Ulid:
+    typeof: string
+    description: A Crockford base-32 ULID (26 characters).
+    pattern: "^[0-9A-HJKMNP-TV-Z]{26}$"
+
+slots:
+  id:
+    identifier: true
+    required: true
+  label:
+    required: true
+    pattern: "\\S"
+  definition: {}
+  text:
+    required: true
+  level:
+    range: Level
+    required: true
+  level_reason:
+    required: true
+    pattern: "\\S"
+  status:
+    range: ElementStatus
+    required: true
+  status_reason: {}
+  evidence:
+    range: Evidence
+    multivalued: true
+    inlined_as_list: true
+    required: true
+    minimum_cardinality: 1
+    description: The source units this element comes from (FR-10, FR-22). At least one.
+  origin:
+    range: Origin
+    required: true
+    inlined: true
+  replaced_by:
+    pattern: "^(st|tm|cn|rl|ru|pr)_[0-9A-HJKMNP-TV-Z]{26}$"
+  unit:
+    required: true
+    pattern: "^su_[0-9A-HJKMNP-TV-Z]{26}$"
+    description: ID of a source unit.
+  content_hash:
+    required: true
+    pattern: "^sha256:[0-9a-f]{64}$"
+  author:
+    pattern: "\\S"
+  created_at:
+    range: datetime
+  min:
+    range: integer
+    minimum_value: 0
+  max:
+    range: integer
+    minimum_value: 0
+
+classes:
+  # ---------- Ontology and sources ----------
+  LevelGuidance:
+    description: What counts as level-1, level-2 and level-3 in this ontology (the rubric).
+    attributes:
+      level_1: {required: true, pattern: "\\S"}
+      level_2: {required: true, pattern: "\\S"}
+      level_3: {required: true, pattern: "\\S"}
+
+  ScopeRecord:
+    description: The scope record of one ontology (FR-1); 01_model/scope.yaml.
+    attributes:
+      name:
+        required: true
+        pattern: "^[a-z0-9]+(-[a-z0-9]+)*$"
+      purpose: {required: true, pattern: "\\S"}
+      readers: {required: true, pattern: "\\S", description: "The intended readers."}
+      level_guidance: {range: LevelGuidance, required: true, inlined: true}
+      ignorable_examples:
+        multivalued: true
+        required: true
+        minimum_cardinality: 1
+      base_iri: {required: true, pattern: "^\\S+[:/#]$"}
+
+  Corpus:
+    description: One ingested folder; 00_sources/<NN>_<slug>/corpus.yaml.
+    attributes:
+      id: {identifier: true, required: true, pattern: "^co_[0-9A-HJKMNP-TV-Z]{26}$"}
+      number: {range: integer, required: true, minimum_value: 0, maximum_value: 89}
+      slug: {required: true, pattern: "^[a-z0-9]+(-[a-z0-9]+)*$"}
+      source_path: {required: true, description: "The ingested folder, relative to SHARED_DATA_DIR."}
+      ingest_run: {required: true, pattern: "^run_[0-9A-HJKMNP-TV-Z]{26}$"}
+
+  Document:
+    description: One Markdown file of a corpus; 00_sources/<NN>_<slug>/documents/<doc-id>.yaml.
+    attributes:
+      id: {identifier: true, required: true, pattern: "^doc_[0-9A-HJKMNP-TV-Z]{26}$"}
+      corpus_id: {required: true, pattern: "^co_[0-9A-HJKMNP-TV-Z]{26}$"}
+      path: {required: true}
+      title: {required: true}
+      content_hash: {required: true, pattern: "^sha256:[0-9a-f]{64}$"}
+
+  Location:
+    attributes:
+      path: {required: true}
+      heading_path: {multivalued: true}
+      index_in_section: {range: integer, required: true, minimum_value: 0}
+      line_start: {range: integer, minimum_value: 1}
+      line_end: {range: integer, minimum_value: 1}
+
+  IgnorableVerdict:
+    attributes:
+      proposed: {range: boolean, required: true}
+      category: {range: IgnorableCategory, required: true}
+      reason: {required: true}
+      status: {range: IgnorableStatus, required: true}
+
+  Revision:
+    attributes:
+      rev: {range: integer, required: true, minimum_value: 1}
+      text: {required: true}
+      content_hash: {required: true, pattern: "^sha256:[0-9a-f]{64}$"}
+      author: {required: true, pattern: "\\S"}
+      at: {range: datetime, required: true}
+
+  SourceUnit:
+    description: >-
+      One Markdown block or user statement (contract libs/contracts/ontology/source-unit.schema.json).
+    slots: [id, content_hash, text, author, created_at]
+    slot_usage:
+      id: {pattern: "^su_[0-9A-HJKMNP-TV-Z]{26}$"}
+    attributes:
+      document_id: {pattern: "^doc_[0-9A-HJKMNP-TV-Z]{26}$"}
+      kind: {range: UnitKind, required: true}
+      location: {range: Location, inlined: true}
+      ignorable: {range: IgnorableVerdict, inlined: true}
+      revisions: {range: Revision, multivalued: true, inlined_as_list: true}
+
+  # ---------- Elements ----------
+  Evidence:
+    attributes:
+      unit:
+        required: true
+        pattern: "^su_[0-9A-HJKMNP-TV-Z]{26}$"
+      quote: {}
+
+  Origin:
+    attributes:
+      kind: {range: OriginKind, required: true}
+      run_id: {pattern: "^run_[0-9A-HJKMNP-TV-Z]{26}$"}
+      author: {pattern: "\\S"}
+      created_at: {range: datetime, required: true}
+
+  Cardinality:
+    attributes:
+      min: {range: integer, minimum_value: 0}
+      max: {range: integer, minimum_value: 0}
+
+  RuleCardinality:
+    is_a: Cardinality
+    attributes:
+      relation: {required: true, pattern: "^rl_[0-9A-HJKMNP-TV-Z]{26}$"}
+
+  Limit:
+    attributes:
+      comparator: {range: Comparator, required: true}
+      value: {range: float, required: true}
+      unit: {}
+
+  Mention:
+    attributes:
+      unit: {required: true, pattern: "^su_[0-9A-HJKMNP-TV-Z]{26}$"}
+      concept: {required: true, pattern: "^cn_[0-9A-HJKMNP-TV-Z]{26}$"}
+
+  Element:
+    abstract: true
+    description: Slots every element type shares (01_model/elements/<type>/<id>.yaml).
+    slots: [id, label, definition, level, level_reason, status, status_reason, evidence, origin,
+      replaced_by]
+
+  Statement:
+    is_a: Element
+    description: An atomic claim taken from a source unit.
+    slots: [text]
+    slot_usage:
+      id: {pattern: "^st_[0-9A-HJKMNP-TV-Z]{26}$"}
+    attributes:
+      approved_snapshot: {range: Statement, inlined: true}
+
+  Term:
+    is_a: Element
+    description: A word; each mention resolves it to one concept (synonyms and senses, FR-11, FR-12).
+    slot_usage:
+      id: {pattern: "^tm_[0-9A-HJKMNP-TV-Z]{26}$"}
+    attributes:
+      mentions: {range: Mention, multivalued: true, inlined_as_list: true}
+      approved_snapshot: {range: Term, inlined: true}
+
+  Concept:
+    is_a: Element
+    slot_usage:
+      id: {pattern: "^cn_[0-9A-HJKMNP-TV-Z]{26}$"}
+    attributes:
+      parents:
+        multivalued: true
+        pattern: "^cn_[0-9A-HJKMNP-TV-Z]{26}$"
+        description: Is-a links to broader concepts.
+      scope_note: {description: "Separates this sense from other senses of the same term."}
+      approved_snapshot: {range: Concept, inlined: true}
+
+  Relation:
+    is_a: Element
+    slot_usage:
+      id: {pattern: "^rl_[0-9A-HJKMNP-TV-Z]{26}$"}
+    attributes:
+      subject: {required: true, pattern: "^cn_[0-9A-HJKMNP-TV-Z]{26}$"}
+      object: {required: true, pattern: "^cn_[0-9A-HJKMNP-TV-Z]{26}$"}
+      predicate_label: {required: true, pattern: "\\S"}
+      cardinality: {range: Cardinality, inlined: true}
+      approved_snapshot: {range: Relation, inlined: true}
+
+  Rule:
+    is_a: Element
+    description: Who must or must not do what, under which condition, with any limit.
+    slot_usage:
+      id: {pattern: "^ru_[0-9A-HJKMNP-TV-Z]{26}$"}
+    attributes:
+      modality: {range: Modality, required: true}
+      actor: {required: true, pattern: "\\S"}
+      action: {required: true, pattern: "\\S"}
+      condition: {}
+      limit: {range: Limit, inlined: true}
+      cardinality: {range: RuleCardinality, inlined: true}
+      scope:
+        multivalued: true
+        pattern: "^(co|doc)_[0-9A-HJKMNP-TV-Z]{26}$"
+        description: The corpora or documents the rule applies to; empty means everywhere.
+      refers_to:
+        multivalued: true
+        pattern: "^(st|tm|cn|rl|ru|pr)_[0-9A-HJKMNP-TV-Z]{26}$"
+      approved_snapshot: {range: Rule, inlined: true}
+
+  Property:
+    is_a: Element
+    description: A property of another element (e.g. a lifespan of a concept).
+    slot_usage:
+      id: {pattern: "^pr_[0-9A-HJKMNP-TV-Z]{26}$"}
+    attributes:
+      of: {required: true, pattern: "^(st|tm|cn|rl|ru|pr)_[0-9A-HJKMNP-TV-Z]{26}$"}
+      name: {required: true, pattern: "\\S"}
+      value: {required: true}
+      unit: {}
+      approved_snapshot: {range: Property, inlined: true}
+
+  # ---------- Decisions and runs ----------
+  Decision:
+    description: One recorded decision; a line of 02_decisions/YYYY-MM-DD.jsonl (FR-26).
+    attributes:
+      id: {identifier: true, required: true, pattern: "^dc_[0-9A-HJKMNP-TV-Z]{26}$"}
+      at: {range: datetime, required: true}
+      user: {required: true, pattern: "\\S"}
+      role: {range: Role, required: true}
+      action: {range: DecisionAction, required: true}
+      element_id: {}
+      field: {}
+      old: {range: Any}
+      new: {range: Any}
+      reason: {}
+
+  Any:
+    class_uri: linkml:Any
+    description: Any value (old and new values of a decision).
+
+  Estimate:
+    attributes:
+      documents: {range: integer, required: true, minimum_value: 0}
+      units: {range: integer, required: true, minimum_value: 0}
+      input_tokens: {range: integer, required: true, minimum_value: 0}
+      output_tokens: {range: integer, required: true, minimum_value: 0}
+      cost_usd: {range: float, minimum_value: 0}
+
+  SkippedItem:
+    attributes:
+      where: {required: true, description: "The batch or document the item came from."}
+      item: {required: true, description: "The item as returned, shortened."}
+      reason: {required: true}
+
+  Run:
+    description: One ingestion or on-demand extraction; 02_decisions/runs/<run-id>.yaml (FR-6).
+    attributes:
+      id: {identifier: true, required: true, pattern: "^run_[0-9A-HJKMNP-TV-Z]{26}$"}
+      kind: {range: RunKind, required: true}
+      user: {required: true, pattern: "\\S"}
+      model: {required: true}
+      source_path: {}
+      started_at: {range: datetime, required: true}
+      ended_at: {range: datetime}
+      status: {range: RunStatus, required: true}
+      estimate: {range: Estimate, inlined: true}
+      input_tokens: {range: integer, required: true, minimum_value: 0}
+      output_tokens: {range: integer, required: true, minimum_value: 0}
+      skipped: {range: SkippedItem, multivalued: true, inlined_as_list: true}
+
+  # ---------- Structured LLM output (the structured-output JSON schemas, ADR-0006) ----------
+  # The LLM cannot mint IDs: candidates refer to each other by a local key, and to source
+  # units by the short alias (U1, U2, ...) each unit has in the prompt (Q38). Extraction maps the
+  # aliases back to su_ IDs and mints the element IDs afterwards.
+  Candidate:
+    abstract: true
+    attributes:
+      key: {required: true, pattern: "^[A-Za-z0-9_.:-]+$", description: "Local key, unique in one response."}
+      label: {required: true, pattern: "\\S"}
+      evidence:
+        required: true
+        multivalued: true
+        minimum_cardinality: 1
+        pattern: "^U[1-9][0-9]*$"
+        description: Aliases (U1, U2, ...) of the source units the candidate comes from.
+      level: {range: Level, required: true}
+      level_reason: {required: true, pattern: "\\S"}
+
+  UnitVerdict:
+    attributes:
+      unit: {required: true, pattern: "^U[1-9][0-9]*$"}
+      ignorable: {range: boolean, required: true}
+      category: {range: IgnorableCategory, description: "Required when ignorable is true."}
+      reason: {}
+
+  CandidateStatement:
+    is_a: Candidate
+    attributes:
+      text: {required: true}
+
+  CandidateMention:
+    attributes:
+      unit: {required: true, pattern: "^U[1-9][0-9]*$"}
+      concept: {required: true, description: "Key of the candidate concept this mention names."}
+
+  CandidateTerm:
+    is_a: Candidate
+    attributes:
+      mentions: {range: CandidateMention, multivalued: true, inlined_as_list: true}
+
+  CandidateConcept:
+    is_a: Candidate
+    attributes:
+      definition: {}
+      parents: {multivalued: true, description: "Keys of broader candidate concepts."}
+
+  CandidateRelation:
+    is_a: Candidate
+    attributes:
+      subject: {required: true, description: "Key of a candidate concept."}
+      object: {required: true, description: "Key of a candidate concept."}
+      cardinality: {range: Cardinality, inlined: true}
+
+  CandidateRuleCardinality:
+    is_a: Cardinality
+    attributes:
+      relation: {required: true, description: "Key of a candidate relation."}
+
+  CandidateRule:
+    is_a: Candidate
+    attributes:
+      modality: {range: Modality, required: true}
+      actor: {required: true}
+      action: {required: true}
+      condition: {}
+      limit: {range: Limit, inlined: true}
+      cardinality: {range: CandidateRuleCardinality, inlined: true}
+      refers_to: {multivalued: true, description: "Keys of the candidates the rule refers to."}
+
+  CandidateProperty:
+    is_a: Candidate
+    attributes:
+      of: {required: true, description: "Key of the candidate the property belongs to."}
+      name: {required: true}
+      value: {required: true}
+      unit: {}
+
+  ExtractionOutput:
+    # Not sent to the API: one grammar for all six lists is too large (Q40, ADR-0007).
+    description: The whole pass 1 answer for one document (calls A and B merged).
+    attributes:
+      unit_verdicts: {range: UnitVerdict, multivalued: true, inlined_as_list: true, required: true}
+      statements: {range: CandidateStatement, multivalued: true, inlined_as_list: true}
+      terms: {range: CandidateTerm, multivalued: true, inlined_as_list: true}
+      concepts: {range: CandidateConcept, multivalued: true, inlined_as_list: true}
+      relations: {range: CandidateRelation, multivalued: true, inlined_as_list: true}
+      rules: {range: CandidateRule, multivalued: true, inlined_as_list: true}
+      properties: {range: CandidateProperty, multivalued: true, inlined_as_list: true}
+
+  SynonymGroup:
+    description: Several terms that name one concept (FR-11).
+    attributes:
+      concept:
+        required: true
+        pattern: "^C[1-9][0-9]*$"
+        description: Alias (C1, C2, ...) of the concept, as shown in the pass 2 prompt.
+      preferred_label: {required: true, pattern: "\\S"}
+      terms: {required: true, multivalued: true, minimum_cardinality: 1, description: "Term labels."}
+      merge:
+        multivalued: true
+        pattern: "^C[1-9][0-9]*$"
+        description: Aliases of new concepts that are the same thing; merged into concept.
+
+  Sense:
+    attributes:
+      concept:
+        required: true
+        pattern: "^C[1-9][0-9]*$"
+        description: Alias (C1, C2, ...) of the concept this sense names.
+      scope_note: {required: true, pattern: "\\S"}
+      mentions:
+        required: true
+        multivalued: true
+        minimum_cardinality: 1
+        pattern: "^U[1-9][0-9]*$"
+        description: Aliases of the units where the term has this sense.
+
+  SenseSplit:
+    description: One term that names different concepts in different places (FR-12).
+    attributes:
+      term: {required: true, description: "The term label."}
+      senses: {range: Sense, required: true, multivalued: true, inlined_as_list: true, minimum_cardinality: 2}
+
+  TermResolutionOutput:
+    description: Pass 2 output for one ingestion (its JSON schema is the structured-output format).
+    attributes:
+      synonym_groups: {range: SynonymGroup, multivalued: true, inlined_as_list: true}
+      sense_splits: {range: SenseSplit, multivalued: true, inlined_as_list: true}
+
+  ConceptsOutput:
+    # Its JSON schema is the structured-output format of call A (ontology-builder/ADR-0007).
+    description: Pass 1, call A for one document; unit verdicts and the concept-side candidates.
+    attributes:
+      unit_verdicts: {range: UnitVerdict, multivalued: true, inlined_as_list: true, required: true}
+      statements: {range: CandidateStatement, multivalued: true, inlined_as_list: true}
+      terms: {range: CandidateTerm, multivalued: true, inlined_as_list: true}
+      concepts: {range: CandidateConcept, multivalued: true, inlined_as_list: true}
+      relations: {range: CandidateRelation, multivalued: true, inlined_as_list: true}
+
+  RulesOutput:
+    # Refers to the candidates of call A by key (ontology-builder/ADR-0007).
+    description: Pass 1, call B for one document; rules and properties.
+    attributes:
+      rules: {range: CandidateRule, multivalued: true, inlined_as_list: true}
+      properties: {range: CandidateProperty, multivalued: true, inlined_as_list: true}

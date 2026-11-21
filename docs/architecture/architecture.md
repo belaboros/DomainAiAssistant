@@ -42,25 +42,31 @@ Arrows: an app **writes** a dataset it owns, a dataset is **read by** other apps
 flowchart LR
     subgraph apps [Applications]
         app_generate_pets_and_building_user_manual["<b>generate-pets-and-building-user-manual</b><br/><i>Holds the instructions used to generate the pets and building user manuals.</i>"]
+        app_ontology_builder["<b>ontology-builder</b><br/><i>Builds leveled ontologies from Markdown corpora and user statements, through LLM proposals, human review and governed releases.</i>"]
     end
     subgraph data [Shared datasets]
         ds_user_manuals_pets_and_house_rules[("<b>user-manuals-pets-and-house-rules</b><br/><i>owner: generate-pets-and-building-user-manual</i>")]
+        ds_ontology_pets_and_house_rules[("<b>ontology-pets-and-house-rules</b><br/><i>owner: ontology-builder</i>")]
     end
     app_generate_pets_and_building_user_manual -- writes --> ds_user_manuals_pets_and_house_rules
+    app_ontology_builder -- writes --> ds_ontology_pets_and_house_rules
+    ds_user_manuals_pets_and_house_rules -. read by .-> app_ontology_builder
     classDef app fill:#1f6feb,color:#fff,stroke:#1f6feb
     classDef lib fill:#eef,color:#333,stroke:#669
     classDef data fill:#fff4e5,color:#333,stroke:#c80
-    class app_generate_pets_and_building_user_manual app
-    class ds_user_manuals_pets_and_house_rules data
+    class app_generate_pets_and_building_user_manual,app_ontology_builder app
+    class ds_user_manuals_pets_and_house_rules,ds_ontology_pets_and_house_rules data
 ```
 
 | App | Responsibility | Writes | Reads | Uses libraries | Docs |
 |-----|----------------|--------|-------|----------------|------|
 | **generate-pets-and-building-user-manual** | Holds the instructions used to generate the pets and building user manuals. | user-manuals-pets-and-house-rules | — | — | [architecture](../../apps/generate-pets-and-building-user-manual/docs/architecture/architecture.md) · [specs](../../apps/generate-pets-and-building-user-manual/docs/specs/README.md) · [ADRs](../../apps/generate-pets-and-building-user-manual/docs/architecture/adr/README.md) |
+| **ontology-builder** | Builds leveled ontologies from Markdown corpora and user statements, through LLM proposals, human review and governed releases. | ontology-pets-and-house-rules | user-manuals-pets-and-house-rules | — | [architecture](../../apps/ontology-builder/docs/architecture/architecture.md) · [specs](../../apps/ontology-builder/docs/specs/README.md) · [ADRs](../../apps/ontology-builder/docs/architecture/adr/README.md) |
 
 | Dataset | Owner (only writer) | Read by | Contract | Description |
 |---------|---------------------|---------|----------|-------------|
-| **user-manuals-pets-and-house-rules** | generate-pets-and-building-user-manual | — | [libs/contracts/user-manuals-pets-and-house-rules/](../../libs/contracts/user-manuals-pets-and-house-rules/README.md) | Dog owner's, cat owner's and building rules manuals, one Markdown file per chapter, with seeded quality issues for testing a manual assistant. |
+| **user-manuals-pets-and-house-rules** | generate-pets-and-building-user-manual | ontology-builder | [libs/contracts/user-manuals-pets-and-house-rules/](../../libs/contracts/user-manuals-pets-and-house-rules/README.md) | Dog owner's, cat owner's and building rules manuals, one Markdown file per chapter, with seeded quality issues for testing a manual assistant. |
+| **ontology-pets-and-house-rules** | ontology-builder | — | [libs/contracts/ontology-pets-and-house-rules/](../../libs/contracts/ontology-pets-and-house-rules/README.md) | Ontology of pet ownership and the house rules, built from the pet and building manuals: source registry, user statements and the raw and governed releases. |
 <!-- system-map:end -->
 
 ## 4. Rules that hold across all applications
@@ -77,7 +83,13 @@ flowchart LR
 Measured from the code by `/arch-metrics` at system level: edges between apps and libraries, labelled with reference counts. Any edge between two apps is a violation and is drawn red. Definitions and thresholds: [metrics/README.md](metrics/README.md).
 
 <!-- coupling:begin (generated, do not edit) -->
-_No code has been measured yet._
+_No dependencies between components measured yet._ _Nodes: name, Ca·Ce·I. Edges: number of import statements. Red: violation._
+
+```mermaid
+flowchart TD
+  generate_pets_and_building_user_manual["generate-pets-and-building-user-manual<br/>0·0·0.0"]
+  ontology_builder["ontology-builder<br/>0·0·0.0"]
+```
 <!-- coupling:end -->
 
 ## 6. Key cross-app flows

@@ -1,0 +1,792 @@
+{
+  "request": {
+    "max_tokens": 16000,
+    "messages": [
+      {
+        "content": "Document: 08-laundry-and-cellar.md\nTitle: 8. Laundry and Cellar\n\nSource units:\n\n[U1] paragraph \u00b7 8. Laundry and Cellar\nThe shared laundry room is in the cellar of building A and may be used from 07:00 to 21:00. Book a slot on the list at the door. Pet blankets, pet beds and other pet textiles may not be washed in the shared washing machines. Each flat has one cellar compartment; flammable liquids may not be stored there.\n\nGive the unit verdicts and the statements, terms, concepts and relations now. Rules and properties are asked for in a second step, which can refer to your keys.\n",
+        "role": "user"
+      }
+    ],
+    "model": "claude-opus-5-5",
+    "output_config": {
+      "format": {
+        "schema": {
+          "$defs": {
+            "CandidateConcept": {
+              "additionalProperties": false,
+              "properties": {
+                "definition": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "{default: None}",
+                  "title": "Definition"
+                },
+                "evidence": {
+                  "description": "Aliases (U1, U2, ...) of the source units the candidate comes from.",
+                  "items": {
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "title": "Evidence",
+                  "type": "array"
+                },
+                "key": {
+                  "description": "Local key, unique in one response.",
+                  "title": "Key",
+                  "type": "string"
+                },
+                "label": {
+                  "title": "Label",
+                  "type": "string"
+                },
+                "level": {
+                  "$ref": "#/$defs/Level"
+                },
+                "level_reason": {
+                  "title": "Level Reason",
+                  "type": "string"
+                },
+                "parents": {
+                  "anyOf": [
+                    {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "Keys of broader candidate concepts.\n\n{default: None}",
+                  "title": "Parents"
+                }
+              },
+              "required": [
+                "key",
+                "label",
+                "evidence",
+                "level",
+                "level_reason"
+              ],
+              "title": "CandidateConcept",
+              "type": "object"
+            },
+            "CandidateMention": {
+              "additionalProperties": false,
+              "properties": {
+                "concept": {
+                  "description": "Key of the candidate concept this mention names.",
+                  "title": "Concept",
+                  "type": "string"
+                },
+                "unit": {
+                  "title": "Unit",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "unit",
+                "concept"
+              ],
+              "title": "CandidateMention",
+              "type": "object"
+            },
+            "CandidateRelation": {
+              "additionalProperties": false,
+              "properties": {
+                "cardinality": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/$defs/Cardinality"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "{default: None}"
+                },
+                "evidence": {
+                  "description": "Aliases (U1, U2, ...) of the source units the candidate comes from.",
+                  "items": {
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "title": "Evidence",
+                  "type": "array"
+                },
+                "key": {
+                  "description": "Local key, unique in one response.",
+                  "title": "Key",
+                  "type": "string"
+                },
+                "label": {
+                  "title": "Label",
+                  "type": "string"
+                },
+                "level": {
+                  "$ref": "#/$defs/Level"
+                },
+                "level_reason": {
+                  "title": "Level Reason",
+                  "type": "string"
+                },
+                "object": {
+                  "description": "Key of a candidate concept.",
+                  "title": "Object",
+                  "type": "string"
+                },
+                "subject": {
+                  "description": "Key of a candidate concept.",
+                  "title": "Subject",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "key",
+                "label",
+                "evidence",
+                "level",
+                "level_reason",
+                "subject",
+                "object"
+              ],
+              "title": "CandidateRelation",
+              "type": "object"
+            },
+            "CandidateStatement": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence": {
+                  "description": "Aliases (U1, U2, ...) of the source units the candidate comes from.",
+                  "items": {
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "title": "Evidence",
+                  "type": "array"
+                },
+                "key": {
+                  "description": "Local key, unique in one response.",
+                  "title": "Key",
+                  "type": "string"
+                },
+                "label": {
+                  "title": "Label",
+                  "type": "string"
+                },
+                "level": {
+                  "$ref": "#/$defs/Level"
+                },
+                "level_reason": {
+                  "title": "Level Reason",
+                  "type": "string"
+                },
+                "text": {
+                  "title": "Text",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "key",
+                "label",
+                "evidence",
+                "level",
+                "level_reason",
+                "text"
+              ],
+              "title": "CandidateStatement",
+              "type": "object"
+            },
+            "CandidateTerm": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence": {
+                  "description": "Aliases (U1, U2, ...) of the source units the candidate comes from.",
+                  "items": {
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "title": "Evidence",
+                  "type": "array"
+                },
+                "key": {
+                  "description": "Local key, unique in one response.",
+                  "title": "Key",
+                  "type": "string"
+                },
+                "label": {
+                  "title": "Label",
+                  "type": "string"
+                },
+                "level": {
+                  "$ref": "#/$defs/Level"
+                },
+                "level_reason": {
+                  "title": "Level Reason",
+                  "type": "string"
+                },
+                "mentions": {
+                  "anyOf": [
+                    {
+                      "items": {
+                        "$ref": "#/$defs/CandidateMention"
+                      },
+                      "type": "array"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "{default: None}",
+                  "title": "Mentions"
+                }
+              },
+              "required": [
+                "key",
+                "label",
+                "evidence",
+                "level",
+                "level_reason"
+              ],
+              "title": "CandidateTerm",
+              "type": "object"
+            },
+            "Cardinality": {
+              "additionalProperties": false,
+              "properties": {
+                "max": {
+                  "anyOf": [
+                    {
+                      "description": "{minimum: 0}",
+                      "type": "integer"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "{default: None}",
+                  "title": "Max"
+                },
+                "min": {
+                  "anyOf": [
+                    {
+                      "description": "{minimum: 0}",
+                      "type": "integer"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "{default: None}",
+                  "title": "Min"
+                }
+              },
+              "title": "Cardinality",
+              "type": "object"
+            },
+            "IgnorableCategory": {
+              "description": "Why a whole source unit is proposed as ignorable (FR-14).",
+              "enum": [
+                "instance_or_anecdote",
+                "generic_or_historical_story",
+                "quote_or_motivational",
+                "procedure",
+                "other"
+              ],
+              "title": "IgnorableCategory"
+            },
+            "Level": {
+              "description": "How important an element is for a reader of the domain (FR-13).",
+              "enum": [
+                "level-1",
+                "level-2",
+                "level-3",
+                "ignorable"
+              ],
+              "title": "Level"
+            },
+            "UnitVerdict": {
+              "additionalProperties": false,
+              "properties": {
+                "category": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/$defs/IgnorableCategory"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "Required when ignorable is true.\n\n{default: None}"
+                },
+                "ignorable": {
+                  "title": "Ignorable",
+                  "type": "boolean"
+                },
+                "reason": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "{default: None}",
+                  "title": "Reason"
+                },
+                "unit": {
+                  "title": "Unit",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "unit",
+                "ignorable"
+              ],
+              "title": "UnitVerdict",
+              "type": "object"
+            }
+          },
+          "additionalProperties": false,
+          "description": "Pass 1, call A for one document; unit verdicts and the concept-side candidates.",
+          "properties": {
+            "concepts": {
+              "anyOf": [
+                {
+                  "items": {
+                    "$ref": "#/$defs/CandidateConcept"
+                  },
+                  "type": "array"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "{default: None}",
+              "title": "Concepts"
+            },
+            "relations": {
+              "anyOf": [
+                {
+                  "items": {
+                    "$ref": "#/$defs/CandidateRelation"
+                  },
+                  "type": "array"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "{default: None}",
+              "title": "Relations"
+            },
+            "statements": {
+              "anyOf": [
+                {
+                  "items": {
+                    "$ref": "#/$defs/CandidateStatement"
+                  },
+                  "type": "array"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "{default: None}",
+              "title": "Statements"
+            },
+            "terms": {
+              "anyOf": [
+                {
+                  "items": {
+                    "$ref": "#/$defs/CandidateTerm"
+                  },
+                  "type": "array"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "{default: None}",
+              "title": "Terms"
+            },
+            "unit_verdicts": {
+              "items": {
+                "$ref": "#/$defs/UnitVerdict"
+              },
+              "title": "Unit Verdicts",
+              "type": "array"
+            }
+          },
+          "required": [
+            "unit_verdicts"
+          ],
+          "title": "ConceptsOutput",
+          "type": "object"
+        },
+        "type": "json_schema"
+      }
+    },
+    "system": "You extract the building blocks of a domain ontology from one document of a manual.\n\n# The ontology\nName: pets-and-house-rules\nPurpose: Explain what it takes to own a dog or a cat in a residential complex, and which house rules apply to pets and their owners.\nIntended readers: People who consider getting a dog or a cat, pet owners living in the complex, and the house management.\n\n# Levels\nPropose a level for every candidate, with a short reason:\n- level-1: the core concepts, actors, processes, relations and rules that show what the domain is about, quick to grasp without prior knowledge. Here: The core of the domain: dog, cat, owner, resident, house management, and the rules every pet owner in the complex must know (registration, the lead, waste).\n- level-2: what someone taking part in the domain needs for the normal, happy-path case. Here: What an owner needs on a normal day: feeding, walks, vaccination, grooming, leaving the pet alone, the shared spaces.\n- level-3: detail for special cases and error scenarios. Here: Special cases and error scenarios: puppies and kittens, dangerous breeds, moving house, travel, complaints and enforcement.\n- ignorable: not knowledge about the domain.\n\n# Step 1: one verdict per source unit\nGive every unit a verdict. A unit is ignorable when it holds no general knowledge about the domain. Categories:\n- instance_or_anecdote: about one particular person, animal or event (names, places, memories).\n- generic_or_historical_story: background or history that says nothing about the domain today.\n- quote_or_motivational: quotes, slogans and value statements that create no obligation, actor or relation.\n- procedure: step-by-step instructions or commands for one specific tool or task.\n- other: anything else that is not domain knowledge (say why).\nExamples of ignorable content in this ontology:\n- Stories about one particular dog, cat or owner (names, places, memories)\n- History or folklore about animals\n- Quotes and motivational paragraphs that state no rule\nJudge each unit on its own: a unit next to an ignorable one may hold real content. Extract nothing from an ignorable unit and never cite it as evidence, even when it seems to confirm a fact stated elsewhere.\n\n# Step 2: candidates from the other units\n- statements: atomic claims, one fact each, in plain words (label: a short name; text: the claim).\n- concepts: things, roles, places and events of the domain. Label: a singular noun phrase as in a glossary. definition: only when the text gives one. parents: keys of broader concepts the text states (a puppy is a dog).\n- terms: the words the text uses to name concepts. Each term lists its mentions: the unit and the key of the concept the word names there. When one word names different things in different units, its mentions point to different concepts.\n- relations: a link between two concepts (subject and object are concept keys); the label is the predicate (\"is registered with\"). Give a cardinality only when the text states a number.\n- rules: who (actor) must, must_not or may do what (action), under which condition. A numeric limit becomes limit {comparator: lt|le|eq|ge|gt, value, unit}; \"a lead of at most 2 m\" is limit le 2 m. A limit on how many things one may have becomes a cardinality on a relation. refers_to: keys of the concepts and relations the rule is about.\n- properties: a value of a concept or another candidate (of: its key), such as a lifespan of 10 to 15 years: name, value, unit.\n\n# Keys, evidence, faithfulness\n- Every candidate has a key, unique in your answer, made of letters, digits and _ . : - (for example c.leash, r.lead-limit). Refer to other candidates only by keys defined in your answer.\n- evidence lists the aliases (U1, U2, ...) of every unit the candidate comes from, exactly as shown. Never cite an ignorable unit.\n- Stay close to the text: no abstractions, generalisations or facts it does not state.\n"
+  },
+  "response": {
+    "data": {
+      "concepts": [
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "c.laundry-room",
+          "label": "shared laundry room",
+          "level": "level-2",
+          "level_reason": "A shared space of the complex.",
+          "parents": [
+            "c.shared-space"
+          ]
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "c.shared-space",
+          "label": "shared space",
+          "level": "level-2",
+          "level_reason": "Shared spaces are level-2 content."
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "c.cellar",
+          "label": "cellar",
+          "level": "level-2",
+          "level_reason": "Location of shared facilities."
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "c.building-a",
+          "label": "building A",
+          "level": "level-3",
+          "level_reason": "Specific location detail."
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "c.booking-list",
+          "label": "booking list",
+          "level": "level-3",
+          "level_reason": "Detail of laundry use."
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "c.laundry-slot",
+          "label": "laundry slot",
+          "level": "level-3",
+          "level_reason": "Detail of laundry use."
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "c.washing-machine",
+          "label": "shared washing machine",
+          "level": "level-2",
+          "level_reason": "Shared equipment subject to a pet rule."
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "c.pet-textile",
+          "label": "pet textile",
+          "level": "level-2",
+          "level_reason": "Pet items covered by a house rule."
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "c.pet-blanket",
+          "label": "pet blanket",
+          "level": "level-2",
+          "level_reason": "Example of pet textile.",
+          "parents": [
+            "c.pet-textile"
+          ]
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "c.pet-bed",
+          "label": "pet bed",
+          "level": "level-2",
+          "level_reason": "Example of pet textile.",
+          "parents": [
+            "c.pet-textile"
+          ]
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "c.flat",
+          "label": "flat",
+          "level": "level-2",
+          "level_reason": "Residential unit in the complex."
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "c.cellar-compartment",
+          "label": "cellar compartment",
+          "level": "level-2",
+          "level_reason": "Storage space belonging to a flat."
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "c.flammable-liquid",
+          "label": "flammable liquid",
+          "level": "level-3",
+          "level_reason": "Peripheral, non-pet storage restriction."
+        }
+      ],
+      "relations": [
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "r.laundry-in-cellar",
+          "label": "is located in",
+          "level": "level-2",
+          "level_reason": "Location of shared space.",
+          "object": "c.cellar",
+          "subject": "c.laundry-room"
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "r.cellar-of-building",
+          "label": "is part of",
+          "level": "level-3",
+          "level_reason": "Location detail.",
+          "object": "c.building-a",
+          "subject": "c.cellar"
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "r.slot-booked-on-list",
+          "label": "is booked on",
+          "level": "level-3",
+          "level_reason": "Booking detail.",
+          "object": "c.booking-list",
+          "subject": "c.laundry-slot"
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "r.machine-in-laundry",
+          "label": "is in",
+          "level": "level-2",
+          "level_reason": "Equipment of shared laundry room.",
+          "object": "c.laundry-room",
+          "subject": "c.washing-machine"
+        },
+        {
+          "cardinality": {
+            "max": 1,
+            "min": 1
+          },
+          "evidence": [
+            "U1"
+          ],
+          "key": "r.flat-has-compartment",
+          "label": "has",
+          "level": "level-2",
+          "level_reason": "Each flat has a cellar compartment.",
+          "object": "c.cellar-compartment",
+          "subject": "c.flat"
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "r.compartment-in-cellar",
+          "label": "is located in",
+          "level": "level-3",
+          "level_reason": "Location detail.",
+          "object": "c.cellar",
+          "subject": "c.cellar-compartment"
+        }
+      ],
+      "statements": [
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "s.laundry-location",
+          "label": "Laundry room location",
+          "level": "level-2",
+          "level_reason": "Shared space information for normal daily life.",
+          "text": "The shared laundry room is in the cellar of building A."
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "s.laundry-hours",
+          "label": "Laundry opening hours",
+          "level": "level-2",
+          "level_reason": "Shared space usage for normal daily life.",
+          "text": "The shared laundry room may be used from 07:00 to 21:00."
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "s.laundry-booking",
+          "label": "Laundry slot booking",
+          "level": "level-2",
+          "level_reason": "Shared space usage for normal daily life.",
+          "text": "A slot for the laundry room is booked on the list at the door."
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "s.no-pet-textiles",
+          "label": "No pet textiles in shared machines",
+          "level": "level-2",
+          "level_reason": "House rule about pets in a shared space, relevant on a normal day.",
+          "text": "Pet blankets, pet beds and other pet textiles may not be washed in the shared washing machines."
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "s.cellar-per-flat",
+          "label": "One cellar compartment per flat",
+          "level": "level-2",
+          "level_reason": "Shared space information.",
+          "text": "Each flat has one cellar compartment."
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "s.no-flammables",
+          "label": "No flammable liquids in cellar",
+          "level": "level-3",
+          "level_reason": "House rule not specific to pets; peripheral detail.",
+          "text": "Flammable liquids may not be stored in the cellar compartment."
+        }
+      ],
+      "terms": [
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "t.laundry-room",
+          "label": "shared laundry room",
+          "level": "level-2",
+          "level_reason": "Names a shared space.",
+          "mentions": [
+            {
+              "concept": "c.laundry-room",
+              "unit": "U1"
+            }
+          ]
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "t.cellar",
+          "label": "cellar",
+          "level": "level-2",
+          "level_reason": "Names a shared space.",
+          "mentions": [
+            {
+              "concept": "c.cellar",
+              "unit": "U1"
+            }
+          ]
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "t.pet-textiles",
+          "label": "pet textiles",
+          "level": "level-2",
+          "level_reason": "Names items covered by a pet rule.",
+          "mentions": [
+            {
+              "concept": "c.pet-textile",
+              "unit": "U1"
+            }
+          ]
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "t.washing-machine",
+          "label": "shared washing machines",
+          "level": "level-2",
+          "level_reason": "Names shared equipment.",
+          "mentions": [
+            {
+              "concept": "c.washing-machine",
+              "unit": "U1"
+            }
+          ]
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "t.cellar-compartment",
+          "label": "cellar compartment",
+          "level": "level-2",
+          "level_reason": "Names a storage space.",
+          "mentions": [
+            {
+              "concept": "c.cellar-compartment",
+              "unit": "U1"
+            }
+          ]
+        }
+      ],
+      "unit_verdicts": [
+        {
+          "ignorable": false,
+          "unit": "U1"
+        }
+      ]
+    },
+    "input_tokens": 4899,
+    "model": "claude-opus-5-5",
+    "output_tokens": 2258
+  }
+}

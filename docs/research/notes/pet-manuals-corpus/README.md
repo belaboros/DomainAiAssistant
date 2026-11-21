@@ -4,6 +4,8 @@ Answer key for the sample manuals of [idea 0001](../../../ideas/0001-manual-onto
 
 The manuals are in [data/user-manuals-pets-and-house-rules/](../../../../data/user-manuals-pets-and-house-rules/). This file stays **outside** that folder on purpose: it lists the issues seeded into the manuals and the expected behaviour, so if the assistant can read it, every test below is spoiled.
 
+[answer-key.yaml](answer-key.yaml) restates the parts that `ontology-builder eval` scores (spec 0002, FR-38), in machine-readable form. This README stays the source of truth; change both together.
+
 ## Layout
 
 One Markdown file per chapter, named `NN-slug.md`. A chapter with sub-chapters is a folder `NN-slug/` holding `NN-slug.md` files. Each file starts with a heading that carries the chapter number (and the sub-chapter number), so answers can cite e.g. "dog 5.3".

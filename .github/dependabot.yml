@@ -10,3 +10,25 @@ updates:
     groups:
       actions:
         patterns: ["*"]
+
+  # Python: the uv workspace (ADR-0020).
+  - package-ecosystem: uv
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 7
+    groups:
+      python:
+        patterns: ["*"]
+
+  # Node dev tools at the root: the Mermaid CLI for the level-N.md render test (plan 0002, T15).
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 7
+    groups:
+      node-dev-tools:
+        patterns: ["*"]

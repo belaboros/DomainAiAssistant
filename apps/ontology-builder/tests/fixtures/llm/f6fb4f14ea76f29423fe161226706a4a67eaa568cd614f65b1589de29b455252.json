@@ -1,0 +1,422 @@
+{
+  "request": {
+    "max_tokens": 16000,
+    "messages": [
+      {
+        "content": "Document: 03-the-shared-inner-yard.md\nTitle: 3. The Shared Inner Yard\n\nSource units:\n\n[U1] paragraph \u00b7 3. The Shared Inner Yard\nThe inner yard is shared by all residents. Children may play there between 08:00 and 20:00. Bicycles must be parked in the bicycle racks only. Barbecues are allowed only in the marked barbecue area and never during quiet hours.\n\nThe first step gave the verdicts and the candidates below. Now give only the rules and properties of this document. Refer to these candidates by key, or to keys of other rules and properties you define now; leave every other list out.\n\nCandidates (kind, key: label):\n- statement s.yard-shared: Inner yard shared by all residents\n- statement s.children-play-hours: Children's play hours in the yard\n- statement s.bicycles-racks: Bicycles only in racks\n- statement s.barbecue-area: Barbecues only in marked area\n- statement s.barbecue-quiet-hours: No barbecues during quiet hours\n- term t.inner-yard: inner yard\n- term t.resident: residents\n- term t.children: children\n- term t.bicycle: bicycles\n- term t.bicycle-rack: bicycle racks\n- term t.barbecue: barbecues\n- term t.barbecue-area: marked barbecue area\n- term t.quiet-hours: quiet hours\n- concept c.inner-yard: inner yard\n- concept c.resident: resident\n- concept c.child: child\n- concept c.bicycle: bicycle\n- concept c.bicycle-rack: bicycle rack\n- concept c.barbecue: barbecue\n- concept c.barbecue-area: barbecue area\n- concept c.quiet-hours: quiet hours\n- relation r.yard-shared-by-resident: is shared by\n- relation r.child-plays-in-yard: may play in\n- relation r.bicycle-parked-in-rack: is parked in\n- relation r.barbecue-in-area: is allowed only in\n\nIgnorable units: none\n",
+        "role": "user"
+      }
+    ],
+    "model": "claude-opus-5-5",
+    "output_config": {
+      "format": {
+        "schema": {
+          "$defs": {
+            "CandidateProperty": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence": {
+                  "description": "Aliases (U1, U2, ...) of the source units the candidate comes from.",
+                  "items": {
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "title": "Evidence",
+                  "type": "array"
+                },
+                "key": {
+                  "description": "Local key, unique in one response.",
+                  "title": "Key",
+                  "type": "string"
+                },
+                "label": {
+                  "title": "Label",
+                  "type": "string"
+                },
+                "level": {
+                  "$ref": "#/$defs/Level"
+                },
+                "level_reason": {
+                  "title": "Level Reason",
+                  "type": "string"
+                },
+                "name": {
+                  "title": "Name",
+                  "type": "string"
+                },
+                "of": {
+                  "description": "Key of the candidate the property belongs to.",
+                  "title": "Of",
+                  "type": "string"
+                },
+                "unit": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "{default: None}",
+                  "title": "Unit"
+                },
+                "value": {
+                  "title": "Value",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "key",
+                "label",
+                "evidence",
+                "level",
+                "level_reason",
+                "of",
+                "name",
+                "value"
+              ],
+              "title": "CandidateProperty",
+              "type": "object"
+            },
+            "CandidateRule": {
+              "additionalProperties": false,
+              "properties": {
+                "action": {
+                  "title": "Action",
+                  "type": "string"
+                },
+                "actor": {
+                  "title": "Actor",
+                  "type": "string"
+                },
+                "cardinality": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/$defs/CandidateRuleCardinality"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "{default: None}"
+                },
+                "condition": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "{default: None}",
+                  "title": "Condition"
+                },
+                "evidence": {
+                  "description": "Aliases (U1, U2, ...) of the source units the candidate comes from.",
+                  "items": {
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "title": "Evidence",
+                  "type": "array"
+                },
+                "key": {
+                  "description": "Local key, unique in one response.",
+                  "title": "Key",
+                  "type": "string"
+                },
+                "label": {
+                  "title": "Label",
+                  "type": "string"
+                },
+                "level": {
+                  "$ref": "#/$defs/Level"
+                },
+                "level_reason": {
+                  "title": "Level Reason",
+                  "type": "string"
+                },
+                "limit": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/$defs/Limit"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "{default: None}"
+                },
+                "modality": {
+                  "$ref": "#/$defs/Modality"
+                },
+                "refers_to": {
+                  "anyOf": [
+                    {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "Keys of the candidates the rule refers to.\n\n{default: None}",
+                  "title": "Refers To"
+                }
+              },
+              "required": [
+                "key",
+                "label",
+                "evidence",
+                "level",
+                "level_reason",
+                "modality",
+                "actor",
+                "action"
+              ],
+              "title": "CandidateRule",
+              "type": "object"
+            },
+            "CandidateRuleCardinality": {
+              "additionalProperties": false,
+              "properties": {
+                "max": {
+                  "anyOf": [
+                    {
+                      "description": "{minimum: 0}",
+                      "type": "integer"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "{default: None}",
+                  "title": "Max"
+                },
+                "min": {
+                  "anyOf": [
+                    {
+                      "description": "{minimum: 0}",
+                      "type": "integer"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "{default: None}",
+                  "title": "Min"
+                },
+                "relation": {
+                  "description": "Key of a candidate relation.",
+                  "title": "Relation",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "relation"
+              ],
+              "title": "CandidateRuleCardinality",
+              "type": "object"
+            },
+            "Comparator": {
+              "enum": [
+                "lt",
+                "le",
+                "eq",
+                "ge",
+                "gt"
+              ],
+              "title": "Comparator"
+            },
+            "Level": {
+              "description": "How important an element is for a reader of the domain (FR-13).",
+              "enum": [
+                "level-1",
+                "level-2",
+                "level-3",
+                "ignorable"
+              ],
+              "title": "Level"
+            },
+            "Limit": {
+              "additionalProperties": false,
+              "properties": {
+                "comparator": {
+                  "$ref": "#/$defs/Comparator"
+                },
+                "unit": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "{default: None}",
+                  "title": "Unit"
+                },
+                "value": {
+                  "title": "Value",
+                  "type": "number"
+                }
+              },
+              "required": [
+                "comparator",
+                "value"
+              ],
+              "title": "Limit",
+              "type": "object"
+            },
+            "Modality": {
+              "enum": [
+                "must",
+                "must_not",
+                "may"
+              ],
+              "title": "Modality"
+            }
+          },
+          "additionalProperties": false,
+          "description": "Pass 1, call B for one document; rules and properties.",
+          "properties": {
+            "properties": {
+              "anyOf": [
+                {
+                  "items": {
+                    "$ref": "#/$defs/CandidateProperty"
+                  },
+                  "type": "array"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "{default: None}",
+              "title": "Properties"
+            },
+            "rules": {
+              "anyOf": [
+                {
+                  "items": {
+                    "$ref": "#/$defs/CandidateRule"
+                  },
+                  "type": "array"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "{default: None}",
+              "title": "Rules"
+            }
+          },
+          "title": "RulesOutput",
+          "type": "object"
+        },
+        "type": "json_schema"
+      }
+    },
+    "system": "You extract the building blocks of a domain ontology from one document of a manual.\n\n# The ontology\nName: pets-and-house-rules\nPurpose: Explain what it takes to own a dog or a cat in a residential complex, and which house rules apply to pets and their owners.\nIntended readers: People who consider getting a dog or a cat, pet owners living in the complex, and the house management.\n\n# Levels\nPropose a level for every candidate, with a short reason:\n- level-1: the core concepts, actors, processes, relations and rules that show what the domain is about, quick to grasp without prior knowledge. Here: The core of the domain: dog, cat, owner, resident, house management, and the rules every pet owner in the complex must know (registration, the lead, waste).\n- level-2: what someone taking part in the domain needs for the normal, happy-path case. Here: What an owner needs on a normal day: feeding, walks, vaccination, grooming, leaving the pet alone, the shared spaces.\n- level-3: detail for special cases and error scenarios. Here: Special cases and error scenarios: puppies and kittens, dangerous breeds, moving house, travel, complaints and enforcement.\n- ignorable: not knowledge about the domain.\n\n# Step 1: one verdict per source unit\nGive every unit a verdict. A unit is ignorable when it holds no general knowledge about the domain. Categories:\n- instance_or_anecdote: about one particular person, animal or event (names, places, memories).\n- generic_or_historical_story: background or history that says nothing about the domain today.\n- quote_or_motivational: quotes, slogans and value statements that create no obligation, actor or relation.\n- procedure: step-by-step instructions or commands for one specific tool or task.\n- other: anything else that is not domain knowledge (say why).\nExamples of ignorable content in this ontology:\n- Stories about one particular dog, cat or owner (names, places, memories)\n- History or folklore about animals\n- Quotes and motivational paragraphs that state no rule\nJudge each unit on its own: a unit next to an ignorable one may hold real content. Extract nothing from an ignorable unit and never cite it as evidence, even when it seems to confirm a fact stated elsewhere.\n\n# Step 2: candidates from the other units\n- statements: atomic claims, one fact each, in plain words (label: a short name; text: the claim).\n- concepts: things, roles, places and events of the domain. Label: a singular noun phrase as in a glossary. definition: only when the text gives one. parents: keys of broader concepts the text states (a puppy is a dog).\n- terms: the words the text uses to name concepts. Each term lists its mentions: the unit and the key of the concept the word names there. When one word names different things in different units, its mentions point to different concepts.\n- relations: a link between two concepts (subject and object are concept keys); the label is the predicate (\"is registered with\"). Give a cardinality only when the text states a number.\n- rules: who (actor) must, must_not or may do what (action), under which condition. A numeric limit becomes limit {comparator: lt|le|eq|ge|gt, value, unit}; \"a lead of at most 2 m\" is limit le 2 m. A limit on how many things one may have becomes a cardinality on a relation. refers_to: keys of the concepts and relations the rule is about.\n- properties: a value of a concept or another candidate (of: its key), such as a lifespan of 10 to 15 years: name, value, unit.\n\n# Keys, evidence, faithfulness\n- Every candidate has a key, unique in your answer, made of letters, digits and _ . : - (for example c.leash, r.lead-limit). Refer to other candidates only by keys defined in your answer.\n- evidence lists the aliases (U1, U2, ...) of every unit the candidate comes from, exactly as shown. Never cite an ignorable unit.\n- Stay close to the text: no abstractions, generalisations or facts it does not state.\n"
+  },
+  "response": {
+    "data": {
+      "properties": [
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "p.children-play-hours",
+          "label": "Children's play hours in the inner yard",
+          "level": "level-2",
+          "level_reason": "Time window for using the shared yard.",
+          "name": "play hours",
+          "of": "ru.children-play-hours",
+          "unit": null,
+          "value": "08:00 to 20:00"
+        }
+      ],
+      "rules": [
+        {
+          "action": "play in the inner yard",
+          "actor": "child",
+          "condition": "between 08:00 and 20:00",
+          "evidence": [
+            "U1"
+          ],
+          "key": "ru.children-play-hours",
+          "label": "Children may play in the yard between 08:00 and 20:00",
+          "level": "level-2",
+          "level_reason": "Rule for the use of a shared space on a normal day.",
+          "modality": "may",
+          "refers_to": [
+            "c.child",
+            "c.inner-yard",
+            "r.child-plays-in-yard"
+          ]
+        },
+        {
+          "action": "park bicycles in the bicycle racks only",
+          "actor": "resident",
+          "evidence": [
+            "U1"
+          ],
+          "key": "ru.bicycles-in-racks",
+          "label": "Bicycles must be parked only in the bicycle racks",
+          "level": "level-2",
+          "level_reason": "House rule for the shared inner yard on a normal day.",
+          "modality": "must",
+          "refers_to": [
+            "c.bicycle",
+            "c.bicycle-rack",
+            "c.resident",
+            "r.bicycle-parked-in-rack"
+          ]
+        },
+        {
+          "action": "have a barbecue in the inner yard",
+          "actor": "resident",
+          "condition": "only in the marked barbecue area",
+          "evidence": [
+            "U1"
+          ],
+          "key": "ru.barbecue-only-in-area",
+          "label": "Barbecues only in the marked barbecue area",
+          "level": "level-2",
+          "level_reason": "House rule for the shared inner yard on a normal day.",
+          "modality": "may",
+          "refers_to": [
+            "c.barbecue",
+            "c.barbecue-area",
+            "c.inner-yard",
+            "r.barbecue-in-area"
+          ]
+        },
+        {
+          "action": "have a barbecue",
+          "actor": "resident",
+          "condition": "during quiet hours",
+          "evidence": [
+            "U1"
+          ],
+          "key": "ru.no-barbecue-quiet-hours",
+          "label": "No barbecues during quiet hours",
+          "level": "level-2",
+          "level_reason": "House rule for the shared inner yard on a normal day.",
+          "modality": "must_not",
+          "refers_to": [
+            "c.barbecue",
+            "c.quiet-hours"
+          ]
+        }
+      ]
+    },
+    "input_tokens": 4347,
+    "model": "claude-opus-5-5",
+    "output_tokens": 862
+  }
+}

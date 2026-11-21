@@ -1,0 +1,764 @@
+{
+  "request": {
+    "max_tokens": 32000,
+    "messages": [
+      {
+        "content": "Concepts (alias, label: definition, where found):\n[C1] dog (01-before-you-get-a-dog.md)\n[C2] local authority (01-before-you-get-a-dog.md)\n[C3] microchip (01-before-you-get-a-dog.md)\n[C4] dog registration (01-before-you-get-a-dog.md)\n[C5] daily exercise (01-before-you-get-a-dog.md)\n[C6] company (01-before-you-get-a-dog.md)\n[C7] training (01-before-you-get-a-dog.md)\n[C8] veterinary care (01-before-you-get-a-dog.md)\n[C9] breed (02-choosing-a-breed.md)\n[C10] small companion breed (02-choosing-a-breed.md)\n[C11] large or working breed (02-choosing-a-breed.md)\n[C12] long-haired breed (02-choosing-a-breed.md)\n[C13] short-haired breed (02-choosing-a-breed.md)\n[C14] dangerous breed: A breed classified as dangerous by the local authority. (02-choosing-a-breed.md)\n[C15] local authority (02-choosing-a-breed.md)\n[C16] local list of dangerous breeds (02-choosing-a-breed.md)\n[C17] flat (02-choosing-a-breed.md)\n[C18] grooming (02-choosing-a-breed.md)\n[C19] exercise (02-choosing-a-breed.md)\n[C20] dog (03-health-and-care/01-feeding.md)\n[C21] adult dog (03-health-and-care/01-feeding.md)\n[C22] puppy (03-health-and-care/01-feeding.md)\n[C23] feeding (03-health-and-care/01-feeding.md)\n[C24] fresh water (03-health-and-care/01-feeding.md)\n[C25] chocolate (03-health-and-care/01-feeding.md)\n[C26] grape (03-health-and-care/01-feeding.md)\n[C27] onion (03-health-and-care/01-feeding.md)\n[C28] xylitol (03-health-and-care/01-feeding.md)\n[C29] dog (03-health-and-care/02-vaccination-and-the-veterinarian.md)\n[C30] puppy (03-health-and-care/02-vaccination-and-the-veterinarian.md)\n[C31] vaccination (03-health-and-care/02-vaccination-and-the-veterinarian.md)\n[C32] rabies vaccination (03-health-and-care/02-vaccination-and-the-veterinarian.md)\n[C33] veterinarian (03-health-and-care/02-vaccination-and-the-veterinarian.md)\n[C34] veterinary check-up (03-health-and-care/02-vaccination-and-the-veterinarian.md)\n[C35] dog (03-health-and-care/03-grooming-and-hygiene.md)\n[C36] grooming (03-health-and-care/03-grooming-and-hygiene.md)\n[C37] brushing (03-health-and-care/03-grooming-and-hygiene.md)\n[C38] claw trimming (03-health-and-care/03-grooming-and-hygiene.md)\n[C39] long-haired breed (03-health-and-care/03-grooming-and-hygiene.md)\n[C40] claw (03-health-and-care/03-grooming-and-hygiene.md)\n[C41] dog bed (03-health-and-care/03-grooming-and-hygiene.md)\n[C42] blanket (03-health-and-care/03-grooming-and-hygiene.md)\n[C43] dog (04-puppy-basics.md)\n[C44] puppy: A dog younger than 6 months. (04-puppy-basics.md)\n[C45] mother (04-puppy-basics.md)\n[C46] house training (04-puppy-basics.md)\n[C47] socialisation (04-puppy-basics.md)\n[C48] leash (05-walking-and-the-leash/01-choosing-a-leash.md)\n[C49] retractable leash (05-walking-and-the-leash/01-choosing-a-leash.md)\n[C50] collar (05-walking-and-the-leash/01-choosing-a-leash.md)\n[C51] harness (05-walking-and-the-leash/01-choosing-a-leash.md)\n[C52] walk (05-walking-and-the-leash/01-choosing-a-leash.md)\n[C53] busy street (05-walking-and-the-leash/01-choosing-a-leash.md)\n[C54] leash training (05-walking-and-the-leash/02-leash-training.md)\n[C55] leash (05-walking-and-the-leash/02-leash-training.md)\n[C56] dog (05-walking-and-the-leash/02-leash-training.md)\n[C57] puppy (05-walking-and-the-leash/02-leash-training.md)\n[C58] walk (05-walking-and-the-leash/02-leash-training.md)\n[C59] dog (05-walking-and-the-leash/03-daily-walks.md)\n[C60] adult dog (05-walking-and-the-leash/03-daily-walks.md)\n[C61] puppy (05-walking-and-the-leash/03-daily-walks.md)\n[C62] small breed (05-walking-and-the-leash/03-daily-walks.md)\n[C63] large breed (05-walking-and-the-leash/03-daily-walks.md)\n[C64] working breed (05-walking-and-the-leash/03-daily-walks.md)\n[C65] walk (05-walking-and-the-leash/03-daily-walks.md)\n[C66] owner (05-walking-and-the-leash/03-daily-walks.md)\n[C67] dog waste (05-walking-and-the-leash/03-daily-walks.md)\n[C68] waste bin (05-walking-and-the-leash/03-daily-walks.md)\n[C69] dog (06-being-a-good-lead-for-your-dog.md)\n[C70] owner (06-being-a-good-lead-for-your-dog.md)\n[C71] lead (leader of the dog): A calm, consistent and confident leader whose signals the dog can trust. (06-being-a-good-lead-for-your-dog.md)\n[C72] command word (06-being-a-good-lead-for-your-dog.md)\n[C73] family (06-being-a-good-lead-for-your-dog.md)\n[C74] household rule for the dog (06-being-a-good-lead-for-your-dog.md)\n[C75] good behaviour (06-being-a-good-lead-for-your-dog.md)\n[C76] unwanted behaviour (06-being-a-good-lead-for-your-dog.md)\n[C77] dog (07-training-and-commands.md)\n[C78] basic command: One of five commands every dog should learn: sit, down, stay, come and leave it. (07-training-and-commands.md)\n[C79] training session (07-training-and-commands.md)\n[C80] dog training course (07-training-and-commands.md)\n[C81] certified trainer (07-training-and-commands.md)\n[C82] dog of a dangerous breed (07-training-and-commands.md)\n[C83] obedience test (07-training-and-commands.md)\n[C84] dog: A social animal. (08-leaving-your-dog-alone.md)\n[C85] adult dog (08-leaving-your-dog-alone.md)\n[C86] puppy (08-leaving-your-dog-alone.md)\n[C87] owner (08-leaving-your-dog-alone.md)\n[C88] leaving the dog alone (08-leaving-your-dog-alone.md)\n[C89] walk (08-leaving-your-dog-alone.md)\n[C90] water (08-leaving-your-dog-alone.md)\n[C91] safe chew toy (08-leaving-your-dog-alone.md)\n[C92] barking or howling (08-leaving-your-dog-alone.md)\n[C93] training to be alone (08-leaving-your-dog-alone.md)\n[C94] dog (09-travelling-with-your-dog.md)\n[C95] car (09-travelling-with-your-dog.md)\n[C96] crate (09-travelling-with-your-dog.md)\n[C97] safety harness (09-travelling-with-your-dog.md)\n[C98] seat belt (09-travelling-with-your-dog.md)\n[C99] travel abroad (09-travelling-with-your-dog.md)\n[C100] pet passport (09-travelling-with-your-dog.md)\n[C101] microchip (09-travelling-with-your-dog.md)\n[C102] rabies vaccination (09-travelling-with-your-dog.md)\n[C103] dog (10-legal-obligations-and-responsibility.md)\n[C104] dog owner (10-legal-obligations-and-responsibility.md)\n[C105] third-party liability insurance (10-legal-obligations-and-responsibility.md)\n[C106] dangerous breed: A breed classified as dangerous by the local authority. (10-legal-obligations-and-responsibility.md)\n[C107] local authority (10-legal-obligations-and-responsibility.md)\n[C108] leash (10-legal-obligations-and-responsibility.md)\n[C109] public place (10-legal-obligations-and-responsibility.md)\n[C110] damage (10-legal-obligations-and-responsibility.md)\n[C111] free-running sign (10-legal-obligations-and-responsibility.md)\n[C112] cat (01-before-you-get-a-cat.md)\n[C113] food (01-before-you-get-a-cat.md)\n[C114] litter (01-before-you-get-a-cat.md)\n[C115] veterinary visit (01-before-you-get-a-cat.md)\n[C116] travel (01-before-you-get-a-cat.md)\n[C117] cat sitter (01-before-you-get-a-cat.md)\n[C118] cat (02-indoor-or-outdoor-cat.md)\n[C119] indoor cat: A cat that never leaves the flat. (02-indoor-or-outdoor-cat.md)\n[C120] outdoor cat: A cat that goes outside on its own. (02-indoor-or-outdoor-cat.md)\n[C121] flat (02-indoor-or-outdoor-cat.md)\n[C122] vaccination (02-indoor-or-outdoor-cat.md)\n[C123] microchip (02-indoor-or-outdoor-cat.md)\n[C124] play and climbing place (02-indoor-or-outdoor-cat.md)\n[C125] cat (03-home-and-equipment.md)\n[C126] litter box (03-home-and-equipment.md)\n[C127] scratching post (03-home-and-equipment.md)\n[C128] food bowl (03-home-and-equipment.md)\n[C129] water bowl (03-home-and-equipment.md)\n[C130] quiet sleeping place (03-home-and-equipment.md)\n[C131] window (03-home-and-equipment.md)\n[C132] balcony (03-home-and-equipment.md)\n[C133] net (03-home-and-equipment.md)\n[C134] cat (04-health-and-care/01-feeding.md)\n[C135] adult cat (04-health-and-care/01-feeding.md)\n[C136] kitten (04-health-and-care/01-feeding.md)\n[C137] meal (04-health-and-care/01-feeding.md)\n[C138] meat-based food (04-health-and-care/01-feeding.md)\n[C139] lily (04-health-and-care/01-feeding.md)\n[C140] onion (04-health-and-care/01-feeding.md)\n[C141] chocolate (04-health-and-care/01-feeding.md)\n[C142] dog food (04-health-and-care/01-feeding.md)\n[C143] cat (04-health-and-care/02-vaccination-and-the-veterinarian.md)\n[C144] kitten (04-health-and-care/02-vaccination-and-the-veterinarian.md)\n[C145] outdoor cat: A cat that goes outdoors. (04-health-and-care/02-vaccination-and-the-veterinarian.md)\n[C146] vaccination (04-health-and-care/02-vaccination-and-the-veterinarian.md)\n[C147] rabies vaccination (04-health-and-care/02-vaccination-and-the-veterinarian.md)\n[C148] neutering (04-health-and-care/02-vaccination-and-the-veterinarian.md)\n[C149] veterinarian (04-health-and-care/02-vaccination-and-the-veterinarian.md)\n[C150] veterinarian visit (04-health-and-care/02-vaccination-and-the-veterinarian.md)\n[C151] cat (04-health-and-care/03-litter-box-hygiene.md)\n[C152] litter box (04-health-and-care/03-litter-box-hygiene.md)\n[C153] litter (04-health-and-care/03-litter-box-hygiene.md)\n[C154] used litter (04-health-and-care/03-litter-box-hygiene.md)\n[C155] clump (04-health-and-care/03-litter-box-hygiene.md)\n[C156] residual waste (04-health-and-care/03-litter-box-hygiene.md)\n[C157] toilet (04-health-and-care/03-litter-box-hygiene.md)\n[C158] compost (04-health-and-care/03-litter-box-hygiene.md)\n[C159] kitten: A cat younger than 6 months. (05-kittens.md)\n[C160] cat (05-kittens.md)\n[C161] mother cat (05-kittens.md)\n[C162] litter box (05-kittens.md)\n[C163] flat (05-kittens.md)\n[C164] cat (06-play-and-behaviour.md)\n[C165] owner (06-play-and-behaviour.md)\n[C166] scratching post (06-play-and-behaviour.md)\n[C167] litter box (06-play-and-behaviour.md)\n[C168] veterinarian (06-play-and-behaviour.md)\n[C169] play session (06-play-and-behaviour.md)\n[C170] punishment (06-play-and-behaviour.md)\n[C171] physical punishment (06-play-and-behaviour.md)\n[C172] cat (07-grooming.md)\n[C173] short-haired cat (07-grooming.md)\n[C174] long-haired cat (07-grooming.md)\n[C175] grooming (07-grooming.md)\n[C176] brushing (07-grooming.md)\n[C177] bathing (07-grooming.md)\n[C178] matting (07-grooming.md)\n[C179] veterinarian (07-grooming.md)\n[C180] flat (07-grooming.md)\n[C181] cat (08-leaving-your-cat-alone.md)\n[C182] adult cat (08-leaving-your-cat-alone.md)\n[C183] food (08-leaving-your-cat-alone.md)\n[C184] fresh water (08-leaving-your-cat-alone.md)\n[C185] litter box (08-leaving-your-cat-alone.md)\n[C186] absence (08-leaving-your-cat-alone.md)\n[C187] visitor (08-leaving-your-cat-alone.md)\n[C188] cat (09-moving-house-with-a-cat.md)\n[C189] outdoor cat (09-moving-house-with-a-cat.md)\n[C190] moving house (09-moving-house-with-a-cat.md)\n[C191] moving day (09-moving-house-with-a-cat.md)\n[C192] litter box (09-moving-house-with-a-cat.md)\n[C193] territory (09-moving-house-with-a-cat.md)\n[C194] closed room (09-moving-house-with-a-cat.md)\n[C195] new home (09-moving-house-with-a-cat.md)\n[C196] resident: Anyone who lives in one of the buildings: tenants, owners and their household members. (01-scope-and-definitions.md)\n[C197] house management: Administers the buildings and enforces these rules. (01-scope-and-definitions.md)\n[C198] tenant (01-scope-and-definitions.md)\n[C199] owner (of a dwelling) (01-scope-and-definitions.md)\n[C200] household member (01-scope-and-definitions.md)\n[C201] building (01-scope-and-definitions.md)\n[C202] shared inner yard (01-scope-and-definitions.md)\n[C203] house rules (01-scope-and-definitions.md)\n[C204] quiet hours: From 22:00 to 07:00 on weekdays and from 22:00 to 09:00 on weekends and public holidays. (02-quiet-hours.md)\n[C205] resident (02-quiet-hours.md)\n[C206] noise (02-quiet-hours.md)\n[C207] persistent barking (02-quiet-hours.md)\n[C208] flat (02-quiet-hours.md)\n[C209] inner yard (02-quiet-hours.md)\n[C210] inner yard: The yard shared by all residents. (03-the-shared-inner-yard.md)\n[C211] resident (03-the-shared-inner-yard.md)\n[C212] child (03-the-shared-inner-yard.md)\n[C213] bicycle (03-the-shared-inner-yard.md)\n[C214] bicycle rack (03-the-shared-inner-yard.md)\n[C215] barbecue (03-the-shared-inner-yard.md)\n[C216] barbecue area (03-the-shared-inner-yard.md)\n[C217] quiet hours (03-the-shared-inner-yard.md)\n[C218] pet: A dog or a cat. (04-pets/01-registering-pets.md)\n[C219] dog (04-pets/01-registering-pets.md)\n[C220] cat (04-pets/01-registering-pets.md)\n[C221] house management (04-pets/01-registering-pets.md)\n[C222] pet owner (04-pets/01-registering-pets.md)\n[C223] resident (04-pets/01-registering-pets.md)\n[C224] pet registration (04-pets/01-registering-pets.md)\n[C225] dog (04-pets/02-dogs.md)\n[C226] dog owner (04-pets/02-dogs.md)\n[C227] lead (04-pets/02-dogs.md)\n[C228] inner yard (04-pets/02-dogs.md)\n[C229] stairwell (04-pets/02-dogs.md)\n[C230] lift (04-pets/02-dogs.md)\n[C231] flower bed (04-pets/02-dogs.md)\n[C232] building complex (04-pets/02-dogs.md)\n[C233] flat (04-pets/02-dogs.md)\n[C234] dog training (04-pets/02-dogs.md)\n[C235] breed (04-pets/02-dogs.md)\n[C236] alone-time limit (04-pets/02-dogs.md)\n[C237] house management (04-pets/02-dogs.md)\n[C238] persistent barking (04-pets/02-dogs.md)\n[C239] care arrangement (04-pets/02-dogs.md)\n[C240] cat (04-pets/03-cats.md)\n[C241] inner yard (04-pets/03-cats.md)\n[C242] stairwell (04-pets/03-cats.md)\n[C243] cellar (04-pets/03-cats.md)\n[C244] litter box (04-pets/03-cats.md)\n[C245] flat (04-pets/03-cats.md)\n[C246] waste (05-waste-and-recycling.md)\n[C247] bin room (05-waste-and-recycling.md)\n[C248] building B (05-waste-and-recycling.md)\n[C249] paper (05-waste-and-recycling.md)\n[C250] plastic (05-waste-and-recycling.md)\n[C251] glass (05-waste-and-recycling.md)\n[C252] organic waste (05-waste-and-recycling.md)\n[C253] residual waste (05-waste-and-recycling.md)\n[C254] residual waste bin (05-waste-and-recycling.md)\n[C255] pet waste (05-waste-and-recycling.md)\n[C256] used cat litter (05-waste-and-recycling.md)\n[C257] bulky item (05-waste-and-recycling.md)\n[C258] house management (05-waste-and-recycling.md)\n[C259] shared indoor space (06-shared-spaces-and-escape-routes.md)\n[C260] stairwell (06-shared-spaces-and-escape-routes.md)\n[C261] corridor (06-shared-spaces-and-escape-routes.md)\n[C262] escape route (06-shared-spaces-and-escape-routes.md)\n[C263] object (06-shared-spaces-and-escape-routes.md)\n[C264] pet equipment (06-shared-spaces-and-escape-routes.md)\n[C265] pram (06-shared-spaces-and-escape-routes.md)\n[C266] shoes (06-shared-spaces-and-escape-routes.md)\n[C267] smoking (06-shared-spaces-and-escape-routes.md)\n[C268] main door (07-security-and-access.md)\n[C269] building (07-security-and-access.md)\n[C270] resident (07-security-and-access.md)\n[C271] key (07-security-and-access.md)\n[C272] stranger (07-security-and-access.md)\n[C273] house management (07-security-and-access.md)\n[C274] lost key (07-security-and-access.md)\n[C275] shared laundry room (08-laundry-and-cellar.md)\n[C276] shared space (08-laundry-and-cellar.md)\n[C277] cellar (08-laundry-and-cellar.md)\n[C278] building A (08-laundry-and-cellar.md)\n[C279] booking list (08-laundry-and-cellar.md)\n[C280] laundry slot (08-laundry-and-cellar.md)\n[C281] shared washing machine (08-laundry-and-cellar.md)\n[C282] pet textile (08-laundry-and-cellar.md)\n[C283] pet blanket (08-laundry-and-cellar.md)\n[C284] pet bed (08-laundry-and-cellar.md)\n[C285] flat (08-laundry-and-cellar.md)\n[C286] cellar compartment (08-laundry-and-cellar.md)\n[C287] flammable liquid (08-laundry-and-cellar.md)\n[C288] noisy work (09-renovation-and-moving.md)\n[C289] drilling (09-renovation-and-moving.md)\n[C290] move (09-renovation-and-moving.md)\n[C291] house management (09-renovation-and-moving.md)\n[C292] lift (09-renovation-and-moving.md)\n[C293] lift cover (09-renovation-and-moving.md)\n[C294] house management (10-reporting-and-enforcement.md)\n[C295] written report (10-reporting-and-enforcement.md)\n[C296] damage (10-reporting-and-enforcement.md)\n[C297] noise complaint (10-reporting-and-enforcement.md)\n[C298] rule violation (10-reporting-and-enforcement.md)\n[C299] written warning (10-reporting-and-enforcement.md)\n[C300] termination of the tenancy (10-reporting-and-enforcement.md)\n[C301] tenancy (10-reporting-and-enforcement.md)\n\nTerms and their mentions (unit, document, the concept it names there, text):\n- \"dog\"\n  [U1] 01-before-you-get-a-dog.md \u00b7 names C1: A dog lives 10 to 15 years. It needs daily exercise, company, training and veterinary care for its whole life. Before you get a dog, check that your home, your working hours and your budget fit the dog you want.\n  [U2] 01-before-you-get-a-dog.md \u00b7 names C1: A dog older than 4 months must be registered with the local authority and must carry a microchip.\n  [U3] 03-health-and-care/01-feeding.md \u00b7 names C20: Feed an adult dog twice a day and a puppy three to four times a day. Fresh water must always be available. Chocolate, grapes, onions and xylitol are poisonous to dogs.\n  [U4] 03-health-and-care/02-vaccination-and-the-veterinarian.md \u00b7 names C29: A puppy receives its first vaccinations at 8 weeks of age. The rabies vaccination is mandatory and must be renewed every year. Take your dog to the veterinarian for a check-up at least once a year.\n  [U5] 03-health-and-care/03-grooming-and-hygiene.md \u00b7 names C35: Brush your dog at least once a week; long-haired breeds need brushing every day. Trim the claws when you can hear them clicking on the floor. Wash your dog's bed and blankets once a week at 60 \u00b0C.\n  [U6] 04-puppy-basics.md \u00b7 names C43: A puppy is a dog younger than 6 months. Puppies should not leave their mother before 8 weeks of age.\n  [U7] 05-walking-and-the-leash/02-leash-training.md \u00b7 names C56: Start leash training when the puppy is 8 to 10 weeks old. Reward the dog when the leash is loose, and stop walking when the dog pulls. Never jerk the leash.\n  [U8] 05-walking-and-the-leash/03-daily-walks.md \u00b7 names C59: An adult dog needs at least two walks a day: 30 to 60 minutes in total for small breeds and up to 2 hours for large and working breeds. A puppy must be taken outside to relieve itself every 2 to 3 hours. Always pick up your dog's waste and put it in a waste bin.\n  [U9] 06-being-a-good-lead-for-your-dog.md \u00b7 names C69: Your dog looks to you for direction. Be its lead: a calm, consistent and confident leader whose signals it can trust.\n  [U10] 06-being-a-good-lead-for-your-dog.md \u00b7 names C69: Set clear rules (for example, whether the dog may lie on the sofa) and keep them.\n  [U11] 06-being-a-good-lead-for-your-dog.md \u00b7 names C69: A dog that does not see its owner as a reliable lead may become anxious or try to take control.\n  [U12] 07-training-and-commands.md \u00b7 names C77: Every dog should learn five basic commands: *sit*, *down*, *stay*, *come* and *leave it*. Train in short sessions of 5 to 10 minutes, several times a day, and always end with a success.\n  [U13] 07-training-and-commands.md \u00b7 names C77: A dog training course with a certified trainer is recommended in the first year. Dogs of breeds classified as dangerous must pass an obedience test.\n  [U14] 08-leaving-your-dog-alone.md \u00b7 names C84: Dogs are social animals. **Never leave an adult dog alone at home for more than 6 hours.** Puppies should not be left alone for more than 2 hours.\n  [U15] 08-leaving-your-dog-alone.md \u00b7 names C84: Before you leave, walk the dog, leave water and a safe chew toy, and keep your departure low-key. If your dog barks or howls while you are away, train it to be alone step by step, starting with a few minutes.\n  [U16] 09-travelling-with-your-dog.md \u00b7 names C94: In a car, a dog must travel in a crate or wear a safety harness attached to the seat belt. Never leave a dog in a parked car in warm weather. For travel abroad, your dog needs a pet passport, a microchip and a valid rabies vaccination.\n  [U17] 10-legal-obligations-and-responsibility.md \u00b7 names C103: You are liable for any damage your dog causes. Third-party liability insurance for dog owners is strongly recommended, and it is mandatory for breeds classified as dangerous by the local authority. In public places, your dog must be kept on a leash unless a sign allows free running.\n  [U18] 04-pets/01-registering-pets.md \u00b7 names C219: Every pet (dog or cat) must be registered with the house management within 14 days of moving in or acquiring the pet. A pet owner must make sure that their pet does not disturb other residents.\n  [U19] 04-pets/02-dogs.md \u00b7 names C225: Dogs must be kept on a lead at all times in the inner yard, the stairwells and the lifts. The lead may not be longer than 2 metres.\n  [U20] 04-pets/02-dogs.md \u00b7 names C225: Dogs may not relieve themselves in the inner yard or the flower beds. Dog owners take their dogs outside the building complex for this.\n  [U21] 04-pets/02-dogs.md \u00b7 names C225: The maximum time a dog may be left alone in a flat depends on the dog's education (training) and its specific breed. Owners are responsible for knowing the limit that applies to their dog.\n  [U22] 04-pets/02-dogs.md \u00b7 names C225: If a dog barks persistently while left alone, the house management may require the owner to arrange care.\n- \"local authority\"\n  [U2] 01-before-you-get-a-dog.md \u00b7 names C2: A dog older than 4 months must be registered with the local authority and must carry a microchip.\n  [U23] 02-choosing-a-breed.md \u00b7 names C15: Some breeds are classified as dangerous by the local authority. Check the local list before you choose a breed.\n  [U17] 10-legal-obligations-and-responsibility.md \u00b7 names C107: You are liable for any damage your dog causes. Third-party liability insurance for dog owners is strongly recommended, and it is mandatory for breeds classified as dangerous by the local authority. In public places, your dog must be kept on a leash unless a sign allows free running.\n- \"microchip\"\n  [U2] 01-before-you-get-a-dog.md \u00b7 names C3: A dog older than 4 months must be registered with the local authority and must carry a microchip.\n  [U16] 09-travelling-with-your-dog.md \u00b7 names C101: In a car, a dog must travel in a crate or wear a safety harness attached to the seat belt. Never leave a dog in a parked car in warm weather. For travel abroad, your dog needs a pet passport, a microchip and a valid rabies vaccination.\n- \"exercise\"\n  [U1] 01-before-you-get-a-dog.md \u00b7 names C5: A dog lives 10 to 15 years. It needs daily exercise, company, training and veterinary care for its whole life. Before you get a dog, check that your home, your working hours and your budget fit the dog you want.\n  [U24] 02-choosing-a-breed.md \u00b7 names C19: **Small companion breeds** (for example, Maltese or Pug) need less space and less exercise and adapt well to flats.\n  [U25] 02-choosing-a-breed.md \u00b7 names C19: **Large and working breeds** (for example, Border Collie or German Shepherd) need more space, more exercise and more mental work.\n- \"training\"\n  [U1] 01-before-you-get-a-dog.md \u00b7 names C7: A dog lives 10 to 15 years. It needs daily exercise, company, training and veterinary care for its whole life. Before you get a dog, check that your home, your working hours and your budget fit the dog you want.\n- \"veterinary care\"\n  [U1] 01-before-you-get-a-dog.md \u00b7 names C8: A dog lives 10 to 15 years. It needs daily exercise, company, training and veterinary care for its whole life. Before you get a dog, check that your home, your working hours and your budget fit the dog you want.\n- \"company\"\n  [U1] 01-before-you-get-a-dog.md \u00b7 names C6: A dog lives 10 to 15 years. It needs daily exercise, company, training and veterinary care for its whole life. Before you get a dog, check that your home, your working hours and your budget fit the dog you want.\n- \"breed\"\n  [U26] 02-choosing-a-breed.md \u00b7 names C9: Breeds differ in size, energy and the care they need.\n  [U23] 02-choosing-a-breed.md \u00b7 names C9: Some breeds are classified as dangerous by the local authority. Check the local list before you choose a breed.\n  [U21] 04-pets/02-dogs.md \u00b7 names C235: The maximum time a dog may be left alone in a flat depends on the dog's education (training) and its specific breed. Owners are responsible for knowing the limit that applies to their dog.\n- \"small companion breeds\"\n  [U24] 02-choosing-a-breed.md \u00b7 names C10: **Small companion breeds** (for example, Maltese or Pug) need less space and less exercise and adapt well to flats.\n- \"large and working breeds\"\n  [U25] 02-choosing-a-breed.md \u00b7 names C11: **Large and working breeds** (for example, Border Collie or German Shepherd) need more space, more exercise and more mental work.\n- \"long-haired breeds\"\n  [U27] 02-choosing-a-breed.md \u00b7 names C12: **Long-haired breeds** need more grooming than short-haired breeds.\n- \"short-haired breeds\"\n  [U27] 02-choosing-a-breed.md \u00b7 names C13: **Long-haired breeds** need more grooming than short-haired breeds.\n- \"dangerous\"\n  [U23] 02-choosing-a-breed.md \u00b7 names C14: Some breeds are classified as dangerous by the local authority. Check the local list before you choose a breed.\n- \"local list\"\n  [U23] 02-choosing-a-breed.md \u00b7 names C16: Some breeds are classified as dangerous by the local authority. Check the local list before you choose a breed.\n- \"flat\"\n  [U24] 02-choosing-a-breed.md \u00b7 names C17: **Small companion breeds** (for example, Maltese or Pug) need less space and less exercise and adapt well to flats.\n  [U28] 02-indoor-or-outdoor-cat.md \u00b7 names C121: An **indoor cat** never leaves the flat. On average it lives longer, but it needs more play and climbing places.\n  [U29] 05-kittens.md \u00b7 names C163: A kitten is a cat younger than 6 months. Kittens should not leave their mother before 12 weeks of age. Let a new kitten explore one room first, then the rest of the flat. Kittens learn to use the litter box quickly if it is easy to reach.\n  [U30] 07-grooming.md \u00b7 names C180: Short-haired cats groom themselves; brush them once a week to reduce hair in the flat. Long-haired cats need brushing every day to prevent matting. Do not bathe a cat unless the veterinarian advises it.\n  [U21] 04-pets/02-dogs.md \u00b7 names C233: The maximum time a dog may be left alone in a flat depends on the dog's education (training) and its specific breed. Owners are responsible for knowing the limit that applies to their dog.\n  [U31] 04-pets/03-cats.md \u00b7 names C245: Cats may move freely in the inner yard. Cats may not be kept in the stairwells or the cellar. Litter boxes must be kept inside the flat.\n- \"grooming\"\n  [U27] 02-choosing-a-breed.md \u00b7 names C18: **Long-haired breeds** need more grooming than short-haired breeds.\n  [U30] 07-grooming.md \u00b7 names C175: Short-haired cats groom themselves; brush them once a week to reduce hair in the flat. Long-haired cats need brushing every day to prevent matting. Do not bathe a cat unless the veterinarian advises it.\n- \"adult dog\"\n  [U3] 03-health-and-care/01-feeding.md \u00b7 names C21: Feed an adult dog twice a day and a puppy three to four times a day. Fresh water must always be available. Chocolate, grapes, onions and xylitol are poisonous to dogs.\n  [U8] 05-walking-and-the-leash/03-daily-walks.md \u00b7 names C60: An adult dog needs at least two walks a day: 30 to 60 minutes in total for small breeds and up to 2 hours for large and working breeds. A puppy must be taken outside to relieve itself every 2 to 3 hours. Always pick up your dog's waste and put it in a waste bin.\n  [U14] 08-leaving-your-dog-alone.md \u00b7 names C85: Dogs are social animals. **Never leave an adult dog alone at home for more than 6 hours.** Puppies should not be left alone for more than 2 hours.\n- \"puppy\"\n  [U3] 03-health-and-care/01-feeding.md \u00b7 names C22: Feed an adult dog twice a day and a puppy three to four times a day. Fresh water must always be available. Chocolate, grapes, onions and xylitol are poisonous to dogs.\n  [U4] 03-health-and-care/02-vaccination-and-the-veterinarian.md \u00b7 names C30: A puppy receives its first vaccinations at 8 weeks of age. The rabies vaccination is mandatory and must be renewed every year. Take your dog to the veterinarian for a check-up at least once a year.\n  [U6] 04-puppy-basics.md \u00b7 names C44: A puppy is a dog younger than 6 months. Puppies should not leave their mother before 8 weeks of age.\n  [U32] 04-puppy-basics.md \u00b7 names C44: House training starts on the first day: take the puppy outside after every meal, after every nap and after play, and praise it when it relieves itself outside. Between 8 and 16 weeks, let the puppy get to know many people, sounds, surfaces and traffic in a calm way.\n  [U7] 05-walking-and-the-leash/02-leash-training.md \u00b7 names C57: Start leash training when the puppy is 8 to 10 weeks old. Reward the dog when the leash is loose, and stop walking when the dog pulls. Never jerk the leash.\n  [U8] 05-walking-and-the-leash/03-daily-walks.md \u00b7 names C61: An adult dog needs at least two walks a day: 30 to 60 minutes in total for small breeds and up to 2 hours for large and working breeds. A puppy must be taken outside to relieve itself every 2 to 3 hours. Always pick up your dog's waste and put it in a waste bin.\n  [U14] 08-leaving-your-dog-alone.md \u00b7 names C86: Dogs are social animals. **Never leave an adult dog alone at home for more than 6 hours.** Puppies should not be left alone for more than 2 hours.\n- \"fresh water\"\n  [U3] 03-health-and-care/01-feeding.md \u00b7 names C24: Feed an adult dog twice a day and a puppy three to four times a day. Fresh water must always be available. Chocolate, grapes, onions and xylitol are poisonous to dogs.\n  [U33] 08-leaving-your-cat-alone.md \u00b7 names C184: An adult cat can stay alone for up to 24 hours if it has enough food, fresh water and a clean litter box. For longer absences, arrange for someone to visit the cat at least once a day.\n- \"chocolate\"\n  [U3] 03-health-and-care/01-feeding.md \u00b7 names C25: Feed an adult dog twice a day and a puppy three to four times a day. Fresh water must always be available. Chocolate, grapes, onions and xylitol are poisonous to dogs.\n  [U34] 04-health-and-care/01-feeding.md \u00b7 names C141: Feed an adult cat two to three small meals a day; kittens need four meals a day. Cats need meat-based food. Lilies, onions, chocolate and dog food are not suitable for cats; lilies are highly poisonous.\n- \"grapes\"\n  [U3] 03-health-and-care/01-feeding.md \u00b7 names C26: Feed an adult dog twice a day and a puppy three to four times a day. Fresh water must always be available. Chocolate, grapes, onions and xylitol are poisonous to dogs.\n- \"onions\"\n  [U3] 03-health-and-care/01-feeding.md \u00b7 names C27: Feed an adult dog twice a day and a puppy three to four times a day. Fresh water must always be available. Chocolate, grapes, onions and xylitol are poisonous to dogs.\n  [U34] 04-health-and-care/01-feeding.md \u00b7 names C140: Feed an adult cat two to three small meals a day; kittens need four meals a day. Cats need meat-based food. Lilies, onions, chocolate and dog food are not suitable for cats; lilies are highly poisonous.\n- \"xylitol\"\n  [U3] 03-health-and-care/01-feeding.md \u00b7 names C28: Feed an adult dog twice a day and a puppy three to four times a day. Fresh water must always be available. Chocolate, grapes, onions and xylitol are poisonous to dogs.\n- \"vaccination\"\n  [U4] 03-health-and-care/02-vaccination-and-the-veterinarian.md \u00b7 names C31: A puppy receives its first vaccinations at 8 weeks of age. The rabies vaccination is mandatory and must be renewed every year. Take your dog to the veterinarian for a check-up at least once a year.\n  [U35] 04-health-and-care/02-vaccination-and-the-veterinarian.md \u00b7 names C146: A kitten receives its first vaccinations at 8 weeks of age. A cat that goes outdoors must also be vaccinated against rabies, renewed every year. Neuter your cat at about 5 to 6 months of age. Visit the veterinarian at least once a year.\n- \"rabies vaccination\"\n  [U4] 03-health-and-care/02-vaccination-and-the-veterinarian.md \u00b7 names C32: A puppy receives its first vaccinations at 8 weeks of age. The rabies vaccination is mandatory and must be renewed every year. Take your dog to the veterinarian for a check-up at least once a year.\n  [U16] 09-travelling-with-your-dog.md \u00b7 names C102: In a car, a dog must travel in a crate or wear a safety harness attached to the seat belt. Never leave a dog in a parked car in warm weather. For travel abroad, your dog needs a pet passport, a microchip and a valid rabies vaccination.\n- \"veterinarian\"\n  [U4] 03-health-and-care/02-vaccination-and-the-veterinarian.md \u00b7 names C33: A puppy receives its first vaccinations at 8 weeks of age. The rabies vaccination is mandatory and must be renewed every year. Take your dog to the veterinarian for a check-up at least once a year.\n  [U35] 04-health-and-care/02-vaccination-and-the-veterinarian.md \u00b7 names C149: A kitten receives its first vaccinations at 8 weeks of age. A cat that goes outdoors must also be vaccinated against rabies, renewed every year. Neuter your cat at about 5 to 6 months of age. Visit the veterinarian at least once a year.\n  [U36] 06-play-and-behaviour.md \u00b7 names C168: Play with your cat for at least 15 minutes twice a day. A cat that scratches furniture usually needs a better scratching post, not punishment. Never punish a cat physically. A cat that suddenly stops using its litter box may be ill and should see a veterinarian.\n  [U30] 07-grooming.md \u00b7 names C179: Short-haired cats groom themselves; brush them once a week to reduce hair in the flat. Long-haired cats need brushing every day to prevent matting. Do not bathe a cat unless the veterinarian advises it.\n- \"check-up\"\n  [U4] 03-health-and-care/02-vaccination-and-the-veterinarian.md \u00b7 names C34: A puppy receives its first vaccinations at 8 weeks of age. The rabies vaccination is mandatory and must be renewed every year. Take your dog to the veterinarian for a check-up at least once a year.\n- \"brushing\"\n  [U5] 03-health-and-care/03-grooming-and-hygiene.md \u00b7 names C37: Brush your dog at least once a week; long-haired breeds need brushing every day. Trim the claws when you can hear them clicking on the floor. Wash your dog's bed and blankets once a week at 60 \u00b0C.\n  [U30] 07-grooming.md \u00b7 names C176: Short-haired cats groom themselves; brush them once a week to reduce hair in the flat. Long-haired cats need brushing every day to prevent matting. Do not bathe a cat unless the veterinarian advises it.\n- \"long-haired breed\"\n  [U5] 03-health-and-care/03-grooming-and-hygiene.md \u00b7 names C39: Brush your dog at least once a week; long-haired breeds need brushing every day. Trim the claws when you can hear them clicking on the floor. Wash your dog's bed and blankets once a week at 60 \u00b0C.\n- \"claw\"\n  [U5] 03-health-and-care/03-grooming-and-hygiene.md \u00b7 names C40: Brush your dog at least once a week; long-haired breeds need brushing every day. Trim the claws when you can hear them clicking on the floor. Wash your dog's bed and blankets once a week at 60 \u00b0C.\n- \"bed\"\n  [U5] 03-health-and-care/03-grooming-and-hygiene.md \u00b7 names C41: Brush your dog at least once a week; long-haired breeds need brushing every day. Trim the claws when you can hear them clicking on the floor. Wash your dog's bed and blankets once a week at 60 \u00b0C.\n- \"blanket\"\n  [U5] 03-health-and-care/03-grooming-and-hygiene.md \u00b7 names C42: Brush your dog at least once a week; long-haired breeds need brushing every day. Trim the claws when you can hear them clicking on the floor. Wash your dog's bed and blankets once a week at 60 \u00b0C.\n- \"mother\"\n  [U6] 04-puppy-basics.md \u00b7 names C45: A puppy is a dog younger than 6 months. Puppies should not leave their mother before 8 weeks of age.\n  [U29] 05-kittens.md \u00b7 names C161: A kitten is a cat younger than 6 months. Kittens should not leave their mother before 12 weeks of age. Let a new kitten explore one room first, then the rest of the flat. Kittens learn to use the litter box quickly if it is easy to reach.\n- \"house training\"\n  [U32] 04-puppy-basics.md \u00b7 names C46: House training starts on the first day: take the puppy outside after every meal, after every nap and after play, and praise it when it relieves itself outside. Between 8 and 16 weeks, let the puppy get to know many people, sounds, surfaces and traffic in a calm way.\n- \"leash training\"\n  [U7] 05-walking-and-the-leash/02-leash-training.md \u00b7 names C54: Start leash training when the puppy is 8 to 10 weeks old. Reward the dog when the leash is loose, and stop walking when the dog pulls. Never jerk the leash.\n- \"leash\"\n  [U7] 05-walking-and-the-leash/02-leash-training.md \u00b7 names C55: Start leash training when the puppy is 8 to 10 weeks old. Reward the dog when the leash is loose, and stop walking when the dog pulls. Never jerk the leash.\n  [U17] 10-legal-obligations-and-responsibility.md \u00b7 names C108: You are liable for any damage your dog causes. Third-party liability insurance for dog owners is strongly recommended, and it is mandatory for breeds classified as dangerous by the local authority. In public places, your dog must be kept on a leash unless a sign allows free running.\n- \"walk\"\n  [U8] 05-walking-and-the-leash/03-daily-walks.md \u00b7 names C65: An adult dog needs at least two walks a day: 30 to 60 minutes in total for small breeds and up to 2 hours for large and working breeds. A puppy must be taken outside to relieve itself every 2 to 3 hours. Always pick up your dog's waste and put it in a waste bin.\n  [U15] 08-leaving-your-dog-alone.md \u00b7 names C89: Before you leave, walk the dog, leave water and a safe chew toy, and keep your departure low-key. If your dog barks or howls while you are away, train it to be alone step by step, starting with a few minutes.\n- \"small breed\"\n  [U8] 05-walking-and-the-leash/03-daily-walks.md \u00b7 names C62: An adult dog needs at least two walks a day: 30 to 60 minutes in total for small breeds and up to 2 hours for large and working breeds. A puppy must be taken outside to relieve itself every 2 to 3 hours. Always pick up your dog's waste and put it in a waste bin.\n- \"large breed\"\n  [U8] 05-walking-and-the-leash/03-daily-walks.md \u00b7 names C63: An adult dog needs at least two walks a day: 30 to 60 minutes in total for small breeds and up to 2 hours for large and working breeds. A puppy must be taken outside to relieve itself every 2 to 3 hours. Always pick up your dog's waste and put it in a waste bin.\n- \"working breed\"\n  [U8] 05-walking-and-the-leash/03-daily-walks.md \u00b7 names C64: An adult dog needs at least two walks a day: 30 to 60 minutes in total for small breeds and up to 2 hours for large and working breeds. A puppy must be taken outside to relieve itself every 2 to 3 hours. Always pick up your dog's waste and put it in a waste bin.\n- \"waste\"\n  [U8] 05-walking-and-the-leash/03-daily-walks.md \u00b7 names C67: An adult dog needs at least two walks a day: 30 to 60 minutes in total for small breeds and up to 2 hours for large and working breeds. A puppy must be taken outside to relieve itself every 2 to 3 hours. Always pick up your dog's waste and put it in a waste bin.\n- \"waste bin\"\n  [U8] 05-walking-and-the-leash/03-daily-walks.md \u00b7 names C68: An adult dog needs at least two walks a day: 30 to 60 minutes in total for small breeds and up to 2 hours for large and working breeds. A puppy must be taken outside to relieve itself every 2 to 3 hours. Always pick up your dog's waste and put it in a waste bin.\n- \"lead\"\n  [U9] 06-being-a-good-lead-for-your-dog.md \u00b7 names C71: Your dog looks to you for direction. Be its lead: a calm, consistent and confident leader whose signals it can trust.\n  [U11] 06-being-a-good-lead-for-your-dog.md \u00b7 names C71: A dog that does not see its owner as a reliable lead may become anxious or try to take control.\n  [U19] 04-pets/02-dogs.md \u00b7 names C227: Dogs must be kept on a lead at all times in the inner yard, the stairwells and the lifts. The lead may not be longer than 2 metres.\n- \"owner\"\n  [U11] 06-being-a-good-lead-for-your-dog.md \u00b7 names C70: A dog that does not see its owner as a reliable lead may become anxious or try to take control.\n  [U37] 01-scope-and-definitions.md \u00b7 names C199: These rules apply to buildings A, B and C around the shared inner yard. A **resident** is anyone who lives in one of the buildings: tenants, owners and their household members. The **house management** administers the buildings and enforces these rules. Every resident must follow them.\n  [U21] 04-pets/02-dogs.md \u00b7 names C226: The maximum time a dog may be left alone in a flat depends on the dog's education (training) and its specific breed. Owners are responsible for knowing the limit that applies to their dog.\n  [U22] 04-pets/02-dogs.md \u00b7 names C226: If a dog barks persistently while left alone, the house management may require the owner to arrange care.\n- \"command word\"\n  [U38] 06-being-a-good-lead-for-your-dog.md \u00b7 names C72: Use the same command words every time, and make sure everyone in the family uses them too.\n- \"family\"\n  [U38] 06-being-a-good-lead-for-your-dog.md \u00b7 names C73: Use the same command words every time, and make sure everyone in the family uses them too.\n- \"good behaviour\"\n  [U39] 06-being-a-good-lead-for-your-dog.md \u00b7 names C75: Reward good behaviour immediately; ignore unwanted behaviour instead of shouting.\n- \"unwanted behaviour\"\n  [U39] 06-being-a-good-lead-for-your-dog.md \u00b7 names C76: Reward good behaviour immediately; ignore unwanted behaviour instead of shouting.\n- \"rule\"\n  [U10] 06-being-a-good-lead-for-your-dog.md \u00b7 names C74: Set clear rules (for example, whether the dog may lie on the sofa) and keep them.\n- \"basic command\"\n  [U12] 07-training-and-commands.md \u00b7 names C78: Every dog should learn five basic commands: *sit*, *down*, *stay*, *come* and *leave it*. Train in short sessions of 5 to 10 minutes, several times a day, and always end with a success.\n- \"session\"\n  [U12] 07-training-and-commands.md \u00b7 names C79: Every dog should learn five basic commands: *sit*, *down*, *stay*, *come* and *leave it*. Train in short sessions of 5 to 10 minutes, several times a day, and always end with a success.\n- \"dog training course\"\n  [U13] 07-training-and-commands.md \u00b7 names C80: A dog training course with a certified trainer is recommended in the first year. Dogs of breeds classified as dangerous must pass an obedience test.\n- \"certified trainer\"\n  [U13] 07-training-and-commands.md \u00b7 names C81: A dog training course with a certified trainer is recommended in the first year. Dogs of breeds classified as dangerous must pass an obedience test.\n- \"breeds classified as dangerous\"\n  [U13] 07-training-and-commands.md \u00b7 names C82: A dog training course with a certified trainer is recommended in the first year. Dogs of breeds classified as dangerous must pass an obedience test.\n- \"obedience test\"\n  [U13] 07-training-and-commands.md \u00b7 names C83: A dog training course with a certified trainer is recommended in the first year. Dogs of breeds classified as dangerous must pass an obedience test.\n- \"chew toy\"\n  [U15] 08-leaving-your-dog-alone.md \u00b7 names C91: Before you leave, walk the dog, leave water and a safe chew toy, and keep your departure low-key. If your dog barks or howls while you are away, train it to be alone step by step, starting with a few minutes.\n- \"car\"\n  [U16] 09-travelling-with-your-dog.md \u00b7 names C95: In a car, a dog must travel in a crate or wear a safety harness attached to the seat belt. Never leave a dog in a parked car in warm weather. For travel abroad, your dog needs a pet passport, a microchip and a valid rabies vaccination.\n- \"crate\"\n  [U16] 09-travelling-with-your-dog.md \u00b7 names C96: In a car, a dog must travel in a crate or wear a safety harness attached to the seat belt. Never leave a dog in a parked car in warm weather. For travel abroad, your dog needs a pet passport, a microchip and a valid rabies vaccination.\n- \"safety harness\"\n  [U16] 09-travelling-with-your-dog.md \u00b7 names C97: In a car, a dog must travel in a crate or wear a safety harness attached to the seat belt. Never leave a dog in a parked car in warm weather. For travel abroad, your dog needs a pet passport, a microchip and a valid rabies vaccination.\n- \"seat belt\"\n  [U16] 09-travelling-with-your-dog.md \u00b7 names C98: In a car, a dog must travel in a crate or wear a safety harness attached to the seat belt. Never leave a dog in a parked car in warm weather. For travel abroad, your dog needs a pet passport, a microchip and a valid rabies vaccination.\n- \"travel abroad\"\n  [U16] 09-travelling-with-your-dog.md \u00b7 names C99: In a car, a dog must travel in a crate or wear a safety harness attached to the seat belt. Never leave a dog in a parked car in warm weather. For travel abroad, your dog needs a pet passport, a microchip and a valid rabies vaccination.\n- \"pet passport\"\n  [U16] 09-travelling-with-your-dog.md \u00b7 names C100: In a car, a dog must travel in a crate or wear a safety harness attached to the seat belt. Never leave a dog in a parked car in warm weather. For travel abroad, your dog needs a pet passport, a microchip and a valid rabies vaccination.\n- \"dog owner\"\n  [U17] 10-legal-obligations-and-responsibility.md \u00b7 names C104: You are liable for any damage your dog causes. Third-party liability insurance for dog owners is strongly recommended, and it is mandatory for breeds classified as dangerous by the local authority. In public places, your dog must be kept on a leash unless a sign allows free running.\n  [U20] 04-pets/02-dogs.md \u00b7 names C226: Dogs may not relieve themselves in the inner yard or the flower beds. Dog owners take their dogs outside the building complex for this.\n- \"third-party liability insurance\"\n  [U17] 10-legal-obligations-and-responsibility.md \u00b7 names C105: You are liable for any damage your dog causes. Third-party liability insurance for dog owners is strongly recommended, and it is mandatory for breeds classified as dangerous by the local authority. In public places, your dog must be kept on a leash unless a sign allows free running.\n- \"dangerous breed\"\n  [U17] 10-legal-obligations-and-responsibility.md \u00b7 names C106: You are liable for any damage your dog causes. Third-party liability insurance for dog owners is strongly recommended, and it is mandatory for breeds classified as dangerous by the local authority. In public places, your dog must be kept on a leash unless a sign allows free running.\n- \"public place\"\n  [U17] 10-legal-obligations-and-responsibility.md \u00b7 names C109: You are liable for any damage your dog causes. Third-party liability insurance for dog owners is strongly recommended, and it is mandatory for breeds classified as dangerous by the local authority. In public places, your dog must be kept on a leash unless a sign allows free running.\n- \"damage\"\n  [U17] 10-legal-obligations-and-responsibility.md \u00b7 names C110: You are liable for any damage your dog causes. Third-party liability insurance for dog owners is strongly recommended, and it is mandatory for breeds classified as dangerous by the local authority. In public places, your dog must be kept on a leash unless a sign allows free running.\n  [U40] 10-reporting-and-enforcement.md \u00b7 names C296: Report damage, noise complaints and rule violations to the house management in writing. Repeated violations after a written warning may lead to termination of the tenancy.\n- \"sign\"\n  [U17] 10-legal-obligations-and-responsibility.md \u00b7 names C111: You are liable for any damage your dog causes. Third-party liability insurance for dog owners is strongly recommended, and it is mandatory for breeds classified as dangerous by the local authority. In public places, your dog must be kept on a leash unless a sign allows free running.\n- \"cat\"\n  [U41] 01-before-you-get-a-cat.md \u00b7 names C112: A cat lives 12 to 18 years. Cats are independent, but they still need daily attention, play and a clean environment. Plan for food, litter, yearly veterinary visits and someone to look after the cat when you travel.\n  [U42] 02-indoor-or-outdoor-cat.md \u00b7 names C118: Decide early whether your cat will be an indoor cat or an outdoor cat.\n  [U43] 03-home-and-equipment.md \u00b7 names C125: Every cat needs a litter box, a scratching post, food and water bowls placed away from the litter box, and a quiet place to sleep. Secure windows and balconies with a net, because cats can fall from height.\n  [U34] 04-health-and-care/01-feeding.md \u00b7 names C134: Feed an adult cat two to three small meals a day; kittens need four meals a day. Cats need meat-based food. Lilies, onions, chocolate and dog food are not suitable for cats; lilies are highly poisonous.\n  [U35] 04-health-and-care/02-vaccination-and-the-veterinarian.md \u00b7 names C143: A kitten receives its first vaccinations at 8 weeks of age. A cat that goes outdoors must also be vaccinated against rabies, renewed every year. Neuter your cat at about 5 to 6 months of age. Visit the veterinarian at least once a year.\n  [U44] 04-health-and-care/03-litter-box-hygiene.md \u00b7 names C151: Provide one litter box per cat plus one extra. Remove clumps every day and replace all litter once a week. Used litter goes into the residual waste, never into the toilet or the compost.\n  [U29] 05-kittens.md \u00b7 names C160: A kitten is a cat younger than 6 months. Kittens should not leave their mother before 12 weeks of age. Let a new kitten explore one room first, then the rest of the flat. Kittens learn to use the litter box quickly if it is easy to reach.\n  [U36] 06-play-and-behaviour.md \u00b7 names C164: Play with your cat for at least 15 minutes twice a day. A cat that scratches furniture usually needs a better scratching post, not punishment. Never punish a cat physically. A cat that suddenly stops using its litter box may be ill and should see a veterinarian.\n  [U30] 07-grooming.md \u00b7 names C172: Short-haired cats groom themselves; brush them once a week to reduce hair in the flat. Long-haired cats need brushing every day to prevent matting. Do not bathe a cat unless the veterinarian advises it.\n  [U33] 08-leaving-your-cat-alone.md \u00b7 names C181: An adult cat can stay alone for up to 24 hours if it has enough food, fresh water and a clean litter box. For longer absences, arrange for someone to visit the cat at least once a day.\n  [U45] 09-moving-house-with-a-cat.md \u00b7 names C188: Cats are attached to their territory. On moving day, keep the cat in a closed room with its litter box. After the move, keep an outdoor cat indoors for at least 2 weeks before you let it outside, so that it learns its new home.\n  [U18] 04-pets/01-registering-pets.md \u00b7 names C220: Every pet (dog or cat) must be registered with the house management within 14 days of moving in or acquiring the pet. A pet owner must make sure that their pet does not disturb other residents.\n  [U31] 04-pets/03-cats.md \u00b7 names C240: Cats may move freely in the inner yard. Cats may not be kept in the stairwells or the cellar. Litter boxes must be kept inside the flat.\n- \"food\"\n  [U41] 01-before-you-get-a-cat.md \u00b7 names C113: A cat lives 12 to 18 years. Cats are independent, but they still need daily attention, play and a clean environment. Plan for food, litter, yearly veterinary visits and someone to look after the cat when you travel.\n  [U33] 08-leaving-your-cat-alone.md \u00b7 names C183: An adult cat can stay alone for up to 24 hours if it has enough food, fresh water and a clean litter box. For longer absences, arrange for someone to visit the cat at least once a day.\n- \"litter\"\n  [U41] 01-before-you-get-a-cat.md \u00b7 names C114: A cat lives 12 to 18 years. Cats are independent, but they still need daily attention, play and a clean environment. Plan for food, litter, yearly veterinary visits and someone to look after the cat when you travel.\n  [U44] 04-health-and-care/03-litter-box-hygiene.md \u00b7 names C153: Provide one litter box per cat plus one extra. Remove clumps every day and replace all litter once a week. Used litter goes into the residual waste, never into the toilet or the compost.\n- \"veterinary visit\"\n  [U41] 01-before-you-get-a-cat.md \u00b7 names C115: A cat lives 12 to 18 years. Cats are independent, but they still need daily attention, play and a clean environment. Plan for food, litter, yearly veterinary visits and someone to look after the cat when you travel.\n- \"travel\"\n  [U41] 01-before-you-get-a-cat.md \u00b7 names C116: A cat lives 12 to 18 years. Cats are independent, but they still need daily attention, play and a clean environment. Plan for food, litter, yearly veterinary visits and someone to look after the cat when you travel.\n- \"someone to look after the cat\"\n  [U41] 01-before-you-get-a-cat.md \u00b7 names C117: A cat lives 12 to 18 years. Cats are independent, but they still need daily attention, play and a clean environment. Plan for food, litter, yearly veterinary visits and someone to look after the cat when you travel.\n- \"indoor cat\"\n  [U42] 02-indoor-or-outdoor-cat.md \u00b7 names C119: Decide early whether your cat will be an indoor cat or an outdoor cat.\n  [U28] 02-indoor-or-outdoor-cat.md \u00b7 names C119: An **indoor cat** never leaves the flat. On average it lives longer, but it needs more play and climbing places.\n- \"outdoor cat\"\n  [U42] 02-indoor-or-outdoor-cat.md \u00b7 names C120: Decide early whether your cat will be an indoor cat or an outdoor cat.\n  [U46] 02-indoor-or-outdoor-cat.md \u00b7 names C120: An **outdoor cat** goes outside on its own. It must be vaccinated and microchipped before it goes outside for the first time.\n  [U45] 09-moving-house-with-a-cat.md \u00b7 names C189: Cats are attached to their territory. On moving day, keep the cat in a closed room with its litter box. After the move, keep an outdoor cat indoors for at least 2 weeks before you let it outside, so that it learns its new home.\n- \"vaccinated\"\n  [U46] 02-indoor-or-outdoor-cat.md \u00b7 names C122: An **outdoor cat** goes outside on its own. It must be vaccinated and microchipped before it goes outside for the first time.\n- \"microchipped\"\n  [U46] 02-indoor-or-outdoor-cat.md \u00b7 names C123: An **outdoor cat** goes outside on its own. It must be vaccinated and microchipped before it goes outside for the first time.\n- \"play and climbing places\"\n  [U28] 02-indoor-or-outdoor-cat.md \u00b7 names C124: An **indoor cat** never leaves the flat. On average it lives longer, but it needs more play and climbing places.\n- \"litter box\"\n  [U43] 03-home-and-equipment.md \u00b7 names C126: Every cat needs a litter box, a scratching post, food and water bowls placed away from the litter box, and a quiet place to sleep. Secure windows and balconies with a net, because cats can fall from height.\n  [U44] 04-health-and-care/03-litter-box-hygiene.md \u00b7 names C152: Provide one litter box per cat plus one extra. Remove clumps every day and replace all litter once a week. Used litter goes into the residual waste, never into the toilet or the compost.\n  [U29] 05-kittens.md \u00b7 names C162: A kitten is a cat younger than 6 months. Kittens should not leave their mother before 12 weeks of age. Let a new kitten explore one room first, then the rest of the flat. Kittens learn to use the litter box quickly if it is easy to reach.\n  [U36] 06-play-and-behaviour.md \u00b7 names C167: Play with your cat for at least 15 minutes twice a day. A cat that scratches furniture usually needs a better scratching post, not punishment. Never punish a cat physically. A cat that suddenly stops using its litter box may be ill and should see a veterinarian.\n  [U33] 08-leaving-your-cat-alone.md \u00b7 names C185: An adult cat can stay alone for up to 24 hours if it has enough food, fresh water and a clean litter box. For longer absences, arrange for someone to visit the cat at least once a day.\n  [U45] 09-moving-house-with-a-cat.md \u00b7 names C192: Cats are attached to their territory. On moving day, keep the cat in a closed room with its litter box. After the move, keep an outdoor cat indoors for at least 2 weeks before you let it outside, so that it learns its new home.\n  [U31] 04-pets/03-cats.md \u00b7 names C244: Cats may move freely in the inner yard. Cats may not be kept in the stairwells or the cellar. Litter boxes must be kept inside the flat.\n- \"scratching post\"\n  [U43] 03-home-and-equipment.md \u00b7 names C127: Every cat needs a litter box, a scratching post, food and water bowls placed away from the litter box, and a quiet place to sleep. Secure windows and balconies with a net, because cats can fall from height.\n  [U36] 06-play-and-behaviour.md \u00b7 names C166: Play with your cat for at least 15 minutes twice a day. A cat that scratches furniture usually needs a better scratching post, not punishment. Never punish a cat physically. A cat that suddenly stops using its litter box may be ill and should see a veterinarian.\n- \"food bowl\"\n  [U43] 03-home-and-equipment.md \u00b7 names C128: Every cat needs a litter box, a scratching post, food and water bowls placed away from the litter box, and a quiet place to sleep. Secure windows and balconies with a net, because cats can fall from height.\n- \"water bowl\"\n  [U43] 03-home-and-equipment.md \u00b7 names C129: Every cat needs a litter box, a scratching post, food and water bowls placed away from the litter box, and a quiet place to sleep. Secure windows and balconies with a net, because cats can fall from height.\n- \"quiet place to sleep\"\n  [U43] 03-home-and-equipment.md \u00b7 names C130: Every cat needs a litter box, a scratching post, food and water bowls placed away from the litter box, and a quiet place to sleep. Secure windows and balconies with a net, because cats can fall from height.\n- \"window\"\n  [U43] 03-home-and-equipment.md \u00b7 names C131: Every cat needs a litter box, a scratching post, food and water bowls placed away from the litter box, and a quiet place to sleep. Secure windows and balconies with a net, because cats can fall from height.\n- \"balcony\"\n  [U43] 03-home-and-equipment.md \u00b7 names C132: Every cat needs a litter box, a scratching post, food and water bowls placed away from the litter box, and a quiet place to sleep. Secure windows and balconies with a net, because cats can fall from height.\n- \"net\"\n  [U43] 03-home-and-equipment.md \u00b7 names C133: Every cat needs a litter box, a scratching post, food and water bowls placed away from the litter box, and a quiet place to sleep. Secure windows and balconies with a net, because cats can fall from height.\n- \"adult cat\"\n  [U34] 04-health-and-care/01-feeding.md \u00b7 names C135: Feed an adult cat two to three small meals a day; kittens need four meals a day. Cats need meat-based food. Lilies, onions, chocolate and dog food are not suitable for cats; lilies are highly poisonous.\n  [U33] 08-leaving-your-cat-alone.md \u00b7 names C182: An adult cat can stay alone for up to 24 hours if it has enough food, fresh water and a clean litter box. For longer absences, arrange for someone to visit the cat at least once a day.\n- \"kitten\"\n  [U34] 04-health-and-care/01-feeding.md \u00b7 names C136: Feed an adult cat two to three small meals a day; kittens need four meals a day. Cats need meat-based food. Lilies, onions, chocolate and dog food are not suitable for cats; lilies are highly poisonous.\n  [U35] 04-health-and-care/02-vaccination-and-the-veterinarian.md \u00b7 names C144: A kitten receives its first vaccinations at 8 weeks of age. A cat that goes outdoors must also be vaccinated against rabies, renewed every year. Neuter your cat at about 5 to 6 months of age. Visit the veterinarian at least once a year.\n  [U29] 05-kittens.md \u00b7 names C159: A kitten is a cat younger than 6 months. Kittens should not leave their mother before 12 weeks of age. Let a new kitten explore one room first, then the rest of the flat. Kittens learn to use the litter box quickly if it is easy to reach.\n- \"meal\"\n  [U34] 04-health-and-care/01-feeding.md \u00b7 names C137: Feed an adult cat two to three small meals a day; kittens need four meals a day. Cats need meat-based food. Lilies, onions, chocolate and dog food are not suitable for cats; lilies are highly poisonous.\n- \"meat-based food\"\n  [U34] 04-health-and-care/01-feeding.md \u00b7 names C138: Feed an adult cat two to three small meals a day; kittens need four meals a day. Cats need meat-based food. Lilies, onions, chocolate and dog food are not suitable for cats; lilies are highly poisonous.\n- \"lilies\"\n  [U34] 04-health-and-care/01-feeding.md \u00b7 names C139: Feed an adult cat two to three small meals a day; kittens need four meals a day. Cats need meat-based food. Lilies, onions, chocolate and dog food are not suitable for cats; lilies are highly poisonous.\n- \"dog food\"\n  [U34] 04-health-and-care/01-feeding.md \u00b7 names C142: Feed an adult cat two to three small meals a day; kittens need four meals a day. Cats need meat-based food. Lilies, onions, chocolate and dog food are not suitable for cats; lilies are highly poisonous.\n- \"cat that goes outdoors\"\n  [U35] 04-health-and-care/02-vaccination-and-the-veterinarian.md \u00b7 names C145: A kitten receives its first vaccinations at 8 weeks of age. A cat that goes outdoors must also be vaccinated against rabies, renewed every year. Neuter your cat at about 5 to 6 months of age. Visit the veterinarian at least once a year.\n- \"rabies\"\n  [U35] 04-health-and-care/02-vaccination-and-the-veterinarian.md \u00b7 names C147: A kitten receives its first vaccinations at 8 weeks of age. A cat that goes outdoors must also be vaccinated against rabies, renewed every year. Neuter your cat at about 5 to 6 months of age. Visit the veterinarian at least once a year.\n- \"neuter\"\n  [U35] 04-health-and-care/02-vaccination-and-the-veterinarian.md \u00b7 names C148: A kitten receives its first vaccinations at 8 weeks of age. A cat that goes outdoors must also be vaccinated against rabies, renewed every year. Neuter your cat at about 5 to 6 months of age. Visit the veterinarian at least once a year.\n- \"used litter\"\n  [U44] 04-health-and-care/03-litter-box-hygiene.md \u00b7 names C154: Provide one litter box per cat plus one extra. Remove clumps every day and replace all litter once a week. Used litter goes into the residual waste, never into the toilet or the compost.\n- \"clump\"\n  [U44] 04-health-and-care/03-litter-box-hygiene.md \u00b7 names C155: Provide one litter box per cat plus one extra. Remove clumps every day and replace all litter once a week. Used litter goes into the residual waste, never into the toilet or the compost.\n- \"residual waste\"\n  [U44] 04-health-and-care/03-litter-box-hygiene.md \u00b7 names C156: Provide one litter box per cat plus one extra. Remove clumps every day and replace all litter once a week. Used litter goes into the residual waste, never into the toilet or the compost.\n- \"toilet\"\n  [U44] 04-health-and-care/03-litter-box-hygiene.md \u00b7 names C157: Provide one litter box per cat plus one extra. Remove clumps every day and replace all litter once a week. Used litter goes into the residual waste, never into the toilet or the compost.\n- \"compost\"\n  [U44] 04-health-and-care/03-litter-box-hygiene.md \u00b7 names C158: Provide one litter box per cat plus one extra. Remove clumps every day and replace all litter once a week. Used litter goes into the residual waste, never into the toilet or the compost.\n- \"play\"\n  [U36] 06-play-and-behaviour.md \u00b7 names C169: Play with your cat for at least 15 minutes twice a day. A cat that scratches furniture usually needs a better scratching post, not punishment. Never punish a cat physically. A cat that suddenly stops using its litter box may be ill and should see a veterinarian.\n- \"punishment\"\n  [U36] 06-play-and-behaviour.md \u00b7 names C170: Play with your cat for at least 15 minutes twice a day. A cat that scratches furniture usually needs a better scratching post, not punishment. Never punish a cat physically. A cat that suddenly stops using its litter box may be ill and should see a veterinarian.\n- \"short-haired cat\"\n  [U30] 07-grooming.md \u00b7 names C173: Short-haired cats groom themselves; brush them once a week to reduce hair in the flat. Long-haired cats need brushing every day to prevent matting. Do not bathe a cat unless the veterinarian advises it.\n- \"long-haired cat\"\n  [U30] 07-grooming.md \u00b7 names C174: Short-haired cats groom themselves; brush them once a week to reduce hair in the flat. Long-haired cats need brushing every day to prevent matting. Do not bathe a cat unless the veterinarian advises it.\n- \"matting\"\n  [U30] 07-grooming.md \u00b7 names C178: Short-haired cats groom themselves; brush them once a week to reduce hair in the flat. Long-haired cats need brushing every day to prevent matting. Do not bathe a cat unless the veterinarian advises it.\n- \"bathing\"\n  [U30] 07-grooming.md \u00b7 names C177: Short-haired cats groom themselves; brush them once a week to reduce hair in the flat. Long-haired cats need brushing every day to prevent matting. Do not bathe a cat unless the veterinarian advises it.\n- \"absence\"\n  [U33] 08-leaving-your-cat-alone.md \u00b7 names C186: An adult cat can stay alone for up to 24 hours if it has enough food, fresh water and a clean litter box. For longer absences, arrange for someone to visit the cat at least once a day.\n- \"moving day\"\n  [U45] 09-moving-house-with-a-cat.md \u00b7 names C191: Cats are attached to their territory. On moving day, keep the cat in a closed room with its litter box. After the move, keep an outdoor cat indoors for at least 2 weeks before you let it outside, so that it learns its new home.\n- \"move\"\n  [U45] 09-moving-house-with-a-cat.md \u00b7 names C190: Cats are attached to their territory. On moving day, keep the cat in a closed room with its litter box. After the move, keep an outdoor cat indoors for at least 2 weeks before you let it outside, so that it learns its new home.\n  [U47] 09-renovation-and-moving.md \u00b7 names C290: Noisy work such as drilling is allowed on weekdays from 08:00 to 12:00 and from 14:00 to 18:00, and on Saturdays from 09:00 to 12:00. Announce a move to the house management at least 7 days in advance, and protect the lift with the covers provided.\n- \"territory\"\n  [U45] 09-moving-house-with-a-cat.md \u00b7 names C193: Cats are attached to their territory. On moving day, keep the cat in a closed room with its litter box. After the move, keep an outdoor cat indoors for at least 2 weeks before you let it outside, so that it learns its new home.\n- \"closed room\"\n  [U45] 09-moving-house-with-a-cat.md \u00b7 names C194: Cats are attached to their territory. On moving day, keep the cat in a closed room with its litter box. After the move, keep an outdoor cat indoors for at least 2 weeks before you let it outside, so that it learns its new home.\n- \"new home\"\n  [U45] 09-moving-house-with-a-cat.md \u00b7 names C195: Cats are attached to their territory. On moving day, keep the cat in a closed room with its litter box. After the move, keep an outdoor cat indoors for at least 2 weeks before you let it outside, so that it learns its new home.\n- \"resident\"\n  [U37] 01-scope-and-definitions.md \u00b7 names C196: These rules apply to buildings A, B and C around the shared inner yard. A **resident** is anyone who lives in one of the buildings: tenants, owners and their household members. The **house management** administers the buildings and enforces these rules. Every resident must follow them.\n  [U18] 04-pets/01-registering-pets.md \u00b7 names C223: Every pet (dog or cat) must be registered with the house management within 14 days of moving in or acquiring the pet. A pet owner must make sure that their pet does not disturb other residents.\n  [U48] 07-security-and-access.md \u00b7 names C270: The main doors of each building stay closed and locked from 22:00 to 06:00; residents open them with their own key. Do not let strangers into the building. Lost keys must be reported to the house management at once.\n- \"house management\"\n  [U37] 01-scope-and-definitions.md \u00b7 names C197: These rules apply to buildings A, B and C around the shared inner yard. A **resident** is anyone who lives in one of the buildings: tenants, owners and their household members. The **house management** administers the buildings and enforces these rules. Every resident must follow them.\n  [U18] 04-pets/01-registering-pets.md \u00b7 names C221: Every pet (dog or cat) must be registered with the house management within 14 days of moving in or acquiring the pet. A pet owner must make sure that their pet does not disturb other residents.\n  [U22] 04-pets/02-dogs.md \u00b7 names C237: If a dog barks persistently while left alone, the house management may require the owner to arrange care.\n  [U49] 05-waste-and-recycling.md \u00b7 names C258: Waste is sorted in the bin room of building B: paper, plastic, glass, organic waste and residual waste. Pet waste and used cat litter go into the residual waste bin only. Bulky items must be booked for collection with the house management.\n  [U48] 07-security-and-access.md \u00b7 names C273: The main doors of each building stay closed and locked from 22:00 to 06:00; residents open them with their own key. Do not let strangers into the building. Lost keys must be reported to the house management at once.\n  [U47] 09-renovation-and-moving.md \u00b7 names C291: Noisy work such as drilling is allowed on weekdays from 08:00 to 12:00 and from 14:00 to 18:00, and on Saturdays from 09:00 to 12:00. Announce a move to the house management at least 7 days in advance, and protect the lift with the covers provided.\n  [U40] 10-reporting-and-enforcement.md \u00b7 names C294: Report damage, noise complaints and rule violations to the house management in writing. Repeated violations after a written warning may lead to termination of the tenancy.\n- \"tenant\"\n  [U37] 01-scope-and-definitions.md \u00b7 names C198: These rules apply to buildings A, B and C around the shared inner yard. A **resident** is anyone who lives in one of the buildings: tenants, owners and their household members. The **house management** administers the buildings and enforces these rules. Every resident must follow them.\n- \"household member\"\n  [U37] 01-scope-and-definitions.md \u00b7 names C200: These rules apply to buildings A, B and C around the shared inner yard. A **resident** is anyone who lives in one of the buildings: tenants, owners and their household members. The **house management** administers the buildings and enforces these rules. Every resident must follow them.\n- \"building\"\n  [U37] 01-scope-and-definitions.md \u00b7 names C201: These rules apply to buildings A, B and C around the shared inner yard. A **resident** is anyone who lives in one of the buildings: tenants, owners and their household members. The **house management** administers the buildings and enforces these rules. Every resident must follow them.\n  [U48] 07-security-and-access.md \u00b7 names C269: The main doors of each building stay closed and locked from 22:00 to 06:00; residents open them with their own key. Do not let strangers into the building. Lost keys must be reported to the house management at once.\n- \"shared inner yard\"\n  [U37] 01-scope-and-definitions.md \u00b7 names C202: These rules apply to buildings A, B and C around the shared inner yard. A **resident** is anyone who lives in one of the buildings: tenants, owners and their household members. The **house management** administers the buildings and enforces these rules. Every resident must follow them.\n- \"rules\"\n  [U37] 01-scope-and-definitions.md \u00b7 names C203: These rules apply to buildings A, B and C around the shared inner yard. A **resident** is anyone who lives in one of the buildings: tenants, owners and their household members. The **house management** administers the buildings and enforces these rules. Every resident must follow them.\n- \"quiet hours\"\n  [U50] 02-quiet-hours.md \u00b7 names C204: Quiet hours are from 22:00 to 07:00 on weekdays and from 22:00 to 09:00 on weekends and public holidays. During quiet hours, residents must avoid noise that can be heard in other flats or in the inner yard, including music, drilling and persistent barking.\n  [U51] 03-the-shared-inner-yard.md \u00b7 names C217: The inner yard is shared by all residents. Children may play there between 08:00 and 20:00. Bicycles must be parked in the bicycle racks only. Barbecues are allowed only in the marked barbecue area and never during quiet hours.\n- \"residents\"\n  [U50] 02-quiet-hours.md \u00b7 names C205: Quiet hours are from 22:00 to 07:00 on weekdays and from 22:00 to 09:00 on weekends and public holidays. During quiet hours, residents must avoid noise that can be heard in other flats or in the inner yard, including music, drilling and persistent barking.\n  [U51] 03-the-shared-inner-yard.md \u00b7 names C211: The inner yard is shared by all residents. Children may play there between 08:00 and 20:00. Bicycles must be parked in the bicycle racks only. Barbecues are allowed only in the marked barbecue area and never during quiet hours.\n- \"noise\"\n  [U50] 02-quiet-hours.md \u00b7 names C206: Quiet hours are from 22:00 to 07:00 on weekdays and from 22:00 to 09:00 on weekends and public holidays. During quiet hours, residents must avoid noise that can be heard in other flats or in the inner yard, including music, drilling and persistent barking.\n- \"persistent barking\"\n  [U50] 02-quiet-hours.md \u00b7 names C207: Quiet hours are from 22:00 to 07:00 on weekdays and from 22:00 to 09:00 on weekends and public holidays. During quiet hours, residents must avoid noise that can be heard in other flats or in the inner yard, including music, drilling and persistent barking.\n- \"flats\"\n  [U50] 02-quiet-hours.md \u00b7 names C208: Quiet hours are from 22:00 to 07:00 on weekdays and from 22:00 to 09:00 on weekends and public holidays. During quiet hours, residents must avoid noise that can be heard in other flats or in the inner yard, including music, drilling and persistent barking.\n- \"inner yard\"\n  [U50] 02-quiet-hours.md \u00b7 names C209: Quiet hours are from 22:00 to 07:00 on weekdays and from 22:00 to 09:00 on weekends and public holidays. During quiet hours, residents must avoid noise that can be heard in other flats or in the inner yard, including music, drilling and persistent barking.\n  [U51] 03-the-shared-inner-yard.md \u00b7 names C210: The inner yard is shared by all residents. Children may play there between 08:00 and 20:00. Bicycles must be parked in the bicycle racks only. Barbecues are allowed only in the marked barbecue area and never during quiet hours.\n  [U19] 04-pets/02-dogs.md \u00b7 names C228: Dogs must be kept on a lead at all times in the inner yard, the stairwells and the lifts. The lead may not be longer than 2 metres.\n  [U20] 04-pets/02-dogs.md \u00b7 names C228: Dogs may not relieve themselves in the inner yard or the flower beds. Dog owners take their dogs outside the building complex for this.\n  [U31] 04-pets/03-cats.md \u00b7 names C241: Cats may move freely in the inner yard. Cats may not be kept in the stairwells or the cellar. Litter boxes must be kept inside the flat.\n- \"children\"\n  [U51] 03-the-shared-inner-yard.md \u00b7 names C212: The inner yard is shared by all residents. Children may play there between 08:00 and 20:00. Bicycles must be parked in the bicycle racks only. Barbecues are allowed only in the marked barbecue area and never during quiet hours.\n- \"bicycles\"\n  [U51] 03-the-shared-inner-yard.md \u00b7 names C213: The inner yard is shared by all residents. Children may play there between 08:00 and 20:00. Bicycles must be parked in the bicycle racks only. Barbecues are allowed only in the marked barbecue area and never during quiet hours.\n- \"bicycle racks\"\n  [U51] 03-the-shared-inner-yard.md \u00b7 names C214: The inner yard is shared by all residents. Children may play there between 08:00 and 20:00. Bicycles must be parked in the bicycle racks only. Barbecues are allowed only in the marked barbecue area and never during quiet hours.\n- \"barbecues\"\n  [U51] 03-the-shared-inner-yard.md \u00b7 names C215: The inner yard is shared by all residents. Children may play there between 08:00 and 20:00. Bicycles must be parked in the bicycle racks only. Barbecues are allowed only in the marked barbecue area and never during quiet hours.\n- \"marked barbecue area\"\n  [U51] 03-the-shared-inner-yard.md \u00b7 names C216: The inner yard is shared by all residents. Children may play there between 08:00 and 20:00. Bicycles must be parked in the bicycle racks only. Barbecues are allowed only in the marked barbecue area and never during quiet hours.\n- \"pet\"\n  [U18] 04-pets/01-registering-pets.md \u00b7 names C218: Every pet (dog or cat) must be registered with the house management within 14 days of moving in or acquiring the pet. A pet owner must make sure that their pet does not disturb other residents.\n- \"pet owner\"\n  [U18] 04-pets/01-registering-pets.md \u00b7 names C222: Every pet (dog or cat) must be registered with the house management within 14 days of moving in or acquiring the pet. A pet owner must make sure that their pet does not disturb other residents.\n- \"registered\"\n  [U18] 04-pets/01-registering-pets.md \u00b7 names C224: Every pet (dog or cat) must be registered with the house management within 14 days of moving in or acquiring the pet. A pet owner must make sure that their pet does not disturb other residents.\n- \"stairwell\"\n  [U19] 04-pets/02-dogs.md \u00b7 names C229: Dogs must be kept on a lead at all times in the inner yard, the stairwells and the lifts. The lead may not be longer than 2 metres.\n  [U31] 04-pets/03-cats.md \u00b7 names C242: Cats may move freely in the inner yard. Cats may not be kept in the stairwells or the cellar. Litter boxes must be kept inside the flat.\n  [U52] 06-shared-spaces-and-escape-routes.md \u00b7 names C260: Stairwells, corridors and escape routes must be kept free of objects, including prams, shoes and pet equipment. Smoking is not allowed in any shared indoor space.\n- \"lift\"\n  [U19] 04-pets/02-dogs.md \u00b7 names C230: Dogs must be kept on a lead at all times in the inner yard, the stairwells and the lifts. The lead may not be longer than 2 metres.\n  [U47] 09-renovation-and-moving.md \u00b7 names C292: Noisy work such as drilling is allowed on weekdays from 08:00 to 12:00 and from 14:00 to 18:00, and on Saturdays from 09:00 to 12:00. Announce a move to the house management at least 7 days in advance, and protect the lift with the covers provided.\n- \"flower bed\"\n  [U20] 04-pets/02-dogs.md \u00b7 names C231: Dogs may not relieve themselves in the inner yard or the flower beds. Dog owners take their dogs outside the building complex for this.\n- \"building complex\"\n  [U20] 04-pets/02-dogs.md \u00b7 names C232: Dogs may not relieve themselves in the inner yard or the flower beds. Dog owners take their dogs outside the building complex for this.\n- \"education (training)\"\n  [U21] 04-pets/02-dogs.md \u00b7 names C234: The maximum time a dog may be left alone in a flat depends on the dog's education (training) and its specific breed. Owners are responsible for knowing the limit that applies to their dog.\n- \"maximum time left alone\"\n  [U21] 04-pets/02-dogs.md \u00b7 names C236: The maximum time a dog may be left alone in a flat depends on the dog's education (training) and its specific breed. Owners are responsible for knowing the limit that applies to their dog.\n- \"barks persistently\"\n  [U22] 04-pets/02-dogs.md \u00b7 names C238: If a dog barks persistently while left alone, the house management may require the owner to arrange care.\n- \"care\"\n  [U22] 04-pets/02-dogs.md \u00b7 names C239: If a dog barks persistently while left alone, the house management may require the owner to arrange care.\n- \"cellar\"\n  [U31] 04-pets/03-cats.md \u00b7 names C243: Cats may move freely in the inner yard. Cats may not be kept in the stairwells or the cellar. Litter boxes must be kept inside the flat.\n  [U53] 08-laundry-and-cellar.md \u00b7 names C277: The shared laundry room is in the cellar of building A and may be used from 07:00 to 21:00. Book a slot on the list at the door. Pet blankets, pet beds and other pet textiles may not be washed in the shared washing machines. Each flat has one cellar compartment; flammable liquids may not be stored there.\n- \"bin room\"\n  [U49] 05-waste-and-recycling.md \u00b7 names C247: Waste is sorted in the bin room of building B: paper, plastic, glass, organic waste and residual waste. Pet waste and used cat litter go into the residual waste bin only. Bulky items must be booked for collection with the house management.\n- \"pet waste\"\n  [U49] 05-waste-and-recycling.md \u00b7 names C255: Waste is sorted in the bin room of building B: paper, plastic, glass, organic waste and residual waste. Pet waste and used cat litter go into the residual waste bin only. Bulky items must be booked for collection with the house management.\n- \"used cat litter\"\n  [U49] 05-waste-and-recycling.md \u00b7 names C256: Waste is sorted in the bin room of building B: paper, plastic, glass, organic waste and residual waste. Pet waste and used cat litter go into the residual waste bin only. Bulky items must be booked for collection with the house management.\n- \"residual waste bin\"\n  [U49] 05-waste-and-recycling.md \u00b7 names C254: Waste is sorted in the bin room of building B: paper, plastic, glass, organic waste and residual waste. Pet waste and used cat litter go into the residual waste bin only. Bulky items must be booked for collection with the house management.\n- \"bulky items\"\n  [U49] 05-waste-and-recycling.md \u00b7 names C257: Waste is sorted in the bin room of building B: paper, plastic, glass, organic waste and residual waste. Pet waste and used cat litter go into the residual waste bin only. Bulky items must be booked for collection with the house management.\n- \"building B\"\n  [U49] 05-waste-and-recycling.md \u00b7 names C248: Waste is sorted in the bin room of building B: paper, plastic, glass, organic waste and residual waste. Pet waste and used cat litter go into the residual waste bin only. Bulky items must be booked for collection with the house management.\n- \"corridor\"\n  [U52] 06-shared-spaces-and-escape-routes.md \u00b7 names C261: Stairwells, corridors and escape routes must be kept free of objects, including prams, shoes and pet equipment. Smoking is not allowed in any shared indoor space.\n- \"escape route\"\n  [U52] 06-shared-spaces-and-escape-routes.md \u00b7 names C262: Stairwells, corridors and escape routes must be kept free of objects, including prams, shoes and pet equipment. Smoking is not allowed in any shared indoor space.\n- \"pet equipment\"\n  [U52] 06-shared-spaces-and-escape-routes.md \u00b7 names C264: Stairwells, corridors and escape routes must be kept free of objects, including prams, shoes and pet equipment. Smoking is not allowed in any shared indoor space.\n- \"pram\"\n  [U52] 06-shared-spaces-and-escape-routes.md \u00b7 names C265: Stairwells, corridors and escape routes must be kept free of objects, including prams, shoes and pet equipment. Smoking is not allowed in any shared indoor space.\n- \"shoes\"\n  [U52] 06-shared-spaces-and-escape-routes.md \u00b7 names C266: Stairwells, corridors and escape routes must be kept free of objects, including prams, shoes and pet equipment. Smoking is not allowed in any shared indoor space.\n- \"shared indoor space\"\n  [U52] 06-shared-spaces-and-escape-routes.md \u00b7 names C259: Stairwells, corridors and escape routes must be kept free of objects, including prams, shoes and pet equipment. Smoking is not allowed in any shared indoor space.\n- \"smoking\"\n  [U52] 06-shared-spaces-and-escape-routes.md \u00b7 names C267: Stairwells, corridors and escape routes must be kept free of objects, including prams, shoes and pet equipment. Smoking is not allowed in any shared indoor space.\n- \"main door\"\n  [U48] 07-security-and-access.md \u00b7 names C268: The main doors of each building stay closed and locked from 22:00 to 06:00; residents open them with their own key. Do not let strangers into the building. Lost keys must be reported to the house management at once.\n- \"key\"\n  [U48] 07-security-and-access.md \u00b7 names C271: The main doors of each building stay closed and locked from 22:00 to 06:00; residents open them with their own key. Do not let strangers into the building. Lost keys must be reported to the house management at once.\n- \"stranger\"\n  [U48] 07-security-and-access.md \u00b7 names C272: The main doors of each building stay closed and locked from 22:00 to 06:00; residents open them with their own key. Do not let strangers into the building. Lost keys must be reported to the house management at once.\n- \"lost key\"\n  [U48] 07-security-and-access.md \u00b7 names C274: The main doors of each building stay closed and locked from 22:00 to 06:00; residents open them with their own key. Do not let strangers into the building. Lost keys must be reported to the house management at once.\n- \"shared laundry room\"\n  [U53] 08-laundry-and-cellar.md \u00b7 names C275: The shared laundry room is in the cellar of building A and may be used from 07:00 to 21:00. Book a slot on the list at the door. Pet blankets, pet beds and other pet textiles may not be washed in the shared washing machines. Each flat has one cellar compartment; flammable liquids may not be stored there.\n- \"pet textiles\"\n  [U53] 08-laundry-and-cellar.md \u00b7 names C282: The shared laundry room is in the cellar of building A and may be used from 07:00 to 21:00. Book a slot on the list at the door. Pet blankets, pet beds and other pet textiles may not be washed in the shared washing machines. Each flat has one cellar compartment; flammable liquids may not be stored there.\n- \"shared washing machines\"\n  [U53] 08-laundry-and-cellar.md \u00b7 names C281: The shared laundry room is in the cellar of building A and may be used from 07:00 to 21:00. Book a slot on the list at the door. Pet blankets, pet beds and other pet textiles may not be washed in the shared washing machines. Each flat has one cellar compartment; flammable liquids may not be stored there.\n- \"cellar compartment\"\n  [U53] 08-laundry-and-cellar.md \u00b7 names C286: The shared laundry room is in the cellar of building A and may be used from 07:00 to 21:00. Book a slot on the list at the door. Pet blankets, pet beds and other pet textiles may not be washed in the shared washing machines. Each flat has one cellar compartment; flammable liquids may not be stored there.\n- \"noisy work\"\n  [U47] 09-renovation-and-moving.md \u00b7 names C288: Noisy work such as drilling is allowed on weekdays from 08:00 to 12:00 and from 14:00 to 18:00, and on Saturdays from 09:00 to 12:00. Announce a move to the house management at least 7 days in advance, and protect the lift with the covers provided.\n- \"drilling\"\n  [U47] 09-renovation-and-moving.md \u00b7 names C289: Noisy work such as drilling is allowed on weekdays from 08:00 to 12:00 and from 14:00 to 18:00, and on Saturdays from 09:00 to 12:00. Announce a move to the house management at least 7 days in advance, and protect the lift with the covers provided.\n- \"covers\"\n  [U47] 09-renovation-and-moving.md \u00b7 names C293: Noisy work such as drilling is allowed on weekdays from 08:00 to 12:00 and from 14:00 to 18:00, and on Saturdays from 09:00 to 12:00. Announce a move to the house management at least 7 days in advance, and protect the lift with the covers provided.\n- \"noise complaint\"\n  [U40] 10-reporting-and-enforcement.md \u00b7 names C297: Report damage, noise complaints and rule violations to the house management in writing. Repeated violations after a written warning may lead to termination of the tenancy.\n- \"rule violation\"\n  [U40] 10-reporting-and-enforcement.md \u00b7 names C298: Report damage, noise complaints and rule violations to the house management in writing. Repeated violations after a written warning may lead to termination of the tenancy.\n- \"written warning\"\n  [U40] 10-reporting-and-enforcement.md \u00b7 names C299: Report damage, noise complaints and rule violations to the house management in writing. Repeated violations after a written warning may lead to termination of the tenancy.\n- \"termination of the tenancy\"\n  [U40] 10-reporting-and-enforcement.md \u00b7 names C300: Report damage, noise complaints and rule violations to the house management in writing. Repeated violations after a written warning may lead to termination of the tenancy.\n",
+        "role": "user"
+      }
+    ],
+    "model": "claude-opus-5-5",
+    "output_config": {
+      "format": {
+        "schema": {
+          "$defs": {
+            "Sense": {
+              "additionalProperties": false,
+              "properties": {
+                "concept": {
+                  "description": "Alias (C1, C2, ...) of the concept this sense names.",
+                  "title": "Concept",
+                  "type": "string"
+                },
+                "mentions": {
+                  "description": "Aliases of the units where the term has this sense.",
+                  "items": {
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "title": "Mentions",
+                  "type": "array"
+                },
+                "scope_note": {
+                  "title": "Scope Note",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "concept",
+                "scope_note",
+                "mentions"
+              ],
+              "title": "Sense",
+              "type": "object"
+            },
+            "SenseSplit": {
+              "additionalProperties": false,
+              "description": "One term that names different concepts in different places (FR-12).",
+              "properties": {
+                "senses": {
+                  "description": "{minItems: 2}",
+                  "items": {
+                    "$ref": "#/$defs/Sense"
+                  },
+                  "title": "Senses",
+                  "type": "array"
+                },
+                "term": {
+                  "description": "The term label.",
+                  "title": "Term",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "term",
+                "senses"
+              ],
+              "title": "SenseSplit",
+              "type": "object"
+            },
+            "SynonymGroup": {
+              "additionalProperties": false,
+              "description": "Several terms that name one concept (FR-11).",
+              "properties": {
+                "concept": {
+                  "description": "Alias (C1, C2, ...) of the concept, as shown in the pass 2 prompt.",
+                  "title": "Concept",
+                  "type": "string"
+                },
+                "merge": {
+                  "anyOf": [
+                    {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "Aliases of new concepts that are the same thing; merged into concept.\n\n{default: None}",
+                  "title": "Merge"
+                },
+                "preferred_label": {
+                  "title": "Preferred Label",
+                  "type": "string"
+                },
+                "terms": {
+                  "description": "Term labels.",
+                  "items": {
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "title": "Terms",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "concept",
+                "preferred_label",
+                "terms"
+              ],
+              "title": "SynonymGroup",
+              "type": "object"
+            }
+          },
+          "additionalProperties": false,
+          "description": "Pass 2 output for one ingestion (its JSON schema is the structured-output format).",
+          "properties": {
+            "sense_splits": {
+              "anyOf": [
+                {
+                  "items": {
+                    "$ref": "#/$defs/SenseSplit"
+                  },
+                  "type": "array"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "{default: None}",
+              "title": "Sense Splits"
+            },
+            "synonym_groups": {
+              "anyOf": [
+                {
+                  "items": {
+                    "$ref": "#/$defs/SynonymGroup"
+                  },
+                  "type": "array"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "{default: None}",
+              "title": "Synonym Groups"
+            }
+          },
+          "title": "TermResolutionOutput",
+          "type": "object"
+        },
+        "type": "json_schema"
+      }
+    },
+    "system": "You resolve the terms of a domain ontology after its documents were read one by one.\n\nEach document gave its own concepts and the terms (words) that name them, so the same thing may appear as several concepts, and one word may name different things in different documents.\n\n# Synonym groups\nGive one synonym group for every concept that is named by more than one term or found in more than one document:\n- concept: the alias of the concept to keep. Prefer a concept already in the ontology.\n- preferred_label: the label a glossary would use, singular.\n- terms: the labels of every term that names this concept.\n- merge: the aliases of the other new concepts that are the same thing; they are merged into concept. Never list a concept already in the ontology here.\nOnly group what the text shows to be the same thing. A broader or narrower concept (a puppy is a dog) is not a synonym.\n\n# Sense splits\nWhen one term names different things in different units (a homonym), give a sense split:\n- term: the term label.\n- senses: at least two; each has the alias of the concept the term names there, a short scope_note that tells this sense apart from the others, and the aliases (U1, U2, ...) of the units where the term has this sense.\n\nCite concepts and units only by the aliases shown. Leave out every concept and term that needs no change.\n"
+  },
+  "response": {
+    "data": {
+      "sense_splits": [
+        {
+          "senses": [
+            {
+              "concept": "C71",
+              "mentions": [
+                "U9",
+                "U11"
+              ],
+              "scope_note": "The owner as calm, consistent leader of the dog."
+            },
+            {
+              "concept": "C48",
+              "mentions": [
+                "U19"
+              ],
+              "scope_note": "The physical leash a dog is kept on."
+            }
+          ],
+          "term": "lead"
+        },
+        {
+          "senses": [
+            {
+              "concept": "C104",
+              "mentions": [
+                "U11",
+                "U21",
+                "U22"
+              ],
+              "scope_note": "Person who owns a dog."
+            },
+            {
+              "concept": "C199",
+              "mentions": [
+                "U37"
+              ],
+              "scope_note": "Person who owns a dwelling in the buildings."
+            }
+          ],
+          "term": "owner"
+        },
+        {
+          "senses": [
+            {
+              "concept": "C45",
+              "mentions": [
+                "U6"
+              ],
+              "scope_note": "The mother dog of a puppy."
+            },
+            {
+              "concept": "C161",
+              "mentions": [
+                "U29"
+              ],
+              "scope_note": "The mother cat of a kitten."
+            }
+          ],
+          "term": "mother"
+        }
+      ],
+      "synonym_groups": [
+        {
+          "concept": "C1",
+          "merge": [
+            "C20",
+            "C29",
+            "C35",
+            "C43",
+            "C56",
+            "C59",
+            "C69",
+            "C77",
+            "C84",
+            "C94",
+            "C103",
+            "C219",
+            "C225"
+          ],
+          "preferred_label": "dog",
+          "terms": [
+            "dog"
+          ]
+        },
+        {
+          "concept": "C2",
+          "merge": [
+            "C15",
+            "C107"
+          ],
+          "preferred_label": "local authority",
+          "terms": [
+            "local authority"
+          ]
+        },
+        {
+          "concept": "C3",
+          "merge": [
+            "C101",
+            "C123"
+          ],
+          "preferred_label": "microchip",
+          "terms": [
+            "microchip",
+            "microchipped"
+          ]
+        },
+        {
+          "concept": "C5",
+          "merge": [
+            "C19"
+          ],
+          "preferred_label": "exercise",
+          "terms": [
+            "exercise"
+          ]
+        },
+        {
+          "concept": "C7",
+          "merge": [
+            "C234"
+          ],
+          "preferred_label": "training",
+          "terms": [
+            "training",
+            "education (training)"
+          ]
+        },
+        {
+          "concept": "C9",
+          "merge": [
+            "C235"
+          ],
+          "preferred_label": "breed",
+          "terms": [
+            "breed"
+          ]
+        },
+        {
+          "concept": "C10",
+          "merge": [
+            "C62"
+          ],
+          "preferred_label": "small breed",
+          "terms": [
+            "small companion breeds",
+            "small breed"
+          ]
+        },
+        {
+          "concept": "C12",
+          "merge": [
+            "C39"
+          ],
+          "preferred_label": "long-haired breed",
+          "terms": [
+            "long-haired breeds",
+            "long-haired breed"
+          ]
+        },
+        {
+          "concept": "C14",
+          "merge": [
+            "C106"
+          ],
+          "preferred_label": "dangerous breed",
+          "terms": [
+            "dangerous",
+            "dangerous breed"
+          ]
+        },
+        {
+          "concept": "C17",
+          "merge": [
+            "C121",
+            "C163",
+            "C180",
+            "C208",
+            "C233",
+            "C245",
+            "C285"
+          ],
+          "preferred_label": "flat",
+          "terms": [
+            "flat",
+            "flats"
+          ]
+        },
+        {
+          "concept": "C18",
+          "merge": [
+            "C36",
+            "C175"
+          ],
+          "preferred_label": "grooming",
+          "terms": [
+            "grooming"
+          ]
+        },
+        {
+          "concept": "C21",
+          "merge": [
+            "C60",
+            "C85"
+          ],
+          "preferred_label": "adult dog",
+          "terms": [
+            "adult dog"
+          ]
+        },
+        {
+          "concept": "C44",
+          "merge": [
+            "C22",
+            "C30",
+            "C57",
+            "C61",
+            "C86"
+          ],
+          "preferred_label": "puppy",
+          "terms": [
+            "puppy"
+          ]
+        },
+        {
+          "concept": "C24",
+          "merge": [
+            "C184"
+          ],
+          "preferred_label": "fresh water",
+          "terms": [
+            "fresh water"
+          ]
+        },
+        {
+          "concept": "C25",
+          "merge": [
+            "C141"
+          ],
+          "preferred_label": "chocolate",
+          "terms": [
+            "chocolate"
+          ]
+        },
+        {
+          "concept": "C27",
+          "merge": [
+            "C140"
+          ],
+          "preferred_label": "onion",
+          "terms": [
+            "onions"
+          ]
+        },
+        {
+          "concept": "C31",
+          "merge": [
+            "C122",
+            "C146"
+          ],
+          "preferred_label": "vaccination",
+          "terms": [
+            "vaccination",
+            "vaccinated"
+          ]
+        },
+        {
+          "concept": "C32",
+          "merge": [
+            "C102",
+            "C147"
+          ],
+          "preferred_label": "rabies vaccination",
+          "terms": [
+            "rabies vaccination",
+            "rabies"
+          ]
+        },
+        {
+          "concept": "C33",
+          "merge": [
+            "C149",
+            "C168",
+            "C179"
+          ],
+          "preferred_label": "veterinarian",
+          "terms": [
+            "veterinarian"
+          ]
+        },
+        {
+          "concept": "C34",
+          "merge": [
+            "C115",
+            "C150"
+          ],
+          "preferred_label": "veterinary visit",
+          "terms": [
+            "check-up",
+            "veterinary visit"
+          ]
+        },
+        {
+          "concept": "C37",
+          "merge": [
+            "C176"
+          ],
+          "preferred_label": "brushing",
+          "terms": [
+            "brushing"
+          ]
+        },
+        {
+          "concept": "C48",
+          "merge": [
+            "C55",
+            "C108",
+            "C227"
+          ],
+          "preferred_label": "leash",
+          "terms": [
+            "leash",
+            "lead"
+          ]
+        },
+        {
+          "concept": "C52",
+          "merge": [
+            "C58",
+            "C65",
+            "C89"
+          ],
+          "preferred_label": "walk",
+          "terms": [
+            "walk"
+          ]
+        },
+        {
+          "concept": "C104",
+          "merge": [
+            "C66",
+            "C70",
+            "C87",
+            "C226"
+          ],
+          "preferred_label": "dog owner",
+          "terms": [
+            "owner",
+            "dog owner"
+          ]
+        },
+        {
+          "concept": "C112",
+          "merge": [
+            "C118",
+            "C125",
+            "C134",
+            "C143",
+            "C151",
+            "C160",
+            "C164",
+            "C172",
+            "C181",
+            "C188",
+            "C220",
+            "C240"
+          ],
+          "preferred_label": "cat",
+          "terms": [
+            "cat"
+          ]
+        },
+        {
+          "concept": "C113",
+          "merge": [
+            "C183"
+          ],
+          "preferred_label": "food",
+          "terms": [
+            "food"
+          ]
+        },
+        {
+          "concept": "C114",
+          "merge": [
+            "C153"
+          ],
+          "preferred_label": "litter",
+          "terms": [
+            "litter"
+          ]
+        },
+        {
+          "concept": "C154",
+          "merge": [
+            "C256"
+          ],
+          "preferred_label": "used litter",
+          "terms": [
+            "used litter",
+            "used cat litter"
+          ]
+        },
+        {
+          "concept": "C156",
+          "merge": [
+            "C253"
+          ],
+          "preferred_label": "residual waste",
+          "terms": [
+            "residual waste"
+          ]
+        },
+        {
+          "concept": "C120",
+          "merge": [
+            "C145",
+            "C189"
+          ],
+          "preferred_label": "outdoor cat",
+          "terms": [
+            "outdoor cat",
+            "cat that goes outdoors"
+          ]
+        },
+        {
+          "concept": "C126",
+          "merge": [
+            "C152",
+            "C162",
+            "C167",
+            "C185",
+            "C192",
+            "C244"
+          ],
+          "preferred_label": "litter box",
+          "terms": [
+            "litter box"
+          ]
+        },
+        {
+          "concept": "C127",
+          "merge": [
+            "C166"
+          ],
+          "preferred_label": "scratching post",
+          "terms": [
+            "scratching post"
+          ]
+        },
+        {
+          "concept": "C135",
+          "merge": [
+            "C182"
+          ],
+          "preferred_label": "adult cat",
+          "terms": [
+            "adult cat"
+          ]
+        },
+        {
+          "concept": "C159",
+          "merge": [
+            "C136",
+            "C144"
+          ],
+          "preferred_label": "kitten",
+          "terms": [
+            "kitten"
+          ]
+        },
+        {
+          "concept": "C190",
+          "merge": [
+            "C290"
+          ],
+          "preferred_label": "move",
+          "terms": [
+            "move"
+          ]
+        },
+        {
+          "concept": "C196",
+          "merge": [
+            "C205",
+            "C211",
+            "C223",
+            "C270"
+          ],
+          "preferred_label": "resident",
+          "terms": [
+            "resident",
+            "residents"
+          ]
+        },
+        {
+          "concept": "C197",
+          "merge": [
+            "C221",
+            "C237",
+            "C258",
+            "C273",
+            "C291",
+            "C294"
+          ],
+          "preferred_label": "house management",
+          "terms": [
+            "house management"
+          ]
+        },
+        {
+          "concept": "C201",
+          "merge": [
+            "C269"
+          ],
+          "preferred_label": "building",
+          "terms": [
+            "building"
+          ]
+        },
+        {
+          "concept": "C210",
+          "merge": [
+            "C202",
+            "C209",
+            "C228",
+            "C241"
+          ],
+          "preferred_label": "inner yard",
+          "terms": [
+            "inner yard",
+            "shared inner yard"
+          ]
+        },
+        {
+          "concept": "C204",
+          "merge": [
+            "C217"
+          ],
+          "preferred_label": "quiet hours",
+          "terms": [
+            "quiet hours"
+          ]
+        },
+        {
+          "concept": "C207",
+          "merge": [
+            "C238"
+          ],
+          "preferred_label": "persistent barking",
+          "terms": [
+            "persistent barking",
+            "barks persistently"
+          ]
+        },
+        {
+          "concept": "C229",
+          "merge": [
+            "C242",
+            "C260"
+          ],
+          "preferred_label": "stairwell",
+          "terms": [
+            "stairwell"
+          ]
+        },
+        {
+          "concept": "C230",
+          "merge": [
+            "C292"
+          ],
+          "preferred_label": "lift",
+          "terms": [
+            "lift"
+          ]
+        },
+        {
+          "concept": "C243",
+          "merge": [
+            "C277"
+          ],
+          "preferred_label": "cellar",
+          "terms": [
+            "cellar"
+          ]
+        },
+        {
+          "concept": "C110",
+          "merge": [
+            "C296"
+          ],
+          "preferred_label": "damage",
+          "terms": [
+            "damage"
+          ]
+        }
+      ]
+    },
+    "input_tokens": 36209,
+    "model": "claude-opus-5-5",
+    "output_tokens": 4338
+  }
+}

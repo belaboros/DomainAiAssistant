@@ -13,6 +13,21 @@
       "writes": [
         "user-manuals-pets-and-house-rules"
       ]
+    },
+    {
+      "name": "ontology-builder",
+      "kind": "app",
+      "responsibility": "Builds leveled ontologies from Markdown corpora and user statements, through LLM proposals, human review and governed releases.",
+      "paths": [
+        "apps/ontology-builder/**"
+      ],
+      "mayDependOn": [],
+      "reads": [
+        "user-manuals-pets-and-house-rules"
+      ],
+      "writes": [
+        "ontology-pets-and-house-rules"
+      ]
     }
   ],
   "datasets": [
@@ -22,6 +37,14 @@
       "description": "Dog owner's, cat owner's and building rules manuals, one Markdown file per chapter, with seeded quality issues for testing a manual assistant.",
       "contract": "libs/contracts/user-manuals-pets-and-house-rules/",
       "location": "${SHARED_DATA_DIR}/user-manuals-pets-and-house-rules",
+      "git": "commit"
+    },
+    {
+      "name": "ontology-pets-and-house-rules",
+      "owner": "ontology-builder",
+      "description": "Ontology of pet ownership and the house rules, built from the pet and building manuals: source registry, user statements and the raw and governed releases.",
+      "contract": "libs/contracts/ontology-pets-and-house-rules/",
+      "location": "${SHARED_DATA_DIR}/ontology-pets-and-house-rules",
       "git": "commit"
     }
   ]

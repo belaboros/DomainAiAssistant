@@ -1,0 +1,158 @@
+# Machine-readable answer key for the pet manuals (spec 0002, FR-38).
+#
+# The source of truth is README.md next to this file; this file restates the parts that
+# `ontology-builder eval` scores. Only the app's `evaluation` component reads it, and only after
+# the ingestion has finished (AC-33). Never point ingestion, prompts or fixtures at it.
+#
+# How items are matched:
+# - A passage is found by its corpus (`dog`, `cat`, `rules`, see `corpora`), its document path
+#   inside that corpus, and a piece of its text (`contains`, case-insensitive).
+# - A concept matches when one of its labels equals one of `labels` after normalising (case,
+#   hyphens, underscores and CamelCase are ignored; a trailing plural "s" is ignored). The labels
+#   of a concept are its own label plus the labels of the terms whose mentions point to it.
+# - A rule matches when, for every group in `all`, at least one keyword of the group occurs in
+#   the rule's text (label, actor, action, condition and limit, e.g. "2 m"), case-insensitive.
+
+version: 1
+source: README.md
+
+corpora:
+  dog: dog-owners-manual
+  cat: cat-owners-manual
+  rules: building-and-house-rules
+
+# Passages that are not domain knowledge: proposed ignorable, with the right category, and cited
+# by no element.
+ignorable:
+  - id: dog-1-bodza
+    corpus: dog
+    document: 01-before-you-get-a-dog.md
+    contains: "I still remember the rainy October evening"
+    category: instance_or_anecdote
+  - id: cat-1-egypt
+    corpus: cat
+    document: 01-before-you-get-a-cat.md
+    contains: "Few peoples have loved cats as deeply as the ancient Egyptians"
+    category: generic_or_historical_story
+  - id: rules-1-cicero-quote
+    corpus: rules
+    document: 01-scope-and-definitions.md
+    contains: "Salus populi suprema lex esto"
+    category: quote_or_motivational
+  - id: rules-1-shared-interest
+    corpus: rules
+    document: 01-scope-and-definitions.md
+    contains: "the shared interest comes first"
+    category: quote_or_motivational
+
+# The real content right after the ignorable passages: not ignorable, and cited by an element.
+kept:
+  - id: dog-1-lifespan
+    corpus: dog
+    document: 01-before-you-get-a-dog.md
+    contains: "A dog lives 10 to 15 years"
+  - id: dog-1-registration
+    corpus: dog
+    document: 01-before-you-get-a-dog.md
+    contains: "A dog older than 4 months must be registered"
+  - id: cat-1-lifespan
+    corpus: cat
+    document: 01-before-you-get-a-cat.md
+    contains: "A cat lives 12 to 18 years"
+  - id: rules-1-buildings
+    corpus: rules
+    document: 01-scope-and-definitions.md
+    contains: "These rules apply to buildings A, B and C"
+
+# Terminology drift: "lead" is the leash in the building rules and the owner's role in dog 6.
+leash_lead:
+  term: lead
+  leash_labels: [leash]
+  rope_mention: {corpus: rules, document: 04-pets/02-dogs.md}
+  role_mention: {corpus: dog, document: 06-being-a-good-lead-for-your-dog.md}
+  rule: {all: [[lead, leash], ["2 m", "2 metres", "2 meters", "2.0 m"]]}
+
+# Concepts the manuals state, with the labels that count as finding them.
+concepts:
+  - {id: dog, labels: [dog]}
+  - {id: cat, labels: [cat]}
+  - {id: puppy, labels: [puppy]}
+  - {id: kitten, labels: [kitten]}
+  - {id: resident, labels: [resident]}
+  - {id: house-management, labels: [house management]}
+  - {id: leash, labels: [leash]}
+  - {id: microchip, labels: [microchip]}
+  - {id: rabies-vaccination, labels: [rabies vaccination, rabies]}
+  - {id: inner-yard, labels: [inner yard, shared inner yard, yard]}
+  - {id: stairwell, labels: [stairwell, staircase]}
+  - {id: lift, labels: [lift, elevator]}
+  - {id: bin-room, labels: [bin room]}
+  - {id: residual-waste-bin, labels: [residual waste bin, residual waste]}
+  - {id: laundry-room, labels: [laundry room, shared laundry room]}
+  - {id: pet-textile, labels: [pet textile, pet blanket, pet bed, dog bed]}
+  - {id: litter-box, labels: [litter box, litter tray]}
+  - {id: outdoor-cat, labels: [outdoor cat]}
+  - {id: indoor-cat, labels: [indoor cat]}
+  - {id: dangerous-breed, labels: [dangerous breed, dog of a dangerous breed]}
+  - {id: obedience-test, labels: [obedience test]}
+  - {id: liability-insurance, labels: [third-party liability insurance, liability insurance]}
+  - {id: local-authority, labels: [local authority]}
+  - {id: quiet-hours, labels: [quiet hours]}
+  - {id: main-door, labels: [main door, main entrance door]}
+
+# Rules the manuals state.
+rules:
+  - id: lead-at-most-2-m
+    all: [[lead, leash], ["2 m", "2 metres", "2 meters"]]
+  - id: lead-in-yard-stairwell-lift
+    all: [[lead, leash], [stairwell, lift, inner yard]]
+  - id: register-pet-with-house-management
+    all: [[regist], [house management]]
+  - id: register-dog-after-4-months
+    all: [[regist, microchip], ["4 months"]]
+  - id: adult-dog-alone-at-most-6-hours
+    all: [[alone], ["6 hours", "6 h"]]
+  - id: puppy-alone-at-most-2-hours
+    all: [[alone], ["2 hours", "2 h"]]
+  - id: no-relieving-in-yard
+    all: [[reliev], [yard]]
+  - id: pet-textiles-not-in-shared-machines
+    all: [[textile, blanket, pet bed], [shared washing machine, shared machine]]
+  - id: dog-bed-washed-at-60
+    all: [[wash], ["60"]]
+  - id: outdoor-cat-vaccinated-before-going-out
+    all: [[vaccinat], [outside, outdoor]]
+  - id: outdoor-cat-microchipped-before-going-out
+    all: [[microchip], [outside, outdoor]]
+  - id: rabies-renewed-yearly
+    all: [[rabies], [year, annual]]
+  - id: outdoor-cat-indoors-after-move
+    all: [[indoors], [move, moving]]
+  - id: announce-move-7-days-ahead
+    all: [[move, moving], ["7 days"]]
+  - id: main-doors-locked-at-night
+    all: [[lock], ["22:00"]]
+  - id: no-noise-in-quiet-hours
+    all: [[quiet hours], [noise, bark]]
+  - id: cats-may-use-inner-yard
+    all: [[cat], [inner yard]]
+  - id: insurance-for-dangerous-breeds
+    all: [[insurance], [dangerous]]
+  - id: obedience-test-for-dangerous-breeds
+    all: [[obedience test]]
+
+# Traps: each passes when nothing matches.
+traps:
+  - id: no-bodza-concept
+    no_concept_label_contains: [bodza]
+  - id: no-bastet-concept
+    no_concept_label_contains: [bastet]
+  - id: no-egypt-concept
+    no_concept_label_contains: [egypt]
+  - id: no-shared-interest-rule
+    no_rule: {all: [[shared interest, common interest, good of the community, welfare of the people]]}
+  - id: no-penalty-for-killing-a-cat
+    no_rule: {all: [[killing a cat, kill a cat, kills a cat, punished by death, death penalty]]}
+  - id: thirteen-years-not-lifespan-evidence
+    no_element_text: [thirteen years, "13 years"]
+    no_citation_of: dog-1-bodza
