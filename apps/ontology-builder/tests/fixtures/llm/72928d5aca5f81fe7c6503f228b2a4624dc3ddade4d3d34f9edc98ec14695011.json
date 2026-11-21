@@ -1,0 +1,428 @@
+{
+  "request": {
+    "max_tokens": 16000,
+    "messages": [
+      {
+        "content": "Document: 02-choosing-a-breed.md\nTitle: 2. Choosing a Breed\n\nSource units:\n\n[U1] paragraph \u00b7 2. Choosing a Breed\nBreeds differ in size, energy and the care they need.\n\n[U2] list_item \u00b7 2. Choosing a Breed\n**Small companion breeds** (for example, Maltese or Pug) need less space and less exercise and adapt well to flats.\n\n[U3] list_item \u00b7 2. Choosing a Breed\n**Large and working breeds** (for example, Border Collie or German Shepherd) need more space, more exercise and more mental work.\n\n[U4] list_item \u00b7 2. Choosing a Breed\n**Long-haired breeds** need more grooming than short-haired breeds.\n\n[U5] paragraph \u00b7 2. Choosing a Breed\nSome breeds are classified as dangerous by the local authority. Check the local list before you choose a breed.\n\nThe first step gave the verdicts and the candidates below. Now give only the rules and properties of this document. Refer to these candidates by key, or to keys of other rules and properties you define now; leave every other list out.\n\nCandidates (kind, key: label):\n- statement s.breeds-differ: Breeds differ\n- statement s.small-breeds-flats: Small companion breeds suit flats\n- statement s.large-breeds-needs: Large and working breeds need more\n- statement s.long-hair-grooming: Long-haired breeds need more grooming\n- statement s.dangerous-classified: Some breeds classified dangerous\n- statement s.check-list: Check the local list\n- term t.breed: breed\n- term t.small-companion: small companion breeds\n- term t.large-working: large and working breeds\n- term t.long-haired: long-haired breeds\n- term t.short-haired: short-haired breeds\n- term t.dangerous: dangerous\n- term t.local-authority: local authority\n- term t.local-list: local list\n- term t.flat: flat\n- term t.grooming: grooming\n- term t.exercise: exercise\n- concept c.breed: breed\n- concept c.small-companion-breed: small companion breed\n- concept c.large-working-breed: large or working breed\n- concept c.long-haired-breed: long-haired breed\n- concept c.short-haired-breed: short-haired breed\n- concept c.dangerous-breed: dangerous breed\n- concept c.local-authority: local authority\n- concept c.dangerous-breed-list: local list of dangerous breeds\n- concept c.flat: flat\n- concept c.grooming: grooming\n- concept c.exercise: exercise\n- relation r.authority-classifies: classifies as dangerous\n- relation r.list-contains: lists\n- relation r.small-adapts-flat: adapts well to\n- relation r.long-hair-grooming: needs more\n- relation r.large-exercise: needs more\n- relation r.small-exercise: needs less\n\nIgnorable units: none\n",
+        "role": "user"
+      }
+    ],
+    "model": "claude-opus-5-5",
+    "output_config": {
+      "format": {
+        "schema": {
+          "$defs": {
+            "CandidateProperty": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence": {
+                  "description": "Aliases (U1, U2, ...) of the source units the candidate comes from.",
+                  "items": {
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "title": "Evidence",
+                  "type": "array"
+                },
+                "key": {
+                  "description": "Local key, unique in one response.",
+                  "title": "Key",
+                  "type": "string"
+                },
+                "label": {
+                  "title": "Label",
+                  "type": "string"
+                },
+                "level": {
+                  "$ref": "#/$defs/Level"
+                },
+                "level_reason": {
+                  "title": "Level Reason",
+                  "type": "string"
+                },
+                "name": {
+                  "title": "Name",
+                  "type": "string"
+                },
+                "of": {
+                  "description": "Key of the candidate the property belongs to.",
+                  "title": "Of",
+                  "type": "string"
+                },
+                "unit": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "{default: None}",
+                  "title": "Unit"
+                },
+                "value": {
+                  "title": "Value",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "key",
+                "label",
+                "evidence",
+                "level",
+                "level_reason",
+                "of",
+                "name",
+                "value"
+              ],
+              "title": "CandidateProperty",
+              "type": "object"
+            },
+            "CandidateRule": {
+              "additionalProperties": false,
+              "properties": {
+                "action": {
+                  "title": "Action",
+                  "type": "string"
+                },
+                "actor": {
+                  "title": "Actor",
+                  "type": "string"
+                },
+                "cardinality": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/$defs/CandidateRuleCardinality"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "{default: None}"
+                },
+                "condition": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "{default: None}",
+                  "title": "Condition"
+                },
+                "evidence": {
+                  "description": "Aliases (U1, U2, ...) of the source units the candidate comes from.",
+                  "items": {
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "title": "Evidence",
+                  "type": "array"
+                },
+                "key": {
+                  "description": "Local key, unique in one response.",
+                  "title": "Key",
+                  "type": "string"
+                },
+                "label": {
+                  "title": "Label",
+                  "type": "string"
+                },
+                "level": {
+                  "$ref": "#/$defs/Level"
+                },
+                "level_reason": {
+                  "title": "Level Reason",
+                  "type": "string"
+                },
+                "limit": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/$defs/Limit"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "{default: None}"
+                },
+                "modality": {
+                  "$ref": "#/$defs/Modality"
+                },
+                "refers_to": {
+                  "anyOf": [
+                    {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "Keys of the candidates the rule refers to.\n\n{default: None}",
+                  "title": "Refers To"
+                }
+              },
+              "required": [
+                "key",
+                "label",
+                "evidence",
+                "level",
+                "level_reason",
+                "modality",
+                "actor",
+                "action"
+              ],
+              "title": "CandidateRule",
+              "type": "object"
+            },
+            "CandidateRuleCardinality": {
+              "additionalProperties": false,
+              "properties": {
+                "max": {
+                  "anyOf": [
+                    {
+                      "description": "{minimum: 0}",
+                      "type": "integer"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "{default: None}",
+                  "title": "Max"
+                },
+                "min": {
+                  "anyOf": [
+                    {
+                      "description": "{minimum: 0}",
+                      "type": "integer"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "{default: None}",
+                  "title": "Min"
+                },
+                "relation": {
+                  "description": "Key of a candidate relation.",
+                  "title": "Relation",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "relation"
+              ],
+              "title": "CandidateRuleCardinality",
+              "type": "object"
+            },
+            "Comparator": {
+              "enum": [
+                "lt",
+                "le",
+                "eq",
+                "ge",
+                "gt"
+              ],
+              "title": "Comparator"
+            },
+            "Level": {
+              "description": "How important an element is for a reader of the domain (FR-13).",
+              "enum": [
+                "level-1",
+                "level-2",
+                "level-3",
+                "ignorable"
+              ],
+              "title": "Level"
+            },
+            "Limit": {
+              "additionalProperties": false,
+              "properties": {
+                "comparator": {
+                  "$ref": "#/$defs/Comparator"
+                },
+                "unit": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "{default: None}",
+                  "title": "Unit"
+                },
+                "value": {
+                  "title": "Value",
+                  "type": "number"
+                }
+              },
+              "required": [
+                "comparator",
+                "value"
+              ],
+              "title": "Limit",
+              "type": "object"
+            },
+            "Modality": {
+              "enum": [
+                "must",
+                "must_not",
+                "may"
+              ],
+              "title": "Modality"
+            }
+          },
+          "additionalProperties": false,
+          "description": "Pass 1, call B for one document; rules and properties.",
+          "properties": {
+            "properties": {
+              "anyOf": [
+                {
+                  "items": {
+                    "$ref": "#/$defs/CandidateProperty"
+                  },
+                  "type": "array"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "{default: None}",
+              "title": "Properties"
+            },
+            "rules": {
+              "anyOf": [
+                {
+                  "items": {
+                    "$ref": "#/$defs/CandidateRule"
+                  },
+                  "type": "array"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "{default: None}",
+              "title": "Rules"
+            }
+          },
+          "title": "RulesOutput",
+          "type": "object"
+        },
+        "type": "json_schema"
+      }
+    },
+    "system": "You extract the building blocks of a domain ontology from one document of a manual.\n\n# The ontology\nName: pets-and-house-rules\nPurpose: Explain what it takes to own a dog or a cat in a residential complex, and which house rules apply to pets and their owners.\nIntended readers: People who consider getting a dog or a cat, pet owners living in the complex, and the house management.\n\n# Levels\nPropose a level for every candidate, with a short reason:\n- level-1: the core concepts, actors, processes, relations and rules that show what the domain is about, quick to grasp without prior knowledge. Here: The core of the domain: dog, cat, owner, resident, house management, and the rules every pet owner in the complex must know (registration, the lead, waste).\n- level-2: what someone taking part in the domain needs for the normal, happy-path case. Here: What an owner needs on a normal day: feeding, walks, vaccination, grooming, leaving the pet alone, the shared spaces.\n- level-3: detail for special cases and error scenarios. Here: Special cases and error scenarios: puppies and kittens, dangerous breeds, moving house, travel, complaints and enforcement.\n- ignorable: not knowledge about the domain.\n\n# Step 1: one verdict per source unit\nGive every unit a verdict. A unit is ignorable when it holds no general knowledge about the domain. Categories:\n- instance_or_anecdote: about one particular person, animal or event (names, places, memories).\n- generic_or_historical_story: background or history that says nothing about the domain today.\n- quote_or_motivational: quotes, slogans and value statements that create no obligation, actor or relation.\n- procedure: step-by-step instructions or commands for one specific tool or task.\n- other: anything else that is not domain knowledge (say why).\nExamples of ignorable content in this ontology:\n- Stories about one particular dog, cat or owner (names, places, memories)\n- History or folklore about animals\n- Quotes and motivational paragraphs that state no rule\nJudge each unit on its own: a unit next to an ignorable one may hold real content. Extract nothing from an ignorable unit and never cite it as evidence, even when it seems to confirm a fact stated elsewhere.\n\n# Step 2: candidates from the other units\n- statements: atomic claims, one fact each, in plain words (label: a short name; text: the claim).\n- concepts: things, roles, places and events of the domain. Label: a singular noun phrase as in a glossary. definition: only when the text gives one. parents: keys of broader concepts the text states (a puppy is a dog).\n- terms: the words the text uses to name concepts. Each term lists its mentions: the unit and the key of the concept the word names there. When one word names different things in different units, its mentions point to different concepts.\n- relations: a link between two concepts (subject and object are concept keys); the label is the predicate (\"is registered with\"). Give a cardinality only when the text states a number.\n- rules: who (actor) must, must_not or may do what (action), under which condition. A numeric limit becomes limit {comparator: lt|le|eq|ge|gt, value, unit}; \"a lead of at most 2 m\" is limit le 2 m. A limit on how many things one may have becomes a cardinality on a relation. refers_to: keys of the concepts and relations the rule is about.\n- properties: a value of a concept or another candidate (of: its key), such as a lifespan of 10 to 15 years: name, value, unit.\n\n# Keys, evidence, faithfulness\n- Every candidate has a key, unique in your answer, made of letters, digits and _ . : - (for example c.leash, r.lead-limit). Refer to other candidates only by keys defined in your answer.\n- evidence lists the aliases (U1, U2, ...) of every unit the candidate comes from, exactly as shown. Never cite an ignorable unit.\n- Stay close to the text: no abstractions, generalisations or facts it does not state.\n"
+  },
+  "response": {
+    "data": {
+      "properties": [
+        {
+          "evidence": [
+            "U2"
+          ],
+          "key": "p.small-space",
+          "label": "Space need of small companion breeds",
+          "level": "level-2",
+          "level_reason": "Helps choose a pet for normal life in a flat.",
+          "name": "space need",
+          "of": "c.small-companion-breed",
+          "value": "less"
+        },
+        {
+          "evidence": [
+            "U2"
+          ],
+          "key": "p.small-exercise",
+          "label": "Exercise need of small companion breeds",
+          "level": "level-2",
+          "level_reason": "Everyday care need.",
+          "name": "exercise need",
+          "of": "c.small-companion-breed",
+          "value": "less"
+        },
+        {
+          "evidence": [
+            "U3"
+          ],
+          "key": "p.large-space",
+          "label": "Space need of large and working breeds",
+          "level": "level-2",
+          "level_reason": "Everyday care need.",
+          "name": "space need",
+          "of": "c.large-working-breed",
+          "value": "more"
+        },
+        {
+          "evidence": [
+            "U3"
+          ],
+          "key": "p.large-exercise",
+          "label": "Exercise need of large and working breeds",
+          "level": "level-2",
+          "level_reason": "Everyday care need.",
+          "name": "exercise need",
+          "of": "c.large-working-breed",
+          "value": "more"
+        },
+        {
+          "evidence": [
+            "U3"
+          ],
+          "key": "p.large-mental",
+          "label": "Mental work need of large and working breeds",
+          "level": "level-2",
+          "level_reason": "Everyday care need.",
+          "name": "mental work need",
+          "of": "c.large-working-breed",
+          "value": "more"
+        },
+        {
+          "evidence": [
+            "U4"
+          ],
+          "key": "p.long-hair-grooming",
+          "label": "Grooming need of long-haired breeds",
+          "level": "level-2",
+          "level_reason": "Grooming is everyday care.",
+          "name": "grooming need",
+          "of": "c.long-haired-breed",
+          "value": "more than short-haired breeds"
+        }
+      ],
+      "rules": [
+        {
+          "action": "check the local list of dangerous breeds",
+          "actor": "person choosing a breed",
+          "condition": "before choosing a breed",
+          "evidence": [
+            "U5"
+          ],
+          "key": "ru.check-dangerous-list",
+          "label": "Check the local dangerous breed list before choosing",
+          "level": "level-3",
+          "level_reason": "Dangerous breeds are a special case.",
+          "modality": "must",
+          "refers_to": [
+            "c.dangerous-breed-list",
+            "c.dangerous-breed",
+            "c.local-authority",
+            "r.list-contains"
+          ]
+        }
+      ]
+    },
+    "input_tokens": 4629,
+    "model": "claude-opus-5-5",
+    "output_tokens": 710
+  }
+}

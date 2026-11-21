@@ -1,0 +1,65 @@
+# {{ title }} · level {{ level_number }}
+
+**Version:** {{ version }} · **Release:** {{ variant }} · {{ note }}
+
+{{ purpose }}
+
+{% if raw %}
+This is the raw release: it also holds elements that are not approved yet. They are marked
+`● proposed` or `◐ waiting for approval`, and drawn dashed in the diagrams.
+
+{% endif %}
+## Taxonomy
+
+{% for diagram in taxonomy %}
+{% if diagram.title %}
+### {{ diagram.title }}
+
+{% endif %}
+```mermaid
+{{ diagram.source }}```
+
+{% endfor %}
+## Concepts and relations
+
+{% for diagram in relation_diagrams %}
+{% if diagram.title %}
+### {{ diagram.title }}
+
+{% endif %}
+```mermaid
+{{ diagram.source }}```
+
+{% endfor %}
+{% for name, entries in sections %}
+## {{ name }}
+
+{% for entry in entries %}
+<a id="{{ entry.id }}"></a>
+### {{ entry.heading }}
+
+{% if entry.body %}
+{{ entry.body }}
+
+{% endif %}
+{% for line in entry.lines %}
+- {{ line }}
+{% endfor %}
+
+{% else %}
+_None at this level._
+
+{% endfor %}
+{% endfor %}
+## Evidence
+
+{% for unit in evidence %}
+<a id="{{ unit.id }}"></a>
+**§{{ unit.number }}** · {{ unit.where }}
+
+{{ unit.quote }}
+
+{% else %}
+_No evidence cited at this level._
+
+{% endfor %}

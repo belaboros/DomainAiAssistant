@@ -1,0 +1,159 @@
+{
+  "date": "2026-11-21",
+  "commit": "55fe60315d1dfd9ecba904604e09dfb31c945231",
+  "languages": [
+    "python"
+  ],
+  "functions": {
+    "count": 0,
+    "ccAvg": 0.0,
+    "ccMax": 0,
+    "overWarn": []
+  },
+  "components": [
+    {
+      "name": "model",
+      "ca": 0,
+      "ce": 0,
+      "instability": 0.0,
+      "relationalCohesion": 1.0,
+      "abstractness": null,
+      "distance": null,
+      "externalDeps": []
+    },
+    {
+      "name": "store",
+      "ca": 0,
+      "ce": 0,
+      "instability": 0.0,
+      "relationalCohesion": 1.0,
+      "abstractness": null,
+      "distance": null,
+      "externalDeps": []
+    },
+    {
+      "name": "sources",
+      "ca": 0,
+      "ce": 0,
+      "instability": 0.0,
+      "relationalCohesion": 1.0,
+      "abstractness": null,
+      "distance": null,
+      "externalDeps": []
+    },
+    {
+      "name": "llm",
+      "ca": 0,
+      "ce": 0,
+      "instability": 0.0,
+      "relationalCohesion": 1.0,
+      "abstractness": null,
+      "distance": null,
+      "externalDeps": []
+    },
+    {
+      "name": "extraction",
+      "ca": 0,
+      "ce": 0,
+      "instability": 0.0,
+      "relationalCohesion": 1.0,
+      "abstractness": null,
+      "distance": null,
+      "externalDeps": []
+    },
+    {
+      "name": "ingestion",
+      "ca": 0,
+      "ce": 0,
+      "instability": 0.0,
+      "relationalCohesion": 1.0,
+      "abstractness": null,
+      "distance": null,
+      "externalDeps": []
+    },
+    {
+      "name": "governance",
+      "ca": 0,
+      "ce": 0,
+      "instability": 0.0,
+      "relationalCohesion": 1.0,
+      "abstractness": null,
+      "distance": null,
+      "externalDeps": []
+    },
+    {
+      "name": "release",
+      "ca": 0,
+      "ce": 0,
+      "instability": 0.0,
+      "relationalCohesion": 1.0,
+      "abstractness": null,
+      "distance": null,
+      "externalDeps": []
+    },
+    {
+      "name": "vcs",
+      "ca": 0,
+      "ce": 0,
+      "instability": 0.0,
+      "relationalCohesion": 1.0,
+      "abstractness": null,
+      "distance": null,
+      "externalDeps": []
+    },
+    {
+      "name": "workflows",
+      "ca": 0,
+      "ce": 0,
+      "instability": 0.0,
+      "relationalCohesion": 1.0,
+      "abstractness": null,
+      "distance": null,
+      "externalDeps": []
+    },
+    {
+      "name": "api",
+      "ca": 0,
+      "ce": 0,
+      "instability": 0.0,
+      "relationalCohesion": 1.0,
+      "abstractness": null,
+      "distance": null,
+      "externalDeps": []
+    },
+    {
+      "name": "cli",
+      "ca": 0,
+      "ce": 0,
+      "instability": 0.0,
+      "relationalCohesion": 1.0,
+      "abstractness": null,
+      "distance": null,
+      "externalDeps": []
+    },
+    {
+      "name": "evaluation",
+      "ca": 0,
+      "ce": 0,
+      "instability": 0.0,
+      "relationalCohesion": 1.0,
+      "abstractness": null,
+      "distance": null,
+      "externalDeps": []
+    },
+    {
+      "name": "web",
+      "ca": 0,
+      "ce": 0,
+      "instability": 0.0,
+      "relationalCohesion": null,
+      "abstractness": null,
+      "distance": null,
+      "externalDeps": []
+    }
+  ],
+  "dependencies": [],
+  "cycles": [],
+  "violations": [],
+  "result": "pass"
+}

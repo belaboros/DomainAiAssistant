@@ -24,3 +24,5 @@ New ADRs are created with `/adr` from [../../templates/adr.md](../../templates/a
 | [0016](0016-commit-or-ignore-each-data-folder.md) | Decide per dataset whether `data/<dataset>/` is committed or git-ignored | accepted | 2026-11-20 |
 | [0017](0017-finish-feature-branches-with-one-command.md) | Finish a feature branch with one command, and never delete `main` | accepted | 2026-11-20 |
 | [0018](0018-manual-generator-app-owns-the-manuals-dataset.md) | Add a generator app that owns the pets and building manuals dataset | accepted | 2026-11-20 |
+| [0019](0019-ontology-builder-app-and-shared-ontology-contract.md) | Add the ontology-builder app and `ontology-<name>` datasets that share one contract | accepted | 2026-11-21 |
+| [0020](0020-introduce-python-and-its-quality-gate.md) | Introduce Python (uv workspace, 3.13) and its quality gate | accepted | 2026-11-21 |

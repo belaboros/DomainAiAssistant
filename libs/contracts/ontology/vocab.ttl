@@ -1,0 +1,101 @@
+# The dai: vocabulary of the shared ontology contract, version 0.1.0.
+# Used in 03_release/*/ontology.ttl of every ontology-<name> dataset for what OWL, SKOS and SHACL
+# do not cover: importance levels, review status, evidence and the parts of a rule.
+# Readers must ignore terms they do not know (new terms are a minor version).
+
+@prefix dai:     <urn:domain-ai-assistant:vocab#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<urn:domain-ai-assistant:vocab>
+    a owl:Ontology ;
+    owl:versionInfo "0.1.0" ;
+    dcterms:description "Annotations shared by every ontology built by ontology-builder (libs/contracts/ontology/)." .
+
+# ---- Classes ----------------------------------------------------------------------------------
+
+dai:SourceUnit a owl:Class ;
+    rdfs:label "source unit" ;
+    rdfs:comment "A passage of a corpus document or a user statement. Its IRI is <base IRI><su-id>; its record is in 00_sources/." .
+
+dai:Rule a owl:Class ;
+    rdfs:label "rule" ;
+    rdfs:comment "Who must, must not or may do what, under which condition, with any limit." .
+
+dai:Statement a owl:Class ;
+    rdfs:label "statement" ;
+    rdfs:comment "An atomic claim taken from a source unit." .
+
+dai:Property a owl:Class ;
+    rdfs:label "property" ;
+    rdfs:comment "A named value of another element, e.g. a lifespan of a concept." .
+
+dai:Level a owl:Class ;
+    rdfs:label "importance level" .
+
+dai:Status a owl:Class ;
+    rdfs:label "review status" .
+
+dai:Modality a owl:Class ;
+    rdfs:label "modality of a rule" .
+
+# ---- Annotations on every element -------------------------------------------------------------
+
+dai:level a owl:AnnotationProperty ;
+    rdfs:label "level" ;
+    rdfs:comment "Importance level of the element: one of dai:level-1, dai:level-2, dai:level-3." ;
+    rdfs:range dai:Level .
+
+dai:status a owl:AnnotationProperty ;
+    rdfs:label "status" ;
+    rdfs:comment "Review status. Present in the raw release only; every element of the governed release is approved or deprecated." ;
+    rdfs:range dai:Status .
+
+dai:evidence a owl:AnnotationProperty ;
+    rdfs:label "evidence" ;
+    rdfs:comment "A source unit the element was taken from or is justified by. Every element has at least one." ;
+    rdfs:range dai:SourceUnit .
+
+# ---- Parts of a rule --------------------------------------------------------------------------
+
+dai:modality a owl:AnnotationProperty ; rdfs:label "modality" ; rdfs:range dai:Modality .
+dai:actor a owl:AnnotationProperty ; rdfs:label "actor" ; rdfs:comment "The concept the rule applies to." .
+dai:action a owl:AnnotationProperty ; rdfs:label "action" ; rdfs:range xsd:string .
+dai:condition a owl:AnnotationProperty ; rdfs:label "condition" ; rdfs:range xsd:string .
+dai:limitComparator a owl:AnnotationProperty ; rdfs:label "limit comparator" ;
+    rdfs:comment "One of: <, <=, =, >=, >." ; rdfs:range xsd:string .
+dai:limitValue a owl:AnnotationProperty ; rdfs:label "limit value" ; rdfs:range xsd:decimal .
+dai:limitUnit a owl:AnnotationProperty ; rdfs:label "limit unit" ; rdfs:range xsd:string .
+dai:scope a owl:AnnotationProperty ; rdfs:label "scope" ;
+    rdfs:comment "A corpus or document the rule is limited to (by ID); absent = the whole ontology." .
+dai:refersTo a owl:AnnotationProperty ; rdfs:label "refers to" ;
+    rdfs:comment "A concept, relation or property the rule refers to." .
+
+# ---- Parts of a property ----------------------------------------------------------------------
+
+dai:propertyOf a owl:AnnotationProperty ; rdfs:label "property of" .
+dai:propertyName a owl:AnnotationProperty ; rdfs:label "property name" ; rdfs:range xsd:string .
+dai:propertyValue a owl:AnnotationProperty ; rdfs:label "property value" .
+dai:propertyUnit a owl:AnnotationProperty ; rdfs:label "property unit" ; rdfs:range xsd:string .
+
+# ---- Values -----------------------------------------------------------------------------------
+
+dai:level-1 a dai:Level ; rdfs:label "level-1" ; skos:notation "1" ;
+    rdfs:comment "Core: the concepts, actors, relations and rules that show what the domain is about, understandable without prior knowledge." .
+dai:level-2 a dai:Level ; rdfs:label "level-2" ; skos:notation "2" ;
+    rdfs:comment "Main: what someone who considers taking part needs for the typical happy path." .
+dai:level-3 a dai:Level ; rdfs:label "level-3" ; skos:notation "3" ;
+    rdfs:comment "Detail: peripheral elements for special cases and error scenarios." .
+
+dai:proposed a dai:Status ; rdfs:label "proposed" ; rdfs:comment "Proposed by the LLM, not reviewed." .
+dai:included a dai:Status ; rdfs:label "included" ; rdfs:comment "Accepted or authored by a user, waiting for approval." .
+dai:approved a dai:Status ; rdfs:label "approved" ; rdfs:comment "Approved by a domain admin." .
+dai:deprecated a dai:Status ; rdfs:label "deprecated" ; rdfs:comment "Was approved; no longer to be used. See dcterms:isReplacedBy." .
+
+dai:must a dai:Modality ; rdfs:label "must" .
+dai:must_not a dai:Modality ; rdfs:label "must not" .
+dai:may a dai:Modality ; rdfs:label "may" .

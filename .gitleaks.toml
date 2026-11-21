@@ -2,3 +2,14 @@
 # Only add an allowlist entry for a confirmed false positive, with a comment saying why.
 [extend]
 useDefault = true
+
+# Confirmed false positive: the curated LLM fixtures of ontology-builder (spec 0002) give each
+# candidate a short "key" such as "s.puppy-mother-8w" (type letter, dot, slug), which the
+# generic-api-key rule mistakes for a secret. Only this key shape in those fixtures is allowed.
+[[allowlists]]
+description = "ontology-builder LLM fixture candidate keys"
+targetRules = ["generic-api-key"]
+paths = ['''^apps/ontology-builder/tests/fixtures/llm/[0-9a-f]{64}\.json$''']
+regexTarget = "line"
+regexes = ['''"key": "[a-z]{1,3}\.[a-z0-9][a-z0-9.-]*"''']
+condition = "AND"

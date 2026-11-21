@@ -1,0 +1,829 @@
+{
+  "request": {
+    "max_tokens": 16000,
+    "messages": [
+      {
+        "content": "Document: 04-health-and-care/01-feeding.md\nTitle: 4. Health and Care \u2014 4.1 Feeding\n\nSource units:\n\n[U1] paragraph \u00b7 4. Health and Care \u2014 4.1 Feeding\nFeed an adult cat two to three small meals a day; kittens need four meals a day. Cats need meat-based food. Lilies, onions, chocolate and dog food are not suitable for cats; lilies are highly poisonous.\n\nGive the unit verdicts and the statements, terms, concepts and relations now. Rules and properties are asked for in a second step, which can refer to your keys.\n",
+        "role": "user"
+      }
+    ],
+    "model": "claude-opus-5-5",
+    "output_config": {
+      "format": {
+        "schema": {
+          "$defs": {
+            "CandidateConcept": {
+              "additionalProperties": false,
+              "properties": {
+                "definition": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "{default: None}",
+                  "title": "Definition"
+                },
+                "evidence": {
+                  "description": "Aliases (U1, U2, ...) of the source units the candidate comes from.",
+                  "items": {
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "title": "Evidence",
+                  "type": "array"
+                },
+                "key": {
+                  "description": "Local key, unique in one response.",
+                  "title": "Key",
+                  "type": "string"
+                },
+                "label": {
+                  "title": "Label",
+                  "type": "string"
+                },
+                "level": {
+                  "$ref": "#/$defs/Level"
+                },
+                "level_reason": {
+                  "title": "Level Reason",
+                  "type": "string"
+                },
+                "parents": {
+                  "anyOf": [
+                    {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "Keys of broader candidate concepts.\n\n{default: None}",
+                  "title": "Parents"
+                }
+              },
+              "required": [
+                "key",
+                "label",
+                "evidence",
+                "level",
+                "level_reason"
+              ],
+              "title": "CandidateConcept",
+              "type": "object"
+            },
+            "CandidateMention": {
+              "additionalProperties": false,
+              "properties": {
+                "concept": {
+                  "description": "Key of the candidate concept this mention names.",
+                  "title": "Concept",
+                  "type": "string"
+                },
+                "unit": {
+                  "title": "Unit",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "unit",
+                "concept"
+              ],
+              "title": "CandidateMention",
+              "type": "object"
+            },
+            "CandidateRelation": {
+              "additionalProperties": false,
+              "properties": {
+                "cardinality": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/$defs/Cardinality"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "{default: None}"
+                },
+                "evidence": {
+                  "description": "Aliases (U1, U2, ...) of the source units the candidate comes from.",
+                  "items": {
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "title": "Evidence",
+                  "type": "array"
+                },
+                "key": {
+                  "description": "Local key, unique in one response.",
+                  "title": "Key",
+                  "type": "string"
+                },
+                "label": {
+                  "title": "Label",
+                  "type": "string"
+                },
+                "level": {
+                  "$ref": "#/$defs/Level"
+                },
+                "level_reason": {
+                  "title": "Level Reason",
+                  "type": "string"
+                },
+                "object": {
+                  "description": "Key of a candidate concept.",
+                  "title": "Object",
+                  "type": "string"
+                },
+                "subject": {
+                  "description": "Key of a candidate concept.",
+                  "title": "Subject",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "key",
+                "label",
+                "evidence",
+                "level",
+                "level_reason",
+                "subject",
+                "object"
+              ],
+              "title": "CandidateRelation",
+              "type": "object"
+            },
+            "CandidateStatement": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence": {
+                  "description": "Aliases (U1, U2, ...) of the source units the candidate comes from.",
+                  "items": {
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "title": "Evidence",
+                  "type": "array"
+                },
+                "key": {
+                  "description": "Local key, unique in one response.",
+                  "title": "Key",
+                  "type": "string"
+                },
+                "label": {
+                  "title": "Label",
+                  "type": "string"
+                },
+                "level": {
+                  "$ref": "#/$defs/Level"
+                },
+                "level_reason": {
+                  "title": "Level Reason",
+                  "type": "string"
+                },
+                "text": {
+                  "title": "Text",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "key",
+                "label",
+                "evidence",
+                "level",
+                "level_reason",
+                "text"
+              ],
+              "title": "CandidateStatement",
+              "type": "object"
+            },
+            "CandidateTerm": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence": {
+                  "description": "Aliases (U1, U2, ...) of the source units the candidate comes from.",
+                  "items": {
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "title": "Evidence",
+                  "type": "array"
+                },
+                "key": {
+                  "description": "Local key, unique in one response.",
+                  "title": "Key",
+                  "type": "string"
+                },
+                "label": {
+                  "title": "Label",
+                  "type": "string"
+                },
+                "level": {
+                  "$ref": "#/$defs/Level"
+                },
+                "level_reason": {
+                  "title": "Level Reason",
+                  "type": "string"
+                },
+                "mentions": {
+                  "anyOf": [
+                    {
+                      "items": {
+                        "$ref": "#/$defs/CandidateMention"
+                      },
+                      "type": "array"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "{default: None}",
+                  "title": "Mentions"
+                }
+              },
+              "required": [
+                "key",
+                "label",
+                "evidence",
+                "level",
+                "level_reason"
+              ],
+              "title": "CandidateTerm",
+              "type": "object"
+            },
+            "Cardinality": {
+              "additionalProperties": false,
+              "properties": {
+                "max": {
+                  "anyOf": [
+                    {
+                      "description": "{minimum: 0}",
+                      "type": "integer"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "{default: None}",
+                  "title": "Max"
+                },
+                "min": {
+                  "anyOf": [
+                    {
+                      "description": "{minimum: 0}",
+                      "type": "integer"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "{default: None}",
+                  "title": "Min"
+                }
+              },
+              "title": "Cardinality",
+              "type": "object"
+            },
+            "IgnorableCategory": {
+              "description": "Why a whole source unit is proposed as ignorable (FR-14).",
+              "enum": [
+                "instance_or_anecdote",
+                "generic_or_historical_story",
+                "quote_or_motivational",
+                "procedure",
+                "other"
+              ],
+              "title": "IgnorableCategory"
+            },
+            "Level": {
+              "description": "How important an element is for a reader of the domain (FR-13).",
+              "enum": [
+                "level-1",
+                "level-2",
+                "level-3",
+                "ignorable"
+              ],
+              "title": "Level"
+            },
+            "UnitVerdict": {
+              "additionalProperties": false,
+              "properties": {
+                "category": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/$defs/IgnorableCategory"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "Required when ignorable is true.\n\n{default: None}"
+                },
+                "ignorable": {
+                  "title": "Ignorable",
+                  "type": "boolean"
+                },
+                "reason": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "{default: None}",
+                  "title": "Reason"
+                },
+                "unit": {
+                  "title": "Unit",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "unit",
+                "ignorable"
+              ],
+              "title": "UnitVerdict",
+              "type": "object"
+            }
+          },
+          "additionalProperties": false,
+          "description": "Pass 1, call A for one document; unit verdicts and the concept-side candidates.",
+          "properties": {
+            "concepts": {
+              "anyOf": [
+                {
+                  "items": {
+                    "$ref": "#/$defs/CandidateConcept"
+                  },
+                  "type": "array"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "{default: None}",
+              "title": "Concepts"
+            },
+            "relations": {
+              "anyOf": [
+                {
+                  "items": {
+                    "$ref": "#/$defs/CandidateRelation"
+                  },
+                  "type": "array"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "{default: None}",
+              "title": "Relations"
+            },
+            "statements": {
+              "anyOf": [
+                {
+                  "items": {
+                    "$ref": "#/$defs/CandidateStatement"
+                  },
+                  "type": "array"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "{default: None}",
+              "title": "Statements"
+            },
+            "terms": {
+              "anyOf": [
+                {
+                  "items": {
+                    "$ref": "#/$defs/CandidateTerm"
+                  },
+                  "type": "array"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "{default: None}",
+              "title": "Terms"
+            },
+            "unit_verdicts": {
+              "items": {
+                "$ref": "#/$defs/UnitVerdict"
+              },
+              "title": "Unit Verdicts",
+              "type": "array"
+            }
+          },
+          "required": [
+            "unit_verdicts"
+          ],
+          "title": "ConceptsOutput",
+          "type": "object"
+        },
+        "type": "json_schema"
+      }
+    },
+    "system": "You extract the building blocks of a domain ontology from one document of a manual.\n\n# The ontology\nName: pets-and-house-rules\nPurpose: Explain what it takes to own a dog or a cat in a residential complex, and which house rules apply to pets and their owners.\nIntended readers: People who consider getting a dog or a cat, pet owners living in the complex, and the house management.\n\n# Levels\nPropose a level for every candidate, with a short reason:\n- level-1: the core concepts, actors, processes, relations and rules that show what the domain is about, quick to grasp without prior knowledge. Here: The core of the domain: dog, cat, owner, resident, house management, and the rules every pet owner in the complex must know (registration, the lead, waste).\n- level-2: what someone taking part in the domain needs for the normal, happy-path case. Here: What an owner needs on a normal day: feeding, walks, vaccination, grooming, leaving the pet alone, the shared spaces.\n- level-3: detail for special cases and error scenarios. Here: Special cases and error scenarios: puppies and kittens, dangerous breeds, moving house, travel, complaints and enforcement.\n- ignorable: not knowledge about the domain.\n\n# Step 1: one verdict per source unit\nGive every unit a verdict. A unit is ignorable when it holds no general knowledge about the domain. Categories:\n- instance_or_anecdote: about one particular person, animal or event (names, places, memories).\n- generic_or_historical_story: background or history that says nothing about the domain today.\n- quote_or_motivational: quotes, slogans and value statements that create no obligation, actor or relation.\n- procedure: step-by-step instructions or commands for one specific tool or task.\n- other: anything else that is not domain knowledge (say why).\nExamples of ignorable content in this ontology:\n- Stories about one particular dog, cat or owner (names, places, memories)\n- History or folklore about animals\n- Quotes and motivational paragraphs that state no rule\nJudge each unit on its own: a unit next to an ignorable one may hold real content. Extract nothing from an ignorable unit and never cite it as evidence, even when it seems to confirm a fact stated elsewhere.\n\n# Step 2: candidates from the other units\n- statements: atomic claims, one fact each, in plain words (label: a short name; text: the claim).\n- concepts: things, roles, places and events of the domain. Label: a singular noun phrase as in a glossary. definition: only when the text gives one. parents: keys of broader concepts the text states (a puppy is a dog).\n- terms: the words the text uses to name concepts. Each term lists its mentions: the unit and the key of the concept the word names there. When one word names different things in different units, its mentions point to different concepts.\n- relations: a link between two concepts (subject and object are concept keys); the label is the predicate (\"is registered with\"). Give a cardinality only when the text states a number.\n- rules: who (actor) must, must_not or may do what (action), under which condition. A numeric limit becomes limit {comparator: lt|le|eq|ge|gt, value, unit}; \"a lead of at most 2 m\" is limit le 2 m. A limit on how many things one may have becomes a cardinality on a relation. refers_to: keys of the concepts and relations the rule is about.\n- properties: a value of a concept or another candidate (of: its key), such as a lifespan of 10 to 15 years: name, value, unit.\n\n# Keys, evidence, faithfulness\n- Every candidate has a key, unique in your answer, made of letters, digits and _ . : - (for example c.leash, r.lead-limit). Refer to other candidates only by keys defined in your answer.\n- evidence lists the aliases (U1, U2, ...) of every unit the candidate comes from, exactly as shown. Never cite an ignorable unit.\n- Stay close to the text: no abstractions, generalisations or facts it does not state.\n"
+  },
+  "response": {
+    "data": {
+      "concepts": [
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "c.cat",
+          "label": "cat",
+          "level": "level-1",
+          "level_reason": "Core animal of the domain."
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "c.adult-cat",
+          "label": "adult cat",
+          "level": "level-2",
+          "level_reason": "Normal case for feeding.",
+          "parents": [
+            "c.cat"
+          ]
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "c.kitten",
+          "label": "kitten",
+          "level": "level-3",
+          "level_reason": "Special case of young cats.",
+          "parents": [
+            "c.cat"
+          ]
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "c.meal",
+          "label": "meal",
+          "level": "level-2",
+          "level_reason": "Part of daily feeding."
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "c.meat-based-food",
+          "label": "meat-based food",
+          "level": "level-2",
+          "level_reason": "What cats need to eat."
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "c.lily",
+          "label": "lily",
+          "level": "level-2",
+          "level_reason": "Poisonous item to avoid."
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "c.onion",
+          "label": "onion",
+          "level": "level-2",
+          "level_reason": "Unsuitable food."
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "c.chocolate",
+          "label": "chocolate",
+          "level": "level-2",
+          "level_reason": "Unsuitable food."
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "c.dog-food",
+          "label": "dog food",
+          "level": "level-2",
+          "level_reason": "Unsuitable food for cats."
+        }
+      ],
+      "relations": [
+        {
+          "cardinality": {
+            "max": 3,
+            "min": 2
+          },
+          "evidence": [
+            "U1"
+          ],
+          "key": "r.adult-cat-meals",
+          "label": "is fed",
+          "level": "level-2",
+          "level_reason": "Daily feeding frequency.",
+          "object": "c.meal",
+          "subject": "c.adult-cat"
+        },
+        {
+          "cardinality": {
+            "max": 4,
+            "min": 4
+          },
+          "evidence": [
+            "U1"
+          ],
+          "key": "r.kitten-meals",
+          "label": "needs",
+          "level": "level-3",
+          "level_reason": "Kitten special case.",
+          "object": "c.meal",
+          "subject": "c.kitten"
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "r.cat-needs-meat",
+          "label": "needs",
+          "level": "level-2",
+          "level_reason": "Basic dietary need.",
+          "object": "c.meat-based-food",
+          "subject": "c.cat"
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "r.lily-unsuitable",
+          "label": "is not suitable for",
+          "level": "level-2",
+          "level_reason": "Safety fact.",
+          "object": "c.cat",
+          "subject": "c.lily"
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "r.lily-poisonous",
+          "label": "is highly poisonous to",
+          "level": "level-2",
+          "level_reason": "Safety fact.",
+          "object": "c.cat",
+          "subject": "c.lily"
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "r.onion-unsuitable",
+          "label": "is not suitable for",
+          "level": "level-2",
+          "level_reason": "Feeding fact.",
+          "object": "c.cat",
+          "subject": "c.onion"
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "r.chocolate-unsuitable",
+          "label": "is not suitable for",
+          "level": "level-2",
+          "level_reason": "Feeding fact.",
+          "object": "c.cat",
+          "subject": "c.chocolate"
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "r.dog-food-unsuitable",
+          "label": "is not suitable for",
+          "level": "level-2",
+          "level_reason": "Feeding fact.",
+          "object": "c.cat",
+          "subject": "c.dog-food"
+        }
+      ],
+      "statements": [
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "s.adult-cat-meals",
+          "label": "Adult cat meals per day",
+          "level": "level-2",
+          "level_reason": "Normal-day feeding knowledge for owners.",
+          "text": "An adult cat should be fed two to three small meals a day."
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "s.kitten-meals",
+          "label": "Kitten meals per day",
+          "level": "level-3",
+          "level_reason": "Kittens are a special case.",
+          "text": "Kittens need four meals a day."
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "s.cat-meat-food",
+          "label": "Cats need meat-based food",
+          "level": "level-2",
+          "level_reason": "Normal-day feeding knowledge.",
+          "text": "Cats need meat-based food."
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "s.unsuitable-foods",
+          "label": "Foods unsuitable for cats",
+          "level": "level-2",
+          "level_reason": "Normal-day feeding knowledge.",
+          "text": "Lilies, onions, chocolate and dog food are not suitable for cats."
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "s.lilies-poisonous",
+          "label": "Lilies are highly poisonous",
+          "level": "level-2",
+          "level_reason": "Important safety fact for everyday care.",
+          "text": "Lilies are highly poisonous to cats."
+        }
+      ],
+      "terms": [
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "t.cat",
+          "label": "cat",
+          "level": "level-1",
+          "level_reason": "Core animal of the domain.",
+          "mentions": [
+            {
+              "concept": "c.cat",
+              "unit": "U1"
+            }
+          ]
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "t.adult-cat",
+          "label": "adult cat",
+          "level": "level-2",
+          "level_reason": "Used for normal feeding guidance.",
+          "mentions": [
+            {
+              "concept": "c.adult-cat",
+              "unit": "U1"
+            }
+          ]
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "t.kitten",
+          "label": "kitten",
+          "level": "level-3",
+          "level_reason": "Special case of young animals.",
+          "mentions": [
+            {
+              "concept": "c.kitten",
+              "unit": "U1"
+            }
+          ]
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "t.meal",
+          "label": "meal",
+          "level": "level-2",
+          "level_reason": "Feeding vocabulary.",
+          "mentions": [
+            {
+              "concept": "c.meal",
+              "unit": "U1"
+            }
+          ]
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "t.meat-based-food",
+          "label": "meat-based food",
+          "level": "level-2",
+          "level_reason": "Feeding vocabulary.",
+          "mentions": [
+            {
+              "concept": "c.meat-based-food",
+              "unit": "U1"
+            }
+          ]
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "t.lily",
+          "label": "lilies",
+          "level": "level-2",
+          "level_reason": "Unsuitable, poisonous item.",
+          "mentions": [
+            {
+              "concept": "c.lily",
+              "unit": "U1"
+            }
+          ]
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "t.onion",
+          "label": "onions",
+          "level": "level-2",
+          "level_reason": "Unsuitable food.",
+          "mentions": [
+            {
+              "concept": "c.onion",
+              "unit": "U1"
+            }
+          ]
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "t.chocolate",
+          "label": "chocolate",
+          "level": "level-2",
+          "level_reason": "Unsuitable food.",
+          "mentions": [
+            {
+              "concept": "c.chocolate",
+              "unit": "U1"
+            }
+          ]
+        },
+        {
+          "evidence": [
+            "U1"
+          ],
+          "key": "t.dog-food",
+          "label": "dog food",
+          "level": "level-2",
+          "level_reason": "Unsuitable food for cats.",
+          "mentions": [
+            {
+              "concept": "c.dog-food",
+              "unit": "U1"
+            }
+          ]
+        }
+      ],
+      "unit_verdicts": [
+        {
+          "ignorable": false,
+          "unit": "U1"
+        }
+      ]
+    },
+    "input_tokens": 4884,
+    "model": "claude-opus-5-5",
+    "output_tokens": 2322
+  }
+}

@@ -1,9 +1,9 @@
 # 0002 · OntologyBuilder: build leveled ontologies from text corpora and human input
 
-- **Status:** captured
-- **Scope:** TBD (decided by `/spec`: `system`, or the name of one app) (mentions: OntologyBuilder app, `data/ontology-<name>` datasets)
+- **Status:** in-progress
+- **Scope:** system
 - **Captured:** 2026-11-20
-- **Spec:** _none yet_
+- **Spec:** [0002-ontology-builder](../specs/0002-ontology-builder/spec.md) (approved) · [plan](../specs/0002-ontology-builder/plan.md) (approved)
 
 ## Original idea
 
@@ -142,3 +142,248 @@ Append one entry per question, oldest first. Never delete entries.
 **Options offered:** free text (raised in the Q10 answer)
 **A:** "Let's make it simple. So the domain admin can approve his/her own modifications next to the ingested/proposed elements and statements from regular (non-domain-admin) users."
 **Effect:** No four-eyes rule. The domain admin approves LLM-proposed elements, regular users' statements and edits, and their own. Regular users cannot approve. Every approval is still recorded in `02_decisions/`, with who approved and when.
+
+### 2026-11-21 · spec · Q12
+**Asked by:** Claude
+**Q:** [spec · scope] I propose scope `system`: the spec adds a new app `ontology-builder`, a new shared dataset `data/ontology-<name>/` with a contract in `libs/contracts/ontology/` (its readers will be the AI assistant of idea 0001 and the future validation app), and reads the existing `user-manuals-pets-and-house-rules` dataset without changing it. Should this spec also define the shared validation library under `libs/` (used by both the GUI and the future validation app), or leave that library to the validation app's own spec?
+**Options offered:** System; library later (Recommended) / System; library now / App only
+**A:** "System; library later (Recommended)"
+**Effect:** Scope = `system`. The spec covers the new app `ontology-builder`, the new dataset `ontology-<name>` and its contract, and reads `user-manuals-pets-and-house-rules` unchanged. No library in `libs/` in this spec; validation logic is extracted into one when the validation app is specified.
+
+### 2026-11-21 · spec · Q13
+**Asked by:** Claude
+**Q:** [spec · scope] The idea has nine steps plus re-ingestion of upgraded manuals. Which belong in the first version (v1)? Anything not selected becomes a non-goal for v1 and a later spec.
+**Options offered:** (multi-select) Core loop (steps 1, 2, 4, 5, 6, 8, 9) / LLM abstraction (step 3) / Quality issues (step 7) / Visual review + re-ingest
+**A:** ""Core loop" above + detect/propose also synonyms. Generate level-*.md files."
+**Effect:** v1 = ingest, extraction with evidence, level and ignorable proposals, synonym detection and proposals, textual review, authoring, domain-admin approval, governed + raw release including the `level-N.md` files. Non-goals for v1: LLM abstraction (higher-level concepts), contradiction/drift/gap/ambiguity detection, diagram-based review in the GUI, re-ingesting upgraded manuals (alignment and change propagation).
+
+### 2026-11-21 · spec · Q14
+**Asked by:** Claude
+**Q:** [spec · clarifying question] How is the rich GUI run and who uses it at the same time?
+**Options offered:** Local, one user (Recommended) / Shared server, many users / Local now, server later
+**A:** "Local, one user (Recommended)"
+**Effect:** The GUI runs locally against the git working copy, one user at a time. The role (user / domain admin) comes from a simple local identity, no login server. Multi-user editing is a non-goal.
+
+### 2026-11-21 · spec · Q15
+**Asked by:** Claude
+**Q:** [spec · clarifying question] How does the domain admin's approval relate to git/GitHub?
+**Options offered:** GUI status; git commits (Recommended) / GUI status + PR gate / PR approval only
+**A:** "GUI status; git commits (Recommended)"
+**Effect:** Approval is a status change in the GUI, recorded in `02_decisions/` with who and when. Changes are committed to git; pushing and merging a PR is an ordinary git step, not part of governance.
+
+### 2026-11-21 · spec · Q16
+**Asked by:** Claude
+**Q:** [spec · clarifying question] For synonyms in v1: the pet corpus uses "lead" for two things, the rope (building rules 4.2, a synonym of "leash") and the owner's role (dog 6). Should v1 also handle one word naming different concepts (homonyms), so the rope rules attach to Leash and not to the role?
+**Options offered:** Yes, synonyms + homonyms (Recommended) / Synonyms only
+**A:** "Yes, synonyms + homonyms (Recommended)"
+**Effect:** A term can belong to more than one concept; each mention is resolved to one concept in context. The LLM proposes synonym sets and sense splits, the user confirms. Added as must requirements.
+
+### 2026-11-21 · spec · Q17
+**Asked by:** Claude
+**Q:** [spec · clarifying question] LLM output varies between runs. How should v1 prove that extraction works?
+**Options offered:** Fixtures + answer-key eval (Recommended) / Live eval as a gate / Fixtures only
+**A:** "Fixtures + answer-key eval (Recommended)"
+**Effect:** Automated tests run on recorded LLM responses (deterministic, no API cost). A separate evaluation command runs the live LLM on the pet corpus, scores it against the answer key and reports the scores; it is not a CI gate. The answer key is read only by the evaluation, never by extraction.
+
+### 2026-11-21 · spec · Q18
+**Asked by:** Claude
+**Q:** [spec · clarifying question] What can be ingested in v1, and how do corpora map to ontologies?
+**Options offered:** Markdown; N corpora → 1 ontology (Recommended) / Markdown + PDF / Markdown; 1 corpus → 1 ontology
+**A:** "Markdown; N corpora → 1 ontology (Recommended)"
+**Effect:** v1 ingests Markdown files only. One ontology can ingest several corpora, each a numbered folder `00`–`89` under `00_sources/`. PDF, HTML and Word are non-goals for v1.
+
+### 2026-11-21 · spec · Q19
+**Asked by:** Claude
+**Q:** [spec · clarifying question] Ingestion calls the Claude API and costs money. What guard do you want?
+**Options offered:** Estimate + confirm (Recommended) / Hard budget limit / No guard
+**A:** "Estimate + confirm (Recommended)"
+**Effect:** Before an ingestion run the app shows the number of source units and an estimated token cost and asks for confirmation; actual tokens used are recorded per run. No hard limit.
+
+### 2026-11-21 · spec · Q20
+**Asked by:** Claude
+**Q:** [spec · clarifying question] What happens when someone changes an element that is already approved, and can approved elements be removed?
+**Options offered:** Back to review; deprecate (Recommended) / Admin edits stay approved / Back to review; delete allowed
+**A:** "Back to review; deprecate (Recommended)"
+**Effect:** Any edit to an approved element sets it back to under review; the governed release keeps the last approved version until it is approved again. Approved elements are never deleted, only deprecated, optionally with a replacement.
+
+### 2026-11-21 · spec · Q21
+**Asked by:** Claude
+**Q:** [spec · clarifying question] The governed release holds only approved elements. What if an approved relation or rule refers to a concept that is not approved (e.g. 'Owner has at most 2 Pets' approved, 'Pet' still proposed)?
+**Options offered:** Block the release (Recommended) / Leave them out / Prevent at approval
+**A:** "Block the release (Recommended)"
+**Effect:** The governed build fails and lists every approved element that depends on an unapproved one. The raw release is always built.
+
+### 2026-11-21 · spec · Q22
+**Asked by:** Claude
+**Q:** [spec · clarifying question] Should each ontology have a scope record written by the domain admin (purpose, intended readers, what counts as level-1, examples of ignorable content), which the LLM uses when proposing levels and ignorable?
+**Options offered:** Yes, required (Recommended) / Optional / No
+**A:** "Yes, required (Recommended)"
+**Effect:** Creating an ontology requires a scope record; ingestion uses it as guidance for level and ignorable proposals.
+
+### 2026-11-21 · spec · Q23
+**Asked by:** Claude
+**Q:** [spec · clarifying question] When are the two releases built and versioned?
+**Options offered:** Raw on save, governed on publish (Recommended) / Both on demand / Both on every save
+**A:** "Raw on save, governed on publish (Recommended)"
+**Effect:** The raw release is rebuilt whenever the GUI commits changes. The governed release is built only when the domain admin publishes, with a new semantic version and a change log against the previous governed version.
+
+### 2026-11-21 · spec · Q24
+**Asked by:** Claude
+**Q:** [spec · clarifying question] Decisions in `02_decisions/` record who approved what, and the dataset is committed to this public repo (rule 10: no personal data). How should people be identified?
+**Options offered:** Handle only (Recommended) / Git name + email
+**A:** "Login window is simple: type in your userName and select your role. Anyone can be anyone in the MVP."
+**Effect:** v1 has a simple login window: the user types a user name and picks a role (user / domain admin). No authentication; anyone can claim any role. The typed user name is what decisions record. Real authentication is a non-goal for v1. The window tells users to use a handle, not a real name or email, because the dataset is public.
+
+### 2026-11-21 · spec · Q25
+**Asked by:** Claude
+**Q:** [spec · clarifying question] Which review conveniences must the textual review GUI have in v1? (The level filter and status colours from Q5 are already in.)
+**Options offered:** (multi-select) Bulk actions / Evidence first / Queue by confidence / Search and filters
+**A:** "Bulk actions, Evidence first, Search and filters"
+**Effect:** Must requirements: bulk include/exclude/approve on a selection; the source passage is shown before the LLM's proposal; full-text search and filters by element type, status, corpus/document and level. Ordering the queue by LLM confidence is not in v1.
+
+### 2026-11-21 · spec · Q26
+**Asked by:** Claude
+**Q:** [spec · clarifying question] What should the first ontology, built from the pet manuals, be called? (Its folder is `data/ontology-<name>/`.)
+**Options offered:** pets-and-house-rules (Recommended) / pet-ownership
+**A:** "pets-and-house-rules (Recommended)"
+**Effect:** The first ontology is `data/ontology-pets-and-house-rules/`.
+
+### 2026-11-21 · spec · Q27
+**Asked by:** Claude
+**Q:** [spec · approval] Do you approve spec 0002 OntologyBuilder (docs/specs/0002-ontology-builder/spec.md)? Its scope is `system`. v1 is the core loop plus synonym and sense detection plus the level-N.md files. Non-goals are LLM abstraction, contradiction detection, visual review and re-ingestion. Nothing blocking is left open.
+**Options offered:** Approve / Changes needed
+**A:** "Add use-case: as a power user of a domain or employee/developer in the domain, I want to read level-1/2/3.md files to understand the domain the fulles. "
+**Effect:** Added scenario 9 (power user, employee or developer reads level-1 to level-3 for the fullest understanding). Covered by the existing FR-33, FR-34 (cumulative levels, level-3 holds every non-ignorable element). Spec still draft; approval asked again.
+
+### 2026-11-21 · spec · Q28
+**Asked by:** Claude
+**Q:** [spec · approval] I added scenario 9: a power user, employee or developer in the domain reads level-1 to level-3 to understand the domain as fully as possible. The existing FR-33/FR-34 already cover it, since levels are cumulative and level-3 holds every non-ignorable element. Do you now approve spec 0002 OntologyBuilder?
+**Options offered:** Approve / Changes needed
+**A:** "Approve"
+**Effect:** Spec 0002 set to `approved`; idea set to `specified`; both indexes updated. Next: `/plan 0002`.
+
+### 2026-11-21 · plan · Q29
+**Asked by:** Claude
+**Q:** [plan · tech stack] The back end will be Python: LinkML, rdflib, pySHACL and the Anthropic SDK are all Python-native, so the YAML → OWL/SKOS/SHACL path stays in one language. Which GUI approach do you want for the local review app?
+**Options offered:** Python + htmx (Recommended) / Python API + React/TS / Python-only UI framework (NiceGUI or Streamlit)
+**A:** "I want to see prototypes with mock data for each of them and decide."
+**Effect:** Back end is Python. GUI choice deferred: Claude builds a clickable prototype of each option on the same mock pet-manual data and asks again.
+
+### 2026-11-21 · plan · Q30
+**Asked by:** Claude
+**Q:** [plan · contract] Every ontology-<name> dataset has the same layout. tools/monorepo/system-map.sh requires libs/contracts/<dataset>/README.md for each dataset. How should the contract be organised?
+**Options offered:** Shared + thin per-dataset (Recommended) / Shared only, change tooling / Full contract per dataset
+**A:** "Shared + thin per-dataset (Recommended)"
+**Effect:** One versioned contract `libs/contracts/ontology/` (layout, schemas, RDF vocabulary, guarantees); each dataset has a thin `libs/contracts/ontology-<name>/README.md` that names owner, location, git mode and the ontology contract version it conforms to. No tooling change. Recorded as a root ADR in this plan.
+
+### 2026-11-21 · plan · Q31
+**Asked by:** Claude
+**Q:** [plan · source units] How fine-grained should source units be? Evidence points at units, and every unit goes through the LLM and the ignorable check.
+**Options offered:** Markdown block (Recommended) / Sentence
+**A:** "Markdown block (Recommended)"
+**Effect:** One source unit per Markdown block (paragraph, list item, blockquote, table row); deterministic splitting. Evidence may add an optional quoted span (W3C TextQuoteSelector) inside a unit.
+
+### 2026-11-21 · plan · Q32
+**Asked by:** Claude
+**Q:** [plan · tech stack] After trying the three prototypes at https://claude.ai/artifact/Mjnmp1uWZACjGzufk6wi2r, which GUI approach should the OntologyBuilder review app use?
+**Options offered:** A · Python + htmx (Recommended) / B · Python API + React/TS / C · Python-only (NiceGUI)
+**A:** "Which prototype can support interactove diagrams showing the taxonomy and ontology? I want to be able to perform the same steps via the list or via the diagram in v2 of the app."
+**Effect:** New forward constraint for the plan: v2 adds interactive taxonomy and ontology diagrams that offer the same review actions as the list. The v1 GUI choice must not block that. Claude's answer is in Q33.
+
+### 2026-11-21 · plan · Q33
+**Asked by:** user (follow-up to Q32)
+**Q:** Which prototype can support interactive diagrams showing the taxonomy and ontology, with the same steps via the list or via the diagram in v2?
+**Options offered:** free text
+**A:** (Claude, summary) All three can show diagrams. In every option the interactive diagram is a JavaScript component (Cytoscape.js + elkjs), so v2 brings in TypeScript and its quality gate whichever option is chosen. The options differ in how naturally the list and the diagram share one selection, one filter set and one set of actions. **B (React/TS)** fits best: one client store, with the list and the diagram as two views of it that call the same action functions. **A (htmx)** can host a Cytoscape island that calls the same backend routes, but keeping the selection and filters in sync between server-rendered HTML and a JS canvas needs custom glue, which grows with every diagram feature. **C (NiceGUI)** needs a custom Vue component for Cytoscape; clicks reach Python handlers easily, but richer interaction (lasso selection, drag to merge) is custom JS anyway. Either way the back end is API-first: a JSON service layer holds every governance rule, so the front end can change without touching it. Given the v2 goal, Claude now recommends B.
+**Effect:** Recommendation changed from A to B; GUI choice asked again (Q34).
+
+### 2026-11-21 · plan · Q34
+**Asked by:** Claude
+**Q:** [plan · tech stack] v2 needs interactive taxonomy and ontology diagrams that offer the same review actions as the list. Every option then needs a TypeScript diagram component (Cytoscape.js + elkjs). Which GUI approach should v1 use?
+**Options offered:** B · React/TS now (Recommended) / A now, React island in v2 / Prototype the diagram first / C · NiceGUI
+**A:** "B · React/TS now (Recommended)"
+**Effect:** v1 GUI is a React + TypeScript single-page app (Vite) on top of an API-first FastAPI back end. The plan starts with `/add-language python`, and `/add-language js-ts` comes before the first front-end task. Recorded as an app ADR.
+
+### 2026-11-21 · plan · Q35
+**Asked by:** Claude
+**Q:** [plan · scaffold] The plan's app ADRs, app components.json and Commands section belong in apps/ontology-builder/, which doesn't exist yet. Shall I scaffold now (docs and registration only, no code)? That means the app `ontology-builder` and the dataset `ontology-pets-and-house-rules` (git mode commit, owner ontology-builder), plus a `reads` edge to `user-manuals-pets-and-house-rules`.
+**Options offered:** Scaffold now (Recommended) / Scaffold as a task
+**A:** "Scaffold now (Recommended)"
+**Effect:** App and dataset scaffolded in the planning change with `tools/monorepo/new.sh`; the reads edge was added and the system map regenerated. App ADRs, app architecture and commands are written in the same change.
+
+### 2026-11-21 · plan · Q36
+**Asked by:** Claude
+**Q:** [plan · plan approval] Do you approve plan 0002 (docs/specs/0002-ontology-builder/plan.md + tasks.md)? The summary covered: an API-first Python back end with 13 components and a React + TS front end; LinkML YAML records; Markdown-block source units with ULID IDs; two-pass extraction tested on curated replay fixtures, with the live run scored by eval; a pending change set saved atomically as one git commit, never pushed; deterministic Turtle and level-N.md releases, the governed release using approved snapshots; the shared contract libs/contracts/ontology/ (root ADR-0019) and app ADRs 0001–0005; 31 tasks, T1 /add-language python, T22 /add-language js-ts, live LLM runs in T8/T28/T29 with cost confirmation.
+**Options offered:** Approve / Changes needed
+**A:** "Approve"
+**Effect:** Plan set to `approved`; ADR-0019 and ontology-builder/ADR-0001 to 0005 set to `accepted`; idea set to `planned`; indexes updated. Next: `/implement 0002`.
+
+### 2026-11-21 · implement · Q37
+**Asked by:** Claude
+**Q:** [implement · deviation] Plan 0002 (LLM section, ontology-builder/ADR-0005) says the LLM's structured output is "a single forced tool call". But the repo's default model `claude-opus-5-5` rejects forced `tool_choice` (`any`/`tool`) with a 400, as do Sonnet 5.5 and Fable 5.1/5.2. How should T7 get schema-valid JSON from Claude?
+**Options offered:** Structured outputs (Recommended): `output_config.format` with the JSON Schema generated from the LinkML output classes; unsupported constraints are stripped from the sent schema and still checked by Pydantic / Strict tool, auto choice: a `strict: true` tool with `tool_choice: auto` and a retry when no call is made / Keep forced tool call: require a model that still accepts forced tool use
+**A:** "Structured outputs (Recommended)"
+**Effect:** The llm component asks for JSON through `output_config.format` (type `json_schema`) instead of a forced tool call. The schema still comes from the LinkML output classes; constraints the API does not support are removed from the sent schema and validated client-side by the Pydantic models. Plan updated; recorded as ontology-builder/ADR-0006, which supersedes the "force structured output" bullet of ADR-0005.
+
+### 2026-11-21 · implement · Q38
+**Asked by:** Claude
+**Q:** [implement · deviation] The plan has the LLM cite source units by their full IDs (e.g. su_01M7YZMHG0B9D5MPJTB9D5MPJW). IDs minted in one run differ only in their last characters (…MPJW, …MPJX), so one miscopied character silently points evidence at the neighbouring unit. That ID is still valid, so validation can't catch it. How should T8's prompt and output refer to units?
+**Options offered:** Short aliases (Recommended): number the units per prompt (U1, U2, …), map each alias back to its su_ ID, drop and report an unknown alias; the LinkML output classes change from the su_ pattern to an alias pattern, records hold only real IDs / Full IDs, as planned
+**A:** "Short aliases (Recommended)"
+**Effect:** The prompts of pass 1 and pass 2 show each unit with a short alias `U<n>` that is unique in that prompt. The LLM output classes (`Candidate.evidence`, `UnitVerdict.unit`, `CandidateMention.unit`, `Sense.mentions`) take aliases. Extraction maps them back to the units' `su_` IDs before any record is built; an alias that is not in the prompt counts as an unknown unit (dropped and reported, FR-10). Plan updated (Approach 4, LLM).
+
+### 2026-11-21 · implement · Q39
+**Asked by:** Claude
+**Q:** [implement · cost confirmation] T8 records the pass 1 fixtures with one live run over the three pet manuals: 37 documents and 58 source units, so 37 requests to claude-opus-5-5. The estimate (offline heuristic) is about 143K input tokens and up to about 86K output tokens, so about $2.29; output will probably be lower. Requests that already have a fixture are replayed, never re-recorded. Afterwards I curate the responses by hand. Shall I run it?
+**Options offered:** Run it (~$2.29) / Not now
+**A:** "Run it (~$2.29)"
+**Effect:** The pass 1 fixtures are recorded live with `tests/test_record_llm_fixtures.py` (marker `live`), then curated by hand.
+
+### 2026-11-21 · implement · Q40
+**Asked by:** Claude
+**Q:** [implement · deviation] The live API refuses the pass 1 output schema: "compiled grammar is too large" (a separate limit allows at most 16 nullable or union fields). I tested variants, and each 400 cost nothing: pruning, required-plus-nullable, no null, no enums, flattened rules and a single flat item type all fail. What compiles is splitting it: (a) verdicts, statements, terms, concepts and relations, and (b) rules and properties. How should pass 1 get its output?
+**Options offered:** Two calls per document (Recommended): call A gives verdicts, statements, terms, concepts and relations; call B gets the same units and A's candidate keys and labels and gives rules and properties; both keep schema-constrained output; 74 calls instead of 37, roughly $3.5–4.5 to record; new app ADR-0007 / One call, schema in prompt: no grammar, the JSON Schema in the prompt text, validated by Pydantic with one retry; cheaper (~$2.3) but the shape is not guaranteed; new app ADR-0007 supersedes ADR-0006 for pass 1
+**A:** "Two calls per document (Recommended)"
+**Effect:** Pass 1 makes two structured-output calls per document. Call A (`ConceptsOutput`): unit verdicts, statements, terms, concepts, relations. Call B (`RulesOutput`): rules and properties, with the candidates of call A listed by key and the ignorable units named. Each call has its own one retry. If call A gives no usable answer the document is reported and call B is not made; if call B fails, A's candidates are kept and the failure is reported. Recorded as ontology-builder/ADR-0007; plan (Approach 4) and T8 updated. The recording cost confirmed in Q39 (~$2.29) does not cover the new estimate, so it is asked again.
+
+### 2026-11-21 · implement · Q41
+**Asked by:** Claude
+**Q:** [implement · cost confirmation] With two calls per document (Q40), recording the pass 1 fixtures is now 74 requests to claude-opus-5-5. The offline estimate is about 198K input tokens and up to about 119K output tokens, so about $3.18. Call B prompts grow a little with A's candidates, and output will likely be lower. Your earlier approval (Q39) covered ~$2.29. Shall I run the recording?
+**Options offered:** Run it (~$3.18) / Not now
+**A:** "Run it (~$3.18)"
+**Effect:** The pass 1 fixtures (calls A and B) are recorded live, then curated by hand.
+
+### 2026-11-21 · implement · Q42
+**Asked by:** Claude
+**Q:** [implement · live LLM call] T9 needs a curated pass 2 (term resolution) fixture for the pet manuals. One live call to claude-opus-5-5 is estimated at ~26k input + ~15.6k output tokens ≈ $0.42. How should I create the fixture?
+**Options offered:** Record live, then curate (Recommended): one live call (~$0.42) seeds the fixture, then it is curated by hand to the leash/lead answer the pipeline must handle, as in T8 / Hand-write the fixture: no API cost, the leash/lead group and split plus a few cross-document merges written by hand, less realistic
+**A:** "Record live, then curate (Recommended)"
+**Effect:** The pass 2 fixture is recorded live with `tests/test_record_llm_fixtures.py::test_record_pass2_fixture` (marker `live`), then curated by hand.
+
+### 2026-11-21 · implement · Q43
+**Asked by:** Claude
+**Q:** [implement · deviation] For T10, the plan lets `ingestion` depend only on sources, extraction, store and llm, and import-linter forbids `ingestion → model`. But the run orchestration has to build and validate model records: Run (the run record of FR-6), Estimate, Decision (`not_ignorable`), SourceUnit verdicts and the element types. How should ingestion get them?
+**Options offered:** Add ingestion → model (Recommended): add `model` to ingestion's mayDependOn, update architecture.md, regenerate `.importlinter`, new app ADR-0008; Ce of ingestion goes from 4 to 5 (warn band, not a failure) / Re-export through store: no new edge, the store's public API re-exports the record classes; Ce stays 4, but model is hidden behind store
+**A:** "Add ingestion → model (Recommended)"
+**Effect:** `ingestion` may depend on `model` (app `components.json`, `architecture.md`, `.importlinter`); recorded as ontology-builder/ADR-0008; plan (Architecture impact) updated.
+
+### 2026-11-21 · implement · Q44
+**Asked by:** Claude
+**Q:** [implement · deviation] T18: the `workflows` component (the use-case layer api and cli call) has to open the ontology dataset (a `DatasetStore` from `store`) and build the LLM client for ingestion (an `LlmClient` from `llm`). Its plan lets it import only ingestion, governance, release and vcs, and api and cli can't import store or llm either. How should workflows get them?
+**Options offered:** Add workflows → store, llm (Recommended): workflows becomes the composition root that opens the store and builds the client; Ce 4 → 6 (warn band); app components.json, architecture.md, .importlinter, new app ADR-0009 / Factories in lower components: governance gets open_dataset(), ingestion gets client_from_settings(); no new edge, Ce stays 4, but store and llm are hidden behind other components
+**A:** "Add workflows → store, llm (Recommended)"
+**Effect:** `workflows` may depend on `store` and `llm` (app `components.json`, `architecture.md`, `.importlinter`); recorded as ontology-builder/ADR-0009; plan (Architecture impact) updated. The journal of the pending change set is serialised by governance's `ChangeSet`, so workflows needs no `model` edge.
+
+### 2026-11-21 · implement · Q45
+**Asked by:** Claude
+**Q:** [implement · deviation] Plan 0002 lists `confirm_ignorable` and `not_ignorable` among the `POST …/actions` of the API (T19). The back end has neither as an element action: `not_ignorable` already exists as on-demand extraction (estimate → confirm → run), and nothing can set a corpus unit's ignorable verdict to `confirmed` (the change set holds only elements and user statements). No FR or AC needs `confirm_ignorable`. How should T19 handle them?
+**Options offered:** Drop confirm (Recommended): drop `confirm_ignorable` from v1; `not_ignorable` goes through the ingestion routes (`POST …/ingestions/estimate {units}`, then `POST …/ingestions {units, confirm: true}`) / Implement confirm too: extend governance so the change set also holds corpus-unit verdicts, `confirm_ignorable` sets `ignorable.status = confirmed` with a decision
+**A:** "Drop confirm (Recommended)"
+**Effect:** `confirm_ignorable` is not part of v1. Marking a unit not ignorable (FR-14) uses the ingestion routes with `units` instead of `folder`, with the same estimate-then-confirm flow. Plan (HTTP API) updated.
+
+### 2026-11-21 · implement · Q46
+**Asked by:** Claude
+**Q:** [implement · deviation] T20: `ontology-builder serve <name>` has to start the API server (`api.serve`), but plan 0002 lets `cli` depend only on `workflows` and `evaluation`. `workflows` can't host it either, because `api` already depends on `workflows` (that would make a cycle). How should `serve` reach the API?
+**Options offered:** Add cli → api (Recommended): add `api` to cli's mayDependOn, Ce 2 → 3; app components.json, architecture.md, .importlinter, ontology-builder/ADR-0010 / Separate serve entry: `api` gets its own console script (e.g. `ontology-builder-serve`), no new edge, the plan's `serve` command is renamed
+**A:** "Add cli → api (Recommended)"
+**Effect:** `cli` may depend on `api` (app `components.json`, `architecture.md`, `.importlinter`); recorded as ontology-builder/ADR-0010; plan (Architecture impact) updated.

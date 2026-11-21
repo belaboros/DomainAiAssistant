@@ -1,0 +1,73 @@
+name: python
+
+# The Python quality gate (ADR-0020): lint and complexity, types, boundaries from
+# components.json, tests and the dependency audit. Same commands as the pre-commit hooks.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  gate:
+    name: Python quality gate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@1db35dd8eee11c5894872e0b383ae6c406cf738d # v10.4.0
+        with:
+          enable-cache: false
+      - name: Install the locked workspace
+        run: uv sync --locked
+      - name: Lint and complexity (ruff)
+        run: |
+          uv run ruff check .
+          uv run ruff format --check .
+      - name: Complexity report (warn band)
+        run: uv run python tools/quality/python/cc_report.py
+      - name: Types (mypy strict)
+        run: uv run mypy
+      - name: Boundaries (import-linter, public entry points, cycles)
+        run: |
+          uv run python tools/quality/python/gen_importlinter.py --check
+          tools/quality/python/lint-imports.sh
+          uv run python tools/quality/python/boundaries.py
+      - name: Tests
+        run: uv run pytest -q
+      - name: Dependency audit
+        run: tools/quality/python/audit.sh
+
+  mermaid:
+    # The Mermaid render test (plan 0002, T15): every diagram of level-N.md renders. Its own job,
+    # because it needs Node and a headless Chromium (pytest marker `mermaid`).
+    name: Mermaid render test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@1db35dd8eee11c5894872e0b383ae6c406cf738d # v10.4.0
+        with:
+          enable-cache: false
+      - name: Install the locked workspace and the Mermaid CLI
+        run: |
+          uv sync --locked
+          npm ci --ignore-scripts
+          npx --no-install puppeteer browsers install chrome-headless-shell
+      - name: Audit the Node dev tools
+        run: npm audit --omit=optional
+      - name: Render every diagram
+        run: uv run pytest -m mermaid -q

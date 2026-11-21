@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:domain-ai-assistant:contracts:ontology:0.1.0:manifest",
+  "title": "Release manifest",
+  "description": "03_release/<variant>/manifest.json of an ontology dataset (contract 'ontology' 0.1.0). built_at is the only field that differs between two builds of the same records. Readers must ignore properties they do not know.",
+  "type": "object",
+  "required": ["ontology", "variant", "version", "built_at", "source_commit", "counts", "files"],
+  "properties": {
+    "ontology": {
+      "description": "The ontology name: the dataset is data/ontology-<name>/.",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "variant": { "enum": ["raw", "governed"] },
+    "version": {
+      "description": "governed: semantic version (MAJOR.MINOR.PATCH); raw: 'raw+' and the short git SHA of the records it was built from.",
+      "type": "string",
+      "pattern": "^(\\d+\\.\\d+\\.\\d+|raw\\+[0-9a-f]{7,40})$"
+    },
+    "built_at": { "type": "string", "format": "date-time" },
+    "source_commit": {
+      "description": "Git SHA of the commit the records were read from (the parent of the commit that adds this release).",
+      "type": "string",
+      "pattern": "^[0-9a-f]{7,40}$"
+    },
+    "counts": {
+      "type": "object",
+      "required": ["by_type", "by_status", "by_level"],
+      "properties": {
+        "by_type": {
+          "$ref": "#/$defs/countMap",
+          "propertyNames": { "enum": ["statement", "term", "concept", "relation", "rule", "property"] }
+        },
+        "by_status": {
+          "$ref": "#/$defs/countMap",
+          "propertyNames": { "enum": ["proposed", "included", "approved", "deprecated"] }
+        },
+        "by_level": {
+          "$ref": "#/$defs/countMap",
+          "propertyNames": { "enum": ["level-1", "level-2", "level-3"] }
+        }
+      }
+    },
+    "files": {
+      "description": "Every other file of the release folder, by file name, with 'sha256:' + hex digest of its bytes.",
+      "type": "object",
+      "required": ["ontology.ttl", "level-1.md", "level-2.md", "level-3.md"],
+      "additionalProperties": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" }
+    }
+  },
+  "if": { "properties": { "variant": { "const": "governed" } } },
+  "then": {
+    "properties": {
+      "version": { "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+      "files": { "required": ["CHANGELOG.md"] }
+    }
+  },
+  "$defs": {
+    "countMap": {
+      "type": "object",
+      "additionalProperties": { "type": "integer", "minimum": 0 }
+    }
+  }
+}
