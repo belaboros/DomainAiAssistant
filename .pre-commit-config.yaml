@@ -101,3 +101,60 @@ repos:
         language: system
         pass_filenames: false
         files: (pyproject\.toml|uv\.lock)$
+
+  # JS/TS quality gate (ADR-0021). Every hook uses the npm workspace's locked tools (`npm ci`).
+  - repo: local
+    hooks:
+      - id: prettier
+        name: prettier (JS/TS formatting)
+        entry: node_modules/.bin/prettier --check
+        language: system
+        files: \.(js|jsx|mjs|cjs|ts|tsx|mts|cts)$
+      - id: eslint
+        name: eslint (lint, complexity, security rules)
+        entry: node_modules/.bin/eslint --max-warnings 0 --no-warn-ignored
+        language: system
+        files: \.(js|jsx|mjs|cjs|ts|tsx|mts|cts)$
+      - id: tsc
+        name: tsc (strict type check of every workspace)
+        entry: npm run --silent typecheck
+        language: system
+        pass_filenames: false
+        files: (\.(js|jsx|mjs|cjs|ts|tsx|mts|cts)|tsconfig[^/]*\.json)$
+      - id: js-ts-cc-report
+        name: js/ts complexity report (warns at CC 11-15, fails above 15)
+        entry: node tools/quality/js-ts/cc_report.ts
+        language: system
+        pass_filenames: false
+        verbose: true
+        files: \.(js|jsx|mjs|cjs|ts|tsx|mts|cts)$
+      - id: depcruise-config
+        name: .dependency-cruiser.json matches components.json
+        entry: node tools/quality/js-ts/gen_depcruise.ts --check
+        language: system
+        pass_filenames: false
+        files: (\.(js|jsx|mjs|cjs|ts|tsx|mts|cts)|components\.json|\.dependency-cruiser\.json)$
+      - id: depcruise
+        name: dependency-cruiser (boundaries from components.json, cycles)
+        entry: node_modules/.bin/depcruise --config .dependency-cruiser.json apps libs tools
+        language: system
+        pass_filenames: false
+        files: (\.(js|jsx|mjs|cjs|ts|tsx|mts|cts)|components\.json|\.dependency-cruiser\.json|package\.json)$
+      - id: js-ts-boundaries
+        name: js/ts boundaries (component cycles, public entry points, app -> app)
+        entry: node tools/quality/js-ts/boundaries.ts
+        language: system
+        pass_filenames: false
+        files: (\.(js|jsx|mjs|cjs|ts|tsx|mts|cts)|components\.json)$
+      - id: vitest
+        name: vitest (every workspace)
+        entry: npm test --silent
+        language: system
+        pass_filenames: false
+        files: (\.(js|jsx|mjs|cjs|ts|tsx|mts|cts|json))$
+      - id: npm-audit
+        name: npm audit (locked JS/TS dependencies)
+        entry: tools/quality/js-ts/audit.sh
+        language: system
+        pass_filenames: false
+        files: (package\.json|package-lock\.json)$

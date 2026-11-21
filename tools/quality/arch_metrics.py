@@ -1,4 +1,4 @@
-"""Shared merge and render step of /arch-metrics, for every language (ADR-0005, ADR-0020).
+"""Shared merge and render step of /arch-metrics, for every language (ADR-0005, ADR-0020, ADR-0021).
 
 For each level in scope it runs the ``metrics`` command of every language in
 tools/quality/languages.json, merges the snapshots, and writes:
@@ -86,6 +86,21 @@ def _merged_functions(snapshots: list[Snapshot]) -> dict[str, Any]:
     }
 
 
+def _merged_components(snapshots: list[Snapshot]) -> list[dict[str, Any]]:
+    """One row per component name, in first-seen order. A component measured by several
+    languages keeps the first non-null cohesion and abstractness and the union of its external
+    dependencies; Ca, Ce, I and D are recomputed by finish() on the merged graph (ADR-0021)."""
+    rows: dict[str, dict[str, Any]] = {}
+    for snap in snapshots:
+        for comp in snap["components"]:
+            row = rows.setdefault(comp["name"], dict(comp))
+            for key in ("relationalCohesion", "abstractness"):
+                if row.get(key) is None:
+                    row[key] = comp.get(key)
+            row["externalDeps"] = sorted({*row["externalDeps"], *comp["externalDeps"]})
+    return list(rows.values())
+
+
 def merge(snapshots: list[Snapshot]) -> Snapshot:
     """Sum per component, union the edges; I, cycles and SDP are recomputed by finish()."""
     if len(snapshots) == 1:
@@ -95,6 +110,7 @@ def merge(snapshots: list[Snapshot]) -> Snapshot:
         **snapshots[0],
         "languages": sorted({lang for s in snapshots for lang in s["languages"]}),
         "functions": _merged_functions(snapshots),
+        "components": _merged_components(snapshots),
         "dependencies": _merged_deps(snapshots),
         "violations": kept,
     }

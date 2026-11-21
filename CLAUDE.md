@@ -64,7 +64,7 @@ idea  ──/idea──▶ docs/ideas/NNNN-slug.md                 (original wor
 
 ## Conventions
 
-- After cloning: `brew install gitleaks pre-commit jq uv && pre-commit install && uv sync`, then `cp .env.example .env` and fill it in. Check an app's environment: `tools/env/with-env.sh <app> --check`. Run every check: `pre-commit run --all-files`.
+- After cloning: `brew install gitleaks pre-commit jq uv node@26 && pre-commit install && uv sync && npm ci`, then `cp .env.example .env` and fill it in. Check an app's environment: `tools/env/with-env.sh <app> --check`. Run every check: `pre-commit run --all-files`.
 - GitHub protection (once, after the first push): `tools/bootstrap-github.sh`.
 - This project was generated from [sdd-template-for-monorepo-with-claude](https://github.com/belaboros/sdd-template-for-monorepo-with-claude). Pull template improvements with `copier update --trust` on a clean branch, and review the diff. Never edit `.copier-answers.yml` by hand.
 - Names of apps, libraries and datasets are kebab-case. Dates are absolute (`YYYY-MM-DD`). Diagrams are Mermaid in Markdown (ADR-0004).
@@ -76,4 +76,12 @@ idea  ──/idea──▶ docs/ideas/NNNN-slug.md                 (original wor
   - Boundaries: `uv run python tools/quality/python/gen_importlinter.py` (regenerate `.importlinter` after a `components.json` change; `--check` in the gate), `tools/quality/python/lint-imports.sh`, `uv run python tools/quality/python/boundaries.py`
   - Tests: `uv run pytest`
   - Dependency audit: `tools/quality/python/audit.sh`
+- **JavaScript/TypeScript** (ADR-0021): one npm workspace at the root (`package.json`, `package-lock.json`, Node 26 in `.nvmrc`, TypeScript 6 strict in `tsconfig.base.json`). A JS/TS app or library is a workspace with its own `package.json` and a `tsconfig.json` that extends `tsconfig.base.json`; add it to `workspaces` in the root `package.json`, and give it `test` and `typecheck` scripts.
+  - Install: `npm ci`; add a dependency: `npm install --workspace <path> --save-exact <package>@<version>` (a release at least 7 days old)
+  - The whole gate: `npm run lint` (formatting, ESLint, types, the CC report, boundaries); format: `npm run format`
+  - Lint and complexity: `npm run lint:eslint`; warn band (CC 11–15): `npm run cc`
+  - Types: `npm run typecheck`
+  - Boundaries: `node tools/quality/js-ts/gen_depcruise.ts` (regenerate `.dependency-cruiser.json` after a `components.json` change; `--check` in the gate), then `npm run boundaries`
+  - Tests: `npm test`; end to end: `npm run e2e`
+  - Dependency audit: `npm run audit`
 - **Metrics** (all languages): `uv run python tools/quality/arch_metrics.py [all | system | <app>]` writes the snapshots, `latest.md` and the coupling diagrams (used by `/arch-metrics`).

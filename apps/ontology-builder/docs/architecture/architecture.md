@@ -102,24 +102,50 @@ flowchart TB
 ## 4. Coupling and modularity
 
 <!-- coupling:begin (generated, do not edit) -->
-_No dependencies between components measured yet._ _Nodes: name, Ca·Ce·I. Edges: number of import statements. Red: violation._
+_Nodes: name, Ca·Ce·I. Edges: number of import statements. Red: violation._
 
 ```mermaid
 flowchart TD
-  model["model<br/>0·0·0.0"]
-  store["store<br/>0·0·0.0"]
-  sources["sources<br/>0·0·0.0"]
-  llm["llm<br/>0·0·0.0"]
-  extraction["extraction<br/>0·0·0.0"]
-  ingestion["ingestion<br/>0·0·0.0"]
-  governance["governance<br/>0·0·0.0"]
-  release["release<br/>0·0·0.0"]
-  vcs["vcs<br/>0·0·0.0"]
-  workflows["workflows<br/>0·0·0.0"]
-  api["api<br/>0·0·0.0"]
-  cli["cli<br/>0·0·0.0"]
-  evaluation["evaluation<br/>0·0·0.0"]
+  model["model<br/>7·0·0.0"]
+  store["store<br/>5·1·0.167"]
+  sources["sources<br/>1·1·0.5"]
+  llm["llm<br/>3·0·0.0"]
+  extraction["extraction<br/>1·2·0.667"]
+  ingestion["ingestion<br/>1·5·0.833"]
+  governance["governance<br/>1·2·0.667"]
+  release["release<br/>1·2·0.667"]
+  vcs["vcs<br/>1·0·0.0"]
+  workflows["workflows<br/>3·6·0.667"]
+  api["api<br/>1·2·0.667"]
+  cli["cli<br/>0·3·1.0"]
+  evaluation["evaluation<br/>1·2·0.667"]
   web["web<br/>0·0·0.0"]
+  api -->|2| model
+  api -->|6| workflows
+  cli -->|1| api
+  cli -->|1| evaluation
+  cli -->|1| workflows
+  evaluation -->|2| store
+  evaluation -->|2| workflows
+  extraction -->|4| llm
+  extraction -->|10| model
+  governance -->|10| model
+  governance -->|3| store
+  ingestion -->|3| extraction
+  ingestion -->|3| llm
+  ingestion -->|3| model
+  ingestion -->|1| sources
+  ingestion -->|3| store
+  release -->|6| model
+  release -->|2| store
+  sources -->|3| model
+  store -->|3| model
+  workflows -->|9| governance
+  workflows -->|5| ingestion
+  workflows -->|3| llm
+  workflows -->|4| release
+  workflows -->|6| store
+  workflows -->|3| vcs
 ```
 <!-- coupling:end -->
 

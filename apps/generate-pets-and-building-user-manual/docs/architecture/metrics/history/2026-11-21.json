@@ -1,12 +1,13 @@
 {
   "date": "2026-11-21",
-  "commit": "55fe60315d1dfd9ecba904604e09dfb31c945231",
+  "commit": "5451e958a1605fc3a2becd4375eb05bab77f6042",
   "languages": [
+    "js-ts",
     "python"
   ],
   "functions": {
     "count": 0,
-    "ccAvg": 0.0,
+    "ccAvg": 0,
     "ccMax": 0,
     "overWarn": []
   },

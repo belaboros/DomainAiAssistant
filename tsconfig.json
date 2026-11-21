@@ -1,0 +1,15 @@
+{
+  "$comment": "The repo root: the JS/TS gate's own tools, run by Node's type stripping (ADR-0021). Workspaces have their own tsconfig.json.",
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "lib": ["ES2024"],
+    "types": ["node"],
+    "allowJs": true,
+    "checkJs": true,
+    "allowImportingTsExtensions": true,
+    "erasableSyntaxOnly": true
+  },
+  "include": ["tools/**/*.ts", "*.mjs"]
+}
