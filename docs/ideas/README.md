@@ -7,4 +7,5 @@ Scope: `system` or the name of one app; decided by `/spec` (until then `TBD`).
 
 | #    | Idea | Scope | Status | Spec / decisions |
 |------|------|-------|--------|------------------|
-| _none yet_ | | | | |
+| [0001](0001-manual-ontology-assistant.md) | Ontology-backed AI assistant over pet and building user manuals | TBD | captured | _none yet_ |
+| [0002](0002-ontology-builder.md) | OntologyBuilder: build leveled ontologies (level-1/2/3, ignorable) from text corpora and human input, with review and governance | TBD | captured | _none yet_ |

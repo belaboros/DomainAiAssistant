@@ -1,0 +1,5 @@
+# 1. Before You Get a Cat
+
+Few peoples have loved cats as deeply as the ancient Egyptians. Cats first earned their place by guarding the grain stores from mice and rats and by killing snakes near the houses along the Nile. Over time the Egyptians came to see them as sacred animals of Bastet, the goddess of home, fertility and protection, who was often shown with the head of a cat. Her great temple at Bubastis held festivals that drew huge crowds, and thousands of cats were carefully mummified and buried there as offerings. The Greek historian Herodotus wrote that when a household cat died, the family shaved their eyebrows as a sign of mourning. Killing a cat, even by accident, could be punished by death, and Diodorus Siculus tells of a Roman visitor killed by an angry crowd for doing so. For the Egyptians, a cat in the house was not just a pet but a small, living blessing.
+
+A cat lives 12 to 18 years. Cats are independent, but they still need daily attention, play and a clean environment. Plan for food, litter, yearly veterinary visits and someone to look after the cat when you travel.

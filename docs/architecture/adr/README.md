@@ -23,3 +23,4 @@ New ADRs are created with `/adr` from [../../templates/adr.md](../../templates/a
 | [0015](0015-libraries-in-libs-folder.md) | Keep libraries and dataset contracts in `libs/` | accepted | 2026-11-20 |
 | [0016](0016-commit-or-ignore-each-data-folder.md) | Decide per dataset whether `data/<dataset>/` is committed or git-ignored | accepted | 2026-11-20 |
 | [0017](0017-finish-feature-branches-with-one-command.md) | Finish a feature branch with one command, and never delete `main` | accepted | 2026-11-20 |
+| [0018](0018-manual-generator-app-owns-the-manuals-dataset.md) | Add a generator app that owns the pets and building manuals dataset | accepted | 2026-11-20 |
