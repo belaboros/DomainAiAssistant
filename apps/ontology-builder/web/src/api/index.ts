@@ -24,6 +24,17 @@ export type Evidence = Schemas["EvidenceOut"];
 export type ElementRecord = Schemas["RecordOut"];
 export type Decision = Schemas["DecisionOut"];
 export type Mention = Schemas["MentionOut"];
+export type Unit = Schemas["UnitOut"];
+export type AuthorIn = Schemas["AuthorIn"];
+export type IngestIn = Schemas["IngestIn"];
+/** What a run is on: a folder (a new corpus) or the units marked not ignorable. */
+export type RunBody = Omit<IngestIn, "confirm">;
+export type Estimate = Schemas["EstimateOut"];
+export type IngestOut = Schemas["IngestOut"];
+export type RunRecord = Schemas["RunOut"];
+export type CommitOut = Schemas["CommitOut"];
+export type PublishOut = Schemas["PublishOut"];
+export type Reference = Schemas["ReferenceOut"];
 
 /** Every write needs this header (the server refuses a write without it). */
 export const WRITE_HEADER = { "X-Ontology-Builder": "1" } as const;
@@ -111,5 +122,82 @@ export function elementDetail(ontology: string, id: string): Promise<ElementDeta
 export function act(ontology: string, body: ActionIn): Promise<ActionsOut> {
   return unwrap(
     api.POST("/api/ontologies/{name}/actions", { params: { path: { name: ontology } }, body }),
+  );
+}
+
+function path(ontology: string) {
+  return { params: { path: { name: ontology } } };
+}
+
+/** Every source unit: corpus units with their ignorable verdicts, then user statements (Q49). */
+export function units(ontology: string): Promise<Unit[]> {
+  return unwrap(api.GET("/api/ontologies/{name}/units", path(ontology)));
+}
+
+/** A new user statement (FR-21); its ID. */
+export async function addStatement(ontology: string, text: string): Promise<string> {
+  const out = await unwrap(
+    api.POST("/api/ontologies/{name}/statements", { ...path(ontology), body: { text } }),
+  );
+  return out.id;
+}
+
+/** A new revision of a user statement; the ID stays (FR-21). */
+export async function reviseStatement(ontology: string, id: string, text: string): Promise<string> {
+  const out = await unwrap(
+    api.PUT("/api/ontologies/{name}/statements/{unit_id}", {
+      params: { path: { name: ontology, unit_id: id } },
+      body: { text },
+    }),
+  );
+  return out.id;
+}
+
+/** An authored element, which must cite evidence (FR-22); its ID. */
+export async function author(ontology: string, body: AuthorIn): Promise<string> {
+  const out = await unwrap(
+    api.POST("/api/ontologies/{name}/elements", { ...path(ontology), body }),
+  );
+  return out.id;
+}
+
+/** What an ingestion or on-demand extraction would cost; no LLM call is made (FR-6). */
+export function estimate(ontology: string, body: RunBody): Promise<Estimate> {
+  return unwrap(
+    api.POST("/api/ontologies/{name}/ingestions/estimate", {
+      ...path(ontology),
+      body: { ...body, confirm: false },
+    }),
+  );
+}
+
+/** Run a confirmed ingestion or on-demand extraction; returns once it has finished (Q50). */
+export function ingest(ontology: string, body: RunBody): Promise<IngestOut> {
+  return unwrap(
+    api.POST("/api/ontologies/{name}/ingestions", {
+      ...path(ontology),
+      body: { ...body, confirm: true },
+    }),
+  );
+}
+
+/** The record of a run: model, tokens used, start and end (FR-6). */
+export function runRecord(ontology: string, id: string): Promise<RunRecord> {
+  return unwrap(
+    api.GET("/api/ontologies/{name}/runs/{run_id}", {
+      params: { path: { name: ontology, run_id: id } },
+    }),
+  );
+}
+
+/** Save the pending changes as one commit, or get the hook output (FR-27). */
+export function save(ontology: string): Promise<CommitOut> {
+  return unwrap(api.POST("/api/ontologies/{name}/save", path(ontology)));
+}
+
+/** Publish the governed release (domain admin), or get the offenders (FR-29, FR-35). */
+export function publish(ontology: string, version: string | null): Promise<PublishOut> {
+  return unwrap(
+    api.POST("/api/ontologies/{name}/publish", { ...path(ontology), body: { version } }),
   );
 }

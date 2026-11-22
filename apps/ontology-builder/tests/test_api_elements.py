@@ -313,3 +313,55 @@ def test_ingestion_estimates_then_runs_only_after_confirm(ingest_kit: Any) -> No
 
     again = ingest_kit.client.post(ingest_kit.url("/ingestions/estimate"), json={"folder": DOG})
     assert again.status_code == 409 and "already" in again.json()["detail"]
+
+
+def _units(kit: Any) -> list[dict[str, Any]]:
+    response = kit.client.get(kit.url("/units"))
+    assert response.status_code == 200, response.text
+    units: list[dict[str, Any]] = response.json()
+    return units
+
+
+def test_units_list_corpus_units_with_their_verdicts(pet_api_kit: Any, pet_extraction: Any) -> None:
+    """The GUI's evidence picker and not-ignorable dialog choose from these (T26, Q49)."""
+    pet_api_kit.sign_in()
+    listed = {u["id"]: u for u in _units(pet_api_kit)}
+    assert set(listed) == set(pet_extraction.units)
+    some = next(iter(pet_extraction.units.values()))
+    shown = listed[some.id]
+    assert shown["text"] == some.text and shown["kind"] == some.kind
+    assert shown["corpus"] and shown["document"] == some.document_id
+    ignorable = [u for u in listed.values() if u["ignorable"] and u["ignorable"]["proposed"]]
+    assert ignorable and all(u["ignorable"]["category"] for u in ignorable)
+
+
+def test_units_include_unsaved_user_statements(api_kit: Any, review_kit: Any) -> None:
+    api_kit.sign_in()
+    unit = api_kit.client.post(api_kit.url("/statements"), json={"text": "Cats nap."}).json()["id"]
+    [first] = _units(api_kit)
+    assert (first["id"], first["kind"], first["corpus"]) == (
+        unit,
+        "user_statement",
+        "90_user_statements",
+    )
+    assert first["author"] == "alice" and first["document"] is None
+    api_kit.client.put(api_kit.url(f"/statements/{unit}"), json={"text": "Cats nap a lot."})
+    [revised] = _units(api_kit)
+    assert revised["text"] == "Cats nap a lot." and revised["revisions"] == first["revisions"] + 1
+
+
+def test_units_and_runs_are_typed_in_openapi() -> None:
+    schemas = openapi_schema()["components"]["schemas"]
+    assert set(schemas["UnitOut"]["properties"]) == {
+        "id",
+        "kind",
+        "corpus",
+        "document",
+        "text",
+        "ignorable",
+        "author",
+        "revisions",
+    }
+    assert {"id", "kind", "model", "status", "started_at", "ended_at", "input_tokens"} <= set(
+        schemas["RunOut"]["properties"]
+    )

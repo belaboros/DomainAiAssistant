@@ -547,13 +547,19 @@ def api_kit(review_kit: ReviewKit, tmp_path: Path) -> Iterator[ApiKit]:
 
 
 def seed_pets(store: DatasetStore, extraction: PetExtraction) -> None:
-    """Write the replayed pass 1 of the pet manuals (corpora, units, elements) into ``store``."""
+    """Write the replayed pass 1 of the pet manuals (corpora, units with their ignorable
+    verdicts, elements) into ``store``, as an ingestion would."""
+    verdicts = {u: v for d in extraction.documents for u, v in d.verdicts.items()}
     with store.transaction() as files:
         for corpus in extraction.corpora:
             files.write_corpus(corpus.folder, corpus.corpus)
             for item in corpus.documents:
                 files.write_document(corpus.folder, item.document)
-                files.write_units(corpus.folder, item.document.id, item.units)
+                units = [
+                    u.model_copy(update={"ignorable": verdicts[u.id]}) if u.id in verdicts else u
+                    for u in item.units
+                ]
+                files.write_units(corpus.folder, item.document.id, units)
         for element in extraction.elements:
             files.write_element(element)
 

@@ -2,6 +2,8 @@
 // (FR-19), runs bulk actions (FR-18) on the selected elements that are shown, and shows the open
 // element in the detail pane (FR-16, FR-17; j/k move through the shown elements). After an
 // action the index and the open element are loaded again, since the server decides what changed.
+// The work bar above the panes opens the dialogs of T26 (statements, authoring, ingestion, Save,
+// Publish).
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type {
   ActionIn,
@@ -11,6 +13,8 @@ import type {
   IndexEntry,
   SessionOut,
 } from "../api";
+import { WorkBar } from "../dialogs/WorkBar";
+import type { WorkApi } from "../dialogs/workApi";
 import type { DetailAct } from "./Actions";
 import { BulkBar, type BulkAct } from "./BulkBar";
 import { ElementDetail } from "./ElementDetail";
@@ -25,6 +29,9 @@ export interface ReviewApi {
   element: (ontology: string, id: string) => Promise<Detail>;
   act: (ontology: string, body: ActionIn) => Promise<ActionsOut>;
 }
+
+/** Every call of the review screen and its work bar. */
+export type ScreenApi = ReviewApi & WorkApi;
 
 type Opened =
   | { state: "none" }
@@ -204,7 +211,7 @@ function Ready({ session, index, act, opened, current, open, actOnOpen }: ReadyP
   );
 }
 
-export function ReviewScreen({ session, api }: { session: SessionOut; api: ReviewApi }) {
+export function ReviewScreen({ session, api }: { session: SessionOut; api: ScreenApi }) {
   const { ontology } = session;
   const { loaded, reload } = useIndex(api, ontology);
   const { current, opened, open, load } = useOpened(api, ontology);
@@ -213,6 +220,10 @@ export function ReviewScreen({ session, api }: { session: SessionOut; api: Revie
     await reload();
     if (current !== null) await load(current);
     return out.results;
+  };
+  const changed = async () => {
+    await reload();
+    if (current !== null) await load(current);
   };
   const actOnOpen: DetailAct = async (action, payload) => {
     if (current === null) return [];
@@ -229,14 +240,24 @@ export function ReviewScreen({ session, api }: { session: SessionOut; api: Revie
     );
   }
   return (
-    <Ready
-      session={session}
-      index={loaded.index}
-      act={act}
-      opened={opened}
-      current={current}
-      open={open}
-      actOnOpen={actOnOpen}
-    />
+    <>
+      <WorkBar
+        ontology={ontology}
+        role={session.role}
+        writer={session.writer}
+        elements={loaded.index.elements}
+        api={api}
+        onChanged={changed}
+      />
+      <Ready
+        session={session}
+        index={loaded.index}
+        act={act}
+        opened={opened}
+        current={current}
+        open={open}
+        actOnOpen={actOnOpen}
+      />
+    </>
   );
 }

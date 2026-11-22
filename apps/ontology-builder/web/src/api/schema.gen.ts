@@ -243,6 +243,26 @@ export interface paths {
     patch?: never;
     trace?: never;
   };
+  "/api/ontologies/{name}/units": {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    /**
+     * Units
+     * @description Every corpus unit with its ignorable verdict, then the user statements (Q49).
+     */
+    get: operations["units_api_ontologies__name__units_get"];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   "/api/session": {
     parameters: {
       query?: never;
@@ -465,6 +485,22 @@ export interface components {
       id: string;
     };
     /**
+     * IgnorableCategory
+     * @description Why a whole source unit is proposed as ignorable (FR-14).
+     * @enum {string}
+     */
+    IgnorableCategory:
+      | "instance_or_anecdote"
+      | "generic_or_historical_story"
+      | "quote_or_motivational"
+      | "procedure"
+      | "other";
+    /**
+     * IgnorableStatus
+     * @enum {string}
+     */
+    IgnorableStatus: "proposed" | "confirmed" | "rejected";
+    /**
      * IndexEntryOut
      * @description One element in the compact index the GUI filters (FR-19).
      */
@@ -594,6 +630,42 @@ export interface components {
      * @enum {string}
      */
     Role: "user" | "domain_admin";
+    /**
+     * RunKind
+     * @enum {string}
+     */
+    RunKind: "ingestion" | "on_demand";
+    /**
+     * RunOut
+     * @description The record of a run: model, tokens used, start and end, skipped items (FR-6).
+     */
+    RunOut: {
+      /** Ended At */
+      ended_at?: string | null;
+      /** Id */
+      id: string;
+      /** Input Tokens */
+      input_tokens: number;
+      kind: components["schemas"]["RunKind"];
+      /** Model */
+      model: string;
+      /** Output Tokens */
+      output_tokens: number;
+      /** Skipped */
+      skipped?: components["schemas"]["SkippedOut"][];
+      /** Source Path */
+      source_path?: string | null;
+      /** Started At */
+      started_at: string;
+      status: components["schemas"]["RunStatus"];
+      /** User */
+      user: string;
+    };
+    /**
+     * RunStatus
+     * @enum {string}
+     */
+    RunStatus: "running" | "completed" | "failed";
     /** SessionOut */
     SessionOut: {
       /** Ontology */
@@ -612,8 +684,42 @@ export interface components {
       /** User */
       user: string;
     };
+    /** SkippedOut */
+    SkippedOut: {
+      /** Item */
+      item: string;
+      /** Reason */
+      reason: string;
+      /** Where */
+      where: string;
+    };
     /** StatementIn */
     StatementIn: {
+      /** Text */
+      text: string;
+    };
+    /**
+     * UnitKind
+     * @enum {string}
+     */
+    UnitKind: "paragraph" | "list_item" | "blockquote" | "table_row" | "user_statement";
+    /**
+     * UnitOut
+     * @description One source unit: a corpus unit or a user statement (unsaved ones included; Q49).
+     */
+    UnitOut: {
+      /** Author */
+      author?: string | null;
+      /** Corpus */
+      corpus: string;
+      /** Document */
+      document?: string | null;
+      /** Id */
+      id: string;
+      ignorable?: components["schemas"]["VerdictOut"] | null;
+      kind: components["schemas"]["UnitKind"];
+      /** Revisions */
+      revisions: number;
       /** Text */
       text: string;
     };
@@ -629,6 +735,18 @@ export interface components {
       msg: string;
       /** Error Type */
       type: string;
+    };
+    /**
+     * VerdictOut
+     * @description The LLM's ignorable verdict on a corpus unit (FR-14).
+     */
+    VerdictOut: {
+      category: components["schemas"]["IgnorableCategory"];
+      /** Proposed */
+      proposed: boolean;
+      /** Reason */
+      reason: string;
+      status: components["schemas"]["IgnorableStatus"];
     };
   };
   responses: never;
@@ -955,9 +1073,7 @@ export interface operations {
           [name: string]: unknown;
         };
         content: {
-          "application/json": {
-            [key: string]: unknown;
-          };
+          "application/json": components["schemas"]["RunOut"];
         };
       };
       /** @description Validation Error */
@@ -1130,6 +1246,37 @@ export interface operations {
         };
         content: {
           "application/json": components["schemas"]["IdOut"];
+        };
+      };
+      /** @description Validation Error */
+      422: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "application/json": components["schemas"]["HTTPValidationError"];
+        };
+      };
+    };
+  };
+  units_api_ontologies__name__units_get: {
+    parameters: {
+      query?: never;
+      header?: never;
+      path: {
+        name: string;
+      };
+      cookie?: never;
+    };
+    requestBody?: never;
+    responses: {
+      /** @description Successful Response */
+      200: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "application/json": components["schemas"]["UnitOut"][];
         };
       };
       /** @description Validation Error */

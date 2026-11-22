@@ -17,7 +17,7 @@ export interface ActionDialogProps {
   onCancel: () => void;
 }
 
-type Change = (name: string, value: string | readonly string[]) => void;
+export type Change = (name: string, value: string | readonly string[]) => void;
 
 function textValue(values: Values, name: string): string {
   const value = values.get(name);
@@ -81,7 +81,13 @@ function Select(props: { field: Field & { kind: "select" }; values: Values; onCh
   );
 }
 
-function Input(props: { field: Field; values: Values; onChange: Change; first: boolean }) {
+/** One field of a form, by its kind: a text input, a select or a group of checkboxes. */
+export function FieldInput(props: {
+  field: Field;
+  values: Values;
+  onChange: Change;
+  first: boolean;
+}) {
   const { field, values, onChange, first } = props;
   if (field.kind === "checks") return <Checks field={field} values={values} onChange={onChange} />;
   if (field.kind === "select") return <Select field={field} values={values} onChange={onChange} />;
@@ -119,7 +125,7 @@ export function ActionDialog({ spec, busy, onSubmit, onCancel }: ActionDialogPro
         >
           <h2>{spec.title}</h2>
           {spec.fields.map((field) => (
-            <Input
+            <FieldInput
               key={field.name}
               field={field}
               values={values}

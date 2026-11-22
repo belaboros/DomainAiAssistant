@@ -1,6 +1,6 @@
 // The review keyboard shortcuts (T25): j/k next and previous element, i include, x exclude,
 // e correct, 1–3 set the level, a approve. Keys typed into a field, or with a modifier, are not
-// shortcuts.
+// shortcuts, and nor is any key while a modal dialog is open (it would act behind the dialog).
 import { useEffect, useRef } from "react";
 import type { Level } from "../api";
 
@@ -30,8 +30,13 @@ function typing(target: EventTarget | null): boolean {
   return target.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(target.tagName);
 }
 
+function modalOpen(): boolean {
+  return document.querySelector('[aria-modal="true"]') !== null;
+}
+
 export function shortcutOf(event: KeyboardEvent): Shortcut | undefined {
   if (event.ctrlKey || event.metaKey || event.altKey || typing(event.target)) return undefined;
+  if (modalOpen()) return undefined;
   return KEYS.get(event.key);
 }
 

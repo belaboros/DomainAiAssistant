@@ -35,9 +35,14 @@ export interface DialogSpec {
   fields: readonly Field[];
 }
 
+/** The fields of a form; a dialog spec is one, and so is the author dialog (T26). */
+export interface FieldSet {
+  fields: readonly Field[];
+}
+
 export type Values = ReadonlyMap<string, string | readonly string[]>;
 
-const LEVELS: readonly Choice[] = [
+export const LEVELS: readonly Choice[] = [
   { value: "level-1", label: LEVEL_NAME["level-1"] },
   { value: "level-2", label: LEVEL_NAME["level-2"] },
   { value: "level-3", label: LEVEL_NAME["level-3"] },
@@ -73,7 +78,7 @@ function textOf(value: unknown): string {
   return "";
 }
 
-function choiceOf(entry: IndexEntry): Choice {
+export function choiceOf(entry: IndexEntry): Choice {
   const name = entry.label === "" ? entry.id : entry.label;
   return { value: entry.id, label: `${name} (${entry.type})` };
 }
@@ -237,7 +242,7 @@ export function dialogFor(
 }
 
 /** The first value of every field: its initial value, the first choice, or nothing. */
-export function initialValues(spec: DialogSpec): Values {
+export function initialValues(spec: FieldSet): Values {
   return new Map(
     spec.fields.map((field): [string, string | readonly string[]] => {
       if (field.kind === "checks") return [field.name, []];
@@ -253,12 +258,12 @@ function filled(value: string | readonly string[] | undefined): boolean {
 }
 
 /** True when every required field has a value. */
-export function complete(spec: DialogSpec, values: Values): boolean {
+export function complete(spec: FieldSet, values: Values): boolean {
   return spec.fields.every((field) => !field.required || filled(values.get(field.name)));
 }
 
 /** The action's payload: every field with a value (text trimmed); empty ones are left out. */
-export function payloadOf(spec: DialogSpec, values: Values): Record<string, unknown> {
+export function payloadOf(spec: FieldSet, values: Values): Record<string, unknown> {
   const entries: [string, unknown][] = [];
   for (const field of spec.fields) {
     const value = values.get(field.name);

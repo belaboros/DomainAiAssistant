@@ -7,7 +7,16 @@ from typing import Any, Literal
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from ontology_builder.model import ElementStatus, Level, Role
+from ontology_builder.model import (
+    ElementStatus,
+    IgnorableCategory,
+    IgnorableStatus,
+    Level,
+    Role,
+    RunKind,
+    RunStatus,
+    UnitKind,
+)
 
 ActionName = Literal[
     "include",
@@ -160,6 +169,31 @@ class ElementDetailOut(BaseModel):
     """True when the element has unsaved changes."""
 
 
+class VerdictOut(BaseModel):
+    """The LLM's ignorable verdict on a corpus unit (FR-14)."""
+
+    proposed: bool
+    category: IgnorableCategory
+    reason: str
+    status: IgnorableStatus
+
+
+class UnitOut(BaseModel):
+    """One source unit: a corpus unit or a user statement (unsaved ones included; Q49)."""
+
+    id: str
+    kind: UnitKind
+    corpus: str
+    """The corpus folder, or ``90_user_statements``."""
+    document: str | None = None
+    text: str
+    """The text; for a user statement, its latest revision."""
+    ignorable: VerdictOut | None = None
+    author: str | None = None
+    revisions: int
+    """How many revisions a user statement has; 0 for a corpus unit."""
+
+
 class ActionIn(BaseModel):
     action: ActionName
     ids: list[str] = Field(min_length=1)
@@ -219,6 +253,28 @@ class IngestOut(BaseModel):
     run_id: str
     status: str
     commit: CommitOut
+
+
+class SkippedOut(BaseModel):
+    where: str
+    item: str
+    reason: str
+
+
+class RunOut(BaseModel):
+    """The record of a run: model, tokens used, start and end, skipped items (FR-6)."""
+
+    id: str
+    kind: RunKind
+    user: str
+    model: str
+    source_path: str | None = None
+    started_at: str
+    ended_at: str | None = None
+    status: RunStatus
+    input_tokens: int
+    output_tokens: int
+    skipped: list[SkippedOut] = Field(default_factory=list)
 
 
 class PublishIn(BaseModel):

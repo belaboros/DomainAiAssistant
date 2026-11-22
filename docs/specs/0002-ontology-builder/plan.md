@@ -2,8 +2,8 @@
 
 - **Status:** approved
 - **Spec:** [spec.md](spec.md)
-- **Idea:** [0002-ontology-builder](../../ideas/0002-ontology-builder.md) (plan decisions: Q29–Q35; implement-stage changes: Q37–Q48)
-- **Last updated:** 2026-11-21
+- **Idea:** [0002-ontology-builder](../../ideas/0002-ontology-builder.md) (plan decisions: Q29–Q35; implement-stage changes: Q37–Q50)
+- **Last updated:** 2026-11-22
 
 ## Approach
 
@@ -137,9 +137,10 @@ Nothing deletes a record. Merging an approved concept deprecates it with `replac
 - **Session:** `POST /api/session` {user, role} → session cookie. The response warns when the user name looks like an email address, and names the ontology the server opened (the GUI addresses the routes below by it). `DELETE /api/session` signs out.
 - **Ontologies:** `GET /api/ontologies`, `POST /api/ontologies` (admin: name + scope), `PUT /api/ontologies/{name}/scope` (admin).
 - **Elements:** `GET /api/ontologies/{name}/elements` (compact index of every element, for filtering in the client; typed entries `IndexEntryOut` and corpora `CorpusOut`, so the generated TypeScript types cover them) and `GET …/elements/{id}` (full record + evidence units + decisions; typed `ElementDetailOut`: `EvidenceOut`, `RecordOut` with the common fields typed and the type-specific ones passed through, `DecisionOut`).
+- **Units:** `GET …/units` (every corpus unit and user statement, unsaved statements included; typed `UnitOut`: kind, corpus, document, text, ignorable verdict, and for a statement its author and revisions). The GUI's evidence picker, statement editing and the not-ignorable dialog choose from it (Q49).
 - **Actions:** `POST …/actions` {action, ids[], payload}. Actions are include, exclude, approve, reject, deprecate, level, correct, merge, split and reassign. The server checks role and transition for every ID and returns per-ID results. Marking units not ignorable (FR-14) is an on-demand ingestion (below); confirming an ignorable verdict is not part of v1 (Q45).
 - **Authoring:** `POST …/statements`, `PUT …/statements/{id}` (new revision), `POST …/elements` (authored element; needs evidence).
-- **Ingestion:** `POST …/ingestions/estimate` {folder} or {units[]} (not ignorable) → {documents, units, tokens, cost}; `POST …/ingestions` {folder or units[], confirm: true} → run id; `GET …/runs/{id}`.
+- **Ingestion:** `POST …/ingestions/estimate` {folder} or {units[]} (not ignorable) → {documents, units, tokens, cost}; `POST …/ingestions` {folder or units[], confirm: true} → run id; `GET …/runs/{id}`. The run is synchronous: the GUI shows a running state, then the run record (Q50).
 - **Save and publish:** `POST …/save` → {commit sha} or {hook output}; `POST …/publish` (admin) {version} → {version, changelog} or {offenders}.
 
 **Guards:**
@@ -226,35 +227,35 @@ Back-end tests live in `apps/ontology-builder/tests/`, front-end tests in `apps/
 |----------------------|------------------------------------------|
 | AC-1  | `test_ontology_create.py::test_create_makes_layout_and_scope`, `::test_ingest_refused_when_scope_missing_or_empty` |
 | AC-2  | `test_api_session.py::test_decisions_carry_user_and_role`, `::test_email_like_name_warns`; `web/src/signin/SignIn.test.tsx::shows_handle_hint` |
-| AC-3  | `test_api_roles.py::test_user_refused[approve,reject,deprecate,scope,publish]`: 403, and the dataset tree hash is unchanged; `web/src/review/Actions.test.tsx::admin_actions_disabled_for_user` |
+| AC-3  | `test_api_roles.py::test_user_refused[approve,reject,deprecate,scope,publish]`: 403, and the dataset tree hash is unchanged; `web/src/review/Actions.test.tsx::admin_actions_disabled_for_user`, `web/src/dialogs/PublishDialog.test.tsx::user_cannot_publish` |
 | AC-4  | `test_sources_registry.py::test_two_corpora_get_00_and_01` (fixture), `::test_unit_fields_present`, `::test_ids_contain_no_text_or_position` |
 | AC-5  | `test_sources_registry.py::test_text_edit_changes_hash_not_id` |
-| AC-6  | `test_ingestion_estimate.py::test_no_llm_call_before_confirm` (spy client), `::test_run_record_has_model_tokens_times`; `web/src/ingest/IngestDialog.test.tsx::shows_counts_tokens_cost` |
+| AC-6  | `test_ingestion_estimate.py::test_no_llm_call_before_confirm` (spy client), `::test_run_record_has_model_tokens_times`; `web/src/dialogs/IngestDialog.test.tsx::shows_counts_tokens_cost`, `::runs_after_confirm_then_shows_the_run_record` |
 | AC-7  | `test_ingestion_refusals.py::test_same_folder_twice_refused_dataset_unchanged` |
 | AC-8  | `test_ingestion_atomic.py::test_fail_halfway_then_resume_equals_uninterrupted`, `::test_fail_halfway_without_resume_leaves_git_status_clean` (fixture, temp git repo) |
 | AC-9  | `test_extraction_pets.py::test_all_element_types_cite_existing_units` (fixture); `test_model_validation.py::test_record_without_evidence_is_invalid` |
 | AC-10 | `test_release_rdf.py::test_lead_limit_rule_record_and_turtle`, `::test_max_two_pets_as_owl_and_shacl` (fixture user statement "at most 2 pets") |
 | AC-11 | `test_extraction_terms.py::test_leash_lead_synonym_and_lead_senses` (fixture); `ontology-builder eval` reports the live score |
 | AC-12 | `test_model_validation.py::test_every_element_has_level_and_reason` (fixture), `::test_unknown_level_is_invalid` |
-| AC-13 | `test_extraction_ignorable.py::test_bodza_egypt_cicero_ignorable_with_categories`, `::test_no_element_cites_ignorable_units`, `::test_not_ignorable_runs_extraction_after_confirm` (fixture); `eval` reports the live score and the traps |
+| AC-13 | `test_extraction_ignorable.py::test_bodza_egypt_cicero_ignorable_with_categories`, `::test_no_element_cites_ignorable_units`, `::test_not_ignorable_runs_extraction_after_confirm` (fixture); `web/src/dialogs/NotIgnorableDialog.test.tsx::extraction_runs_after_the_cost_confirmation`; `eval` reports the live score and the traps |
 | AC-14 | `test_model_extensibility.py::test_new_optional_concept_slot_keeps_records_valid_and_releases_build` |
 | AC-15 | `web/src/review/ElementDetail.test.tsx::evidence_rendered_before_proposal` |
 | AC-16 | `test_governance_actions.py::test_action_records_decision[include,exclude,correct,level,merge,split,reassign]`; `web/src/review/Actions.test.tsx::each_action_calls_api` |
 | AC-17 | `test_governance_bulk.py::test_bulk_level3_on_20_records_20_decisions`, `::test_bulk_approve_admin_only`; `web/src/review/BulkBar.test.tsx` |
 | AC-18 | `test_api_elements.py::test_filter_rule_level1_building_rules`, `::test_search_lead_matches_label_definition_evidence`; `web/src/review/filter.test.ts` (same cases on the client filter) |
 | AC-19 | `web/src/review/StatusBadge.test.tsx::each_status_has_distinct_colour_class_and_label` |
-| AC-20 | `test_user_statements.py::test_statement_unit_fields`, `::test_edit_keeps_id_adds_revision_changes_hash` |
-| AC-21 | `test_authoring.py::test_concept_without_definition_from_statement_is_included`, `::test_authoring_without_evidence_refused` |
+| AC-20 | `test_user_statements.py::test_statement_unit_fields`, `::test_edit_keeps_id_adds_revision_changes_hash`; `web/src/dialogs/StatementDialog.test.tsx` |
+| AC-21 | `test_authoring.py::test_concept_without_definition_from_statement_is_included`, `::test_authoring_without_evidence_refused`; `web/src/dialogs/AuthorDialog.test.tsx::concept_without_definition_from_a_statement`, `::evidence_is_required` |
 | AC-22 | `test_governance_transitions.py::test_allowed_transitions`, `::test_forbidden_transition_refused` (parametrised over the table above) |
 | AC-23 | `test_release_governed.py::test_edit_after_approval_governed_keeps_old_definition` |
 | AC-24 | `test_governance_deprecate.py::test_deprecate_with_replacement`, `::test_no_operation_deletes_approved_excluded_rejected`; `test_release_rdf.py::test_deprecated_has_owl_deprecated_and_replacement` |
-| AC-25 | `test_vcs_commit.py::test_save_makes_one_commit_touching_only_dataset`, `::test_unrelated_changes_stay_uncommitted`, `::test_failing_hook_no_commit_returns_output`, `::test_never_pushes` (temp git repo with a remote and a failing hook); `web/e2e/save.spec.ts` |
+| AC-25 | `test_vcs_commit.py::test_save_makes_one_commit_touching_only_dataset`, `::test_unrelated_changes_stay_uncommitted`, `::test_failing_hook_no_commit_returns_output`, `::test_never_pushes` (temp git repo with a remote and a failing hook); `web/src/dialogs/SaveDialog.test.tsx`; `web/e2e/save.spec.ts` |
 | AC-26 | `test_release_levels.py::test_raw_excludes_excluded_rejected_ignorable_with_status`, `::test_levels_cumulative_by_id`, `::test_no_ignorable_or_deprecated_in_levels` |
-| AC-27 | `test_release_governed.py::test_publish_defaults_to_next_minor_with_changelog` |
+| AC-27 | `test_release_governed.py::test_publish_defaults_to_next_minor_with_changelog`; `web/src/dialogs/PublishDialog.test.tsx::default_version_is_the_next_minor` |
 | AC-28 | `test_release_layout.py::test_dataset_layout`, `::test_release_files_and_manifest_checksums` (validated against `manifest.schema.json`) |
 | AC-29 | `test_release_rdf.py::test_both_variants_parse_as_turtle`, `::test_sample_element_triples`, `::test_shacl_shapes_validate_fixture_data` (pySHACL) |
 | AC-30 | `test_release_markdown.py::test_each_level_has_taxonomy_and_relation_diagrams_and_catalogues`, `::test_evidence_links_resolve_to_unit_ids`, `::test_raw_marks_non_approved`; `test_mermaid_render.py` (marker `mermaid`, runs Mermaid CLI on every diagram) |
-| AC-31 | `test_release_governed.py::test_approved_rule_on_proposed_concept_blocks_publish` (offenders listed, governed folder unchanged, raw rebuilt) |
+| AC-31 | `test_release_governed.py::test_approved_rule_on_proposed_concept_blocks_publish` (offenders listed, governed folder unchanged, raw rebuilt); `web/src/dialogs/PublishDialog.test.tsx::offenders_are_listed` |
 | AC-32 | `test_release_determinism.py::test_two_builds_identical_except_built_at[raw,governed]` |
 | AC-33 | `test_evaluation.py::test_report_scores_each_answer_key_item` (fixture run), `::test_ingestion_never_opens_answer_key` (open/Path hooks during a fixture ingestion) and `::test_only_evaluation_mentions_answer_key_path` (source scan); live: `tools/env/with-env.sh ontology-builder -- uv run --package ontology-builder ontology-builder eval` |
 | NFR responsiveness | `test_api_perf.py::test_5000_elements_list_and_action_under_1s`; `web/src/review/filter.perf.test.ts` (filter 5,000 in < 100 ms) |

@@ -4,7 +4,8 @@ import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, test, vi } from "vitest";
 import type { ActionIn, ElementDetail, ElementsOut, IndexEntry, SessionOut } from "../api";
-import { ReviewScreen, type ReviewApi } from "./ReviewScreen";
+import { fakeWork } from "../dialogs/fixtures/units";
+import { ReviewScreen, type ScreenApi } from "./ReviewScreen";
 
 function entry(id: string, fields: Partial<IndexEntry>): IndexEntry {
   return {
@@ -83,9 +84,10 @@ function detailOf(id: string): ElementDetail {
   };
 }
 
-function fakeApi(): ReviewApi {
+function fakeApi(): ScreenApi {
   let pending = 0;
   return {
+    ...fakeWork(),
     elementIndex: vi.fn(() => Promise.resolve({ ...INDEX, pending })),
     element: vi.fn((_name: string, id: string) => Promise.resolve(detailOf(id))),
     act: vi.fn((_name: string, body: ActionIn) => {
@@ -98,7 +100,7 @@ function fakeApi(): ReviewApi {
   };
 }
 
-function setup(session: SessionOut = ALICE, api: ReviewApi = fakeApi()) {
+function setup(session: SessionOut = ALICE, api: ScreenApi = fakeApi()) {
   render(<ReviewScreen session={session} api={api} />);
   return { api, user: userEvent.setup() };
 }
@@ -260,5 +262,22 @@ describe("ReviewScreen detail pane", () => {
     const { user } = setup(ALICE, api);
     await user.click(await screen.findByRole("button", { name: "leash" }));
     expect(await screen.findByRole("alert")).toHaveTextContent("unknown element 'cn_leash'");
+  });
+
+  test("work_bar_change_reloads_the_index", async () => {
+    const { api, user } = setup();
+    await user.click(await screen.findByRole("button", { name: "New statement…" }));
+    await user.type(screen.getByLabelText("Statement"), "Cats nap a lot.");
+    await user.click(screen.getByRole("button", { name: "Add statement" }));
+    expect(await screen.findByRole("status")).toHaveTextContent("su_new");
+    expect(api.elementIndex).toHaveBeenCalledTimes(2);
+  });
+
+  test("no_shortcuts_while_a_dialog_is_open", async () => {
+    const { api, user } = setup();
+    await user.click(await screen.findByRole("button", { name: "New statement…" }));
+    screen.getByRole("button", { name: "Cancel" }).focus();
+    await user.keyboard("j");
+    expect(api.element).not.toHaveBeenCalled();
   });
 });

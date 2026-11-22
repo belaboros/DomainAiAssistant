@@ -15,6 +15,7 @@ from ontology_builder.api.schemas import (
     PublishIn,
     PublishOut,
     ReferenceOut,
+    RunOut,
 )
 from ontology_builder.workflows import Actor, OpenOntology
 
@@ -93,6 +94,6 @@ def ingest(body: IngestIn, ontology: Ontology, actor: Writer) -> IngestOut:
 
 
 @router.get("/runs/{run_id}")
-def run(run_id: str, ontology: Ontology, actor: Reader) -> dict[str, Any]:
+def run(run_id: str, ontology: Ontology, actor: Reader) -> RunOut:
     """The record of a run: model, tokens used, start and end (FR-6)."""
-    return ontology.run(run_id)
+    return RunOut.model_validate(ontology.run(run_id))
