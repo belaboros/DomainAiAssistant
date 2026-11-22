@@ -15,6 +15,7 @@ from ontology_builder.api.schemas import (
     CommitOut,
     CorpusOut,
     CreateOntology,
+    ElementDetailOut,
     ElementFilter,
     ElementsOut,
     IdOut,
@@ -74,9 +75,9 @@ def elements(
 
 
 @router.get(ONE + "/elements/{element_id}")
-def element(element_id: str, ontology: Ontology, actor: Reader) -> dict[str, Any]:
+def element(element_id: str, ontology: Ontology, actor: Reader) -> ElementDetailOut:
     """One element: its evidence passages first, then the record and its decisions (FR-16)."""
-    return ontology.detail(element_id)
+    return ElementDetailOut.model_validate(ontology.detail(element_id))
 
 
 @router.post(ONE + "/actions")

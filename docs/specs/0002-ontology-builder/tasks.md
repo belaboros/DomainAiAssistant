@@ -74,14 +74,14 @@ Tick a box only once its check passes.
   - multi-select with a bulk bar (include, exclude, set level; approve and reject for an admin only).
 
   — covers: AC-17, AC-18, AC-19 — check: `npm --prefix apps/ontology-builder/web test -- filter StatusBadge BulkBar` — note: the session response names the open ontology, and the index entries are typed in OpenAPI; the client filter test repeats the server's AC-18 cases on part of the pet fixture's index (`web/src/review/fixtures/pet-index.json`, with the server's answers; kept in step by `test_api_elements.py::test_gui_pet_index_fixture_matches`, because the whole index is over the 500 KB file limit); bulk actions act on the selected elements that are shown; also `filter.perf.test.ts` (NFR responsiveness)
-- [ ] T25 · [web] Element detail:
+- [x] T25 · [web] Element detail:
   - evidence passages first, then the LLM proposal (type, label, level, reason);
   - action buttons for every FR-17 action, with reason dialogs;
   - admin-only actions disabled for users, with a refusal message;
   - the decision history;
   - keyboard shortcuts (j/k, x, i, e, 1–3, a).
 
-  — covers: AC-15, AC-16 (GUI), AC-3 (GUI) — check: `npm --prefix apps/ontology-builder/web test -- ElementDetail Actions`
+  — covers: AC-15, AC-16 (GUI), AC-3 (GUI) — check: `npm --prefix apps/ontology-builder/web test -- ElementDetail Actions` — note: the detail response is typed in OpenAPI (`ElementDetailOut`, checked by `test_api_elements.py::test_element_detail_is_typed_in_openapi`); one dialog spec per action (`actionDialogs.ts`) sends the payload keys the governance handlers read; merge offers concepts only, split and reassign show for terms only; `a` as a user shows the refusal and calls nothing; the list label opens an element, and j/k step through the shown elements (`ReviewScreen.test.tsx`)
 - [ ] T26 · [web] Dialogs:
   - new and edit user statement;
   - author an element, with an evidence picker;

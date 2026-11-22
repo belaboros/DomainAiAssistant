@@ -19,6 +19,11 @@ export type ActionIn = Schemas["ActionIn"];
 export type ActionName = ActionIn["action"];
 export type ActionsOut = Schemas["ActionsOut"];
 export type ActionResult = Schemas["ActionResultOut"];
+export type ElementDetail = Schemas["ElementDetailOut"];
+export type Evidence = Schemas["EvidenceOut"];
+export type ElementRecord = Schemas["RecordOut"];
+export type Decision = Schemas["DecisionOut"];
+export type Mention = Schemas["MentionOut"];
 
 /** Every write needs this header (the server refuses a write without it). */
 export const WRITE_HEADER = { "X-Ontology-Builder": "1" } as const;
@@ -90,6 +95,15 @@ export async function signOut(): Promise<void> {
 export function elementIndex(ontology: string): Promise<ElementsOut> {
   return unwrap(
     api.GET("/api/ontologies/{name}/elements", { params: { path: { name: ontology } } }),
+  );
+}
+
+/** One element in full: evidence passages first, then the record and its decisions (FR-16). */
+export function elementDetail(ontology: string, id: string): Promise<ElementDetail> {
+  return unwrap(
+    api.GET("/api/ontologies/{name}/elements/{element_id}", {
+      params: { path: { name: ontology, element_id: id } },
+    }),
   );
 }
 

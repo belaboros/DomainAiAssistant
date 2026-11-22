@@ -351,6 +351,26 @@ export interface components {
         [key: string]: unknown;
       };
     };
+    /** DecisionOut */
+    DecisionOut: {
+      /** Action */
+      action: string;
+      /** At */
+      at: string;
+      /** Field */
+      field?: string | null;
+      /** Id */
+      id: string;
+      /** New */
+      new?: unknown;
+      /** Old */
+      old?: unknown;
+      /** Reason */
+      reason?: string | null;
+      role: components["schemas"]["Role"];
+      /** User */
+      user: string;
+    };
     /** DocumentOut */
     DocumentOut: {
       /** Id */
@@ -367,6 +387,26 @@ export interface components {
        * @default true
        */
       ok: boolean;
+    };
+    /**
+     * ElementDetailOut
+     * @description One element: its evidence passages first, then the record and its decisions (FR-16).
+     */
+    ElementDetailOut: {
+      /** Decisions */
+      decisions: components["schemas"]["DecisionOut"][];
+      /** Evidence */
+      evidence: components["schemas"]["EvidenceOut"][];
+      /** Id */
+      id: string;
+      /** Pending */
+      pending: boolean;
+      record: components["schemas"]["RecordOut"];
+      /**
+       * Type
+       * @enum {string}
+       */
+      type: "statement" | "term" | "concept" | "relation" | "rule" | "property";
     };
     /**
      * ElementStatus
@@ -397,6 +437,22 @@ export interface components {
       output_tokens: number;
       /** Units */
       units: number;
+    };
+    /**
+     * EvidenceOut
+     * @description One evidence passage of an element: the unit, its quote, and where the unit is.
+     */
+    EvidenceOut: {
+      /** Corpus */
+      corpus?: string | null;
+      /** Document */
+      document?: string | null;
+      /** Quote */
+      quote?: string | null;
+      /** Text */
+      text?: string | null;
+      /** Unit */
+      unit: string;
     };
     /** HTTPValidationError */
     HTTPValidationError: {
@@ -462,6 +518,24 @@ export interface components {
      * @enum {string}
      */
     Level: "level-1" | "level-2" | "level-3" | "ignorable";
+    /** MentionOut */
+    MentionOut: {
+      /** Concept */
+      concept: string;
+      /** Unit */
+      unit: string;
+    };
+    /** OriginOut */
+    OriginOut: {
+      /** Author */
+      author?: string | null;
+      /** Created At */
+      created_at: string;
+      /** Kind */
+      kind: string;
+      /** Run Id */
+      run_id?: string | null;
+    };
     /** PublishIn */
     PublishIn: {
       /** Version */
@@ -478,6 +552,29 @@ export interface components {
       version: string | null;
       /** Warnings */
       warnings: components["schemas"]["ReferenceOut"][];
+    };
+    /**
+     * RecordOut
+     * @description An element record: the fields every type has, typed; the type-specific ones pass through.
+     */
+    RecordOut: {
+      /** Definition */
+      definition?: string | null;
+      /** Label */
+      label: string;
+      level: components["schemas"]["Level"];
+      /** Level Reason */
+      level_reason: string;
+      /** Mentions */
+      mentions?: components["schemas"]["MentionOut"][] | null;
+      origin: components["schemas"]["OriginOut"];
+      /** Replaced By */
+      replaced_by?: string | null;
+      status: components["schemas"]["ElementStatus"];
+      /** Status Reason */
+      status_reason?: string | null;
+    } & {
+      [key: string]: unknown;
     };
     /** ReferenceOut */
     ReferenceOut: {
@@ -721,9 +818,7 @@ export interface operations {
           [name: string]: unknown;
         };
         content: {
-          "application/json": {
-            [key: string]: unknown;
-          };
+          "application/json": components["schemas"]["ElementDetailOut"];
         };
       };
       /** @description Validation Error */

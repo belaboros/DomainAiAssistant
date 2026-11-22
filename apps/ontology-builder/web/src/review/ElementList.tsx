@@ -1,5 +1,5 @@
 // The element list: one row per shown element, with its status and level badges and a check
-// box for multi-select (FR-18 to FR-20).
+// box for multi-select (FR-18 to FR-20). The label opens the element in the detail pane.
 import type { IndexEntry } from "../api";
 import { LevelBadge } from "./LevelBadge";
 import { StatusBadge } from "./StatusBadge";
@@ -7,16 +7,31 @@ import { StatusBadge } from "./StatusBadge";
 export interface ElementListProps {
   entries: readonly IndexEntry[];
   selected: ReadonlySet<string>;
+  /** The element open in the detail pane, if any. */
+  current: string | null;
+  onOpen: (id: string) => void;
   onToggle: (id: string) => void;
   /** Select (true) or unselect (false) every shown element. */
   onToggleAll: (on: boolean) => void;
 }
 
-function Row(props: { entry: IndexEntry; checked: boolean; onToggle: (id: string) => void }) {
-  const { entry, checked, onToggle } = props;
+interface RowProps {
+  entry: IndexEntry;
+  checked: boolean;
+  current: boolean;
+  onOpen: (id: string) => void;
+  onToggle: (id: string) => void;
+}
+
+function rowClass(checked: boolean, current: boolean): string | undefined {
+  const names = [checked ? "selected" : "", current ? "current" : ""].filter((n) => n !== "");
+  return names.length === 0 ? undefined : names.join(" ");
+}
+
+function Row({ entry, checked, current, onOpen, onToggle }: RowProps) {
   const name = entry.label === "" ? entry.id : entry.label;
   return (
-    <tr className={checked ? "selected" : undefined}>
+    <tr className={rowClass(checked, current)} aria-current={current ? "true" : undefined}>
       <td>
         <input
           type="checkbox"
@@ -28,7 +43,15 @@ function Row(props: { entry: IndexEntry; checked: boolean; onToggle: (id: string
         />
       </td>
       <td>
-        <div>{name}</div>
+        <button
+          type="button"
+          className="link"
+          onClick={() => {
+            onOpen(entry.id);
+          }}
+        >
+          {name}
+        </button>
         {entry.definition !== "" && <div className="definition">{entry.definition}</div>}
       </td>
       <td>{entry.type}</td>
@@ -42,7 +65,8 @@ function Row(props: { entry: IndexEntry; checked: boolean; onToggle: (id: string
   );
 }
 
-export function ElementList({ entries, selected, onToggle, onToggleAll }: ElementListProps) {
+export function ElementList(props: ElementListProps) {
+  const { entries, selected, current, onOpen, onToggle, onToggleAll } = props;
   const all = entries.length > 0 && entries.every((e) => selected.has(e.id));
   return (
     <div className="element-list-wrap">
@@ -72,6 +96,8 @@ export function ElementList({ entries, selected, onToggle, onToggleAll }: Elemen
               key={entry.id}
               entry={entry}
               checked={selected.has(entry.id)}
+              current={entry.id === current}
+              onOpen={onOpen}
               onToggle={onToggle}
             />
           ))}
