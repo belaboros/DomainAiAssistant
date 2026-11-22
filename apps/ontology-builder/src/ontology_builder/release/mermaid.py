@@ -1,7 +1,9 @@
 """Mermaid diagrams of one level: taxonomy and concept-relation (plan 0002, ``level-N.md``).
 
 A diagram with more than ``MAX_NODES`` nodes is split into one diagram per top-level concept (a
-concept with no parent in the level). Elements that are not approved get the dashed ``draft``
+concept with no parent in the level). In a taxonomy, the concepts without an is-a link in the
+diagram go into a "Not linked yet" box, ``BOX_COLUMNS`` per row, so they don't stretch the diagram
+into one long row (Q64). Elements that are not approved get the dashed ``draft``
 class (nodes) or a dotted arrow (relations); only the raw release has any.
 """
 
@@ -15,6 +17,8 @@ from markupsafe import Markup
 from ontology_builder.model import Concept, Relation
 
 MAX_NODES = 40
+BOX_COLUMNS = 5
+"""Concepts per row in the "Not linked yet" box of a taxonomy."""
 _INDENT = Markup("    ")
 _ESCAPES = (("&", "#amp;"), ('"', "#quot;"), ("<", "#lt;"), (">", "#gt;"))
 _CLASS_DEF = Markup("classDef draft stroke-dasharray: 5 5")
@@ -80,10 +84,16 @@ class _Level:
             seen.add(concept_id)
         return concept_id
 
-    def render(self, direction: str, nodes: Iterable[str], edges: list[Markup]) -> Markup:
+    def node(self, concept_id: str) -> Markup:
+        return _NODE.format(concept_id, mermaid_label(self.by_id[concept_id].label))
+
+    def render(
+        self, direction: str, nodes: Iterable[str], edges: list[Markup], boxed: Sequence[str] = ()
+    ) -> Markup:
         ordered = self.ordered(nodes)
-        body = [_CLASS_DEF, *(_NODE.format(i, mermaid_label(self.by_id[i].label)) for i in ordered)]
+        body = [_CLASS_DEF, *(self.node(i) for i in ordered if i not in boxed)]
         body += edges
+        body += _box_lines(self, boxed)
         drafts = [i for i in ordered if i in self.drafts]
         if drafts:
             body.append(Markup("class {} draft").format(",".join(drafts)))
@@ -91,18 +101,33 @@ class _Level:
         return head + Markup("").join(_INDENT + line + Markup("\n") for line in body)
 
 
+def _box_lines(level: _Level, boxed: Sequence[str]) -> list[Markup]:
+    """A left-to-right subgraph whose rows are chains of invisible links, ``BOX_COLUMNS`` long;
+    unlinked chains stack, so the box is a grid (Mermaid may order the rows its own way)."""
+    if not boxed:
+        return []
+    lines = [Markup('subgraph unlinked["Not linked yet"]'), Markup("direction LR")]
+    lines += [_INDENT + level.node(i) for i in boxed]
+    rows = [boxed[start : start + BOX_COLUMNS] for start in range(0, len(boxed), BOX_COLUMNS)]
+    lines += [_INDENT + Markup(" ~~~ ").join(row) for row in rows if len(row) > 1]
+    return [*lines, Markup("end")]
+
+
 def taxonomy_diagrams(concepts: Sequence[Concept], drafts: set[str]) -> list[Diagram]:
     """The is-a taxonomy (``flowchart TB``, parent above child), split when it is too large."""
     level = _Level(concepts, drafts)
 
     def diagram(title: str | None, nodes: set[str]) -> Diagram:
-        edges = [
-            Markup("{} --> {}").format(parent, child)
+        links = [
+            (parent, child)
             for child in level.ordered(nodes)
             for parent in level.parents[child]
             if parent in nodes
         ]
-        return Diagram(title, level.render("TB", nodes, edges))
+        linked = {end for link in links for end in link}
+        boxed = level.ordered(nodes - linked)
+        edges = [Markup("{} --> {}").format(parent, child) for parent, child in links]
+        return Diagram(title, level.render("TB", nodes, edges, boxed))
 
     if len(level.by_id) <= MAX_NODES:
         return [diagram(None, set(level.by_id))]

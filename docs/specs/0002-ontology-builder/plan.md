@@ -124,7 +124,7 @@ Nothing deletes a record. Merging an approved concept deprecates it with `replac
 
 ### `level-N.md` (FR-33, FR-34)
 
-- **Sections:** title and version, a taxonomy diagram (`flowchart TB`, is-a), a concept-relation diagram (`flowchart LR`), catalogues of concepts (labels, synonyms, definition), relations and rules (structure and limits), and an **Evidence** appendix with one anchor per cited unit (`<a id="su_…">`) holding the unit's text and location.
+- **Sections:** title and version, a taxonomy diagram (`flowchart TB`, is-a; concepts without an is-a link in the diagram sit in a "Not linked yet" box of rows of 5, Q64), a concept-relation diagram (`flowchart LR`), catalogues of concepts (labels, synonyms, definition), relations and rules (structure and limits), and an **Evidence** appendix with one anchor per cited unit (`<a id="su_…">`) holding the unit's text and location.
 - **Links.** Catalogue entries link to `#su_…`, so every link resolves inside the file.
 - **Large diagrams.** A diagram with more than 40 nodes is split into one diagram per top-level concept (a concept with no parent in the level).
 - **Raw release.** Non-approved elements carry a text badge (`● proposed`, `◐ waiting for approval`) and a dashed Mermaid class.

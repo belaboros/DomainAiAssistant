@@ -158,3 +158,35 @@ def test_large_relation_diagram_split_by_top_level_concept(review_kit: Any) -> N
     assert all(len(set(_NODE.findall(d))) == 22 for d in split)
     assert "### Relations under animal" in level
     assert "### Relations under building" in level
+
+
+def _rows(taxonomy: str) -> list[list[str]]:
+    """The rows of the "Not linked yet" box: its chains of invisible ``a ~~~ b`` links."""
+    box = taxonomy.split('subgraph unlinked["Not linked yet"]', 1)[1].split("    end", 1)[0]
+    assert "direction LR" in box
+    chains = [line for line in box.splitlines() if "~~~" in line]
+    return [re.findall(r"cn_[0-9A-Z]+", line) for line in chains]
+
+
+def test_unlinked_concepts_are_wrapped_in_rows(review_kit: Any) -> None:
+    """Q64: concepts without an is-a link in the level go into a box of rows, not one long row."""
+    pet = review_kit.element("concept", label="pet")
+    dog = review_kit.element("concept", label="dog", parents=[pet["id"]])
+    loners = [review_kit.element("concept", label=f"loner {n:02}") for n in range(20)]
+    review_kit.seed([pet, dog, *loners])
+    level = build_level_files(kit_release(review_kit))["level-1.md"]
+    [taxonomy] = diagrams(level, "TB")
+    assert f"{pet['id']} --> {dog['id']}" in taxonomy
+    rows = _rows(taxonomy)
+    assert [len(row) for row in rows] == [5, 5, 5, 5]
+    assert [node for row in rows for node in row] == [loner["id"] for loner in loners]
+    box = taxonomy.split("subgraph", 1)[1].split("    end", 1)[0]
+    assert pet["id"] not in box and dog["id"] not in box, "linked concepts stay outside the box"
+
+
+def test_linked_only_taxonomy_has_no_box(review_kit: Any) -> None:
+    root = review_kit.element("concept", label="animal")
+    child = review_kit.element("concept", label="dog", parents=[root["id"]])
+    review_kit.seed([root, child])
+    [taxonomy] = diagrams(build_level_files(kit_release(review_kit))["level-1.md"], "TB")
+    assert "subgraph" not in taxonomy and "~~~" not in taxonomy

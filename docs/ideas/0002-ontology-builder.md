@@ -506,3 +506,10 @@ Append one entry per question, oldest first. Never delete entries.
 **Options offered:** Run all three (Recommended): dog, cat, building rules in the earlier order, one commit per run / Not now
 **A:** "Run all three (Recommended)"
 **Effect:** The three manuals are re-ingested live, one run and one commit each.
+
+### 2026-11-22 · implement · Q64
+**Asked by:** Claude
+**Q:** [Claude] The user still saw no taxonomy diagram in `level-1.md`. The diagram does exist and renders, but 20 of its 22 concepts have no is-a link within level 1; Mermaid lays them out side by side, so the diagram is one row 22 boxes wide and shrinks to an unreadable strip. How should the taxonomy diagram be built?
+**Options offered:** Linked concepts only (Recommended): diagram of linked concepts, the rest listed below it / Linked + other levels: also draw level-2/3 children, faded / Keep all, wrap rows: unlinked concepts in a box laid out in several rows
+**A:** "Keep all, wrap rows"
+**Effect:** Task T38: the taxonomy diagram puts concepts without an is-a link in the level into a "not linked yet" box, laid out in rows.

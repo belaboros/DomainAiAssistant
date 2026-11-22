@@ -9,8 +9,8 @@
 
 <urn:domain-ai-assistant:ontology:pets-and-house-rules> a owl:Ontology ;
     dcterms:description "Explain what it takes to own a dog or a cat in a residential complex, and which house rules apply to pets and their owners." ;
-    owl:versionIRI <urn:domain-ai-assistant:ontology:pets-and-house-rules:version-raw+abddea0> ;
-    owl:versionInfo "raw+abddea0" .
+    owl:versionIRI <urn:domain-ai-assistant:ontology:pets-and-house-rules:version-raw+2eff3b2> ;
+    owl:versionInfo "raw+2eff3b2" .
 
 :cn_01M82GKFJ96730WAHGQQD3M95C a owl:Class,
         skos:Concept ;
