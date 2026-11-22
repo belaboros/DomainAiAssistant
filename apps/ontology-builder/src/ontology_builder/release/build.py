@@ -16,7 +16,7 @@ from datetime import UTC, datetime
 from ontology_builder.model import ELEMENT_TYPES, Element, ScopeRecord, SourceUnit
 from ontology_builder.release.labels import LEVELS
 from ontology_builder.release.markdown import build_level_files
-from ontology_builder.release.rdf import ReleaseInput, build_turtle
+from ontology_builder.release.rdf import ReleaseInput, build_jsonld, build_turtle
 from ontology_builder.store import DatasetFiles
 
 RAW_STATUSES = ("approved", "deprecated", "included", "proposed")
@@ -99,8 +99,13 @@ def _manifest(release: Release, name: str, info: BuildInfo) -> str:
 def assemble(
     release_input: ReleaseInput, info: BuildInfo, extra: Mapping[str, str] | None = None
 ) -> Release:
-    """``ontology.ttl``, ``level-N.md``, any ``extra`` files, and the manifest of all of them."""
-    content = {"ontology.ttl": build_turtle(release_input), **build_level_files(release_input)}
+    """``ontology.ttl`` and its JSON-LD twin, ``level-N.md``, any ``extra`` files, and the
+    manifest of all of them."""
+    content = {
+        "ontology.ttl": build_turtle(release_input),
+        "ontology.jsonld": build_jsonld(release_input),
+        **build_level_files(release_input),
+    }
     content.update(extra or {})
     release = Release(
         release_input.variant, release_input.version, tuple(release_input.elements), content

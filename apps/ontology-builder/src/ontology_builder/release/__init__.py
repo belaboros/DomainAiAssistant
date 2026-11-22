@@ -3,7 +3,8 @@
 Builds the raw and governed release files from the records.
 
 ``build_turtle`` maps the elements of one release to ``ontology.ttl`` (OWL 2 + SKOS + SHACL and
-the ``dai:`` vocabulary of the shared contract ``libs/contracts/ontology/``);
+the ``dai:`` vocabulary of the shared contract ``libs/contracts/ontology/``), and
+``build_jsonld`` writes the same graph as ``ontology.jsonld`` (FR-37);
 ``build_level_files`` writes ``level-1.md`` to ``level-3.md`` (Jinja2 templates with Mermaid).
 ``save_raw`` rebuilds the raw release on every save; ``publish`` also builds the governed one,
 unless the FR-35 check finds offenders. Both write through a ``DatasetFiles`` of a transaction.
@@ -42,6 +43,7 @@ from ontology_builder.release.rdf import (
     VARIANTS,
     ReleaseInput,
     build_graph,
+    build_jsonld,
     build_turtle,
     ontology_iri,
 )
@@ -64,6 +66,7 @@ __all__ = [
     "ReleaseVersionError",
     "build_governed",
     "build_graph",
+    "build_jsonld",
     "build_level_files",
     "build_raw",
     "build_turtle",

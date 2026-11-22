@@ -5,7 +5,7 @@
 | **Applies to** | every dataset `ontology-<name>` (`data/ontology-<name>/`); each has a thin contract `libs/contracts/ontology-<name>/README.md` that pins a version of this one |
 | **Owner (only writer)** | `ontology-builder` |
 | **Readers** | see each dataset in the system map of the [root architecture](../../../docs/architecture/architecture.md) |
-| **Contract version** | 0.1.0 (see [CHANGELOG.md](CHANGELOG.md)) |
+| **Contract version** | 0.2.0 (see [CHANGELOG.md](CHANGELOG.md)) |
 | **Decision** | [ADR-0019](../../../docs/architecture/adr/0019-ontology-builder-app-and-shared-ontology-contract.md) |
 
 This is a **contract family**, not a dataset: it is not registered in `components.json`. It describes what readers of any ontology dataset may rely on (ADR-0013). Anything not written here, in particular `01_model/` and `02_decisions/`, is internal to `ontology-builder` and may change without notice.
@@ -24,11 +24,11 @@ data/ontology-<name>/
 ├── 02_decisions/                        internal
 └── 03_release/                          CONTRACT: the releases
     ├── 00_raw/                          rebuilt on every save
-    │   ├── ontology.ttl
+    │   ├── ontology.ttl  ontology.jsonld
     │   ├── level-1.md  level-2.md  level-3.md
     │   └── manifest.json
     └── 01_governed/                     rebuilt only when a domain admin publishes
-        ├── ontology.ttl
+        ├── ontology.ttl  ontology.jsonld
         ├── level-1.md  level-2.md  level-3.md
         ├── CHANGELOG.md
         └── manifest.json
@@ -58,6 +58,7 @@ A **source unit** is one Markdown block: a paragraph, a list item, a blockquote 
 Both variants hold the same files:
 
 - **`ontology.ttl`**: RDF 1.1 Turtle with OWL 2, SKOS and SHACL, and the `dai:` vocabulary of [vocab.ttl](vocab.ttl). See [The RDF graph](#the-rdf-graph).
+- **`ontology.jsonld`** (since 0.2.0): the same graph as `ontology.ttl`, as compacted JSON-LD 1.1. Its `@context` maps the prefixes of the Turtle (`dai`, `dcterms`, `owl`, `rdf`, `rdfs`, `sh`, `skos`, `xsd`), plus `ont` for the base IRI (the Turtle's empty prefix). Every node is in `@graph`, one node per line, sorted by `@id`; blank nodes have labels derived from the element ID (`_:<element-id>-<part>`). Readers should parse it as JSON-LD, not rely on the line layout.
 - **`level-1.md`, `level-2.md`, `level-3.md`**: human-readable views. See [The level files](#the-level-files).
 - **`manifest.json`**: per [manifest.schema.json](manifest.schema.json): `ontology`, `variant`, `version` (governed: semantic version; raw: `raw+<short git sha>`), `built_at`, `source_commit`, `counts` {`by_type`, `by_status`, `by_level`}, and `files`, the `sha256:` checksum of every other file in the folder.
 - **`CHANGELOG.md`** (governed only): for each published version, newest first, the elements added, changed, deprecated and removed against the previous governed version, by ID and label.

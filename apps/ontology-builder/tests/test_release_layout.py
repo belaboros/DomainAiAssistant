@@ -41,7 +41,14 @@ def test_dataset_layout(tmp_path: Path, scope_record: dict[str, Any]) -> None:
     assert empty_leaves == [], "every empty folder keeps a .gitkeep so git keeps the layout"
 
 
-RELEASE_FILES = ["level-1.md", "level-2.md", "level-3.md", "manifest.json", "ontology.ttl"]
+RELEASE_FILES = [
+    "level-1.md",
+    "level-2.md",
+    "level-3.md",
+    "manifest.json",
+    "ontology.jsonld",
+    "ontology.ttl",
+]
 MANIFEST_SCHEMA = Path(__file__).parents[3] / "libs/contracts/ontology/manifest.schema.json"
 
 

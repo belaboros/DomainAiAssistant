@@ -9,7 +9,7 @@ from typing import Any
 import pytest
 from jsonschema import Draft202012Validator
 from jsonschema.exceptions import ValidationError
-from rdflib import Graph, Namespace
+from rdflib import Graph, Namespace, URIRef
 from rdflib.namespace import OWL, RDF
 
 REPO = Path(__file__).resolve().parents[3]
@@ -82,7 +82,10 @@ def test_corpus_unit_needs_document_and_location() -> None:
 
 
 def _manifest(variant: str, version: str) -> dict[str, Any]:
-    files = {name: HASH for name in ["ontology.ttl", "level-1.md", "level-2.md", "level-3.md"]}
+    files = {
+        name: HASH
+        for name in ["ontology.ttl", "ontology.jsonld", "level-1.md", "level-2.md", "level-3.md"]
+    }
     return {
         "ontology": "pets-and-house-rules",
         "variant": variant,
@@ -114,5 +117,6 @@ def test_vocab_parses_and_declares_the_terms_the_contract_uses() -> None:
         assert (DAI[value], RDF.type, DAI.Level) in graph
     for status in ["proposed", "included", "approved", "deprecated"]:
         assert (DAI[status], RDF.type, DAI.Status) in graph
+    version = str(graph.value(URIRef("urn:domain-ai-assistant:vocab"), OWL.versionInfo))
     readme = (CONTRACT / "README.md").read_text(encoding="utf-8")
-    assert "0.1.0" in readme
+    assert f"| **Contract version** | {version} " in readme
