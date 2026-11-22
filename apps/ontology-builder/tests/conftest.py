@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import copy
+import os
 import re
 import shutil
 import subprocess
@@ -59,6 +60,18 @@ CONCEPT2 = f"cn_{ULID2}"
 RELATION = f"rl_{ULID}"
 AT = "2026-11-21T10:00:00Z"
 HASH = "sha256:" + "a" * 64
+
+
+@pytest.fixture(autouse=True)
+def _no_inherited_git_environment(monkeypatch: pytest.MonkeyPatch) -> None:
+    """Drop the ``GIT_*`` variables of a git hook that runs the tests.
+
+    ``git commit -- <path>`` runs the hooks with ``GIT_INDEX_FILE`` set to a temporary index of the
+    real repository; git in a temporary test repository would write into it.
+    """
+    for key in [key for key in os.environ if key.startswith("GIT_")]:
+        monkeypatch.delenv(key)
+
 
 _COMMON: dict[str, Any] = {
     "label": "leash",
