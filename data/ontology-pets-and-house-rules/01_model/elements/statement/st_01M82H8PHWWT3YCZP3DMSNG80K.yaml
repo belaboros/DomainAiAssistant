@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX5
+id: st_01M82H8PHWWT3YCZP3DMSNG80K
+label: Bicycle parking
+level: ignorable
+level_reason: A rule about bicycles, not about pets or their owners.
+origin:
+  created_at: '2026-11-22T21:05:49.628330Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed
+text: Bicycles must be parked in the bicycle racks only.

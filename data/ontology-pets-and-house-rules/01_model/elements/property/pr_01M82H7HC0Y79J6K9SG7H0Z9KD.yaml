@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX1
+id: pr_01M82H7HC0Y79J6K9SG7H0Z9KD
+label: Scope of the house rules
+level: level-1
+level_reason: States where the rules apply, basic to understanding the domain.
+name: applies to
+of: cn_01M82H7HBZP5REB8E6N9M29JTQ
+origin:
+  created_at: '2026-11-22T21:05:11.553622Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed
+value: buildings A, B and C around the shared inner yard

@@ -1,0 +1,22 @@
+action: leave water for the dog
+actor: owner
+condition: before leaving the dog alone
+evidence:
+- unit: su_01M82GHYMR2WSZZZXCEPR86V3R
+id: ru_01M82GSR25X2Z0HPSPM2814WPR
+label: Leave water before leaving
+level: level-2
+level_reason: Normal-day preparation for leaving the dog alone.
+modality: must
+origin:
+  created_at: '2026-11-22T20:57:39.653984Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+refers_to:
+- cn_01M82GR8C6YNAW05QP8GX3MF7P
+- cn_01M82GSR24145KC6KF8V0HWF9J
+- rl_01M82GSR24145KC6KF8V0HWF9P
+- cn_01M82GSR24145KC6KF8V0HWF9G
+scope:
+- co_01M82GHYMN49VHXB6YMXXC893Z
+status: proposed

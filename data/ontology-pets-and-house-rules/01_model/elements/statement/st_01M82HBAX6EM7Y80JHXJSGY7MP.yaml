@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMR
+id: st_01M82HBAX6EM7Y80JHXJSGY7MP
+label: Waste sorted in bin room of building B
+level: level-2
+level_reason: Everyday knowledge of the shared spaces for residents.
+origin:
+  created_at: '2026-11-22T21:07:16.007470Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed
+text: Waste is sorted in the bin room of building B into paper, plastic, glass, organic waste and residual waste.

@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5FD
+id: rl_01M82H394WWKSMY0HG5WFCNGAK
+label: prevents
+level: level-2
+level_reason: Purpose of daily brushing.
+object: cn_01M82H394WWKSMY0HG5WFCNGAE
+origin:
+  created_at: '2026-11-22T21:02:52.061701Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+predicate_label: prevents
+status: proposed
+subject: cn_01M82GN67QTV2KDH6NRHKR2RZZ

@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCV
+- unit: su_01M82GXF5CK27HSSNSY54SX5FD
+id: cn_01M82GN67QTV2KDH6NRHKR2RZZ
+label: brushing
+level: level-2
+level_reason: Grooming activity.
+origin:
+  created_at: '2026-11-22T20:55:10.328059Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+parents:
+- cn_01M82GKFJ96730WAHGQQD3M95H
+status: proposed

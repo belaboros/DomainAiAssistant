@@ -1,0 +1,17 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCS
+- unit: su_01M82GHYMR2WSZZZXCEPR86V3T
+id: tm_01M82GMKV1KS5PBE1QB2P99CP4
+label: rabies vaccination
+level: level-2
+level_reason: Mandatory routine care.
+mentions:
+- concept: cn_01M82GMKV1KS5PBE1QB2P99CPB
+  unit: su_01M82GHYMP28WWGVJCAF7BMQCS
+- concept: cn_01M82GMKV1KS5PBE1QB2P99CPB
+  unit: su_01M82GHYMR2WSZZZXCEPR86V3T
+origin:
+  created_at: '2026-11-22T20:54:51.490206Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed

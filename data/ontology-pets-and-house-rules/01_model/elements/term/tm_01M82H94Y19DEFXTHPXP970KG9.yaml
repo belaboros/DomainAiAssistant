@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX7
+id: tm_01M82H94Y19DEFXTHPXP970KG9
+label: pet owner
+level: level-1
+level_reason: Core actor of the domain.
+mentions:
+- concept: cn_01M82H94Y19DEFXTHPXP970KGF
+  unit: su_01M82H6T2SJCWQ88GWH3NA9WX7
+origin:
+  created_at: '2026-11-22T21:06:04.353874Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed

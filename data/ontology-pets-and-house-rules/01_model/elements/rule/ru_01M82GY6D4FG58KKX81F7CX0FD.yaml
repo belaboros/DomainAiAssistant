@@ -1,0 +1,19 @@
+action: give the cat daily attention, play and a clean environment
+actor: cat owner
+evidence:
+- unit: su_01M82GXF5BZJDB4QGXVFMJEB2X
+id: ru_01M82GY6D4FG58KKX81F7CX0FD
+label: Cat needs daily attention, play and clean environment
+level: level-2
+level_reason: Everyday care needs of a cat owner.
+modality: must
+origin:
+  created_at: '2026-11-22T21:00:05.413136Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+refers_to:
+- cn_01M82GY6D4FG58KKX81F7CX0F1
+- cn_01M82GY6D4FG58KKX81F7CX0F2
+scope:
+- co_01M82GXF5A3M9Z44ZD3X2YY7HZ
+status: proposed

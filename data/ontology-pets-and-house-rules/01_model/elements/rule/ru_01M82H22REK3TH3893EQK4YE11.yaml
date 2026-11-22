@@ -1,0 +1,25 @@
+action: leave its mother
+actor: kitten
+condition: before 12 weeks of age
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5F9
+id: ru_01M82H22REK3TH3893EQK4YE11
+label: Kitten stays with mother until 12 weeks
+level: level-3
+level_reason: Kittens are a special case.
+limit:
+  comparator: lt
+  unit: weeks
+  value: 12.0
+modality: must_not
+origin:
+  created_at: '2026-11-22T21:02:12.751456Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+refers_to:
+- cn_01M82H22REK3TH3893EQK4YE0S
+- cn_01M82H22REK3TH3893EQK4YE0V
+- rl_01M82H22REK3TH3893EQK4YE0Y
+scope:
+- co_01M82GXF5A3M9Z44ZD3X2YY7HZ
+status: proposed

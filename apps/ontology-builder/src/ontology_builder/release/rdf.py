@@ -9,9 +9,11 @@ on every build (FR-36).
 
 from __future__ import annotations
 
+import json
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
 from decimal import Decimal
+from typing import Any
 
 from rdflib import RDF, RDFS, XSD, BNode, Graph, Literal, Namespace, URIRef
 from rdflib.namespace import DCTERMS, OWL, SH, SKOS
@@ -34,6 +36,8 @@ DAI = Namespace("urn:domain-ai-assistant:vocab#")
 """The ``dai:`` vocabulary of the shared contract (``libs/contracts/ontology/vocab.ttl``)."""
 
 VARIANTS = ("raw", "governed")
+JSONLD_BASE_PREFIX = "ont"
+"""The JSON-LD prefix of the ontology's base IRI (Turtle uses the empty prefix, JSON-LD cannot)."""
 _COMPARATORS = {"lt": "<", "le": "<=", "eq": "=", "ge": ">=", "gt": ">"}
 _PREFIXES = {
     "dai": DAI,
@@ -255,3 +259,43 @@ def build_turtle(release: ReleaseInput) -> str:
     """``ontology.ttl`` of one release: RDF 1.1 Turtle, the same bytes for the same input."""
     text = build_graph(release).serialize(format="turtle")
     return text if text.endswith("\n") else text + "\n"
+
+
+def _sorted_values(node: dict[str, Any]) -> dict[str, Any]:
+    """``node`` with every multi-valued property in a stable order (an RDF value set has none)."""
+    return {
+        key: sorted(value, key=lambda item: json.dumps(item, sort_keys=True))
+        if isinstance(value, list) and key != "@list"
+        else value
+        for key, value in node.items()
+    }
+
+
+def build_jsonld(release: ReleaseInput) -> str:
+    """``ontology.jsonld`` of one release: the graph of ``ontology.ttl`` as JSON-LD 1.1 (FR-37).
+
+    Compacted with the prefixes of the Turtle as its context, and the base IRI as ``ont:``. Nodes
+    are sorted by ``@id``, values and keys too, so the same input gives the same bytes (FR-36).
+    Each node is one line: the file stays near the size of the Turtle and diffs node by node.
+    """
+    context: dict[str, Any] = {p: str(n) for p, n in _PREFIXES.items()}
+    context[JSONLD_BASE_PREFIX] = {"@id": release.scope.base_iri, "@prefix": True}
+    text = build_graph(release).serialize(format="json-ld", context=context, auto_compact=True)
+    compacted = json.loads(text)
+    context = compacted.pop("@context")
+    nodes = compacted.pop("@graph", [compacted] if compacted else [])
+    ordered = sorted((_sorted_values(node) for node in nodes), key=lambda n: str(n["@id"]))
+    return _one_node_per_line(_context_member(context), ordered)
+
+
+def _context_member(context: Mapping[str, Any]) -> str:
+    """The ``@context`` member, indented, keys sorted."""
+    body = json.dumps(context, indent=2, sort_keys=True, ensure_ascii=False)
+    return body.replace("\n", "\n  ")
+
+
+def _one_node_per_line(context: str, nodes: Sequence[Mapping[str, Any]]) -> str:
+    """The document with one ``@graph`` node per line, so a git diff shows the changed nodes."""
+    lines = [json.dumps(node, sort_keys=True, ensure_ascii=False) for node in nodes]
+    graph = ",\n    ".join(lines)
+    return f'{{\n  "@context": {context},\n  "@graph": [\n    {graph}\n  ]\n}}\n'

@@ -1,0 +1,13 @@
+definition: The period from 22:00 to 07:00 on weekdays and from 22:00 to 09:00 on weekends and public holidays.
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX3
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX5
+id: cn_01M82H83Q82K5CKBRM346N8335
+label: quiet hours
+level: level-2
+level_reason: Daily house rule period affecting owners and pets.
+origin:
+  created_at: '2026-11-22T21:05:30.345000Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed

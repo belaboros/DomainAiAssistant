@@ -201,6 +201,7 @@ class RunFolder:
             skipped=_skipped(data["skipped"]),
             input_tokens=data["input_tokens"],
             output_tokens=data["output_tokens"],
+            extended=_elements(data.get("extended", [])),
         )
 
     def save_pass2(self, result: TermResolution) -> None:
@@ -212,5 +213,6 @@ class RunFolder:
                 "skipped": [_dump(item) for item in result.skipped],
                 "input_tokens": result.input_tokens,
                 "output_tokens": result.output_tokens,
+                "extended": _elements_data(result.extended),
             },
         )

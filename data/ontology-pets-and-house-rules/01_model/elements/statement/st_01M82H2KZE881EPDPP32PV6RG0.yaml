@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5FB
+id: st_01M82H2KZE881EPDPP32PV6RG0
+label: No physical punishment of cats
+level: level-2
+level_reason: Normal-day behaviour rule for owners.
+origin:
+  created_at: '2026-11-22T21:02:30.382911Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed
+text: A cat must never be punished physically.

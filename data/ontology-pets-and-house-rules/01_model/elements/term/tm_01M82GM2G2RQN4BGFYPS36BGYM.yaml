@@ -1,0 +1,17 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCQ
+- unit: su_01M82GXF5CK27HSSNSY54SX5F3
+id: tm_01M82GM2G2RQN4BGFYPS36BGYM
+label: chocolate
+level: level-2
+level_reason: Poisonous food.
+mentions:
+- concept: cn_01M82GM2G3AM0SX444VHV3202M
+  unit: su_01M82GHYMP28WWGVJCAF7BMQCQ
+- concept: cn_01M82GM2G3AM0SX444VHV3202M
+  unit: su_01M82GXF5CK27HSSNSY54SX5F3
+origin:
+  created_at: '2026-11-22T20:54:33.731549Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed

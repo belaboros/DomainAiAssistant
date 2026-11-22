@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDP5
+id: st_01M82GQHZCWYDZ4FY134N19HQV
+label: Puppy toilet trips
+level: level-3
+level_reason: Puppies are a special case.
+origin:
+  created_at: '2026-11-22T20:56:27.885173Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+text: A puppy must be taken outside to relieve itself every 2 to 3 hours.

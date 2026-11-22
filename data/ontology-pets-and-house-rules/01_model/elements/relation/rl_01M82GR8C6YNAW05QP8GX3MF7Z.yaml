@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDP7
+id: rl_01M82GR8C6YNAW05QP8GX3MF7Z
+label: looks to for direction
+level: level-2
+level_reason: Everyday handling knowledge.
+object: cn_01M82GR8C6YNAW05QP8GX3MF7P
+origin:
+  created_at: '2026-11-22T20:56:50.823149Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+predicate_label: looks to for direction
+status: proposed
+subject: cn_01M82GJP3CRKNX3DNJZDNANDWM

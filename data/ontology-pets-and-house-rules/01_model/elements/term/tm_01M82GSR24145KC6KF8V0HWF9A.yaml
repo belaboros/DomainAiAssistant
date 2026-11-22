@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GHYMR2WSZZZXCEPR86V3R
+id: tm_01M82GSR24145KC6KF8V0HWF9A
+label: chew toy
+level: level-2
+level_reason: Item for leaving the dog alone.
+mentions:
+- concept: cn_01M82GSR24145KC6KF8V0HWF9K
+  unit: su_01M82GHYMR2WSZZZXCEPR86V3R
+origin:
+  created_at: '2026-11-22T20:57:39.653452Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed

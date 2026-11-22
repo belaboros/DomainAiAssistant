@@ -4,17 +4,22 @@
 2. Synonym groups merge new concepts into the group's concept: the evidence and parents of a
    merged concept go to the one kept, the merged record is left out, and every reference to it
    (parents, mentions, relations, rules, properties) points to the kept concept. A concept already
-   in the ontology is never merged away and never changed; new concepts may merge into it.
+   in the ontology is never merged away; a new concept merged into it **extends** it with its
+   evidence and parents, and nothing else of it changes (ADR-0012).
 3. A group's preferred label becomes the kept concept's label; the mentions of its terms point to
    the kept concept.
 4. A sense split points the term's mention in each listed unit to that sense's concept, and the
    sense's scope note goes on the concept.
+5. A new term with the label of a term already in the ontology extends that term with its
+   mentions and evidence, and is left out (one term record per label, across runs too).
 An item that cites an unknown alias is reported and left out. Every record is validated again.
+The extended existing elements are returned apart from the run's own; their status is the
+caller's business.
 """
 
 from __future__ import annotations
 
-from collections.abc import Callable, Iterable, Mapping, Sequence
+from collections.abc import Callable, Iterable, Sequence
 from dataclasses import dataclass, field
 from typing import Any
 
@@ -48,6 +53,8 @@ class _Workspace:
     types: dict[str, str]
     new_concepts: set[str]
     existing: set[str]
+    existing_records: dict[str, Record] = field(default_factory=dict)
+    """Concepts and terms already in the ontology, as plain data, by ID."""
     into: dict[str, str] = field(default_factory=dict)
     skipped: list[SkippedItem] = field(default_factory=list)
 
@@ -132,12 +139,20 @@ def _fold(kept: Record, merged: Record) -> None:
         kept["definition"] = merged["definition"]
 
 
+def _extend(kept: Record, merged: Record) -> None:
+    """Add the evidence and parents of ``merged`` to a concept already in the ontology."""
+    kept["evidence"] = _unique(kept["evidence"] + merged["evidence"])
+    kept["parents"] = _unique(kept.get("parents", []) + merged.get("parents", []))
+
+
 def _fold_merged(space: _Workspace) -> None:
     for source in space.into:
         merged = space.records.pop(source)
-        kept = space.records.get(space.find(source))
-        if kept is not None:
-            _fold(kept, merged)
+        target = space.find(source)
+        if target in space.records:
+            _fold(space.records[target], merged)
+        elif target in space.existing_records:
+            _extend(space.existing_records[target], merged)
 
 
 def _concept_ref(space: _Workspace) -> Callable[[str], str]:
@@ -210,6 +225,27 @@ def _each(
     return applied
 
 
+# ---------- 5. terms already in the ontology ----------
+
+
+def _fold_into_existing_terms(space: _Workspace) -> None:
+    existing = {
+        label_key(record["label"]): record
+        for record in space.existing_records.values()
+        if record["id"].startswith("tm_")
+    }
+    for element_id, name in list(space.types.items()):
+        record = space.records.get(element_id)
+        if name != "term" or record is None:
+            continue
+        kept = existing.get(label_key(record["label"]))
+        if kept is None:
+            continue
+        kept["evidence"] = _unique(kept["evidence"] + record["evidence"])
+        kept["mentions"] = _unique(kept.get("mentions", []) + record.get("mentions", []))
+        del space.records[element_id]
+
+
 # ---------- the whole answer ----------
 
 
@@ -218,40 +254,66 @@ class Applied:
     elements: list[Element]
     merged: dict[str, str]
     skipped: list[SkippedItem]
+    extended: list[Element] = field(default_factory=list)
+    """Elements already in the ontology that the run added to (ADR-0012)."""
 
 
-def _workspace(prompt: TermPrompt, elements: Sequence[Element], existing: set[str]) -> _Workspace:
-    records = {e.id: e.model_dump(mode="json", exclude_none=True) for e in elements}
+def _dump(element: Element) -> Record:
+    return element.model_dump(mode="json", exclude_none=True)
+
+
+def _workspace(
+    prompt: TermPrompt, elements: Sequence[Element], existing: Sequence[Element]
+) -> _Workspace:
+    records = {e.id: _dump(e) for e in elements}
     types = {e.id: _TYPE_NAME[type(e)] for e in elements}
     new = {element_id for element_id, name in types.items() if name == "concept"}
-    return _Workspace(prompt, records, types, new, existing)
+    ids = {e.id for e in existing if _TYPE_NAME[type(e)] == "concept"}
+    space = _Workspace(prompt, records, types, new, ids)
+    space.existing_records = {e.id: _dump(e) for e in existing}
+    return space
+
+
+def _validated(record: Record, kind: str, ref: Callable[[str], str]) -> Element:
+    _rewire(record, kind, ref)
+    if kind == "term":
+        record["mentions"] = _unique(record.get("mentions", []))
+    clean = {name: value for name, value in record.items() if value not in (None, [])}
+    return validate_element(kind, clean)
 
 
 def _finish(space: _Workspace) -> list[Element]:
     ref = _concept_ref(space)
-    elements = []
-    for element_id, record in space.records.items():
-        kind = space.types[element_id]
-        _rewire(record, kind, ref)
-        if kind == "term":
-            record["mentions"] = _unique(record.get("mentions", []))
-        clean = {name: value for name, value in record.items() if value not in (None, [])}
-        elements.append(validate_element(kind, clean))
-    return elements
+    return [
+        _validated(record, space.types[element_id], ref)
+        for element_id, record in space.records.items()
+    ]
+
+
+def _extended(space: _Workspace, existing: Sequence[Element]) -> list[Element]:
+    ref = _concept_ref(space)
+    changed = []
+    for element in existing:
+        after = _validated(space.existing_records[element.id], _TYPE_NAME[type(element)], ref)
+        if after != element:
+            changed.append(after)
+    return changed
 
 
 def apply_answer(
     prompt: TermPrompt,
     elements: Sequence[Element],
-    existing: Mapping[str, Element],
+    existing: Sequence[Element],
     answer: TermAnswer,
 ) -> Applied:
-    """The run's elements after the answer, the merged concept IDs and what was left out."""
-    space = _workspace(prompt, elements, set(existing))
+    """The run's elements after the answer, the merged concept IDs, what was left out, and the
+    concepts and terms already in the ontology (``existing``) that the run extended."""
+    space = _workspace(prompt, elements, existing)
     _merge_terms(space)
     groups = _each(space, answer.groups, _apply_merges)
     _fold_merged(space)
     _each(space, groups, _apply_group)
     _each(space, answer.splits, _apply_split)
+    _fold_into_existing_terms(space)
     merged = {source: space.find(source) for source in space.into}
-    return Applied(_finish(space), merged, space.skipped)
+    return Applied(_finish(space), merged, space.skipped, _extended(space, existing))

@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMW
+id: st_01M82HCHQC6AK72JNVEQYR1KXD
+label: Report lost keys
+level: level-3
+level_reason: 'Error scenario: a lost key.'
+origin:
+  created_at: '2026-11-22T21:07:55.757117Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed
+text: Lost keys must be reported to the house management at once.

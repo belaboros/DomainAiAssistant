@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5F3
+id: st_01M82H0CT6HYQ75KPNQXY0PMF1
+label: Lilies are highly poisonous
+level: level-2
+level_reason: Important safety fact in daily care.
+origin:
+  created_at: '2026-11-22T21:01:17.511485Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed
+text: Lilies are highly poisonous to cats.

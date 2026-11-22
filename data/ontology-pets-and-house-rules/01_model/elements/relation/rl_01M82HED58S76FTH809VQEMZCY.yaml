@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMN2
+id: rl_01M82HED58S76FTH809VQEMZCY
+label: may lead to, when repeated after a written warning
+level: level-3
+level_reason: Enforcement consequence.
+object: cn_01M82HED58S76FTH809VQEMZCT
+origin:
+  created_at: '2026-11-22T21:08:56.616973Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+predicate_label: may lead to, when repeated after a written warning
+status: proposed
+subject: cn_01M82HED58S76FTH809VQEMZCQ

@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GHYMR2WSZZZXCEPR86V3R
+id: pr_01M82GSR25X2Z0HPSPM2814WPX
+label: Alone training starting duration
+level: level-3
+level_reason: Detail of the problem-case training.
+name: starting duration
+of: cn_01M82GSR24145KC6KF8V0HWF9M
+origin:
+  created_at: '2026-11-22T20:57:39.654109Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+value: a few minutes

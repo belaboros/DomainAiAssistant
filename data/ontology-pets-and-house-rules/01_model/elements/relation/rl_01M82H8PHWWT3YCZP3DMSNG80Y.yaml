@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX5
+id: rl_01M82H8PHWWT3YCZP3DMSNG80Y
+label: is located in
+level: ignorable
+level_reason: Not related to pets or their owners.
+object: cn_01M82H7HBZP5REB8E6N9M29JTP
+origin:
+  created_at: '2026-11-22T21:05:49.628709Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+predicate_label: is located in
+status: proposed
+subject: cn_01M82H8PHWWT3YCZP3DMSNG80V

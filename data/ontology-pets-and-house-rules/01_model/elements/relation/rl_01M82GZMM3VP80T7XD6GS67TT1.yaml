@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GXF5BZJDB4QGXVFMJEB33
+id: rl_01M82GZMM3VP80T7XD6GS67TT1
+label: is placed away from
+level: level-2
+level_reason: Setup detail for normal day.
+object: cn_01M82GZMM3VP80T7XD6GS67TSK
+origin:
+  created_at: '2026-11-22T21:00:52.740941Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+predicate_label: is placed away from
+status: proposed
+subject: cn_01M82GZMM3VP80T7XD6GS67TSP

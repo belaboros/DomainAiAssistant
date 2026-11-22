@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GHYMR2WSZZZXCEPR86V3T
+id: st_01M82GTCESJWWYNZ6F9GB3P9VM
+label: Dog in car secured
+level: level-3
+level_reason: Travel is a special case.
+origin:
+  created_at: '2026-11-22T20:58:00.538049Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+text: In a car, a dog must travel in a crate or wear a safety harness attached to the seat belt.

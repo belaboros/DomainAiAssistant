@@ -1,0 +1,15 @@
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5FH
+id: pr_01M82H4A6RYEVMPHHZT3A2AKRC
+label: Minimum indoor period after move
+level: level-3
+level_reason: Detail for the moving-house special case.
+name: minimum indoor period after move
+of: cn_01M82GYVM9BBT0CS4ZCPR3ER6J
+origin:
+  created_at: '2026-11-22T21:03:25.913391Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed
+unit: weeks
+value: '2'

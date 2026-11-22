@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5F5
+id: st_01M82H115ABPPRSFHS5N8011P1
+label: Yearly veterinarian visit
+level: level-2
+level_reason: Routine health care.
+origin:
+  created_at: '2026-11-22T21:01:38.347031Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed
+text: The cat should visit the veterinarian at least once a year.

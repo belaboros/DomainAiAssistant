@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDP8
+id: cn_01M82GR8C6YNAW05QP8GX3MF7S
+label: family
+level: level-2
+level_reason: Household members who also give commands.
+origin:
+  created_at: '2026-11-22T20:56:50.823045Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed

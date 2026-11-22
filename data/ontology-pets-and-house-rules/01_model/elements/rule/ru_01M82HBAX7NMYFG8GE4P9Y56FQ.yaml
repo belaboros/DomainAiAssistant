@@ -1,0 +1,25 @@
+action: sort waste into paper, plastic, glass, organic waste and residual waste in the bin room of building B
+actor: resident
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMR
+id: ru_01M82HBAX7NMYFG8GE4P9Y56FQ
+label: Waste is sorted in the bin room
+level: level-2
+level_reason: Everyday handling of waste in the shared spaces.
+modality: must
+origin:
+  created_at: '2026-11-22T21:07:16.008650Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+refers_to:
+- cn_01M82HBAX7NMYFG8GE4P9Y56F3
+- cn_01M82HBAX7NMYFG8GE4P9Y56F4
+- rl_01M82HBAX7NMYFG8GE4P9Y56FH
+- cn_01M82HBAX7NMYFG8GE4P9Y56FA
+- cn_01M82HBAX7NMYFG8GE4P9Y56FB
+- cn_01M82HBAX7NMYFG8GE4P9Y56FC
+- cn_01M82HBAX7NMYFG8GE4P9Y56FD
+- cn_01M82H1MQPVEX27Q0YHCNZ9WE3
+scope:
+- co_01M82H6T2RFZXKEGGF51P3J7NK
+status: proposed

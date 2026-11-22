@@ -1,0 +1,23 @@
+action: use a lead longer than 2 metres
+actor: dog owner
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMH
+id: ru_01M82HA4JVD4MJZ6M8W4CVWNWM
+label: Lead at most 2 metres
+level: level-1
+level_reason: Part of the core lead rule.
+limit:
+  comparator: le
+  unit: m
+  value: 2.0
+modality: must_not
+origin:
+  created_at: '2026-11-22T21:06:36.765402Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+refers_to:
+- cn_01M82GPB8ZK0N7S1VR303H5EPB
+- rl_01M82HA4JVD4MJZ6M8W4CVWNWA
+scope:
+- co_01M82H6T2RFZXKEGGF51P3J7NK
+status: proposed

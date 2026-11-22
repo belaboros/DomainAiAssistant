@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX7
+id: st_01M82H94Y19DEFXTHPXP970KG3
+label: Pet registration deadline
+level: level-1
+level_reason: Registration is a core rule every pet owner must know.
+origin:
+  created_at: '2026-11-22T21:06:04.353520Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed
+text: Every pet (dog or cat) must be registered with the house management within 14 days of moving in or acquiring the pet.

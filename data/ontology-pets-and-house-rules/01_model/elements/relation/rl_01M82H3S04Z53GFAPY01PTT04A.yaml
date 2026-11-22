@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5FF
+id: rl_01M82H3S04Z53GFAPY01PTT04A
+label: needs when alone
+level: level-2
+level_reason: Condition for leaving a cat alone.
+object: cn_01M82GM2G3AM0SX444VHV3202J
+origin:
+  created_at: '2026-11-22T21:03:08.293199Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+predicate_label: needs when alone
+status: proposed
+subject: cn_01M82H0CT7BJSF0Q3S0YPNSAE2

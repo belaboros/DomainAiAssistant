@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMR
+id: cn_01M82HBAX7NMYFG8GE4P9Y56FE
+label: bulky item
+level: level-3
+level_reason: Special case of disposal.
+origin:
+  created_at: '2026-11-22T21:07:16.008352Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed

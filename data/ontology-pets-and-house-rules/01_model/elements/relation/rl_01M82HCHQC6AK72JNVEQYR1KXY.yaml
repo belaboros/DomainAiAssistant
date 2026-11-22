@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMW
+id: rl_01M82HCHQC6AK72JNVEQYR1KXY
+label: has own
+level: level-2
+level_reason: Normal-day access.
+object: cn_01M82HCHQC6AK72JNVEQYR1KXR
+origin:
+  created_at: '2026-11-22T21:07:55.757669Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+predicate_label: has own
+status: proposed
+subject: cn_01M82H7HBZP5REB8E6N9M29JTG

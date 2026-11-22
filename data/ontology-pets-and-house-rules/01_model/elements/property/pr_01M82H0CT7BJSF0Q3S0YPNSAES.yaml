@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5F3
+id: pr_01M82H0CT7BJSF0Q3S0YPNSAES
+label: Lily toxicity
+level: level-2
+level_reason: Important safety fact for normal cat care.
+name: toxicity to cats
+of: cn_01M82H0CT7BJSF0Q3S0YPNSAE6
+origin:
+  created_at: '2026-11-22T21:01:17.512656Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed
+value: highly poisonous

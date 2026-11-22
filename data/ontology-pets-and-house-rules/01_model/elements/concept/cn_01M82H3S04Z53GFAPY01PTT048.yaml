@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5FF
+id: cn_01M82H3S04Z53GFAPY01PTT048
+label: visit
+level: level-2
+level_reason: Arranged care during longer absences.
+origin:
+  created_at: '2026-11-22T21:03:08.293126Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed

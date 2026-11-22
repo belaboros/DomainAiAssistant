@@ -1,6 +1,6 @@
 # 0002 · OntologyBuilder: build leveled ontologies from text corpora and human input
 
-- **Status:** in-progress
+- **Status:** done
 - **Scope:** system
 - **Captured:** 2026-11-20
 - **Spec:** [0002-ontology-builder](../specs/0002-ontology-builder/spec.md) (approved) · [plan](../specs/0002-ontology-builder/plan.md) (approved)
@@ -457,3 +457,66 @@ Append one entry per question, oldest first. Never delete entries.
 **Options offered:** Run all three (Recommended): dog, cat, building rules in the eval's order, one commit per run / Dog manual only / Not now
 **A:** "Run all three (Recommended)"
 **Effect:** The three manuals are ingested live, one run and one commit each.
+
+### 2026-11-22 · implement · Q57
+**Asked by:** Claude
+**Q:** [implement · T31 deviation] T31's check asks for an /arch-metrics result of `pass`. The result is `warn` for the system and for ontology-builder, and the same warnings were already in the 2026-11-21 baseline, so none are new: the SDP edge workflows → ingestion (I 0.667 → 0.833, an edge ADR-0009 accepted), Ce 5 and 6 for ingestion and workflows, and D > 0.5 for the stable, concrete Python components (model, store, llm, vcs). Nothing is `fail`. Reaching `pass` would mean a refactor that isn't in the plan (e.g. Protocols to raise abstractness, splitting workflows). How should I go on?
+**Options offered:** Accept warn (Recommended): change T31's check to "no fail, no new violations" and record the warnings / Refactor to pass: plan change with app ADRs / Stop here: leave T31 unticked
+**A:** "Accept warn (Recommended)"
+**Effect:** T31's check is now "/arch-metrics: no `fail`, no new violations against the previous snapshot"; the remaining warnings are listed in the T31 note.
+
+### 2026-11-22 · implement · Q58
+**Asked by:** Claude
+**Q:** [implement · commits] T30 (JSON-LD twin, contract 0.2.0, rebuilt raw release) and the T31 docs are on the branch spec/0002-t30-t31 and not committed yet. Make one commit per task?
+**Options offered:** Commit per task (Recommended): two commits, nothing pushed / Don't commit
+**A:** "Commit per task (Recommended)"
+**Effect:** T30 and T31 are committed separately on spec/0002-t30-t31; nothing is pushed.
+
+### 2026-11-22 · review · Q59
+**Asked by:** Claude
+**Q:** [review-spec · spec gap] The independent review passes all 33 acceptance criteria. One finding (medium): the GUI has no screen for creating an ontology or editing the scope record; both exist only in the API (POST /api/ontologies, PUT …/scope) and the CLI (`create`). FR-3 says "the GUI enforces the role … edit the scope record", which reads as if the GUI offered it. How should this be resolved?
+**Options offered:** Clarify spec: CLI/API (Recommended): state in FR-1/FR-3 that create and scope editing are CLI/API actions in v1 / Add a follow-up GUI task (T32, scope editor dialog)
+**A:** "Clarify spec: CLI/API (Recommended)"
+**Effect:** FR-1 and FR-3 say that creating an ontology and editing its scope record are CLI/API actions in v1; the API refuses them for a user (403).
+
+### 2026-11-22 · review · Q60
+**Asked by:** Claude
+**Q:** [review-spec · small fixes] Low-severity review findings: (2) the contract doesn't say the governed release leaves out approved ignorable elements; (3) ingestion has its own require_scope that may raise RecordInvalidError instead of a refusal for an invalid scope record; (4) the plan's verification map names 2 renamed tests; (5) a no-op assertion in test_extraction_terms.py. Which to fix now?
+**Options offered (multi-select):** Contract wording (2) / Unify require_scope (3) / Plan test names (4) / No-op assert (5)
+**A:** all four
+**Effect:** Fixed as follow-up T32 to T35 in tasks.md.
+
+### 2026-11-22 · implement · Q61
+**Asked by:** Claude
+**Q:** [Claude] Bug found after the review: the user saw no taxonomy edges in `level-1.md`. When a run's new concept is merged into a concept already in the ontology (e.g. the building manual's "dog → pet" into the existing "dog" from the dog run), `extraction/terms_apply.py::_fold_merged` drops its parents and evidence silently. So dog and cat have no parent "pet", and level-1.md's taxonomy has no edges. (Also by design: level-N.md draws only is-a edges whose two ends are in the level.) How should a run treat a concept that already exists?
+**Options offered:** Add, mark for review (Recommended): the run adds the new evidence and parents to the existing concept and records a decision; an approved concept goes back to `included` and the governed release keeps the approved version / Keep as a new concept: no merge into existing concepts, a reviewer merges by hand / Only report the loss: keep the rule, list dropped parents and evidence in the run's skipped items
+**A:** "Add, mark for review (Recommended)"
+**Effect:** Spec FR-11 extended, app ADR added, tasks T36–T37 added; spec 0002 reopened.
+
+### 2026-11-22 · implement · Q62
+**Asked by:** Claude
+**Q:** [Claude] How to repair `data/ontology-pets-and-house-rules/` once the code is fixed?
+**Options offered:** Re-ingest from scratch (Recommended): recreate the ontology and ingest the three manuals again (about $3.60; estimate shown first; nothing has been reviewed yet) / Fix by hand in the GUI / Leave it for now
+**A:** "Re-ingest from scratch (Recommended)"
+**Effect:** Task T37: recreate the ontology with the same scope record and re-ingest the three manuals live after the estimate is confirmed.
+
+### 2026-11-22 · implement · Q63
+**Asked by:** Claude
+**Q:** [implement · T37 live ingestion] The fix is committed (e9c14cd) and the ontology `pets-and-house-rules` is re-created with the same scope record and handle (e90c876). Ingesting the three manuals with claude-opus-5-5 is estimated at dog $2.00, cat $1.56, building rules $1.70 ($5.26 total; the last identical run cost about $3.60). Each run commits the dataset. Run all three?
+**Options offered:** Run all three (Recommended): dog, cat, building rules in the earlier order, one commit per run / Not now
+**A:** "Run all three (Recommended)"
+**Effect:** The three manuals are re-ingested live, one run and one commit each.
+
+### 2026-11-22 · implement · Q64
+**Asked by:** Claude
+**Q:** [Claude] The user still saw no taxonomy diagram in `level-1.md`. The diagram does exist and renders, but 20 of its 22 concepts have no is-a link within level 1; Mermaid lays them out side by side, so the diagram is one row 22 boxes wide and shrinks to an unreadable strip. How should the taxonomy diagram be built?
+**Options offered:** Linked concepts only (Recommended): diagram of linked concepts, the rest listed below it / Linked + other levels: also draw level-2/3 children, faded / Keep all, wrap rows: unlinked concepts in a box laid out in several rows
+**A:** "Keep all, wrap rows"
+**Effect:** Task T38: the taxonomy diagram puts concepts without an is-a link in the level into a "not linked yet" box, laid out in rows.
+
+### 2026-11-22 · implement · Q65
+**Asked by:** Claude
+**Q:** [Claude] (1) In Markdown Preview Enhanced, what is under the "Taxonomy" heading of the pets `level-1.md`? (2) The "Concepts and relations" diagram shows only relation elements; is-a links are only in the taxonomy, so pet → cat/dog is missing from it. Should it also show is-a links?
+**Options offered:** (1) Heading, then nothing / No Taxonomy heading / Code or error text / A thin strip. (2) Yes, as 'is a' edges (Recommended): child → parent edges labelled "is a" / No, taxonomy only
+**A:** (1) "I found the diagram. It was vertically pushed together. Redraw the diagram, as 16x9 ratio and start new rows to avoid drawing one single wide row." (2) "Yes, as 'is a' edges (Recommended)"
+**Effect:** Task T39: the taxonomy stacks the "Not linked yet" box below the tree and picks its columns for a 16:9 diagram; the concept-relation diagram also draws is-a links as "is a" edges (child → parent).

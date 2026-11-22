@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCV
+id: st_01M82GN67PPA4W9M9C62QPP3NC
+label: Weekly brushing
+level: level-2
+level_reason: Normal grooming routine for an owner.
+origin:
+  created_at: '2026-11-22T20:55:10.327397Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+text: A dog must be brushed at least once a week.

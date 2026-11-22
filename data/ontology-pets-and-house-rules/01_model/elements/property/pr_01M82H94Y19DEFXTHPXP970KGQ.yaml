@@ -1,0 +1,15 @@
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX7
+id: pr_01M82H94Y19DEFXTHPXP970KGQ
+label: Registration deadline
+level: level-1
+level_reason: The deadline is part of the core registration rule.
+name: deadline
+of: cn_01M82H94Y19DEFXTHPXP970KGH
+origin:
+  created_at: '2026-11-22T21:06:04.354263Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed
+unit: days after moving in or acquiring the pet
+value: '14'

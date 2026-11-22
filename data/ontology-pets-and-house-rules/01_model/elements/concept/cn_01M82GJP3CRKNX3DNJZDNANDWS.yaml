@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCE
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMK
+id: cn_01M82GJP3CRKNX3DNJZDNANDWS
+label: training
+level: level-2
+level_reason: Normal-day need of a dog.
+origin:
+  created_at: '2026-11-22T20:53:48.269388Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed

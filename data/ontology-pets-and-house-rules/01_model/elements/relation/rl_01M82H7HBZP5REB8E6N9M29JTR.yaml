@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX1
+id: rl_01M82H7HBZP5REB8E6N9M29JTR
+label: lives in
+level: level-1
+level_reason: Defines residency.
+object: cn_01M82H7HBZP5REB8E6N9M29JTN
+origin:
+  created_at: '2026-11-22T21:05:11.553253Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+predicate_label: lives in
+status: proposed
+subject: cn_01M82H7HBZP5REB8E6N9M29JTG

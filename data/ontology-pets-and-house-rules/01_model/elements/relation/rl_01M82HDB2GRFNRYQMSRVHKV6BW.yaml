@@ -1,0 +1,17 @@
+cardinality:
+  max: 1
+  min: 1
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMY
+id: rl_01M82HDB2GRFNRYQMSRVHKV6BW
+label: has
+level: level-2
+level_reason: Each flat's storage allocation.
+object: cn_01M82HDB2F6BK5KDQ92WEFACHN
+origin:
+  created_at: '2026-11-22T21:08:21.713251Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+predicate_label: has
+status: proposed
+subject: cn_01M82GKFJ96730WAHGQQD3M95G

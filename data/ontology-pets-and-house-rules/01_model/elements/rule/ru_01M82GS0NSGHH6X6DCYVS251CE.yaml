@@ -1,0 +1,22 @@
+action: train in short sessions of at most 10 minutes, several times a day
+actor: owner
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDPD
+id: ru_01M82GS0NSGHH6X6DCYVS251CE
+label: Training session at most 10 minutes
+level: level-2
+level_reason: Normal training practice.
+limit:
+  comparator: le
+  unit: min
+  value: 10.0
+modality: must
+origin:
+  created_at: '2026-11-22T20:57:15.706676Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+refers_to:
+- cn_01M82GS0NSGHH6X6DCYVS251C1
+scope:
+- co_01M82GHYMN49VHXB6YMXXC893Z
+status: proposed

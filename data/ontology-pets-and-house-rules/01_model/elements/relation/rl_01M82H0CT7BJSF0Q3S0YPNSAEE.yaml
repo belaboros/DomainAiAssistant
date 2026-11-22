@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5F3
+id: rl_01M82H0CT7BJSF0Q3S0YPNSAEE
+label: is highly poisonous to
+level: level-2
+level_reason: Feeding safety.
+object: cn_01M82GY6D4FG58KKX81F7CX0F1
+origin:
+  created_at: '2026-11-22T21:01:17.512232Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+predicate_label: is highly poisonous to
+status: proposed
+subject: cn_01M82H0CT7BJSF0Q3S0YPNSAE6

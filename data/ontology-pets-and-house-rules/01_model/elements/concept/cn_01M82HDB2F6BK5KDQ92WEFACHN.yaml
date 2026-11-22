@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMY
+id: cn_01M82HDB2F6BK5KDQ92WEFACHN
+label: cellar compartment
+level: level-2
+level_reason: Storage space belonging to a flat.
+origin:
+  created_at: '2026-11-22T21:08:21.712966Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed

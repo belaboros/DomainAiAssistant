@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDPA
+id: tm_01M82GR8C6YNAW05QP8GX3MF7K
+label: good behaviour
+level: level-2
+level_reason: Training vocabulary.
+mentions:
+- concept: cn_01M82GR8C6YNAW05QP8GX3MF7V
+  unit: su_01M82GHYMQYRXNHXCXTMK9HDPA
+origin:
+  created_at: '2026-11-22T20:56:50.822915Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed

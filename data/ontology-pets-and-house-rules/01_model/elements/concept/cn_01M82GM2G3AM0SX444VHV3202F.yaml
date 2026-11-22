@@ -1,0 +1,15 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCQ
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDP5
+- unit: su_01M82GHYMR2WSZZZXCEPR86V3Q
+id: cn_01M82GM2G3AM0SX444VHV3202F
+label: adult dog
+level: level-2
+level_reason: Normal case for feeding.
+origin:
+  created_at: '2026-11-22T20:54:33.731734Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+parents:
+- cn_01M82GJP3CRKNX3DNJZDNANDWM
+status: proposed

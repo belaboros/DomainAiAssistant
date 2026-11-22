@@ -1,0 +1,20 @@
+action: be kept in the stairwells
+actor: cat
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMP
+id: ru_01M82HAMBHA8TEWR617B2TSCX9
+label: No cats kept in stairwells
+level: level-2
+level_reason: House rule on shared spaces for normal pet keeping.
+modality: must_not
+origin:
+  created_at: '2026-11-22T21:06:52.914801Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+refers_to:
+- cn_01M82GY6D4FG58KKX81F7CX0F1
+- cn_01M82HA4JVD4MJZ6M8W4CVWNVZ
+- rl_01M82HAMBHA8TEWR617B2TSCX5
+scope:
+- co_01M82H6T2RFZXKEGGF51P3J7NK
+status: proposed

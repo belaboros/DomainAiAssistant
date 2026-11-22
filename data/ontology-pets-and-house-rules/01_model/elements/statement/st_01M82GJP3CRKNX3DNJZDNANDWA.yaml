@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCE
+id: st_01M82GJP3CRKNX3DNJZDNANDWA
+label: Check before getting a dog
+level: level-2
+level_reason: Normal preparation step for a prospective owner.
+origin:
+  created_at: '2026-11-22T20:53:48.268967Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+text: Before you get a dog, check that your home, your working hours and your budget fit the dog you want.

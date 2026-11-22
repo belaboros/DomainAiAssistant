@@ -44,7 +44,7 @@
     "files": {
       "description": "Every other file of the release folder, by file name, with 'sha256:' + hex digest of its bytes.",
       "type": "object",
-      "required": ["ontology.ttl", "level-1.md", "level-2.md", "level-3.md"],
+      "required": ["ontology.ttl", "ontology.jsonld", "level-1.md", "level-2.md", "level-3.md"],
       "additionalProperties": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" }
     }
   },

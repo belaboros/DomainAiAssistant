@@ -1,0 +1,19 @@
+action: check that their home, working hours and budget fit the dog they want
+actor: person who considers getting a dog
+condition: before getting a dog
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCE
+id: ru_01M82GJP3CRKNX3DNJZDNANDX3
+label: Check home, working hours and budget before getting a dog
+level: level-2
+level_reason: Practical preparation for a prospective owner on the normal path.
+modality: must
+origin:
+  created_at: '2026-11-22T20:53:48.269835Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+refers_to:
+- cn_01M82GJP3CRKNX3DNJZDNANDWM
+scope:
+- co_01M82GHYMN49VHXB6YMXXC893Z
+status: proposed

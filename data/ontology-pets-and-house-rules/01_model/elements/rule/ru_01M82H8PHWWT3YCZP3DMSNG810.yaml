@@ -1,0 +1,19 @@
+action: park bicycles in the bicycle racks only
+actor: bicycle owner
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX5
+id: ru_01M82H8PHWWT3YCZP3DMSNG810
+label: Bicycles only in bicycle racks
+level: level-2
+level_reason: House rule for everyday use of the shared yard.
+modality: must
+origin:
+  created_at: '2026-11-22T21:05:49.628800Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+refers_to:
+- cn_01M82H8PHWWT3YCZP3DMSNG80W
+- cn_01M82H7HBZP5REB8E6N9M29JTP
+scope:
+- co_01M82H6T2RFZXKEGGF51P3J7NK
+status: proposed

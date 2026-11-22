@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMN2
+id: rl_01M82HED58S76FTH809VQEMZCZ
+label: ends
+level: level-3
+level_reason: Enforcement consequence.
+object: cn_01M82HED58S76FTH809VQEMZCS
+origin:
+  created_at: '2026-11-22T21:08:56.617002Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+predicate_label: ends
+status: proposed
+subject: cn_01M82HED58S76FTH809VQEMZCT

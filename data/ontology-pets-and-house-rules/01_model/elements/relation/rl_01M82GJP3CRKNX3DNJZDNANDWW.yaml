@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCF
+id: rl_01M82GJP3CRKNX3DNJZDNANDWW
+label: carries
+level: level-1
+level_reason: Core registration rule.
+object: cn_01M82GJP3CRKNX3DNJZDNANDWP
+origin:
+  created_at: '2026-11-22T20:53:48.269502Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+predicate_label: carries
+status: proposed
+subject: cn_01M82GJP3CRKNX3DNJZDNANDWM

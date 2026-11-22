@@ -1,0 +1,20 @@
+action: enforce the house rules
+actor: house management
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX1
+id: ru_01M82H7HC0Y79J6K9SG7H0Z9KC
+label: House management enforces the house rules
+level: level-1
+level_reason: Defines the core role of the house management in the domain.
+modality: must
+origin:
+  created_at: '2026-11-22T21:05:11.553577Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+refers_to:
+- cn_01M82H7HBZP5REB8E6N9M29JTH
+- cn_01M82H7HBZP5REB8E6N9M29JTQ
+- rl_01M82H7HC0Y79J6K9SG7H0Z9K7
+scope:
+- co_01M82H6T2RFZXKEGGF51P3J7NK
+status: proposed

@@ -1,0 +1,15 @@
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX3
+- unit: su_01M82H6T2T27Y7HH29TGSXAMN0
+id: cn_01M82H83Q82K5CKBRM346N833A
+label: drilling
+level: level-3
+level_reason: Non-pet example of noise.
+origin:
+  created_at: '2026-11-22T21:05:30.345235Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+parents:
+- cn_01M82H83Q82K5CKBRM346N8337
+- cn_01M82HDX94TC4A36YAZSDB0R4Q
+status: proposed

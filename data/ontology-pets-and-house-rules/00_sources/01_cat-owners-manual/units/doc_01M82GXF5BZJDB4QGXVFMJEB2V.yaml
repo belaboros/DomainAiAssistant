@@ -1,0 +1,29 @@
+- content_hash: sha256:d6c1c7cd9eb736639c8777e5c4720dfccd355a19d69f6c5a8cf5a0126bc76f08
+  document_id: doc_01M82GXF5BZJDB4QGXVFMJEB2V
+  id: su_01M82GXF5BZJDB4QGXVFMJEB2W
+  ignorable:
+    category: generic_or_historical_story
+    proposed: true
+    reason: History of cats in ancient Egypt; says nothing about owning a cat in the complex today.
+    status: proposed
+  kind: paragraph
+  location:
+    heading_path:
+    - 1. Before You Get a Cat
+    index_in_section: 0
+    line_end: 3
+    line_start: 3
+    path: 01-before-you-get-a-cat.md
+  text: Few peoples have loved cats as deeply as the ancient Egyptians. Cats first earned their place by guarding the grain stores from mice and rats and by killing snakes near the houses along the Nile. Over time the Egyptians came to see them as sacred animals of Bastet, the goddess of home, fertility and protection, who was often shown with the head of a cat. Her great temple at Bubastis held festivals that drew huge crowds, and thousands of cats were carefully mummified and buried there as offerings. The Greek historian Herodotus wrote that when a household cat died, the family shaved their eyebrows as a sign of mourning. Killing a cat, even by accident, could be punished by death, and Diodorus Siculus tells of a Roman visitor killed by an angry crowd for doing so. For the Egyptians, a cat in the house was not just a pet but a small, living blessing.
+- content_hash: sha256:0e797a0d5178add078434ed8c4d3ef6d6161070b781d03c2a1e29b0df16e165e
+  document_id: doc_01M82GXF5BZJDB4QGXVFMJEB2V
+  id: su_01M82GXF5BZJDB4QGXVFMJEB2X
+  kind: paragraph
+  location:
+    heading_path:
+    - 1. Before You Get a Cat
+    index_in_section: 1
+    line_end: 5
+    line_start: 5
+    path: 01-before-you-get-a-cat.md
+  text: A cat lives 12 to 18 years. Cats are independent, but they still need daily attention, play and a clean environment. Plan for food, litter, yearly veterinary visits and someone to look after the cat when you travel.

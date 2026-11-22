@@ -1,0 +1,19 @@
+action: jerk the leash
+actor: owner
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDP3
+id: ru_01M82GPTF0J0A1WWEWDR3G29FT
+label: Never jerk the leash
+level: level-2
+level_reason: Normal-day walking practice.
+modality: must_not
+origin:
+  created_at: '2026-11-22T20:56:03.809147Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+refers_to:
+- cn_01M82GPB8ZK0N7S1VR303H5EPB
+- cn_01M82GPTF0J0A1WWEWDR3G29FG
+scope:
+- co_01M82GHYMN49VHXB6YMXXC893Z
+status: proposed

@@ -1,0 +1,426 @@
+{
+  "date": "2026-11-22",
+  "commit": "9aa9781e8260e14b3e3d6650f6db7dce2991cefc",
+  "languages": [
+    "js-ts",
+    "python"
+  ],
+  "functions": {
+    "count": 1326,
+    "ccAvg": 2.6,
+    "ccMax": 10,
+    "overWarn": []
+  },
+  "components": [
+    {
+      "name": "model",
+      "ca": 7,
+      "ce": 0,
+      "instability": 0.0,
+      "relationalCohesion": 1.0,
+      "abstractness": 0.016,
+      "distance": 0.984,
+      "externalDeps": [
+        "__future__",
+        "collections",
+        "datetime",
+        "enum",
+        "hashlib",
+        "os",
+        "pathlib",
+        "pydantic",
+        "re",
+        "typing",
+        "unicodedata"
+      ]
+    },
+    {
+      "name": "store",
+      "ca": 5,
+      "ce": 1,
+      "instability": 0.167,
+      "relationalCohesion": 1.75,
+      "abstractness": 0.0,
+      "distance": 0.833,
+      "externalDeps": [
+        "__future__",
+        "collections",
+        "contextlib",
+        "datetime",
+        "hashlib",
+        "json",
+        "pathlib",
+        "pydantic",
+        "shutil",
+        "typing",
+        "yaml"
+      ]
+    },
+    {
+      "name": "sources",
+      "ca": 1,
+      "ce": 1,
+      "instability": 0.5,
+      "relationalCohesion": 1.333,
+      "abstractness": 0.167,
+      "distance": 0.333,
+      "externalDeps": [
+        "__future__",
+        "collections",
+        "dataclasses",
+        "hashlib",
+        "itertools",
+        "markdown_it",
+        "pathlib",
+        "re",
+        "typing"
+      ]
+    },
+    {
+      "name": "llm",
+      "ca": 3,
+      "ce": 0,
+      "instability": 0.0,
+      "relationalCohesion": 1.6,
+      "abstractness": 0.053,
+      "distance": 0.947,
+      "externalDeps": [
+        "__future__",
+        "anthropic",
+        "collections",
+        "dataclasses",
+        "datetime",
+        "hashlib",
+        "json",
+        "math",
+        "pathlib",
+        "typing",
+        "yaml"
+      ]
+    },
+    {
+      "name": "extraction",
+      "ca": 1,
+      "ce": 2,
+      "instability": 0.667,
+      "relationalCohesion": 1.778,
+      "abstractness": 0.0,
+      "distance": 0.333,
+      "externalDeps": [
+        "__future__",
+        "collections",
+        "dataclasses",
+        "json",
+        "pydantic",
+        "typing"
+      ]
+    },
+    {
+      "name": "ingestion",
+      "ca": 1,
+      "ce": 5,
+      "instability": 0.833,
+      "relationalCohesion": 1.6,
+      "abstractness": 0.0,
+      "distance": 0.167,
+      "externalDeps": [
+        "__future__",
+        "collections",
+        "dataclasses",
+        "pathlib",
+        "pydantic",
+        "shutil",
+        "typing"
+      ]
+    },
+    {
+      "name": "governance",
+      "ca": 1,
+      "ce": 2,
+      "instability": 0.667,
+      "relationalCohesion": 3.083,
+      "abstractness": 0.0,
+      "distance": 0.333,
+      "externalDeps": [
+        "__future__",
+        "collections",
+        "contextlib",
+        "dataclasses",
+        "re",
+        "typing"
+      ]
+    },
+    {
+      "name": "release",
+      "ca": 1,
+      "ce": 2,
+      "instability": 0.667,
+      "relationalCohesion": 2.25,
+      "abstractness": 0.0,
+      "distance": 0.333,
+      "externalDeps": [
+        "__future__",
+        "collections",
+        "dataclasses",
+        "datetime",
+        "decimal",
+        "hashlib",
+        "jinja2",
+        "json",
+        "markupsafe",
+        "rdflib",
+        "re",
+        "typing"
+      ]
+    },
+    {
+      "name": "vcs",
+      "ca": 1,
+      "ce": 0,
+      "instability": 0.0,
+      "relationalCohesion": 1.0,
+      "abstractness": 0.0,
+      "distance": 1.0,
+      "externalDeps": [
+        "__future__",
+        "dataclasses",
+        "pathlib",
+        "shutil",
+        "subprocess"
+      ]
+    },
+    {
+      "name": "workflows",
+      "ca": 3,
+      "ce": 6,
+      "instability": 0.667,
+      "relationalCohesion": 2.0,
+      "abstractness": 0.0,
+      "distance": 0.333,
+      "externalDeps": [
+        "__future__",
+        "collections",
+        "dataclasses",
+        "json",
+        "os",
+        "pathlib",
+        "re",
+        "shutil",
+        "types",
+        "typing"
+      ]
+    },
+    {
+      "name": "api",
+      "ca": 1,
+      "ce": 2,
+      "instability": 0.667,
+      "relationalCohesion": 1.75,
+      "abstractness": 0.0,
+      "distance": 0.333,
+      "externalDeps": [
+        "__future__",
+        "collections",
+        "dataclasses",
+        "fastapi",
+        "json",
+        "pathlib",
+        "pydantic",
+        "re",
+        "secrets",
+        "threading",
+        "typing",
+        "uvicorn"
+      ]
+    },
+    {
+      "name": "cli",
+      "ca": 0,
+      "ce": 3,
+      "instability": 1.0,
+      "relationalCohesion": 1.0,
+      "abstractness": null,
+      "distance": null,
+      "externalDeps": [
+        "__future__",
+        "collections",
+        "contextlib",
+        "os",
+        "pathlib",
+        "typer",
+        "typing",
+        "yaml"
+      ]
+    },
+    {
+      "name": "evaluation",
+      "ca": 1,
+      "ce": 2,
+      "instability": 0.667,
+      "relationalCohesion": 1.833,
+      "abstractness": 0.0,
+      "distance": 0.333,
+      "externalDeps": [
+        "__future__",
+        "collections",
+        "dataclasses",
+        "datetime",
+        "pathlib",
+        "re",
+        "tempfile",
+        "typing",
+        "yaml"
+      ]
+    },
+    {
+      "name": "web",
+      "ca": 0,
+      "ce": 0,
+      "instability": 0.0,
+      "relationalCohesion": 2.234,
+      "abstractness": 0.974,
+      "distance": 0.026,
+      "externalDeps": []
+    }
+  ],
+  "dependencies": [
+    {
+      "from": "api",
+      "to": "model",
+      "count": 2
+    },
+    {
+      "from": "api",
+      "to": "workflows",
+      "count": 6
+    },
+    {
+      "from": "cli",
+      "to": "api",
+      "count": 1
+    },
+    {
+      "from": "cli",
+      "to": "evaluation",
+      "count": 1
+    },
+    {
+      "from": "cli",
+      "to": "workflows",
+      "count": 1
+    },
+    {
+      "from": "evaluation",
+      "to": "store",
+      "count": 2
+    },
+    {
+      "from": "evaluation",
+      "to": "workflows",
+      "count": 2
+    },
+    {
+      "from": "extraction",
+      "to": "llm",
+      "count": 4
+    },
+    {
+      "from": "extraction",
+      "to": "model",
+      "count": 10
+    },
+    {
+      "from": "governance",
+      "to": "model",
+      "count": 10
+    },
+    {
+      "from": "governance",
+      "to": "store",
+      "count": 3
+    },
+    {
+      "from": "ingestion",
+      "to": "extraction",
+      "count": 3
+    },
+    {
+      "from": "ingestion",
+      "to": "llm",
+      "count": 3
+    },
+    {
+      "from": "ingestion",
+      "to": "model",
+      "count": 4
+    },
+    {
+      "from": "ingestion",
+      "to": "sources",
+      "count": 1
+    },
+    {
+      "from": "ingestion",
+      "to": "store",
+      "count": 4
+    },
+    {
+      "from": "release",
+      "to": "model",
+      "count": 6
+    },
+    {
+      "from": "release",
+      "to": "store",
+      "count": 2
+    },
+    {
+      "from": "sources",
+      "to": "model",
+      "count": 3
+    },
+    {
+      "from": "store",
+      "to": "model",
+      "count": 3
+    },
+    {
+      "from": "workflows",
+      "to": "governance",
+      "count": 9
+    },
+    {
+      "from": "workflows",
+      "to": "ingestion",
+      "count": 5
+    },
+    {
+      "from": "workflows",
+      "to": "llm",
+      "count": 3
+    },
+    {
+      "from": "workflows",
+      "to": "release",
+      "count": 4
+    },
+    {
+      "from": "workflows",
+      "to": "store",
+      "count": 6
+    },
+    {
+      "from": "workflows",
+      "to": "vcs",
+      "count": 3
+    }
+  ],
+  "cycles": [],
+  "violations": [
+    {
+      "kind": "sdp",
+      "detail": "workflows -> ingestion: I(ingestion)=0.833 > I(workflows)=0.667"
+    }
+  ],
+  "result": "warn"
+}

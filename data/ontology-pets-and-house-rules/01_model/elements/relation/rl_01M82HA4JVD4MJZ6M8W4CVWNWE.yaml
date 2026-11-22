@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMK
+id: rl_01M82HA4JVD4MJZ6M8W4CVWNWE
+label: has
+level: level-2
+level_reason: Alone-time knowledge.
+object: cn_01M82HA4JVD4MJZ6M8W4CVWNW6
+origin:
+  created_at: '2026-11-22T21:06:36.765216Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+predicate_label: has
+status: proposed
+subject: cn_01M82GJP3CRKNX3DNJZDNANDWM

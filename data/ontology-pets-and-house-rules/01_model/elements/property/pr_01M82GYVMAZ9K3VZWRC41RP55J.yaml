@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GXF5BZJDB4QGXVFMJEB30
+id: pr_01M82GYVMAZ9K3VZWRC41RP55J
+label: Indoor cat lifespan compared to outdoor
+level: level-2
+level_reason: Helps owners make the normal-case choice.
+name: average lifespan
+of: cn_01M82GYVM9BBT0CS4ZCPR3ER6H
+origin:
+  created_at: '2026-11-22T21:00:27.147504Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed
+value: longer on average

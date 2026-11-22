@@ -1,0 +1,20 @@
+action: take the puppy outside
+actor: owner
+condition: after every meal, after every nap and after play
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDNZ
+id: ru_01M82GNRCASH6DKSRYKE0WQE84
+label: Take puppy outside after meals, naps and play
+level: level-3
+level_reason: Puppy care is a special case.
+modality: must
+origin:
+  created_at: '2026-11-22T20:55:28.907827Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+refers_to:
+- cn_01M82GNRCASH6DKSRYKE0WQE7V
+- cn_01M82GNRCASH6DKSRYKE0WQE7X
+scope:
+- co_01M82GHYMN49VHXB6YMXXC893Z
+status: proposed

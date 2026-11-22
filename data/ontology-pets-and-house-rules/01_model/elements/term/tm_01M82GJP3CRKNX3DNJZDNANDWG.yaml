@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCE
+id: tm_01M82GJP3CRKNX3DNJZDNANDWG
+label: daily exercise
+level: level-2
+level_reason: Everyday care need.
+mentions:
+- concept: cn_01M82GJP3CRKNX3DNJZDNANDWQ
+  unit: su_01M82GHYMP28WWGVJCAF7BMQCE
+origin:
+  created_at: '2026-11-22T20:53:48.269221Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed

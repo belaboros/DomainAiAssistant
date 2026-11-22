@@ -1,0 +1,22 @@
+action: always pick up the dog's waste and put it in a waste bin
+actor: owner
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDP5
+id: ru_01M82GQHZCWYDZ4FY134N19HRQ
+label: Always pick up dog waste and bin it
+level: level-1
+level_reason: Waste is a core house rule every owner must know.
+modality: must
+origin:
+  created_at: '2026-11-22T20:56:27.886228Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+refers_to:
+- cn_01M82GR8C6YNAW05QP8GX3MF7P
+- cn_01M82GQHZCWYDZ4FY134N19HRE
+- cn_01M82GQHZCWYDZ4FY134N19HRF
+- rl_01M82GQHZCWYDZ4FY134N19HRH
+- rl_01M82GQHZCWYDZ4FY134N19HRJ
+scope:
+- co_01M82GHYMN49VHXB6YMXXC893Z
+status: proposed

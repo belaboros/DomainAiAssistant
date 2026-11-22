@@ -1,0 +1,22 @@
+action: plan for food and litter for the cat
+actor: cat owner
+evidence:
+- unit: su_01M82GXF5BZJDB4QGXVFMJEB2X
+id: ru_01M82GY6D4FG58KKX81F7CX0FE
+label: Plan for food and litter
+level: level-2
+level_reason: Normal-day needs of a cat owner.
+modality: must
+origin:
+  created_at: '2026-11-22T21:00:05.413212Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+refers_to:
+- cn_01M82GY6D4FG58KKX81F7CX0F2
+- cn_01M82GY6D4FG58KKX81F7CX0F3
+- cn_01M82GY6D4FG58KKX81F7CX0F4
+- rl_01M82GY6D4FG58KKX81F7CX0F8
+- rl_01M82GY6D4FG58KKX81F7CX0F9
+scope:
+- co_01M82GXF5A3M9Z44ZD3X2YY7HZ
+status: proposed

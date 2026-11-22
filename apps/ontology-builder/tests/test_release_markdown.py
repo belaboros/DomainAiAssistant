@@ -8,6 +8,7 @@ from typing import Any
 from ontology_builder.governance import ChangeSet
 from ontology_builder.model import Concept, Element, ScopeRecord, validate_record
 from ontology_builder.release import ReleaseInput, build_level_files, level_elements
+from ontology_builder.release.mermaid import box_columns
 
 LEVEL_FILES = ["level-1.md", "level-2.md", "level-3.md"]
 _LINK = re.compile(r"\]\(#([a-z]+_[0-9A-Z]+)\)")
@@ -158,3 +159,92 @@ def test_large_relation_diagram_split_by_top_level_concept(review_kit: Any) -> N
     assert all(len(set(_NODE.findall(d))) == 22 for d in split)
     assert "### Relations under animal" in level
     assert "### Relations under building" in level
+
+
+def _rows(taxonomy: str) -> list[list[str]]:
+    """The rows of the "Not linked yet" box: its chains of invisible ``a ~~~ b`` links."""
+    box = taxonomy.split('subgraph unlinked["Not linked yet"]', 1)[1].split("    end", 1)[0]
+    assert "direction LR" in box
+    chains = [line for line in box.splitlines() if "~~~" in line]
+    return [re.findall(r"cn_[0-9A-Z]+", line) for line in chains]
+
+
+def test_unlinked_concepts_are_wrapped_in_rows(review_kit: Any) -> None:
+    """Q64, Q65: concepts without an is-a link in the level go into a box of rows below the tree."""
+    pet = review_kit.element("concept", label="pet")
+    dog = review_kit.element("concept", label="dog", parents=[pet["id"]])
+    loners = [review_kit.element("concept", label=f"loner {n:02}") for n in range(20)]
+    review_kit.seed([pet, dog, *loners])
+    level = build_level_files(kit_release(review_kit))["level-1.md"]
+    [taxonomy] = diagrams(level, "TB")
+    assert f"{pet['id']} --> {dog['id']}" in taxonomy
+    rows = _rows(taxonomy)
+    assert len(rows) > 1, "never one single wide row"
+    width = len(rows[0])
+    assert all(len(row) == width for row in rows[:-1]) and 0 < len(rows[-1]) <= width
+    assert [node for row in rows for node in row] == [loner["id"] for loner in loners]
+    box = taxonomy.split("subgraph", 1)[1].split("    end", 1)[0]
+    assert pet["id"] not in box and dog["id"] not in box, "linked concepts stay outside the box"
+    assert f"{dog['id']} ~~~ unlinked" in taxonomy, "the box sits below the tree"
+
+
+def test_box_columns_aim_at_16_9() -> None:
+    """More concepts give more columns; a wide tree lets the box use its width."""
+    assert box_columns(6, 0, 0) < box_columns(20, 0, 0) < box_columns(60, 0, 0)
+    for count in (6, 20, 40, 80):
+        assert -(-count // box_columns(count, 0, 0)) > 1, f"{count}: more than one row"
+    assert box_columns(20, 0, 0, wrapped_share=1.0) >= box_columns(20, 0, 0)  # taller rows
+    assert box_columns(20, 2000, 300) >= box_columns(20, 0, 0)  # fills a wide tree
+
+
+def test_linked_only_taxonomy_has_no_box(review_kit: Any) -> None:
+    root = review_kit.element("concept", label="animal")
+    child = review_kit.element("concept", label="dog", parents=[root["id"]])
+    review_kit.seed([root, child])
+    [taxonomy] = diagrams(build_level_files(kit_release(review_kit))["level-1.md"], "TB")
+    assert "subgraph" not in taxonomy and "~~~" not in taxonomy
+
+
+def _relation_diagram(level: str) -> str:
+    [relations] = diagrams(level, "LR")
+    return relations
+
+
+def test_relation_diagram_shows_is_a_edges(review_kit: Any) -> None:
+    """Q65: is-a links between concepts of the level also appear in the concept-relation diagram."""
+    pet = review_kit.element("concept", label="pet")
+    dog = review_kit.element("concept", label="dog", parents=[pet["id"]])
+    owner = review_kit.element("concept", label="owner")
+    owns = review_kit.element("relation", subject=owner["id"], object=pet["id"]) | {
+        "predicate_label": "owns"
+    }
+    review_kit.seed([pet, dog, owner, owns])
+    relations = _relation_diagram(build_level_files(kit_release(review_kit))["level-1.md"])
+    assert f'{dog["id"]} -. "is a" .-> {pet["id"]}' in relations  # a proposed child: dotted
+    assert f'{owner["id"]} -. "owns" .-> {pet["id"]}' in relations
+
+
+def test_is_a_alone_makes_a_relation_diagram(review_kit: Any) -> None:
+    pet = review_kit.element("concept", "approved", snapshot=True, label="pet")
+    cat = review_kit.element("concept", "approved", snapshot=True, label="cat", parents=[pet["id"]])
+    review_kit.seed([pet, cat])
+    relations = _relation_diagram(build_level_files(kit_release(review_kit))["level-1.md"])
+    assert f'{cat["id"]} -- "is a" --> {pet["id"]}' in relations
+    assert "No relations at this level" not in relations
+
+
+def test_siblings_wrap_into_rows(review_kit: Any) -> None:
+    """Q65: many children of one parent are stacked in rows by invisible links."""
+    dog = review_kit.element("concept", label="dog")
+    kinds = [
+        review_kit.element("concept", label=f"kind {n:02}", parents=[dog["id"]]) for n in range(12)
+    ]
+    review_kit.seed([dog, *kinds])
+    [taxonomy] = diagrams(build_level_files(kit_release(review_kit))["level-1.md"], "TB")
+    for kind in kinds:
+        assert f"{dog['id']} --> {kind['id']}" in taxonomy
+    stacked = re.findall(r"(cn_[0-9A-Z]+) ~~~ (cn_[0-9A-Z]+)", taxonomy)
+    ids = [kind["id"] for kind in kinds]
+    width = ids.index(stacked[0][1]) - ids.index(stacked[0][0])
+    assert 1 < width < 12
+    assert stacked == [(ids[n], ids[n + width]) for n in range(12 - width)]

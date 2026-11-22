@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX1
+id: cn_01M82H7HBZP5REB8E6N9M29JTK
+label: apartment owner
+level: level-2
+level_reason: Subtype of resident.
+origin:
+  created_at: '2026-11-22T21:05:11.553099Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+parents:
+- cn_01M82H7HBZP5REB8E6N9M29JTG
+scope_note: A person who owns an apartment in the buildings; one kind of resident.
+status: proposed

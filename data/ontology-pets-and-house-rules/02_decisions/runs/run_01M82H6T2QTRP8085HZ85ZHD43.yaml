@@ -1,0 +1,35 @@
+ended_at: '2026-11-22T21:09:16.750000Z'
+estimate:
+  cost_usd: 1.700712
+  documents: 12
+  input_tokens: 106278
+  output_tokens: 63780
+  units: 17
+id: run_01M82H6T2QTRP8085HZ85ZHD43
+input_tokens: 127287
+kind: ingestion
+model: claude-opus-5-5
+output_tokens: 33784
+skipped:
+- item: '{"concept": "C144", "merge": ["C32"], "preferred_label": "leash", "terms": ["leash", "lead"]}'
+  reason: no term with the label 'leash'
+  where: term resolution
+- item: '{"concept": "C201", "merge": ["C49"], "preferred_label": "litter box", "terms": ["litter box", "litter boxes"]}'
+  reason: no term with the label 'litter box'
+  where: term resolution
+- item: '{"concept": "C217", "merge": ["C57"], "preferred_label": "residual waste", "terms": ["residual waste"]}'
+  reason: no term with the label 'residual waste'
+  where: term resolution
+- item: '{"concept": "C215", "merge": ["C55"], "preferred_label": "used litter", "terms": ["used litter", "used cat litter"]}'
+  reason: no term with the label 'used litter'
+  where: term resolution
+- item: '{"concept": "C111", "merge": ["C39"], "preferred_label": "training", "terms": ["training", "education (training)"]}'
+  reason: no term with the label 'training'
+  where: term resolution
+- item: '{"concept": "C232", "merge": ["C94"], "preferred_label": "moving house", "terms": ["moving house", "move"]}'
+  reason: no term with the label 'moving house'
+  where: term resolution
+source_path: user-manuals-pets-and-house-rules/building-and-house-rules
+started_at: '2026-11-22T21:04:51.943847Z'
+status: completed
+user: belaboros

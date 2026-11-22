@@ -5,7 +5,7 @@
 | **Applies to** | every dataset `ontology-<name>` (`data/ontology-<name>/`); each has a thin contract `libs/contracts/ontology-<name>/README.md` that pins a version of this one |
 | **Owner (only writer)** | `ontology-builder` |
 | **Readers** | see each dataset in the system map of the [root architecture](../../../docs/architecture/architecture.md) |
-| **Contract version** | 0.1.0 (see [CHANGELOG.md](CHANGELOG.md)) |
+| **Contract version** | 0.2.2 (see [CHANGELOG.md](CHANGELOG.md)) |
 | **Decision** | [ADR-0019](../../../docs/architecture/adr/0019-ontology-builder-app-and-shared-ontology-contract.md) |
 
 This is a **contract family**, not a dataset: it is not registered in `components.json`. It describes what readers of any ontology dataset may rely on (ADR-0013). Anything not written here, in particular `01_model/` and `02_decisions/`, is internal to `ontology-builder` and may change without notice.
@@ -24,11 +24,11 @@ data/ontology-<name>/
 ├── 02_decisions/                        internal
 └── 03_release/                          CONTRACT: the releases
     ├── 00_raw/                          rebuilt on every save
-    │   ├── ontology.ttl
+    │   ├── ontology.ttl  ontology.jsonld
     │   ├── level-1.md  level-2.md  level-3.md
     │   └── manifest.json
     └── 01_governed/                     rebuilt only when a domain admin publishes
-        ├── ontology.ttl
+        ├── ontology.ttl  ontology.jsonld
         ├── level-1.md  level-2.md  level-3.md
         ├── CHANGELOG.md
         └── manifest.json
@@ -53,11 +53,12 @@ A **source unit** is one Markdown block: a paragraph, a list item, a blockquote 
 | Variant | Folder | Contains | Built |
 |---------|--------|----------|-------|
 | **raw** | `00_raw/` | every element except excluded, rejected and ignorable ones, each with its status | on every save |
-| **governed** | `01_governed/` | approved and deprecated elements only, in their approved version | when a domain admin publishes a version |
+| **governed** | `01_governed/` | approved and deprecated elements only, in their approved version; elements whose level is `ignorable` are left out, as in raw | when a domain admin publishes a version |
 
 Both variants hold the same files:
 
 - **`ontology.ttl`**: RDF 1.1 Turtle with OWL 2, SKOS and SHACL, and the `dai:` vocabulary of [vocab.ttl](vocab.ttl). See [The RDF graph](#the-rdf-graph).
+- **`ontology.jsonld`** (since 0.2.0): the same graph as `ontology.ttl`, as compacted JSON-LD 1.1. Its `@context` maps the prefixes of the Turtle (`dai`, `dcterms`, `owl`, `rdf`, `rdfs`, `sh`, `skos`, `xsd`), plus `ont` for the base IRI (the Turtle's empty prefix). Every node is in `@graph`, one node per line, sorted by `@id`; blank nodes have labels derived from the element ID (`_:<element-id>-<part>`). Readers should parse it as JSON-LD, not rely on the line layout.
 - **`level-1.md`, `level-2.md`, `level-3.md`**: human-readable views. See [The level files](#the-level-files).
 - **`manifest.json`**: per [manifest.schema.json](manifest.schema.json): `ontology`, `variant`, `version` (governed: semantic version; raw: `raw+<short git sha>`), `built_at`, `source_commit`, `counts` {`by_type`, `by_status`, `by_level`}, and `files`, the `sha256:` checksum of every other file in the folder.
 - **`CHANGELOG.md`** (governed only): for each published version, newest first, the elements added, changed, deprecated and removed against the previous governed version, by ID and label.
@@ -87,7 +88,7 @@ Terms are not separate resources: a term is the label (`skos:prefLabel`, `skos:a
 ## The level files
 
 - **Levels are cumulative:** `level-2.md` holds everything in `level-1.md` plus the level-2 elements; `level-3.md` holds every element of the release. Ignorable and deprecated elements are in no level file.
-- **Sections, in order:** title and version; a taxonomy diagram (Mermaid `flowchart TB`, is-a); a concept-relation diagram (Mermaid `flowchart LR`); catalogues of concepts (labels, synonyms, definition), relations and rules; an **Evidence** appendix.
+- **Sections, in order:** title and version; a taxonomy diagram (Mermaid `flowchart TB`, is-a; concepts without an is-a link in it sit in a "Not linked yet" box, and large families and boxes are laid out in rows near 16:9); a concept-relation diagram (Mermaid `flowchart LR`, with the is-a links as edges labelled "is a", child to parent); catalogues of concepts (labels, synonyms, definition), relations and rules; an **Evidence** appendix.
 - **Large diagrams:** a diagram with more than 40 nodes is split into one diagram per top-level concept.
 - **Evidence links:** every catalogue entry links to `#su_…`. The Evidence appendix has one anchor `<a id="su_…"></a>` per cited unit, with its text and location, so every link resolves inside the same file.
 - **Raw release:** every element that is not approved carries a text badge (`● proposed`, `◐ waiting for approval`) and a dashed Mermaid class.
@@ -99,7 +100,7 @@ Terms are not separate resources: a term is the label (`skos:prefLabel`, `skos:a
 - **Deterministic.** Two builds from the same records give byte-identical files, apart from `built_at` in `manifest.json`. Git diffs therefore show only real changes.
 - **Stable IDs.** IDs are minted, opaque and never derived from a unit's text or position. An ID is never reused, and an approved element is never deleted: it is deprecated, optionally with a replacement.
 - **Evidence.** Every element in a release cites at least one source unit that exists in `00_sources/`.
-- **Governed means approved.** `01_governed/` contains approved and deprecated elements only, and a publish fails rather than publish an approved element that refers to an element that is not approved.
+- **Governed means approved.** `01_governed/` contains approved and deprecated elements only (never an ignorable one), and a publish fails rather than publish an approved element that refers to an element that is not approved.
 - **No personal data.** User names are handles; only corpus text and user statements are stored.
 
 ## Versioning

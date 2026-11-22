@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX1
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMW
+id: cn_01M82H7HBZP5REB8E6N9M29JTN
+label: building
+level: level-2
+level_reason: Buildings A, B and C covered by the rules.
+origin:
+  created_at: '2026-11-22T21:05:11.553158Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed

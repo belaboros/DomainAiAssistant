@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCN
+id: rl_01M82GKFJ96730WAHGQQD3M95M
+label: lists
+level: level-3
+level_reason: Special case of dangerous breeds.
+object: cn_01M82GKFJ96730WAHGQQD3M95D
+origin:
+  created_at: '2026-11-22T20:54:14.346270Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+predicate_label: lists
+status: proposed
+subject: cn_01M82GKFJ96730WAHGQQD3M95F

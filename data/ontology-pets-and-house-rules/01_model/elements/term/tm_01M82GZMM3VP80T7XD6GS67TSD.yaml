@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GXF5BZJDB4QGXVFMJEB33
+id: tm_01M82GZMM3VP80T7XD6GS67TSD
+label: water bowl
+level: level-2
+level_reason: Everyday feeding equipment.
+mentions:
+- concept: cn_01M82GZMM3VP80T7XD6GS67TSP
+  unit: su_01M82GXF5BZJDB4QGXVFMJEB33
+origin:
+  created_at: '2026-11-22T21:00:52.740316Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed

@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GHYMR2WSZZZXCEPR86V3W
+id: st_01M82GV0DCSP2BSTQA19ENCPHJ
+label: Owner liable for damage
+level: level-1
+level_reason: Core responsibility every dog owner must know.
+origin:
+  created_at: '2026-11-22T20:58:20.972919Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+text: The dog owner is liable for any damage the dog causes.

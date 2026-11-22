@@ -1,0 +1,23 @@
+action: open the main door with their own key
+actor: resident
+condition: from 22:00 to 06:00 when the main doors are locked
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMW
+id: ru_01M82HCHQC6AK72JNVEQYR1KY1
+label: Residents open doors with own key
+level: level-2
+level_reason: Normal-day access to the building for residents.
+modality: must
+origin:
+  created_at: '2026-11-22T21:07:55.757805Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+refers_to:
+- cn_01M82H7HBZP5REB8E6N9M29JTG
+- cn_01M82HCHQC6AK72JNVEQYR1KXR
+- cn_01M82HCHQC6AK72JNVEQYR1KXN
+- rl_01M82HCHQC6AK72JNVEQYR1KXX
+- rl_01M82HCHQC6AK72JNVEQYR1KXY
+scope:
+- co_01M82H6T2RFZXKEGGF51P3J7NK
+status: proposed

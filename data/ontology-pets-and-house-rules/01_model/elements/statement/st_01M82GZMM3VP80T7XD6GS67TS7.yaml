@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GXF5BZJDB4QGXVFMJEB33
+id: st_01M82GZMM3VP80T7XD6GS67TS7
+label: Secure windows and balconies with a net
+level: level-2
+level_reason: Normal home safety measure for cat owners.
+origin:
+  created_at: '2026-11-22T21:00:52.740130Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed
+text: Windows and balconies are to be secured with a net.

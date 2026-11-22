@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMY
+id: st_01M82HDB2F6BK5KDQ92WEFACH5
+label: No flammable liquids in cellar
+level: level-2
+level_reason: House rule about shared spaces.
+origin:
+  created_at: '2026-11-22T21:08:21.712349Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed
+text: Flammable liquids may not be stored in the cellar compartment.

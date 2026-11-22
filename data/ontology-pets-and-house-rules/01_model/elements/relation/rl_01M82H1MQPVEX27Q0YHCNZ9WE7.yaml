@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5F7
+id: rl_01M82H1MQPVEX27Q0YHCNZ9WE7
+label: contains
+level: level-2
+level_reason: Basic care structure.
+object: cn_01M82GY6D4FG58KKX81F7CX0F4
+origin:
+  created_at: '2026-11-22T21:01:58.390889Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+predicate_label: contains
+status: proposed
+subject: cn_01M82GZMM3VP80T7XD6GS67TSK

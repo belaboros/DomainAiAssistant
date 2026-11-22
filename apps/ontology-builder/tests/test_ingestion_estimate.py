@@ -100,11 +100,25 @@ def test_run_writes_registry_verdicts_and_proposed_elements(tmp_path: Path, pet_
     assert all({ev.unit for ev in e.evidence} <= known for e in elements)
 
 
-def test_refused_while_scope_record_is_empty(tmp_path: Path, pet_kit: Any) -> None:
+@pytest.mark.parametrize("content", [None, "", "   \n", "purpose: ''\n"])
+def test_refused_while_scope_record_is_empty(
+    tmp_path: Path, pet_kit: Any, content: str | None
+) -> None:
+    """AC-1: a missing, empty or incomplete scope record refuses ingestion before any LLM call."""
     store = pet_kit.store(tmp_path / "data")
     with store.transaction() as files:
-        (files.root / "01_model" / "scope.yaml").write_text("", encoding="utf-8")
+        scope_file = files.root / "01_model" / "scope.yaml"
+        if content is None:
+            scope_file.unlink()
+        else:
+            scope_file.write_text(content, encoding="utf-8")
     client = pet_kit.client()
-    with pytest.raises(IngestionRefusedError, match="scope record is missing or empty"):
+    with pytest.raises(IngestionRefusedError, match="scope record"):
         _plan(pet_kit, store, client)
     assert client.calls == 0
+
+
+def test_refused_when_ontology_missing(tmp_path: Path, pet_kit: Any) -> None:
+    """AC-1: there is nothing to ingest into before the ontology is created."""
+    with pytest.raises(IngestionRefusedError, match="does not exist"):
+        _plan(pet_kit, DatasetStore(tmp_path / "data", "nowhere"), pet_kit.client())

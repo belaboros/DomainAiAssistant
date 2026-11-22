@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDP5
+id: cn_01M82GQHZCWYDZ4FY134N19HRB
+label: large breed
+level: level-2
+level_reason: Determines walk duration.
+origin:
+  created_at: '2026-11-22T20:56:27.885661Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed

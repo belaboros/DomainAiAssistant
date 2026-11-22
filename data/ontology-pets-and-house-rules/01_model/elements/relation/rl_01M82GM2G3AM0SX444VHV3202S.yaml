@@ -1,0 +1,17 @@
+cardinality:
+  max: 2
+  min: 2
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCQ
+id: rl_01M82GM2G3AM0SX444VHV3202S
+label: is fed twice a day
+level: level-2
+level_reason: Normal feeding schedule.
+object: cn_01M82GM2G3AM0SX444VHV3202H
+origin:
+  created_at: '2026-11-22T20:54:33.732104Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+predicate_label: is fed twice a day
+status: proposed
+subject: cn_01M82GM2G3AM0SX444VHV3202F

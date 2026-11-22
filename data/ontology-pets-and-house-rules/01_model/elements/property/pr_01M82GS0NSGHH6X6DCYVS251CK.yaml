@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDPD
+id: pr_01M82GS0NSGHH6X6DCYVS251CK
+label: Number of basic commands
+level: level-2
+level_reason: Normal training knowledge.
+name: number of basic commands
+of: cn_01M82GS0NSGHH6X6DCYVS251BV
+origin:
+  created_at: '2026-11-22T20:57:15.706846Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+value: '5'

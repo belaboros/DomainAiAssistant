@@ -1,0 +1,26 @@
+action: register the pet (dog or cat) with the house management
+actor: pet owner
+condition: within 14 days of moving in or acquiring the pet
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX7
+id: ru_01M82H94Y19DEFXTHPXP970KGN
+label: Register pet within 14 days
+level: level-1
+level_reason: Registration is a core rule every pet owner in the complex must know.
+limit:
+  comparator: le
+  unit: days
+  value: 14.0
+modality: must
+origin:
+  created_at: '2026-11-22T21:06:04.354158Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+refers_to:
+- cn_01M82H94Y19DEFXTHPXP970KGB
+- cn_01M82H7HBZP5REB8E6N9M29JTH
+- cn_01M82H94Y19DEFXTHPXP970KGH
+- rl_01M82H94Y19DEFXTHPXP970KGJ
+scope:
+- co_01M82H6T2RFZXKEGGF51P3J7NK
+status: proposed

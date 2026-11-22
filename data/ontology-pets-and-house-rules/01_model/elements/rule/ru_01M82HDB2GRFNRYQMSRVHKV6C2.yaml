@@ -1,0 +1,21 @@
+action: wash pet blankets, pet beds or other pet textiles in the shared washing machines
+actor: pet owner
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMY
+id: ru_01M82HDB2GRFNRYQMSRVHKV6C2
+label: No pet textiles in shared washing machines
+level: level-2
+level_reason: House rule for pet owners about shared spaces.
+modality: must_not
+origin:
+  created_at: '2026-11-22T21:08:21.713486Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+refers_to:
+- cn_01M82HDB2F6BK5KDQ92WEFACHR
+- cn_01M82HDB2F6BK5KDQ92WEFACHS
+- cn_01M82HDB2F6BK5KDQ92WEFACHT
+- cn_01M82HDB2F6BK5KDQ92WEFACHQ
+scope:
+- co_01M82H6T2RFZXKEGGF51P3J7NK
+status: proposed

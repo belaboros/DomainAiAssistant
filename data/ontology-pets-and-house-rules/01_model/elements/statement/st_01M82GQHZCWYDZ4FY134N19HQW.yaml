@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDP5
+id: st_01M82GQHZCWYDZ4FY134N19HQW
+label: Pick up dog waste
+level: level-1
+level_reason: Waste rule every pet owner must know.
+origin:
+  created_at: '2026-11-22T20:56:27.885195Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+text: The owner must always pick up the dog's waste and put it in a waste bin.

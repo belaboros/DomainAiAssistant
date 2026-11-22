@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCS
+id: rl_01M82GMKV1KS5PBE1QB2P99CPF
+label: is taken for
+level: level-2
+level_reason: Routine care.
+object: cn_01M82GMKV1KS5PBE1QB2P99CPD
+origin:
+  created_at: '2026-11-22T20:54:51.490587Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+predicate_label: is taken for
+status: proposed
+subject: cn_01M82GJP3CRKNX3DNJZDNANDWM

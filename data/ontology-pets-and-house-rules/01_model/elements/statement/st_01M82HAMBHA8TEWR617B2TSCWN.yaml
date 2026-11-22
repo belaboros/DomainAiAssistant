@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMP
+id: st_01M82HAMBHA8TEWR617B2TSCWN
+label: Cats roam inner yard
+level: level-2
+level_reason: Normal-day use of shared spaces by cats.
+origin:
+  created_at: '2026-11-22T21:06:52.913826Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed
+text: Cats may move freely in the inner yard.

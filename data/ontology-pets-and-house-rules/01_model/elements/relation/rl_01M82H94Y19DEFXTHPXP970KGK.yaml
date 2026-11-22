@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX7
+id: rl_01M82H94Y19DEFXTHPXP970KGK
+label: owns
+level: level-1
+level_reason: Basic link between owner and pet.
+object: cn_01M82H94Y19DEFXTHPXP970KGB
+origin:
+  created_at: '2026-11-22T21:06:04.354118Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+predicate_label: owns
+status: proposed
+subject: cn_01M82H94Y19DEFXTHPXP970KGF

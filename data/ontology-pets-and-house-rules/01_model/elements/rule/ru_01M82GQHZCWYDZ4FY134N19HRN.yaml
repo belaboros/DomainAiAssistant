@@ -1,0 +1,24 @@
+action: walk a large or working breed dog up to 2 hours a day in total
+actor: owner
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDP5
+id: ru_01M82GQHZCWYDZ4FY134N19HRN
+label: Walk time for large and working breeds
+level: level-2
+level_reason: Normal-day walking detail.
+limit:
+  comparator: le
+  unit: hours per day
+  value: 2.0
+modality: must
+origin:
+  created_at: '2026-11-22T20:56:27.886149Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+refers_to:
+- cn_01M82GQHZCWYDZ4FY134N19HRB
+- cn_01M82GQHZCWYDZ4FY134N19HRC
+- cn_01M82GQHZCWYDZ4FY134N19HRD
+scope:
+- co_01M82GHYMN49VHXB6YMXXC893Z
+status: proposed

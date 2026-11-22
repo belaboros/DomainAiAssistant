@@ -1,0 +1,12 @@
+- content_hash: sha256:49e288c9168b5c63895b01ad2a6a8dcaa7d93a479102fdc92a5475ad97600f41
+  document_id: doc_01M82H6T2T27Y7HH29TGSXAMMV
+  id: su_01M82H6T2T27Y7HH29TGSXAMMW
+  kind: paragraph
+  location:
+    heading_path:
+    - 7. Security and Access
+    index_in_section: 0
+    line_end: 3
+    line_start: 3
+    path: 07-security-and-access.md
+  text: The main doors of each building stay closed and locked from 22:00 to 06:00; residents open them with their own key. Do not let strangers into the building. Lost keys must be reported to the house management at once.

@@ -1,0 +1,20 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCQ
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDP5
+- unit: su_01M82GHYMR2WSZZZXCEPR86V3Q
+id: tm_01M82GM2G2RQN4BGFYPS36BGYG
+label: adult dog
+level: level-2
+level_reason: Names the subject of normal feeding.
+mentions:
+- concept: cn_01M82GM2G3AM0SX444VHV3202F
+  unit: su_01M82GHYMP28WWGVJCAF7BMQCQ
+- concept: cn_01M82GM2G3AM0SX444VHV3202F
+  unit: su_01M82GHYMQYRXNHXCXTMK9HDP5
+- concept: cn_01M82GM2G3AM0SX444VHV3202F
+  unit: su_01M82GHYMR2WSZZZXCEPR86V3Q
+origin:
+  created_at: '2026-11-22T20:54:33.731364Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed

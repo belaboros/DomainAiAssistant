@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GXF5BZJDB4QGXVFMJEB31
+id: tm_01M82GYVM9BBT0CS4ZCPR3ER6D
+label: vaccinated
+level: level-2
+level_reason: Vaccination is a normal-case need.
+mentions:
+- concept: cn_01M82GMKV1KS5PBE1QB2P99CPA
+  unit: su_01M82GXF5BZJDB4QGXVFMJEB31
+origin:
+  created_at: '2026-11-22T21:00:27.146884Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed

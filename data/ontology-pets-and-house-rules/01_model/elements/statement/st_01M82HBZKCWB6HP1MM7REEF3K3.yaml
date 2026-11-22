@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMT
+id: st_01M82HBZKCWB6HP1MM7REEF3K3
+label: Prams and shoes not left in shared routes
+level: level-2
+level_reason: Part of the general shared-space rule an owner meets daily.
+origin:
+  created_at: '2026-11-22T21:07:37.197054Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed
+text: Prams and shoes must not be left in stairwells, corridors or escape routes.

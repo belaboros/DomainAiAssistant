@@ -1,0 +1,15 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMH
+id: pr_01M82HA4JVD4MJZ6M8W4CVWNWS
+label: Maximum lead length
+level: level-1
+level_reason: Part of the core lead rule.
+name: maximum length
+of: cn_01M82GPB8ZK0N7S1VR303H5EPB
+origin:
+  created_at: '2026-11-22T21:06:36.765612Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed
+unit: m
+value: '2'

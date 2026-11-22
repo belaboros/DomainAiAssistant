@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMT
+id: rl_01M82HBZKCWB6HP1MM7REEF3KT
+label: is not allowed in
+level: level-3
+level_reason: General house rule not specific to pets.
+object: cn_01M82HBZKCWB6HP1MM7REEF3KE
+origin:
+  created_at: '2026-11-22T21:07:37.197732Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+predicate_label: is not allowed in
+status: proposed
+subject: cn_01M82HBZKCWB6HP1MM7REEF3KP

@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMT
+id: cn_01M82HBZKCWB6HP1MM7REEF3KE
+label: shared indoor space
+level: level-2
+level_reason: Shared spaces are level-2 per scope.
+origin:
+  created_at: '2026-11-22T21:07:37.197358Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed

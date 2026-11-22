@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMN0
+id: rl_01M82HDX94TC4A36YAZSDB0R4X
+label: is announced to
+level: level-3
+level_reason: Moving house is a special case.
+object: cn_01M82H7HBZP5REB8E6N9M29JTH
+origin:
+  created_at: '2026-11-22T21:08:40.356521Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+predicate_label: is announced to
+status: proposed
+subject: cn_01M82H4A6QBXBQ8J6YR1AX969Q

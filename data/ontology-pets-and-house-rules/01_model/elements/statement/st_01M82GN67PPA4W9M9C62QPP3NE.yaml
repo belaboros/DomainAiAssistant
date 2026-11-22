@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCV
+id: st_01M82GN67PPA4W9M9C62QPP3NE
+label: Claw trimming
+level: level-2
+level_reason: Normal grooming routine.
+origin:
+  created_at: '2026-11-22T20:55:10.327545Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+text: Trim the dog's claws when you can hear them clicking on the floor.

@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GHYMR2WSZZZXCEPR86V3Q
+id: st_01M82GSR24145KC6KF8V0HWF93
+label: Puppy alone at most 2 hours
+level: level-3
+level_reason: Puppies are a special case.
+origin:
+  created_at: '2026-11-22T20:57:39.653235Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+text: Puppies should not be left alone for more than 2 hours.

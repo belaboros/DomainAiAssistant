@@ -1,0 +1,15 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCE
+id: pr_01M82GJP3CRKNX3DNJZDNANDX4
+label: Dog lifespan
+level: level-2
+level_reason: Useful background for someone deciding to get a dog.
+name: lifespan
+of: cn_01M82GJP3CRKNX3DNJZDNANDWM
+origin:
+  created_at: '2026-11-22T20:53:48.269859Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+unit: years
+value: 10 to 15

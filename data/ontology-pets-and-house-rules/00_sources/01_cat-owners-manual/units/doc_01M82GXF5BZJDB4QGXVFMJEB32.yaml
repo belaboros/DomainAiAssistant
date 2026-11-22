@@ -1,0 +1,12 @@
+- content_hash: sha256:47ce383e33c54df2c5fa70493e8ff831d819c92ac040796c70f25f04857578c3
+  document_id: doc_01M82GXF5BZJDB4QGXVFMJEB32
+  id: su_01M82GXF5BZJDB4QGXVFMJEB33
+  kind: paragraph
+  location:
+    heading_path:
+    - 3. Home and Equipment
+    index_in_section: 0
+    line_end: 3
+    line_start: 3
+    path: 03-home-and-equipment.md
+  text: Every cat needs a litter box, a scratching post, food and water bowls placed away from the litter box, and a quiet place to sleep. Secure windows and balconies with a net, because cats can fall from height.

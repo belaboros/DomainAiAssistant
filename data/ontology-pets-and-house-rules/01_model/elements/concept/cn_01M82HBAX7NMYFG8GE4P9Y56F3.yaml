@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMR
+id: cn_01M82HBAX7NMYFG8GE4P9Y56F3
+label: waste
+level: level-2
+level_reason: General concept for the sorting scheme.
+origin:
+  created_at: '2026-11-22T21:07:16.007990Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed

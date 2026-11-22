@@ -1,0 +1,21 @@
+action: have a barbecue
+actor: resident
+condition: during quiet hours
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX5
+id: ru_01M82H8PHWWT3YCZP3DMSNG812
+label: No barbecues during quiet hours
+level: level-2
+level_reason: House rule for everyday use of the shared yard.
+modality: must_not
+origin:
+  created_at: '2026-11-22T21:05:49.628874Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+refers_to:
+- cn_01M82H83Q82K5CKBRM346N8335
+- cn_01M82H8PHWWT3YCZP3DMSNG80V
+- cn_01M82H7HBZP5REB8E6N9M29JTG
+scope:
+- co_01M82H6T2RFZXKEGGF51P3J7NK
+status: proposed

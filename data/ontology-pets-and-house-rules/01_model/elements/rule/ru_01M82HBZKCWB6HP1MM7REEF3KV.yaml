@@ -1,0 +1,24 @@
+action: keep stairwells, corridors and escape routes free of objects
+actor: resident
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMT
+id: ru_01M82HBZKCWB6HP1MM7REEF3KV
+label: Stairwells, corridors and escape routes kept free of objects
+level: level-2
+level_reason: Concerns the shared spaces an owner uses on a normal day.
+modality: must
+origin:
+  created_at: '2026-11-22T21:07:37.197755Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+refers_to:
+- cn_01M82HA4JVD4MJZ6M8W4CVWNVZ
+- cn_01M82HBZKCWB6HP1MM7REEF3KG
+- cn_01M82HBZKCWB6HP1MM7REEF3KH
+- cn_01M82HBZKCWB6HP1MM7REEF3KJ
+- rl_01M82HBZKCWB6HP1MM7REEF3KQ
+- rl_01M82HBZKCWB6HP1MM7REEF3KR
+- rl_01M82HBZKCWB6HP1MM7REEF3KS
+scope:
+- co_01M82H6T2RFZXKEGGF51P3J7NK
+status: proposed

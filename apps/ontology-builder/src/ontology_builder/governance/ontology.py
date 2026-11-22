@@ -81,20 +81,3 @@ def edit_scope(
         new=record.model_dump(mode="json", exclude_none=True),
     )
     return record, decision
-
-
-def require_scope(store: DatasetStore) -> ScopeRecord:
-    """The ontology's scope record; refuses (as ingestion must) when it is missing or empty."""
-    if not store.exists():
-        raise GovernanceRefusedError(f"the ontology {store.name!r} does not exist")
-    try:
-        scope = store.read().scope()
-    except RecordInvalidError as error:
-        raise GovernanceRefusedError(
-            "ingestion refused: the scope record is incomplete: " + "; ".join(error.problems)
-        ) from None
-    if scope is None:
-        raise GovernanceRefusedError(
-            "ingestion refused: the scope record is missing or empty; a domain admin must write it"
-        )
-    return scope

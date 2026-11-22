@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5FF
+id: tm_01M82H3S04Z53GFAPY01PTT041
+label: absence
+level: level-2
+level_reason: Leaving the pet alone.
+mentions:
+- concept: cn_01M82H3S04Z53GFAPY01PTT047
+  unit: su_01M82GXF5CK27HSSNSY54SX5FF
+origin:
+  created_at: '2026-11-22T21:03:08.292933Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed

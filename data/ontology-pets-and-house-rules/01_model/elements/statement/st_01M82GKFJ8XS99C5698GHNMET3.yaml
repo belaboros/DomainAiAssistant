@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCM
+id: st_01M82GKFJ8XS99C5698GHNMET3
+label: Long-haired breeds need more grooming
+level: level-2
+level_reason: Grooming is everyday care.
+origin:
+  created_at: '2026-11-22T20:54:14.345462Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+text: Long-haired breeds need more grooming than short-haired breeds.

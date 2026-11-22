@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX3
+id: tm_01M82H83Q82K5CKBRM346N8334
+label: public holidays
+level: level-2
+level_reason: Determines quiet hours.
+mentions:
+- concept: cn_01M82H83Q82K5CKBRM346N833D
+  unit: su_01M82H6T2SJCWQ88GWH3NA9WX3
+origin:
+  created_at: '2026-11-22T21:05:30.344951Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed

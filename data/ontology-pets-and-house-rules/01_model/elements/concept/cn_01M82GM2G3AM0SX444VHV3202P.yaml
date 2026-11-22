@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCQ
+- unit: su_01M82GXF5CK27HSSNSY54SX5F3
+id: cn_01M82GM2G3AM0SX444VHV3202P
+label: onion
+level: level-2
+level_reason: Listed poisonous food.
+origin:
+  created_at: '2026-11-22T20:54:33.731980Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+parents:
+- cn_01M82GM2G3AM0SX444VHV3202K
+status: proposed

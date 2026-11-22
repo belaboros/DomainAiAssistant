@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDNZ
+id: cn_01M82GNRCASH6DKSRYKE0WQE7Y
+label: socialisation
+level: level-3
+level_reason: Puppy-specific process (getting to know people, sounds, surfaces, traffic).
+origin:
+  created_at: '2026-11-22T20:55:28.907550Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed

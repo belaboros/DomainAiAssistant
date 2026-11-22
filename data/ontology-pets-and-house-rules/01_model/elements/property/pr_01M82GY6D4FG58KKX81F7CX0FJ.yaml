@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GXF5BZJDB4QGXVFMJEB2X
+id: pr_01M82GY6D4FG58KKX81F7CX0FJ
+label: Vet visit frequency
+level: level-2
+level_reason: Routine care schedule.
+name: frequency
+of: cn_01M82GY6D4FG58KKX81F7CX0F5
+origin:
+  created_at: '2026-11-22T21:00:05.413365Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed
+value: yearly

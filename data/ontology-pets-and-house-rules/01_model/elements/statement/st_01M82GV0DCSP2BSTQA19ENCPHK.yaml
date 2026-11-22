@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GHYMR2WSZZZXCEPR86V3W
+id: st_01M82GV0DCSP2BSTQA19ENCPHK
+label: Liability insurance recommended
+level: level-2
+level_reason: Normal-case advice for owners.
+origin:
+  created_at: '2026-11-22T20:58:20.973011Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+text: Third-party liability insurance for dog owners is strongly recommended.

@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMH
+id: st_01M82HA4JVD4MJZ6M8W4CVWNV5
+label: Maximum lead length
+level: level-1
+level_reason: Part of the core lead rule.
+origin:
+  created_at: '2026-11-22T21:06:36.763786Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed
+text: The lead may not be longer than 2 metres.

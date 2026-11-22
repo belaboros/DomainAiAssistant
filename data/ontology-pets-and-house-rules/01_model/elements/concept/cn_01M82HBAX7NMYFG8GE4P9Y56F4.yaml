@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMR
+id: cn_01M82HBAX7NMYFG8GE4P9Y56F4
+label: bin room
+level: level-2
+level_reason: Shared space used daily.
+origin:
+  created_at: '2026-11-22T21:07:16.008051Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed

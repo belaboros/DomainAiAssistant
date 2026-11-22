@@ -1,0 +1,20 @@
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDP1
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDP3
+- unit: su_01M82GHYMR2WSZZZXCEPR86V3W
+id: tm_01M82GPB8ZK0N7S1VR303H5EP5
+label: leash
+level: level-1
+level_reason: The lead is a core house-rule concept.
+mentions:
+- concept: cn_01M82GPB8ZK0N7S1VR303H5EPB
+  unit: su_01M82GHYMQYRXNHXCXTMK9HDP1
+- concept: cn_01M82GPB8ZK0N7S1VR303H5EPB
+  unit: su_01M82GHYMQYRXNHXCXTMK9HDP3
+- concept: cn_01M82GPB8ZK0N7S1VR303H5EPB
+  unit: su_01M82GHYMR2WSZZZXCEPR86V3W
+origin:
+  created_at: '2026-11-22T20:55:48.255735Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed

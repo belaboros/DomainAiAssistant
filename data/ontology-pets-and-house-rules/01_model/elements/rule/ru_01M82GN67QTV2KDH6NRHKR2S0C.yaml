@@ -1,0 +1,25 @@
+action: wash the dog's bed and blankets once a week at 60 °C
+actor: owner
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCV
+id: ru_01M82GN67QTV2KDH6NRHKR2S0C
+label: Wash bed and blankets weekly at 60 °C
+level: level-2
+level_reason: Routine hygiene for an owner.
+limit:
+  comparator: eq
+  unit: times per week
+  value: 1.0
+modality: must
+origin:
+  created_at: '2026-11-22T20:55:10.328563Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+refers_to:
+- cn_01M82GN67QTV2KDH6NRHKR2S02
+- cn_01M82GN67QTV2KDH6NRHKR2S03
+- rl_01M82GN67QTV2KDH6NRHKR2S07
+- rl_01M82GN67QTV2KDH6NRHKR2S08
+scope:
+- co_01M82GHYMN49VHXB6YMXXC893Z
+status: proposed

@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCV
+id: cn_01M82GN67QTV2KDH6NRHKR2S01
+label: claw
+level: level-2
+level_reason: Object of claw trimming.
+origin:
+  created_at: '2026-11-22T20:55:10.328106Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed

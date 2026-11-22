@@ -19,6 +19,7 @@ from ontology_builder.model import (
     Document,
     Estimate,
     IgnorableStatus,
+    RecordInvalidError,
     Role,
     RunKind,
     ScopeRecord,
@@ -67,8 +68,14 @@ class RunPlan:
 
 
 def require_scope(files: DatasetFiles, name: str) -> ScopeRecord:
-    """The scope record; a run is refused while it is missing or empty (FR-1, AC-1)."""
-    scope = files.scope()
+    """The scope record; a run is refused while it is missing, empty or incomplete (FR-1, AC-1)."""
+    try:
+        scope = files.scope()
+    except RecordInvalidError as error:
+        raise IngestionRefusedError(
+            f"ingestion into {name!r} refused: the scope record is incomplete: "
+            + "; ".join(error.problems)
+        ) from None
     if scope is None:
         raise IngestionRefusedError(
             f"ingestion into {name!r} refused: the scope record is missing or empty; "

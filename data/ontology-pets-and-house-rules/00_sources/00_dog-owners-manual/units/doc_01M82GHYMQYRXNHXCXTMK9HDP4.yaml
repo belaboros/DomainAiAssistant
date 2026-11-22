@@ -1,0 +1,12 @@
+- content_hash: sha256:428a7c5ba6df1a85bcf5b1c62b7bcdde544228255d1ab65222a32ffff5062a76
+  document_id: doc_01M82GHYMQYRXNHXCXTMK9HDP4
+  id: su_01M82GHYMQYRXNHXCXTMK9HDP5
+  kind: paragraph
+  location:
+    heading_path:
+    - 5. Walking and the Leash — 5.3 Daily Walks
+    index_in_section: 0
+    line_end: 3
+    line_start: 3
+    path: 05-walking-and-the-leash/03-daily-walks.md
+  text: 'An adult dog needs at least two walks a day: 30 to 60 minutes in total for small breeds and up to 2 hours for large and working breeds. A puppy must be taken outside to relieve itself every 2 to 3 hours. Always pick up your dog''s waste and put it in a waste bin.'

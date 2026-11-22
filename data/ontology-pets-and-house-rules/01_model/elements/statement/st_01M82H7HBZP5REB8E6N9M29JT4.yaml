@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX1
+id: st_01M82H7HBZP5REB8E6N9M29JT4
+label: Resident definition
+level: level-1
+level_reason: Defines a core actor.
+origin:
+  created_at: '2026-11-22T21:05:11.552284Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed
+text: 'A resident is anyone who lives in one of the buildings: tenants, owners and their household members.'

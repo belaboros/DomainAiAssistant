@@ -1,0 +1,20 @@
+action: take out third-party liability insurance (strongly recommended)
+actor: dog owner
+evidence:
+- unit: su_01M82GHYMR2WSZZZXCEPR86V3W
+id: ru_01M82GV0DCSP2BSTQA19ENCPJF
+label: Liability insurance strongly recommended
+level: level-2
+level_reason: Recommendation for the normal case of owning a dog.
+modality: may
+origin:
+  created_at: '2026-11-22T20:58:20.973884Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+refers_to:
+- cn_01M82GR8C6YNAW05QP8GX3MF7P
+- cn_01M82GV0DCSP2BSTQA19ENCPJ2
+- rl_01M82GV0DCSP2BSTQA19ENCPJA
+scope:
+- co_01M82GHYMN49VHXB6YMXXC893Z
+status: proposed

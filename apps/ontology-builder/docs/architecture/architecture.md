@@ -1,7 +1,7 @@
 # ontology-builder · Architecture
 
-- **Last updated:** 2026-11-21
-- **Reflects:** the design of [plan 0002](../../../../docs/specs/0002-ontology-builder/plan.md); no code yet (components are planned, not built)
+- **Last updated:** 2026-11-22
+- **Reflects:** the code built for [plan 0002](../../../../docs/specs/0002-ontology-builder/plan.md) (tasks T1–T30)
 - **Part of:** the system described in the [root architecture](../../../../docs/architecture/architecture.md)
 - **Decisions:** [app ADRs](adr/README.md) · [root ADRs](../../../../docs/architecture/adr/README.md) · **Metrics:** [latest](metrics/latest.md)
 
@@ -16,7 +16,7 @@ Builds leveled ontologies from Markdown corpora and user statements, through LLM
 - has Claude propose statements, terms, concepts, relations, rules, properties, levels, ignorable passages, synonyms and senses, each with evidence;
 - lets users review and author content in a local GUI, and a domain admin approve it;
 - commits every save to git;
-- publishes a raw and a governed release (Turtle + `level-N.md` + manifest) into `data/ontology-<name>/`.
+- publishes a raw and a governed release (`ontology.ttl`, its JSON-LD twin `ontology.jsonld`, `level-N.md`, manifest) into `data/ontology-<name>/`.
 
 **What it deliberately does not do (v1):** LLM abstraction of unstated concepts, contradiction or drift detection, diagram-based review (planned for v2), re-ingesting upgraded corpora, non-Markdown input, multi-user or server deployment, pushing to GitHub.
 
@@ -133,9 +133,9 @@ flowchart TD
   governance -->|3| store
   ingestion -->|3| extraction
   ingestion -->|3| llm
-  ingestion -->|3| model
+  ingestion -->|4| model
   ingestion -->|1| sources
-  ingestion -->|3| store
+  ingestion -->|4| store
   release -->|6| model
   release -->|2| store
   sources -->|3| model
@@ -150,6 +150,8 @@ flowchart TD
 <!-- coupling:end -->
 
 ## 5. Key runtime flows
+
+**Pending changes** (ADR-0004): `workflows.open_ontology` takes the process lock (one process per work folder) and loads the change set. Every review, authoring or statement action changes only that change set, and the journal in the work folder is rewritten after each one, with the tree hash of the dataset it was made on. A process that stops before saving loses nothing: the next open re-applies the journal, unless the dataset changed since (then it refuses until the journal is discarded). Ingest, publish, scope edits and `build` refuse while changes are pending.
 
 **Save** (ADR-0004):
 
@@ -176,11 +178,13 @@ sequenceDiagram
     end
 ```
 
-**Ingestion** (ADR-0005): estimate → user confirms → pass 1 per document as two calls, A (verdicts, statements, terms, concepts, relations) and B (rules and properties referring to A's keys), with units cited by alias (ADR-0007; cached per batch in the work folder) → pass 2 term resolution → validate → one atomic write of the units, elements and run record → raw release → commit. An interrupted run resumes from the cache.
+**Ingestion** (ADR-0005): estimate → user confirms → pass 1 per document as two calls, A (verdicts, statements, terms, concepts, relations) and B (rules and properties referring to A's keys), with units cited by alias (ADR-0007; cached per batch in the work folder) → pass 2 term resolution → validate → one atomic write of the units, elements and run record → raw release → commit. A run's concept merged into one already in the ontology, or its term with an existing term's label, **extends** that element: evidence, parents and mentions are added with an `extend` decision, and an approved element goes back to `included` (ADR-0012). An interrupted run resumes from the cache (`ingest --resume <run-id>`). Marking a passage not ignorable runs the same pipeline on just those units (on-demand extraction, FR-14), after its own estimate. Each run is one commit, with the raw release rebuilt before the swap.
 
 **Evaluation** (FR-38): `evaluation` makes a workspace whose data and work folders are temporary, and `workflows.create_scratch` creates the ontology there with the frozen pet scope record, without git. It estimates all three manuals, asks for confirmation, then ingests each as its own corpus through the same `ingestion` runs (no raw release, no commit). Only after the last run does `evaluation` load the answer key, score the dataset item by item and write the dated report to `docs/evaluations/`.
 
-**Publish:** the admin picks a version (default: the next minor) → FR-35 dependency check → governed build in staging from the approved snapshots → change log against the previous governed `ontology.ttl` → swap → commit.
+**Publish** (domain admin, GUI only): the admin picks a version (default: the next minor) → the raw release is rebuilt → FR-35 dependency check. If an approved element refers to one that is not approved, the offenders go back to the GUI and only the raw rebuild is committed. Otherwise the governed release is built in staging from the approved snapshots, with its change log against the previous governed `ontology.ttl` and a publish decision → swap → one commit `Publish ontology <name> <version>`.
+
+**Other commits:** `create` (domain admin) writes the dataset layout, the scope record and the first raw release, and removes the folder again if the commit fails; editing the scope record (domain admin) writes it with its decision and the rebuilt raw release; `build` rebuilds the raw release without a commit.
 
 **Every API request** (T19): the Host must be `127.0.0.1:<port>` or `localhost:<port>` (else 400); a write needs `X-Ontology-Builder: 1` and, if the browser sends an Origin, a local one (else 403); the session cookie names the signed-in handle and role (else 401); only the first signed-in session may write, others are read-only (403); a governing request of a user is refused before it reaches `workflows` (403), and `governance` checks the role again. One request at a time works on the open ontology (a lock in the api). The api reads through `workflows` (`index`, `detail`, `corpora`, `scope`, `run`), which returns plain data, and maps the use cases' refusals to HTTP statuses: not found 404, governance 403, workflow or ingestion refusal 409, a failed run 502, the LLM unavailable 503.
 

@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX1
+id: st_01M82H7HBZP5REB8E6N9M29JT3
+label: Scope of the rules
+level: level-1
+level_reason: Defines where the house rules apply.
+origin:
+  created_at: '2026-11-22T21:05:11.552090Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed
+text: These rules apply to buildings A, B and C around the shared inner yard.

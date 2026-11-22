@@ -1,0 +1,20 @@
+action: keep litter boxes inside the flat
+actor: cat owner
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMP
+id: ru_01M82HAMBHA8TEWR617B2TSCXB
+label: Litter boxes kept inside the flat
+level: level-1
+level_reason: Core waste-related rule every cat owner must know.
+modality: must
+origin:
+  created_at: '2026-11-22T21:06:52.914865Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+refers_to:
+- cn_01M82GZMM3VP80T7XD6GS67TSK
+- cn_01M82GKFJ96730WAHGQQD3M95G
+- rl_01M82HAMBHA8TEWR617B2TSCX7
+scope:
+- co_01M82H6T2RFZXKEGGF51P3J7NK
+status: proposed

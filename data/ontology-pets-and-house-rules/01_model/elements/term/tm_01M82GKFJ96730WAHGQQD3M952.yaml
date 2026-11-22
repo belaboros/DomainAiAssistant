@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCN
+id: tm_01M82GKFJ96730WAHGQQD3M952
+label: dangerous
+level: level-3
+level_reason: Special case.
+mentions:
+- concept: cn_01M82GKFJ96730WAHGQQD3M95D
+  unit: su_01M82GHYMP28WWGVJCAF7BMQCN
+origin:
+  created_at: '2026-11-22T20:54:14.345701Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed

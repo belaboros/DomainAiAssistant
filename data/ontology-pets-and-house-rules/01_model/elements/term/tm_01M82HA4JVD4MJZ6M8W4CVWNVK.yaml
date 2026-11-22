@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMJ
+id: tm_01M82HA4JVD4MJZ6M8W4CVWNVK
+label: building complex
+level: level-1
+level_reason: Domain setting.
+mentions:
+- concept: cn_01M82HA4JVD4MJZ6M8W4CVWNW2
+  unit: su_01M82H6T2T27Y7HH29TGSXAMMJ
+origin:
+  created_at: '2026-11-22T21:06:36.764348Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed

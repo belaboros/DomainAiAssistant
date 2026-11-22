@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDP3
+id: st_01M82GPTF0J0A1WWEWDR3G29FA
+label: Never jerk the leash
+level: level-2
+level_reason: Normal-day walking practice for owners.
+origin:
+  created_at: '2026-11-22T20:56:03.808600Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+text: The leash is never jerked.

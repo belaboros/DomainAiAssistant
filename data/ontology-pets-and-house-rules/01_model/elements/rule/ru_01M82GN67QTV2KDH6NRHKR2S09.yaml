@@ -1,0 +1,24 @@
+action: brush the dog at least once a week
+actor: owner
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCV
+id: ru_01M82GN67QTV2KDH6NRHKR2S09
+label: Brush dog at least once a week
+level: level-2
+level_reason: Normal-day grooming for an owner.
+limit:
+  comparator: ge
+  unit: times per week
+  value: 1.0
+modality: must
+origin:
+  created_at: '2026-11-22T20:55:10.328354Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+refers_to:
+- cn_01M82GJP3CRKNX3DNJZDNANDWM
+- cn_01M82GN67QTV2KDH6NRHKR2RZZ
+- rl_01M82GN67QTV2KDH6NRHKR2S06
+scope:
+- co_01M82GHYMN49VHXB6YMXXC893Z
+status: proposed

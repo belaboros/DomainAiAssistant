@@ -1,0 +1,22 @@
+action: leave prams or shoes in stairwells, corridors or escape routes
+actor: resident
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMT
+id: ru_01M82HBZKCWB6HP1MM7REEF3KX
+label: No prams or shoes in stairwells, corridors and escape routes
+level: level-2
+level_reason: A shared-space rule for residents on a normal day.
+modality: must_not
+origin:
+  created_at: '2026-11-22T21:07:37.197845Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+refers_to:
+- cn_01M82HBZKCWB6HP1MM7REEF3KM
+- cn_01M82HBZKCWB6HP1MM7REEF3KN
+- cn_01M82HA4JVD4MJZ6M8W4CVWNVZ
+- cn_01M82HBZKCWB6HP1MM7REEF3KG
+- cn_01M82HBZKCWB6HP1MM7REEF3KH
+scope:
+- co_01M82H6T2RFZXKEGGF51P3J7NK
+status: proposed

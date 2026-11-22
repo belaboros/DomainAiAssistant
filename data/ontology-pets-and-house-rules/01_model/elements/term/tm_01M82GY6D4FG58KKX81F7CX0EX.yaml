@@ -1,0 +1,17 @@
+evidence:
+- unit: su_01M82GXF5BZJDB4QGXVFMJEB2X
+- unit: su_01M82GXF5CK27HSSNSY54SX5F7
+id: tm_01M82GY6D4FG58KKX81F7CX0EX
+label: litter
+level: level-2
+level_reason: Normal-day cat care.
+mentions:
+- concept: cn_01M82GY6D4FG58KKX81F7CX0F4
+  unit: su_01M82GXF5BZJDB4QGXVFMJEB2X
+- concept: cn_01M82GY6D4FG58KKX81F7CX0F4
+  unit: su_01M82GXF5CK27HSSNSY54SX5F7
+origin:
+  created_at: '2026-11-22T21:00:05.412682Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed

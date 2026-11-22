@@ -1,0 +1,26 @@
+action: give the cat lilies, onions, chocolate or dog food
+actor: owner
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5F3
+id: ru_01M82H0CT7BJSF0Q3S0YPNSAEN
+label: Do not feed cats lilies, onions, chocolate or dog food
+level: level-2
+level_reason: Normal-day feeding knowledge for cat owners.
+modality: must_not
+origin:
+  created_at: '2026-11-22T21:01:17.512475Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+refers_to:
+- cn_01M82GY6D4FG58KKX81F7CX0F1
+- cn_01M82H0CT7BJSF0Q3S0YPNSAE6
+- cn_01M82GM2G3AM0SX444VHV3202P
+- cn_01M82GM2G3AM0SX444VHV3202M
+- cn_01M82H0CT7BJSF0Q3S0YPNSAE9
+- rl_01M82H0CT7BJSF0Q3S0YPNSAED
+- rl_01M82H0CT7BJSF0Q3S0YPNSAEF
+- rl_01M82H0CT7BJSF0Q3S0YPNSAEG
+- rl_01M82H0CT7BJSF0Q3S0YPNSAEH
+scope:
+- co_01M82GXF5A3M9Z44ZD3X2YY7HZ
+status: proposed

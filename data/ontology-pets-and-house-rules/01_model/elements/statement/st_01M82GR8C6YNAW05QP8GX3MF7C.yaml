@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDPA
+id: st_01M82GR8C6YNAW05QP8GX3MF7C
+label: Ignore unwanted behaviour
+level: level-2
+level_reason: Normal-day training practice.
+origin:
+  created_at: '2026-11-22T20:56:50.822769Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+text: Unwanted behaviour should be ignored instead of shouting.

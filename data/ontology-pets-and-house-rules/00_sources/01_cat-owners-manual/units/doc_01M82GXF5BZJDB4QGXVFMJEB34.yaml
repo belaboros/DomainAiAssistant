@@ -1,0 +1,12 @@
+- content_hash: sha256:005709d2ede15d9f555c892c7689119c5c3da50de21831cac9b00d612a07b2fc
+  document_id: doc_01M82GXF5BZJDB4QGXVFMJEB34
+  id: su_01M82GXF5CK27HSSNSY54SX5F3
+  kind: paragraph
+  location:
+    heading_path:
+    - 4. Health and Care — 4.1 Feeding
+    index_in_section: 0
+    line_end: 3
+    line_start: 3
+    path: 04-health-and-care/01-feeding.md
+  text: Feed an adult cat two to three small meals a day; kittens need four meals a day. Cats need meat-based food. Lilies, onions, chocolate and dog food are not suitable for cats; lilies are highly poisonous.

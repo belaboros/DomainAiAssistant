@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMN0
+id: tm_01M82HDX93HC2JTNXJNPKNQKN2
+label: drilling
+level: level-3
+level_reason: Renovation detail.
+mentions:
+- concept: cn_01M82H83Q82K5CKBRM346N833A
+  unit: su_01M82H6T2T27Y7HH29TGSXAMN0
+origin:
+  created_at: '2026-11-22T21:08:40.356261Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed

@@ -1,14 +1,14 @@
 # DomainAiAssistant · System architecture
 
-- **Last updated:** 2026-11-20
-- **Reflects:** no code yet; this skeleton gets filled in as apps are added and specs are planned and built
+- **Last updated:** 2026-11-22
+- **Reflects:** the apps `generate-pets-and-building-user-manual` and `ontology-builder` as built for [spec 0002](../specs/0002-ontology-builder/spec.md); the readers of the ontology (idea 0001's assistant, a validator) are not built yet
 - **Decisions:** [root ADR index](adr/README.md) · **Metrics:** [latest](metrics/latest.md)
 
 > **How to maintain this document.** This is the **system level** of a two-level architecture (ADR-0011): which applications exist, what they share (code and data), and the rules that hold across all of them. Each app's insides are described in `apps/<app>/docs/architecture/architecture.md`; don't repeat them here, link to them. It shows the *current* state; the ADRs explain how it got here. The system map in section 3 is generated from [components.json](components.json) by `tools/monorepo/system-map.sh`, and the coupling diagram in section 5 by `/arch-metrics`. Don't edit either by hand.
 
 ## 1. Purpose and scope
 
-_One paragraph: what DomainAiAssistant is for as a whole, who it serves, and how the applications relate to each other. What the monorepo deliberately does not contain. Filled in from the first approved spec._
+DomainAiAssistant turns a domain's user manuals, plus what its experts know, into material that AI tools can rely on, starting with the domain of pet ownership in a residential complex. One app holds the instructions that generated the pet and building manuals (`user-manuals-pets-and-house-rules`). `ontology-builder` reads them and, with Claude's proposals and human review, builds a leveled ontology (level-1 to level-3, plus ignorable passages) that it publishes as a raw and a governed release in the dataset `ontology-pets-and-house-rules` ([spec 0002](../specs/0002-ontology-builder/spec.md), [ADR-0019](adr/0019-ontology-builder-app-and-shared-ontology-contract.md)). Future apps, such as the ontology-backed assistant of idea 0001 or a text validator, are meant to read those releases through the [`ontology` contract](../../libs/contracts/ontology/README.md). The apps share no code and talk to each other only through datasets. The monorepo deliberately has no server deployment, no multi-user editing, no shared libraries yet (they come with the readers' specs) and nothing that pushes to GitHub on its own.
 
 ## 2. System context
 
@@ -16,22 +16,32 @@ Who uses the applications, and which external systems they depend on.
 
 ```mermaid
 flowchart LR
-    user(["👤 Users<br/><i>roles TBD</i>"])
+    user(["👤 User<br/><i>reviews, corrects, authors</i>"])
+    admin(["👤 Domain admin<br/><i>also approves, publishes</i>"])
     sys["<b>DomainAiAssistant</b><br/><i>loosely related applications</i>"]
-    ext[("External systems<br/><i>TBD</i>")]
+    claude[("Claude API")]
+    git[("Local git working copy<br/><i>committed datasets; pushed by people</i>")]
+    readers(["Future readers<br/><i>assistant, validator</i>"])
 
-    user -- "use" --> sys
-    sys -- "call" --> ext
+    user -- "browser on localhost, CLI" --> sys
+    admin -- "browser on localhost, CLI" --> sys
+    sys -- "HTTPS, Anthropic SDK" --> claude
+    sys -- "one commit per save" --> git
+    git -. "releases via the ontology contract" .-> readers
 
     classDef system fill:#1f6feb,color:#fff,stroke:#1f6feb
     classDef external fill:#eee,color:#333,stroke:#999,stroke-dasharray:4
     class sys system
-    class ext external
+    class claude,git,readers external
 ```
 
 | Actor / external system | Kind | Which apps it touches | Protocol / interface |
 |-------------------------|------|-----------------------|----------------------|
-| _User_ | person | _TBD_ | _TBD_ |
+| User | person | ontology-builder | local GUI on `127.0.0.1` (session cookie names the handle and role), CLI |
+| Domain admin | person | ontology-builder | as a user, plus governing actions and publishing (GUI only) |
+| Claude API | external service | ontology-builder (ingestion, evaluation) | Anthropic SDK over HTTPS; `ANTHROPIC_API_KEY`, `CLAUDE_MODEL` from the base `.env` |
+| Local git working copy | tool | ontology-builder (commits), every app (the repo) | `git` CLI with the repo's hooks; apps never push |
+| Future readers (idea 0001 assistant, validator) | apps, not built | read `ontology-<name>` | files of `03_release/` per the [`ontology` contract](../../libs/contracts/ontology/README.md) |
 
 ## 3. System map: applications, shared datasets, libraries
 
@@ -94,7 +104,27 @@ flowchart TD
 
 ## 6. Key cross-app flows
 
-_Sequence diagrams for flows that span several apps, typically through a shared dataset (e.g. app A publishes a dataset version, app B picks it up). Flows inside one app belong in that app's architecture document._
+**From manuals to a governed ontology.** The manuals dataset is the input; the ontology dataset is the output that future readers pick up. Each step is a git commit, so readers can pin a commit or a published version. The steps inside `ontology-builder` are in [its architecture](../../apps/ontology-builder/docs/architecture/architecture.md#5-key-runtime-flows).
+
+```mermaid
+sequenceDiagram
+    actor U as User / domain admin
+    participant M as user-manuals-pets-and-house-rules
+    participant O as ontology-builder
+    participant C as Claude API
+    participant D as ontology-pets-and-house-rules
+    participant R as Future reader
+    U->>O: ingest <folder> (after the cost estimate)
+    O->>M: read the Markdown files (contract)
+    O->>C: extraction prompts
+    C-->>O: proposed elements with evidence
+    O->>D: source units, elements, run record, raw release (one commit)
+    U->>O: review, author, save (one commit per save)
+    O->>D: records + rebuilt 03_release/00_raw/
+    U->>O: publish <version> (domain admin)
+    O->>D: 03_release/01_governed/ + CHANGELOG.md (one commit)
+    R->>D: read ontology.ttl or ontology.jsonld, level-N.md, manifest.json
+```
 
 ## 7. Cross-cutting concerns
 
@@ -103,7 +133,7 @@ _Sequence diagrams for flows that span several apps, typically through a shared 
 | Configuration and secrets | Layered `.env` files; secrets only in git-ignored `.env` files or the process environment | [ADR-0012](adr/0012-layered-environment-configuration.md), [ADR-0008](adr/0008-security-checks-for-a-public-repository.md) |
 | Shared data | Owned datasets with versioned contracts under `${SHARED_DATA_DIR}` | [ADR-0013](adr/0013-shared-data-through-owned-datasets-and-contracts.md) |
 | LLM access | `ANTHROPIC_API_KEY` and `CLAUDE_MODEL` from the base `.env`; apps may override the model | [ADR-0012](adr/0012-layered-environment-configuration.md) |
-| Error handling | _TBD_ | |
-| Logging and observability | `LOG_LEVEL` from the base `.env`; _rest TBD_ | |
-| Security and privacy | _TBD_ | |
+| Error handling | Writes to a dataset are all-or-nothing: a change is staged, swapped in, then committed, and swapped back if a hook or git refuses (ontology-builder/ADR-0004). A refused use case is a message, not a stack trace: exit code 1 in the CLI, a 4xx/5xx with the reason in the API. An interrupted LLM run resumes from its cache | [ontology-builder/ADR-0004](../../apps/ontology-builder/docs/architecture/adr/0004-pending-change-set-atomic-save-one-commit.md) |
+| Logging and observability | `LOG_LEVEL` from the base `.env`. The durable record is in the datasets and git, not in log files: git history for every change, `02_decisions/<date>.jsonl` for every review and governance decision, `02_decisions/runs/` for each LLM run (model, tokens in and out, status), and the release manifest for what a release was built from | [ADR-0013](adr/0013-shared-data-through-owned-datasets-and-contracts.md) |
+| Security and privacy | Public repo: gitleaks and the other checks run locally and in CI, secrets only in git-ignored `.env` files. Apps run locally only: the GUI binds to `127.0.0.1` and checks the Host, the Origin and a custom header on writes; roles are self-declared (no real authentication in v1). Users are recorded by handle, never by name or email. Apps never push and never bypass hooks | [ADR-0008](adr/0008-security-checks-for-a-public-repository.md), [ADR-0009](adr/0009-github-repository-protection.md), [spec 0002](../specs/0002-ontology-builder/spec.md) |
 | Testing strategy | Test-first, per acceptance criterion; contract tests for every dataset reader | [ADR-0002](adr/0002-specification-driven-development.md), [ADR-0013](adr/0013-shared-data-through-owned-datasets-and-contracts.md) |

@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX1
+id: cn_01M82H7HBZP5REB8E6N9M29JTQ
+label: house rules
+level: level-1
+level_reason: The rules of the complex.
+origin:
+  created_at: '2026-11-22T21:05:11.553217Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed

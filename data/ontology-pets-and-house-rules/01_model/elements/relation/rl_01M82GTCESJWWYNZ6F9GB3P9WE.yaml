@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GHYMR2WSZZZXCEPR86V3T
+id: rl_01M82GTCESJWWYNZ6F9GB3P9WE
+label: requires
+level: level-3
+level_reason: Travel requirement.
+object: cn_01M82GMKV1KS5PBE1QB2P99CPB
+origin:
+  created_at: '2026-11-22T20:58:00.539403Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+predicate_label: requires
+status: proposed
+subject: cn_01M82GTCESJWWYNZ6F9GB3P9W8

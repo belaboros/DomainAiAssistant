@@ -1,0 +1,21 @@
+action: make sure that their pet does not disturb other residents
+actor: pet owner
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX7
+id: ru_01M82H94Y19DEFXTHPXP970KGP
+label: Pet must not disturb residents
+level: level-1
+level_reason: A basic house rule every pet owner must know.
+modality: must
+origin:
+  created_at: '2026-11-22T21:06:04.354236Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+refers_to:
+- cn_01M82H94Y19DEFXTHPXP970KGF
+- cn_01M82H94Y19DEFXTHPXP970KGB
+- cn_01M82H7HBZP5REB8E6N9M29JTG
+- rl_01M82H94Y19DEFXTHPXP970KGM
+scope:
+- co_01M82H6T2RFZXKEGGF51P3J7NK
+status: proposed

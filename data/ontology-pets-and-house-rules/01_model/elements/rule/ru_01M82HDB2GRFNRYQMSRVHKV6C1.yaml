@@ -1,0 +1,21 @@
+action: book a slot on the list at the door
+actor: resident
+condition: when using the shared laundry room
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMY
+id: ru_01M82HDB2GRFNRYQMSRVHKV6C1
+label: Book a laundry slot
+level: level-2
+level_reason: Normal use of a shared space.
+modality: must
+origin:
+  created_at: '2026-11-22T21:08:21.713453Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+refers_to:
+- cn_01M82HDB2F6BK5KDQ92WEFACHV
+- cn_01M82HDB2GRFNRYQMSRVHKV6BR
+- rl_01M82HDB2GRFNRYQMSRVHKV6BX
+scope:
+- co_01M82H6T2RFZXKEGGF51P3J7NK
+status: proposed

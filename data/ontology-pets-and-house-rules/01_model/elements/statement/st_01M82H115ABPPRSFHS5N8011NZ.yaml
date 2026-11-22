@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5F5
+id: st_01M82H115ABPPRSFHS5N8011NZ
+label: Rabies vaccination renewed yearly
+level: level-2
+level_reason: Vaccination is normal-day owner knowledge.
+origin:
+  created_at: '2026-11-22T21:01:38.346981Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed
+text: The rabies vaccination of an outdoor cat is renewed every year.

@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDP1
+id: tm_01M82GPB8ZK0N7S1VR303H5EP8
+label: harness
+level: level-2
+level_reason: Walking equipment.
+mentions:
+- concept: cn_01M82GPB8ZK0N7S1VR303H5EPE
+  unit: su_01M82GHYMQYRXNHXCXTMK9HDP1
+origin:
+  created_at: '2026-11-22T20:55:48.255833Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed

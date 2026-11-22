@@ -1,0 +1,12 @@
+- content_hash: sha256:2aeb7d45d4a1ef680f78a4805eb7d0c7a77472d572d75e4a895ad30ac442d9a6
+  document_id: doc_01M82H6T2T27Y7HH29TGSXAMMN
+  id: su_01M82H6T2T27Y7HH29TGSXAMMP
+  kind: paragraph
+  location:
+    heading_path:
+    - 4. Pets — 4.3 Cats
+    index_in_section: 0
+    line_end: 3
+    line_start: 3
+    path: 04-pets/03-cats.md
+  text: Cats may move freely in the inner yard. Cats may not be kept in the stairwells or the cellar. Litter boxes must be kept inside the flat.

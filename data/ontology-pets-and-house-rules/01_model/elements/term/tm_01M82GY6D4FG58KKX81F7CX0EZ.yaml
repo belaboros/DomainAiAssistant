@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GXF5BZJDB4QGXVFMJEB2X
+id: tm_01M82GY6D4FG58KKX81F7CX0EZ
+label: someone to look after the cat
+level: level-3
+level_reason: Needed for travel, a special case.
+mentions:
+- concept: cn_01M82GY6D4FG58KKX81F7CX0F6
+  unit: su_01M82GXF5BZJDB4QGXVFMJEB2X
+origin:
+  created_at: '2026-11-22T21:00:05.412735Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed

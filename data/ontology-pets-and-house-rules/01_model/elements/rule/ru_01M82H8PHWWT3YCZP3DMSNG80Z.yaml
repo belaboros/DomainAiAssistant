@@ -1,0 +1,19 @@
+action: play in the inner yard
+actor: children
+condition: between 08:00 and 20:00
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX5
+id: ru_01M82H8PHWWT3YCZP3DMSNG80Z
+label: Children may play in the inner yard during set hours
+level: level-2
+level_reason: Normal-day use of the shared inner yard.
+modality: may
+origin:
+  created_at: '2026-11-22T21:05:49.628740Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+refers_to:
+- cn_01M82H7HBZP5REB8E6N9M29JTP
+scope:
+- co_01M82H6T2RFZXKEGGF51P3J7NK
+status: proposed

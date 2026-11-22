@@ -1,0 +1,13 @@
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX1
+id: cn_01M82H7HBZP5REB8E6N9M29JTJ
+label: tenant
+level: level-2
+level_reason: Subtype of resident.
+origin:
+  created_at: '2026-11-22T21:05:11.553068Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+parents:
+- cn_01M82H7HBZP5REB8E6N9M29JTG
+status: proposed

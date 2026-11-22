@@ -1,5 +1,14 @@
 # Changelog · ontology contract family
 
+## 0.2.2 · 2026-11-22
+- Level files: the concept-relation diagram also draws the is-a links ("is a", child to parent); the taxonomy puts unlinked concepts in a "Not linked yet" box and lays large families and boxes out in rows near 16:9 (spec 0002, Q64, Q65). Diagrams only; no data changed.
+
+## 0.2.1 · 2026-11-22
+- Clarification: the governed release, like the raw one, leaves out elements whose level is `ignorable` (spec 0002 review). The releases did not change.
+
+## 0.2.0 · 2026-11-22
+- Both releases also hold `ontology.jsonld`, the graph of `ontology.ttl` as JSON-LD (spec 0002, FR-37); the manifest lists it. Readers that ignore unknown files are not affected.
+
 ## 0.1.0 · 2026-11-21
 - Contract created (plan 0002, ADR-0019); owner `ontology-builder`.
 - Layout of `00_sources/` (corpora `00`–`89`, `90_user_statements/`) and `03_release/` (`00_raw/`, `01_governed/`).

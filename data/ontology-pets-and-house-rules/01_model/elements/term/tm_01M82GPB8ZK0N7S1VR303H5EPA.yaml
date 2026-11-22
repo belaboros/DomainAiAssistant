@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDP1
+id: tm_01M82GPB8ZK0N7S1VR303H5EPA
+label: busy street
+level: level-2
+level_reason: Context for leash choice.
+mentions:
+- concept: cn_01M82GPB8ZK0N7S1VR303H5EPG
+  unit: su_01M82GHYMQYRXNHXCXTMK9HDP1
+origin:
+  created_at: '2026-11-22T20:55:48.255883Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed

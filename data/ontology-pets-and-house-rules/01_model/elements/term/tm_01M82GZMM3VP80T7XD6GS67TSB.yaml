@@ -1,0 +1,17 @@
+evidence:
+- unit: su_01M82GXF5BZJDB4QGXVFMJEB33
+- unit: su_01M82GXF5CK27HSSNSY54SX5FB
+id: tm_01M82GZMM3VP80T7XD6GS67TSB
+label: scratching post
+level: level-2
+level_reason: Everyday cat equipment.
+mentions:
+- concept: cn_01M82GZMM3VP80T7XD6GS67TSM
+  unit: su_01M82GXF5BZJDB4QGXVFMJEB33
+- concept: cn_01M82GZMM3VP80T7XD6GS67TSM
+  unit: su_01M82GXF5CK27HSSNSY54SX5FB
+origin:
+  created_at: '2026-11-22T21:00:52.740260Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed

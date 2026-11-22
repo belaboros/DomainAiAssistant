@@ -1,0 +1,20 @@
+action: let strangers into the building
+actor: resident
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMW
+id: ru_01M82HCHQC6AK72JNVEQYR1KY2
+label: Do not let strangers in
+level: level-2
+level_reason: General house rule about the shared spaces.
+modality: must_not
+origin:
+  created_at: '2026-11-22T21:07:55.757839Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+refers_to:
+- cn_01M82H7HBZP5REB8E6N9M29JTG
+- cn_01M82HCHQC6AK72JNVEQYR1KXS
+- cn_01M82H7HBZP5REB8E6N9M29JTN
+scope:
+- co_01M82H6T2RFZXKEGGF51P3J7NK
+status: proposed

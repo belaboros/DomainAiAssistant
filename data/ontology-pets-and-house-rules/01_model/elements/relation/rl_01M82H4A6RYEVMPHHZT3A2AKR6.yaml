@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5FH
+id: rl_01M82H4A6RYEVMPHHZT3A2AKR6
+label: is kept in on moving day
+level: level-3
+level_reason: Moving day detail.
+object: cn_01M82H4A6QBXBQ8J6YR1AX969T
+origin:
+  created_at: '2026-11-22T21:03:25.913181Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+predicate_label: is kept in on moving day
+status: proposed
+subject: cn_01M82GY6D4FG58KKX81F7CX0F1

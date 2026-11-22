@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5FH
+id: st_01M82H4A6QBXBQ8J6YR1AX969B
+label: Outdoor cat indoors after move
+level: level-3
+level_reason: Moving house is a special case.
+origin:
+  created_at: '2026-11-22T21:03:25.912322Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed
+text: After the move, an outdoor cat is kept indoors for at least 2 weeks before it is let outside, so that it learns its new home.

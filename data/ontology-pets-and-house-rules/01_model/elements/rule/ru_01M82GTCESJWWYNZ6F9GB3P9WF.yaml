@@ -1,0 +1,26 @@
+action: travel in a crate or wear a safety harness attached to the seat belt
+actor: dog
+condition: in a car
+evidence:
+- unit: su_01M82GHYMR2WSZZZXCEPR86V3T
+id: ru_01M82GTCESJWWYNZ6F9GB3P9WF
+label: Dog secured in car
+level: level-3
+level_reason: Travel is a special case per the level guidance.
+modality: must
+origin:
+  created_at: '2026-11-22T20:58:00.539473Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+refers_to:
+- cn_01M82GJP3CRKNX3DNJZDNANDWM
+- cn_01M82GTCESJWWYNZ6F9GB3P9W1
+- cn_01M82GTCESJWWYNZ6F9GB3P9W2
+- cn_01M82GTCESJWWYNZ6F9GB3P9W3
+- cn_01M82GTCESJWWYNZ6F9GB3P9W4
+- rl_01M82GTCESJWWYNZ6F9GB3P9W9
+- rl_01M82GTCESJWWYNZ6F9GB3P9WA
+- rl_01M82GTCESJWWYNZ6F9GB3P9WB
+scope:
+- co_01M82GHYMN49VHXB6YMXXC893Z
+status: proposed

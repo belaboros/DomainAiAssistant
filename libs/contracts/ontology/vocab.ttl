@@ -1,4 +1,4 @@
-# The dai: vocabulary of the shared ontology contract, version 0.1.0.
+# The dai: vocabulary of the shared ontology contract, version 0.2.2.
 # Used in 03_release/*/ontology.ttl of every ontology-<name> dataset for what OWL, SKOS and SHACL
 # do not cover: importance levels, review status, evidence and the parts of a rule.
 # Readers must ignore terms they do not know (new terms are a minor version).
@@ -13,7 +13,7 @@
 
 <urn:domain-ai-assistant:vocab>
     a owl:Ontology ;
-    owl:versionInfo "0.1.0" ;
+    owl:versionInfo "0.2.2" ;
     dcterms:description "Annotations shared by every ontology built by ontology-builder (libs/contracts/ontology/)." .
 
 # ---- Classes ----------------------------------------------------------------------------------

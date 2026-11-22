@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5F7
+id: rl_01M82H1MQPVEX27Q0YHCNZ9WEA
+label: must not go into
+level: level-1
+level_reason: Core waste rule.
+object: cn_01M82H1MQPVEX27Q0YHCNZ9WE5
+origin:
+  created_at: '2026-11-22T21:01:58.390945Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+predicate_label: must not go into
+status: proposed
+subject: cn_01M82H1MQPVEX27Q0YHCNZ9WE1

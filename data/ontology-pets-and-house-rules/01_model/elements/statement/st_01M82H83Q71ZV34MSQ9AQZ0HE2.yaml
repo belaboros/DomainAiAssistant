@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX3
+id: st_01M82H83Q71ZV34MSQ9AQZ0HE2
+label: Quiet hours on weekdays
+level: level-2
+level_reason: Normal daily rule residents need to know.
+origin:
+  created_at: '2026-11-22T21:05:30.344411Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed
+text: Quiet hours are from 22:00 to 07:00 on weekdays.

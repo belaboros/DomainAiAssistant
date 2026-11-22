@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GHYMR2WSZZZXCEPR86V3R
+id: st_01M82GSR24145KC6KF8V0HWF95
+label: Training a barking dog to be alone
+level: level-3
+level_reason: Handles the problem case of a dog barking or howling while alone.
+origin:
+  created_at: '2026-11-22T20:57:39.653300Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+text: If a dog barks or howls while the owner is away, the owner should train it to be alone step by step, starting with a few minutes.

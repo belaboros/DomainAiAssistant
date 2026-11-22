@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCJ
+id: pr_01M82GKFJ96730WAHGQQD3M95V
+label: Exercise need of small companion breeds
+level: level-2
+level_reason: Normal daily care need.
+name: exercise need
+of: cn_01M82GKFJ96730WAHGQQD3M959
+origin:
+  created_at: '2026-11-22T20:54:14.346537Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+value: less

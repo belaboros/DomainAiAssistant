@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX7
+id: rl_01M82H94Y19DEFXTHPXP970KGM
+label: must not disturb
+level: level-1
+level_reason: Core obligation toward other residents.
+object: cn_01M82H7HBZP5REB8E6N9M29JTG
+origin:
+  created_at: '2026-11-22T21:06:04.354138Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+predicate_label: must not disturb
+status: proposed
+subject: cn_01M82H94Y19DEFXTHPXP970KGB

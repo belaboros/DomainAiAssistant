@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5FB
+id: st_01M82H2KZE881EPDPP32PV6RG1
+label: Litter box avoidance may signal illness
+level: level-3
+level_reason: 'Special case: a possible illness.'
+origin:
+  created_at: '2026-11-22T21:02:30.382928Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed
+text: A cat that suddenly stops using its litter box may be ill and should see a veterinarian.
