@@ -1,0 +1,8 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<urn:domain-ai-assistant:ontology:pets-and-house-rules> a owl:Ontology ;
+    dcterms:description "Explain what it takes to own a dog or a cat in a residential complex, and which house rules apply to pets and their owners." ;
+    owl:versionIRI <urn:domain-ai-assistant:ontology:pets-and-house-rules:version-raw+f391da0> ;
+    owl:versionInfo "raw+f391da0" .
+

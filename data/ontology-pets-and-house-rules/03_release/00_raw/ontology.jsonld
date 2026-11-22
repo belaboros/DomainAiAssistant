@@ -1,0 +1,19 @@
+{
+  "@context": {
+    "dai": "urn:domain-ai-assistant:vocab#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "ont": {
+      "@id": "urn:domain-ai-assistant:ontology:pets-and-house-rules:",
+      "@prefix": true
+    },
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {"@id": "urn:domain-ai-assistant:ontology:pets-and-house-rules", "@type": "owl:Ontology", "dcterms:description": "Explain what it takes to own a dog or a cat in a residential complex, and which house rules apply to pets and their owners.", "owl:versionIRI": {"@id": "ont:version-raw+f391da0"}, "owl:versionInfo": "raw+f391da0"}
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "built_at": "2026-11-22T20:47:37Z",
+  "counts": {
+    "by_level": {
+      "level-1": 0,
+      "level-2": 0,
+      "level-3": 0
+    },
+    "by_status": {
+      "approved": 0,
+      "deprecated": 0,
+      "included": 0,
+      "proposed": 0
+    },
+    "by_type": {
+      "concept": 0,
+      "property": 0,
+      "relation": 0,
+      "rule": 0,
+      "statement": 0,
+      "term": 0
+    }
+  },
+  "files": {
+    "level-1.md": "sha256:032a93b1e43cf4e48fe10a1dc25bcd4a38733a9b5d96d341d297c2733be75d0a",
+    "level-2.md": "sha256:e0275e131b9a8fbf7bf8c39bb4be83360e8ba87250d3a886126f34c4e627d359",
+    "level-3.md": "sha256:b89c9f3b2f1ae4d499a59972232aa73eb7a957c10a9d5267ec9d57183c6514cd",
+    "ontology.jsonld": "sha256:9389de29402b9b9684b1bfc21504479c7d224b840102b8c656ffabef6601ae91",
+    "ontology.ttl": "sha256:2ceae0859dc0fe020bcdea53bc15ad0ae50a3a0dcfb95611e545d0bfffe3795e"
+  },
+  "ontology": "pets-and-house-rules",
+  "source_commit": "f391da0b66abd0cab128ab00d3c06625edfd1066",
+  "variant": "raw",
+  "version": "raw+f391da0"
+}
