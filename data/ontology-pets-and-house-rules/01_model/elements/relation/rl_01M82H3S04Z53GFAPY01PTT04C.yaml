@@ -1,0 +1,16 @@
+cardinality:
+  min: 1
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5FF
+id: rl_01M82H3S04Z53GFAPY01PTT04C
+label: requires daily
+level: level-2
+level_reason: Longer absences require a visit at least once a day.
+object: cn_01M82H3S04Z53GFAPY01PTT048
+origin:
+  created_at: '2026-11-22T21:03:08.293254Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+predicate_label: requires daily
+status: proposed
+subject: cn_01M82H3S04Z53GFAPY01PTT047

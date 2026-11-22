@@ -1,0 +1,26 @@
+action: arrange for someone to visit the cat at least once a day
+actor: owner
+condition: the absence is longer than 24 hours
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5FF
+id: ru_01M82H3S04Z53GFAPY01PTT04E
+label: Arrange daily visits for longer absences
+level: level-2
+level_reason: Leaving the pet alone is normal-day owner knowledge.
+limit:
+  comparator: ge
+  unit: visits per day
+  value: 1.0
+modality: must
+origin:
+  created_at: '2026-11-22T21:03:08.293400Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+refers_to:
+- cn_01M82GY6D4FG58KKX81F7CX0F1
+- cn_01M82H3S04Z53GFAPY01PTT047
+- cn_01M82H3S04Z53GFAPY01PTT048
+- rl_01M82H3S04Z53GFAPY01PTT04C
+scope:
+- co_01M82GXF5A3M9Z44ZD3X2YY7HZ
+status: proposed

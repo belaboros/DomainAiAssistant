@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5FF
+id: st_01M82H3S04Z53GFAPY01PTT03V
+label: Daily visit for longer absences
+level: level-2
+level_reason: Leaving the pet alone is normal-day owner knowledge.
+origin:
+  created_at: '2026-11-22T21:03:08.292711Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed
+text: For absences longer than 24 hours, someone should visit the cat at least once a day.

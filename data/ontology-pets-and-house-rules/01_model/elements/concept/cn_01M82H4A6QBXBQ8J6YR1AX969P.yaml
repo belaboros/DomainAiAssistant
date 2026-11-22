@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5FH
+id: cn_01M82H4A6QBXBQ8J6YR1AX969P
+label: territory
+level: level-3
+level_reason: Explains behaviour when moving.
+origin:
+  created_at: '2026-11-22T21:03:25.912851Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed

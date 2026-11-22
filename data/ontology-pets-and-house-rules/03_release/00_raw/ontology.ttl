@@ -9,8 +9,8 @@
 
 <urn:domain-ai-assistant:ontology:pets-and-house-rules> a owl:Ontology ;
     dcterms:description "Explain what it takes to own a dog or a cat in a residential complex, and which house rules apply to pets and their owners." ;
-    owl:versionIRI <urn:domain-ai-assistant:ontology:pets-and-house-rules:version-raw+e90c876> ;
-    owl:versionInfo "raw+e90c876" .
+    owl:versionIRI <urn:domain-ai-assistant:ontology:pets-and-house-rules:version-raw+49b8a44> ;
+    owl:versionInfo "raw+49b8a44" .
 
 :cn_01M82GKFJ96730WAHGQQD3M95C a owl:Class,
         skos:Concept ;
@@ -22,31 +22,12 @@
     dai:level dai:level-2 ;
     dai:status dai:proposed .
 
-:cn_01M82GM2G3AM0SX444VHV3202M a owl:Class,
-        skos:Concept ;
-    rdfs:subClassOf :cn_01M82GM2G3AM0SX444VHV3202K ;
-    skos:broader :cn_01M82GM2G3AM0SX444VHV3202K ;
-    skos:prefLabel "chocolate" ;
-    dai:evidence :su_01M82GHYMP28WWGVJCAF7BMQCQ ;
-    dai:level dai:level-2 ;
-    dai:status dai:proposed .
-
 :cn_01M82GM2G3AM0SX444VHV3202N a owl:Class,
         skos:Concept ;
     rdfs:subClassOf :cn_01M82GM2G3AM0SX444VHV3202K ;
     skos:altLabel "grapes" ;
     skos:broader :cn_01M82GM2G3AM0SX444VHV3202K ;
     skos:prefLabel "grape" ;
-    dai:evidence :su_01M82GHYMP28WWGVJCAF7BMQCQ ;
-    dai:level dai:level-2 ;
-    dai:status dai:proposed .
-
-:cn_01M82GM2G3AM0SX444VHV3202P a owl:Class,
-        skos:Concept ;
-    rdfs:subClassOf :cn_01M82GM2G3AM0SX444VHV3202K ;
-    skos:altLabel "onions" ;
-    skos:broader :cn_01M82GM2G3AM0SX444VHV3202K ;
-    skos:prefLabel "onion" ;
     dai:evidence :su_01M82GHYMP28WWGVJCAF7BMQCQ ;
     dai:level dai:level-2 ;
     dai:status dai:proposed .
@@ -355,6 +336,160 @@
     dai:propertyValue "a few minutes" ;
     dai:status dai:proposed .
 
+:pr_01M82GY6D4FG58KKX81F7CX0FH a dai:Property ;
+    rdfs:label "Cat lifespan" ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB2X ;
+    dai:level dai:level-1 ;
+    dai:propertyName "lifespan" ;
+    dai:propertyOf :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    dai:propertyUnit "years" ;
+    dai:propertyValue "12 to 18" ;
+    dai:status dai:proposed .
+
+:pr_01M82GY6D4FG58KKX81F7CX0FJ a dai:Property ;
+    rdfs:label "Vet visit frequency" ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB2X ;
+    dai:level dai:level-2 ;
+    dai:propertyName "frequency" ;
+    dai:propertyOf :cn_01M82GY6D4FG58KKX81F7CX0F5 ;
+    dai:propertyValue "yearly" ;
+    dai:status dai:proposed .
+
+:pr_01M82GYVMAZ9K3VZWRC41RP55J a dai:Property ;
+    rdfs:label "Indoor cat lifespan compared to outdoor" ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB30 ;
+    dai:level dai:level-2 ;
+    dai:propertyName "average lifespan" ;
+    dai:propertyOf :cn_01M82GYVM9BBT0CS4ZCPR3ER6H ;
+    dai:propertyValue "longer on average" ;
+    dai:status dai:proposed .
+
+:pr_01M82H0CT7BJSF0Q3S0YPNSAEP a dai:Property ;
+    rdfs:label "Adult cat meals per day" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F3 ;
+    dai:level dai:level-2 ;
+    dai:propertyName "meals per day" ;
+    dai:propertyOf :cn_01M82H0CT7BJSF0Q3S0YPNSAE2 ;
+    dai:propertyUnit "meals per day" ;
+    dai:propertyValue "2-3" ;
+    dai:status dai:proposed .
+
+:pr_01M82H0CT7BJSF0Q3S0YPNSAEQ a dai:Property ;
+    rdfs:label "Kitten meals per day" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F3 ;
+    dai:level dai:level-3 ;
+    dai:propertyName "meals per day" ;
+    dai:propertyOf :cn_01M82H22REK3TH3893EQK4YE0S ;
+    dai:propertyUnit "meals per day" ;
+    dai:propertyValue "4" ;
+    dai:status dai:proposed .
+
+:pr_01M82H0CT7BJSF0Q3S0YPNSAER a dai:Property ;
+    rdfs:label "Adult cat meal size" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F3 ;
+    dai:level dai:level-2 ;
+    dai:propertyName "meal size" ;
+    dai:propertyOf :cn_01M82H0CT7BJSF0Q3S0YPNSAE2 ;
+    dai:propertyValue "small" ;
+    dai:status dai:proposed .
+
+:pr_01M82H0CT7BJSF0Q3S0YPNSAES a dai:Property ;
+    rdfs:label "Lily toxicity" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F3 ;
+    dai:level dai:level-2 ;
+    dai:propertyName "toxicity to cats" ;
+    dai:propertyOf :cn_01M82H0CT7BJSF0Q3S0YPNSAE6 ;
+    dai:propertyValue "highly poisonous" ;
+    dai:status dai:proposed .
+
+:pr_01M82H115ABPPRSFHS5N8011PS a dai:Property ;
+    rdfs:label "Age at first vaccinations" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F5 ;
+    dai:level dai:level-3 ;
+    dai:propertyName "age at first vaccinations" ;
+    dai:propertyOf :cn_01M82H22REK3TH3893EQK4YE0S ;
+    dai:propertyUnit "weeks" ;
+    dai:propertyValue "8" ;
+    dai:status dai:proposed .
+
+:pr_01M82H115ABPPRSFHS5N8011PT a dai:Property ;
+    rdfs:label "Rabies vaccination renewal interval" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F5 ;
+    dai:level dai:level-2 ;
+    dai:propertyName "renewal interval" ;
+    dai:propertyOf :cn_01M82GMKV1KS5PBE1QB2P99CPB ;
+    dai:propertyUnit "year" ;
+    dai:propertyValue "1" ;
+    dai:status dai:proposed .
+
+:pr_01M82H115ABPPRSFHS5N8011PV a dai:Property ;
+    rdfs:label "Neutering age" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F5 ;
+    dai:level dai:level-2 ;
+    dai:propertyName "recommended age" ;
+    dai:propertyOf :cn_01M82H115ABPPRSFHS5N8011PE ;
+    dai:propertyUnit "months" ;
+    dai:propertyValue "about 5 to 6" ;
+    dai:status dai:proposed .
+
+:pr_01M82H22REK3TH3893EQK4YE13 a dai:Property ;
+    rdfs:label "Kitten age limit" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F9 ;
+    dai:level dai:level-3 ;
+    dai:propertyName "age" ;
+    dai:propertyOf :cn_01M82H22REK3TH3893EQK4YE0S ;
+    dai:propertyUnit "months" ;
+    dai:propertyValue "younger than 6" ;
+    dai:status dai:proposed .
+
+:pr_01M82H2KZE881EPDPP32PV6RGR a dai:Property ;
+    rdfs:label "Play sessions per day" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FB ;
+    dai:level dai:level-2 ;
+    dai:propertyName "sessions per day" ;
+    dai:propertyOf :ru_01M82H2KZE881EPDPP32PV6RGN ;
+    dai:propertyUnit "times per day" ;
+    dai:propertyValue "2" ;
+    dai:status dai:proposed .
+
+:pr_01M82H394WWKSMY0HG5WFCNGAR a dai:Property ;
+    rdfs:label "Brushing frequency of short-haired cats" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FD ;
+    dai:level dai:level-2 ;
+    dai:propertyName "brushing frequency" ;
+    dai:propertyOf :cn_01M82H394WWKSMY0HG5WFCNGA8 ;
+    dai:propertyValue "once a week" ;
+    dai:status dai:proposed .
+
+:pr_01M82H394WWKSMY0HG5WFCNGAS a dai:Property ;
+    rdfs:label "Brushing frequency of long-haired cats" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FD ;
+    dai:level dai:level-2 ;
+    dai:propertyName "brushing frequency" ;
+    dai:propertyOf :cn_01M82H394WWKSMY0HG5WFCNGA9 ;
+    dai:propertyValue "every day" ;
+    dai:status dai:proposed .
+
+:pr_01M82H3S04Z53GFAPY01PTT04F a dai:Property ;
+    rdfs:label "Maximum time an adult cat can stay alone" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FF ;
+    dai:level dai:level-2 ;
+    dai:propertyName "maximum time alone" ;
+    dai:propertyOf :cn_01M82H0CT7BJSF0Q3S0YPNSAE2 ;
+    dai:propertyUnit "hours" ;
+    dai:propertyValue "24" ;
+    dai:status dai:proposed .
+
+:pr_01M82H4A6RYEVMPHHZT3A2AKRC a dai:Property ;
+    rdfs:label "Minimum indoor period after move" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FH ;
+    dai:level dai:level-3 ;
+    dai:propertyName "minimum indoor period after move" ;
+    dai:propertyOf :cn_01M82GYVM9BBT0CS4ZCPR3ER6J ;
+    dai:propertyUnit "weeks" ;
+    dai:propertyValue "2" ;
+    dai:status dai:proposed .
+
 :rl_01M82GJP3CRKNX3DNJZDNANDWX a owl:ObjectProperty ;
     rdfs:label "needs" ;
     rdfs:domain :cn_01M82GJP3CRKNX3DNJZDNANDWM ;
@@ -499,6 +634,112 @@
     rdfs:domain :cn_01M82GS0NSGHH6X6DCYVS251C5 ;
     rdfs:range :cn_01M82GKFJ96730WAHGQQD3M95D ;
     dai:evidence :su_01M82GHYMQYRXNHXCXTMK9HDPE ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82GYVMAZ9K3VZWRC41RP55B a owl:ObjectProperty ;
+    rdfs:label "needs more" ;
+    rdfs:domain :cn_01M82GYVM9BBT0CS4ZCPR3ER6H ;
+    rdfs:range :cn_01M82GYVMAZ9K3VZWRC41RP559 ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB30 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82H0CT7BJSF0Q3S0YPNSAEA-shape a sh:NodeShape ;
+    sh:property [ sh:path :rl_01M82H0CT7BJSF0Q3S0YPNSAEA ;
+            sh:qualifiedMaxCount 3 ;
+            sh:qualifiedMinCount 2 ;
+            sh:qualifiedValueShape [ sh:class :cn_01M82H0CT7BJSF0Q3S0YPNSAE4 ] ] ;
+    sh:targetClass :cn_01M82H0CT7BJSF0Q3S0YPNSAE2 .
+
+:rl_01M82H0CT7BJSF0Q3S0YPNSAEB-shape a sh:NodeShape ;
+    sh:property [ sh:path :rl_01M82H0CT7BJSF0Q3S0YPNSAEB ;
+            sh:qualifiedMaxCount 4 ;
+            sh:qualifiedMinCount 4 ;
+            sh:qualifiedValueShape [ sh:class :cn_01M82H0CT7BJSF0Q3S0YPNSAE4 ] ] ;
+    sh:targetClass :cn_01M82H22REK3TH3893EQK4YE0S .
+
+:rl_01M82H0CT7BJSF0Q3S0YPNSAEE a owl:ObjectProperty ;
+    rdfs:label "is highly poisonous to" ;
+    rdfs:domain :cn_01M82H0CT7BJSF0Q3S0YPNSAE6 ;
+    rdfs:range :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F3 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82H115ABPPRSFHS5N8011PH a owl:ObjectProperty ;
+    rdfs:label "receives first" ;
+    rdfs:domain :cn_01M82H22REK3TH3893EQK4YE0S ;
+    rdfs:range :cn_01M82GMKV1KS5PBE1QB2P99CPA ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F5 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82H1MQPVEX27Q0YHCNZ9WE6-shape a sh:NodeShape ;
+    sh:property [ sh:path :rl_01M82H1MQPVEX27Q0YHCNZ9WE6 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedValueShape [ sh:class :cn_01M82GZMM3VP80T7XD6GS67TSK ] ] ;
+    sh:targetClass :cn_01M82GY6D4FG58KKX81F7CX0F1 .
+
+:rl_01M82H1MQPVEX27Q0YHCNZ9WE7 a owl:ObjectProperty ;
+    rdfs:label "contains" ;
+    rdfs:domain :cn_01M82GZMM3VP80T7XD6GS67TSK ;
+    rdfs:range :cn_01M82GY6D4FG58KKX81F7CX0F4 ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F7 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82H22REK3TH3893EQK4YE0Z a owl:ObjectProperty ;
+    rdfs:label "learns to use" ;
+    rdfs:domain :cn_01M82H22REK3TH3893EQK4YE0S ;
+    rdfs:range :cn_01M82GZMM3VP80T7XD6GS67TSK ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F9 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82H2KZE881EPDPP32PV6RGH a owl:ObjectProperty ;
+    rdfs:label "scratches" ;
+    rdfs:domain :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    rdfs:range :cn_01M82H2KZE881EPDPP32PV6RGB ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FB ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82H2KZE881EPDPP32PV6RGJ a owl:ObjectProperty ;
+    rdfs:label "needs" ;
+    rdfs:domain :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    rdfs:range :cn_01M82GZMM3VP80T7XD6GS67TSM ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FB ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82H394WWKSMY0HG5WFCNGAG a owl:ObjectProperty ;
+    rdfs:label "grooms itself" ;
+    rdfs:domain :cn_01M82H394WWKSMY0HG5WFCNGA8 ;
+    rdfs:range :cn_01M82GKFJ96730WAHGQQD3M95H ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FD ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82H3S04Z53GFAPY01PTT04C-shape a sh:NodeShape ;
+    sh:property [ sh:path :rl_01M82H3S04Z53GFAPY01PTT04C ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedValueShape [ sh:class :cn_01M82H3S04Z53GFAPY01PTT048 ] ] ;
+    sh:targetClass :cn_01M82H3S04Z53GFAPY01PTT047 .
+
+:rl_01M82H4A6RYEVMPHHZT3A2AKR5 a owl:ObjectProperty ;
+    rdfs:label "is attached to" ;
+    rdfs:domain :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    rdfs:range :cn_01M82H4A6QBXBQ8J6YR1AX969P ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FH ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82H4A6RYEVMPHHZT3A2AKR9 a owl:ObjectProperty ;
+    rdfs:label "is part of" ;
+    rdfs:domain :cn_01M82H4A6QBXBQ8J6YR1AX969R ;
+    rdfs:range :cn_01M82H4A6QBXBQ8J6YR1AX969Q ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FH ;
     dai:level dai:level-3 ;
     dai:status dai:proposed .
 
@@ -1358,6 +1599,597 @@
     dai:scope :co_01M82GHYMN49VHXB6YMXXC893Z ;
     dai:status dai:proposed .
 
+:ru_01M82GY6D4FG58KKX81F7CX0FD a dai:Rule ;
+    rdfs:label "Cat needs daily attention, play and clean environment" ;
+    dai:action "give the cat daily attention, play and a clean environment" ;
+    dai:actor "cat owner" ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB2X ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82GY6D4FG58KKX81F7CX0F1,
+        :cn_01M82GY6D4FG58KKX81F7CX0F2 ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82GY6D4FG58KKX81F7CX0FE a dai:Rule ;
+    rdfs:label "Plan for food and litter" ;
+    dai:action "plan for food and litter for the cat" ;
+    dai:actor "cat owner" ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB2X ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82GY6D4FG58KKX81F7CX0F2,
+        :cn_01M82GY6D4FG58KKX81F7CX0F3,
+        :cn_01M82GY6D4FG58KKX81F7CX0F4,
+        :rl_01M82GY6D4FG58KKX81F7CX0F8,
+        :rl_01M82GY6D4FG58KKX81F7CX0F9 ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82GY6D4FG58KKX81F7CX0FF a dai:Rule ;
+    rdfs:label "Plan for yearly vet visits" ;
+    dai:action "plan for yearly veterinary visits" ;
+    dai:actor "cat owner" ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB2X ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82GY6D4FG58KKX81F7CX0F2,
+        :cn_01M82GY6D4FG58KKX81F7CX0F5,
+        :rl_01M82GY6D4FG58KKX81F7CX0FA ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82GY6D4FG58KKX81F7CX0FG a dai:Rule ;
+    rdfs:label "Plan for cat care during travel" ;
+    dai:action "plan for someone to look after the cat" ;
+    dai:actor "cat owner" ;
+    dai:condition "when the owner travels" ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB2X ;
+    dai:level dai:level-3 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82GY6D4FG58KKX81F7CX0F2,
+        :cn_01M82GY6D4FG58KKX81F7CX0F6,
+        :cn_01M82GY6D4FG58KKX81F7CX0F7,
+        :rl_01M82GY6D4FG58KKX81F7CX0FB,
+        :rl_01M82GY6D4FG58KKX81F7CX0FC ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82GYVMAZ9K3VZWRC41RP55E a dai:Rule ;
+    rdfs:label "Decide early between indoor and outdoor cat" ;
+    dai:action "decide early whether the cat will be an indoor cat or an outdoor cat" ;
+    dai:actor "cat owner" ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB2Z ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82GY6D4FG58KKX81F7CX0F1,
+        :cn_01M82GYVM9BBT0CS4ZCPR3ER6H,
+        :cn_01M82GYVM9BBT0CS4ZCPR3ER6J ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82GYVMAZ9K3VZWRC41RP55F a dai:Rule ;
+    rdfs:label "Indoor cat never leaves the flat" ;
+    dai:action "leave the flat" ;
+    dai:actor "indoor cat" ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB30 ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must_not ;
+    dai:refersTo :cn_01M82GKFJ96730WAHGQQD3M95G,
+        :cn_01M82GYVM9BBT0CS4ZCPR3ER6H,
+        :rl_01M82GYVMAZ9K3VZWRC41RP55A ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82GYVMAZ9K3VZWRC41RP55G a dai:Rule ;
+    rdfs:label "Outdoor cat vaccinated before first going outside" ;
+    dai:action "be vaccinated" ;
+    dai:actor "outdoor cat" ;
+    dai:condition "before it goes outside for the first time" ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB31 ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82GMKV1KS5PBE1QB2P99CPA,
+        :cn_01M82GYVM9BBT0CS4ZCPR3ER6J,
+        :rl_01M82GYVMAZ9K3VZWRC41RP55C ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82GYVMAZ9K3VZWRC41RP55H a dai:Rule ;
+    rdfs:label "Outdoor cat microchipped before first going outside" ;
+    dai:action "be microchipped" ;
+    dai:actor "outdoor cat" ;
+    dai:condition "before it goes outside for the first time" ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB31 ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82GJP3CRKNX3DNJZDNANDWP,
+        :cn_01M82GYVM9BBT0CS4ZCPR3ER6J,
+        :rl_01M82GYVMAZ9K3VZWRC41RP55D ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82GZMM3VP80T7XD6GS67TT4 a dai:Rule ;
+    rdfs:label "Provide a litter box for a cat" ;
+    dai:action "provide a litter box for the cat" ;
+    dai:actor "cat owner" ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB33 ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82GY6D4FG58KKX81F7CX0F1,
+        :cn_01M82GZMM3VP80T7XD6GS67TSK,
+        :rl_01M82GZMM3VP80T7XD6GS67TSV ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82GZMM3VP80T7XD6GS67TT5 a dai:Rule ;
+    rdfs:label "Provide a scratching post for a cat" ;
+    dai:action "provide a scratching post for the cat" ;
+    dai:actor "cat owner" ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB33 ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82GY6D4FG58KKX81F7CX0F1,
+        :cn_01M82GZMM3VP80T7XD6GS67TSM,
+        :rl_01M82GZMM3VP80T7XD6GS67TSW ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82GZMM3VP80T7XD6GS67TT6 a dai:Rule ;
+    rdfs:label "Provide food and water bowls for a cat" ;
+    dai:action "provide food and water bowls for the cat" ;
+    dai:actor "cat owner" ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB33 ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82GY6D4FG58KKX81F7CX0F1,
+        :cn_01M82GZMM3VP80T7XD6GS67TSN,
+        :cn_01M82GZMM3VP80T7XD6GS67TSP,
+        :rl_01M82GZMM3VP80T7XD6GS67TSX,
+        :rl_01M82GZMM3VP80T7XD6GS67TSY ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82GZMM3VP80T7XD6GS67TT7 a dai:Rule ;
+    rdfs:label "Place bowls away from the litter box" ;
+    dai:action "place the food and water bowls away from the litter box" ;
+    dai:actor "cat owner" ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB33 ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82GZMM3VP80T7XD6GS67TSK,
+        :cn_01M82GZMM3VP80T7XD6GS67TSN,
+        :cn_01M82GZMM3VP80T7XD6GS67TSP,
+        :rl_01M82GZMM3VP80T7XD6GS67TT0,
+        :rl_01M82GZMM3VP80T7XD6GS67TT1 ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82GZMM3VP80T7XD6GS67TT8 a dai:Rule ;
+    rdfs:label "Provide a quiet sleeping place for a cat" ;
+    dai:action "provide a quiet place to sleep for the cat" ;
+    dai:actor "cat owner" ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB33 ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82GY6D4FG58KKX81F7CX0F1,
+        :cn_01M82GZMM3VP80T7XD6GS67TSQ,
+        :rl_01M82GZMM3VP80T7XD6GS67TSZ ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82GZMM3VP80T7XD6GS67TT9 a dai:Rule ;
+    rdfs:label "Secure windows and balconies with a net" ;
+    dai:action "secure windows and balconies with a net, because cats can fall from height" ;
+    dai:actor "cat owner" ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB33 ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82GZMM3VP80T7XD6GS67TSR,
+        :cn_01M82GZMM3VP80T7XD6GS67TSS,
+        :cn_01M82GZMM3VP80T7XD6GS67TST,
+        :rl_01M82GZMM3VP80T7XD6GS67TT2,
+        :rl_01M82GZMM3VP80T7XD6GS67TT3 ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82H0CT7BJSF0Q3S0YPNSAEJ a dai:Rule ;
+    rdfs:label "Feed an adult cat two to three small meals a day" ;
+    dai:action "feed an adult cat two to three small meals a day" ;
+    dai:actor "owner" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F3 ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82H0CT7BJSF0Q3S0YPNSAE2,
+        :cn_01M82H0CT7BJSF0Q3S0YPNSAE4,
+        :rl_01M82H0CT7BJSF0Q3S0YPNSAEA ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82H0CT7BJSF0Q3S0YPNSAEJ-shape a sh:NodeShape ;
+    sh:property [ sh:path :rl_01M82H0CT7BJSF0Q3S0YPNSAEA ;
+            sh:qualifiedMaxCount 3 ;
+            sh:qualifiedMinCount 2 ;
+            sh:qualifiedValueShape [ sh:class :cn_01M82H0CT7BJSF0Q3S0YPNSAE4 ] ] ;
+    sh:targetClass :cn_01M82H0CT7BJSF0Q3S0YPNSAE2 .
+
+:ru_01M82H0CT7BJSF0Q3S0YPNSAEK a dai:Rule ;
+    rdfs:label "Feed a kitten four meals a day" ;
+    dai:action "feed a kitten four meals a day" ;
+    dai:actor "owner" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F3 ;
+    dai:level dai:level-3 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82H0CT7BJSF0Q3S0YPNSAE4,
+        :cn_01M82H22REK3TH3893EQK4YE0S,
+        :rl_01M82H0CT7BJSF0Q3S0YPNSAEB ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82H0CT7BJSF0Q3S0YPNSAEK-shape a sh:NodeShape ;
+    sh:property [ sh:path :rl_01M82H0CT7BJSF0Q3S0YPNSAEB ;
+            sh:qualifiedMaxCount 4 ;
+            sh:qualifiedMinCount 4 ;
+            sh:qualifiedValueShape [ sh:class :cn_01M82H0CT7BJSF0Q3S0YPNSAE4 ] ] ;
+    sh:targetClass :cn_01M82H22REK3TH3893EQK4YE0S .
+
+:ru_01M82H0CT7BJSF0Q3S0YPNSAEM a dai:Rule ;
+    rdfs:label "Give cats meat-based food" ;
+    dai:action "give the cat meat-based food" ;
+    dai:actor "owner" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F3 ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82GY6D4FG58KKX81F7CX0F1,
+        :cn_01M82H0CT7BJSF0Q3S0YPNSAE5,
+        :rl_01M82H0CT7BJSF0Q3S0YPNSAEC ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82H0CT7BJSF0Q3S0YPNSAEN a dai:Rule ;
+    rdfs:label "Do not feed cats lilies, onions, chocolate or dog food" ;
+    dai:action "give the cat lilies, onions, chocolate or dog food" ;
+    dai:actor "owner" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F3 ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must_not ;
+    dai:refersTo :cn_01M82GM2G3AM0SX444VHV3202M,
+        :cn_01M82GM2G3AM0SX444VHV3202P,
+        :cn_01M82GY6D4FG58KKX81F7CX0F1,
+        :cn_01M82H0CT7BJSF0Q3S0YPNSAE6,
+        :cn_01M82H0CT7BJSF0Q3S0YPNSAE9,
+        :rl_01M82H0CT7BJSF0Q3S0YPNSAED,
+        :rl_01M82H0CT7BJSF0Q3S0YPNSAEF,
+        :rl_01M82H0CT7BJSF0Q3S0YPNSAEG,
+        :rl_01M82H0CT7BJSF0Q3S0YPNSAEH ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82H115ABPPRSFHS5N8011PN a dai:Rule ;
+    rdfs:label "Outdoor cat rabies vaccination" ;
+    dai:action "be vaccinated against rabies" ;
+    dai:actor "cat that goes outdoors" ;
+    dai:condition "the cat goes outdoors" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F5 ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82GMKV1KS5PBE1QB2P99CPB,
+        :cn_01M82GYVM9BBT0CS4ZCPR3ER6J,
+        :rl_01M82H115ABPPRSFHS5N8011PJ ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82H115ABPPRSFHS5N8011PP a dai:Rule ;
+    rdfs:label "Rabies vaccination renewed every year" ;
+    dai:action "renew the rabies vaccination every year" ;
+    dai:actor "owner of a cat that goes outdoors" ;
+    dai:condition "the cat goes outdoors" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F5 ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82GMKV1KS5PBE1QB2P99CPB,
+        :cn_01M82GYVM9BBT0CS4ZCPR3ER6J ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82H115ABPPRSFHS5N8011PQ a dai:Rule ;
+    rdfs:label "Neuter the cat" ;
+    dai:action "neuter the cat at about 5 to 6 months of age" ;
+    dai:actor "cat owner" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F5 ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82GY6D4FG58KKX81F7CX0F1,
+        :cn_01M82H115ABPPRSFHS5N8011PE,
+        :rl_01M82H115ABPPRSFHS5N8011PK ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82H115ABPPRSFHS5N8011PR a dai:Rule ;
+    rdfs:label "Visit the veterinarian at least once a year" ;
+    dai:action "visit the veterinarian" ;
+    dai:actor "cat owner" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F5 ;
+    dai:level dai:level-2 ;
+    dai:limitComparator ">=" ;
+    dai:limitUnit "visit per year" ;
+    dai:limitValue 1.0 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82GMKV1KS5PBE1QB2P99CPC,
+        :cn_01M82GY6D4FG58KKX81F7CX0F5,
+        :rl_01M82H115ABPPRSFHS5N8011PM ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82H1MQPVEX27Q0YHCNZ9WEB a dai:Rule ;
+    rdfs:label "One litter box per cat plus one extra" ;
+    dai:action "provide one litter box per cat plus one extra" ;
+    dai:actor "cat owner" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F7 ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82GY6D4FG58KKX81F7CX0F1,
+        :cn_01M82GZMM3VP80T7XD6GS67TSK,
+        :rl_01M82H1MQPVEX27Q0YHCNZ9WE6 ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82H1MQPVEX27Q0YHCNZ9WEC a dai:Rule ;
+    rdfs:label "Remove clumps daily" ;
+    dai:action "remove clumps from the litter box every day" ;
+    dai:actor "cat owner" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F7 ;
+    dai:level dai:level-2 ;
+    dai:limitComparator "=" ;
+    dai:limitUnit "day" ;
+    dai:limitValue 1.0 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82GZMM3VP80T7XD6GS67TSK,
+        :cn_01M82H1MQPVEX27Q0YHCNZ9WE2 ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82H1MQPVEX27Q0YHCNZ9WED a dai:Rule ;
+    rdfs:label "Replace all litter weekly" ;
+    dai:action "replace all litter once a week" ;
+    dai:actor "cat owner" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F7 ;
+    dai:level dai:level-2 ;
+    dai:limitComparator "=" ;
+    dai:limitUnit "week" ;
+    dai:limitValue 1.0 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82GY6D4FG58KKX81F7CX0F4,
+        :cn_01M82GZMM3VP80T7XD6GS67TSK ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82H1MQPVEX27Q0YHCNZ9WEE a dai:Rule ;
+    rdfs:label "Used litter into residual waste" ;
+    dai:action "put used litter into the residual waste" ;
+    dai:actor "cat owner" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F7 ;
+    dai:level dai:level-1 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82H1MQPVEX27Q0YHCNZ9WE1,
+        :cn_01M82H1MQPVEX27Q0YHCNZ9WE3,
+        :rl_01M82H1MQPVEX27Q0YHCNZ9WE8 ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82H1MQPVEX27Q0YHCNZ9WEF a dai:Rule ;
+    rdfs:label "No used litter in toilet" ;
+    dai:action "put used litter into the toilet" ;
+    dai:actor "cat owner" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F7 ;
+    dai:level dai:level-1 ;
+    dai:modality dai:must_not ;
+    dai:refersTo :cn_01M82H1MQPVEX27Q0YHCNZ9WE1,
+        :cn_01M82H1MQPVEX27Q0YHCNZ9WE4,
+        :rl_01M82H1MQPVEX27Q0YHCNZ9WE9 ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82H1MQPVEX27Q0YHCNZ9WEG a dai:Rule ;
+    rdfs:label "No used litter in compost" ;
+    dai:action "put used litter into the compost" ;
+    dai:actor "cat owner" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F7 ;
+    dai:level dai:level-1 ;
+    dai:modality dai:must_not ;
+    dai:refersTo :cn_01M82H1MQPVEX27Q0YHCNZ9WE1,
+        :cn_01M82H1MQPVEX27Q0YHCNZ9WE5,
+        :rl_01M82H1MQPVEX27Q0YHCNZ9WEA ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82H22REK3TH3893EQK4YE11 a dai:Rule ;
+    rdfs:label "Kitten stays with mother until 12 weeks" ;
+    dai:action "leave its mother" ;
+    dai:actor "kitten" ;
+    dai:condition "before 12 weeks of age" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F9 ;
+    dai:level dai:level-3 ;
+    dai:limitComparator "<" ;
+    dai:limitUnit "weeks" ;
+    dai:limitValue 12.0 ;
+    dai:modality dai:must_not ;
+    dai:refersTo :cn_01M82H22REK3TH3893EQK4YE0S,
+        :cn_01M82H22REK3TH3893EQK4YE0V,
+        :rl_01M82H22REK3TH3893EQK4YE0Y ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82H22REK3TH3893EQK4YE12 a dai:Rule ;
+    rdfs:label "New kitten explores one room first" ;
+    dai:action "let a new kitten explore one room first, then the rest of the flat" ;
+    dai:actor "owner" ;
+    dai:condition "when a new kitten arrives" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F9 ;
+    dai:level dai:level-3 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82GKFJ96730WAHGQQD3M95G,
+        :cn_01M82H22REK3TH3893EQK4YE0S,
+        :rl_01M82H22REK3TH3893EQK4YE10 ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82H2KZE881EPDPP32PV6RGP a dai:Rule ;
+    rdfs:label "Never punish a cat physically" ;
+    dai:action "punish a cat physically" ;
+    dai:actor "owner" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FB ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must_not ;
+    dai:refersTo :cn_01M82GY6D4FG58KKX81F7CX0F1,
+        :cn_01M82GY6D4FG58KKX81F7CX0F2,
+        :cn_01M82H2KZE881EPDPP32PV6RGE ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82H2KZE881EPDPP32PV6RGQ a dai:Rule ;
+    rdfs:label "Cat avoiding litter box should see a veterinarian" ;
+    dai:action "take the cat to a veterinarian" ;
+    dai:actor "owner" ;
+    dai:condition "the cat suddenly stops using its litter box" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FB ;
+    dai:level dai:level-3 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82GMKV1KS5PBE1QB2P99CPC,
+        :cn_01M82GY6D4FG58KKX81F7CX0F1,
+        :cn_01M82GY6D4FG58KKX81F7CX0F2,
+        :cn_01M82GZMM3VP80T7XD6GS67TSK,
+        :rl_01M82H2KZE881EPDPP32PV6RGK,
+        :rl_01M82H2KZE881EPDPP32PV6RGM ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82H394WWKSMY0HG5WFCNGAN a dai:Rule ;
+    rdfs:label "Brush short-haired cats once a week" ;
+    dai:action "brush a short-haired cat once a week to reduce hair in the flat" ;
+    dai:actor "cat owner" ;
+    dai:condition "the cat is short-haired" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FD ;
+    dai:level dai:level-2 ;
+    dai:limitComparator "=" ;
+    dai:limitUnit "times per week" ;
+    dai:limitValue 1.0 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82GKFJ96730WAHGQQD3M95G,
+        :cn_01M82GN67QTV2KDH6NRHKR2RZZ,
+        :cn_01M82H394WWKSMY0HG5WFCNGA8,
+        :rl_01M82H394WWKSMY0HG5WFCNGAH ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82H394WWKSMY0HG5WFCNGAP a dai:Rule ;
+    rdfs:label "Brush long-haired cats every day" ;
+    dai:action "brush a long-haired cat every day to prevent matting" ;
+    dai:actor "cat owner" ;
+    dai:condition "the cat is long-haired" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FD ;
+    dai:level dai:level-2 ;
+    dai:limitComparator "=" ;
+    dai:limitUnit "times per day" ;
+    dai:limitValue 1.0 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82GN67QTV2KDH6NRHKR2RZZ,
+        :cn_01M82H394WWKSMY0HG5WFCNGA9,
+        :cn_01M82H394WWKSMY0HG5WFCNGAE,
+        :rl_01M82H394WWKSMY0HG5WFCNGAJ,
+        :rl_01M82H394WWKSMY0HG5WFCNGAK ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82H394WWKSMY0HG5WFCNGAQ a dai:Rule ;
+    rdfs:label "Do not bathe a cat without vet advice" ;
+    dai:action "bathe a cat" ;
+    dai:actor "cat owner" ;
+    dai:condition "unless the veterinarian advises it" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FD ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must_not ;
+    dai:refersTo :cn_01M82GMKV1KS5PBE1QB2P99CPC,
+        :cn_01M82GY6D4FG58KKX81F7CX0F1,
+        :cn_01M82H394WWKSMY0HG5WFCNGAC,
+        :rl_01M82H394WWKSMY0HG5WFCNGAM ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82H3S04Z53GFAPY01PTT04D a dai:Rule ;
+    rdfs:label "Adult cat may stay alone up to 24 hours" ;
+    dai:action "stay alone" ;
+    dai:actor "adult cat" ;
+    dai:condition "it has enough food, fresh water and a clean litter box" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FF ;
+    dai:level dai:level-2 ;
+    dai:limitComparator "<=" ;
+    dai:limitUnit "hours" ;
+    dai:limitValue 24.0 ;
+    dai:modality dai:may ;
+    dai:refersTo :cn_01M82GM2G3AM0SX444VHV3202J,
+        :cn_01M82GY6D4FG58KKX81F7CX0F3,
+        :cn_01M82GZMM3VP80T7XD6GS67TSK,
+        :cn_01M82H0CT7BJSF0Q3S0YPNSAE2,
+        :rl_01M82H3S04Z53GFAPY01PTT049,
+        :rl_01M82H3S04Z53GFAPY01PTT04A,
+        :rl_01M82H3S04Z53GFAPY01PTT04B ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82H3S04Z53GFAPY01PTT04E a dai:Rule ;
+    rdfs:label "Arrange daily visits for longer absences" ;
+    dai:action "arrange for someone to visit the cat at least once a day" ;
+    dai:actor "owner" ;
+    dai:condition "the absence is longer than 24 hours" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FF ;
+    dai:level dai:level-2 ;
+    dai:limitComparator ">=" ;
+    dai:limitUnit "visits per day" ;
+    dai:limitValue 1.0 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82GY6D4FG58KKX81F7CX0F1,
+        :cn_01M82H3S04Z53GFAPY01PTT047,
+        :cn_01M82H3S04Z53GFAPY01PTT048,
+        :rl_01M82H3S04Z53GFAPY01PTT04C ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82H4A6RYEVMPHHZT3A2AKRA a dai:Rule ;
+    rdfs:label "Keep cat in closed room with litter box on moving day" ;
+    dai:action "keep the cat in a closed room with its litter box" ;
+    dai:actor "owner" ;
+    dai:condition "on moving day" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FH ;
+    dai:level dai:level-3 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82GY6D4FG58KKX81F7CX0F1,
+        :cn_01M82GZMM3VP80T7XD6GS67TSK,
+        :cn_01M82H4A6QBXBQ8J6YR1AX969R,
+        :cn_01M82H4A6QBXBQ8J6YR1AX969T,
+        :rl_01M82H4A6RYEVMPHHZT3A2AKR6,
+        :rl_01M82H4A6RYEVMPHHZT3A2AKR7 ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
+:ru_01M82H4A6RYEVMPHHZT3A2AKRB a dai:Rule ;
+    rdfs:label "Keep outdoor cat indoors after move" ;
+    dai:action "keep an outdoor cat indoors before letting it outside, so that it learns its new home" ;
+    dai:actor "owner" ;
+    dai:condition "after the move" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FH ;
+    dai:level dai:level-3 ;
+    dai:limitComparator ">=" ;
+    dai:limitUnit "weeks" ;
+    dai:limitValue 2.0 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82GYVM9BBT0CS4ZCPR3ER6J,
+        :cn_01M82H4A6QBXBQ8J6YR1AX969Q,
+        :cn_01M82H4A6RYEVMPHHZT3A2AKR4,
+        :rl_01M82H4A6RYEVMPHHZT3A2AKR8 ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
+    dai:status dai:proposed .
+
 :st_01M82GJP3CRKNX3DNJZDNANDW8 a dai:Statement ;
     rdfs:label "A dog lives 10 to 15 years." ;
     dai:evidence :su_01M82GHYMP28WWGVJCAF7BMQCE ;
@@ -1754,6 +2586,306 @@
     dai:level dai:level-1 ;
     dai:status dai:proposed .
 
+:st_01M82GY6D3EBA09WTHVE729V27 a dai:Statement ;
+    rdfs:label "A cat lives 12 to 18 years." ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB2X ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:st_01M82GY6D4FG58KKX81F7CX0EP a dai:Statement ;
+    rdfs:label "Cats are independent." ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB2X ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82GY6D4FG58KKX81F7CX0EQ a dai:Statement ;
+    rdfs:label "Cats still need daily attention, play and a clean environment." ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB2X ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82GY6D4FG58KKX81F7CX0ER a dai:Statement ;
+    rdfs:label "A future cat owner should plan for food and litter." ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB2X ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82GY6D4FG58KKX81F7CX0ES a dai:Statement ;
+    rdfs:label "A future cat owner should plan for yearly veterinary visits." ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB2X ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82GY6D4FG58KKX81F7CX0ET a dai:Statement ;
+    rdfs:label "A future cat owner should plan for someone to look after the cat when they travel." ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB2X ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82GYVM9BBT0CS4ZCPR3ER63 a dai:Statement ;
+    rdfs:label "The owner should decide early whether the cat will be an indoor cat or an outdoor cat." ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB2Z ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82GYVM9BBT0CS4ZCPR3ER64 a dai:Statement ;
+    rdfs:label "An indoor cat never leaves the flat." ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB30 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82GYVM9BBT0CS4ZCPR3ER65 a dai:Statement ;
+    rdfs:label "On average an indoor cat lives longer." ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB30 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82GYVM9BBT0CS4ZCPR3ER66 a dai:Statement ;
+    rdfs:label "An indoor cat needs more play and climbing places." ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB30 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82GYVM9BBT0CS4ZCPR3ER67 a dai:Statement ;
+    rdfs:label "An outdoor cat goes outside on its own." ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB31 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82GYVM9BBT0CS4ZCPR3ER68 a dai:Statement ;
+    rdfs:label "An outdoor cat must be vaccinated and microchipped before it goes outside for the first time." ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB31 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82GZMM3VP80T7XD6GS67TS2 a dai:Statement ;
+    rdfs:label "Every cat needs a litter box." ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB33 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82GZMM3VP80T7XD6GS67TS3 a dai:Statement ;
+    rdfs:label "Every cat needs a scratching post." ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB33 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82GZMM3VP80T7XD6GS67TS4 a dai:Statement ;
+    rdfs:label "Every cat needs food and water bowls." ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB33 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82GZMM3VP80T7XD6GS67TS5 a dai:Statement ;
+    rdfs:label "Food and water bowls are placed away from the litter box." ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB33 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82GZMM3VP80T7XD6GS67TS6 a dai:Statement ;
+    rdfs:label "Every cat needs a quiet place to sleep." ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB33 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82GZMM3VP80T7XD6GS67TS7 a dai:Statement ;
+    rdfs:label "Windows and balconies are to be secured with a net." ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB33 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82GZMM3VP80T7XD6GS67TS8 a dai:Statement ;
+    rdfs:label "Cats can fall from height." ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB33 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82H0CT6HYQ75KPNQXY0PMEX a dai:Statement ;
+    rdfs:label "An adult cat should be fed two to three small meals a day." ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F3 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82H0CT6HYQ75KPNQXY0PMEY a dai:Statement ;
+    rdfs:label "Kittens need four meals a day." ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F3 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82H0CT6HYQ75KPNQXY0PMEZ a dai:Statement ;
+    rdfs:label "Cats need meat-based food." ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F3 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82H0CT6HYQ75KPNQXY0PMF0 a dai:Statement ;
+    rdfs:label "Lilies, onions, chocolate and dog food are not suitable for cats." ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F3 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82H0CT6HYQ75KPNQXY0PMF1 a dai:Statement ;
+    rdfs:label "Lilies are highly poisonous to cats." ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F3 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82H115ABPPRSFHS5N8011NX a dai:Statement ;
+    rdfs:label "A kitten receives its first vaccinations at 8 weeks of age." ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F5 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82H115ABPPRSFHS5N8011NY a dai:Statement ;
+    rdfs:label "A cat that goes outdoors must also be vaccinated against rabies." ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F5 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82H115ABPPRSFHS5N8011NZ a dai:Statement ;
+    rdfs:label "The rabies vaccination of an outdoor cat is renewed every year." ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F5 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82H115ABPPRSFHS5N8011P0 a dai:Statement ;
+    rdfs:label "A cat should be neutered at about 5 to 6 months of age." ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F5 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82H115ABPPRSFHS5N8011P1 a dai:Statement ;
+    rdfs:label "The cat should visit the veterinarian at least once a year." ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F5 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82H1MQPVEX27Q0YHCNZ9WDJ a dai:Statement ;
+    rdfs:label "Provide one litter box per cat plus one extra." ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F7 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82H1MQPVEX27Q0YHCNZ9WDK a dai:Statement ;
+    rdfs:label "Clumps are removed from the litter box every day." ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F7 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82H1MQPVEX27Q0YHCNZ9WDM a dai:Statement ;
+    rdfs:label "All litter is replaced once a week." ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F7 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82H1MQPVEX27Q0YHCNZ9WDN a dai:Statement ;
+    rdfs:label "Used litter goes into the residual waste, never into the toilet or the compost." ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F7 ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:st_01M82H22REK3TH3893EQK4YE0G a dai:Statement ;
+    rdfs:label "A kitten is a cat younger than 6 months." ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F9 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82H22REK3TH3893EQK4YE0H a dai:Statement ;
+    rdfs:label "Kittens should not leave their mother before 12 weeks of age." ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F9 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82H22REK3TH3893EQK4YE0J a dai:Statement ;
+    rdfs:label "A new kitten should explore one room first, then the rest of the flat." ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F9 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82H22REK3TH3893EQK4YE0K a dai:Statement ;
+    rdfs:label "Kittens learn to use the litter box quickly if it is easy to reach." ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F9 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82H2KZE881EPDPP32PV6RFY a dai:Statement ;
+    rdfs:label "An owner should play with their cat for at least 15 minutes twice a day." ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FB ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82H2KZE881EPDPP32PV6RFZ a dai:Statement ;
+    rdfs:label "A cat that scratches furniture usually needs a better scratching post, not punishment." ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FB ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82H2KZE881EPDPP32PV6RG0 a dai:Statement ;
+    rdfs:label "A cat must never be punished physically." ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FB ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82H2KZE881EPDPP32PV6RG1 a dai:Statement ;
+    rdfs:label "A cat that suddenly stops using its litter box may be ill and should see a veterinarian." ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FB ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82H394WWKSMY0HG5WFCNG9T a dai:Statement ;
+    rdfs:label "Short-haired cats groom themselves." ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FD ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82H394WWKSMY0HG5WFCNG9V a dai:Statement ;
+    rdfs:label "Short-haired cats should be brushed once a week to reduce hair in the flat." ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FD ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82H394WWKSMY0HG5WFCNG9W a dai:Statement ;
+    rdfs:label "Long-haired cats need brushing every day to prevent matting." ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FD ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82H394WWKSMY0HG5WFCNG9X a dai:Statement ;
+    rdfs:label "A cat should not be bathed unless the veterinarian advises it." ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FD ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82H3S04Z53GFAPY01PTT03T a dai:Statement ;
+    rdfs:label "An adult cat can stay alone for up to 24 hours if it has enough food, fresh water and a clean litter box." ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FF ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82H3S04Z53GFAPY01PTT03V a dai:Statement ;
+    rdfs:label "For absences longer than 24 hours, someone should visit the cat at least once a day." ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FF ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82H4A6QBXBQ8J6YR1AX9699 a dai:Statement ;
+    rdfs:label "Cats are attached to their territory." ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FH ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82H4A6QBXBQ8J6YR1AX969A a dai:Statement ;
+    rdfs:label "On moving day, the cat is kept in a closed room with its litter box." ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FH ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82H4A6QBXBQ8J6YR1AX969B a dai:Statement ;
+    rdfs:label "After the move, an outdoor cat is kept indoors for at least 2 weeks before it is let outside, so that it learns its new home." ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FH ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
 :cn_01M82GJP3CRKNX3DNJZDNANDWQ a owl:Class,
         skos:Concept ;
     skos:prefLabel "daily exercise" ;
@@ -1779,21 +2911,6 @@
         skos:Concept ;
     skos:prefLabel "veterinary care" ;
     dai:evidence :su_01M82GHYMP28WWGVJCAF7BMQCE ;
-    dai:level dai:level-2 ;
-    dai:status dai:proposed .
-
-:cn_01M82GKFJ96730WAHGQQD3M95G a owl:Class,
-        skos:Concept ;
-    skos:altLabel "flats" ;
-    skos:prefLabel "flat" ;
-    dai:evidence :su_01M82GHYMP28WWGVJCAF7BMQCJ ;
-    dai:level dai:level-2 ;
-    dai:status dai:proposed .
-
-:cn_01M82GM2G3AM0SX444VHV3202J a owl:Class,
-        skos:Concept ;
-    skos:prefLabel "fresh water" ;
-    dai:evidence :su_01M82GHYMP28WWGVJCAF7BMQCQ ;
     dai:level dai:level-2 ;
     dai:status dai:proposed .
 
@@ -1827,6 +2944,56 @@
     skos:prefLabel "unwanted behaviour" ;
     dai:evidence :su_01M82GHYMQYRXNHXCXTMK9HDPA ;
     dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82GY6D4FG58KKX81F7CX0F7 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "travel" ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB2X ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82GYVMAZ9K3VZWRC41RP559 a owl:Class,
+        skos:Concept ;
+    skos:altLabel "play and climbing places" ;
+    skos:prefLabel "play and climbing place" ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB30 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82H1MQPVEX27Q0YHCNZ9WE2 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "clump" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F7 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82H2KZE881EPDPP32PV6RGB a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "furniture" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FB ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82H2KZE881EPDPP32PV6RGE a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "punishment" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FB ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82H2KZE881EPDPP32PV6RGF a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "play" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FB ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82H4A6QBXBQ8J6YR1AX969P a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "territory" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FH ;
+    dai:level dai:level-3 ;
     dai:status dai:proposed .
 
 :rl_01M82GJP3CRKNX3DNJZDNANDWV a owl:ObjectProperty ;
@@ -2158,6 +3325,350 @@
     dai:level dai:level-2 ;
     dai:status dai:proposed .
 
+:rl_01M82GY6D4FG58KKX81F7CX0F8 a owl:ObjectProperty ;
+    rdfs:label "needs" ;
+    rdfs:domain :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    rdfs:range :cn_01M82GY6D4FG58KKX81F7CX0F3 ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB2X ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82GY6D4FG58KKX81F7CX0F9 a owl:ObjectProperty ;
+    rdfs:label "needs" ;
+    rdfs:domain :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    rdfs:range :cn_01M82GY6D4FG58KKX81F7CX0F4 ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB2X ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82GY6D4FG58KKX81F7CX0FA a owl:ObjectProperty ;
+    rdfs:label "has yearly" ;
+    rdfs:domain :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    rdfs:range :cn_01M82GY6D4FG58KKX81F7CX0F5 ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB2X ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82GY6D4FG58KKX81F7CX0FB a owl:ObjectProperty ;
+    rdfs:label "looks after" ;
+    rdfs:domain :cn_01M82GY6D4FG58KKX81F7CX0F6 ;
+    rdfs:range :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB2X ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82GY6D4FG58KKX81F7CX0FC a owl:ObjectProperty ;
+    rdfs:label "plans for during travel" ;
+    rdfs:domain :cn_01M82GY6D4FG58KKX81F7CX0F2 ;
+    rdfs:range :cn_01M82GY6D4FG58KKX81F7CX0F6 ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB2X ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82GYVMAZ9K3VZWRC41RP55A a owl:ObjectProperty ;
+    rdfs:label "never leaves" ;
+    rdfs:domain :cn_01M82GYVM9BBT0CS4ZCPR3ER6H ;
+    rdfs:range :cn_01M82GKFJ96730WAHGQQD3M95G ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB30 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82GYVMAZ9K3VZWRC41RP55C a owl:ObjectProperty ;
+    rdfs:label "must have before first going outside" ;
+    rdfs:domain :cn_01M82GYVM9BBT0CS4ZCPR3ER6J ;
+    rdfs:range :cn_01M82GMKV1KS5PBE1QB2P99CPA ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB31 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82GYVMAZ9K3VZWRC41RP55D a owl:ObjectProperty ;
+    rdfs:label "must have before first going outside" ;
+    rdfs:domain :cn_01M82GYVM9BBT0CS4ZCPR3ER6J ;
+    rdfs:range :cn_01M82GJP3CRKNX3DNJZDNANDWP ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB31 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82GZMM3VP80T7XD6GS67TSV a owl:ObjectProperty ;
+    rdfs:label "needs" ;
+    rdfs:domain :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    rdfs:range :cn_01M82GZMM3VP80T7XD6GS67TSK ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB33 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82GZMM3VP80T7XD6GS67TSW a owl:ObjectProperty ;
+    rdfs:label "needs" ;
+    rdfs:domain :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    rdfs:range :cn_01M82GZMM3VP80T7XD6GS67TSM ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB33 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82GZMM3VP80T7XD6GS67TSX a owl:ObjectProperty ;
+    rdfs:label "needs" ;
+    rdfs:domain :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    rdfs:range :cn_01M82GZMM3VP80T7XD6GS67TSN ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB33 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82GZMM3VP80T7XD6GS67TSY a owl:ObjectProperty ;
+    rdfs:label "needs" ;
+    rdfs:domain :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    rdfs:range :cn_01M82GZMM3VP80T7XD6GS67TSP ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB33 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82GZMM3VP80T7XD6GS67TSZ a owl:ObjectProperty ;
+    rdfs:label "needs" ;
+    rdfs:domain :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    rdfs:range :cn_01M82GZMM3VP80T7XD6GS67TSQ ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB33 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82GZMM3VP80T7XD6GS67TT0 a owl:ObjectProperty ;
+    rdfs:label "is placed away from" ;
+    rdfs:domain :cn_01M82GZMM3VP80T7XD6GS67TSN ;
+    rdfs:range :cn_01M82GZMM3VP80T7XD6GS67TSK ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB33 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82GZMM3VP80T7XD6GS67TT1 a owl:ObjectProperty ;
+    rdfs:label "is placed away from" ;
+    rdfs:domain :cn_01M82GZMM3VP80T7XD6GS67TSP ;
+    rdfs:range :cn_01M82GZMM3VP80T7XD6GS67TSK ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB33 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82GZMM3VP80T7XD6GS67TT2 a owl:ObjectProperty ;
+    rdfs:label "is secured with" ;
+    rdfs:domain :cn_01M82GZMM3VP80T7XD6GS67TSR ;
+    rdfs:range :cn_01M82GZMM3VP80T7XD6GS67TST ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB33 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82GZMM3VP80T7XD6GS67TT3 a owl:ObjectProperty ;
+    rdfs:label "is secured with" ;
+    rdfs:domain :cn_01M82GZMM3VP80T7XD6GS67TSS ;
+    rdfs:range :cn_01M82GZMM3VP80T7XD6GS67TST ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB33 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82H0CT7BJSF0Q3S0YPNSAEC a owl:ObjectProperty ;
+    rdfs:label "needs" ;
+    rdfs:domain :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    rdfs:range :cn_01M82H0CT7BJSF0Q3S0YPNSAE5 ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F3 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82H0CT7BJSF0Q3S0YPNSAED a owl:ObjectProperty ;
+    rdfs:label "is not suitable for" ;
+    rdfs:domain :cn_01M82H0CT7BJSF0Q3S0YPNSAE6 ;
+    rdfs:range :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F3 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82H0CT7BJSF0Q3S0YPNSAEF a owl:ObjectProperty ;
+    rdfs:label "is not suitable for" ;
+    rdfs:domain :cn_01M82GM2G3AM0SX444VHV3202P ;
+    rdfs:range :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F3 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82H0CT7BJSF0Q3S0YPNSAEG a owl:ObjectProperty ;
+    rdfs:label "is not suitable for" ;
+    rdfs:domain :cn_01M82GM2G3AM0SX444VHV3202M ;
+    rdfs:range :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F3 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82H0CT7BJSF0Q3S0YPNSAEH a owl:ObjectProperty ;
+    rdfs:label "is not suitable for" ;
+    rdfs:domain :cn_01M82H0CT7BJSF0Q3S0YPNSAE9 ;
+    rdfs:range :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F3 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82H115ABPPRSFHS5N8011PJ a owl:ObjectProperty ;
+    rdfs:label "must be vaccinated with" ;
+    rdfs:domain :cn_01M82GYVM9BBT0CS4ZCPR3ER6J ;
+    rdfs:range :cn_01M82GMKV1KS5PBE1QB2P99CPB ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F5 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82H115ABPPRSFHS5N8011PK a owl:ObjectProperty ;
+    rdfs:label "undergoes" ;
+    rdfs:domain :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    rdfs:range :cn_01M82H115ABPPRSFHS5N8011PE ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F5 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82H115ABPPRSFHS5N8011PM a owl:ObjectProperty ;
+    rdfs:label "visits" ;
+    rdfs:domain :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    rdfs:range :cn_01M82GMKV1KS5PBE1QB2P99CPC ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F5 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82H1MQPVEX27Q0YHCNZ9WE8 a owl:ObjectProperty ;
+    rdfs:label "goes into" ;
+    rdfs:domain :cn_01M82H1MQPVEX27Q0YHCNZ9WE1 ;
+    rdfs:range :cn_01M82H1MQPVEX27Q0YHCNZ9WE3 ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F7 ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:rl_01M82H1MQPVEX27Q0YHCNZ9WE9 a owl:ObjectProperty ;
+    rdfs:label "must not go into" ;
+    rdfs:domain :cn_01M82H1MQPVEX27Q0YHCNZ9WE1 ;
+    rdfs:range :cn_01M82H1MQPVEX27Q0YHCNZ9WE4 ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F7 ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:rl_01M82H1MQPVEX27Q0YHCNZ9WEA a owl:ObjectProperty ;
+    rdfs:label "must not go into" ;
+    rdfs:domain :cn_01M82H1MQPVEX27Q0YHCNZ9WE1 ;
+    rdfs:range :cn_01M82H1MQPVEX27Q0YHCNZ9WE5 ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F7 ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:rl_01M82H22REK3TH3893EQK4YE0Y a owl:ObjectProperty ;
+    rdfs:label "should not leave before 12 weeks of age" ;
+    rdfs:domain :cn_01M82H22REK3TH3893EQK4YE0S ;
+    rdfs:range :cn_01M82H22REK3TH3893EQK4YE0V ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F9 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82H22REK3TH3893EQK4YE10 a owl:ObjectProperty ;
+    rdfs:label "explores" ;
+    rdfs:domain :cn_01M82H22REK3TH3893EQK4YE0S ;
+    rdfs:range :cn_01M82GKFJ96730WAHGQQD3M95G ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F9 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82H2KZE881EPDPP32PV6RGG a owl:ObjectProperty ;
+    rdfs:label "plays with" ;
+    rdfs:domain :cn_01M82GY6D4FG58KKX81F7CX0F2 ;
+    rdfs:range :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FB ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82H2KZE881EPDPP32PV6RGK a owl:ObjectProperty ;
+    rdfs:label "uses" ;
+    rdfs:domain :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    rdfs:range :cn_01M82GZMM3VP80T7XD6GS67TSK ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FB ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82H2KZE881EPDPP32PV6RGM a owl:ObjectProperty ;
+    rdfs:label "should see" ;
+    rdfs:domain :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    rdfs:range :cn_01M82GMKV1KS5PBE1QB2P99CPC ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FB ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82H394WWKSMY0HG5WFCNGAH a owl:ObjectProperty ;
+    rdfs:label "needs weekly brushing" ;
+    rdfs:domain :cn_01M82H394WWKSMY0HG5WFCNGA8 ;
+    rdfs:range :cn_01M82GN67QTV2KDH6NRHKR2RZZ ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FD ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82H394WWKSMY0HG5WFCNGAJ a owl:ObjectProperty ;
+    rdfs:label "needs daily brushing" ;
+    rdfs:domain :cn_01M82H394WWKSMY0HG5WFCNGA9 ;
+    rdfs:range :cn_01M82GN67QTV2KDH6NRHKR2RZZ ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FD ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82H394WWKSMY0HG5WFCNGAK a owl:ObjectProperty ;
+    rdfs:label "prevents" ;
+    rdfs:domain :cn_01M82GN67QTV2KDH6NRHKR2RZZ ;
+    rdfs:range :cn_01M82H394WWKSMY0HG5WFCNGAE ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FD ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82H394WWKSMY0HG5WFCNGAM a owl:ObjectProperty ;
+    rdfs:label "advises" ;
+    rdfs:domain :cn_01M82GMKV1KS5PBE1QB2P99CPC ;
+    rdfs:range :cn_01M82H394WWKSMY0HG5WFCNGAC ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FD ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82H3S04Z53GFAPY01PTT049 a owl:ObjectProperty ;
+    rdfs:label "needs when alone" ;
+    rdfs:domain :cn_01M82H0CT7BJSF0Q3S0YPNSAE2 ;
+    rdfs:range :cn_01M82GY6D4FG58KKX81F7CX0F3 ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FF ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82H3S04Z53GFAPY01PTT04A a owl:ObjectProperty ;
+    rdfs:label "needs when alone" ;
+    rdfs:domain :cn_01M82H0CT7BJSF0Q3S0YPNSAE2 ;
+    rdfs:range :cn_01M82GM2G3AM0SX444VHV3202J ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FF ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82H3S04Z53GFAPY01PTT04B a owl:ObjectProperty ;
+    rdfs:label "needs when alone" ;
+    rdfs:domain :cn_01M82H0CT7BJSF0Q3S0YPNSAE2 ;
+    rdfs:range :cn_01M82GZMM3VP80T7XD6GS67TSK ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FF ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82H4A6RYEVMPHHZT3A2AKR6 a owl:ObjectProperty ;
+    rdfs:label "is kept in on moving day" ;
+    rdfs:domain :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    rdfs:range :cn_01M82H4A6QBXBQ8J6YR1AX969T ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FH ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82H4A6RYEVMPHHZT3A2AKR7 a owl:ObjectProperty ;
+    rdfs:label "contains" ;
+    rdfs:domain :cn_01M82H4A6QBXBQ8J6YR1AX969T ;
+    rdfs:range :cn_01M82GZMM3VP80T7XD6GS67TSK ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FH ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82H4A6RYEVMPHHZT3A2AKR8 a owl:ObjectProperty ;
+    rdfs:label "learns" ;
+    rdfs:domain :cn_01M82GYVM9BBT0CS4ZCPR3ER6J ;
+    rdfs:range :cn_01M82H4A6RYEVMPHHZT3A2AKR4 ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FH ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
 :ru_01M82GN67QTV2KDH6NRHKR2S0C a dai:Rule ;
     rdfs:label "Wash bed and blankets weekly at 60 °C" ;
     dai:action "wash the dog's bed and blankets once a week at 60 °C" ;
@@ -2173,6 +3684,23 @@
         :rl_01M82GN67QTV2KDH6NRHKR2S07,
         :rl_01M82GN67QTV2KDH6NRHKR2S08 ;
     dai:scope :co_01M82GHYMN49VHXB6YMXXC893Z ;
+    dai:status dai:proposed .
+
+:ru_01M82H2KZE881EPDPP32PV6RGN a dai:Rule ;
+    rdfs:label "Play with cat at least 15 minutes twice a day" ;
+    dai:action "play with the cat for at least 15 minutes, twice a day" ;
+    dai:actor "owner" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FB ;
+    dai:level dai:level-2 ;
+    dai:limitComparator ">=" ;
+    dai:limitUnit "minutes" ;
+    dai:limitValue 15.0 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82GY6D4FG58KKX81F7CX0F1,
+        :cn_01M82GY6D4FG58KKX81F7CX0F2,
+        :cn_01M82H2KZE881EPDPP32PV6RGF,
+        :rl_01M82H2KZE881EPDPP32PV6RGG ;
+    dai:scope :co_01M82GXF5A3M9Z44ZD3X2YY7HZ ;
     dai:status dai:proposed .
 
 :cn_01M82GKFJ96730WAHGQQD3M95F a owl:Class,
@@ -2191,10 +3719,24 @@
     dai:level dai:level-2 ;
     dai:status dai:proposed .
 
-:cn_01M82GMKV1KS5PBE1QB2P99CPC a owl:Class,
+:cn_01M82GM2G3AM0SX444VHV3202M a owl:Class,
         skos:Concept ;
-    skos:prefLabel "veterinarian" ;
-    dai:evidence :su_01M82GHYMP28WWGVJCAF7BMQCS ;
+    rdfs:subClassOf :cn_01M82GM2G3AM0SX444VHV3202K ;
+    skos:broader :cn_01M82GM2G3AM0SX444VHV3202K ;
+    skos:prefLabel "chocolate" ;
+    dai:evidence :su_01M82GHYMP28WWGVJCAF7BMQCQ,
+        :su_01M82GXF5CK27HSSNSY54SX5F3 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82GM2G3AM0SX444VHV3202P a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82GM2G3AM0SX444VHV3202K ;
+    skos:altLabel "onions" ;
+    skos:broader :cn_01M82GM2G3AM0SX444VHV3202K ;
+    skos:prefLabel "onion" ;
+    dai:evidence :su_01M82GHYMP28WWGVJCAF7BMQCQ,
+        :su_01M82GXF5CK27HSSNSY54SX5F3 ;
     dai:level dai:level-2 ;
     dai:status dai:proposed .
 
@@ -2380,6 +3922,112 @@
     dai:level dai:level-2 ;
     dai:status dai:proposed .
 
+:cn_01M82GZMM3VP80T7XD6GS67TSQ a owl:Class,
+        skos:Concept ;
+    skos:altLabel "quiet place to sleep" ;
+    skos:prefLabel "sleeping place" ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB33 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82GZMM3VP80T7XD6GS67TSR a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "window" ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB33 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82GZMM3VP80T7XD6GS67TSS a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "balcony" ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB33 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82H0CT7BJSF0Q3S0YPNSAE5 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "meat-based food" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F3 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82H0CT7BJSF0Q3S0YPNSAE9 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "dog food" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F3 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82H1MQPVEX27Q0YHCNZ9WE3 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "residual waste" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F7 ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:cn_01M82H1MQPVEX27Q0YHCNZ9WE4 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "toilet" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F7 ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:cn_01M82H1MQPVEX27Q0YHCNZ9WE5 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "compost" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F7 ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:cn_01M82H22REK3TH3893EQK4YE0V a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    skos:altLabel "mother" ;
+    skos:broader :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    skos:prefLabel "mother cat" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F9 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82H394WWKSMY0HG5WFCNGAC a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82GKFJ96730WAHGQQD3M95H ;
+    skos:altLabel "bathe" ;
+    skos:broader :cn_01M82GKFJ96730WAHGQQD3M95H ;
+    skos:prefLabel "bathing" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FD ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82H394WWKSMY0HG5WFCNGAE a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "matting" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FD ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82H4A6QBXBQ8J6YR1AX969Q a owl:Class,
+        skos:Concept ;
+    skos:altLabel "move" ;
+    skos:prefLabel "moving house" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FH ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82H4A6QBXBQ8J6YR1AX969R a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "moving day" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FH ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82H4A6RYEVMPHHZT3A2AKR4 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "new home" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FH ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
 :rl_01M82GPB8ZK0N7S1VR303H5EPH a owl:ObjectProperty ;
     rdfs:label "is used for" ;
     rdfs:domain :cn_01M82GPB8ZK0N7S1VR303H5EPB ;
@@ -2412,10 +4060,11 @@
     dai:level dai:level-2 ;
     dai:status dai:proposed .
 
-:cn_01M82GMKV1KS5PBE1QB2P99CPA a owl:Class,
+:cn_01M82GM2G3AM0SX444VHV3202J a owl:Class,
         skos:Concept ;
-    skos:prefLabel "vaccination" ;
-    dai:evidence :su_01M82GHYMP28WWGVJCAF7BMQCS ;
+    skos:prefLabel "fresh water" ;
+    dai:evidence :su_01M82GHYMP28WWGVJCAF7BMQCQ,
+        :su_01M82GXF5CK27HSSNSY54SX5FF ;
     dai:level dai:level-2 ;
     dai:status dai:proposed .
 
@@ -2424,15 +4073,6 @@
     skos:altLabel "check-up" ;
     skos:prefLabel "veterinary check-up" ;
     dai:evidence :su_01M82GHYMP28WWGVJCAF7BMQCS ;
-    dai:level dai:level-2 ;
-    dai:status dai:proposed .
-
-:cn_01M82GN67QTV2KDH6NRHKR2RZZ a owl:Class,
-        skos:Concept ;
-    rdfs:subClassOf :cn_01M82GKFJ96730WAHGQQD3M95H ;
-    skos:broader :cn_01M82GKFJ96730WAHGQQD3M95H ;
-    skos:prefLabel "brushing" ;
-    dai:evidence :su_01M82GHYMP28WWGVJCAF7BMQCV ;
     dai:level dai:level-2 ;
     dai:status dai:proposed .
 
@@ -2509,6 +4149,64 @@
     dai:level dai:level-2 ;
     dai:status dai:proposed .
 
+:cn_01M82GY6D4FG58KKX81F7CX0F6 a owl:Class,
+        skos:Concept ;
+    skos:altLabel "someone to look after the cat" ;
+    skos:prefLabel "cat sitter" ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB2X ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82GZMM3VP80T7XD6GS67TSM a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "scratching post" ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB33,
+        :su_01M82GXF5CK27HSSNSY54SX5FB ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82GZMM3VP80T7XD6GS67TST a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "net" ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB33 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82H115ABPPRSFHS5N8011PE a owl:Class,
+        skos:Concept ;
+    skos:altLabel "neuter" ;
+    skos:prefLabel "neutering" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F5 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82H394WWKSMY0HG5WFCNGA9 a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    skos:broader :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    skos:prefLabel "long-haired cat" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FD ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82H3S04Z53GFAPY01PTT047 a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :cn_01M82H3S04Z53GFAPY01PTT048 ;
+            owl:onProperty :rl_01M82H3S04Z53GFAPY01PTT04C ] ;
+    skos:prefLabel "absence" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FF ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82H4A6QBXBQ8J6YR1AX969T a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "closed room" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FH ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
 :rl_01M82GM2G3AM0SX444VHV3202S a owl:ObjectProperty ;
     rdfs:label "is fed twice a day" ;
     rdfs:domain :cn_01M82GM2G3AM0SX444VHV3202F ;
@@ -2525,13 +4223,24 @@
     dai:level dai:level-3 ;
     dai:status dai:proposed .
 
-:cn_01M82GJP3CRKNX3DNJZDNANDWP a owl:Class,
-        skos:Concept ;
-    skos:prefLabel "microchip" ;
-    dai:evidence :su_01M82GHYMP28WWGVJCAF7BMQCF,
-        :su_01M82GHYMR2WSZZZXCEPR86V3T ;
-    dai:level dai:level-1 ;
+:rl_01M82H1MQPVEX27Q0YHCNZ9WE6 a owl:ObjectProperty ;
+    rdfs:label "has" ;
+    rdfs:domain :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    rdfs:range :cn_01M82GZMM3VP80T7XD6GS67TSK ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F7 ;
+    dai:level dai:level-2 ;
     dai:status dai:proposed .
+
+:rl_01M82H3S04Z53GFAPY01PTT04C a owl:ObjectProperty ;
+    rdfs:label "requires daily" ;
+    rdfs:domain :cn_01M82H3S04Z53GFAPY01PTT047 ;
+    rdfs:range :cn_01M82H3S04Z53GFAPY01PTT048 ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FF ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:su_01M82GXF5BZJDB4QGXVFMJEB2Z a dai:SourceUnit ;
+    rdfs:label "Decide early whether your cat will be an indoor cat or an outdoor cat." .
 
 :cn_01M82GKFJ96730WAHGQQD3M959 a owl:Class,
         skos:Concept ;
@@ -2575,21 +4284,67 @@
     dai:level dai:level-2 ;
     dai:status dai:proposed .
 
-:cn_01M82GKFJ96730WAHGQQD3M95H a owl:Class,
+:cn_01M82GY6D4FG58KKX81F7CX0F3 a owl:Class,
         skos:Concept ;
-    skos:prefLabel "grooming" ;
-    dai:evidence :su_01M82GHYMP28WWGVJCAF7BMQCM,
-        :su_01M82GHYMP28WWGVJCAF7BMQCV ;
+    skos:prefLabel "food" ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB2X,
+        :su_01M82GXF5CK27HSSNSY54SX5FF ;
     dai:level dai:level-2 ;
     dai:status dai:proposed .
 
-:cn_01M82GMKV1KS5PBE1QB2P99CPB a owl:Class,
+:cn_01M82GY6D4FG58KKX81F7CX0F5 a owl:Class,
         skos:Concept ;
-    rdfs:subClassOf :cn_01M82GMKV1KS5PBE1QB2P99CPA ;
-    skos:broader :cn_01M82GMKV1KS5PBE1QB2P99CPA ;
-    skos:prefLabel "rabies vaccination" ;
-    dai:evidence :su_01M82GHYMP28WWGVJCAF7BMQCS,
-        :su_01M82GHYMR2WSZZZXCEPR86V3T ;
+    skos:prefLabel "veterinary visit" ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB2X,
+        :su_01M82GXF5CK27HSSNSY54SX5F5 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82GZMM3VP80T7XD6GS67TSN a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "food bowl" ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB33 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82GZMM3VP80T7XD6GS67TSP a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "water bowl" ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB33 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82H0CT7BJSF0Q3S0YPNSAE6 a owl:Class,
+        skos:Concept ;
+    skos:altLabel "lilies" ;
+    skos:prefLabel "lily" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F3 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82H394WWKSMY0HG5WFCNGA8 a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    skos:broader :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    skos:prefLabel "short-haired cat" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FD ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82H3S04Z53GFAPY01PTT048 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "visit" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5FF ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82GYVM9BBT0CS4ZCPR3ER6H a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    skos:broader :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    skos:definition "A cat that never leaves the flat." ;
+    skos:prefLabel "indoor cat" ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB30 ;
     dai:level dai:level-2 ;
     dai:status dai:proposed .
 
@@ -2607,6 +4362,22 @@
     rdfs:range :cn_01M82GS0NSGHH6X6DCYVS251BV ;
     dai:evidence :su_01M82GHYMQYRXNHXCXTMK9HDPD ;
     dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82H0CT7BJSF0Q3S0YPNSAEA a owl:ObjectProperty ;
+    rdfs:label "is fed" ;
+    rdfs:domain :cn_01M82H0CT7BJSF0Q3S0YPNSAE2 ;
+    rdfs:range :cn_01M82H0CT7BJSF0Q3S0YPNSAE4 ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F3 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82H0CT7BJSF0Q3S0YPNSAEB a owl:ObjectProperty ;
+    rdfs:label "needs" ;
+    rdfs:domain :cn_01M82H22REK3TH3893EQK4YE0S ;
+    rdfs:range :cn_01M82H0CT7BJSF0Q3S0YPNSAE4 ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F3 ;
+    dai:level dai:level-3 ;
     dai:status dai:proposed .
 
 :su_01M82GHYMQYRXNHXCXTMK9HDP8 a dai:SourceUnit ;
@@ -2627,6 +4398,16 @@
     dai:level dai:level-1 ;
     dai:status dai:proposed .
 
+:cn_01M82GJP3CRKNX3DNJZDNANDWP a owl:Class,
+        skos:Concept ;
+    skos:altLabel "microchipped" ;
+    skos:prefLabel "microchip" ;
+    dai:evidence :su_01M82GHYMP28WWGVJCAF7BMQCF,
+        :su_01M82GHYMR2WSZZZXCEPR86V3T,
+        :su_01M82GXF5BZJDB4QGXVFMJEB31 ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
 :cn_01M82GKFJ96730WAHGQQD3M95D a owl:Class,
         skos:Concept ;
     rdfs:subClassOf :cn_01M82GKFJ96730WAHGQQD3M958 ;
@@ -2639,6 +4420,27 @@
         :su_01M82GHYMQYRXNHXCXTMK9HDPE,
         :su_01M82GHYMR2WSZZZXCEPR86V3W ;
     dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82GKFJ96730WAHGQQD3M95G a owl:Class,
+        skos:Concept ;
+    skos:altLabel "flats" ;
+    skos:prefLabel "flat" ;
+    dai:evidence :su_01M82GHYMP28WWGVJCAF7BMQCJ,
+        :su_01M82GXF5BZJDB4QGXVFMJEB30,
+        :su_01M82GXF5CK27HSSNSY54SX5F9,
+        :su_01M82GXF5CK27HSSNSY54SX5FD ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82GMKV1KS5PBE1QB2P99CPA a owl:Class,
+        skos:Concept ;
+    skos:altLabel "vaccinated" ;
+    skos:prefLabel "vaccination" ;
+    dai:evidence :su_01M82GHYMP28WWGVJCAF7BMQCS,
+        :su_01M82GXF5BZJDB4QGXVFMJEB31,
+        :su_01M82GXF5CK27HSSNSY54SX5F5 ;
+    dai:level dai:level-2 ;
     dai:status dai:proposed .
 
 :cn_01M82GSR24145KC6KF8V0HWF9G a owl:Class,
@@ -2654,6 +4456,23 @@
     skos:prefLabel "travel abroad" ;
     dai:evidence :su_01M82GHYMR2WSZZZXCEPR86V3T ;
     dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82GY6D4FG58KKX81F7CX0F4 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "litter" ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB2X,
+        :su_01M82GXF5CK27HSSNSY54SX5F7 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82H1MQPVEX27Q0YHCNZ9WE1 a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82GY6D4FG58KKX81F7CX0F4 ;
+    skos:broader :cn_01M82GY6D4FG58KKX81F7CX0F4 ;
+    skos:prefLabel "used litter" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F7 ;
+    dai:level dai:level-1 ;
     dai:status dai:proposed .
 
 :su_01M82GHYMP28WWGVJCAF7BMQCM a dai:SourceUnit ;
@@ -2672,11 +4491,40 @@
 :su_01M82GHYMQYRXNHXCXTMK9HDP7 a dai:SourceUnit ;
     rdfs:label "Your dog looks to you for direction. Be its lead: a calm, consistent and confident leader whose signals it can trust." .
 
+:cn_01M82GKFJ96730WAHGQQD3M95H a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "grooming" ;
+    dai:evidence :su_01M82GHYMP28WWGVJCAF7BMQCM,
+        :su_01M82GHYMP28WWGVJCAF7BMQCV,
+        :su_01M82GXF5CK27HSSNSY54SX5FD ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
 :cn_01M82GM2G3AM0SX444VHV3202H a owl:Class,
         skos:Concept ;
     skos:altLabel "feed" ;
     skos:prefLabel "feeding" ;
     dai:evidence :su_01M82GHYMP28WWGVJCAF7BMQCQ ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82GMKV1KS5PBE1QB2P99CPC a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "veterinarian" ;
+    dai:evidence :su_01M82GHYMP28WWGVJCAF7BMQCS,
+        :su_01M82GXF5CK27HSSNSY54SX5F5,
+        :su_01M82GXF5CK27HSSNSY54SX5FB,
+        :su_01M82GXF5CK27HSSNSY54SX5FD ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82GN67QTV2KDH6NRHKR2RZZ a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82GKFJ96730WAHGQQD3M95H ;
+    skos:broader :cn_01M82GKFJ96730WAHGQQD3M95H ;
+    skos:prefLabel "brushing" ;
+    dai:evidence :su_01M82GHYMP28WWGVJCAF7BMQCV,
+        :su_01M82GXF5CK27HSSNSY54SX5FD ;
     dai:level dai:level-2 ;
     dai:status dai:proposed .
 
@@ -2704,11 +4552,34 @@
     dai:level dai:level-2 ;
     dai:status dai:proposed .
 
+:cn_01M82GMKV1KS5PBE1QB2P99CPB a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82GMKV1KS5PBE1QB2P99CPA ;
+    skos:altLabel "rabies" ;
+    skos:broader :cn_01M82GMKV1KS5PBE1QB2P99CPA ;
+    skos:prefLabel "rabies vaccination" ;
+    dai:evidence :su_01M82GHYMP28WWGVJCAF7BMQCS,
+        :su_01M82GHYMR2WSZZZXCEPR86V3T,
+        :su_01M82GXF5CK27HSSNSY54SX5F5 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82GY6D4FG58KKX81F7CX0F2 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "cat owner" ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB2X,
+        :su_01M82GXF5CK27HSSNSY54SX5FB ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
 :su_01M82GHYMP28WWGVJCAF7BMQCF a dai:SourceUnit ;
     rdfs:label "A dog older than 4 months must be registered with the local authority and must carry a microchip." .
 
 :su_01M82GHYMP28WWGVJCAF7BMQCN a dai:SourceUnit ;
     rdfs:label "Some breeds are classified as dangerous by the local authority. Check the local list before you choose a breed." .
+
+:su_01M82GXF5BZJDB4QGXVFMJEB31 a dai:SourceUnit ;
+    rdfs:label "An **outdoor cat** goes outside on its own. It must be vaccinated and microchipped before it goes outside for the first time." .
 
 :cn_01M82GKFJ96730WAHGQQD3M958 a owl:Class,
         skos:Concept ;
@@ -2745,6 +4616,71 @@
 :su_01M82GHYMR2WSZZZXCEPR86V3Q a dai:SourceUnit ;
     rdfs:label "Dogs are social animals. **Never leave an adult dog alone at home for more than 6 hours.** Puppies should not be left alone for more than 2 hours." .
 
+:su_01M82GXF5BZJDB4QGXVFMJEB30 a dai:SourceUnit ;
+    rdfs:label "An **indoor cat** never leaves the flat. On average it lives longer, but it needs more play and climbing places." .
+
+:cn_01M82GYVM9BBT0CS4ZCPR3ER6J a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    skos:altLabel "cat that goes outdoors" ;
+    skos:broader :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    skos:definition "A cat that goes outside on its own." ;
+    skos:prefLabel "outdoor cat" ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB31,
+        :su_01M82GXF5CK27HSSNSY54SX5F5,
+        :su_01M82GXF5CK27HSSNSY54SX5FH ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82H0CT7BJSF0Q3S0YPNSAE2 a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "3"^^xsd:nonNegativeInteger ;
+            owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+            owl:onClass :cn_01M82H0CT7BJSF0Q3S0YPNSAE4 ;
+            owl:onProperty :rl_01M82H0CT7BJSF0Q3S0YPNSAEA ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "3"^^xsd:nonNegativeInteger ;
+            owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+            owl:onClass :cn_01M82H0CT7BJSF0Q3S0YPNSAE4 ;
+            owl:onProperty :rl_01M82H0CT7BJSF0Q3S0YPNSAEA ],
+        :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    skos:broader :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    skos:prefLabel "adult cat" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F3,
+        :su_01M82GXF5CK27HSSNSY54SX5FF ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82H0CT7BJSF0Q3S0YPNSAE4 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "meal" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F3 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82H22REK3TH3893EQK4YE0S a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "4"^^xsd:nonNegativeInteger ;
+            owl:minQualifiedCardinality "4"^^xsd:nonNegativeInteger ;
+            owl:onClass :cn_01M82H0CT7BJSF0Q3S0YPNSAE4 ;
+            owl:onProperty :rl_01M82H0CT7BJSF0Q3S0YPNSAEB ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "4"^^xsd:nonNegativeInteger ;
+            owl:minQualifiedCardinality "4"^^xsd:nonNegativeInteger ;
+            owl:onClass :cn_01M82H0CT7BJSF0Q3S0YPNSAE4 ;
+            owl:onProperty :rl_01M82H0CT7BJSF0Q3S0YPNSAEB ],
+        :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    skos:broader :cn_01M82GY6D4FG58KKX81F7CX0F1 ;
+    skos:definition "A cat younger than 6 months." ;
+    skos:prefLabel "kitten" ;
+    dai:evidence :su_01M82GXF5CK27HSSNSY54SX5F3,
+        :su_01M82GXF5CK27HSSNSY54SX5F5,
+        :su_01M82GXF5CK27HSSNSY54SX5F9 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
 :cn_01M82GPB8ZK0N7S1VR303H5EPB a owl:Class,
         skos:Concept ;
     skos:prefLabel "leash" ;
@@ -2763,8 +4699,14 @@
 :su_01M82GHYMQYRXNHXCXTMK9HDPE a dai:SourceUnit ;
     rdfs:label "A dog training course with a certified trainer is recommended in the first year. Dogs of breeds classified as dangerous must pass an obedience test." .
 
+:su_01M82GXF5CK27HSSNSY54SX5F9 a dai:SourceUnit ;
+    rdfs:label "A kitten is a cat younger than 6 months. Kittens should not leave their mother before 12 weeks of age. Let a new kitten explore one room first, then the rest of the flat. Kittens learn to use the litter box quickly if it is easy to reach." .
+
 :su_01M82GHYMQYRXNHXCXTMK9HDP3 a dai:SourceUnit ;
     rdfs:label "Start leash training when the puppy is 8 to 10 weeks old. Reward the dog when the leash is loose, and stop walking when the dog pulls. Never jerk the leash." .
+
+:su_01M82GXF5CK27HSSNSY54SX5FF a dai:SourceUnit ;
+    rdfs:label "An adult cat can stay alone for up to 24 hours if it has enough food, fresh water and a clean litter box. For longer absences, arrange for someone to visit the cat at least once a day." .
 
 :cn_01M82GS0NSGHH6X6DCYVS251BV a owl:Class,
         skos:Concept ;
@@ -2780,8 +4722,23 @@
 :su_01M82GHYMQYRXNHXCXTMK9HDPD a dai:SourceUnit ;
     rdfs:label "Every dog should learn five basic commands: *sit*, *down*, *stay*, *come* and *leave it*. Train in short sessions of 5 to 10 minutes, several times a day, and always end with a success." .
 
+:cn_01M82GZMM3VP80T7XD6GS67TSK a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "litter box" ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB33,
+        :su_01M82GXF5CK27HSSNSY54SX5F7,
+        :su_01M82GXF5CK27HSSNSY54SX5F9,
+        :su_01M82GXF5CK27HSSNSY54SX5FB,
+        :su_01M82GXF5CK27HSSNSY54SX5FF,
+        :su_01M82GXF5CK27HSSNSY54SX5FH ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
 :su_01M82GHYMR2WSZZZXCEPR86V3R a dai:SourceUnit ;
     rdfs:label "Before you leave, walk the dog, leave water and a safe chew toy, and keep your departure low-key. If your dog barks or howls while you are away, train it to be alone step by step, starting with a few minutes." .
+
+:su_01M82GXF5CK27HSSNSY54SX5FH a dai:SourceUnit ;
+    rdfs:label "Cats are attached to their territory. On moving day, keep the cat in a closed room with its litter box. After the move, keep an outdoor cat indoors for at least 2 weeks before you let it outside, so that it learns its new home." .
 
 :cn_01M82GNRCASH6DKSRYKE0WQE7V a owl:Class,
         skos:Concept ;
@@ -2807,6 +4764,9 @@
 :su_01M82GHYMQYRXNHXCXTMK9HDP1 a dai:SourceUnit ;
     rdfs:label "Use a leash of 1.5 to 2 metres for everyday walks. A retractable leash is not suitable in busy streets. Attach the leash to a well-fitting collar or harness: you should be able to slide two fingers under the collar." .
 
+:su_01M82GXF5CK27HSSNSY54SX5FB a dai:SourceUnit ;
+    rdfs:label "Play with your cat for at least 15 minutes twice a day. A cat that scratches furniture usually needs a better scratching post, not punishment. Never punish a cat physically. A cat that suddenly stops using its litter box may be ill and should see a veterinarian." .
+
 :su_01M82GHYMP28WWGVJCAF7BMQCQ a dai:SourceUnit ;
     rdfs:label "Feed an adult dog twice a day and a puppy three to four times a day. Fresh water must always be available. Chocolate, grapes, onions and xylitol are poisonous to dogs." .
 
@@ -2818,6 +4778,18 @@
 
 :su_01M82GHYMR2WSZZZXCEPR86V3W a dai:SourceUnit ;
     rdfs:label "You are liable for any damage your dog causes. Third-party liability insurance for dog owners is strongly recommended, and it is mandatory for breeds classified as dangerous by the local authority. In public places, your dog must be kept on a leash unless a sign allows free running." .
+
+:su_01M82GXF5CK27HSSNSY54SX5F7 a dai:SourceUnit ;
+    rdfs:label "Provide one litter box per cat plus one extra. Remove clumps every day and replace all litter once a week. Used litter goes into the residual waste, never into the toilet or the compost." .
+
+:su_01M82GXF5CK27HSSNSY54SX5FD a dai:SourceUnit ;
+    rdfs:label "Short-haired cats groom themselves; brush them once a week to reduce hair in the flat. Long-haired cats need brushing every day to prevent matting. Do not bathe a cat unless the veterinarian advises it." .
+
+:su_01M82GXF5BZJDB4QGXVFMJEB2X a dai:SourceUnit ;
+    rdfs:label "A cat lives 12 to 18 years. Cats are independent, but they still need daily attention, play and a clean environment. Plan for food, litter, yearly veterinary visits and someone to look after the cat when you travel." .
+
+:su_01M82GXF5CK27HSSNSY54SX5F5 a dai:SourceUnit ;
+    rdfs:label "A kitten receives its first vaccinations at 8 weeks of age. A cat that goes outdoors must also be vaccinated against rabies, renewed every year. Neuter your cat at about 5 to 6 months of age. Visit the veterinarian at least once a year." .
 
 :cn_01M82GR8C6YNAW05QP8GX3MF7P a owl:Class,
         skos:Concept ;
@@ -2832,6 +4804,12 @@
 
 :su_01M82GHYMQYRXNHXCXTMK9HDP5 a dai:SourceUnit ;
     rdfs:label "An adult dog needs at least two walks a day: 30 to 60 minutes in total for small breeds and up to 2 hours for large and working breeds. A puppy must be taken outside to relieve itself every 2 to 3 hours. Always pick up your dog's waste and put it in a waste bin." .
+
+:su_01M82GXF5CK27HSSNSY54SX5F3 a dai:SourceUnit ;
+    rdfs:label "Feed an adult cat two to three small meals a day; kittens need four meals a day. Cats need meat-based food. Lilies, onions, chocolate and dog food are not suitable for cats; lilies are highly poisonous." .
+
+:su_01M82GXF5BZJDB4QGXVFMJEB33 a dai:SourceUnit ;
+    rdfs:label "Every cat needs a litter box, a scratching post, food and water bowls placed away from the litter box, and a quiet place to sleep. Secure windows and balconies with a net, because cats can fall from height." .
 
 :cn_01M82GJP3CRKNX3DNJZDNANDWM a owl:Class,
         skos:Concept ;
@@ -2863,6 +4841,27 @@
         :su_01M82GHYMR2WSZZZXCEPR86V3R,
         :su_01M82GHYMR2WSZZZXCEPR86V3T,
         :su_01M82GHYMR2WSZZZXCEPR86V3W ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:cn_01M82GY6D4FG58KKX81F7CX0F1 a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :cn_01M82GZMM3VP80T7XD6GS67TSK ;
+            owl:onProperty :rl_01M82H1MQPVEX27Q0YHCNZ9WE6 ] ;
+    skos:prefLabel "cat" ;
+    dai:evidence :su_01M82GXF5BZJDB4QGXVFMJEB2X,
+        :su_01M82GXF5BZJDB4QGXVFMJEB2Z,
+        :su_01M82GXF5BZJDB4QGXVFMJEB33,
+        :su_01M82GXF5CK27HSSNSY54SX5F3,
+        :su_01M82GXF5CK27HSSNSY54SX5F5,
+        :su_01M82GXF5CK27HSSNSY54SX5F7,
+        :su_01M82GXF5CK27HSSNSY54SX5F9,
+        :su_01M82GXF5CK27HSSNSY54SX5FB,
+        :su_01M82GXF5CK27HSSNSY54SX5FD,
+        :su_01M82GXF5CK27HSSNSY54SX5FF,
+        :su_01M82GXF5CK27HSSNSY54SX5FH ;
     dai:level dai:level-1 ;
     dai:status dai:proposed .
 

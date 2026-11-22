@@ -1,0 +1,24 @@
+action: feed a kitten four meals a day
+actor: owner
+cardinality:
+  max: 4
+  min: 4
+  relation: rl_01M82H0CT7BJSF0Q3S0YPNSAEB
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5F3
+id: ru_01M82H0CT7BJSF0Q3S0YPNSAEK
+label: Feed a kitten four meals a day
+level: level-3
+level_reason: Kittens are a special case.
+modality: must
+origin:
+  created_at: '2026-11-22T21:01:17.512406Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+refers_to:
+- cn_01M82H22REK3TH3893EQK4YE0S
+- cn_01M82H0CT7BJSF0Q3S0YPNSAE4
+- rl_01M82H0CT7BJSF0Q3S0YPNSAEB
+scope:
+- co_01M82GXF5A3M9Z44ZD3X2YY7HZ
+status: proposed

@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5FD
+id: rl_01M82H394WWKSMY0HG5WFCNGAM
+label: advises
+level: level-2
+level_reason: Condition for bathing a cat.
+object: cn_01M82H394WWKSMY0HG5WFCNGAC
+origin:
+  created_at: '2026-11-22T21:02:52.061736Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+predicate_label: advises
+status: proposed
+subject: cn_01M82GMKV1KS5PBE1QB2P99CPC

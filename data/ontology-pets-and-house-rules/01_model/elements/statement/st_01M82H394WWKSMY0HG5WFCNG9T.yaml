@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5FD
+id: st_01M82H394WWKSMY0HG5WFCNG9T
+label: Short-haired cats groom themselves
+level: level-2
+level_reason: Normal-day grooming knowledge for cat owners.
+origin:
+  created_at: '2026-11-22T21:02:52.060726Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed
+text: Short-haired cats groom themselves.

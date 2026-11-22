@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5F5
+id: st_01M82H115ABPPRSFHS5N8011P0
+label: Cat neutering age
+level: level-2
+level_reason: Routine care for a cat owner.
+origin:
+  created_at: '2026-11-22T21:01:38.347007Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed
+text: A cat should be neutered at about 5 to 6 months of age.

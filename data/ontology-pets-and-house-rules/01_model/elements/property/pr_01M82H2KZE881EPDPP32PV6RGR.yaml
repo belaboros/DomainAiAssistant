@@ -1,0 +1,15 @@
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5FB
+id: pr_01M82H2KZE881EPDPP32PV6RGR
+label: Play sessions per day
+level: level-2
+level_reason: Normal daily care.
+name: sessions per day
+of: ru_01M82H2KZE881EPDPP32PV6RGN
+origin:
+  created_at: '2026-11-22T21:02:30.383597Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed
+unit: times per day
+value: '2'

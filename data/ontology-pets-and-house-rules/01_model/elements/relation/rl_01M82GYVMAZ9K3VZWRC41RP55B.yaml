@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GXF5BZJDB4QGXVFMJEB30
+id: rl_01M82GYVMAZ9K3VZWRC41RP55B
+label: needs more
+level: level-2
+level_reason: Everyday care need.
+object: cn_01M82GYVMAZ9K3VZWRC41RP559
+origin:
+  created_at: '2026-11-22T21:00:27.147208Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+predicate_label: needs more
+status: proposed
+subject: cn_01M82GYVM9BBT0CS4ZCPR3ER6H

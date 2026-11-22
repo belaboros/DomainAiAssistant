@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5FB
+id: st_01M82H2KZE881EPDPP32PV6RFZ
+label: Furniture scratching needs a better scratching post
+level: level-2
+level_reason: Everyday behaviour handling.
+origin:
+  created_at: '2026-11-22T21:02:30.382890Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed
+text: A cat that scratches furniture usually needs a better scratching post, not punishment.

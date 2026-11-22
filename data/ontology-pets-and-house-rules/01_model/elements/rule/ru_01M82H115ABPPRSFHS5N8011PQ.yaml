@@ -1,0 +1,20 @@
+action: neuter the cat at about 5 to 6 months of age
+actor: cat owner
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5F5
+id: ru_01M82H115ABPPRSFHS5N8011PQ
+label: Neuter the cat
+level: level-2
+level_reason: Normal care step for a cat owner.
+modality: must
+origin:
+  created_at: '2026-11-22T21:01:38.347803Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+refers_to:
+- cn_01M82GY6D4FG58KKX81F7CX0F1
+- cn_01M82H115ABPPRSFHS5N8011PE
+- rl_01M82H115ABPPRSFHS5N8011PK
+scope:
+- co_01M82GXF5A3M9Z44ZD3X2YY7HZ
+status: proposed

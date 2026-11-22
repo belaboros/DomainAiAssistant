@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GXF5BZJDB4QGXVFMJEB33
+id: st_01M82GZMM3VP80T7XD6GS67TS6
+label: Cat needs quiet sleeping place
+level: level-2
+level_reason: Everyday home setup for a cat.
+origin:
+  created_at: '2026-11-22T21:00:52.740109Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed
+text: Every cat needs a quiet place to sleep.

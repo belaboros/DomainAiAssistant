@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5F5
+id: tm_01M82H115ABPPRSFHS5N8011P6
+label: rabies
+level: level-2
+level_reason: Normal-day care.
+mentions:
+- concept: cn_01M82GMKV1KS5PBE1QB2P99CPB
+  unit: su_01M82GXF5CK27HSSNSY54SX5F5
+origin:
+  created_at: '2026-11-22T21:01:38.347209Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed

@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GXF5BZJDB4QGXVFMJEB2X
+- unit: su_01M82GXF5CK27HSSNSY54SX5FB
+id: cn_01M82GY6D4FG58KKX81F7CX0F2
+label: cat owner
+level: level-1
+level_reason: Core actor; addressed as 'you' in the text.
+origin:
+  created_at: '2026-11-22T21:00:05.412840Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed

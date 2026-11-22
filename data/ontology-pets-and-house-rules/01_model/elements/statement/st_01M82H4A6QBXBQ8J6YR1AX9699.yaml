@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5FH
+id: st_01M82H4A6QBXBQ8J6YR1AX9699
+label: Cats are attached to territory
+level: level-3
+level_reason: Background for the moving-house special case.
+origin:
+  created_at: '2026-11-22T21:03:25.912165Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed
+text: Cats are attached to their territory.

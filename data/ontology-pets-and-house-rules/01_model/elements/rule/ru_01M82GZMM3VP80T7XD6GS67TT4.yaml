@@ -1,0 +1,20 @@
+action: provide a litter box for the cat
+actor: cat owner
+evidence:
+- unit: su_01M82GXF5BZJDB4QGXVFMJEB33
+id: ru_01M82GZMM3VP80T7XD6GS67TT4
+label: Provide a litter box for a cat
+level: level-2
+level_reason: Basic equipment an owner needs on a normal day.
+modality: must
+origin:
+  created_at: '2026-11-22T21:00:52.741022Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+refers_to:
+- cn_01M82GY6D4FG58KKX81F7CX0F1
+- cn_01M82GZMM3VP80T7XD6GS67TSK
+- rl_01M82GZMM3VP80T7XD6GS67TSV
+scope:
+- co_01M82GXF5A3M9Z44ZD3X2YY7HZ
+status: proposed

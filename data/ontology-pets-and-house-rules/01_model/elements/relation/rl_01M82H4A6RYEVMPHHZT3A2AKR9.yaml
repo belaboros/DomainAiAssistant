@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5FH
+id: rl_01M82H4A6RYEVMPHHZT3A2AKR9
+label: is part of
+level: level-3
+level_reason: Moving house detail.
+object: cn_01M82H4A6QBXBQ8J6YR1AX969Q
+origin:
+  created_at: '2026-11-22T21:03:25.913249Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+predicate_label: is part of
+status: proposed
+subject: cn_01M82H4A6QBXBQ8J6YR1AX969R

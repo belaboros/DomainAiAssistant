@@ -1,0 +1,15 @@
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5F5
+id: pr_01M82H115ABPPRSFHS5N8011PV
+label: Neutering age
+level: level-2
+level_reason: Normal care detail.
+name: recommended age
+of: cn_01M82H115ABPPRSFHS5N8011PE
+origin:
+  created_at: '2026-11-22T21:01:38.348016Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed
+unit: months
+value: about 5 to 6

@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GXF5BZJDB4QGXVFMJEB2X
+id: st_01M82GY6D3EBA09WTHVE729V27
+label: Cat lifespan
+level: level-1
+level_reason: Basic fact someone considering a cat must know.
+origin:
+  created_at: '2026-11-22T21:00:05.412325Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed
+text: A cat lives 12 to 18 years.

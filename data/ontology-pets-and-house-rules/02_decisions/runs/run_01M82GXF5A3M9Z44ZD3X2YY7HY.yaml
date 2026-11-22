@@ -1,0 +1,20 @@
+ended_at: '2026-11-22T21:03:39.328918Z'
+estimate:
+  cost_usd: 1.558828
+  documents: 11
+  input_tokens: 97412
+  output_tokens: 58459
+  units: 14
+id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+input_tokens: 115522
+kind: ingestion
+model: claude-opus-5-5
+output_tokens: 30564
+skipped:
+- item: '{"concept": "C2", "merge": ["C55"], "preferred_label": "cat owner", "terms": ["cat owner"]}'
+  reason: no term with the label 'cat owner'
+  where: term resolution
+source_path: user-manuals-pets-and-house-rules/cat-owners-manual
+started_at: '2026-11-22T20:59:45.657064Z'
+status: completed
+user: belaboros

@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GXF5BZJDB4QGXVFMJEB31
+id: st_01M82GYVM9BBT0CS4ZCPR3ER68
+label: Outdoor cat vaccinated and microchipped first
+level: level-2
+level_reason: Vaccination requirement in the normal case.
+origin:
+  created_at: '2026-11-22T21:00:27.146511Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed
+text: An outdoor cat must be vaccinated and microchipped before it goes outside for the first time.

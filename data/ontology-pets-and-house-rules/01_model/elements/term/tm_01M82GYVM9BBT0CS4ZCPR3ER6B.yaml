@@ -1,0 +1,20 @@
+evidence:
+- unit: su_01M82GXF5BZJDB4QGXVFMJEB2Z
+- unit: su_01M82GXF5BZJDB4QGXVFMJEB31
+- unit: su_01M82GXF5CK27HSSNSY54SX5FH
+id: tm_01M82GYVM9BBT0CS4ZCPR3ER6B
+label: outdoor cat
+level: level-2
+level_reason: Kind of cat relevant for daily keeping.
+mentions:
+- concept: cn_01M82GYVM9BBT0CS4ZCPR3ER6J
+  unit: su_01M82GXF5BZJDB4QGXVFMJEB2Z
+- concept: cn_01M82GYVM9BBT0CS4ZCPR3ER6J
+  unit: su_01M82GXF5BZJDB4QGXVFMJEB31
+- concept: cn_01M82GYVM9BBT0CS4ZCPR3ER6J
+  unit: su_01M82GXF5CK27HSSNSY54SX5FH
+origin:
+  created_at: '2026-11-22T21:00:27.146781Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed

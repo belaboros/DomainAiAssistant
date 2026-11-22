@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5F9
+id: rl_01M82H22REK3TH3893EQK4YE10
+label: explores
+level: level-3
+level_reason: Kittens are a special case.
+object: cn_01M82GKFJ96730WAHGQQD3M95G
+origin:
+  created_at: '2026-11-22T21:02:12.751426Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+predicate_label: explores
+status: proposed
+subject: cn_01M82H22REK3TH3893EQK4YE0S

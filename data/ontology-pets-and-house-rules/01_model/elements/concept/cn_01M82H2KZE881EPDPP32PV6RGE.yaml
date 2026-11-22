@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5FB
+id: cn_01M82H2KZE881EPDPP32PV6RGE
+label: punishment
+level: level-2
+level_reason: Behaviour handling, physical form forbidden.
+origin:
+  created_at: '2026-11-22T21:02:30.383269Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed

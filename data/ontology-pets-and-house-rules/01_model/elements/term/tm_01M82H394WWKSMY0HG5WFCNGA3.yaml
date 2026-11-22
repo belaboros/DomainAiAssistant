@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5FD
+id: tm_01M82H394WWKSMY0HG5WFCNGA3
+label: bathe
+level: level-2
+level_reason: Grooming activity with a restriction.
+mentions:
+- concept: cn_01M82H394WWKSMY0HG5WFCNGAC
+  unit: su_01M82GXF5CK27HSSNSY54SX5FD
+origin:
+  created_at: '2026-11-22T21:02:52.061219Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed

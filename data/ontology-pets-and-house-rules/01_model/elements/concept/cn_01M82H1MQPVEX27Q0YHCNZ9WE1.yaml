@@ -1,0 +1,13 @@
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5F7
+id: cn_01M82H1MQPVEX27Q0YHCNZ9WE1
+label: used litter
+level: level-1
+level_reason: Pet waste covered by a core rule.
+origin:
+  created_at: '2026-11-22T21:01:58.390757Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+parents:
+- cn_01M82GY6D4FG58KKX81F7CX0F4
+status: proposed

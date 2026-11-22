@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5FB
+id: rl_01M82H2KZE881EPDPP32PV6RGM
+label: should see
+level: level-3
+level_reason: Possible illness case.
+object: cn_01M82GMKV1KS5PBE1QB2P99CPC
+origin:
+  created_at: '2026-11-22T21:02:30.383426Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+predicate_label: should see
+status: proposed
+subject: cn_01M82GY6D4FG58KKX81F7CX0F1

@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GXF5BZJDB4QGXVFMJEB31
+id: rl_01M82GYVMAZ9K3VZWRC41RP55C
+label: must have before first going outside
+level: level-2
+level_reason: Normal-case requirement.
+object: cn_01M82GMKV1KS5PBE1QB2P99CPA
+origin:
+  created_at: '2026-11-22T21:00:27.147235Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+predicate_label: must have before first going outside
+status: proposed
+subject: cn_01M82GYVM9BBT0CS4ZCPR3ER6J

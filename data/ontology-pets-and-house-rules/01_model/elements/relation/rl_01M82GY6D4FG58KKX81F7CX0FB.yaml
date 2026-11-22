@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GXF5BZJDB4QGXVFMJEB2X
+id: rl_01M82GY6D4FG58KKX81F7CX0FB
+label: looks after
+level: level-3
+level_reason: Travel special case.
+object: cn_01M82GY6D4FG58KKX81F7CX0F1
+origin:
+  created_at: '2026-11-22T21:00:05.413082Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+predicate_label: looks after
+status: proposed
+subject: cn_01M82GY6D4FG58KKX81F7CX0F6

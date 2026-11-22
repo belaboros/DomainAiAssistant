@@ -1,5 +1,6 @@
 evidence:
 - unit: su_01M82GHYMQYRXNHXCXTMK9HDNY
+- unit: su_01M82GXF5CK27HSSNSY54SX5F9
 id: tm_01M82GNRCASH6DKSRYKE0WQE7R
 label: mother
 level: level-3
@@ -7,6 +8,8 @@ level_reason: Puppy-related detail.
 mentions:
 - concept: cn_01M82GNRCASH6DKSRYKE0WQE7W
   unit: su_01M82GHYMQYRXNHXCXTMK9HDNY
+- concept: cn_01M82H22REK3TH3893EQK4YE0V
+  unit: su_01M82GXF5CK27HSSNSY54SX5F9
 origin:
   created_at: '2026-11-22T20:55:28.907345Z'
   kind: llm

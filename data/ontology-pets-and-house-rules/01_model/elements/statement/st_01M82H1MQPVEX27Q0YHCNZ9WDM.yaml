@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5F7
+id: st_01M82H1MQPVEX27Q0YHCNZ9WDM
+label: Weekly litter replacement
+level: level-2
+level_reason: Routine hygiene task.
+origin:
+  created_at: '2026-11-22T21:01:58.390452Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed
+text: All litter is replaced once a week.

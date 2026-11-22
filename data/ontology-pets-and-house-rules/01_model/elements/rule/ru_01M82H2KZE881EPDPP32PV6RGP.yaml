@@ -1,0 +1,20 @@
+action: punish a cat physically
+actor: owner
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5FB
+id: ru_01M82H2KZE881EPDPP32PV6RGP
+label: Never punish a cat physically
+level: level-2
+level_reason: Everyday handling of a cat's behaviour.
+modality: must_not
+origin:
+  created_at: '2026-11-22T21:02:30.383542Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+refers_to:
+- cn_01M82GY6D4FG58KKX81F7CX0F2
+- cn_01M82GY6D4FG58KKX81F7CX0F1
+- cn_01M82H2KZE881EPDPP32PV6RGE
+scope:
+- co_01M82GXF5A3M9Z44ZD3X2YY7HZ
+status: proposed

@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GXF5BZJDB4QGXVFMJEB30
+id: st_01M82GYVM9BBT0CS4ZCPR3ER65
+label: Indoor cat lives longer on average
+level: level-2
+level_reason: Background for the normal-case choice.
+origin:
+  created_at: '2026-11-22T21:00:27.146391Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed
+text: On average an indoor cat lives longer.

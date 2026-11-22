@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5FB
+id: tm_01M82H2KZE881EPDPP32PV6RG6
+label: punishment
+level: level-2
+level_reason: Behaviour handling topic.
+mentions:
+- concept: cn_01M82H2KZE881EPDPP32PV6RGE
+  unit: su_01M82GXF5CK27HSSNSY54SX5FB
+origin:
+  created_at: '2026-11-22T21:02:30.383058Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed

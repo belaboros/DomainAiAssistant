@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GXF5CK27HSSNSY54SX5F7
+id: tm_01M82H1MQPVEX27Q0YHCNZ9WDX
+label: compost
+level: level-1
+level_reason: Forbidden disposal place in a waste rule.
+mentions:
+- concept: cn_01M82H1MQPVEX27Q0YHCNZ9WE5
+  unit: su_01M82GXF5CK27HSSNSY54SX5F7
+origin:
+  created_at: '2026-11-22T21:01:58.390658Z'
+  kind: llm
+  run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+status: proposed

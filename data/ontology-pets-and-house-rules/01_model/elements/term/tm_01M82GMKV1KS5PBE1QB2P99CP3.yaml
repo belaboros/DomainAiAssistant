@@ -1,5 +1,6 @@
 evidence:
 - unit: su_01M82GHYMP28WWGVJCAF7BMQCS
+- unit: su_01M82GXF5CK27HSSNSY54SX5F5
 id: tm_01M82GMKV1KS5PBE1QB2P99CP3
 label: vaccination
 level: level-2
@@ -7,6 +8,8 @@ level_reason: Normal-day care topic.
 mentions:
 - concept: cn_01M82GMKV1KS5PBE1QB2P99CPA
   unit: su_01M82GHYMP28WWGVJCAF7BMQCS
+- concept: cn_01M82GMKV1KS5PBE1QB2P99CPA
+  unit: su_01M82GXF5CK27HSSNSY54SX5F5
 origin:
   created_at: '2026-11-22T20:54:51.490176Z'
   kind: llm
