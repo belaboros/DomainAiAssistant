@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82ABDR30PE47ZK8WSGY3HX5
+id: tm_01M82AKNKGVB3WQ6AJ3QXNT521
+label: rabies vaccination
+level: level-3
+level_reason: Travel abroad requirement.
+mentions:
+- concept: cn_01M82AE56ZYS5Y2Z0C35ECC9YA
+  unit: su_01M82ABDR30PE47ZK8WSGY3HX5
+origin:
+  created_at: '2026-11-22T19:09:29.073492Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+status: proposed

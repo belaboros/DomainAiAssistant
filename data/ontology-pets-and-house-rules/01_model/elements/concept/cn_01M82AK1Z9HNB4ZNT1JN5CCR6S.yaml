@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82ABDR30PE47ZK8WSGY3HX3
+id: cn_01M82AK1Z9HNB4ZNT1JN5CCR6S
+label: barking or howling
+level: level-3
+level_reason: Problem behaviour when alone.
+origin:
+  created_at: '2026-11-22T19:09:08.969975Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+status: proposed

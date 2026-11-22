@@ -1,0 +1,12 @@
+- content_hash: sha256:a458f673b43a014e116809b2348e1ad2e66d6916ce36cab11fb9a409e4556893
+  document_id: doc_01M82ABDR28HTPAFF4C44FRBZB
+  id: su_01M82ABDR28HTPAFF4C44FRBZC
+  kind: paragraph
+  location:
+    heading_path:
+    - 5. Walking and the Leash — 5.1 Choosing a Leash
+    index_in_section: 0
+    line_end: 3
+    line_start: 3
+    path: 05-walking-and-the-leash/01-choosing-a-leash.md
+  text: 'Use a leash of 1.5 to 2 metres for everyday walks. A retractable leash is not suitable in busy streets. Attach the leash to a well-fitting collar or harness: you should be able to slide two fingers under the collar.'

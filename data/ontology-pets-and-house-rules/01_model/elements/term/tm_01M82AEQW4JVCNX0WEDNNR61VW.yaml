@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82ABDR1CAX5PFZ2HWSEQHBN
+id: tm_01M82AEQW4JVCNX0WEDNNR61VW
+label: claws
+level: level-2
+level_reason: Normal care.
+mentions:
+- concept: cn_01M82AEQW4JVCNX0WEDNNR61W4
+  unit: su_01M82ABDR1CAX5PFZ2HWSEQHBN
+origin:
+  created_at: '2026-11-22T19:06:47.556843Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+status: proposed

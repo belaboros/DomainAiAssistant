@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82ABDR1CAX5PFZ2HWSEQHB9
+id: tm_01M82AC66KMJH32E2MQ3Z7ZBKK
+label: registered
+level: level-1
+level_reason: Core rule.
+mentions:
+- concept: cn_01M82AC66KMJH32E2MQ3Z7ZBKV
+  unit: su_01M82ABDR1CAX5PFZ2HWSEQHB9
+origin:
+  created_at: '2026-11-22T19:05:23.924655Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+status: proposed

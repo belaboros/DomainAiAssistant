@@ -1,0 +1,22 @@
+action: place the food and water bowls away from the litter box
+actor: cat owner
+evidence:
+- unit: su_01M82APMQ7MGEVFK2CW6002H2P
+id: ru_01M82ARW4GRHWZH2QAVQ4Z6C3D
+label: Bowls placed away from litter box
+level: level-2
+level_reason: Normal setup detail for feeding.
+modality: must
+origin:
+  created_at: '2026-11-22T19:12:19.601710Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+refers_to:
+- cn_01M82ARW4GRHWZH2QAVQ4Z6C2V
+- cn_01M82ARW4GRHWZH2QAVQ4Z6C2W
+- cn_01M82ARW4GRHWZH2QAVQ4Z6C2S
+- rl_01M82ARW4GRHWZH2QAVQ4Z6C36
+- rl_01M82ARW4GRHWZH2QAVQ4Z6C37
+scope:
+- co_01M82APMQ5V0PTBT5SDYAF1JAP
+status: proposed

@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82APMQ7MGEVFK2CW6002H32
+id: rl_01M82AWHXAYC5J29RJ6Y82HD48
+label: needs weekly
+level: level-2
+level_reason: Grooming routine.
+object: cn_01M82AEQW4JVCNX0WEDNNR61W1
+origin:
+  created_at: '2026-11-22T19:14:20.202819Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+predicate_label: needs weekly
+status: proposed
+subject: cn_01M82AWHXAYC5J29RJ6Y82HD3Y

@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82ABDR1CAX5PFZ2HWSEQHBN
+id: cn_01M82AEQW4JVCNX0WEDNNR61W4
+label: claw
+level: level-2
+level_reason: Body part needing care.
+origin:
+  created_at: '2026-11-22T19:06:47.557071Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+status: proposed

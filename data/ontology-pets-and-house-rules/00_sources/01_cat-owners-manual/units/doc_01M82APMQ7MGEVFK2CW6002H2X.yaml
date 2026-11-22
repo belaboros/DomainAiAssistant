@@ -1,0 +1,12 @@
+- content_hash: sha256:e6197cea6c6ac02ef6be5d15770ee1981666c6cdcfe07adc0c4e5648bfa07072
+  document_id: doc_01M82APMQ7MGEVFK2CW6002H2X
+  id: su_01M82APMQ7MGEVFK2CW6002H2Y
+  kind: paragraph
+  location:
+    heading_path:
+    - 5. Kittens
+    index_in_section: 0
+    line_end: 3
+    line_start: 3
+    path: 05-kittens.md
+  text: A kitten is a cat younger than 6 months. Kittens should not leave their mother before 12 weeks of age. Let a new kitten explore one room first, then the rest of the flat. Kittens learn to use the litter box quickly if it is easy to reach.

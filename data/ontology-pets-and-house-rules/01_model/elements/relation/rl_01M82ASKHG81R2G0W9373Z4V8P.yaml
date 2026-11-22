@@ -1,0 +1,17 @@
+cardinality:
+  max: 3
+  min: 2
+evidence:
+- unit: su_01M82APMQ7MGEVFK2CW6002H2R
+id: rl_01M82ASKHG81R2G0W9373Z4V8P
+label: is fed small meals per day
+level: level-2
+level_reason: Normal feeding frequency.
+object: cn_01M82ASKHG81R2G0W9373Z4V8G
+origin:
+  created_at: '2026-11-22T19:12:43.568984Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+predicate_label: is fed small meals per day
+status: proposed
+subject: cn_01M82ASKHG81R2G0W9373Z4V8D

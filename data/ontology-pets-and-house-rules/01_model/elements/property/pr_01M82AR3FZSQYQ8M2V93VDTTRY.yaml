@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82APMQ68JDJRTYQDVNXFWWP
+id: pr_01M82AR3FZSQYQ8M2V93VDTTRY
+label: Outdoor cat goes outside alone
+level: level-2
+level_reason: Defines normal behaviour of an outdoor cat.
+name: goes outside
+of: cn_01M82AR3FZSQYQ8M2V93VDTTRG
+origin:
+  created_at: '2026-11-22T19:11:54.368471Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+status: proposed
+value: on its own

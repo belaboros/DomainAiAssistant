@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82ABDR1CAX5PFZ2HWSEQHBF
+id: st_01M82ACZDNRYXG7FZCA8KC7FCH
+label: Check the local list
+level: level-3
+level_reason: Dangerous breeds are a special case.
+origin:
+  created_at: '2026-11-22T19:05:49.749646Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+status: proposed
+text: Check the local list of dangerous breeds before you choose a breed.

@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82APMQ68JDJRTYQDVNXFWWJ
+id: tm_01M82AQDR2NPZDR8C737517K85
+label: travel
+level: level-3
+level_reason: Special case.
+mentions:
+- concept: cn_01M82AQDR2NPZDR8C737517K8C
+  unit: su_01M82APMQ68JDJRTYQDVNXFWWJ
+origin:
+  created_at: '2026-11-22T19:11:32.099121Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+status: proposed

@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82B00WB34E68SXWEMVZ22ED
+id: st_01M82B3MD8NCJFJC9394MZ8MQ0
+label: No relieving in yard or flower beds
+level: level-1
+level_reason: Core waste rule.
+origin:
+  created_at: '2026-11-22T19:18:12.136564Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+status: proposed
+text: Dogs may not relieve themselves in the inner yard or the flower beds.

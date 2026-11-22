@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82ABDR1CAX5PFZ2HWSEQHBH
+id: st_01M82ADJQKNCFSCKCDMA3H0R7R
+label: Adult dog feeding frequency
+level: level-2
+level_reason: Normal-day feeding knowledge for an owner.
+origin:
+  created_at: '2026-11-22T19:06:09.523896Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+status: proposed
+text: An adult dog is fed twice a day.

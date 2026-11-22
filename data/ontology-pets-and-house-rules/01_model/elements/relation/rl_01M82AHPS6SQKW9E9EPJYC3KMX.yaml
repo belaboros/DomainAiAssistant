@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82ABDR28HTPAFF4C44FRBZN
+id: rl_01M82AHPS6SQKW9E9EPJYC3KMX
+label: is given for
+level: level-2
+level_reason: Everyday training.
+object: cn_01M82AHPS6SQKW9E9EPJYC3KMR
+origin:
+  created_at: '2026-11-22T19:08:24.743224Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+predicate_label: is given for
+status: proposed
+subject: cn_01M82AHPS6SQKW9E9EPJYC3KMT

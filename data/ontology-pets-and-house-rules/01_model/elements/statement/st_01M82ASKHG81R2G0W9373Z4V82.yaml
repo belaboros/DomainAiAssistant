@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82APMQ7MGEVFK2CW6002H2R
+id: st_01M82ASKHG81R2G0W9373Z4V82
+label: Lilies are highly poisonous
+level: level-2
+level_reason: Important feeding safety fact for cat owners.
+origin:
+  created_at: '2026-11-22T19:12:43.568518Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+status: proposed
+text: Lilies are highly poisonous to cats.

@@ -1,0 +1,19 @@
+action: praise the puppy when it relieves itself outside
+actor: owner
+evidence:
+- unit: su_01M82ABDR28HTPAFF4C44FRBZA
+id: ru_01M82AF7YTEGBGGS9B245D10JS
+label: Praise puppy when relieving outside
+level: level-3
+level_reason: Puppy house training detail.
+modality: must
+origin:
+  created_at: '2026-11-22T19:07:04.027812Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+refers_to:
+- cn_01M82AF7YTEGBGGS9B245D10JJ
+- cn_01M82AF7YTEGBGGS9B245D10JM
+scope:
+- co_01M82ABDR0997QP7DGZPPDNF4H
+status: proposed

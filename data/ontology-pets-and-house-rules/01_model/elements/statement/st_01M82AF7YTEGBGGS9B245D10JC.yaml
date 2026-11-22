@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82ABDR28HTPAFF4C44FRBZA
+id: st_01M82AF7YTEGBGGS9B245D10JC
+label: Socialisation period
+level: level-3
+level_reason: Puppy-specific detail.
+origin:
+  created_at: '2026-11-22T19:07:04.027221Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+status: proposed
+text: Between 8 and 16 weeks, the puppy should get to know many people, sounds, surfaces and traffic in a calm way.

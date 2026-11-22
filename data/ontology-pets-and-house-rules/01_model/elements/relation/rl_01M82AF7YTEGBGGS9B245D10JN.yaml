@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82ABDR28HTPAFF4C44FRBZ9
+id: rl_01M82AF7YTEGBGGS9B245D10JN
+label: should not leave before 8 weeks
+level: level-3
+level_reason: Puppy-specific detail.
+object: cn_01M82AF7YTEGBGGS9B245D10JK
+origin:
+  created_at: '2026-11-22T19:07:04.027600Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+predicate_label: should not leave before 8 weeks
+status: proposed
+subject: cn_01M82AF7YTEGBGGS9B245D10JJ

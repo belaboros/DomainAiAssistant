@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82APMQ7MGEVFK2CW6002H30
+id: st_01M82AVWYQTEWX0BYTM82R4873
+label: Daily play with a cat
+level: level-2
+level_reason: Normal-day care for a cat owner.
+origin:
+  created_at: '2026-11-22T19:13:58.743706Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+status: proposed
+text: Play with your cat for at least 15 minutes twice a day.

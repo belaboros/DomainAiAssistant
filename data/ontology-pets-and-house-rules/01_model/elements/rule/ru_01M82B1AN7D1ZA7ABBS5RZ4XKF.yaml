@@ -1,0 +1,29 @@
+action: avoid noise that can be heard in other flats or in the inner yard, including music, drilling and persistent barking
+actor: resident
+condition: during quiet hours
+evidence:
+- unit: su_01M82B00WAF2BQ321TGZ91X4KQ
+id: ru_01M82B1AN7D1ZA7ABBS5RZ4XKF
+label: Avoid audible noise during quiet hours
+level: level-2
+level_reason: A daily house rule for residents and pet owners, including barking dogs.
+modality: must
+origin:
+  created_at: '2026-11-22T19:16:56.617206Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+refers_to:
+- cn_01M82B0RVQB8E3F7FG9YPD26J6
+- cn_01M82B1AN7D1ZA7ABBS5RZ4XK6
+- cn_01M82B1AN7D1ZA7ABBS5RZ4XK4
+- cn_01M82ACZDNRYXG7FZCA8KC7FD5
+- cn_01M82B0RVQB8E3F7FG9YPD26JC
+- cn_01M82B1AN7D1ZA7ABBS5RZ4XK9
+- cn_01M82B1AN7D1ZA7ABBS5RZ4XKA
+- cn_01M82B1AN7D1ZA7ABBS5RZ4XKB
+- rl_01M82B1AN7D1ZA7ABBS5RZ4XKC
+- rl_01M82B1AN7D1ZA7ABBS5RZ4XKD
+- rl_01M82B1AN7D1ZA7ABBS5RZ4XKE
+scope:
+- co_01M82B00W91390459HX0FJMY3T
+status: proposed

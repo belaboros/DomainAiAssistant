@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82ABDR28HTPAFF4C44FRBZC
+id: tm_01M82AFTZDSHCD0SK6T4N2YZW2
+label: collar
+level: level-2
+level_reason: Everyday equipment.
+mentions:
+- concept: cn_01M82AFTZDSHCD0SK6T4N2YZW8
+  unit: su_01M82ABDR28HTPAFF4C44FRBZC
+origin:
+  created_at: '2026-11-22T19:07:23.501883Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+status: proposed

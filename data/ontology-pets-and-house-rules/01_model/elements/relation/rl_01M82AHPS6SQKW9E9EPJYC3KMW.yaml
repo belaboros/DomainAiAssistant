@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82ABDR28HTPAFF4C44FRBZK
+id: rl_01M82AHPS6SQKW9E9EPJYC3KMW
+label: uses
+level: level-2
+level_reason: Everyday handling.
+object: cn_01M82AHPS6SQKW9E9EPJYC3KMN
+origin:
+  created_at: '2026-11-22T19:08:24.743204Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+predicate_label: uses
+status: proposed
+subject: cn_01M82AHPS6SQKW9E9EPJYC3KMP

@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82APMQ7MGEVFK2CW6002H2P
+id: tm_01M82ARW4GRHWZH2QAVQ4Z6C2P
+label: balcony
+level: level-2
+level_reason: Part of the home to secure.
+mentions:
+- concept: cn_01M82ARW4GRHWZH2QAVQ4Z6C2Z
+  unit: su_01M82APMQ7MGEVFK2CW6002H2P
+origin:
+  created_at: '2026-11-22T19:12:19.600977Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+status: proposed

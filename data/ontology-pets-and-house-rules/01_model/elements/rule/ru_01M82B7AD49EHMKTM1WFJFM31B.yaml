@@ -1,0 +1,20 @@
+action: carry out noisy work such as drilling
+actor: resident
+condition: on Saturdays from 09:00 to 12:00
+evidence:
+- unit: su_01M82B00WCXHEC1FCHYNF4GYBC
+id: ru_01M82B7AD49EHMKTM1WFJFM31B
+label: Noisy work allowed on Saturdays 09:00-12:00
+level: level-3
+level_reason: Renovation hours are a special case outside normal pet ownership.
+modality: may
+origin:
+  created_at: '2026-11-22T19:20:12.965373Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+refers_to:
+- cn_01M82B7AD49EHMKTM1WFJFM312
+- cn_01M82B1AN7D1ZA7ABBS5RZ4XKB
+scope:
+- co_01M82B00W91390459HX0FJMY3T
+status: proposed

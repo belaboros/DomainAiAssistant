@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82B00WB34E68SXWEMVZ22EA
+id: cn_01M82B2PQ0Y5BYDSR06NJ167CH
+label: moving in
+level: level-2
+level_reason: Event that triggers the registration period.
+origin:
+  created_at: '2026-11-22T19:17:41.729323Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+status: proposed

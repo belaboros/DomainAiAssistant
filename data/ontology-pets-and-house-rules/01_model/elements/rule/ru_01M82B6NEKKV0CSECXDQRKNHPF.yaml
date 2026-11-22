@@ -1,0 +1,24 @@
+action: have one cellar compartment
+actor: flat
+cardinality:
+  max: 1
+  min: 1
+  relation: rl_01M82B6NEKKV0CSECXDQRKNHP9
+evidence:
+- unit: su_01M82B00WB34E68SXWEMVZ22ES
+id: ru_01M82B6NEKKV0CSECXDQRKNHPF
+label: One cellar compartment per flat
+level: level-2
+level_reason: Describes shared spaces available on a normal day.
+modality: may
+origin:
+  created_at: '2026-11-22T19:19:51.508790Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+refers_to:
+- cn_01M82ACZDNRYXG7FZCA8KC7FD5
+- cn_01M82B6NEKKV0CSECXDQRKNHP4
+- rl_01M82B6NEKKV0CSECXDQRKNHP9
+scope:
+- co_01M82B00W91390459HX0FJMY3T
+status: proposed

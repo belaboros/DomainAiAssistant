@@ -1,0 +1,17 @@
+cardinality:
+  max: 5
+  min: 5
+evidence:
+- unit: su_01M82ABDR28HTPAFF4C44FRBZR
+id: rl_01M82AJ8HWH90DHFSC2JB20DG3
+label: should learn
+level: level-2
+level_reason: Normal training expectation.
+object: cn_01M82AJ8HWH90DHFSC2JB20DFW
+origin:
+  created_at: '2026-11-22T19:08:42.941397Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+predicate_label: should learn
+status: proposed
+subject: cn_01M82AC66KMJH32E2MQ3Z7ZBKM

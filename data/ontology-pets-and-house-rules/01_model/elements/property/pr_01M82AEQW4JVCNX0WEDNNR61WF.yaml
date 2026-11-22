@@ -1,0 +1,15 @@
+evidence:
+- unit: su_01M82ABDR1CAX5PFZ2HWSEQHBN
+id: pr_01M82AEQW4JVCNX0WEDNNR61WF
+label: Wash temperature for bed and blankets
+level: level-2
+level_reason: Detail of normal-day hygiene.
+name: washing temperature
+of: ru_01M82AEQW4JVCNX0WEDNNR61WE
+origin:
+  created_at: '2026-11-22T19:06:47.557469Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+status: proposed
+unit: °C
+value: '60'

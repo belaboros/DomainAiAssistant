@@ -1,0 +1,20 @@
+action: provide a quiet place for the cat to sleep
+actor: cat owner
+evidence:
+- unit: su_01M82APMQ7MGEVFK2CW6002H2P
+id: ru_01M82ARW4GRHWZH2QAVQ4Z6C3E
+label: Owner must provide a quiet sleeping place
+level: level-2
+level_reason: Basic need of a cat in the home.
+modality: must
+origin:
+  created_at: '2026-11-22T19:12:19.601745Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+refers_to:
+- cn_01M82AQDR2NPZDR8C737517K86
+- cn_01M82ARW4GRHWZH2QAVQ4Z6C2X
+- rl_01M82ARW4GRHWZH2QAVQ4Z6C35
+scope:
+- co_01M82APMQ5V0PTBT5SDYAF1JAP
+status: proposed

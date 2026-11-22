@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82ABDR30PE47ZK8WSGY3HX5
+id: cn_01M82AKNKGVB3WQ6AJ3QXNT527
+label: seat belt
+level: level-3
+level_reason: Travel equipment.
+origin:
+  created_at: '2026-11-22T19:09:29.073628Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+status: proposed

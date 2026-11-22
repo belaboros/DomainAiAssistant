@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82ABDR30PE47ZK8WSGY3HX3
+id: rl_01M82AK1Z9HNB4ZNT1JN5CCR6W
+label: walks before leaving
+level: level-2
+level_reason: Preparation step.
+object: cn_01M82AC66KMJH32E2MQ3Z7ZBKM
+origin:
+  created_at: '2026-11-22T19:09:08.970080Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+predicate_label: walks before leaving
+status: proposed
+subject: cn_01M82AE56ZYS5Y2Z0C35ECC9Y8

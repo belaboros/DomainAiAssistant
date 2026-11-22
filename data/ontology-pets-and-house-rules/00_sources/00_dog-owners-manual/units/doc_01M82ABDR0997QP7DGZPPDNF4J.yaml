@@ -1,0 +1,41 @@
+- content_hash: sha256:af79219fe429f48b40595f766d45cf103dc33806b0e22e04fd9494a8d679e4c8
+  document_id: doc_01M82ABDR0997QP7DGZPPDNF4J
+  id: su_01M82ABDR1CAX5PFZ2HWSEQHB7
+  ignorable:
+    category: instance_or_anecdote
+    proposed: true
+    reason: Personal story about one particular dog, Bodza.
+    status: proposed
+  kind: paragraph
+  location:
+    heading_path:
+    - 1. Before You Get a Dog
+    index_in_section: 0
+    line_end: 3
+    line_start: 3
+    path: 01-before-you-get-a-dog.md
+  text: I still remember the rainy October evening when I brought Bodza home from the shelter in Szentendre, a shy, mud-coloured mix with one ear that never stood up. For the first three nights she slept pressed against the door, as if she expected someone to come and take her back. On the fourth morning she climbed onto the end of my bed, sighed, and stayed there for the next thirteen years. Together we walked the same path along the Danube almost every day, whatever the weather, and she knew every bench where an old lady kept biscuits in her pocket. She taught me patience long before I taught her to sit. When she grew old and grey around the muzzle, our walks became shorter, but she never once let me leave the house without her. Everything in this manual is something I learned, often the hard way, by her side.
+- content_hash: sha256:5eb6b838936ad8d67c85ba54b29323451fb96c5a8356be08cbe17f9465402a28
+  document_id: doc_01M82ABDR0997QP7DGZPPDNF4J
+  id: su_01M82ABDR1CAX5PFZ2HWSEQHB8
+  kind: paragraph
+  location:
+    heading_path:
+    - 1. Before You Get a Dog
+    index_in_section: 1
+    line_end: 5
+    line_start: 5
+    path: 01-before-you-get-a-dog.md
+  text: A dog lives 10 to 15 years. It needs daily exercise, company, training and veterinary care for its whole life. Before you get a dog, check that your home, your working hours and your budget fit the dog you want.
+- content_hash: sha256:980f8d9f345c9e0158c2e0c3af7b0df8f93dcfbe77c7f3ad9014dbb7b31168bc
+  document_id: doc_01M82ABDR0997QP7DGZPPDNF4J
+  id: su_01M82ABDR1CAX5PFZ2HWSEQHB9
+  kind: paragraph
+  location:
+    heading_path:
+    - 1. Before You Get a Dog
+    index_in_section: 2
+    line_end: 7
+    line_start: 7
+    path: 01-before-you-get-a-dog.md
+  text: A dog older than 4 months must be registered with the local authority and must carry a microchip.

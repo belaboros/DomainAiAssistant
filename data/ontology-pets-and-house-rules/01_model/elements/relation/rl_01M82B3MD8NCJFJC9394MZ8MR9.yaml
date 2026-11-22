@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82B00WB34E68SXWEMVZ22EF
+id: rl_01M82B3MD8NCJFJC9394MZ8MR9
+label: may require owner to arrange
+level: level-3
+level_reason: Enforcement.
+object: cn_01M82B3MD8NCJFJC9394MZ8MR2
+origin:
+  created_at: '2026-11-22T19:18:12.137823Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+predicate_label: may require owner to arrange
+status: proposed
+subject: cn_01M82B0RVQB8E3F7FG9YPD26J7

@@ -1,0 +1,22 @@
+action: provide food and water bowls for the cat
+actor: cat owner
+evidence:
+- unit: su_01M82APMQ7MGEVFK2CW6002H2P
+id: ru_01M82ARW4GRHWZH2QAVQ4Z6C3C
+label: Owner must provide food and water bowls
+level: level-2
+level_reason: Feeding equipment needed on a normal day.
+modality: must
+origin:
+  created_at: '2026-11-22T19:12:19.601673Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+refers_to:
+- cn_01M82AQDR2NPZDR8C737517K86
+- cn_01M82ARW4GRHWZH2QAVQ4Z6C2V
+- cn_01M82ARW4GRHWZH2QAVQ4Z6C2W
+- rl_01M82ARW4GRHWZH2QAVQ4Z6C33
+- rl_01M82ARW4GRHWZH2QAVQ4Z6C34
+scope:
+- co_01M82APMQ5V0PTBT5SDYAF1JAP
+status: proposed

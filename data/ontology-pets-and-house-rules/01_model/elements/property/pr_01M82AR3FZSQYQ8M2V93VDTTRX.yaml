@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82APMQ68JDJRTYQDVNXFWWN
+id: pr_01M82AR3FZSQYQ8M2V93VDTTRX
+label: Indoor cat lifespan
+level: level-2
+level_reason: Helps owners choose between indoor and outdoor.
+name: lifespan
+of: cn_01M82AR3FZSQYQ8M2V93VDTTRF
+origin:
+  created_at: '2026-11-22T19:11:54.368411Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+status: proposed
+value: longer on average

@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82B00WAF2BQ321TGZ91X4KQ
+- unit: su_01M82B00WB34E68SXWEMVZ22EF
+id: cn_01M82B1AN7D1ZA7ABBS5RZ4XK9
+label: persistent barking
+level: level-2
+level_reason: Pet-related noise relevant to dog owners.
+origin:
+  created_at: '2026-11-22T19:16:56.617014Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+parents:
+- cn_01M82B1AN7D1ZA7ABBS5RZ4XK6
+status: proposed

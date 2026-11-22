@@ -1,0 +1,20 @@
+action: let the dog relieve itself in the inner yard or the flower beds
+actor: dog owner
+evidence:
+- unit: su_01M82B00WB34E68SXWEMVZ22ED
+id: ru_01M82B3MD8NCJFJC9394MZ8MRD
+label: No relieving in yard or flower beds
+level: level-1
+level_reason: Waste rule is a core house rule.
+modality: must_not
+origin:
+  created_at: '2026-11-22T19:18:12.137992Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+refers_to:
+- cn_01M82AC66KMJH32E2MQ3Z7ZBKM
+- cn_01M82B0RVQB8E3F7FG9YPD26JC
+- cn_01M82B3MD8NCJFJC9394MZ8MQT
+scope:
+- co_01M82B00W91390459HX0FJMY3T
+status: proposed

@@ -1,0 +1,20 @@
+evidence:
+- unit: su_01M82B00WAF2BQ321TGZ91X4KN
+- unit: su_01M82B00WB34E68SXWEMVZ22EE
+- unit: su_01M82B00WB34E68SXWEMVZ22EF
+id: tm_01M82B0RVQB8E3F7FG9YPD26J1
+label: owner
+level: level-2
+level_reason: Kind of resident (property owner).
+mentions:
+- concept: cn_01M82B0RVQB8E3F7FG9YPD26J9
+  unit: su_01M82B00WAF2BQ321TGZ91X4KN
+- concept: cn_01M82B3MD8NCJFJC9394MZ8MQN
+  unit: su_01M82B00WB34E68SXWEMVZ22EE
+- concept: cn_01M82B3MD8NCJFJC9394MZ8MQN
+  unit: su_01M82B00WB34E68SXWEMVZ22EF
+origin:
+  created_at: '2026-11-22T19:16:38.391840Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+status: proposed

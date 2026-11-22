@@ -1,0 +1,12 @@
+- content_hash: sha256:33c5c8245492d560aee586395e99cc57238c13737c0994bed06f34264e155e5b
+  document_id: doc_01M82ABDR28HTPAFF4C44FRBZD
+  id: su_01M82ABDR28HTPAFF4C44FRBZE
+  kind: paragraph
+  location:
+    heading_path:
+    - 5. Walking and the Leash — 5.2 Leash Training
+    index_in_section: 0
+    line_end: 3
+    line_start: 3
+    path: 05-walking-and-the-leash/02-leash-training.md
+  text: Start leash training when the puppy is 8 to 10 weeks old. Reward the dog when the leash is loose, and stop walking when the dog pulls. Never jerk the leash.

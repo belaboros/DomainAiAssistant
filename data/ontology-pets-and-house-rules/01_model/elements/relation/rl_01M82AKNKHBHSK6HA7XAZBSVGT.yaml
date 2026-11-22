@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82ABDR30PE47ZK8WSGY3HX5
+id: rl_01M82AKNKHBHSK6HA7XAZBSVGT
+label: requires
+level: level-3
+level_reason: Travel abroad requirement.
+object: cn_01M82AC66KMJH32E2MQ3Z7ZBKT
+origin:
+  created_at: '2026-11-22T19:09:29.073832Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+predicate_label: requires
+status: proposed
+subject: cn_01M82AKNKGVB3WQ6AJ3QXNT52B

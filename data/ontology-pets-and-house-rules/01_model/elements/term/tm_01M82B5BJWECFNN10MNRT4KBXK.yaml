@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82B00WB34E68SXWEMVZ22EN
+id: tm_01M82B5BJWECFNN10MNRT4KBXK
+label: pram
+level: level-3
+level_reason: Example object only.
+mentions:
+- concept: cn_01M82B5BJWECFNN10MNRT4KBXT
+  unit: su_01M82B00WB34E68SXWEMVZ22EN
+origin:
+  created_at: '2026-11-22T19:19:08.637474Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+status: proposed

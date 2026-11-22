@@ -1,0 +1,24 @@
+action: feed an adult dog twice a day
+actor: owner
+evidence:
+- unit: su_01M82ABDR1CAX5PFZ2HWSEQHBH
+id: ru_01M82ADJQKNCFSCKCDMA3H0R8J
+label: Feed an adult dog twice a day
+level: level-2
+level_reason: Everyday feeding knowledge an owner needs on a normal day.
+limit:
+  comparator: eq
+  unit: times per day
+  value: 2.0
+modality: must
+origin:
+  created_at: '2026-11-22T19:06:09.524651Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+refers_to:
+- cn_01M82ADJQKNCFSCKCDMA3H0R86
+- cn_01M82ADJQKNCFSCKCDMA3H0R88
+- rl_01M82ADJQKNCFSCKCDMA3H0R8G
+scope:
+- co_01M82ABDR0997QP7DGZPPDNF4H
+status: proposed

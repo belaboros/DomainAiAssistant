@@ -1,0 +1,20 @@
+evidence:
+- unit: su_01M82B00WB34E68SXWEMVZ22EE
+- unit: su_01M82B00WB34E68SXWEMVZ22EH
+- unit: su_01M82B00WB34E68SXWEMVZ22ES
+id: tm_01M82B3MD8NCJFJC9394MZ8MQE
+label: flat
+level: level-2
+level_reason: Where the dog is left alone.
+mentions:
+- concept: cn_01M82ACZDNRYXG7FZCA8KC7FD5
+  unit: su_01M82B00WB34E68SXWEMVZ22EE
+- concept: cn_01M82ACZDNRYXG7FZCA8KC7FD5
+  unit: su_01M82B00WB34E68SXWEMVZ22EH
+- concept: cn_01M82ACZDNRYXG7FZCA8KC7FD5
+  unit: su_01M82B00WB34E68SXWEMVZ22ES
+origin:
+  created_at: '2026-11-22T19:18:12.137075Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+status: proposed

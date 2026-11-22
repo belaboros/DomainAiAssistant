@@ -1,0 +1,20 @@
+ended_at: '2026-11-22T19:20:48.218100Z'
+estimate:
+  cost_usd: 1.700712
+  documents: 12
+  input_tokens: 106278
+  output_tokens: 63780
+  units: 17
+id: run_01M82B00W91390459HX0FJMY3S
+input_tokens: 127292
+kind: ingestion
+model: claude-opus-5-5
+output_tokens: 34188
+skipped:
+- item: '{"concept": "C211", "merge": ["C62"], "preferred_label": "residual waste", "terms": ["residual waste"]}'
+  reason: no term with the label 'residual waste'
+  where: term resolution
+source_path: user-manuals-pets-and-house-rules/building-and-house-rules
+started_at: '2026-11-22T19:16:18.070360Z'
+status: completed
+user: belaboros

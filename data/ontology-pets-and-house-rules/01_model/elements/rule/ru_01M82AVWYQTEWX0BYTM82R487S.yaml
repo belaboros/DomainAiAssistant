@@ -1,0 +1,23 @@
+action: play with the cat for at least 15 minutes, twice a day
+actor: cat owner
+evidence:
+- unit: su_01M82APMQ7MGEVFK2CW6002H30
+id: ru_01M82AVWYQTEWX0BYTM82R487S
+label: Play with cat at least 15 minutes twice a day
+level: level-2
+level_reason: Normal daily care of a cat.
+limit:
+  comparator: ge
+  unit: minutes
+  value: 15.0
+modality: must
+origin:
+  created_at: '2026-11-22T19:13:58.744663Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+refers_to:
+- cn_01M82AQDR2NPZDR8C737517K86
+- cn_01M82AVWYQTEWX0BYTM82R487J
+scope:
+- co_01M82APMQ5V0PTBT5SDYAF1JAP
+status: proposed

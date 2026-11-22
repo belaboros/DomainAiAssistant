@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82B00WB34E68SXWEMVZ22EH
+id: rl_01M82B441FVKK345F8CJ12SYK6
+label: may not be kept in
+level: level-1
+level_reason: House rule for cats.
+object: cn_01M82B3MD8NCJFJC9394MZ8MQR
+origin:
+  created_at: '2026-11-22T19:18:28.144045Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+predicate_label: may not be kept in
+status: proposed
+subject: cn_01M82AQDR2NPZDR8C737517K86

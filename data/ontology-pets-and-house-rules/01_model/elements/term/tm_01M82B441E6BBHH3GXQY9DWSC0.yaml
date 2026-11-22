@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82B00WB34E68SXWEMVZ22EH
+id: tm_01M82B441E6BBHH3GXQY9DWSC0
+label: litter box
+level: level-2
+level_reason: Everyday cat equipment.
+mentions:
+- concept: cn_01M82ARW4GRHWZH2QAVQ4Z6C2S
+  unit: su_01M82B00WB34E68SXWEMVZ22EH
+origin:
+  created_at: '2026-11-22T19:18:28.143635Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+status: proposed

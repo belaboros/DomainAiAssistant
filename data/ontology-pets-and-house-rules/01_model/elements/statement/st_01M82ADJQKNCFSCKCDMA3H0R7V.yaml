@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82ABDR1CAX5PFZ2HWSEQHBH
+id: st_01M82ADJQKNCFSCKCDMA3H0R7V
+label: Foods poisonous to dogs
+level: level-2
+level_reason: Everyday feeding safety for dog owners.
+origin:
+  created_at: '2026-11-22T19:06:09.524045Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+status: proposed
+text: Chocolate, grapes, onions and xylitol are poisonous to dogs.

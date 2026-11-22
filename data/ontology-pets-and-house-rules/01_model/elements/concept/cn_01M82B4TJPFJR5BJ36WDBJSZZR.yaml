@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82B00WB34E68SXWEMVZ22EK
+id: cn_01M82B4TJPFJR5BJ36WDBJSZZR
+label: bin room
+level: level-2
+level_reason: A shared space in building B.
+origin:
+  created_at: '2026-11-22T19:18:51.223462Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+status: proposed

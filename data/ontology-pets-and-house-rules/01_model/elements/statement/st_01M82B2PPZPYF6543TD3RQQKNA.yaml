@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82B00WB34E68SXWEMVZ22EA
+id: st_01M82B2PPZPYF6543TD3RQQKNA
+label: No disturbance of residents
+level: level-1
+level_reason: Basic obligation of every pet owner in the complex.
+origin:
+  created_at: '2026-11-22T19:17:41.728688Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+status: proposed
+text: A pet owner must make sure that their pet does not disturb other residents.

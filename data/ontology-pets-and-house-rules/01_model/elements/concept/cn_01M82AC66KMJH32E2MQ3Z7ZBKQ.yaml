@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82ABDR1CAX5PFZ2HWSEQHB8
+id: cn_01M82AC66KMJH32E2MQ3Z7ZBKQ
+label: training
+level: level-2
+level_reason: Everyday need of a dog.
+origin:
+  created_at: '2026-11-22T19:05:23.924761Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+status: proposed

@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82ABDR28HTPAFF4C44FRBZC
+id: rl_01M82AFTZDSHCD0SK6T4N2YZWC
+label: is attached to
+level: level-2
+level_reason: Everyday equipment use.
+object: cn_01M82AFTZDSHCD0SK6T4N2YZW8
+origin:
+  created_at: '2026-11-22T19:07:23.502128Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+predicate_label: is attached to
+status: proposed
+subject: cn_01M82AFTZDSHCD0SK6T4N2YZW6

@@ -1,0 +1,12 @@
+- content_hash: sha256:34d205bcd607cf3069819b51f3a9a44e09407939c693bb557c0a7487ad288d64
+  document_id: doc_01M82B00WB34E68SXWEMVZ22E9
+  id: su_01M82B00WB34E68SXWEMVZ22EA
+  kind: paragraph
+  location:
+    heading_path:
+    - 4. Pets — 4.1 Registering Pets
+    index_in_section: 0
+    line_end: 3
+    line_start: 3
+    path: 04-pets/01-registering-pets.md
+  text: Every pet (dog or cat) must be registered with the house management within 14 days of moving in or acquiring the pet. A pet owner must make sure that their pet does not disturb other residents.

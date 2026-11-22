@@ -1,0 +1,17 @@
+evidence:
+- unit: su_01M82APMQ68JDJRTYQDVNXFWWM
+- unit: su_01M82APMQ68JDJRTYQDVNXFWWN
+id: tm_01M82AR3FY4ER2X3BN6TNX7ARS
+label: indoor cat
+level: level-2
+level_reason: Normal-case kind of cat.
+mentions:
+- concept: cn_01M82AR3FZSQYQ8M2V93VDTTRF
+  unit: su_01M82APMQ68JDJRTYQDVNXFWWM
+- concept: cn_01M82AR3FZSQYQ8M2V93VDTTRF
+  unit: su_01M82APMQ68JDJRTYQDVNXFWWN
+origin:
+  created_at: '2026-11-22T19:11:54.367407Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+status: proposed

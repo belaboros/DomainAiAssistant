@@ -1,0 +1,24 @@
+- content_hash: sha256:7a28128414fac32fb3967e0e4a1fbed2b59cb5c099fec48ecdecb46f1f3dfbd2
+  document_id: doc_01M82ABDR28HTPAFF4C44FRBZ8
+  id: su_01M82ABDR28HTPAFF4C44FRBZ9
+  kind: paragraph
+  location:
+    heading_path:
+    - 4. Puppy Basics
+    index_in_section: 0
+    line_end: 3
+    line_start: 3
+    path: 04-puppy-basics.md
+  text: A puppy is a dog younger than 6 months. Puppies should not leave their mother before 8 weeks of age.
+- content_hash: sha256:82d32dd8179a8204c33d5a56fd3f837daa86d55be6dfe775b48451459b2005ee
+  document_id: doc_01M82ABDR28HTPAFF4C44FRBZ8
+  id: su_01M82ABDR28HTPAFF4C44FRBZA
+  kind: paragraph
+  location:
+    heading_path:
+    - 4. Puppy Basics
+    index_in_section: 1
+    line_end: 5
+    line_start: 5
+    path: 04-puppy-basics.md
+  text: 'House training starts on the first day: take the puppy outside after every meal, after every nap and after play, and praise it when it relieves itself outside. Between 8 and 16 weeks, let the puppy get to know many people, sounds, surfaces and traffic in a calm way.'

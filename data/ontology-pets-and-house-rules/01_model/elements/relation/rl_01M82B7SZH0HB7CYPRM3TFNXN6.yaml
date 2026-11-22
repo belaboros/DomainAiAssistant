@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82B00WCXHEC1FCHYNF4GYBE
+id: rl_01M82B7SZH0HB7CYPRM3TFNXN6
+label: is reported to
+level: level-3
+level_reason: Complaint handling.
+object: cn_01M82B0RVQB8E3F7FG9YPD26J7
+origin:
+  created_at: '2026-11-22T19:20:28.914825Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+predicate_label: is reported to
+status: proposed
+subject: cn_01M82AM9P6EWS5D1VJCAH8Z7VF

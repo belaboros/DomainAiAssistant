@@ -1,0 +1,26 @@
+ended_at: '2026-11-22T19:15:08.523184Z'
+estimate:
+  cost_usd: 1.558828
+  documents: 11
+  input_tokens: 97412
+  output_tokens: 58459
+  units: 14
+id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+input_tokens: 114622
+kind: ingestion
+model: claude-opus-5-5
+output_tokens: 30509
+skipped:
+- item: '{"concept": "C115", "merge": ["C38"], "preferred_label": "rabies vaccination", "terms": ["rabies vaccination"]}'
+  reason: no term with the label 'rabies vaccination'
+  where: term resolution
+- item: '{"concept": "C103", "merge": ["C66"], "preferred_label": "grooming", "terms": ["grooming"]}'
+  reason: no term with the label 'grooming'
+  where: term resolution
+- item: '{"concept": "C106", "merge": ["C27"], "preferred_label": "feeding", "terms": ["feeding"]}'
+  reason: no term with the label 'feeding'
+  where: term resolution
+source_path: user-manuals-pets-and-house-rules/cat-owners-manual
+started_at: '2026-11-22T19:11:10.541478Z'
+status: completed
+user: belaboros

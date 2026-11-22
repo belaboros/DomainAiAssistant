@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82APMQ7MGEVFK2CW6002H2Y
+id: rl_01M82AVB4Q3YP83EB2BM9CVNHJ
+label: is part of
+level: level-3
+level_reason: Only in kitten settling-in context.
+object: cn_01M82ACZDNRYXG7FZCA8KC7FD5
+origin:
+  created_at: '2026-11-22T19:13:40.504687Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+predicate_label: is part of
+status: proposed
+subject: cn_01M82AVB4Q3YP83EB2BM9CVNHE

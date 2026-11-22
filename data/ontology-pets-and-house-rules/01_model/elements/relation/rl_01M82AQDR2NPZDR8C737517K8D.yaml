@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82APMQ68JDJRTYQDVNXFWWJ
+id: rl_01M82AQDR2NPZDR8C737517K8D
+label: owns
+level: level-1
+level_reason: Core link between owner and pet.
+object: cn_01M82AQDR2NPZDR8C737517K86
+origin:
+  created_at: '2026-11-22T19:11:32.099326Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+predicate_label: owns
+status: proposed
+subject: cn_01M82AQDR2NPZDR8C737517K87

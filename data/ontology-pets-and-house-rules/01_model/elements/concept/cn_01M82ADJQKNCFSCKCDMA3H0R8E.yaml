@@ -1,0 +1,13 @@
+evidence:
+- unit: su_01M82ABDR1CAX5PFZ2HWSEQHBH
+id: cn_01M82ADJQKNCFSCKCDMA3H0R8E
+label: xylitol
+level: level-2
+level_reason: Named poisonous substance.
+origin:
+  created_at: '2026-11-22T19:06:09.524522Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+parents:
+- cn_01M82ADJQKNCFSCKCDMA3H0R8A
+status: proposed

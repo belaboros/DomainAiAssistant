@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82APMQ68JDJRTYQDVNXFWWM
+id: st_01M82AR3FY4ER2X3BN6TNX7ARJ
+label: Decide indoor or outdoor early
+level: level-2
+level_reason: Normal-case decision for a cat owner.
+origin:
+  created_at: '2026-11-22T19:11:54.367170Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+status: proposed
+text: A cat owner should decide early whether the cat will be an indoor cat or an outdoor cat.

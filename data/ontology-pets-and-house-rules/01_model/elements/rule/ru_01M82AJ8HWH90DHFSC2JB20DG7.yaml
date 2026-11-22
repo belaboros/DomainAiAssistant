@@ -1,0 +1,20 @@
+action: learn the five basic commands sit, down, stay, come and leave it
+actor: dog
+evidence:
+- unit: su_01M82ABDR28HTPAFF4C44FRBZR
+id: ru_01M82AJ8HWH90DHFSC2JB20DG7
+label: Dog should learn five basic commands
+level: level-2
+level_reason: Normal-day training knowledge for an owner.
+modality: must
+origin:
+  created_at: '2026-11-22T19:08:42.941615Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+refers_to:
+- cn_01M82AC66KMJH32E2MQ3Z7ZBKM
+- cn_01M82AJ8HWH90DHFSC2JB20DFW
+- rl_01M82AJ8HWH90DHFSC2JB20DG3
+scope:
+- co_01M82ABDR0997QP7DGZPPDNF4H
+status: proposed

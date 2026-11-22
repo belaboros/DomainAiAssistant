@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82ABDR1CAX5PFZ2HWSEQHBH
+id: tm_01M82ADJQKNCFSCKCDMA3H0R81
+label: grapes
+level: level-2
+level_reason: Feeding safety.
+mentions:
+- concept: cn_01M82ADJQKNCFSCKCDMA3H0R8C
+  unit: su_01M82ABDR1CAX5PFZ2HWSEQHBH
+origin:
+  created_at: '2026-11-22T19:06:09.524203Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+status: proposed

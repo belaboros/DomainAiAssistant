@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82B00WCXHEC1FCHYNF4GYBE
+id: tm_01M82B7SZH0HB7CYPRM3TFNXMR
+label: damage
+level: level-3
+level_reason: Error scenario.
+mentions:
+- concept: cn_01M82AM9P6EWS5D1VJCAH8Z7VF
+  unit: su_01M82B00WCXHEC1FCHYNF4GYBE
+origin:
+  created_at: '2026-11-22T19:20:28.914118Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+status: proposed

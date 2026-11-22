@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82APMQ7MGEVFK2CW6002H32
+id: st_01M82AWHX95SVMSNEZPEX87TRD
+label: Brush long-haired cats daily
+level: level-2
+level_reason: Everyday grooming routine.
+origin:
+  created_at: '2026-11-22T19:14:20.202308Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+status: proposed
+text: Long-haired cats need brushing every day to prevent matting.

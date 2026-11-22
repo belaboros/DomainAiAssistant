@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82ABDR28HTPAFF4C44FRBZG
+id: st_01M82AH1GXVV72WP99JQXMH6X6
+label: Walk time for small breeds
+level: level-2
+level_reason: Daily walking is a normal-day owner need.
+origin:
+  created_at: '2026-11-22T19:08:02.973484Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+status: proposed
+text: Small breeds need 30 to 60 minutes of walking a day in total.

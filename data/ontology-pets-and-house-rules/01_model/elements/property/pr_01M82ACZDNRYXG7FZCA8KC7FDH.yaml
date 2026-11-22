@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82ABDR1CAX5PFZ2HWSEQHBD
+id: pr_01M82ACZDNRYXG7FZCA8KC7FDH
+label: Space need of large and working breeds
+level: level-2
+level_reason: Normal-case knowledge for choosing a dog.
+name: space need
+of: cn_01M82ACZDNRYXG7FZCA8KC7FCZ
+origin:
+  created_at: '2026-11-22T19:05:49.750591Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+status: proposed
+value: more

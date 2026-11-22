@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82ABDR28HTPAFF4C44FRBZJ
+id: st_01M82AHPS6SQKW9E9EPJYC3KMC
+label: Owner should be the dog's lead
+level: level-2
+level_reason: Normal-day guidance for owners.
+origin:
+  created_at: '2026-11-22T19:08:24.742736Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+status: proposed
+text: 'The owner should be the dog''s lead: a calm, consistent and confident leader whose signals the dog can trust.'

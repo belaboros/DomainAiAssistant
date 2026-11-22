@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82B00WAF2BQ321TGZ91X4KS
+id: rl_01M82B273V2ZBJ1A5ME4ECN7V0
+label: is allowed only in
+level: level-3
+level_reason: Peripheral yard usage.
+object: cn_01M82B273V2ZBJ1A5ME4ECN7TV
+origin:
+  created_at: '2026-11-22T19:17:25.757054Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+predicate_label: is allowed only in
+status: proposed
+subject: cn_01M82B273V2ZBJ1A5ME4ECN7TT

@@ -1,0 +1,18 @@
+action: always end a training session with a success
+actor: owner
+evidence:
+- unit: su_01M82ABDR28HTPAFF4C44FRBZR
+id: ru_01M82AJ8HWH90DHFSC2JB20DGA
+label: End training with a success
+level: level-2
+level_reason: Normal training practice.
+modality: must
+origin:
+  created_at: '2026-11-22T19:08:42.941827Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+refers_to:
+- cn_01M82AJ8HWH90DHFSC2JB20DFX
+scope:
+- co_01M82ABDR0997QP7DGZPPDNF4H
+status: proposed

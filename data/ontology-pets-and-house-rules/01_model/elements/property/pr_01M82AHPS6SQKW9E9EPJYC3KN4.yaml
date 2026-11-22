@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82ABDR28HTPAFF4C44FRBZJ
+id: pr_01M82AHPS6SQKW9E9EPJYC3KN4
+label: Qualities of a good lead
+level: level-2
+level_reason: Describes what a good lead is in normal practice.
+name: qualities
+of: cn_01M82AHPS6SQKW9E9EPJYC3KMM
+origin:
+  created_at: '2026-11-22T19:08:24.743411Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+status: proposed
+value: calm, consistent and confident; signals the dog can trust

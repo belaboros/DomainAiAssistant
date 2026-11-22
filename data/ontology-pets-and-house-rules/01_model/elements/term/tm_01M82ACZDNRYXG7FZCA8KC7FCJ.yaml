@@ -1,0 +1,17 @@
+evidence:
+- unit: su_01M82ABDR1CAX5PFZ2HWSEQHBB
+- unit: su_01M82ABDR1CAX5PFZ2HWSEQHBF
+id: tm_01M82ACZDNRYXG7FZCA8KC7FCJ
+label: breed
+level: level-2
+level_reason: Basic word for choosing a pet.
+mentions:
+- concept: cn_01M82ACZDNRYXG7FZCA8KC7FCX
+  unit: su_01M82ABDR1CAX5PFZ2HWSEQHBB
+- concept: cn_01M82ACZDNRYXG7FZCA8KC7FCX
+  unit: su_01M82ABDR1CAX5PFZ2HWSEQHBF
+origin:
+  created_at: '2026-11-22T19:05:49.749664Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+status: proposed

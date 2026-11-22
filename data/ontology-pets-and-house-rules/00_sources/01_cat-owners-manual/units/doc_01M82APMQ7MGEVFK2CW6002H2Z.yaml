@@ -1,0 +1,12 @@
+- content_hash: sha256:61ce01d74b36f41b40b4495bbc3f2b3daccd7fc313dafabf2b546f84b37d2585
+  document_id: doc_01M82APMQ7MGEVFK2CW6002H2Z
+  id: su_01M82APMQ7MGEVFK2CW6002H30
+  kind: paragraph
+  location:
+    heading_path:
+    - 6. Play and Behaviour
+    index_in_section: 0
+    line_end: 3
+    line_start: 3
+    path: 06-play-and-behaviour.md
+  text: Play with your cat for at least 15 minutes twice a day. A cat that scratches furniture usually needs a better scratching post, not punishment. Never punish a cat physically. A cat that suddenly stops using its litter box may be ill and should see a veterinarian.
