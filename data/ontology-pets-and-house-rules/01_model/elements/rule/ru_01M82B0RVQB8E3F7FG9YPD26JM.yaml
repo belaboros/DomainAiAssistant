@@ -1,0 +1,20 @@
+action: follow the house rules
+actor: resident
+evidence:
+- unit: su_01M82B00WAF2BQ321TGZ91X4KN
+id: ru_01M82B0RVQB8E3F7FG9YPD26JM
+label: Residents must follow the house rules
+level: level-1
+level_reason: Core obligation that every resident and pet owner in the complex must know.
+modality: must
+origin:
+  created_at: '2026-11-22T19:16:38.392398Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+refers_to:
+- cn_01M82B0RVQB8E3F7FG9YPD26J6
+- cn_01M82B0RVQB8E3F7FG9YPD26JD
+- rl_01M82B0RVQB8E3F7FG9YPD26JH
+scope:
+- co_01M82B00W91390459HX0FJMY3T
+status: proposed

@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82B00WB34E68SXWEMVZ22EK
+id: tm_01M82B4TJPFJR5BJ36WDBJSZZJ
+label: pet waste
+level: level-1
+level_reason: Part of the core waste rule.
+mentions:
+- concept: cn_01M82B4TJPFJR5BJ36WDBJT000
+  unit: su_01M82B00WB34E68SXWEMVZ22EK
+origin:
+  created_at: '2026-11-22T19:18:51.223272Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+status: proposed

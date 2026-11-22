@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82B00WCXHEC1FCHYNF4GYBC
+id: st_01M82B7AD49EHMKTM1WFJFM30S
+label: Noisy work hours on Saturdays
+level: level-3
+level_reason: General house rule detail beyond the pet-owner core; relevant for special situations like renovation.
+origin:
+  created_at: '2026-11-22T19:20:12.964821Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+status: proposed
+text: Noisy work such as drilling is allowed on Saturdays from 09:00 to 12:00.

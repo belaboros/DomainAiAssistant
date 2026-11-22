@@ -9,8 +9,8 @@
 
 <urn:domain-ai-assistant:ontology:pets-and-house-rules> a owl:Ontology ;
     dcterms:description "Explain what it takes to own a dog or a cat in a residential complex, and which house rules apply to pets and their owners." ;
-    owl:versionIRI <urn:domain-ai-assistant:ontology:pets-and-house-rules:version-raw+80623eb> ;
-    owl:versionInfo "raw+80623eb" .
+    owl:versionIRI <urn:domain-ai-assistant:ontology:pets-and-house-rules:version-raw+4eb170a> ;
+    owl:versionInfo "raw+4eb170a" .
 
 :cn_01M82ACZDNRYXG7FZCA8KC7FD1 a owl:Class,
         skos:Concept ;
@@ -39,6 +39,71 @@
     skos:prefLabel "xylitol" ;
     dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBH ;
     dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82B0RVQB8E3F7FG9YPD26J8 a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82B0RVQB8E3F7FG9YPD26J6 ;
+    skos:broader :cn_01M82B0RVQB8E3F7FG9YPD26J6 ;
+    skos:prefLabel "tenant" ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KN ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82B0RVQB8E3F7FG9YPD26J9 a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82B0RVQB8E3F7FG9YPD26J6 ;
+    skos:altLabel "owner" ;
+    skos:broader :cn_01M82B0RVQB8E3F7FG9YPD26J6 ;
+    skos:prefLabel "owner (of a dwelling)" ;
+    skos:scopeNote "Owner of a dwelling in the buildings, one kind of resident." ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KN ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82B0RVQB8E3F7FG9YPD26JA a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82B0RVQB8E3F7FG9YPD26J6 ;
+    skos:broader :cn_01M82B0RVQB8E3F7FG9YPD26J6 ;
+    skos:prefLabel "household member" ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KN ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82B4TJPFJR5BJ36WDBJSZZT a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82B4TJPFJR5BJ36WDBJSZZQ ;
+    skos:broader :cn_01M82B4TJPFJR5BJ36WDBJSZZQ ;
+    skos:prefLabel "paper" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EK ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82B4TJPFJR5BJ36WDBJSZZV a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82B4TJPFJR5BJ36WDBJSZZQ ;
+    skos:broader :cn_01M82B4TJPFJR5BJ36WDBJSZZQ ;
+    skos:prefLabel "plastic" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EK ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82B4TJPFJR5BJ36WDBJSZZW a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82B4TJPFJR5BJ36WDBJSZZQ ;
+    skos:broader :cn_01M82B4TJPFJR5BJ36WDBJSZZQ ;
+    skos:prefLabel "glass" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EK ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82B4TJPFJR5BJ36WDBJSZZX a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82B4TJPFJR5BJ36WDBJSZZQ ;
+    skos:broader :cn_01M82B4TJPFJR5BJ36WDBJSZZQ ;
+    skos:prefLabel "organic waste" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EK ;
+    dai:level dai:level-3 ;
     dai:status dai:proposed .
 
 :pr_01M82AC66KMJH32E2MQ3Z7ZBM5 a dai:Property ;
@@ -507,6 +572,134 @@
     dai:propertyValue "once a day" ;
     dai:status dai:proposed .
 
+:pr_01M82B0RVQB8E3F7FG9YPD26JP a dai:Property ;
+    rdfs:label "Buildings covered by the rules" ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KN ;
+    dai:level dai:level-1 ;
+    dai:propertyName "applies to buildings" ;
+    dai:propertyOf :cn_01M82B0RVQB8E3F7FG9YPD26JD ;
+    dai:propertyValue "A, B and C" ;
+    dai:status dai:proposed .
+
+:pr_01M82B1AN7D1ZA7ABBS5RZ4XKG a dai:Property ;
+    rdfs:label "Quiet hours on weekdays" ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KQ ;
+    dai:level dai:level-2 ;
+    dai:propertyName "weekday time span" ;
+    dai:propertyOf :cn_01M82B1AN7D1ZA7ABBS5RZ4XK4 ;
+    dai:propertyValue "22:00 to 07:00" ;
+    dai:status dai:proposed .
+
+:pr_01M82B1AN7D1ZA7ABBS5RZ4XKH a dai:Property ;
+    rdfs:label "Quiet hours on weekends and public holidays" ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KQ ;
+    dai:level dai:level-2 ;
+    dai:propertyName "weekend and public holiday time span" ;
+    dai:propertyOf :cn_01M82B1AN7D1ZA7ABBS5RZ4XK4 ;
+    dai:propertyValue "22:00 to 09:00" ;
+    dai:status dai:proposed .
+
+:pr_01M82B273WM9S0TB245E76BCNA a dai:Property ;
+    rdfs:label "Children play hours start" ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KS ;
+    dai:level dai:level-2 ;
+    dai:propertyName "start time" ;
+    dai:propertyOf :ru_01M82B273WM9S0TB245E76BCN6 ;
+    dai:propertyValue "08:00" ;
+    dai:status dai:proposed .
+
+:pr_01M82B273WM9S0TB245E76BCNB a dai:Property ;
+    rdfs:label "Children play hours end" ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KS ;
+    dai:level dai:level-2 ;
+    dai:propertyName "end time" ;
+    dai:propertyOf :ru_01M82B273WM9S0TB245E76BCN6 ;
+    dai:propertyValue "20:00" ;
+    dai:status dai:proposed .
+
+:pr_01M82B2PQ0Y5BYDSR06NJ167CR a dai:Property ;
+    rdfs:label "Registration deadline" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EA ;
+    dai:level dai:level-1 ;
+    dai:propertyName "deadline" ;
+    dai:propertyOf :cn_01M82B2PQ0Y5BYDSR06NJ167CG ;
+    dai:propertyUnit "days after moving in or acquiring the pet" ;
+    dai:propertyValue "14" ;
+    dai:status dai:proposed .
+
+:pr_01M82B4TJQ99E974JCJPXB3VN9 a dai:Property ;
+    rdfs:label "Bin room location" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EK ;
+    dai:level dai:level-2 ;
+    dai:propertyName "location" ;
+    dai:propertyOf :cn_01M82B4TJPFJR5BJ36WDBJSZZR ;
+    dai:propertyValue "building B" ;
+    dai:status dai:proposed .
+
+:pr_01M82B4TJQ99E974JCJPXB3VNA a dai:Property ;
+    rdfs:label "Waste fractions" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EK ;
+    dai:level dai:level-2 ;
+    dai:propertyName "sorting categories" ;
+    dai:propertyOf :cn_01M82B4TJPFJR5BJ36WDBJSZZQ ;
+    dai:propertyValue "paper, plastic, glass, organic waste, residual waste" ;
+    dai:status dai:proposed .
+
+:pr_01M82B5VQ6AQJZT0DHJWAXTBRF a dai:Property ;
+    rdfs:label "Main door locking hours" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EQ ;
+    dai:level dai:level-3 ;
+    dai:propertyName "locked hours" ;
+    dai:propertyOf :cn_01M82B5VQ6AQJZT0DHJWAXTBR1 ;
+    dai:propertyValue "22:00 to 06:00" ;
+    dai:status dai:proposed .
+
+:pr_01M82B6NEKKV0CSECXDQRKNHPG a dai:Property ;
+    rdfs:label "Laundry room opening hours" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ES ;
+    dai:level dai:level-2 ;
+    dai:propertyName "opening hours" ;
+    dai:propertyOf :cn_01M82B6NEKKV0CSECXDQRKNHNT ;
+    dai:propertyValue "07:00 to 21:00" ;
+    dai:status dai:proposed .
+
+:pr_01M82B6NEKKV0CSECXDQRKNHPH a dai:Property ;
+    rdfs:label "Laundry room location" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ES ;
+    dai:level dai:level-2 ;
+    dai:propertyName "location" ;
+    dai:propertyOf :cn_01M82B6NEKKV0CSECXDQRKNHNT ;
+    dai:propertyValue "cellar of building A" ;
+    dai:status dai:proposed .
+
+:pr_01M82B7AD49EHMKTM1WFJFM31E a dai:Property ;
+    rdfs:label "Weekday noisy work hours" ;
+    dai:evidence :su_01M82B00WCXHEC1FCHYNF4GYBC ;
+    dai:level dai:level-3 ;
+    dai:propertyName "allowed hours on weekdays" ;
+    dai:propertyOf :cn_01M82B7AD49EHMKTM1WFJFM312 ;
+    dai:propertyValue "08:00-12:00 and 14:00-18:00" ;
+    dai:status dai:proposed .
+
+:pr_01M82B7AD49EHMKTM1WFJFM31F a dai:Property ;
+    rdfs:label "Saturday noisy work hours" ;
+    dai:evidence :su_01M82B00WCXHEC1FCHYNF4GYBC ;
+    dai:level dai:level-3 ;
+    dai:propertyName "allowed hours on Saturdays" ;
+    dai:propertyOf :cn_01M82B7AD49EHMKTM1WFJFM312 ;
+    dai:propertyValue "09:00-12:00" ;
+    dai:status dai:proposed .
+
+:pr_01M82B7AD49EHMKTM1WFJFM31G a dai:Property ;
+    rdfs:label "Move notice period" ;
+    dai:evidence :su_01M82B00WCXHEC1FCHYNF4GYBC ;
+    dai:level dai:level-3 ;
+    dai:propertyName "minimum notice to house management" ;
+    dai:propertyOf :cn_01M82AXJ1250JDQ3F0HM8ET4QT ;
+    dai:propertyUnit "days" ;
+    dai:propertyValue "7" ;
+    dai:status dai:proposed .
+
 :rl_01M82AC66KMJH32E2MQ3Z7ZBKW a owl:ObjectProperty ;
     rdfs:label "needs" ;
     rdfs:domain :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
@@ -729,6 +922,118 @@
     rdfs:domain :cn_01M82AQDR2NPZDR8C737517K86 ;
     rdfs:range :cn_01M82AXJ1250JDQ3F0HM8ET4QW ;
     dai:evidence :su_01M82APMQ7MGEVFK2CW6002H36 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82B0RVQB8E3F7FG9YPD26JE a owl:ObjectProperty ;
+    rdfs:label "lives in" ;
+    rdfs:domain :cn_01M82B0RVQB8E3F7FG9YPD26J6 ;
+    rdfs:range :cn_01M82B0RVQB8E3F7FG9YPD26JB ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KN ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:rl_01M82B0RVQB8E3F7FG9YPD26JF a owl:ObjectProperty ;
+    rdfs:label "administers" ;
+    rdfs:domain :cn_01M82B0RVQB8E3F7FG9YPD26J7 ;
+    rdfs:range :cn_01M82B0RVQB8E3F7FG9YPD26JB ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KN ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:rl_01M82B0RVQB8E3F7FG9YPD26JJ a owl:ObjectProperty ;
+    rdfs:label "apply to" ;
+    rdfs:domain :cn_01M82B0RVQB8E3F7FG9YPD26JD ;
+    rdfs:range :cn_01M82B0RVQB8E3F7FG9YPD26JB ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KN ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:rl_01M82B0RVQB8E3F7FG9YPD26JK a owl:ObjectProperty ;
+    rdfs:label "is located around" ;
+    rdfs:domain :cn_01M82B0RVQB8E3F7FG9YPD26JB ;
+    rdfs:range :cn_01M82B0RVQB8E3F7FG9YPD26JC ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KN ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82B273V2ZBJ1A5ME4ECN7TX a owl:ObjectProperty ;
+    rdfs:label "is shared by" ;
+    rdfs:domain :cn_01M82B0RVQB8E3F7FG9YPD26JC ;
+    rdfs:range :cn_01M82B0RVQB8E3F7FG9YPD26J6 ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KS ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82B2PQ0Y5BYDSR06NJ167CM a owl:ObjectProperty ;
+    rdfs:label "owns" ;
+    rdfs:domain :cn_01M82B2PQ0Y5BYDSR06NJ167CE ;
+    rdfs:range :cn_01M82B2PPZPYF6543TD3RQQKNJ ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EA ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:rl_01M82B3MD8NCJFJC9394MZ8MR4 a owl:ObjectProperty ;
+    rdfs:label "owns" ;
+    rdfs:domain :cn_01M82B3MD8NCJFJC9394MZ8MQN ;
+    rdfs:range :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ED,
+        :su_01M82B00WB34E68SXWEMVZ22EE ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:rl_01M82B3MD8NCJFJC9394MZ8MR7 a owl:ObjectProperty ;
+    rdfs:label "has" ;
+    rdfs:domain :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
+    rdfs:range :cn_01M82ACZDNRYXG7FZCA8KC7FCX ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EE ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82B4TJPFJR5BJ36WDBJT004 a owl:ObjectProperty ;
+    rdfs:label "is located in" ;
+    rdfs:domain :cn_01M82B4TJPFJR5BJ36WDBJSZZR ;
+    rdfs:range :cn_01M82B4TJPFJR5BJ36WDBJSZZS ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EK ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82B6NEKKV0CSECXDQRKNHP6 a owl:ObjectProperty ;
+    rdfs:label "is located in" ;
+    rdfs:domain :cn_01M82B6NEKKV0CSECXDQRKNHNT ;
+    rdfs:range :cn_01M82B441FVKK345F8CJ12SYK2 ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ES ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82B6NEKKV0CSECXDQRKNHP7 a owl:ObjectProperty ;
+    rdfs:label "is part of" ;
+    rdfs:domain :cn_01M82B441FVKK345F8CJ12SYK2 ;
+    rdfs:range :cn_01M82B6NEKKV0CSECXDQRKNHNW ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ES ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82B6NEKKV0CSECXDQRKNHP9-shape a sh:NodeShape ;
+    sh:property [ sh:path :rl_01M82B6NEKKV0CSECXDQRKNHP9 ;
+            sh:qualifiedMaxCount 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedValueShape [ sh:class :cn_01M82B6NEKKV0CSECXDQRKNHP4 ] ] ;
+    sh:targetClass :cn_01M82ACZDNRYXG7FZCA8KC7FD5 .
+
+:rl_01M82B6NEKKV0CSECXDQRKNHPA a owl:ObjectProperty ;
+    rdfs:label "is located in" ;
+    rdfs:domain :cn_01M82B6NEKKV0CSECXDQRKNHP2 ;
+    rdfs:range :cn_01M82B6NEKKV0CSECXDQRKNHNT ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ES ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82B7SZH0HB7CYPRM3TFNXNA a owl:ObjectProperty ;
+    rdfs:label "ends" ;
+    rdfs:domain :cn_01M82B7SZH0HB7CYPRM3TFNXN4 ;
+    rdfs:range :cn_01M82B7SZH0HB7CYPRM3TFNXN5 ;
+    dai:evidence :su_01M82B00WCXHEC1FCHYNF4GYBE ;
     dai:level dai:level-3 ;
     dai:status dai:proposed .
 
@@ -2146,6 +2451,591 @@
     dai:scope :co_01M82APMQ5V0PTBT5SDYAF1JAP ;
     dai:status dai:proposed .
 
+:ru_01M82B0RVQB8E3F7FG9YPD26JM a dai:Rule ;
+    rdfs:label "Residents must follow the house rules" ;
+    dai:action "follow the house rules" ;
+    dai:actor "resident" ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KN ;
+    dai:level dai:level-1 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82B0RVQB8E3F7FG9YPD26J6,
+        :cn_01M82B0RVQB8E3F7FG9YPD26JD,
+        :rl_01M82B0RVQB8E3F7FG9YPD26JH ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B0RVQB8E3F7FG9YPD26JN a dai:Rule ;
+    rdfs:label "House management enforces the house rules" ;
+    dai:action "enforce the house rules" ;
+    dai:actor "house management" ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KN ;
+    dai:level dai:level-1 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82B0RVQB8E3F7FG9YPD26J7,
+        :cn_01M82B0RVQB8E3F7FG9YPD26JD,
+        :rl_01M82B0RVQB8E3F7FG9YPD26JG ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B1AN7D1ZA7ABBS5RZ4XKF a dai:Rule ;
+    rdfs:label "Avoid audible noise during quiet hours" ;
+    dai:action "avoid noise that can be heard in other flats or in the inner yard, including music, drilling and persistent barking" ;
+    dai:actor "resident" ;
+    dai:condition "during quiet hours" ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KQ ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82ACZDNRYXG7FZCA8KC7FD5,
+        :cn_01M82B0RVQB8E3F7FG9YPD26J6,
+        :cn_01M82B0RVQB8E3F7FG9YPD26JC,
+        :cn_01M82B1AN7D1ZA7ABBS5RZ4XK4,
+        :cn_01M82B1AN7D1ZA7ABBS5RZ4XK6,
+        :cn_01M82B1AN7D1ZA7ABBS5RZ4XK9,
+        :cn_01M82B1AN7D1ZA7ABBS5RZ4XKA,
+        :cn_01M82B1AN7D1ZA7ABBS5RZ4XKB,
+        :rl_01M82B1AN7D1ZA7ABBS5RZ4XKC,
+        :rl_01M82B1AN7D1ZA7ABBS5RZ4XKD,
+        :rl_01M82B1AN7D1ZA7ABBS5RZ4XKE ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B273WM9S0TB245E76BCN7 a dai:Rule ;
+    rdfs:label "Bicycles only in bicycle racks" ;
+    dai:action "park bicycles in the bicycle racks only" ;
+    dai:actor "resident" ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KS ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82B273V2ZBJ1A5ME4ECN7TR,
+        :cn_01M82B273V2ZBJ1A5ME4ECN7TS,
+        :rl_01M82B273V2ZBJ1A5ME4ECN7TZ ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B273WM9S0TB245E76BCN8 a dai:Rule ;
+    rdfs:label "Barbecues only in the marked barbecue area" ;
+    dai:action "hold barbecues only in the marked barbecue area" ;
+    dai:actor "resident" ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KS ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82B273V2ZBJ1A5ME4ECN7TT,
+        :cn_01M82B273V2ZBJ1A5ME4ECN7TV,
+        :rl_01M82B273V2ZBJ1A5ME4ECN7V0 ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B273WM9S0TB245E76BCN9 a dai:Rule ;
+    rdfs:label "No barbecues during quiet hours" ;
+    dai:action "hold a barbecue" ;
+    dai:actor "resident" ;
+    dai:condition "during quiet hours" ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KS ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must_not ;
+    dai:refersTo :cn_01M82B1AN7D1ZA7ABBS5RZ4XK4,
+        :cn_01M82B273V2ZBJ1A5ME4ECN7TT,
+        :rl_01M82B273WM9S0TB245E76BCN5 ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B2PQ0Y5BYDSR06NJ167CP a dai:Rule ;
+    rdfs:label "Register pet within 14 days" ;
+    dai:action "register the pet (dog or cat) with the house management" ;
+    dai:actor "pet owner" ;
+    dai:condition "within 14 days of moving in or acquiring the pet" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EA ;
+    dai:level dai:level-1 ;
+    dai:limitComparator "<=" ;
+    dai:limitUnit "days" ;
+    dai:limitValue 14.0 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82B0RVQB8E3F7FG9YPD26J7,
+        :cn_01M82B2PPZPYF6543TD3RQQKNJ,
+        :cn_01M82B2PQ0Y5BYDSR06NJ167CE,
+        :cn_01M82B2PQ0Y5BYDSR06NJ167CG,
+        :cn_01M82B2PQ0Y5BYDSR06NJ167CH,
+        :cn_01M82B2PQ0Y5BYDSR06NJ167CJ,
+        :rl_01M82B2PQ0Y5BYDSR06NJ167CK ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B2PQ0Y5BYDSR06NJ167CQ a dai:Rule ;
+    rdfs:label "Pet must not disturb residents" ;
+    dai:action "make sure that their pet does not disturb other residents" ;
+    dai:actor "pet owner" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EA ;
+    dai:level dai:level-1 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82B0RVQB8E3F7FG9YPD26J6,
+        :cn_01M82B2PPZPYF6543TD3RQQKNJ,
+        :cn_01M82B2PQ0Y5BYDSR06NJ167CE,
+        :rl_01M82B2PQ0Y5BYDSR06NJ167CN ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B3MD8NCJFJC9394MZ8MRB a dai:Rule ;
+    rdfs:label "Dogs on lead in shared areas" ;
+    dai:action "keep the dog on a lead at all times in the inner yard, the stairwells and the lifts" ;
+    dai:actor "dog owner" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EC ;
+    dai:level dai:level-1 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AC66KMJH32E2MQ3Z7ZBKM,
+        :cn_01M82AFTZDSHCD0SK6T4N2YZW6,
+        :cn_01M82B0RVQB8E3F7FG9YPD26JC,
+        :cn_01M82B3MD8NCJFJC9394MZ8MQR,
+        :cn_01M82B3MD8NCJFJC9394MZ8MQS,
+        :rl_01M82B3MD8NCJFJC9394MZ8MR3 ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B3MD8NCJFJC9394MZ8MRC a dai:Rule ;
+    rdfs:label "Maximum lead length" ;
+    dai:action "use a lead longer than 2 metres" ;
+    dai:actor "dog owner" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EC ;
+    dai:level dai:level-1 ;
+    dai:limitComparator "<=" ;
+    dai:limitUnit "m" ;
+    dai:limitValue 2.0 ;
+    dai:modality dai:must_not ;
+    dai:refersTo :cn_01M82AFTZDSHCD0SK6T4N2YZW6,
+        :rl_01M82B3MD8NCJFJC9394MZ8MR3 ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B3MD8NCJFJC9394MZ8MRD a dai:Rule ;
+    rdfs:label "No relieving in yard or flower beds" ;
+    dai:action "let the dog relieve itself in the inner yard or the flower beds" ;
+    dai:actor "dog owner" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ED ;
+    dai:level dai:level-1 ;
+    dai:modality dai:must_not ;
+    dai:refersTo :cn_01M82AC66KMJH32E2MQ3Z7ZBKM,
+        :cn_01M82B0RVQB8E3F7FG9YPD26JC,
+        :cn_01M82B3MD8NCJFJC9394MZ8MQT ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B3MD8NCJFJC9394MZ8MRE a dai:Rule ;
+    rdfs:label "Take dog outside complex to relieve" ;
+    dai:action "take the dog outside the building complex to relieve itself" ;
+    dai:actor "dog owner" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ED ;
+    dai:level dai:level-1 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AC66KMJH32E2MQ3Z7ZBKM,
+        :cn_01M82B3MD8NCJFJC9394MZ8MQV ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B3MD8NCJFJC9394MZ8MRF a dai:Rule ;
+    rdfs:label "Owner knows alone-time limit" ;
+    dai:action "know the maximum time their dog may be left alone in the flat" ;
+    dai:actor "dog owner" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EE ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AC66KMJH32E2MQ3Z7ZBKM,
+        :cn_01M82ACZDNRYXG7FZCA8KC7FD5,
+        :cn_01M82B3MD8NCJFJC9394MZ8MQZ,
+        :rl_01M82B3MD8NCJFJC9394MZ8MR5,
+        :rl_01M82B3MD8NCJFJC9394MZ8MR6,
+        :rl_01M82B3MD8NCJFJC9394MZ8MR8 ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B3MD8NCJFJC9394MZ8MRG a dai:Rule ;
+    rdfs:label "Management may require care for barking dog" ;
+    dai:action "require the owner to arrange care for the dog" ;
+    dai:actor "house management" ;
+    dai:condition "the dog barks persistently while left alone" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EF ;
+    dai:level dai:level-3 ;
+    dai:modality dai:may ;
+    dai:refersTo :cn_01M82B0RVQB8E3F7FG9YPD26J7,
+        :cn_01M82B1AN7D1ZA7ABBS5RZ4XK9,
+        :cn_01M82B3MD8NCJFJC9394MZ8MR2,
+        :rl_01M82B3MD8NCJFJC9394MZ8MR9,
+        :rl_01M82B3MD8NCJFJC9394MZ8MRA ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B441FVKK345F8CJ12SYK9 a dai:Rule ;
+    rdfs:label "Cats may move freely in the inner yard" ;
+    dai:action "move freely in the inner yard" ;
+    dai:actor "cat" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EH ;
+    dai:level dai:level-2 ;
+    dai:modality dai:may ;
+    dai:refersTo :cn_01M82AQDR2NPZDR8C737517K86,
+        :cn_01M82B0RVQB8E3F7FG9YPD26JC,
+        :rl_01M82B441FVKK345F8CJ12SYK5 ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B441FVKK345F8CJ12SYKA a dai:Rule ;
+    rdfs:label "Cats not kept in stairwells" ;
+    dai:action "keep a cat in the stairwells" ;
+    dai:actor "cat owner" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EH ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must_not ;
+    dai:refersTo :cn_01M82AQDR2NPZDR8C737517K86,
+        :cn_01M82B3MD8NCJFJC9394MZ8MQR,
+        :rl_01M82B441FVKK345F8CJ12SYK6 ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B441FVKK345F8CJ12SYKB a dai:Rule ;
+    rdfs:label "Cats not kept in the cellar" ;
+    dai:action "keep a cat in the cellar" ;
+    dai:actor "cat owner" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EH ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must_not ;
+    dai:refersTo :cn_01M82AQDR2NPZDR8C737517K86,
+        :cn_01M82B441FVKK345F8CJ12SYK2,
+        :rl_01M82B441FVKK345F8CJ12SYK7 ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B441FVKK345F8CJ12SYKC a dai:Rule ;
+    rdfs:label "Litter boxes kept inside the flat" ;
+    dai:action "keep litter boxes inside the flat" ;
+    dai:actor "cat owner" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EH ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82ACZDNRYXG7FZCA8KC7FD5,
+        :cn_01M82ARW4GRHWZH2QAVQ4Z6C2S,
+        :rl_01M82B441FVKK345F8CJ12SYK8 ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B4TJPFJR5BJ36WDBJT009 a dai:Rule ;
+    rdfs:label "Pet waste only into residual waste bin" ;
+    dai:action "put pet waste into the residual waste bin only" ;
+    dai:actor "pet owner" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EK ;
+    dai:level dai:level-1 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82B4TJPFJR5BJ36WDBJSZZZ,
+        :cn_01M82B4TJPFJR5BJ36WDBJT000,
+        :rl_01M82B4TJPFJR5BJ36WDBJT006 ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B4TJQ99E974JCJPXB3VN6 a dai:Rule ;
+    rdfs:label "Used cat litter only into residual waste bin" ;
+    dai:action "put used cat litter into the residual waste bin only" ;
+    dai:actor "pet owner" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EK ;
+    dai:level dai:level-1 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82ATVV0G4J5RJ6TZ063RNYQ,
+        :cn_01M82B4TJPFJR5BJ36WDBJSZZZ,
+        :rl_01M82B4TJPFJR5BJ36WDBJT007 ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B4TJQ99E974JCJPXB3VN7 a dai:Rule ;
+    rdfs:label "Bulky items must be booked for collection" ;
+    dai:action "book bulky items for collection with the house management" ;
+    dai:actor "resident" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EK ;
+    dai:level dai:level-3 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82B0RVQB8E3F7FG9YPD26J7,
+        :cn_01M82B4TJPFJR5BJ36WDBJT002,
+        :rl_01M82B4TJPFJR5BJ36WDBJT008 ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B4TJQ99E974JCJPXB3VN8 a dai:Rule ;
+    rdfs:label "Waste is sorted in the bin room" ;
+    dai:action "sort waste in the bin room of building B into paper, plastic, glass, organic waste and residual waste" ;
+    dai:actor "resident" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EK ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82B4TJPFJR5BJ36WDBJSZZQ,
+        :cn_01M82B4TJPFJR5BJ36WDBJSZZR,
+        :cn_01M82B4TJPFJR5BJ36WDBJSZZS,
+        :rl_01M82B4TJPFJR5BJ36WDBJT005 ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B5BJWECFNN10MNRT4KBXZ a dai:Rule ;
+    rdfs:label "Keep stairwells, corridors and escape routes free of objects" ;
+    dai:action "keep stairwells, corridors and escape routes free of objects, including prams, shoes and pet equipment" ;
+    dai:actor "resident" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EN ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82B3MD8NCJFJC9394MZ8MQR,
+        :cn_01M82B5BJWECFNN10MNRT4KBXQ,
+        :cn_01M82B5BJWECFNN10MNRT4KBXR,
+        :cn_01M82B5BJWECFNN10MNRT4KBXS,
+        :cn_01M82B5BJWECFNN10MNRT4KBXT,
+        :cn_01M82B5BJWECFNN10MNRT4KBXV,
+        :rl_01M82B5BJWECFNN10MNRT4KBXW,
+        :rl_01M82B5BJWECFNN10MNRT4KBXX,
+        :rl_01M82B5BJWECFNN10MNRT4KBXY ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B5BJWECFNN10MNRT4KBY0 a dai:Rule ;
+    rdfs:label "No pet equipment in stairwells, corridors or escape routes" ;
+    dai:action "leave pet equipment in stairwells, corridors or escape routes" ;
+    dai:actor "pet owner" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EN ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must_not ;
+    dai:refersTo :cn_01M82B3MD8NCJFJC9394MZ8MQR,
+        :cn_01M82B5BJWECFNN10MNRT4KBXQ,
+        :cn_01M82B5BJWECFNN10MNRT4KBXR,
+        :cn_01M82B5BJWECFNN10MNRT4KBXS,
+        :rl_01M82B5BJWECFNN10MNRT4KBXW,
+        :rl_01M82B5BJWECFNN10MNRT4KBXX,
+        :rl_01M82B5BJWECFNN10MNRT4KBXY ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B5BJWECFNN10MNRT4KBY1 a dai:Rule ;
+    rdfs:label "No smoking in shared indoor spaces" ;
+    dai:action "smoke in any shared indoor space" ;
+    dai:actor "resident" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EN ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must_not ;
+    dai:refersTo :cn_01M82B5BJWECFNN10MNRT4KBXN ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B5VQ6AQJZT0DHJWAXTBRB a dai:Rule ;
+    rdfs:label "Main doors locked at night" ;
+    dai:action "stay closed and locked from 22:00 to 06:00" ;
+    dai:actor "main door of each building" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EQ ;
+    dai:level dai:level-3 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82B0RVQB8E3F7FG9YPD26JB,
+        :cn_01M82B5VQ6AQJZT0DHJWAXTBR1,
+        :rl_01M82B5VQ6AQJZT0DHJWAXTBR7 ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B5VQ6AQJZT0DHJWAXTBRC a dai:Rule ;
+    rdfs:label "Residents open doors with own key" ;
+    dai:action "open the main door with their own key" ;
+    dai:actor "resident" ;
+    dai:condition "from 22:00 to 06:00 when the doors are locked" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EQ ;
+    dai:level dai:level-3 ;
+    dai:modality dai:may ;
+    dai:refersTo :cn_01M82B0RVQB8E3F7FG9YPD26J6,
+        :cn_01M82B5VQ6AQJZT0DHJWAXTBR1,
+        :cn_01M82B5VQ6AQJZT0DHJWAXTBR4,
+        :rl_01M82B5VQ6AQJZT0DHJWAXTBR8,
+        :rl_01M82B5VQ6AQJZT0DHJWAXTBR9 ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B5VQ6AQJZT0DHJWAXTBRD a dai:Rule ;
+    rdfs:label "Do not let strangers in" ;
+    dai:action "let strangers into the building" ;
+    dai:actor "resident" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EQ ;
+    dai:level dai:level-3 ;
+    dai:modality dai:must_not ;
+    dai:refersTo :cn_01M82B0RVQB8E3F7FG9YPD26J6,
+        :cn_01M82B0RVQB8E3F7FG9YPD26JB,
+        :cn_01M82B5VQ6AQJZT0DHJWAXTBR5 ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B5VQ6AQJZT0DHJWAXTBRE a dai:Rule ;
+    rdfs:label "Report lost keys at once" ;
+    dai:action "report lost keys to the house management at once" ;
+    dai:actor "resident" ;
+    dai:condition "when a key is lost" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EQ ;
+    dai:level dai:level-3 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82B0RVQB8E3F7FG9YPD26J6,
+        :cn_01M82B0RVQB8E3F7FG9YPD26J7,
+        :cn_01M82B5VQ6AQJZT0DHJWAXTBR4,
+        :rl_01M82B5VQ6AQJZT0DHJWAXTBRA ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B6NEKKV0CSECXDQRKNHPB a dai:Rule ;
+    rdfs:label "Laundry room usage hours" ;
+    dai:action "use the shared laundry room from 07:00 to 21:00" ;
+    dai:actor "resident" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ES ;
+    dai:level dai:level-2 ;
+    dai:modality dai:may ;
+    dai:refersTo :cn_01M82B6NEKKV0CSECXDQRKNHNT ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B6NEKKV0CSECXDQRKNHPC a dai:Rule ;
+    rdfs:label "Book a laundry slot" ;
+    dai:action "book a slot on the list at the door" ;
+    dai:actor "resident" ;
+    dai:condition "before using the shared laundry room" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ES ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82B6NEKKV0CSECXDQRKNHNX,
+        :cn_01M82B6NEKKV0CSECXDQRKNHNY,
+        :rl_01M82B6NEKKV0CSECXDQRKNHP8 ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B6NEKKV0CSECXDQRKNHPD a dai:Rule ;
+    rdfs:label "No pet textiles in shared washing machines" ;
+    dai:action "wash pet blankets, pet beds or other pet textiles in the shared washing machines" ;
+    dai:actor "pet owner" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ES ;
+    dai:level dai:level-1 ;
+    dai:modality dai:must_not ;
+    dai:refersTo :cn_01M82B6NEKKV0CSECXDQRKNHNZ,
+        :cn_01M82B6NEKKV0CSECXDQRKNHP0,
+        :cn_01M82B6NEKKV0CSECXDQRKNHP1,
+        :cn_01M82B6NEKKV0CSECXDQRKNHP2 ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B6NEKKV0CSECXDQRKNHPE a dai:Rule ;
+    rdfs:label "No flammable liquids in cellar compartment" ;
+    dai:action "store flammable liquids in the cellar compartment" ;
+    dai:actor "resident" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ES ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must_not ;
+    dai:refersTo :cn_01M82B6NEKKV0CSECXDQRKNHP4,
+        :cn_01M82B6NEKKV0CSECXDQRKNHP5 ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B6NEKKV0CSECXDQRKNHPF a dai:Rule ;
+    rdfs:label "One cellar compartment per flat" ;
+    dai:action "have one cellar compartment" ;
+    dai:actor "flat" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ES ;
+    dai:level dai:level-2 ;
+    dai:modality dai:may ;
+    dai:refersTo :cn_01M82ACZDNRYXG7FZCA8KC7FD5,
+        :cn_01M82B6NEKKV0CSECXDQRKNHP4,
+        :rl_01M82B6NEKKV0CSECXDQRKNHP9 ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B6NEKKV0CSECXDQRKNHPF-shape a sh:NodeShape ;
+    sh:property [ sh:path :rl_01M82B6NEKKV0CSECXDQRKNHP9 ;
+            sh:qualifiedMaxCount 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedValueShape [ sh:class :cn_01M82B6NEKKV0CSECXDQRKNHP4 ] ] ;
+    sh:targetClass :cn_01M82ACZDNRYXG7FZCA8KC7FD5 .
+
+:ru_01M82B7AD49EHMKTM1WFJFM31A a dai:Rule ;
+    rdfs:label "Noisy work allowed on weekdays 08:00-12:00 and 14:00-18:00" ;
+    dai:action "carry out noisy work such as drilling" ;
+    dai:actor "resident" ;
+    dai:condition "on weekdays from 08:00 to 12:00 and from 14:00 to 18:00" ;
+    dai:evidence :su_01M82B00WCXHEC1FCHYNF4GYBC ;
+    dai:level dai:level-3 ;
+    dai:modality dai:may ;
+    dai:refersTo :cn_01M82B1AN7D1ZA7ABBS5RZ4XKB,
+        :cn_01M82B7AD49EHMKTM1WFJFM312 ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B7AD49EHMKTM1WFJFM31B a dai:Rule ;
+    rdfs:label "Noisy work allowed on Saturdays 09:00-12:00" ;
+    dai:action "carry out noisy work such as drilling" ;
+    dai:actor "resident" ;
+    dai:condition "on Saturdays from 09:00 to 12:00" ;
+    dai:evidence :su_01M82B00WCXHEC1FCHYNF4GYBC ;
+    dai:level dai:level-3 ;
+    dai:modality dai:may ;
+    dai:refersTo :cn_01M82B1AN7D1ZA7ABBS5RZ4XKB,
+        :cn_01M82B7AD49EHMKTM1WFJFM312 ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B7AD49EHMKTM1WFJFM31C a dai:Rule ;
+    rdfs:label "Announce a move at least 7 days in advance" ;
+    dai:action "announce a move to the house management" ;
+    dai:actor "resident" ;
+    dai:condition "when moving" ;
+    dai:evidence :su_01M82B00WCXHEC1FCHYNF4GYBC ;
+    dai:level dai:level-3 ;
+    dai:limitComparator ">=" ;
+    dai:limitUnit "days in advance" ;
+    dai:limitValue 7.0 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AXJ1250JDQ3F0HM8ET4QT,
+        :cn_01M82B0RVQB8E3F7FG9YPD26J7,
+        :rl_01M82B7AD49EHMKTM1WFJFM318 ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B7AD49EHMKTM1WFJFM31D a dai:Rule ;
+    rdfs:label "Protect the lift with the covers provided" ;
+    dai:action "protect the lift with the covers provided" ;
+    dai:actor "resident" ;
+    dai:condition "during a move" ;
+    dai:evidence :su_01M82B00WCXHEC1FCHYNF4GYBC ;
+    dai:level dai:level-3 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AXJ1250JDQ3F0HM8ET4QT,
+        :cn_01M82B3MD8NCJFJC9394MZ8MQS,
+        :cn_01M82B7AD49EHMKTM1WFJFM317,
+        :rl_01M82B7AD49EHMKTM1WFJFM319 ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B7SZH0HB7CYPRM3TFNXNC a dai:Rule ;
+    rdfs:label "Report damage, noise and violations in writing" ;
+    dai:action "report damage, noise complaints and rule violations to the house management in writing" ;
+    dai:actor "resident" ;
+    dai:evidence :su_01M82B00WCXHEC1FCHYNF4GYBE ;
+    dai:level dai:level-3 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AM9P6EWS5D1VJCAH8Z7VF,
+        :cn_01M82B0RVQB8E3F7FG9YPD26J7,
+        :cn_01M82B7SZH0HB7CYPRM3TFNXMZ,
+        :cn_01M82B7SZH0HB7CYPRM3TFNXN1,
+        :cn_01M82B7SZH0HB7CYPRM3TFNXN2,
+        :rl_01M82B7SZH0HB7CYPRM3TFNXN6,
+        :rl_01M82B7SZH0HB7CYPRM3TFNXN7,
+        :rl_01M82B7SZH0HB7CYPRM3TFNXN8 ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
+:ru_01M82B7SZH0HB7CYPRM3TFNXND a dai:Rule ;
+    rdfs:label "Repeated violations may lead to termination" ;
+    dai:action "terminate the tenancy" ;
+    dai:actor "house management" ;
+    dai:condition "repeated violations after a written warning" ;
+    dai:evidence :su_01M82B00WCXHEC1FCHYNF4GYBE ;
+    dai:level dai:level-3 ;
+    dai:modality dai:may ;
+    dai:refersTo :cn_01M82B0RVQB8E3F7FG9YPD26J7,
+        :cn_01M82B7SZH0HB7CYPRM3TFNXN2,
+        :cn_01M82B7SZH0HB7CYPRM3TFNXN3,
+        :cn_01M82B7SZH0HB7CYPRM3TFNXN4,
+        :cn_01M82B7SZH0HB7CYPRM3TFNXN5,
+        :rl_01M82B7SZH0HB7CYPRM3TFNXN9,
+        :rl_01M82B7SZH0HB7CYPRM3TFNXNB ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
+    dai:status dai:proposed .
+
 :st_01M82AC66KMJH32E2MQ3Z7ZBK7 a dai:Statement ;
     rdfs:label "A dog lives 10 to 15 years." ;
     dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHB8 ;
@@ -2842,6 +3732,300 @@
     dai:level dai:level-3 ;
     dai:status dai:proposed .
 
+:st_01M82B0RVQB8E3F7FG9YPD26HS a dai:Statement ;
+    rdfs:label "These rules apply to buildings A, B and C around the shared inner yard." ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KN ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:st_01M82B0RVQB8E3F7FG9YPD26HT a dai:Statement ;
+    rdfs:label "A resident is anyone who lives in one of the buildings: tenants, owners and their household members." ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KN ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:st_01M82B0RVQB8E3F7FG9YPD26HV a dai:Statement ;
+    rdfs:label "The house management administers the buildings." ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KN ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:st_01M82B0RVQB8E3F7FG9YPD26HW a dai:Statement ;
+    rdfs:label "The house management enforces these rules." ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KN ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:st_01M82B0RVQB8E3F7FG9YPD26HX a dai:Statement ;
+    rdfs:label "Every resident must follow these rules." ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KN ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:st_01M82B1AN7D1ZA7ABBS5RZ4XJT a dai:Statement ;
+    rdfs:label "Quiet hours are from 22:00 to 07:00 on weekdays." ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KQ ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82B1AN7D1ZA7ABBS5RZ4XJV a dai:Statement ;
+    rdfs:label "Quiet hours are from 22:00 to 09:00 on weekends and public holidays." ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KQ ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82B1AN7D1ZA7ABBS5RZ4XJW a dai:Statement ;
+    rdfs:label "During quiet hours, residents must avoid noise that can be heard in other flats or in the inner yard." ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KQ ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:st_01M82B1AN7D1ZA7ABBS5RZ4XJX a dai:Statement ;
+    rdfs:label "Noise to be avoided during quiet hours includes music, drilling and persistent barking." ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KQ ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:st_01M82B273V2ZBJ1A5ME4ECN7T8 a dai:Statement ;
+    rdfs:label "The inner yard is shared by all residents." ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KS ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82B273V2ZBJ1A5ME4ECN7T9 a dai:Statement ;
+    rdfs:label "Children may play in the inner yard between 08:00 and 20:00." ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KS ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82B273V2ZBJ1A5ME4ECN7TA a dai:Statement ;
+    rdfs:label "Bicycles must be parked in the bicycle racks only." ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KS ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82B273V2ZBJ1A5ME4ECN7TB a dai:Statement ;
+    rdfs:label "Barbecues are allowed only in the marked barbecue area." ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KS ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82B273V2ZBJ1A5ME4ECN7TC a dai:Statement ;
+    rdfs:label "Barbecues are never allowed during quiet hours." ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KS ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82B2PPZPYF6543TD3RQQKN8 a dai:Statement ;
+    rdfs:label "Every pet (dog or cat) must be registered with the house management." ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EA ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:st_01M82B2PPZPYF6543TD3RQQKN9 a dai:Statement ;
+    rdfs:label "A pet must be registered within 14 days of moving in or acquiring the pet." ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EA ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:st_01M82B2PPZPYF6543TD3RQQKNA a dai:Statement ;
+    rdfs:label "A pet owner must make sure that their pet does not disturb other residents." ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EA ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:st_01M82B3MD77GTCF7Q7S02RS3Q4 a dai:Statement ;
+    rdfs:label "Dogs must be kept on a lead at all times in the inner yard, the stairwells and the lifts." ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EC ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:st_01M82B3MD8NCJFJC9394MZ8MPZ a dai:Statement ;
+    rdfs:label "The lead may not be longer than 2 metres." ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EC ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:st_01M82B3MD8NCJFJC9394MZ8MQ0 a dai:Statement ;
+    rdfs:label "Dogs may not relieve themselves in the inner yard or the flower beds." ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ED ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:st_01M82B3MD8NCJFJC9394MZ8MQ1 a dai:Statement ;
+    rdfs:label "Dog owners take their dogs outside the building complex to relieve themselves." ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ED ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:st_01M82B3MD8NCJFJC9394MZ8MQ2 a dai:Statement ;
+    rdfs:label "The maximum time a dog may be left alone in a flat depends on the dog's training and its specific breed." ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EE ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82B3MD8NCJFJC9394MZ8MQ3 a dai:Statement ;
+    rdfs:label "Owners are responsible for knowing the alone-time limit that applies to their dog." ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EE ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82B3MD8NCJFJC9394MZ8MQ4 a dai:Statement ;
+    rdfs:label "If a dog barks persistently while left alone, the house management may require the owner to arrange care." ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EF ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82B441E6BBHH3GXQY9DWSBS a dai:Statement ;
+    rdfs:label "Cats may move freely in the inner yard." ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EH ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82B441E6BBHH3GXQY9DWSBT a dai:Statement ;
+    rdfs:label "Cats may not be kept in the stairwells or the cellar." ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EH ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:st_01M82B441E6BBHH3GXQY9DWSBV a dai:Statement ;
+    rdfs:label "Litter boxes must be kept inside the flat." ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EH ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:st_01M82B4TJPFJR5BJ36WDBJSZZE a dai:Statement ;
+    rdfs:label "Waste is sorted in the bin room of building B into paper, plastic, glass, organic waste and residual waste." ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EK ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82B4TJPFJR5BJ36WDBJSZZF a dai:Statement ;
+    rdfs:label "Pet waste and used cat litter go into the residual waste bin only." ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EK ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:st_01M82B4TJPFJR5BJ36WDBJSZZG a dai:Statement ;
+    rdfs:label "Bulky items must be booked for collection with the house management." ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EK ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82B5BJWECFNN10MNRT4KBXB a dai:Statement ;
+    rdfs:label "Stairwells, corridors and escape routes must be kept free of objects." ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EN ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82B5BJWECFNN10MNRT4KBXC a dai:Statement ;
+    rdfs:label "The objects that must not be left in stairwells, corridors and escape routes include prams, shoes and pet equipment." ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EN ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82B5BJWECFNN10MNRT4KBXD a dai:Statement ;
+    rdfs:label "Smoking is not allowed in any shared indoor space." ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EN ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82B5VQ6AQJZT0DHJWAXTBQQ a dai:Statement ;
+    rdfs:label "The main doors of each building stay closed and locked from 22:00 to 06:00." ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EQ ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82B5VQ6AQJZT0DHJWAXTBQR a dai:Statement ;
+    rdfs:label "Residents open the main doors with their own key." ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EQ ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82B5VQ6AQJZT0DHJWAXTBQS a dai:Statement ;
+    rdfs:label "Residents must not let strangers into the building." ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EQ ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82B5VQ6AQJZT0DHJWAXTBQT a dai:Statement ;
+    rdfs:label "Lost keys must be reported to the house management at once." ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EQ ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82B6NEKKV0CSECXDQRKNHN8 a dai:Statement ;
+    rdfs:label "The shared laundry room is in the cellar of building A." ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ES ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82B6NEKKV0CSECXDQRKNHN9 a dai:Statement ;
+    rdfs:label "The shared laundry room may be used from 07:00 to 21:00." ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ES ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82B6NEKKV0CSECXDQRKNHNA a dai:Statement ;
+    rdfs:label "A slot for the laundry room is booked on the list at the door." ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ES ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82B6NEKKV0CSECXDQRKNHNB a dai:Statement ;
+    rdfs:label "Pet blankets, pet beds and other pet textiles may not be washed in the shared washing machines." ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ES ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:st_01M82B6NEKKV0CSECXDQRKNHNC a dai:Statement ;
+    rdfs:label "Each flat has one cellar compartment." ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ES ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82B6NEKKV0CSECXDQRKNHND a dai:Statement ;
+    rdfs:label "Flammable liquids may not be stored in the cellar compartment." ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ES ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82B7AD49EHMKTM1WFJFM30R a dai:Statement ;
+    rdfs:label "Noisy work such as drilling is allowed on weekdays from 08:00 to 12:00 and from 14:00 to 18:00." ;
+    dai:evidence :su_01M82B00WCXHEC1FCHYNF4GYBC ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82B7AD49EHMKTM1WFJFM30S a dai:Statement ;
+    rdfs:label "Noisy work such as drilling is allowed on Saturdays from 09:00 to 12:00." ;
+    dai:evidence :su_01M82B00WCXHEC1FCHYNF4GYBC ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82B7AD49EHMKTM1WFJFM30T a dai:Statement ;
+    rdfs:label "A move must be announced to the house management at least 7 days in advance." ;
+    dai:evidence :su_01M82B00WCXHEC1FCHYNF4GYBC ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82B7AD49EHMKTM1WFJFM30V a dai:Statement ;
+    rdfs:label "During a move the lift must be protected with the covers provided." ;
+    dai:evidence :su_01M82B00WCXHEC1FCHYNF4GYBC ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82B7SZH0HB7CYPRM3TFNXMN a dai:Statement ;
+    rdfs:label "Damage, noise complaints and rule violations are reported to the house management in writing." ;
+    dai:evidence :su_01M82B00WCXHEC1FCHYNF4GYBE ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82B7SZH0HB7CYPRM3TFNXMP a dai:Statement ;
+    rdfs:label "Repeated violations after a written warning may lead to termination of the tenancy." ;
+    dai:evidence :su_01M82B00WCXHEC1FCHYNF4GYBE ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
 :cn_01M82AC66KMJH32E2MQ3Z7ZBKN a owl:Class,
         skos:Concept ;
     skos:prefLabel "daily exercise" ;
@@ -2852,13 +4036,6 @@
 :cn_01M82AC66KMJH32E2MQ3Z7ZBKP a owl:Class,
         skos:Concept ;
     skos:prefLabel "company" ;
-    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHB8 ;
-    dai:level dai:level-2 ;
-    dai:status dai:proposed .
-
-:cn_01M82AC66KMJH32E2MQ3Z7ZBKQ a owl:Class,
-        skos:Concept ;
-    skos:prefLabel "training" ;
     dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHB8 ;
     dai:level dai:level-2 ;
     dai:status dai:proposed .
@@ -2936,13 +4113,6 @@
     dai:level dai:level-2 ;
     dai:status dai:proposed .
 
-:cn_01M82AXJ1250JDQ3F0HM8ET4QT a owl:Class,
-        skos:Concept ;
-    skos:prefLabel "move" ;
-    dai:evidence :su_01M82APMQ7MGEVFK2CW6002H36 ;
-    dai:level dai:level-3 ;
-    dai:status dai:proposed .
-
 :cn_01M82AXJ1250JDQ3F0HM8ET4QV a owl:Class,
         skos:Concept ;
     skos:prefLabel "moving day" ;
@@ -2954,6 +4124,112 @@
         skos:Concept ;
     skos:prefLabel "territory" ;
     dai:evidence :su_01M82APMQ7MGEVFK2CW6002H36 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82B1AN7D1ZA7ABBS5RZ4XKA a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82B1AN7D1ZA7ABBS5RZ4XK6 ;
+    skos:broader :cn_01M82B1AN7D1ZA7ABBS5RZ4XK6 ;
+    skos:prefLabel "music" ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KQ ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82B2PQ0Y5BYDSR06NJ167CH a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "moving in" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EA ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82B2PQ0Y5BYDSR06NJ167CJ a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "acquiring a pet" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EA ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82B3MD8NCJFJC9394MZ8MQT a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "flower bed" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ED ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82B3MD8NCJFJC9394MZ8MQV a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "building complex" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ED ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:cn_01M82B5BJWECFNN10MNRT4KBXN a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "shared indoor space" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EN ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82B5BJWECFNN10MNRT4KBXT a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "pram" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EN ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82B5BJWECFNN10MNRT4KBXV a owl:Class,
+        skos:Concept ;
+    skos:altLabel "shoes" ;
+    skos:prefLabel "shoe" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EN ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82B5VQ6AQJZT0DHJWAXTBR5 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "stranger" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EQ ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82B6NEKKV0CSECXDQRKNHNW a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "building A" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ES ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82B6NEKKV0CSECXDQRKNHP0 a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82B6NEKKV0CSECXDQRKNHNZ ;
+    skos:broader :cn_01M82B6NEKKV0CSECXDQRKNHNZ ;
+    skos:prefLabel "pet blanket" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ES ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82B6NEKKV0CSECXDQRKNHP1 a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82B6NEKKV0CSECXDQRKNHNZ ;
+    skos:broader :cn_01M82B6NEKKV0CSECXDQRKNHNZ ;
+    skos:prefLabel "pet bed" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ES ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82B6NEKKV0CSECXDQRKNHP5 a owl:Class,
+        skos:Concept ;
+    skos:altLabel "flammable liquids" ;
+    skos:prefLabel "flammable liquid" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ES ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82B7SZH0HB7CYPRM3TFNXMZ a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "written report" ;
+    dai:evidence :su_01M82B00WCXHEC1FCHYNF4GYBE ;
     dai:level dai:level-3 ;
     dai:status dai:proposed .
 
@@ -3606,6 +4882,294 @@
     dai:level dai:level-3 ;
     dai:status dai:proposed .
 
+:rl_01M82B0RVQB8E3F7FG9YPD26JG a owl:ObjectProperty ;
+    rdfs:label "enforces" ;
+    rdfs:domain :cn_01M82B0RVQB8E3F7FG9YPD26J7 ;
+    rdfs:range :cn_01M82B0RVQB8E3F7FG9YPD26JD ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KN ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:rl_01M82B0RVQB8E3F7FG9YPD26JH a owl:ObjectProperty ;
+    rdfs:label "must follow" ;
+    rdfs:domain :cn_01M82B0RVQB8E3F7FG9YPD26J6 ;
+    rdfs:range :cn_01M82B0RVQB8E3F7FG9YPD26JD ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KN ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:rl_01M82B1AN7D1ZA7ABBS5RZ4XKC a owl:ObjectProperty ;
+    rdfs:label "must avoid during quiet hours" ;
+    rdfs:domain :cn_01M82B0RVQB8E3F7FG9YPD26J6 ;
+    rdfs:range :cn_01M82B1AN7D1ZA7ABBS5RZ4XK6 ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KQ ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:rl_01M82B1AN7D1ZA7ABBS5RZ4XKD a owl:ObjectProperty ;
+    rdfs:label "can be heard in" ;
+    rdfs:domain :cn_01M82B1AN7D1ZA7ABBS5RZ4XK6 ;
+    rdfs:range :cn_01M82ACZDNRYXG7FZCA8KC7FD5 ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KQ ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82B1AN7D1ZA7ABBS5RZ4XKE a owl:ObjectProperty ;
+    rdfs:label "can be heard in" ;
+    rdfs:domain :cn_01M82B1AN7D1ZA7ABBS5RZ4XK6 ;
+    rdfs:range :cn_01M82B0RVQB8E3F7FG9YPD26JC ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KQ ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82B273V2ZBJ1A5ME4ECN7TY a owl:ObjectProperty ;
+    rdfs:label "may play in" ;
+    rdfs:domain :cn_01M82B273V2ZBJ1A5ME4ECN7TQ ;
+    rdfs:range :cn_01M82B0RVQB8E3F7FG9YPD26JC ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KS ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82B273V2ZBJ1A5ME4ECN7TZ a owl:ObjectProperty ;
+    rdfs:label "is parked in" ;
+    rdfs:domain :cn_01M82B273V2ZBJ1A5ME4ECN7TR ;
+    rdfs:range :cn_01M82B273V2ZBJ1A5ME4ECN7TS ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KS ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82B273V2ZBJ1A5ME4ECN7V0 a owl:ObjectProperty ;
+    rdfs:label "is allowed only in" ;
+    rdfs:domain :cn_01M82B273V2ZBJ1A5ME4ECN7TT ;
+    rdfs:range :cn_01M82B273V2ZBJ1A5ME4ECN7TV ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KS ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82B273WM9S0TB245E76BCN5 a owl:ObjectProperty ;
+    rdfs:label "is not allowed during" ;
+    rdfs:domain :cn_01M82B273V2ZBJ1A5ME4ECN7TT ;
+    rdfs:range :cn_01M82B1AN7D1ZA7ABBS5RZ4XK4 ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KS ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82B2PQ0Y5BYDSR06NJ167CK a owl:ObjectProperty ;
+    rdfs:label "is registered with" ;
+    rdfs:domain :cn_01M82B2PPZPYF6543TD3RQQKNJ ;
+    rdfs:range :cn_01M82B0RVQB8E3F7FG9YPD26J7 ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EA ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:rl_01M82B2PQ0Y5BYDSR06NJ167CN a owl:ObjectProperty ;
+    rdfs:label "must not disturb" ;
+    rdfs:domain :cn_01M82B2PPZPYF6543TD3RQQKNJ ;
+    rdfs:range :cn_01M82B0RVQB8E3F7FG9YPD26J6 ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EA ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:rl_01M82B3MD8NCJFJC9394MZ8MR5 a owl:ObjectProperty ;
+    rdfs:label "depends on" ;
+    rdfs:domain :cn_01M82B3MD8NCJFJC9394MZ8MQZ ;
+    rdfs:range :cn_01M82AC66KMJH32E2MQ3Z7ZBKQ ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EE ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82B3MD8NCJFJC9394MZ8MR6 a owl:ObjectProperty ;
+    rdfs:label "depends on" ;
+    rdfs:domain :cn_01M82B3MD8NCJFJC9394MZ8MQZ ;
+    rdfs:range :cn_01M82ACZDNRYXG7FZCA8KC7FCX ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EE ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82B3MD8NCJFJC9394MZ8MR8 a owl:ObjectProperty ;
+    rdfs:label "is left alone in" ;
+    rdfs:domain :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
+    rdfs:range :cn_01M82ACZDNRYXG7FZCA8KC7FD5 ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EE ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82B3MD8NCJFJC9394MZ8MR9 a owl:ObjectProperty ;
+    rdfs:label "may require owner to arrange" ;
+    rdfs:domain :cn_01M82B0RVQB8E3F7FG9YPD26J7 ;
+    rdfs:range :cn_01M82B3MD8NCJFJC9394MZ8MR2 ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EF ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82B3MD8NCJFJC9394MZ8MRA a owl:ObjectProperty ;
+    rdfs:label "arranges" ;
+    rdfs:domain :cn_01M82B3MD8NCJFJC9394MZ8MQN ;
+    rdfs:range :cn_01M82B3MD8NCJFJC9394MZ8MR2 ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EF ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82B441FVKK345F8CJ12SYK5 a owl:ObjectProperty ;
+    rdfs:label "may move freely in" ;
+    rdfs:domain :cn_01M82AQDR2NPZDR8C737517K86 ;
+    rdfs:range :cn_01M82B0RVQB8E3F7FG9YPD26JC ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EH ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82B441FVKK345F8CJ12SYK6 a owl:ObjectProperty ;
+    rdfs:label "may not be kept in" ;
+    rdfs:domain :cn_01M82AQDR2NPZDR8C737517K86 ;
+    rdfs:range :cn_01M82B3MD8NCJFJC9394MZ8MQR ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EH ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:rl_01M82B441FVKK345F8CJ12SYK7 a owl:ObjectProperty ;
+    rdfs:label "may not be kept in" ;
+    rdfs:domain :cn_01M82AQDR2NPZDR8C737517K86 ;
+    rdfs:range :cn_01M82B441FVKK345F8CJ12SYK2 ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EH ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:rl_01M82B441FVKK345F8CJ12SYK8 a owl:ObjectProperty ;
+    rdfs:label "is kept inside" ;
+    rdfs:domain :cn_01M82ARW4GRHWZH2QAVQ4Z6C2S ;
+    rdfs:range :cn_01M82ACZDNRYXG7FZCA8KC7FD5 ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EH ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:rl_01M82B4TJPFJR5BJ36WDBJT005 a owl:ObjectProperty ;
+    rdfs:label "is sorted in" ;
+    rdfs:domain :cn_01M82B4TJPFJR5BJ36WDBJSZZQ ;
+    rdfs:range :cn_01M82B4TJPFJR5BJ36WDBJSZZR ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EK ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82B4TJPFJR5BJ36WDBJT006 a owl:ObjectProperty ;
+    rdfs:label "goes into" ;
+    rdfs:domain :cn_01M82B4TJPFJR5BJ36WDBJT000 ;
+    rdfs:range :cn_01M82B4TJPFJR5BJ36WDBJSZZZ ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EK ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:rl_01M82B4TJPFJR5BJ36WDBJT007 a owl:ObjectProperty ;
+    rdfs:label "goes into" ;
+    rdfs:domain :cn_01M82ATVV0G4J5RJ6TZ063RNYQ ;
+    rdfs:range :cn_01M82B4TJPFJR5BJ36WDBJSZZZ ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EK ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:rl_01M82B4TJPFJR5BJ36WDBJT008 a owl:ObjectProperty ;
+    rdfs:label "is booked for collection with" ;
+    rdfs:domain :cn_01M82B4TJPFJR5BJ36WDBJT002 ;
+    rdfs:range :cn_01M82B0RVQB8E3F7FG9YPD26J7 ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EK ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82B5VQ6AQJZT0DHJWAXTBR7 a owl:ObjectProperty ;
+    rdfs:label "has" ;
+    rdfs:domain :cn_01M82B0RVQB8E3F7FG9YPD26JB ;
+    rdfs:range :cn_01M82B5VQ6AQJZT0DHJWAXTBR1 ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EQ ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82B5VQ6AQJZT0DHJWAXTBR8 a owl:ObjectProperty ;
+    rdfs:label "has" ;
+    rdfs:domain :cn_01M82B0RVQB8E3F7FG9YPD26J6 ;
+    rdfs:range :cn_01M82B5VQ6AQJZT0DHJWAXTBR4 ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EQ ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82B5VQ6AQJZT0DHJWAXTBR9 a owl:ObjectProperty ;
+    rdfs:label "opens" ;
+    rdfs:domain :cn_01M82B5VQ6AQJZT0DHJWAXTBR4 ;
+    rdfs:range :cn_01M82B5VQ6AQJZT0DHJWAXTBR1 ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EQ ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82B5VQ6AQJZT0DHJWAXTBRA a owl:ObjectProperty ;
+    rdfs:label "is reported lost to" ;
+    rdfs:domain :cn_01M82B5VQ6AQJZT0DHJWAXTBR4 ;
+    rdfs:range :cn_01M82B0RVQB8E3F7FG9YPD26J7 ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EQ ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82B6NEKKV0CSECXDQRKNHP8 a owl:ObjectProperty ;
+    rdfs:label "is booked on" ;
+    rdfs:domain :cn_01M82B6NEKKV0CSECXDQRKNHNX ;
+    rdfs:range :cn_01M82B6NEKKV0CSECXDQRKNHNY ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ES ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82B7AD49EHMKTM1WFJFM318 a owl:ObjectProperty ;
+    rdfs:label "is announced to" ;
+    rdfs:domain :cn_01M82AXJ1250JDQ3F0HM8ET4QT ;
+    rdfs:range :cn_01M82B0RVQB8E3F7FG9YPD26J7 ;
+    dai:evidence :su_01M82B00WCXHEC1FCHYNF4GYBC ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82B7AD49EHMKTM1WFJFM319 a owl:ObjectProperty ;
+    rdfs:label "is protected with" ;
+    rdfs:domain :cn_01M82B3MD8NCJFJC9394MZ8MQS ;
+    rdfs:range :cn_01M82B7AD49EHMKTM1WFJFM317 ;
+    dai:evidence :su_01M82B00WCXHEC1FCHYNF4GYBC ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82B7SZH0HB7CYPRM3TFNXN6 a owl:ObjectProperty ;
+    rdfs:label "is reported to" ;
+    rdfs:domain :cn_01M82AM9P6EWS5D1VJCAH8Z7VF ;
+    rdfs:range :cn_01M82B0RVQB8E3F7FG9YPD26J7 ;
+    dai:evidence :su_01M82B00WCXHEC1FCHYNF4GYBE ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82B7SZH0HB7CYPRM3TFNXN7 a owl:ObjectProperty ;
+    rdfs:label "is reported to" ;
+    rdfs:domain :cn_01M82B7SZH0HB7CYPRM3TFNXN1 ;
+    rdfs:range :cn_01M82B0RVQB8E3F7FG9YPD26J7 ;
+    dai:evidence :su_01M82B00WCXHEC1FCHYNF4GYBE ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82B7SZH0HB7CYPRM3TFNXN8 a owl:ObjectProperty ;
+    rdfs:label "is reported to" ;
+    rdfs:domain :cn_01M82B7SZH0HB7CYPRM3TFNXN2 ;
+    rdfs:range :cn_01M82B0RVQB8E3F7FG9YPD26J7 ;
+    dai:evidence :su_01M82B00WCXHEC1FCHYNF4GYBE ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82B7SZH0HB7CYPRM3TFNXN9 a owl:ObjectProperty ;
+    rdfs:label "may lead to" ;
+    rdfs:domain :cn_01M82B7SZH0HB7CYPRM3TFNXN2 ;
+    rdfs:range :cn_01M82B7SZH0HB7CYPRM3TFNXN4 ;
+    dai:evidence :su_01M82B00WCXHEC1FCHYNF4GYBE ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82B7SZH0HB7CYPRM3TFNXNB a owl:ObjectProperty ;
+    rdfs:label "precedes" ;
+    rdfs:domain :cn_01M82B7SZH0HB7CYPRM3TFNXN3 ;
+    rdfs:range :cn_01M82B7SZH0HB7CYPRM3TFNXN4 ;
+    dai:evidence :su_01M82B00WCXHEC1FCHYNF4GYBE ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
 :ru_01M82AEQW4JVCNX0WEDNNR61WE a dai:Rule ;
     rdfs:label "Wash bed and blankets weekly at 60 °C" ;
     dai:action "wash the dog's bed and blankets once a week" ;
@@ -3660,6 +5224,14 @@
     dai:refersTo :cn_01M82AQDR2NPZDR8C737517K86,
         :cn_01M82AVWYQTEWX0BYTM82R487J ;
     dai:scope :co_01M82APMQ5V0PTBT5SDYAF1JAP ;
+    dai:status dai:proposed .
+
+:cn_01M82AC66KMJH32E2MQ3Z7ZBKQ a owl:Class,
+        skos:Concept ;
+    skos:altLabel "education" ;
+    skos:prefLabel "training" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHB8 ;
+    dai:level dai:level-2 ;
     dai:status dai:proposed .
 
 :cn_01M82ACZDNRYXG7FZCA8KC7FD4 a owl:Class,
@@ -4011,6 +5583,142 @@
     dai:level dai:level-3 ;
     dai:status dai:proposed .
 
+:cn_01M82B1AN7D1ZA7ABBS5RZ4XK9 a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82B1AN7D1ZA7ABBS5RZ4XK6 ;
+    skos:broader :cn_01M82B1AN7D1ZA7ABBS5RZ4XK6 ;
+    skos:prefLabel "persistent barking" ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KQ,
+        :su_01M82B00WB34E68SXWEMVZ22EF ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82B273V2ZBJ1A5ME4ECN7TQ a owl:Class,
+        skos:Concept ;
+    skos:altLabel "children" ;
+    skos:prefLabel "child" ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KS ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82B273V2ZBJ1A5ME4ECN7TR a owl:Class,
+        skos:Concept ;
+    skos:altLabel "bicycles" ;
+    skos:prefLabel "bicycle" ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KS ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82B273V2ZBJ1A5ME4ECN7TS a owl:Class,
+        skos:Concept ;
+    skos:altLabel "bicycle racks" ;
+    skos:prefLabel "bicycle rack" ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KS ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82B273V2ZBJ1A5ME4ECN7TV a owl:Class,
+        skos:Concept ;
+    skos:altLabel "marked barbecue area" ;
+    skos:prefLabel "barbecue area" ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KS ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82B2PQ0Y5BYDSR06NJ167CG a owl:Class,
+        skos:Concept ;
+    skos:altLabel "registered" ;
+    skos:prefLabel "pet registration" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EA ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:cn_01M82B3MD8NCJFJC9394MZ8MQN a owl:Class,
+        skos:Concept ;
+    skos:altLabel "owner" ;
+    skos:prefLabel "dog owner" ;
+    skos:scopeNote "Person who keeps and is responsible for a dog." ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ED,
+        :su_01M82B00WB34E68SXWEMVZ22EE,
+        :su_01M82B00WB34E68SXWEMVZ22EF ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:cn_01M82B4TJPFJR5BJ36WDBJSZZS a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "building B" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EK ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82B4TJPFJR5BJ36WDBJT000 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "pet waste" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EK ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:cn_01M82B4TJPFJR5BJ36WDBJT002 a owl:Class,
+        skos:Concept ;
+    skos:altLabel "bulky items" ;
+    skos:prefLabel "bulky item" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EK ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82B6NEKKV0CSECXDQRKNHNX a owl:Class,
+        skos:Concept ;
+    skos:altLabel "slot" ;
+    skos:prefLabel "laundry slot" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ES ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82B6NEKKV0CSECXDQRKNHNY a owl:Class,
+        skos:Concept ;
+    skos:altLabel "list at the door" ;
+    skos:prefLabel "booking list" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ES ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82B6NEKKV0CSECXDQRKNHP2 a owl:Class,
+        skos:Concept ;
+    skos:altLabel "shared washing machines" ;
+    skos:prefLabel "shared washing machine" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ES ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82B7AD49EHMKTM1WFJFM317 a owl:Class,
+        skos:Concept ;
+    skos:altLabel "covers" ;
+    skos:prefLabel "lift cover" ;
+    dai:evidence :su_01M82B00WCXHEC1FCHYNF4GYBC ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82B7SZH0HB7CYPRM3TFNXN1 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "noise complaint" ;
+    dai:evidence :su_01M82B00WCXHEC1FCHYNF4GYBE ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82B7SZH0HB7CYPRM3TFNXN3 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "written warning" ;
+    dai:evidence :su_01M82B00WCXHEC1FCHYNF4GYBE ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82B7SZH0HB7CYPRM3TFNXN5 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "tenancy" ;
+    dai:evidence :su_01M82B00WCXHEC1FCHYNF4GYBE ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
 :rl_01M82AE56ZYS5Y2Z0C35ECC9YG a owl:ObjectProperty ;
     rdfs:label "receives" ;
     rdfs:domain :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
@@ -4042,6 +5750,52 @@
     rdfs:range :cn_01M82AM9P6EWS5D1VJCAH8Z7VA ;
     dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX7 ;
     dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82B3MD8NCJFJC9394MZ8MR3 a owl:ObjectProperty ;
+    rdfs:label "is kept on" ;
+    rdfs:domain :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
+    rdfs:range :cn_01M82AFTZDSHCD0SK6T4N2YZW6 ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EC ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:rl_01M82B5BJWECFNN10MNRT4KBXW a owl:ObjectProperty ;
+    rdfs:label "must be kept free of" ;
+    rdfs:domain :cn_01M82B3MD8NCJFJC9394MZ8MQR ;
+    rdfs:range :cn_01M82B5BJWECFNN10MNRT4KBXS ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EN ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82B5BJWECFNN10MNRT4KBXX a owl:ObjectProperty ;
+    rdfs:label "must be kept free of" ;
+    rdfs:domain :cn_01M82B5BJWECFNN10MNRT4KBXQ ;
+    rdfs:range :cn_01M82B5BJWECFNN10MNRT4KBXS ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EN ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82B5BJWECFNN10MNRT4KBXY a owl:ObjectProperty ;
+    rdfs:label "must be kept free of" ;
+    rdfs:domain :cn_01M82B5BJWECFNN10MNRT4KBXR ;
+    rdfs:range :cn_01M82B5BJWECFNN10MNRT4KBXS ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EN ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:ru_01M82B273WM9S0TB245E76BCN6 a dai:Rule ;
+    rdfs:label "Children may play in the yard during set hours" ;
+    dai:action "play in the inner yard" ;
+    dai:actor "child" ;
+    dai:condition "between 08:00 and 20:00" ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KS ;
+    dai:level dai:level-2 ;
+    dai:modality dai:may ;
+    dai:refersTo :cn_01M82B0RVQB8E3F7FG9YPD26JC,
+        :cn_01M82B273V2ZBJ1A5ME4ECN7TQ,
+        :rl_01M82B273V2ZBJ1A5ME4ECN7TY ;
+    dai:scope :co_01M82B00W91390459HX0FJMY3T ;
     dai:status dai:proposed .
 
 :su_01M82ABDR1CAX5PFZ2HWSEQHBB a dai:SourceUnit ;
@@ -4120,13 +5874,6 @@
     dai:level dai:level-2 ;
     dai:status dai:proposed .
 
-:cn_01M82AM9P6EWS5D1VJCAH8Z7VF a owl:Class,
-        skos:Concept ;
-    skos:prefLabel "damage" ;
-    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX7 ;
-    dai:level dai:level-2 ;
-    dai:status dai:proposed .
-
 :cn_01M82ARW4GRHWZH2QAVQ4Z6C2T a owl:Class,
         skos:Concept ;
     skos:prefLabel "scratching post" ;
@@ -4186,6 +5933,61 @@
     skos:prefLabel "closed room" ;
     dai:evidence :su_01M82APMQ7MGEVFK2CW6002H36 ;
     dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82B1AN7D1ZA7ABBS5RZ4XKB a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82B1AN7D1ZA7ABBS5RZ4XK6,
+        :cn_01M82B7AD49EHMKTM1WFJFM312 ;
+    skos:broader :cn_01M82B1AN7D1ZA7ABBS5RZ4XK6,
+        :cn_01M82B7AD49EHMKTM1WFJFM312 ;
+    skos:prefLabel "drilling" ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KQ,
+        :su_01M82B00WCXHEC1FCHYNF4GYBC ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82B2PQ0Y5BYDSR06NJ167CE a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "pet owner" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EA ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:cn_01M82B3MD8NCJFJC9394MZ8MQS a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "lift" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EC,
+        :su_01M82B00WCXHEC1FCHYNF4GYBC ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82B3MD8NCJFJC9394MZ8MQZ a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "maximum time left alone" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EE ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82B3MD8NCJFJC9394MZ8MR2 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "care" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EF ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82B5BJWECFNN10MNRT4KBXQ a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "corridor" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EN ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82B5BJWECFNN10MNRT4KBXR a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "escape route" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EN ;
+    dai:level dai:level-2 ;
     dai:status dai:proposed .
 
 :rl_01M82ADJQKNCFSCKCDMA3H0R8G a owl:ObjectProperty ;
@@ -4276,6 +6078,50 @@
     dai:level dai:level-2 ;
     dai:status dai:proposed .
 
+:cn_01M82B273V2ZBJ1A5ME4ECN7TT a owl:Class,
+        skos:Concept ;
+    skos:altLabel "barbecues" ;
+    skos:prefLabel "barbecue" ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KS ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82B441FVKK345F8CJ12SYK2 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "cellar" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EH,
+        :su_01M82B00WB34E68SXWEMVZ22ES ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82B4TJPFJR5BJ36WDBJSZZR a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "bin room" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EK ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82B4TJPFJR5BJ36WDBJSZZZ a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "residual waste bin" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EK ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:cn_01M82B7SZH0HB7CYPRM3TFNXN2 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "rule violation" ;
+    dai:evidence :su_01M82B00WCXHEC1FCHYNF4GYBE ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82B7SZH0HB7CYPRM3TFNXN4 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "termination of the tenancy" ;
+    dai:evidence :su_01M82B00WCXHEC1FCHYNF4GYBE ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
 :cn_01M82ADJQKNCFSCKCDMA3H0R89 a owl:Class,
         skos:Concept ;
     skos:altLabel "water" ;
@@ -4296,6 +6142,13 @@
         skos:Concept ;
     skos:prefLabel "training session" ;
     dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZR ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AM9P6EWS5D1VJCAH8Z7VF a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "damage" ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX7 ;
     dai:level dai:level-2 ;
     dai:status dai:proposed .
 
@@ -4324,6 +6177,66 @@
     dai:level dai:level-2 ;
     dai:status dai:proposed .
 
+:cn_01M82AXJ1250JDQ3F0HM8ET4QT a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "move" ;
+    dai:evidence :su_01M82APMQ7MGEVFK2CW6002H36 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82B1AN7D1ZA7ABBS5RZ4XK4 a owl:Class,
+        skos:Concept ;
+    skos:definition "From 22:00 to 07:00 on weekdays and from 22:00 to 09:00 on weekends and public holidays." ;
+    skos:prefLabel "quiet hours" ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KQ,
+        :su_01M82B00WAF2BQ321TGZ91X4KS ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82B2PPZPYF6543TD3RQQKNJ a owl:Class,
+        skos:Concept ;
+    skos:definition "A dog or a cat." ;
+    skos:prefLabel "pet" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EA ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:cn_01M82B5BJWECFNN10MNRT4KBXS a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "pet equipment" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EN ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82B5VQ6AQJZT0DHJWAXTBR1 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "main door" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EQ ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82B5VQ6AQJZT0DHJWAXTBR4 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "key" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EQ ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82B6NEKKV0CSECXDQRKNHNT a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "shared laundry room" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ES ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82B6NEKKV0CSECXDQRKNHNZ a owl:Class,
+        skos:Concept ;
+    skos:altLabel "pet textiles" ;
+    skos:prefLabel "pet textile" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ES ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
 :rl_01M82ADJQKNCFSCKCDMA3H0R8H a owl:ObjectProperty ;
     rdfs:label "is fed times per day" ;
     rdfs:domain :cn_01M82AF7YTEGBGGS9B245D10JJ ;
@@ -4338,6 +6251,14 @@
     rdfs:range :cn_01M82ASKHG81R2G0W9373Z4V8G ;
     dai:evidence :su_01M82APMQ7MGEVFK2CW6002H2R ;
     dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82B6NEKKV0CSECXDQRKNHP9 a owl:ObjectProperty ;
+    rdfs:label "has" ;
+    rdfs:domain :cn_01M82ACZDNRYXG7FZCA8KC7FD5 ;
+    rdfs:range :cn_01M82B6NEKKV0CSECXDQRKNHP4 ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ES ;
+    dai:level dai:level-2 ;
     dai:status dai:proposed .
 
 :su_01M82ABDR28HTPAFF4C44FRBZK a dai:SourceUnit ;
@@ -4359,14 +6280,6 @@
     dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHB9,
         :su_01M82ABDR30PE47ZK8WSGY3HX5 ;
     dai:level dai:level-1 ;
-    dai:status dai:proposed .
-
-:cn_01M82ACZDNRYXG7FZCA8KC7FD5 a owl:Class,
-        skos:Concept ;
-    skos:altLabel "flats" ;
-    skos:prefLabel "flat" ;
-    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBC ;
-    dai:level dai:level-2 ;
     dai:status dai:proposed .
 
 :cn_01M82AE56ZYS5Y2Z0C35ECC9Y9 a owl:Class,
@@ -4399,13 +6312,28 @@
     dai:level dai:level-2 ;
     dai:status dai:proposed .
 
-:cn_01M82ATVV0G4J5RJ6TZ063RNYQ a owl:Class,
+:cn_01M82B0RVQB8E3F7FG9YPD26JD a owl:Class,
         skos:Concept ;
-    rdfs:subClassOf :cn_01M82AQDR2NPZDR8C737517K89 ;
-    skos:broader :cn_01M82AQDR2NPZDR8C737517K89 ;
-    skos:prefLabel "used litter" ;
-    dai:evidence :su_01M82APMQ7MGEVFK2CW6002H2W ;
+    skos:altLabel "rules" ;
+    skos:prefLabel "house rule" ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KN ;
     dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:cn_01M82B3MD8NCJFJC9394MZ8MQR a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "stairwell" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EC,
+        :su_01M82B00WB34E68SXWEMVZ22EH,
+        :su_01M82B00WB34E68SXWEMVZ22EN ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82B7AD49EHMKTM1WFJFM312 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "noisy work" ;
+    dai:evidence :su_01M82B00WCXHEC1FCHYNF4GYBC ;
+    dai:level dai:level-3 ;
     dai:status dai:proposed .
 
 :rl_01M82ASKHG81R2G0W9373Z4V8P a owl:ObjectProperty ;
@@ -4444,6 +6372,21 @@
     dai:level dai:level-2 ;
     dai:status dai:proposed .
 
+:cn_01M82B0RVQB8E3F7FG9YPD26JB a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "building" ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KN,
+        :su_01M82B00WB34E68SXWEMVZ22EQ ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82B6NEKKV0CSECXDQRKNHP4 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "cellar compartment" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22ES ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
 :su_01M82ABDR1CAX5PFZ2HWSEQHBD a dai:SourceUnit ;
     rdfs:label "**Large and working breeds** (for example, Border Collie or German Shepherd) need more space, more exercise and more mental work." .
 
@@ -4466,6 +6409,16 @@
     dai:level dai:level-2 ;
     dai:status dai:proposed .
 
+:cn_01M82ATVV0G4J5RJ6TZ063RNYQ a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82AQDR2NPZDR8C737517K89 ;
+    skos:altLabel "used cat litter" ;
+    skos:broader :cn_01M82AQDR2NPZDR8C737517K89 ;
+    skos:prefLabel "used litter" ;
+    dai:evidence :su_01M82APMQ7MGEVFK2CW6002H2W ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
 :su_01M82ABDR1CAX5PFZ2HWSEQHBC a dai:SourceUnit ;
     rdfs:label "**Small companion breeds** (for example, Maltese or Pug) need less space and less exercise and adapt well to flats." .
 
@@ -4474,6 +6427,12 @@
 
 :su_01M82APMQ68JDJRTYQDVNXFWWP a dai:SourceUnit ;
     rdfs:label "An **outdoor cat** goes outside on its own. It must be vaccinated and microchipped before it goes outside for the first time." .
+
+:su_01M82B00WB34E68SXWEMVZ22EC a dai:SourceUnit ;
+    rdfs:label "Dogs must be kept on a lead at all times in the inner yard, the stairwells and the lifts. The lead may not be longer than 2 metres." .
+
+:su_01M82B00WB34E68SXWEMVZ22EF a dai:SourceUnit ;
+    rdfs:label "If a dog barks persistently while left alone, the house management may require the owner to arrange care." .
 
 :cn_01M82ADJQKNCFSCKCDMA3H0R8A a owl:Class,
         skos:Concept ;
@@ -4512,13 +6471,8 @@
 :su_01M82APMQ68JDJRTYQDVNXFWWN a dai:SourceUnit ;
     rdfs:label "An **indoor cat** never leaves the flat. On average it lives longer, but it needs more play and climbing places." .
 
-:cn_01M82ACZDNRYXG7FZCA8KC7FCX a owl:Class,
-        skos:Concept ;
-    skos:prefLabel "breed" ;
-    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBB,
-        :su_01M82ABDR1CAX5PFZ2HWSEQHBF ;
-    dai:level dai:level-2 ;
-    dai:status dai:proposed .
+:su_01M82B00WB34E68SXWEMVZ22ED a dai:SourceUnit ;
+    rdfs:label "Dogs may not relieve themselves in the inner yard or the flower beds. Dog owners take their dogs outside the building complex for this." .
 
 :cn_01M82AE56ZYS5Y2Z0C35ECC9YA a owl:Class,
         skos:Concept ;
@@ -4540,8 +6494,32 @@
     dai:level dai:level-2 ;
     dai:status dai:proposed .
 
+:cn_01M82B0RVQB8E3F7FG9YPD26JC a owl:Class,
+        skos:Concept ;
+    skos:altLabel "shared inner yard" ;
+    skos:definition "The yard shared by all residents." ;
+    skos:prefLabel "inner yard" ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KN,
+        :su_01M82B00WAF2BQ321TGZ91X4KQ,
+        :su_01M82B00WAF2BQ321TGZ91X4KS,
+        :su_01M82B00WB34E68SXWEMVZ22EC,
+        :su_01M82B00WB34E68SXWEMVZ22ED,
+        :su_01M82B00WB34E68SXWEMVZ22EH ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82B1AN7D1ZA7ABBS5RZ4XK6 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "noise" ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KQ ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
 :su_01M82ABDR1CAX5PFZ2HWSEQHB9 a dai:SourceUnit ;
     rdfs:label "A dog older than 4 months must be registered with the local authority and must carry a microchip." .
+
+:su_01M82B00WB34E68SXWEMVZ22EE a dai:SourceUnit ;
+    rdfs:label "The maximum time a dog may be left alone in a flat depends on the dog's education (training) and its specific breed. Owners are responsible for knowing the limit that applies to their dog." .
 
 :cn_01M82AR3FZSQYQ8M2V93VDTTRG a owl:Class,
         skos:Concept ;
@@ -4555,8 +6533,23 @@
     dai:level dai:level-2 ;
     dai:status dai:proposed .
 
+:cn_01M82B4TJPFJR5BJ36WDBJSZZQ a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "waste" ;
+    dai:evidence :su_01M82B00WB34E68SXWEMVZ22EK ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
 :su_01M82ABDR28HTPAFF4C44FRBZA a dai:SourceUnit ;
     rdfs:label "House training starts on the first day: take the puppy outside after every meal, after every nap and after play, and praise it when it relieves itself outside. Between 8 and 16 weeks, let the puppy get to know many people, sounds, surfaces and traffic in a calm way." .
+
+:cn_01M82ACZDNRYXG7FZCA8KC7FCX a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "breed" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBB,
+        :su_01M82ABDR1CAX5PFZ2HWSEQHBF ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
 
 :cn_01M82ADJQKNCFSCKCDMA3H0R86 a owl:Class,
         skos:Concept ;
@@ -4620,23 +6613,35 @@
 :su_01M82ABDR28HTPAFF4C44FRBZS a dai:SourceUnit ;
     rdfs:label "A dog training course with a certified trainer is recommended in the first year. Dogs of breeds classified as dangerous must pass an obedience test." .
 
-:cn_01M82AFTZDSHCD0SK6T4N2YZW6 a owl:Class,
-        skos:Concept ;
-    skos:prefLabel "leash" ;
-    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZC,
-        :su_01M82ABDR28HTPAFF4C44FRBZE,
-        :su_01M82ABDR30PE47ZK8WSGY3HX7 ;
-    dai:level dai:level-1 ;
-    dai:status dai:proposed .
-
 :su_01M82ABDR1CAX5PFZ2HWSEQHB8 a dai:SourceUnit ;
     rdfs:label "A dog lives 10 to 15 years. It needs daily exercise, company, training and veterinary care for its whole life. Before you get a dog, check that your home, your working hours and your budget fit the dog you want." .
 
 :su_01M82ABDR28HTPAFF4C44FRBZR a dai:SourceUnit ;
     rdfs:label "Every dog should learn five basic commands: *sit*, *down*, *stay*, *come* and *leave it*. Train in short sessions of 5 to 10 minutes, several times a day, and always end with a success." .
 
+:su_01M82B00WB34E68SXWEMVZ22EH a dai:SourceUnit ;
+    rdfs:label "Cats may move freely in the inner yard. Cats may not be kept in the stairwells or the cellar. Litter boxes must be kept inside the flat." .
+
 :su_01M82ABDR28HTPAFF4C44FRBZE a dai:SourceUnit ;
     rdfs:label "Start leash training when the puppy is 8 to 10 weeks old. Reward the dog when the leash is loose, and stop walking when the dog pulls. Never jerk the leash." .
+
+:cn_01M82ACZDNRYXG7FZCA8KC7FD5 a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :cn_01M82B6NEKKV0CSECXDQRKNHP4 ;
+            owl:onProperty :rl_01M82B6NEKKV0CSECXDQRKNHP9 ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :cn_01M82B6NEKKV0CSECXDQRKNHP4 ;
+            owl:onProperty :rl_01M82B6NEKKV0CSECXDQRKNHP9 ] ;
+    skos:altLabel "flats" ;
+    skos:prefLabel "flat" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBC ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
 
 :su_01M82APMQ7MGEVFK2CW6002H2Y a dai:SourceUnit ;
     rdfs:label "A kitten is a cat younger than 6 months. Kittens should not leave their mother before 12 weeks of age. Let a new kitten explore one room first, then the rest of the flat. Kittens learn to use the litter box quickly if it is easy to reach." .
@@ -4644,8 +6649,57 @@
 :su_01M82APMQ7MGEVFK2CW6002H34 a dai:SourceUnit ;
     rdfs:label "An adult cat can stay alone for up to 24 hours if it has enough food, fresh water and a clean litter box. For longer absences, arrange for someone to visit the cat at least once a day." .
 
+:su_01M82B00WB34E68SXWEMVZ22EA a dai:SourceUnit ;
+    rdfs:label "Every pet (dog or cat) must be registered with the house management within 14 days of moving in or acquiring the pet. A pet owner must make sure that their pet does not disturb other residents." .
+
+:su_01M82B00WB34E68SXWEMVZ22EN a dai:SourceUnit ;
+    rdfs:label "Stairwells, corridors and escape routes must be kept free of objects, including prams, shoes and pet equipment. Smoking is not allowed in any shared indoor space." .
+
+:cn_01M82AFTZDSHCD0SK6T4N2YZW6 a owl:Class,
+        skos:Concept ;
+    skos:altLabel "lead" ;
+    skos:prefLabel "leash" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZC,
+        :su_01M82ABDR28HTPAFF4C44FRBZE,
+        :su_01M82ABDR30PE47ZK8WSGY3HX7 ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
 :su_01M82APMQ7MGEVFK2CW6002H36 a dai:SourceUnit ;
     rdfs:label "Cats are attached to their territory. On moving day, keep the cat in a closed room with its litter box. After the move, keep an outdoor cat indoors for at least 2 weeks before you let it outside, so that it learns its new home." .
+
+:su_01M82B00WAF2BQ321TGZ91X4KQ a dai:SourceUnit ;
+    rdfs:label "Quiet hours are from 22:00 to 07:00 on weekdays and from 22:00 to 09:00 on weekends and public holidays. During quiet hours, residents must avoid noise that can be heard in other flats or in the inner yard, including music, drilling and persistent barking." .
+
+:su_01M82B00WCXHEC1FCHYNF4GYBE a dai:SourceUnit ;
+    rdfs:label "Report damage, noise complaints and rule violations to the house management in writing. Repeated violations after a written warning may lead to termination of the tenancy." .
+
+:cn_01M82B0RVQB8E3F7FG9YPD26J6 a owl:Class,
+        skos:Concept ;
+    skos:altLabel "residents" ;
+    skos:definition "Anyone who lives in one of the buildings: tenants, owners and their household members." ;
+    skos:prefLabel "resident" ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KN,
+        :su_01M82B00WAF2BQ321TGZ91X4KQ,
+        :su_01M82B00WAF2BQ321TGZ91X4KS,
+        :su_01M82B00WB34E68SXWEMVZ22EA,
+        :su_01M82B00WB34E68SXWEMVZ22EQ ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:cn_01M82B0RVQB8E3F7FG9YPD26J7 a owl:Class,
+        skos:Concept ;
+    skos:definition "Administers the buildings and enforces these rules." ;
+    skos:prefLabel "house management" ;
+    dai:evidence :su_01M82B00WAF2BQ321TGZ91X4KN,
+        :su_01M82B00WB34E68SXWEMVZ22EA,
+        :su_01M82B00WB34E68SXWEMVZ22EF,
+        :su_01M82B00WB34E68SXWEMVZ22EK,
+        :su_01M82B00WB34E68SXWEMVZ22EQ,
+        :su_01M82B00WCXHEC1FCHYNF4GYBC,
+        :su_01M82B00WCXHEC1FCHYNF4GYBE ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
 
 :su_01M82APMQ7MGEVFK2CW6002H30 a dai:SourceUnit ;
     rdfs:label "Play with your cat for at least 15 minutes twice a day. A cat that scratches furniture usually needs a better scratching post, not punishment. Never punish a cat physically. A cat that suddenly stops using its litter box may be ill and should see a veterinarian." .
@@ -4653,17 +6707,11 @@
 :su_01M82APMQ7MGEVFK2CW6002H32 a dai:SourceUnit ;
     rdfs:label "Short-haired cats groom themselves; brush them once a week to reduce hair in the flat. Long-haired cats need brushing every day to prevent matting. Do not bathe a cat unless the veterinarian advises it." .
 
-:cn_01M82ARW4GRHWZH2QAVQ4Z6C2S a owl:Class,
-        skos:Concept ;
-    skos:prefLabel "litter box" ;
-    dai:evidence :su_01M82APMQ7MGEVFK2CW6002H2P,
-        :su_01M82APMQ7MGEVFK2CW6002H2W,
-        :su_01M82APMQ7MGEVFK2CW6002H2Y,
-        :su_01M82APMQ7MGEVFK2CW6002H30,
-        :su_01M82APMQ7MGEVFK2CW6002H34,
-        :su_01M82APMQ7MGEVFK2CW6002H36 ;
-    dai:level dai:level-2 ;
-    dai:status dai:proposed .
+:su_01M82B00WCXHEC1FCHYNF4GYBC a dai:SourceUnit ;
+    rdfs:label "Noisy work such as drilling is allowed on weekdays from 08:00 to 12:00 and from 14:00 to 18:00, and on Saturdays from 09:00 to 12:00. Announce a move to the house management at least 7 days in advance, and protect the lift with the covers provided." .
+
+:su_01M82B00WB34E68SXWEMVZ22EQ a dai:SourceUnit ;
+    rdfs:label "The main doors of each building stay closed and locked from 22:00 to 06:00; residents open them with their own key. Do not let strangers into the building. Lost keys must be reported to the house management at once." .
 
 :su_01M82ABDR1CAX5PFZ2HWSEQHBK a dai:SourceUnit ;
     rdfs:label "A puppy receives its first vaccinations at 8 weeks of age. The rabies vaccination is mandatory and must be renewed every year. Take your dog to the veterinarian for a check-up at least once a year." .
@@ -4697,6 +6745,18 @@
     dai:level dai:level-3 ;
     dai:status dai:proposed .
 
+:cn_01M82ARW4GRHWZH2QAVQ4Z6C2S a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "litter box" ;
+    dai:evidence :su_01M82APMQ7MGEVFK2CW6002H2P,
+        :su_01M82APMQ7MGEVFK2CW6002H2W,
+        :su_01M82APMQ7MGEVFK2CW6002H2Y,
+        :su_01M82APMQ7MGEVFK2CW6002H30,
+        :su_01M82APMQ7MGEVFK2CW6002H34,
+        :su_01M82APMQ7MGEVFK2CW6002H36 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
 :su_01M82ABDR1CAX5PFZ2HWSEQHBN a dai:SourceUnit ;
     rdfs:label "Brush your dog at least once a week; long-haired breeds need brushing every day. Trim the claws when you can hear them clicking on the floor. Wash your dog's bed and blankets once a week at 60 °C." .
 
@@ -4709,14 +6769,23 @@
 :su_01M82ABDR1CAX5PFZ2HWSEQHBH a dai:SourceUnit ;
     rdfs:label "Feed an adult dog twice a day and a puppy three to four times a day. Fresh water must always be available. Chocolate, grapes, onions and xylitol are poisonous to dogs." .
 
+:su_01M82B00WAF2BQ321TGZ91X4KN a dai:SourceUnit ;
+    rdfs:label "These rules apply to buildings A, B and C around the shared inner yard. A **resident** is anyone who lives in one of the buildings: tenants, owners and their household members. The **house management** administers the buildings and enforces these rules. Every resident must follow them." .
+
 :su_01M82ABDR30PE47ZK8WSGY3HX5 a dai:SourceUnit ;
     rdfs:label "In a car, a dog must travel in a crate or wear a safety harness attached to the seat belt. Never leave a dog in a parked car in warm weather. For travel abroad, your dog needs a pet passport, a microchip and a valid rabies vaccination." .
 
 :su_01M82ABDR30PE47ZK8WSGY3HX7 a dai:SourceUnit ;
     rdfs:label "You are liable for any damage your dog causes. Third-party liability insurance for dog owners is strongly recommended, and it is mandatory for breeds classified as dangerous by the local authority. In public places, your dog must be kept on a leash unless a sign allows free running." .
 
+:su_01M82B00WAF2BQ321TGZ91X4KS a dai:SourceUnit ;
+    rdfs:label "The inner yard is shared by all residents. Children may play there between 08:00 and 20:00. Bicycles must be parked in the bicycle racks only. Barbecues are allowed only in the marked barbecue area and never during quiet hours." .
+
 :su_01M82APMQ68JDJRTYQDVNXFWWJ a dai:SourceUnit ;
     rdfs:label "A cat lives 12 to 18 years. Cats are independent, but they still need daily attention, play and a clean environment. Plan for food, litter, yearly veterinary visits and someone to look after the cat when you travel." .
+
+:su_01M82B00WB34E68SXWEMVZ22EK a dai:SourceUnit ;
+    rdfs:label "Waste is sorted in the bin room of building B: paper, plastic, glass, organic waste and residual waste. Pet waste and used cat litter go into the residual waste bin only. Bulky items must be booked for collection with the house management." .
 
 :su_01M82APMQ7MGEVFK2CW6002H2R a dai:SourceUnit ;
     rdfs:label "Feed an adult cat two to three small meals a day; kittens need four meals a day. Cats need meat-based food. Lilies, onions, chocolate and dog food are not suitable for cats; lilies are highly poisonous." .
@@ -4738,6 +6807,9 @@
 
 :su_01M82ABDR28HTPAFF4C44FRBZG a dai:SourceUnit ;
     rdfs:label "An adult dog needs at least two walks a day: 30 to 60 minutes in total for small breeds and up to 2 hours for large and working breeds. A puppy must be taken outside to relieve itself every 2 to 3 hours. Always pick up your dog's waste and put it in a waste bin." .
+
+:su_01M82B00WB34E68SXWEMVZ22ES a dai:SourceUnit ;
+    rdfs:label "The shared laundry room is in the cellar of building A and may be used from 07:00 to 21:00. Book a slot on the list at the door. Pet blankets, pet beds and other pet textiles may not be washed in the shared washing machines. Each flat has one cellar compartment; flammable liquids may not be stored there." .
 
 :su_01M82APMQ7MGEVFK2CW6002H2P a dai:SourceUnit ;
     rdfs:label "Every cat needs a litter box, a scratching post, food and water bowls placed away from the litter box, and a quiet place to sleep. Secure windows and balconies with a net, because cats can fall from height." .

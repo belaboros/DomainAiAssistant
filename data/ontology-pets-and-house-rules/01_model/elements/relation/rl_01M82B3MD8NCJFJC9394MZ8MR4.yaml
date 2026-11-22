@@ -1,0 +1,15 @@
+evidence:
+- unit: su_01M82B00WB34E68SXWEMVZ22ED
+- unit: su_01M82B00WB34E68SXWEMVZ22EE
+id: rl_01M82B3MD8NCJFJC9394MZ8MR4
+label: owns
+level: level-1
+level_reason: Core owner–dog link.
+object: cn_01M82AC66KMJH32E2MQ3Z7ZBKM
+origin:
+  created_at: '2026-11-22T19:18:12.137678Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+predicate_label: owns
+status: proposed
+subject: cn_01M82B3MD8NCJFJC9394MZ8MQN

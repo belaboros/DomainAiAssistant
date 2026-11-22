@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82B00WCXHEC1FCHYNF4GYBC
+id: st_01M82B7AD49EHMKTM1WFJFM30T
+label: Move announced 7 days ahead
+level: level-3
+level_reason: Moving house is a special case.
+origin:
+  created_at: '2026-11-22T19:20:12.964884Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+status: proposed
+text: A move must be announced to the house management at least 7 days in advance.

@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82B00WB34E68SXWEMVZ22EK
+id: st_01M82B4TJPFJR5BJ36WDBJSZZF
+label: Pet waste goes into residual waste
+level: level-1
+level_reason: A core waste rule that every pet owner must know.
+origin:
+  created_at: '2026-11-22T19:18:51.223161Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+status: proposed
+text: Pet waste and used cat litter go into the residual waste bin only.

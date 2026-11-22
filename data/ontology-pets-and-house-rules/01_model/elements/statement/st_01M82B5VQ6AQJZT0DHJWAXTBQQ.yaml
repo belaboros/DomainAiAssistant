@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82B00WB34E68SXWEMVZ22EQ
+id: st_01M82B5VQ6AQJZT0DHJWAXTBQQ
+label: Main doors locked at night
+level: level-3
+level_reason: Building security is peripheral to pets; a detail for residents.
+origin:
+  created_at: '2026-11-22T19:19:25.158900Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+status: proposed
+text: The main doors of each building stay closed and locked from 22:00 to 06:00.

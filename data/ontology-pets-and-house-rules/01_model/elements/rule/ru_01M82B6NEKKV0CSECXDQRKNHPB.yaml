@@ -1,0 +1,18 @@
+action: use the shared laundry room from 07:00 to 21:00
+actor: resident
+evidence:
+- unit: su_01M82B00WB34E68SXWEMVZ22ES
+id: ru_01M82B6NEKKV0CSECXDQRKNHPB
+label: Laundry room usage hours
+level: level-2
+level_reason: Normal use of a shared space by residents.
+modality: may
+origin:
+  created_at: '2026-11-22T19:19:51.508644Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+refers_to:
+- cn_01M82B6NEKKV0CSECXDQRKNHNT
+scope:
+- co_01M82B00W91390459HX0FJMY3T
+status: proposed

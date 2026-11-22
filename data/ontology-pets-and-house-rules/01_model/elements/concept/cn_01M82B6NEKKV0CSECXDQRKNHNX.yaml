@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82B00WB34E68SXWEMVZ22ES
+id: cn_01M82B6NEKKV0CSECXDQRKNHNX
+label: laundry slot
+level: level-2
+level_reason: Needed to use the laundry room.
+origin:
+  created_at: '2026-11-22T19:19:51.508261Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+status: proposed

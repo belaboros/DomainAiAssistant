@@ -1,0 +1,25 @@
+action: announce a move to the house management
+actor: resident
+condition: when moving
+evidence:
+- unit: su_01M82B00WCXHEC1FCHYNF4GYBC
+id: ru_01M82B7AD49EHMKTM1WFJFM31C
+label: Announce a move at least 7 days in advance
+level: level-3
+level_reason: Moving house is listed as a special case.
+limit:
+  comparator: ge
+  unit: days in advance
+  value: 7.0
+modality: must
+origin:
+  created_at: '2026-11-22T19:20:12.965402Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+refers_to:
+- cn_01M82AXJ1250JDQ3F0HM8ET4QT
+- cn_01M82B0RVQB8E3F7FG9YPD26J7
+- rl_01M82B7AD49EHMKTM1WFJFM318
+scope:
+- co_01M82B00W91390459HX0FJMY3T
+status: proposed

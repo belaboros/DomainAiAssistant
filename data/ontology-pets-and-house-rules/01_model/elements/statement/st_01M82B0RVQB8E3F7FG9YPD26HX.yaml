@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82B00WAF2BQ321TGZ91X4KN
+id: st_01M82B0RVQB8E3F7FG9YPD26HX
+label: Residents must follow the rules
+level: level-1
+level_reason: Basic obligation of every resident.
+origin:
+  created_at: '2026-11-22T19:16:38.391690Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+status: proposed
+text: Every resident must follow these rules.

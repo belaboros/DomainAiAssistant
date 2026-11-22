@@ -1,0 +1,20 @@
+action: move freely in the inner yard
+actor: cat
+evidence:
+- unit: su_01M82B00WB34E68SXWEMVZ22EH
+id: ru_01M82B441FVKK345F8CJ12SYK9
+label: Cats may move freely in the inner yard
+level: level-2
+level_reason: Normal-day use of shared spaces by cats.
+modality: may
+origin:
+  created_at: '2026-11-22T19:18:28.144182Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+refers_to:
+- cn_01M82AQDR2NPZDR8C737517K86
+- cn_01M82B0RVQB8E3F7FG9YPD26JC
+- rl_01M82B441FVKK345F8CJ12SYK5
+scope:
+- co_01M82B00W91390459HX0FJMY3T
+status: proposed

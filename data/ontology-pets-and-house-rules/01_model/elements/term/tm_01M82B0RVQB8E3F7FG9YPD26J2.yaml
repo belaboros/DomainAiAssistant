@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82B00WAF2BQ321TGZ91X4KN
+id: tm_01M82B0RVQB8E3F7FG9YPD26J2
+label: household member
+level: level-2
+level_reason: Kind of resident.
+mentions:
+- concept: cn_01M82B0RVQB8E3F7FG9YPD26JA
+  unit: su_01M82B00WAF2BQ321TGZ91X4KN
+origin:
+  created_at: '2026-11-22T19:16:38.391868Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+status: proposed

@@ -1,0 +1,22 @@
+action: protect the lift with the covers provided
+actor: resident
+condition: during a move
+evidence:
+- unit: su_01M82B00WCXHEC1FCHYNF4GYBC
+id: ru_01M82B7AD49EHMKTM1WFJFM31D
+label: Protect the lift with the covers provided
+level: level-3
+level_reason: Moving house is listed as a special case.
+modality: must
+origin:
+  created_at: '2026-11-22T19:20:12.965455Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+refers_to:
+- cn_01M82B3MD8NCJFJC9394MZ8MQS
+- cn_01M82B7AD49EHMKTM1WFJFM317
+- rl_01M82B7AD49EHMKTM1WFJFM319
+- cn_01M82AXJ1250JDQ3F0HM8ET4QT
+scope:
+- co_01M82B00W91390459HX0FJMY3T
+status: proposed

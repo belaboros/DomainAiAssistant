@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82B00WAF2BQ321TGZ91X4KQ
+id: st_01M82B1AN7D1ZA7ABBS5RZ4XJX
+label: Persistent barking counts as noise
+level: level-1
+level_reason: Directly ties the quiet-hours rule to dog owners.
+origin:
+  created_at: '2026-11-22T19:16:56.616225Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+status: proposed
+text: Noise to be avoided during quiet hours includes music, drilling and persistent barking.

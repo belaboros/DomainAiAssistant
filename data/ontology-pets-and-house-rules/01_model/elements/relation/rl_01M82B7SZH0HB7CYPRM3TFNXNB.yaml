@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82B00WCXHEC1FCHYNF4GYBE
+id: rl_01M82B7SZH0HB7CYPRM3TFNXNB
+label: precedes
+level: level-3
+level_reason: Enforcement sequence.
+object: cn_01M82B7SZH0HB7CYPRM3TFNXN4
+origin:
+  created_at: '2026-11-22T19:20:28.915077Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+predicate_label: precedes
+status: proposed
+subject: cn_01M82B7SZH0HB7CYPRM3TFNXN3

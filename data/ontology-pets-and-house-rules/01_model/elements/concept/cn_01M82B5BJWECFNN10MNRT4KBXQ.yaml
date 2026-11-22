@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82B00WB34E68SXWEMVZ22EN
+id: cn_01M82B5BJWECFNN10MNRT4KBXQ
+label: corridor
+level: level-2
+level_reason: Shared space kept free of objects.
+origin:
+  created_at: '2026-11-22T19:19:08.637684Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+status: proposed

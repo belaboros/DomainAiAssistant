@@ -1,0 +1,12 @@
+definition: A dog or a cat.
+evidence:
+- unit: su_01M82B00WB34E68SXWEMVZ22EA
+id: cn_01M82B2PPZPYF6543TD3RQQKNJ
+label: pet
+level: level-1
+level_reason: Central concept of the domain.
+origin:
+  created_at: '2026-11-22T19:17:41.729074Z'
+  kind: llm
+  run_id: run_01M82B00W91390459HX0FJMY3S
+status: proposed
