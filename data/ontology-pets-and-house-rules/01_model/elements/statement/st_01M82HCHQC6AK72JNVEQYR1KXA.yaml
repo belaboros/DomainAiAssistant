@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMW
+id: st_01M82HCHQC6AK72JNVEQYR1KXA
+label: Main doors locked at night
+level: level-2
+level_reason: Shared-space access detail relevant to residents on a normal day.
+origin:
+  created_at: '2026-11-22T21:07:55.756976Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed
+text: The main doors of each building stay closed and locked from 22:00 to 06:00.

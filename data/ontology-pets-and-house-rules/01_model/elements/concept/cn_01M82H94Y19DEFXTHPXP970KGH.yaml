@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX7
+id: cn_01M82H94Y19DEFXTHPXP970KGH
+label: pet registration
+level: level-1
+level_reason: Core rule-driven process every owner must complete.
+origin:
+  created_at: '2026-11-22T21:06:04.354058Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed

@@ -1,0 +1,48 @@
+- content_hash: sha256:0d64abe85882c15e9eaff62b291f7b370962aa7dbab3764122045b80eb0728a6
+  document_id: doc_01M82H6T2SJCWQ88GWH3NA9WX8
+  id: su_01M82H6T2T27Y7HH29TGSXAMMH
+  kind: list_item
+  location:
+    heading_path:
+    - 4. Pets — 4.2 Dogs
+    index_in_section: 0
+    line_end: 3
+    line_start: 3
+    path: 04-pets/02-dogs.md
+  text: Dogs must be kept on a lead at all times in the inner yard, the stairwells and the lifts. The lead may not be longer than 2 metres.
+- content_hash: sha256:60c8eed13bf1a0d630b04be5a588c22eabb75d535dba7d7e0e49e323d8ba7c1b
+  document_id: doc_01M82H6T2SJCWQ88GWH3NA9WX8
+  id: su_01M82H6T2T27Y7HH29TGSXAMMJ
+  kind: list_item
+  location:
+    heading_path:
+    - 4. Pets — 4.2 Dogs
+    index_in_section: 1
+    line_end: 4
+    line_start: 4
+    path: 04-pets/02-dogs.md
+  text: Dogs may not relieve themselves in the inner yard or the flower beds. Dog owners take their dogs outside the building complex for this.
+- content_hash: sha256:6f1e360368038aafd764060abca9f34ec159917e552122e7d9214a57218d1ffd
+  document_id: doc_01M82H6T2SJCWQ88GWH3NA9WX8
+  id: su_01M82H6T2T27Y7HH29TGSXAMMK
+  kind: list_item
+  location:
+    heading_path:
+    - 4. Pets — 4.2 Dogs
+    index_in_section: 2
+    line_end: 5
+    line_start: 5
+    path: 04-pets/02-dogs.md
+  text: The maximum time a dog may be left alone in a flat depends on the dog's education (training) and its specific breed. Owners are responsible for knowing the limit that applies to their dog.
+- content_hash: sha256:5c5a6897c244e22e9da36d41fc208f5f8aad218d12628c8b7cb2f1f2e033d6ba
+  document_id: doc_01M82H6T2SJCWQ88GWH3NA9WX8
+  id: su_01M82H6T2T27Y7HH29TGSXAMMM
+  kind: list_item
+  location:
+    heading_path:
+    - 4. Pets — 4.2 Dogs
+    index_in_section: 3
+    line_end: 6
+    line_start: 6
+    path: 04-pets/02-dogs.md
+  text: If a dog barks persistently while left alone, the house management may require the owner to arrange care.

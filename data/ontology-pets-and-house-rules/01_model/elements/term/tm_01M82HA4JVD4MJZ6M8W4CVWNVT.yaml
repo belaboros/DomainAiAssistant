@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMM
+id: tm_01M82HA4JVD4MJZ6M8W4CVWNVT
+label: care
+level: level-3
+level_reason: Enforcement measure.
+mentions:
+- concept: cn_01M82HA4JVD4MJZ6M8W4CVWNW9
+  unit: su_01M82H6T2T27Y7HH29TGSXAMMM
+origin:
+  created_at: '2026-11-22T21:06:36.764577Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed

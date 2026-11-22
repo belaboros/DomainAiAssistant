@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMH
+id: st_01M82HA4JTFTWA7AZK127XE1DW
+label: Dogs on lead in shared areas
+level: level-1
+level_reason: Core lead rule every owner must know.
+origin:
+  created_at: '2026-11-22T21:06:36.763677Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed
+text: Dogs must be kept on a lead at all times in the inner yard, the stairwells and the lifts.

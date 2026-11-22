@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMN2
+id: tm_01M82HED58S76FTH809VQEMZCD
+label: noise complaint
+level: level-3
+level_reason: Complaints are special cases.
+mentions:
+- concept: cn_01M82HED58S76FTH809VQEMZCP
+  unit: su_01M82H6T2T27Y7HH29TGSXAMN2
+origin:
+  created_at: '2026-11-22T21:08:56.616452Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed

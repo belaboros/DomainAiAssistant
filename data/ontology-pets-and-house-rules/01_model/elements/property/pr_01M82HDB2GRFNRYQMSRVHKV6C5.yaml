@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMY
+id: pr_01M82HDB2GRFNRYQMSRVHKV6C5
+label: Cellar compartments per flat
+level: level-2
+level_reason: Shared space facts for residents.
+name: number of cellar compartments per flat
+of: rl_01M82HDB2GRFNRYQMSRVHKV6BW
+origin:
+  created_at: '2026-11-22T21:08:21.713638Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed
+value: '1'

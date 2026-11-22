@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMT
+id: rl_01M82HBZKCWB6HP1MM7REEF3KS
+label: must not be kept in
+level: level-2
+level_reason: Shared-space rule for daily life.
+object: cn_01M82HBZKCWB6HP1MM7REEF3KH
+origin:
+  created_at: '2026-11-22T21:07:37.197706Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+predicate_label: must not be kept in
+status: proposed
+subject: cn_01M82HBZKCWB6HP1MM7REEF3KJ

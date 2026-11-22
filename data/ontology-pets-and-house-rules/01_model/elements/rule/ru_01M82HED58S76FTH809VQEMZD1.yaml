@@ -1,0 +1,23 @@
+action: terminate the tenancy
+actor: house management
+condition: violations are repeated after a written warning
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMN2
+id: ru_01M82HED58S76FTH809VQEMZD1
+label: Repeated violations after warning may lead to termination
+level: level-3
+level_reason: Enforcement is an error scenario.
+modality: may
+origin:
+  created_at: '2026-11-22T21:08:56.617094Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+refers_to:
+- cn_01M82HED58S76FTH809VQEMZCQ
+- cn_01M82HED58S76FTH809VQEMZCR
+- cn_01M82HED58S76FTH809VQEMZCT
+- cn_01M82HED58S76FTH809VQEMZCS
+- rl_01M82HED58S76FTH809VQEMZCY
+scope:
+- co_01M82H6T2RFZXKEGGF51P3J7NK
+status: proposed

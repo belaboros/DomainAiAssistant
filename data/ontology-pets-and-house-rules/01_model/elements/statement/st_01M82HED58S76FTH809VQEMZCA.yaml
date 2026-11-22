@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMN2
+id: st_01M82HED58S76FTH809VQEMZCA
+label: Reports go to house management in writing
+level: level-3
+level_reason: Complaints and enforcement are special cases.
+origin:
+  created_at: '2026-11-22T21:08:56.616292Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed
+text: Damage, noise complaints and rule violations are reported to the house management in writing.

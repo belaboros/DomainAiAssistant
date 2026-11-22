@@ -1,5 +1,6 @@
 evidence:
 - unit: su_01M82GXF5CK27HSSNSY54SX5F7
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMR
 id: cn_01M82H1MQPVEX27Q0YHCNZ9WE3
 label: residual waste
 level: level-1
@@ -8,4 +9,6 @@ origin:
   created_at: '2026-11-22T21:01:58.390789Z'
   kind: llm
   run_id: run_01M82GXF5A3M9Z44ZD3X2YY7HY
+parents:
+- cn_01M82HBAX7NMYFG8GE4P9Y56F3
 status: proposed

@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX3
+id: st_01M82H83Q82K5CKBRM346N832X
+label: Noise includes music, drilling and persistent barking
+level: level-2
+level_reason: Clarifies that persistent barking counts as noise for pet owners.
+origin:
+  created_at: '2026-11-22T21:05:30.344595Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed
+text: Noise to be avoided during quiet hours includes music, drilling and persistent barking.

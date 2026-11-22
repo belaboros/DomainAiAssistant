@@ -1,35 +1,35 @@
 {
-  "built_at": "2026-11-22T20:59:45Z",
+  "built_at": "2026-11-22T21:04:51Z",
   "counts": {
     "by_level": {
-      "level-1": 50,
-      "level-2": 432,
-      "level-3": 145
+      "level-1": 114,
+      "level-2": 581,
+      "level-3": 210
     },
     "by_status": {
       "approved": 0,
       "deprecated": 0,
       "included": 0,
-      "proposed": 627
+      "proposed": 905
     },
     "by_type": {
-      "concept": 130,
-      "property": 42,
-      "relation": 119,
-      "rule": 99,
-      "statement": 116,
-      "term": 121
+      "concept": 194,
+      "property": 54,
+      "relation": 172,
+      "rule": 140,
+      "statement": 161,
+      "term": 184
     }
   },
   "files": {
-    "level-1.md": "sha256:a39f060ad4e08ba977a4189d7d4c33c00942b7224d1d35f98eac0fdcc1dd5c59",
-    "level-2.md": "sha256:89d5788a1a245e5d309634b2182b9dc7973336865ba79302ad2e9d1ec69546a1",
-    "level-3.md": "sha256:4d6fb20b5346a43c8b265fc537f7383026b9a81b1bff2b190b81a5e37eaffd7b",
-    "ontology.jsonld": "sha256:188a2e73aae8b673932312f97b2a8e8be94eecd763ca503f7681fdf1ba475ceb",
-    "ontology.ttl": "sha256:ef846b35f1f121b4a180d9384d79e962c751fd8e99725919198b8655e6dd92e2"
+    "level-1.md": "sha256:d4fde0f0dab2e48dc6437abf81dc9d0cf06d197df59c25aab3531b69f5676014",
+    "level-2.md": "sha256:4abc5182b8e76e61b1ab286017745ac9b4907d4271a1a51364b461d26b3fd689",
+    "level-3.md": "sha256:412ddc9a8a9b21275ff413e7f4b4fdd7fc075d45673373f1f97893d169d15960",
+    "ontology.jsonld": "sha256:6a60d0608af1f1bec3d4a8d4851499b701118f65ef36f150bb5c2b7aca34f4e8",
+    "ontology.ttl": "sha256:ebcc61a1c36753a4c579a0a61d65d8177c9e2888827a979b0e42cd64e82b45e8"
   },
   "ontology": "pets-and-house-rules",
-  "source_commit": "49b8a446459e43c48fb2408fa993f2bc2ee06fdc",
+  "source_commit": "abddea040b31ec1156c22c214ddcea70e9cc53eb",
   "variant": "raw",
-  "version": "raw+49b8a44"
+  "version": "raw+abddea0"
 }

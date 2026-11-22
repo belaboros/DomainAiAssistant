@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX3
+id: pr_01M82H83Q82K5CKBRM346N833K
+label: Quiet hours on weekends and public holidays
+level: level-2
+level_reason: Needed to know when noise must be avoided on weekends and holidays.
+name: weekend and public holiday time span
+of: cn_01M82H83Q82K5CKBRM346N8335
+origin:
+  created_at: '2026-11-22T21:05:30.345664Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed
+value: 22:00 to 09:00

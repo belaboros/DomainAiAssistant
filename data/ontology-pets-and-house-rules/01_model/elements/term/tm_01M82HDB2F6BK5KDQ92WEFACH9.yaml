@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMY
+id: tm_01M82HDB2F6BK5KDQ92WEFACH9
+label: shared washing machines
+level: level-2
+level_reason: Names shared equipment.
+mentions:
+- concept: cn_01M82HDB2F6BK5KDQ92WEFACHQ
+  unit: su_01M82H6T2T27Y7HH29TGSXAMMY
+origin:
+  created_at: '2026-11-22T21:08:21.712497Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed

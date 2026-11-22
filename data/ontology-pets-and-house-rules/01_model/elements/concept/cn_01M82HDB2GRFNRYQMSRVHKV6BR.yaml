@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMY
+id: cn_01M82HDB2GRFNRYQMSRVHKV6BR
+label: booking list
+level: level-2
+level_reason: Means to book a laundry slot.
+origin:
+  created_at: '2026-11-22T21:08:21.713138Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed

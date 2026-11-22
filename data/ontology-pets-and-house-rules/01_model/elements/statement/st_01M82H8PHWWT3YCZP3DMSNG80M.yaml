@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX5
+id: st_01M82H8PHWWT3YCZP3DMSNG80M
+label: Barbecue restriction
+level: ignorable
+level_reason: A rule about barbecues, not about pets or their owners.
+origin:
+  created_at: '2026-11-22T21:05:49.628356Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed
+text: Barbecues are allowed only in the marked barbecue area and never during quiet hours.

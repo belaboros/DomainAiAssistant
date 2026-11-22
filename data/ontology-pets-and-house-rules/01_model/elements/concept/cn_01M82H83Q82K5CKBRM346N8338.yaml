@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX3
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMM
+id: cn_01M82H83Q82K5CKBRM346N8338
+label: persistent barking
+level: level-2
+level_reason: Pet-related noise owners must avoid.
+origin:
+  created_at: '2026-11-22T21:05:30.345149Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+parents:
+- cn_01M82H83Q82K5CKBRM346N8337
+status: proposed

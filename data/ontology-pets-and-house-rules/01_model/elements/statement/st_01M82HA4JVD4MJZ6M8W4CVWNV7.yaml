@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMJ
+id: st_01M82HA4JVD4MJZ6M8W4CVWNV7
+label: Owners take dogs outside to relieve
+level: level-1
+level_reason: Core waste rule.
+origin:
+  created_at: '2026-11-22T21:06:36.763849Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed
+text: Dog owners take their dogs outside the building complex to relieve themselves.

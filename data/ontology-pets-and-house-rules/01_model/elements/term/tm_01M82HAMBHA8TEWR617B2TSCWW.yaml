@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMP
+id: tm_01M82HAMBHA8TEWR617B2TSCWW
+label: litter boxes
+level: level-1
+level_reason: Tied to the waste rule.
+mentions:
+- concept: cn_01M82GZMM3VP80T7XD6GS67TSK
+  unit: su_01M82H6T2T27Y7HH29TGSXAMMP
+origin:
+  created_at: '2026-11-22T21:06:52.914386Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed

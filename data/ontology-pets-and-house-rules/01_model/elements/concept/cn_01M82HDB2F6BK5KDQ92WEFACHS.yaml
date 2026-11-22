@@ -1,0 +1,13 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMY
+id: cn_01M82HDB2F6BK5KDQ92WEFACHS
+label: pet blanket
+level: level-2
+level_reason: Pet textile covered by a house rule.
+origin:
+  created_at: '2026-11-22T21:08:21.713073Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+parents:
+- cn_01M82HDB2F6BK5KDQ92WEFACHR
+status: proposed

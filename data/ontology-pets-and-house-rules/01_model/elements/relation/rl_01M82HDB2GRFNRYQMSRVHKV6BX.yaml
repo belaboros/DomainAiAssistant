@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMY
+id: rl_01M82HDB2GRFNRYQMSRVHKV6BX
+label: is booked on
+level: level-2
+level_reason: How the laundry room is booked.
+object: cn_01M82HDB2GRFNRYQMSRVHKV6BR
+origin:
+  created_at: '2026-11-22T21:08:21.713314Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+predicate_label: is booked on
+status: proposed
+subject: cn_01M82HDB2F6BK5KDQ92WEFACHV

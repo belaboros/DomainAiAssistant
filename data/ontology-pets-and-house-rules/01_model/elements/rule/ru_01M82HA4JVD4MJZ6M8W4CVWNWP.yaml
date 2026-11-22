@@ -1,0 +1,20 @@
+action: take the dog outside the building complex to relieve itself
+actor: dog owner
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMJ
+id: ru_01M82HA4JVD4MJZ6M8W4CVWNWP
+label: Take dogs outside the complex to relieve
+level: level-1
+level_reason: Core waste rule.
+modality: must
+origin:
+  created_at: '2026-11-22T21:06:36.765517Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+refers_to:
+- cn_01M82GR8C6YNAW05QP8GX3MF7P
+- cn_01M82GJP3CRKNX3DNJZDNANDWM
+- cn_01M82HA4JVD4MJZ6M8W4CVWNW2
+scope:
+- co_01M82H6T2RFZXKEGGF51P3J7NK
+status: proposed

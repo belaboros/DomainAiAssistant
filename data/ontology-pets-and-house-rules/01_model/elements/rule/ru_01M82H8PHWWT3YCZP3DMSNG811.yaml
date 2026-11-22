@@ -1,0 +1,21 @@
+action: have a barbecue
+actor: resident
+condition: only in the marked barbecue area
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX5
+id: ru_01M82H8PHWWT3YCZP3DMSNG811
+label: Barbecues only in the marked barbecue area
+level: level-2
+level_reason: House rule for everyday use of the shared yard.
+modality: may
+origin:
+  created_at: '2026-11-22T21:05:49.628837Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+refers_to:
+- cn_01M82H8PHWWT3YCZP3DMSNG80V
+- rl_01M82H8PHWWT3YCZP3DMSNG80Y
+- cn_01M82H7HBZP5REB8E6N9M29JTG
+scope:
+- co_01M82H6T2RFZXKEGGF51P3J7NK
+status: proposed

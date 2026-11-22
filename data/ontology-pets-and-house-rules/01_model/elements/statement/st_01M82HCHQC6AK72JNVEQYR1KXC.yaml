@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMW
+id: st_01M82HCHQC6AK72JNVEQYR1KXC
+label: No strangers let in
+level: level-2
+level_reason: House rule for normal building use.
+origin:
+  created_at: '2026-11-22T21:07:55.757095Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed
+text: Strangers must not be let into the building.

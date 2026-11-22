@@ -1,0 +1,20 @@
+action: carry out noisy work such as drilling
+actor: resident
+condition: on weekdays from 08:00 to 12:00 and from 14:00 to 18:00
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMN0
+id: ru_01M82HDX94TC4A36YAZSDB0R50
+label: Noisy work allowed on weekdays 08:00-12:00 and 14:00-18:00
+level: level-3
+level_reason: Renovation hours are a special case outside normal pet ownership.
+modality: may
+origin:
+  created_at: '2026-11-22T21:08:40.356606Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+refers_to:
+- cn_01M82HDX94TC4A36YAZSDB0R4Q
+- cn_01M82H83Q82K5CKBRM346N833A
+scope:
+- co_01M82H6T2RFZXKEGGF51P3J7NK
+status: proposed

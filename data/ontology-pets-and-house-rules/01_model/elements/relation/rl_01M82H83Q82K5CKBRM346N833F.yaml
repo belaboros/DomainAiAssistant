@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX3
+id: rl_01M82H83Q82K5CKBRM346N833F
+label: can be heard in
+level: level-2
+level_reason: Defines which noise is restricted.
+object: cn_01M82GKFJ96730WAHGQQD3M95G
+origin:
+  created_at: '2026-11-22T21:05:30.345466Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+predicate_label: can be heard in
+status: proposed
+subject: cn_01M82H83Q82K5CKBRM346N8337

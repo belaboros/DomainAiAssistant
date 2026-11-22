@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMY
+id: rl_01M82HDB2GRFNRYQMSRVHKV6BY
+label: is a slot for
+level: level-2
+level_reason: Booking of the shared space.
+object: cn_01M82HDB2F6BK5KDQ92WEFACHJ
+origin:
+  created_at: '2026-11-22T21:08:21.713339Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+predicate_label: is a slot for
+status: proposed
+subject: cn_01M82HDB2F6BK5KDQ92WEFACHV

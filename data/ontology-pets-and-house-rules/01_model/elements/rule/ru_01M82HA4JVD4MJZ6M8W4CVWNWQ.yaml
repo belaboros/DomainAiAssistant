@@ -1,0 +1,22 @@
+action: know the maximum time their dog may be left alone in the flat
+actor: dog owner
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMK
+id: ru_01M82HA4JVD4MJZ6M8W4CVWNWQ
+label: Owner must know alone-time limit
+level: level-2
+level_reason: Leaving the pet alone is a normal-day concern.
+modality: must
+origin:
+  created_at: '2026-11-22T21:06:36.765547Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+refers_to:
+- cn_01M82HA4JVD4MJZ6M8W4CVWNW6
+- cn_01M82GKFJ96730WAHGQQD3M95G
+- rl_01M82HA4JVD4MJZ6M8W4CVWNWE
+- rl_01M82HA4JVD4MJZ6M8W4CVWNWC
+- rl_01M82HA4JVD4MJZ6M8W4CVWNWD
+scope:
+- co_01M82H6T2RFZXKEGGF51P3J7NK
+status: proposed

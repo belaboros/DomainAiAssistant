@@ -1,0 +1,12 @@
+- content_hash: sha256:b2f1c113386172f8e9b6216c81662db36abbcb90d211d446140120986479d1b3
+  document_id: doc_01M82H6T2T27Y7HH29TGSXAMMQ
+  id: su_01M82H6T2T27Y7HH29TGSXAMMR
+  kind: paragraph
+  location:
+    heading_path:
+    - 5. Waste and Recycling
+    index_in_section: 0
+    line_end: 3
+    line_start: 3
+    path: 05-waste-and-recycling.md
+  text: 'Waste is sorted in the bin room of building B: paper, plastic, glass, organic waste and residual waste. Pet waste and used cat litter go into the residual waste bin only. Bulky items must be booked for collection with the house management.'

@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMP
+id: tm_01M82HAMBHA8TEWR617B2TSCWT
+label: stairwells
+level: level-2
+level_reason: Shared space.
+mentions:
+- concept: cn_01M82HA4JVD4MJZ6M8W4CVWNVZ
+  unit: su_01M82H6T2T27Y7HH29TGSXAMMP
+origin:
+  created_at: '2026-11-22T21:06:52.914318Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed

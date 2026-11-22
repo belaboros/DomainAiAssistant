@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMP
+id: st_01M82HAMBHA8TEWR617B2TSCWP
+label: No cats in stairwells or cellar
+level: level-1
+level_reason: A house rule every cat owner in the complex must know.
+origin:
+  created_at: '2026-11-22T21:06:52.913928Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed
+text: Cats may not be kept in the stairwells or the cellar.

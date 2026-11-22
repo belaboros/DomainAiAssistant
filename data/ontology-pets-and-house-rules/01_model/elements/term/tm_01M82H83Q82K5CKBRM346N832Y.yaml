@@ -1,0 +1,17 @@
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX3
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX5
+id: tm_01M82H83Q82K5CKBRM346N832Y
+label: quiet hours
+level: level-2
+level_reason: Term for a house rule period.
+mentions:
+- concept: cn_01M82H83Q82K5CKBRM346N8335
+  unit: su_01M82H6T2SJCWQ88GWH3NA9WX3
+- concept: cn_01M82H83Q82K5CKBRM346N8335
+  unit: su_01M82H6T2SJCWQ88GWH3NA9WX5
+origin:
+  created_at: '2026-11-22T21:05:30.344637Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed

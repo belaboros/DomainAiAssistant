@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMY
+id: rl_01M82HDB2GRFNRYQMSRVHKV6BT
+label: is located in
+level: level-2
+level_reason: Location of a shared space.
+object: cn_01M82HAMBHA8TEWR617B2TSCX1
+origin:
+  created_at: '2026-11-22T21:08:21.713181Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+predicate_label: is located in
+status: proposed
+subject: cn_01M82HDB2F6BK5KDQ92WEFACHJ

@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX3
+id: cn_01M82H83Q82K5CKBRM346N833D
+label: public holiday
+level: level-2
+level_reason: Affects quiet hours timing.
+origin:
+  created_at: '2026-11-22T21:05:30.345366Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed

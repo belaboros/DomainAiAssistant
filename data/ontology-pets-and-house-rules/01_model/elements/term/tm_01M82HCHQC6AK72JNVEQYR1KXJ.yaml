@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMW
+id: tm_01M82HCHQC6AK72JNVEQYR1KXJ
+label: stranger
+level: level-2
+level_reason: Person not to be let in.
+mentions:
+- concept: cn_01M82HCHQC6AK72JNVEQYR1KXS
+  unit: su_01M82H6T2T27Y7HH29TGSXAMMW
+origin:
+  created_at: '2026-11-22T21:07:55.757304Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed

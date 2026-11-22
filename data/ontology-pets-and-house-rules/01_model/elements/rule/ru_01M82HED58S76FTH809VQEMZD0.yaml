@@ -1,0 +1,25 @@
+action: report damage, noise complaints and rule violations to the house management in writing
+actor: resident
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMN2
+id: ru_01M82HED58S76FTH809VQEMZD0
+label: Report damage, noise complaints and violations in writing
+level: level-3
+level_reason: Complaints and enforcement are special cases.
+modality: must
+origin:
+  created_at: '2026-11-22T21:08:56.617032Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+refers_to:
+- cn_01M82H7HBZP5REB8E6N9M29JTH
+- cn_01M82HED58S76FTH809VQEMZCM
+- cn_01M82GV0DCSP2BSTQA19ENCPJ1
+- cn_01M82HED58S76FTH809VQEMZCP
+- cn_01M82HED58S76FTH809VQEMZCQ
+- rl_01M82HED58S76FTH809VQEMZCV
+- rl_01M82HED58S76FTH809VQEMZCW
+- rl_01M82HED58S76FTH809VQEMZCX
+scope:
+- co_01M82H6T2RFZXKEGGF51P3J7NK
+status: proposed

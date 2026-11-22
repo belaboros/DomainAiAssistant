@@ -1,0 +1,20 @@
+action: book bulky items for collection with the house management
+actor: resident
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMR
+id: ru_01M82HBAX7NMYFG8GE4P9Y56FR
+label: Bulky items must be booked for collection
+level: level-3
+level_reason: Special case of waste disposal beyond the normal day.
+modality: must
+origin:
+  created_at: '2026-11-22T21:07:16.008688Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+refers_to:
+- cn_01M82HBAX7NMYFG8GE4P9Y56FE
+- cn_01M82H7HBZP5REB8E6N9M29JTH
+- rl_01M82HBAX7NMYFG8GE4P9Y56FM
+scope:
+- co_01M82H6T2RFZXKEGGF51P3J7NK
+status: proposed

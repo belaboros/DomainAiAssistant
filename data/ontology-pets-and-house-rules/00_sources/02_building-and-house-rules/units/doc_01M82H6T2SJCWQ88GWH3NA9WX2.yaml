@@ -1,0 +1,12 @@
+- content_hash: sha256:4c4ae87a1c941171c68276b0755225bc1bbee6b6859babf5220205ace30d94a8
+  document_id: doc_01M82H6T2SJCWQ88GWH3NA9WX2
+  id: su_01M82H6T2SJCWQ88GWH3NA9WX3
+  kind: paragraph
+  location:
+    heading_path:
+    - 2. Quiet Hours
+    index_in_section: 0
+    line_end: 3
+    line_start: 3
+    path: 02-quiet-hours.md
+  text: Quiet hours are from 22:00 to 07:00 on weekdays and from 22:00 to 09:00 on weekends and public holidays. During quiet hours, residents must avoid noise that can be heard in other flats or in the inner yard, including music, drilling and persistent barking.

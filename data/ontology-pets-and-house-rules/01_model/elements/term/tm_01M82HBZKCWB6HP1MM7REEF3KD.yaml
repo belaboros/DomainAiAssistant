@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMT
+id: tm_01M82HBZKCWB6HP1MM7REEF3KD
+label: object
+level: level-3
+level_reason: Generic word for items left in routes.
+mentions:
+- concept: cn_01M82HBZKCWB6HP1MM7REEF3KJ
+  unit: su_01M82H6T2T27Y7HH29TGSXAMMT
+origin:
+  created_at: '2026-11-22T21:07:37.197332Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed

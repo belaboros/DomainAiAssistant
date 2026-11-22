@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX5
+id: rl_01M82H8PHWWT3YCZP3DMSNG80X
+label: is shared by
+level: level-2
+level_reason: Explains who uses the shared space.
+object: cn_01M82H7HBZP5REB8E6N9M29JTG
+origin:
+  created_at: '2026-11-22T21:05:49.628661Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+predicate_label: is shared by
+status: proposed
+subject: cn_01M82H7HBZP5REB8E6N9M29JTP

@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMN0
+id: rl_01M82HDX94TC4A36YAZSDB0R4Z
+label: is provided for
+level: level-3
+level_reason: Moving detail.
+object: cn_01M82H4A6QBXBQ8J6YR1AX969Q
+origin:
+  created_at: '2026-11-22T21:08:40.356581Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+predicate_label: is provided for
+status: proposed
+subject: cn_01M82HDX94TC4A36YAZSDB0R4W

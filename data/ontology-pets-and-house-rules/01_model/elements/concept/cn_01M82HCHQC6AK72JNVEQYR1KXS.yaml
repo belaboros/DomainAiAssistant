@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMW
+id: cn_01M82HCHQC6AK72JNVEQYR1KXS
+label: stranger
+level: level-2
+level_reason: Person residents must not let in.
+origin:
+  created_at: '2026-11-22T21:07:55.757525Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed

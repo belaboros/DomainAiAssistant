@@ -1,0 +1,23 @@
+action: require the owner to arrange care
+actor: house management
+condition: the dog barks persistently while left alone
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMM
+id: ru_01M82HA4JVD4MJZ6M8W4CVWNWR
+label: Management may require care for persistent barking
+level: level-3
+level_reason: Complaint and enforcement scenario.
+modality: may
+origin:
+  created_at: '2026-11-22T21:06:36.765578Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+refers_to:
+- cn_01M82H7HBZP5REB8E6N9M29JTH
+- cn_01M82H83Q82K5CKBRM346N8338
+- cn_01M82HA4JVD4MJZ6M8W4CVWNW9
+- rl_01M82HA4JVD4MJZ6M8W4CVWNWH
+- rl_01M82HA4JVD4MJZ6M8W4CVWNWJ
+scope:
+- co_01M82H6T2RFZXKEGGF51P3J7NK
+status: proposed

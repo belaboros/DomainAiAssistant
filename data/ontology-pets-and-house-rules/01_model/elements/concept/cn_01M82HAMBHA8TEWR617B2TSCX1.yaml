@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMP
+- unit: su_01M82H6T2T27Y7HH29TGSXAMMY
+id: cn_01M82HAMBHA8TEWR617B2TSCX1
+label: cellar
+level: level-2
+level_reason: Shared space where cats may not be kept.
+origin:
+  created_at: '2026-11-22T21:06:52.914546Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed

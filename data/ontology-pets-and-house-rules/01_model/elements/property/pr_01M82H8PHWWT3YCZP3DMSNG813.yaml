@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82H6T2SJCWQ88GWH3NA9WX5
+id: pr_01M82H8PHWWT3YCZP3DMSNG813
+label: Children's play hours in the inner yard
+level: level-2
+level_reason: Everyday detail of the shared space.
+name: children's play hours
+of: cn_01M82H7HBZP5REB8E6N9M29JTP
+origin:
+  created_at: '2026-11-22T21:05:49.628912Z'
+  kind: llm
+  run_id: run_01M82H6T2QTRP8085HZ85ZHD43
+status: proposed
+value: 08:00-20:00
