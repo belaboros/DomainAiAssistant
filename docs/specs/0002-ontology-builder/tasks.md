@@ -82,7 +82,7 @@ Tick a box only once its check passes.
   - keyboard shortcuts (j/k, x, i, e, 1–3, a).
 
   — covers: AC-15, AC-16 (GUI), AC-3 (GUI) — check: `npm --prefix apps/ontology-builder/web test -- ElementDetail Actions` — note: the detail response is typed in OpenAPI (`ElementDetailOut`, checked by `test_api_elements.py::test_element_detail_is_typed_in_openapi`); one dialog spec per action (`actionDialogs.ts`) sends the payload keys the governance handlers read; merge offers concepts only, split and reassign show for terms only; `a` as a user shows the refusal and calls nothing; the list label opens an element, and j/k step through the shown elements (`ReviewScreen.test.tsx`)
-- [ ] T26 · [web] Dialogs:
+- [x] T26 · [web] Dialogs:
   - new and edit user statement;
   - author an element, with an evidence picker;
   - ingest a folder, showing the estimate before confirming, then the run progress;
@@ -90,7 +90,7 @@ Tick a box only once its check passes.
   - Save, showing the commit SHA or the hook output;
   - Publish (admin), with the version, the change log or the offenders.
 
-  — covers: AC-6 (GUI), AC-13 (GUI), AC-20/AC-21 (GUI), AC-25 (GUI), AC-27/AC-31 (GUI) — check: `npm --prefix apps/ontology-builder/web test -- dialogs`
+  — covers: AC-6 (GUI), AC-13 (GUI), AC-20/AC-21 (GUI), AC-25 (GUI), AC-27/AC-31 (GUI) — check: `npm --prefix apps/ontology-builder/web test -- dialogs` — note: the dialogs open from a work bar above the review panes (`web/src/dialogs/`, one test file per dialog); the evidence picker, statement editing and the not-ignorable dialog choose from the new `GET …/units` (typed `UnitOut`, Q49; `test_api_elements.py::test_units_*`), and run records are typed `RunOut`; the run is synchronous, so the ingest dialog shows a running state and then the run record (Q50); the work bar is disabled for a read-only session and Publish is disabled for a user, with the reason; review shortcuts are ignored while a dialog is open
 - [ ] T27 · [web] Playwright end-to-end tests against `ontology-builder serve` on a fixture dataset in a temp git repo: sign in → filter → bulk level → save (one commit, nothing pushed) → failing hook shown → admin publish blocked by FR-35 → fix → publish 1.0.0. — covers: AC-25 (end to end), AC-15, AC-19 — check: `npm --prefix apps/ontology-builder/web run e2e`
 
 ### With the user (live LLM, costs money; ask before each run)

@@ -37,6 +37,7 @@ from ontology_builder.workflows.views import (
     corpus_units,
     element_detail,
     element_index,
+    unit_list,
 )
 from ontology_builder.workflows.workspace import Workspace
 
@@ -118,6 +119,10 @@ class OpenOntology:
 
     def corpora(self) -> list[dict[str, Any]]:
         return corpora(self.store.read())
+
+    def units(self) -> list[dict[str, Any]]:
+        """Every source unit: corpus units with their verdicts, then the user statements."""
+        return unit_list(self.store.read(), self.changes)
 
     def scope(self) -> dict[str, Any]:
         record = self.store.read().scope()

@@ -4,11 +4,20 @@ import { afterEach, describe, expect, test, vi } from "vitest";
 import {
   act,
   type ActionIn,
+  addStatement,
   ApiError,
+  author,
   currentSession,
   elementDetail,
   elementIndex,
+  estimate,
+  ingest,
+  publish,
+  reviseStatement,
+  runRecord,
+  save,
   signIn,
+  units,
 } from ".";
 
 function reply(status: number, body: unknown) {
@@ -96,5 +105,47 @@ describe("api", () => {
     expect(new URL(request?.url ?? "").pathname).toBe("/api/ontologies/pets/actions");
     expect(request?.headers.get("X-Ontology-Builder")).toBe("1");
     expect(await request?.json()).toEqual(body);
+  });
+});
+
+describe("api writes of the work bar", () => {
+  test("estimate_never_confirms_and_ingest_always_does", async () => {
+    const fetch = reply(200, {});
+    await estimate("pets", { folder: "manuals/dog" });
+    await ingest("pets", { units: ["su_1"] });
+    const [first, second] = fetch.mock.calls.map((call) => call[0]);
+    expect(new URL(first?.url ?? "").pathname).toBe("/api/ontologies/pets/ingestions/estimate");
+    expect(await first?.json()).toEqual({ folder: "manuals/dog", confirm: false });
+    expect(new URL(second?.url ?? "").pathname).toBe("/api/ontologies/pets/ingestions");
+    expect(await second?.json()).toEqual({ units: ["su_1"], confirm: true });
+  });
+
+  test("statements_authoring_units_and_runs_use_their_routes", async () => {
+    const fetch = reply(200, { id: "su_1" });
+    await expect(addStatement("pets", "Cats nap.")).resolves.toBe("su_1");
+    await reviseStatement("pets", "su_1", "Cats nap a lot.");
+    await author("pets", { type: "concept", fields: { label: "nap" } });
+    await units("pets");
+    await runRecord("pets", "run_01");
+    const calls = fetch.mock.calls.map((call) => call[0]);
+    expect(calls.map((r) => `${r.method} ${new URL(r.url).pathname}`)).toEqual([
+      "POST /api/ontologies/pets/statements",
+      "PUT /api/ontologies/pets/statements/su_1",
+      "POST /api/ontologies/pets/elements",
+      "GET /api/ontologies/pets/units",
+      "GET /api/ontologies/pets/runs/run_01",
+    ]);
+    expect(await calls[1]?.json()).toEqual({ text: "Cats nap a lot." });
+  });
+
+  test("save_and_publish_post_with_the_write_header", async () => {
+    const fetch = reply(200, { ok: true, sha: "abc", output: "" });
+    await save("pets");
+    await publish("pets", null);
+    const [saved, published] = fetch.mock.calls.map((call) => call[0]);
+    expect(new URL(saved?.url ?? "").pathname).toBe("/api/ontologies/pets/save");
+    expect(saved?.headers.get("X-Ontology-Builder")).toBe("1");
+    expect(new URL(published?.url ?? "").pathname).toBe("/api/ontologies/pets/publish");
+    expect(await published?.json()).toEqual({ version: null });
   });
 });

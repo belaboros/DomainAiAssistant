@@ -37,6 +37,33 @@ def corpus_units(files: DatasetFiles) -> dict[str, UnitInfo]:
     return found
 
 
+def _unit_entry(unit: Any, corpus: str) -> dict[str, Any]:
+    verdict = unit.ignorable.model_dump(mode="json") if unit.ignorable else None
+    return {
+        "id": unit.id,
+        "kind": str(unit.kind),
+        "corpus": corpus,
+        "document": unit.document_id,
+        "text": unit.text,
+        "ignorable": verdict,
+        "author": unit.author,
+        "revisions": len(unit.revisions or []),
+    }
+
+
+def unit_list(files: DatasetFiles, changes: ChangeSet) -> list[dict[str, Any]]:
+    """Every corpus unit with its ignorable verdict, then every user statement, unsaved ones
+    included (the GUI's evidence picker, statement editing and not-ignorable dialog; Q49)."""
+    found = [
+        _unit_entry(unit, folder)
+        for folder in files.corpora()
+        for document in files.documents(folder)
+        for unit in files.units(folder, document.id)
+    ]
+    found += [_unit_entry(unit, USER_STATEMENTS) for unit in changes.statements.values()]
+    return found
+
+
 def corpora(files: DatasetFiles) -> list[dict[str, Any]]:
     """The corpora and their documents, for the filters of the GUI."""
     return [

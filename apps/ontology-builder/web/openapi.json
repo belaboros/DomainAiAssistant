@@ -510,6 +510,27 @@
         "title": "IdOut",
         "type": "object"
       },
+      "IgnorableCategory": {
+        "description": "Why a whole source unit is proposed as ignorable (FR-14).",
+        "enum": [
+          "instance_or_anecdote",
+          "generic_or_historical_story",
+          "quote_or_motivational",
+          "procedure",
+          "other"
+        ],
+        "title": "IgnorableCategory",
+        "type": "string"
+      },
+      "IgnorableStatus": {
+        "enum": [
+          "proposed",
+          "confirmed",
+          "rejected"
+        ],
+        "title": "IgnorableStatus",
+        "type": "string"
+      },
       "IndexEntryOut": {
         "description": "One element in the compact index the GUI filters (FR-19).",
         "properties": {
@@ -893,6 +914,99 @@
         "title": "Role",
         "type": "string"
       },
+      "RunKind": {
+        "enum": [
+          "ingestion",
+          "on_demand"
+        ],
+        "title": "RunKind",
+        "type": "string"
+      },
+      "RunOut": {
+        "description": "The record of a run: model, tokens used, start and end, skipped items (FR-6).",
+        "properties": {
+          "ended_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ended At"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "input_tokens": {
+            "title": "Input Tokens",
+            "type": "integer"
+          },
+          "kind": {
+            "$ref": "#/components/schemas/RunKind"
+          },
+          "model": {
+            "title": "Model",
+            "type": "string"
+          },
+          "output_tokens": {
+            "title": "Output Tokens",
+            "type": "integer"
+          },
+          "skipped": {
+            "items": {
+              "$ref": "#/components/schemas/SkippedOut"
+            },
+            "title": "Skipped",
+            "type": "array"
+          },
+          "source_path": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Path"
+          },
+          "started_at": {
+            "title": "Started At",
+            "type": "string"
+          },
+          "status": {
+            "$ref": "#/components/schemas/RunStatus"
+          },
+          "user": {
+            "title": "User",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "user",
+          "model",
+          "started_at",
+          "status",
+          "input_tokens",
+          "output_tokens"
+        ],
+        "title": "RunOut",
+        "type": "object"
+      },
+      "RunStatus": {
+        "enum": [
+          "running",
+          "completed",
+          "failed"
+        ],
+        "title": "RunStatus",
+        "type": "string"
+      },
       "SessionOut": {
         "properties": {
           "ontology": {
@@ -951,6 +1065,29 @@
         "title": "SignIn",
         "type": "object"
       },
+      "SkippedOut": {
+        "properties": {
+          "item": {
+            "title": "Item",
+            "type": "string"
+          },
+          "reason": {
+            "title": "Reason",
+            "type": "string"
+          },
+          "where": {
+            "title": "Where",
+            "type": "string"
+          }
+        },
+        "required": [
+          "where",
+          "item",
+          "reason"
+        ],
+        "title": "SkippedOut",
+        "type": "object"
+      },
       "StatementIn": {
         "properties": {
           "text": {
@@ -963,6 +1100,82 @@
           "text"
         ],
         "title": "StatementIn",
+        "type": "object"
+      },
+      "UnitKind": {
+        "enum": [
+          "paragraph",
+          "list_item",
+          "blockquote",
+          "table_row",
+          "user_statement"
+        ],
+        "title": "UnitKind",
+        "type": "string"
+      },
+      "UnitOut": {
+        "description": "One source unit: a corpus unit or a user statement (unsaved ones included; Q49).",
+        "properties": {
+          "author": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Author"
+          },
+          "corpus": {
+            "title": "Corpus",
+            "type": "string"
+          },
+          "document": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Document"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "ignorable": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/VerdictOut"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "kind": {
+            "$ref": "#/components/schemas/UnitKind"
+          },
+          "revisions": {
+            "title": "Revisions",
+            "type": "integer"
+          },
+          "text": {
+            "title": "Text",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "corpus",
+          "text",
+          "revisions"
+        ],
+        "title": "UnitOut",
         "type": "object"
       },
       "ValidationError": {
@@ -1003,6 +1216,33 @@
           "type"
         ],
         "title": "ValidationError",
+        "type": "object"
+      },
+      "VerdictOut": {
+        "description": "The LLM's ignorable verdict on a corpus unit (FR-14).",
+        "properties": {
+          "category": {
+            "$ref": "#/components/schemas/IgnorableCategory"
+          },
+          "proposed": {
+            "title": "Proposed",
+            "type": "boolean"
+          },
+          "reason": {
+            "title": "Reason",
+            "type": "string"
+          },
+          "status": {
+            "$ref": "#/components/schemas/IgnorableStatus"
+          }
+        },
+        "required": [
+          "proposed",
+          "category",
+          "reason",
+          "status"
+        ],
+        "title": "VerdictOut",
         "type": "object"
       }
     }
@@ -1570,9 +1810,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "additionalProperties": true,
-                  "title": "Response Run Api Ontologies  Name  Runs  Run Id  Get",
-                  "type": "object"
+                  "$ref": "#/components/schemas/RunOut"
                 }
               }
             },
@@ -1843,6 +2081,53 @@
           }
         },
         "summary": "Revise Statement",
+        "tags": [
+          "review"
+        ]
+      }
+    },
+    "/api/ontologies/{name}/units": {
+      "get": {
+        "description": "Every corpus unit with its ignorable verdict, then the user statements (Q49).",
+        "operationId": "units_api_ontologies__name__units_get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "name",
+            "required": true,
+            "schema": {
+              "title": "Name",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/UnitOut"
+                  },
+                  "title": "Response Units Api Ontologies  Name  Units Get",
+                  "type": "array"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Units",
         "tags": [
           "review"
         ]

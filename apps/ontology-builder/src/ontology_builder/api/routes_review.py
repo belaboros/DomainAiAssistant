@@ -21,6 +21,7 @@ from ontology_builder.api.schemas import (
     IdOut,
     IndexEntryOut,
     StatementIn,
+    UnitOut,
 )
 from ontology_builder.workflows import ADMIN_ACTIONS, create_ontology, filter_index
 
@@ -92,6 +93,12 @@ def act(body: ActionIn, ontology: Ontology, actor: Writer) -> ActionsOut:
         ],
         pending=ontology.pending,
     )
+
+
+@router.get(ONE + "/units")
+def units(ontology: Ontology, actor: Reader) -> list[UnitOut]:
+    """Every corpus unit with its ignorable verdict, then the user statements (Q49)."""
+    return [UnitOut.model_validate(u) for u in ontology.units()]
 
 
 @router.post(ONE + "/statements")

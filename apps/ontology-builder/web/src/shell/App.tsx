@@ -2,7 +2,7 @@
 // then the header (ontology, user, role, read-only notice, sign-out) around the review screen.
 import { useEffect, useState } from "react";
 import type { Role, SessionOut, SignIn as SignInBody } from "../api";
-import { type ReviewApi, ReviewScreen } from "../review/ReviewScreen";
+import { ReviewScreen, type ScreenApi } from "../review/ReviewScreen";
 import { SignIn } from "../signin/SignIn";
 
 /** The session calls of the API; injected so the shell can be tested without a server. */
@@ -13,7 +13,7 @@ export interface SessionApi {
 }
 
 /** Every API call the shell and its screens use. */
-export type AppApi = SessionApi & ReviewApi;
+export type AppApi = SessionApi & ScreenApi;
 
 const ROLE_LABEL: Record<Role, string> = { user: "User", domain_admin: "Domain admin" };
 

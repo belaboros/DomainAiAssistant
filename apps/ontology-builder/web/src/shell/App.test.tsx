@@ -4,12 +4,14 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, test, vi } from "vitest";
 import type { SessionOut } from "../api";
+import { fakeWork } from "../dialogs/fixtures/units";
 import { App, type AppApi } from "./App";
 
 const ALICE: SessionOut = { user: "alice", role: "user", writer: true, ontology: "pets" };
 
 function api(current: SessionOut | null, signedIn: SessionOut = ALICE): AppApi {
   return {
+    ...fakeWork(),
     currentSession: vi.fn(() => Promise.resolve(current)),
     signIn: vi.fn(() => Promise.resolve(signedIn)),
     signOut: vi.fn(() => Promise.resolve()),
