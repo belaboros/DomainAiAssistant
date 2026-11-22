@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82ABDR1CAX5PFZ2HWSEQHBE
+id: tm_01M82ACZDNRYXG7FZCA8KC7FCN
+label: long-haired breeds
+level: level-2
+level_reason: Relevant to grooming.
+mentions:
+- concept: cn_01M82ACZDNRYXG7FZCA8KC7FD0
+  unit: su_01M82ABDR1CAX5PFZ2HWSEQHBE
+origin:
+  created_at: '2026-11-22T19:05:49.749764Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+status: proposed

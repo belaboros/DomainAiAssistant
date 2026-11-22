@@ -1,0 +1,13 @@
+evidence:
+- unit: su_01M82ABDR28HTPAFF4C44FRBZ9
+id: cn_01M82AF7YTEGBGGS9B245D10JK
+label: mother
+level: level-3
+level_reason: Puppy-specific detail.
+origin:
+  created_at: '2026-11-22T19:07:04.027553Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+parents:
+- cn_01M82AC66KMJH32E2MQ3Z7ZBKM
+status: proposed

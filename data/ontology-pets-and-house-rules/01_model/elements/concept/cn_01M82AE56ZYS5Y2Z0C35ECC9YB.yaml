@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82ABDR1CAX5PFZ2HWSEQHBK
+id: cn_01M82AE56ZYS5Y2Z0C35ECC9YB
+label: veterinarian
+level: level-2
+level_reason: Actor in routine health care.
+origin:
+  created_at: '2026-11-22T19:06:28.447935Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+status: proposed

@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82ABDR28HTPAFF4C44FRBZG
+id: tm_01M82AH1GXVV72WP99JQXMH6XE
+label: working breed
+level: level-2
+level_reason: Determines walk time.
+mentions:
+- concept: cn_01M82AH1GXVV72WP99JQXMH6XR
+  unit: su_01M82ABDR28HTPAFF4C44FRBZG
+origin:
+  created_at: '2026-11-22T19:08:02.973729Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+status: proposed

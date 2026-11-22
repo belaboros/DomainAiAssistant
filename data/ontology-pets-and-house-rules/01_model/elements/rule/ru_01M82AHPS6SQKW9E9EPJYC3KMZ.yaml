@@ -1,0 +1,21 @@
+action: use the same command words every time and make sure everyone in the family uses them too
+actor: owner
+evidence:
+- unit: su_01M82ABDR28HTPAFF4C44FRBZK
+id: ru_01M82AHPS6SQKW9E9EPJYC3KMZ
+label: Use the same command words every time
+level: level-2
+level_reason: Everyday training practice for owners.
+modality: must
+origin:
+  created_at: '2026-11-22T19:08:24.743288Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+refers_to:
+- cn_01M82AE56ZYS5Y2Z0C35ECC9Y8
+- cn_01M82AHPS6SQKW9E9EPJYC3KMN
+- cn_01M82AHPS6SQKW9E9EPJYC3KMP
+- rl_01M82AHPS6SQKW9E9EPJYC3KMW
+scope:
+- co_01M82ABDR0997QP7DGZPPDNF4H
+status: proposed

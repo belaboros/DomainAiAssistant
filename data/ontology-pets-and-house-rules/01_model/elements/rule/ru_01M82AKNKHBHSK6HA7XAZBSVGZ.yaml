@@ -1,0 +1,22 @@
+action: have a microchip
+actor: dog
+condition: for travel abroad
+evidence:
+- unit: su_01M82ABDR30PE47ZK8WSGY3HX5
+id: ru_01M82AKNKHBHSK6HA7XAZBSVGZ
+label: Dog needs microchip for travel abroad
+level: level-3
+level_reason: Travel abroad is a special case.
+modality: must
+origin:
+  created_at: '2026-11-22T19:09:29.074031Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+refers_to:
+- cn_01M82AC66KMJH32E2MQ3Z7ZBKM
+- cn_01M82AC66KMJH32E2MQ3Z7ZBKT
+- cn_01M82AKNKGVB3WQ6AJ3QXNT52B
+- rl_01M82AKNKHBHSK6HA7XAZBSVGT
+scope:
+- co_01M82ABDR0997QP7DGZPPDNF4H
+status: proposed

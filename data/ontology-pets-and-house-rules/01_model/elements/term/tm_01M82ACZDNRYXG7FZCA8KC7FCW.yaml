@@ -1,0 +1,17 @@
+evidence:
+- unit: su_01M82ABDR1CAX5PFZ2HWSEQHBC
+- unit: su_01M82ABDR1CAX5PFZ2HWSEQHBD
+id: tm_01M82ACZDNRYXG7FZCA8KC7FCW
+label: exercise
+level: level-2
+level_reason: Normal-day care.
+mentions:
+- concept: cn_01M82ACZDNRYXG7FZCA8KC7FD7
+  unit: su_01M82ABDR1CAX5PFZ2HWSEQHBC
+- concept: cn_01M82ACZDNRYXG7FZCA8KC7FD7
+  unit: su_01M82ABDR1CAX5PFZ2HWSEQHBD
+origin:
+  created_at: '2026-11-22T19:05:49.749944Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+status: proposed

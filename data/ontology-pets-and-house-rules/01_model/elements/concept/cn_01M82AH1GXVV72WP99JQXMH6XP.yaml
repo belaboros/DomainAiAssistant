@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82ABDR28HTPAFF4C44FRBZG
+id: cn_01M82AH1GXVV72WP99JQXMH6XP
+label: small breed
+level: level-2
+level_reason: Determines walk duration.
+origin:
+  created_at: '2026-11-22T19:08:02.973990Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+status: proposed

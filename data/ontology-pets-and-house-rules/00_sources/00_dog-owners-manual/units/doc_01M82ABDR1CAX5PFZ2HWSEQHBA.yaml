@@ -1,0 +1,60 @@
+- content_hash: sha256:1dc5bc3fd5c0efd2a1603393ce495cefb3ac60e3e44f8b66041b6dd95e1a22f7
+  document_id: doc_01M82ABDR1CAX5PFZ2HWSEQHBA
+  id: su_01M82ABDR1CAX5PFZ2HWSEQHBB
+  kind: paragraph
+  location:
+    heading_path:
+    - 2. Choosing a Breed
+    index_in_section: 0
+    line_end: 3
+    line_start: 3
+    path: 02-choosing-a-breed.md
+  text: Breeds differ in size, energy and the care they need.
+- content_hash: sha256:fb00b6044e80bb97271752e1c4532ecd0e284b09633b0118df87e299026152a0
+  document_id: doc_01M82ABDR1CAX5PFZ2HWSEQHBA
+  id: su_01M82ABDR1CAX5PFZ2HWSEQHBC
+  kind: list_item
+  location:
+    heading_path:
+    - 2. Choosing a Breed
+    index_in_section: 1
+    line_end: 5
+    line_start: 5
+    path: 02-choosing-a-breed.md
+  text: '**Small companion breeds** (for example, Maltese or Pug) need less space and less exercise and adapt well to flats.'
+- content_hash: sha256:349361baa21ea5be52032f7930a12e3f3c9a8f0657a428dc9306b27d6b9dfeb4
+  document_id: doc_01M82ABDR1CAX5PFZ2HWSEQHBA
+  id: su_01M82ABDR1CAX5PFZ2HWSEQHBD
+  kind: list_item
+  location:
+    heading_path:
+    - 2. Choosing a Breed
+    index_in_section: 2
+    line_end: 6
+    line_start: 6
+    path: 02-choosing-a-breed.md
+  text: '**Large and working breeds** (for example, Border Collie or German Shepherd) need more space, more exercise and more mental work.'
+- content_hash: sha256:b4f711815976ef55c1ca490468f9d7598fbd1bd1e50d1a6bfabd80de3dd0245c
+  document_id: doc_01M82ABDR1CAX5PFZ2HWSEQHBA
+  id: su_01M82ABDR1CAX5PFZ2HWSEQHBE
+  kind: list_item
+  location:
+    heading_path:
+    - 2. Choosing a Breed
+    index_in_section: 3
+    line_end: 7
+    line_start: 7
+    path: 02-choosing-a-breed.md
+  text: '**Long-haired breeds** need more grooming than short-haired breeds.'
+- content_hash: sha256:bd4d10b5a1510d81630095e106d70c20617d8b53ab82754d3fdb8d657924f8f6
+  document_id: doc_01M82ABDR1CAX5PFZ2HWSEQHBA
+  id: su_01M82ABDR1CAX5PFZ2HWSEQHBF
+  kind: paragraph
+  location:
+    heading_path:
+    - 2. Choosing a Breed
+    index_in_section: 4
+    line_end: 9
+    line_start: 9
+    path: 02-choosing-a-breed.md
+  text: Some breeds are classified as dangerous by the local authority. Check the local list before you choose a breed.

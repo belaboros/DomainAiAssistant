@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82ABDR1CAX5PFZ2HWSEQHBC
+id: st_01M82ACZDNRYXG7FZCA8KC7FCD
+label: Small companion breeds suit flats
+level: level-2
+level_reason: Normal-case guidance for living in the complex.
+origin:
+  created_at: '2026-11-22T19:05:49.749560Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+status: proposed
+text: Small companion breeds need less space and less exercise and adapt well to flats.

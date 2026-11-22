@@ -1,0 +1,21 @@
+action: attend a dog training course with a certified trainer
+actor: owner
+condition: in the dog's first year (recommended)
+evidence:
+- unit: su_01M82ABDR28HTPAFF4C44FRBZS
+id: ru_01M82AJ8HWH90DHFSC2JB20DGB
+label: Training course recommended in first year
+level: level-2
+level_reason: Recommended step for a normal dog owner.
+modality: may
+origin:
+  created_at: '2026-11-22T19:08:42.941877Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+refers_to:
+- cn_01M82AJ8HWH90DHFSC2JB20DFY
+- cn_01M82AJ8HWH90DHFSC2JB20DFZ
+- rl_01M82AJ8HWH90DHFSC2JB20DG4
+scope:
+- co_01M82ABDR0997QP7DGZPPDNF4H
+status: proposed

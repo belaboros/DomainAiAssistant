@@ -1,0 +1,16 @@
+cardinality:
+  min: 2
+evidence:
+- unit: su_01M82ABDR28HTPAFF4C44FRBZG
+id: rl_01M82AH1GXVV72WP99JQXMH6XW
+label: needs
+level: level-2
+level_reason: Daily walking need.
+object: cn_01M82AFTZDSHCD0SK6T4N2YZWA
+origin:
+  created_at: '2026-11-22T19:08:02.974107Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+predicate_label: needs
+status: proposed
+subject: cn_01M82ADJQKNCFSCKCDMA3H0R86

@@ -1,8 +1,2815 @@
+@prefix : <urn:domain-ai-assistant:ontology:pets-and-house-rules:> .
+@prefix dai: <urn:domain-ai-assistant:vocab#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <urn:domain-ai-assistant:ontology:pets-and-house-rules> a owl:Ontology ;
     dcterms:description "Explain what it takes to own a dog or a cat in a residential complex, and which house rules apply to pets and their owners." ;
-    owl:versionIRI <urn:domain-ai-assistant:ontology:pets-and-house-rules:version-raw+e11b7e3> ;
-    owl:versionInfo "raw+e11b7e3" .
+    owl:versionIRI <urn:domain-ai-assistant:ontology:pets-and-house-rules:version-raw+759da11> ;
+    owl:versionInfo "raw+759da11" .
+
+:cn_01M82ACZDNRYXG7FZCA8KC7FD1 a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82ACZDNRYXG7FZCA8KC7FCX ;
+    skos:altLabel "short-haired breeds" ;
+    skos:broader :cn_01M82ACZDNRYXG7FZCA8KC7FCX ;
+    skos:prefLabel "short-haired breed" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBE ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82ADJQKNCFSCKCDMA3H0R8B a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82ADJQKNCFSCKCDMA3H0R8A ;
+    skos:broader :cn_01M82ADJQKNCFSCKCDMA3H0R8A ;
+    skos:prefLabel "chocolate" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBH ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82ADJQKNCFSCKCDMA3H0R8C a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82ADJQKNCFSCKCDMA3H0R8A ;
+    skos:altLabel "grapes" ;
+    skos:broader :cn_01M82ADJQKNCFSCKCDMA3H0R8A ;
+    skos:prefLabel "grape" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBH ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82ADJQKNCFSCKCDMA3H0R8D a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82ADJQKNCFSCKCDMA3H0R8A ;
+    skos:altLabel "onions" ;
+    skos:broader :cn_01M82ADJQKNCFSCKCDMA3H0R8A ;
+    skos:prefLabel "onion" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBH ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82ADJQKNCFSCKCDMA3H0R8E a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82ADJQKNCFSCKCDMA3H0R8A ;
+    skos:broader :cn_01M82ADJQKNCFSCKCDMA3H0R8A ;
+    skos:prefLabel "xylitol" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBH ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:pr_01M82AC66KMJH32E2MQ3Z7ZBM5 a dai:Property ;
+    rdfs:label "Dog lifespan" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHB8 ;
+    dai:level dai:level-2 ;
+    dai:propertyName "lifespan" ;
+    dai:propertyOf :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
+    dai:propertyUnit "years" ;
+    dai:propertyValue "10 to 15" ;
+    dai:status dai:proposed .
+
+:pr_01M82ACZDNRYXG7FZCA8KC7FDF a dai:Property ;
+    rdfs:label "Space need of small companion breeds" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBC ;
+    dai:level dai:level-2 ;
+    dai:propertyName "space need" ;
+    dai:propertyOf :cn_01M82ACZDNRYXG7FZCA8KC7FCY ;
+    dai:propertyValue "less" ;
+    dai:status dai:proposed .
+
+:pr_01M82ACZDNRYXG7FZCA8KC7FDG a dai:Property ;
+    rdfs:label "Exercise need of small companion breeds" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBC ;
+    dai:level dai:level-2 ;
+    dai:propertyName "exercise need" ;
+    dai:propertyOf :cn_01M82ACZDNRYXG7FZCA8KC7FCY ;
+    dai:propertyValue "less" ;
+    dai:status dai:proposed .
+
+:pr_01M82ACZDNRYXG7FZCA8KC7FDH a dai:Property ;
+    rdfs:label "Space need of large and working breeds" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBD ;
+    dai:level dai:level-2 ;
+    dai:propertyName "space need" ;
+    dai:propertyOf :cn_01M82ACZDNRYXG7FZCA8KC7FCZ ;
+    dai:propertyValue "more" ;
+    dai:status dai:proposed .
+
+:pr_01M82ACZDNRYXG7FZCA8KC7FDJ a dai:Property ;
+    rdfs:label "Exercise need of large and working breeds" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBD ;
+    dai:level dai:level-2 ;
+    dai:propertyName "exercise need" ;
+    dai:propertyOf :cn_01M82ACZDNRYXG7FZCA8KC7FCZ ;
+    dai:propertyValue "more" ;
+    dai:status dai:proposed .
+
+:pr_01M82ACZDNRYXG7FZCA8KC7FDK a dai:Property ;
+    rdfs:label "Mental work need of large and working breeds" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBD ;
+    dai:level dai:level-2 ;
+    dai:propertyName "mental work need" ;
+    dai:propertyOf :cn_01M82ACZDNRYXG7FZCA8KC7FCZ ;
+    dai:propertyValue "more" ;
+    dai:status dai:proposed .
+
+:pr_01M82ACZDNRYXG7FZCA8KC7FDM a dai:Property ;
+    rdfs:label "Grooming need of long-haired breeds" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBE ;
+    dai:level dai:level-2 ;
+    dai:propertyName "grooming need" ;
+    dai:propertyOf :cn_01M82ACZDNRYXG7FZCA8KC7FD0 ;
+    dai:propertyValue "more than short-haired breeds" ;
+    dai:status dai:proposed .
+
+:pr_01M82ADJQKNCFSCKCDMA3H0R8N a dai:Property ;
+    rdfs:label "Adult dog feeding frequency" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBH ;
+    dai:level dai:level-2 ;
+    dai:propertyName "feeding frequency" ;
+    dai:propertyOf :cn_01M82ADJQKNCFSCKCDMA3H0R86 ;
+    dai:propertyUnit "times per day" ;
+    dai:propertyValue "2" ;
+    dai:status dai:proposed .
+
+:pr_01M82ADJQKNCFSCKCDMA3H0R8P a dai:Property ;
+    rdfs:label "Puppy feeding frequency" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBH ;
+    dai:level dai:level-3 ;
+    dai:propertyName "feeding frequency" ;
+    dai:propertyOf :cn_01M82AF7YTEGBGGS9B245D10JJ ;
+    dai:propertyUnit "times per day" ;
+    dai:propertyValue "3 to 4" ;
+    dai:status dai:proposed .
+
+:pr_01M82AE56ZYS5Y2Z0C35ECC9YM a dai:Property ;
+    rdfs:label "Age of puppy at first vaccinations" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBK ;
+    dai:level dai:level-3 ;
+    dai:propertyName "age at first vaccinations" ;
+    dai:propertyOf :cn_01M82AF7YTEGBGGS9B245D10JJ ;
+    dai:propertyUnit "weeks" ;
+    dai:propertyValue "8" ;
+    dai:status dai:proposed .
+
+:pr_01M82AE56ZYS5Y2Z0C35ECC9YN a dai:Property ;
+    rdfs:label "Rabies vaccination renewal interval" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBK ;
+    dai:level dai:level-2 ;
+    dai:propertyName "renewal interval" ;
+    dai:propertyOf :cn_01M82AE56ZYS5Y2Z0C35ECC9YA ;
+    dai:propertyUnit "year" ;
+    dai:propertyValue "1" ;
+    dai:status dai:proposed .
+
+:pr_01M82AEQW4JVCNX0WEDNNR61WF a dai:Property ;
+    rdfs:label "Wash temperature for bed and blankets" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBN ;
+    dai:level dai:level-2 ;
+    dai:propertyName "washing temperature" ;
+    dai:propertyOf :ru_01M82AEQW4JVCNX0WEDNNR61WE ;
+    dai:propertyUnit "°C" ;
+    dai:propertyValue "60" ;
+    dai:status dai:proposed .
+
+:pr_01M82AF7YTEGBGGS9B245D10JV a dai:Property ;
+    rdfs:label "Puppy age limit" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZ9 ;
+    dai:level dai:level-3 ;
+    dai:propertyName "age" ;
+    dai:propertyOf :cn_01M82AF7YTEGBGGS9B245D10JJ ;
+    dai:propertyUnit "months" ;
+    dai:propertyValue "younger than 6" ;
+    dai:status dai:proposed .
+
+:pr_01M82AF7YTEGBGGS9B245D10JW a dai:Property ;
+    rdfs:label "Socialisation period" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZA ;
+    dai:level dai:level-3 ;
+    dai:propertyName "socialisation period" ;
+    dai:propertyOf :cn_01M82AF7YTEGBGGS9B245D10JJ ;
+    dai:propertyUnit "weeks" ;
+    dai:propertyValue "8 to 16" ;
+    dai:status dai:proposed .
+
+:pr_01M82AFTZDSHCD0SK6T4N2YZWN a dai:Property ;
+    rdfs:label "Everyday leash length" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZC ;
+    dai:level dai:level-2 ;
+    dai:propertyName "length for everyday walks" ;
+    dai:propertyOf :cn_01M82AFTZDSHCD0SK6T4N2YZW6 ;
+    dai:propertyUnit "m" ;
+    dai:propertyValue "1.5 to 2" ;
+    dai:status dai:proposed .
+
+:pr_01M82AFTZDSHCD0SK6T4N2YZWP a dai:Property ;
+    rdfs:label "Collar fit" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZC ;
+    dai:level dai:level-2 ;
+    dai:propertyName "fit" ;
+    dai:propertyOf :cn_01M82AFTZDSHCD0SK6T4N2YZW8 ;
+    dai:propertyValue "two fingers can slide under the collar" ;
+    dai:status dai:proposed .
+
+:pr_01M82AG9DZ4Q7M3Z8RX016AKWW a dai:Property ;
+    rdfs:label "Leash training start age" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZE ;
+    dai:level dai:level-3 ;
+    dai:propertyName "start age" ;
+    dai:propertyOf :cn_01M82AG9DZ4Q7M3Z8RX016AKWJ ;
+    dai:propertyUnit "weeks" ;
+    dai:propertyValue "8 to 10" ;
+    dai:status dai:proposed .
+
+:pr_01M82AH1GXVV72WP99JQXMH6Y4 a dai:Property ;
+    rdfs:label "Daily walk time of small breeds" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZG ;
+    dai:level dai:level-2 ;
+    dai:propertyName "total daily walk time" ;
+    dai:propertyOf :cn_01M82AH1GXVV72WP99JQXMH6XP ;
+    dai:propertyUnit "minutes" ;
+    dai:propertyValue "30 to 60" ;
+    dai:status dai:proposed .
+
+:pr_01M82AH1GXVV72WP99JQXMH6Y5 a dai:Property ;
+    rdfs:label "Daily walk time of large breeds" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZG ;
+    dai:level dai:level-2 ;
+    dai:propertyName "total daily walk time" ;
+    dai:propertyOf :cn_01M82AH1GXVV72WP99JQXMH6XQ ;
+    dai:propertyUnit "hours" ;
+    dai:propertyValue "up to 2" ;
+    dai:status dai:proposed .
+
+:pr_01M82AH1GXVV72WP99JQXMH6Y6 a dai:Property ;
+    rdfs:label "Daily walk time of working breeds" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZG ;
+    dai:level dai:level-2 ;
+    dai:propertyName "total daily walk time" ;
+    dai:propertyOf :cn_01M82AH1GXVV72WP99JQXMH6XR ;
+    dai:propertyUnit "hours" ;
+    dai:propertyValue "up to 2" ;
+    dai:status dai:proposed .
+
+:pr_01M82AH1GXVV72WP99JQXMH6Y7 a dai:Property ;
+    rdfs:label "Puppy relief interval" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZG ;
+    dai:level dai:level-3 ;
+    dai:propertyName "relief interval" ;
+    dai:propertyOf :cn_01M82AF7YTEGBGGS9B245D10JJ ;
+    dai:propertyUnit "hours" ;
+    dai:propertyValue "2 to 3" ;
+    dai:status dai:proposed .
+
+:pr_01M82AH1GXVV72WP99JQXMH6Y8 a dai:Property ;
+    rdfs:label "Minimum walks per day for an adult dog" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZG ;
+    dai:level dai:level-2 ;
+    dai:propertyName "minimum walks per day" ;
+    dai:propertyOf :cn_01M82ADJQKNCFSCKCDMA3H0R86 ;
+    dai:propertyUnit "walks" ;
+    dai:propertyValue "2" ;
+    dai:status dai:proposed .
+
+:pr_01M82AHPS6SQKW9E9EPJYC3KN4 a dai:Property ;
+    rdfs:label "Qualities of a good lead" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZJ ;
+    dai:level dai:level-2 ;
+    dai:propertyName "qualities" ;
+    dai:propertyOf :cn_01M82AHPS6SQKW9E9EPJYC3KMM ;
+    dai:propertyValue "calm, consistent and confident; signals the dog can trust" ;
+    dai:status dai:proposed .
+
+:pr_01M82AHPS6SQKW9E9EPJYC3KN5 a dai:Property ;
+    rdfs:label "Consequence of no reliable lead" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZP ;
+    dai:level dai:level-3 ;
+    dai:propertyName "behaviour without a reliable lead" ;
+    dai:propertyOf :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
+    dai:propertyValue "may become anxious or try to take control" ;
+    dai:status dai:proposed .
+
+:pr_01M82AJ8HWH90DHFSC2JB20DGD a dai:Property ;
+    rdfs:label "Number of basic commands" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZR ;
+    dai:level dai:level-2 ;
+    dai:propertyName "count" ;
+    dai:propertyOf :cn_01M82AJ8HWH90DHFSC2JB20DFW ;
+    dai:propertyValue "5" ;
+    dai:status dai:proposed .
+
+:pr_01M82AJ8HWH90DHFSC2JB20DGE a dai:Property ;
+    rdfs:label "Training session length" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZR ;
+    dai:level dai:level-2 ;
+    dai:propertyName "duration" ;
+    dai:propertyOf :cn_01M82AJ8HWH90DHFSC2JB20DFX ;
+    dai:propertyUnit "min" ;
+    dai:propertyValue "5 to 10" ;
+    dai:status dai:proposed .
+
+:pr_01M82AJ8HWH90DHFSC2JB20DGF a dai:Property ;
+    rdfs:label "Training session frequency" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZR ;
+    dai:level dai:level-2 ;
+    dai:propertyName "frequency" ;
+    dai:propertyOf :cn_01M82AJ8HWH90DHFSC2JB20DFX ;
+    dai:propertyValue "several times a day" ;
+    dai:status dai:proposed .
+
+:pr_01M82AK1Z9HNB4ZNT1JN5CCR76 a dai:Property ;
+    rdfs:label "Maximum time an adult dog may be alone" ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX2 ;
+    dai:level dai:level-2 ;
+    dai:propertyName "maximum time alone at home" ;
+    dai:propertyOf :cn_01M82ADJQKNCFSCKCDMA3H0R86 ;
+    dai:propertyUnit "h" ;
+    dai:propertyValue "6" ;
+    dai:status dai:proposed .
+
+:pr_01M82AK1Z9HNB4ZNT1JN5CCR77 a dai:Property ;
+    rdfs:label "Maximum time a puppy may be alone" ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX2 ;
+    dai:level dai:level-3 ;
+    dai:propertyName "maximum time alone" ;
+    dai:propertyOf :cn_01M82AF7YTEGBGGS9B245D10JJ ;
+    dai:propertyUnit "h" ;
+    dai:propertyValue "2" ;
+    dai:status dai:proposed .
+
+:pr_01M82AK1Z9HNB4ZNT1JN5CCR78 a dai:Property ;
+    rdfs:label "Starting duration of alone training" ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX3 ;
+    dai:level dai:level-3 ;
+    dai:propertyName "starting duration" ;
+    dai:propertyOf :cn_01M82AK1Z9HNB4ZNT1JN5CCR6T ;
+    dai:propertyValue "a few minutes" ;
+    dai:status dai:proposed .
+
+:rl_01M82AC66KMJH32E2MQ3Z7ZBKW a owl:ObjectProperty ;
+    rdfs:label "needs" ;
+    rdfs:domain :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
+    rdfs:range :cn_01M82AC66KMJH32E2MQ3Z7ZBKN ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHB8 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82AC66KMJH32E2MQ3Z7ZBKX a owl:ObjectProperty ;
+    rdfs:label "needs" ;
+    rdfs:domain :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
+    rdfs:range :cn_01M82AC66KMJH32E2MQ3Z7ZBKP ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHB8 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82AC66KMJH32E2MQ3Z7ZBKY a owl:ObjectProperty ;
+    rdfs:label "needs" ;
+    rdfs:domain :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
+    rdfs:range :cn_01M82AC66KMJH32E2MQ3Z7ZBKQ ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHB8 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82AC66KMJH32E2MQ3Z7ZBKZ a owl:ObjectProperty ;
+    rdfs:label "needs" ;
+    rdfs:domain :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
+    rdfs:range :cn_01M82AC66KMJH32E2MQ3Z7ZBKR ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHB8 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82ACZDNRYXG7FZCA8KC7FD9 a owl:ObjectProperty ;
+    rdfs:label "lists" ;
+    rdfs:domain :cn_01M82ACZDNRYXG7FZCA8KC7FD4 ;
+    rdfs:range :cn_01M82ACZDNRYXG7FZCA8KC7FD2 ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBF ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82ACZDNRYXG7FZCA8KC7FDA a owl:ObjectProperty ;
+    rdfs:label "adapts well to" ;
+    rdfs:domain :cn_01M82ACZDNRYXG7FZCA8KC7FCY ;
+    rdfs:range :cn_01M82ACZDNRYXG7FZCA8KC7FD5 ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBC ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82ACZDNRYXG7FZCA8KC7FDB a owl:ObjectProperty ;
+    rdfs:label "needs more" ;
+    rdfs:domain :cn_01M82ACZDNRYXG7FZCA8KC7FD0 ;
+    rdfs:range :cn_01M82ACZDNRYXG7FZCA8KC7FD6 ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBE ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82ACZDNRYXG7FZCA8KC7FDC a owl:ObjectProperty ;
+    rdfs:label "needs more" ;
+    rdfs:domain :cn_01M82ACZDNRYXG7FZCA8KC7FCZ ;
+    rdfs:range :cn_01M82ACZDNRYXG7FZCA8KC7FD7 ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBD ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82ACZDNRYXG7FZCA8KC7FDD a owl:ObjectProperty ;
+    rdfs:label "needs less" ;
+    rdfs:domain :cn_01M82ACZDNRYXG7FZCA8KC7FCY ;
+    rdfs:range :cn_01M82ACZDNRYXG7FZCA8KC7FD7 ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBC ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82ADJQKNCFSCKCDMA3H0R8F a owl:ObjectProperty ;
+    rdfs:label "is poisonous to" ;
+    rdfs:domain :cn_01M82ADJQKNCFSCKCDMA3H0R8A ;
+    rdfs:range :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBH ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82ADJQKNCFSCKCDMA3H0R8G-shape a sh:NodeShape ;
+    sh:property [ sh:path :rl_01M82ADJQKNCFSCKCDMA3H0R8G ;
+            sh:qualifiedMaxCount 2 ;
+            sh:qualifiedMinCount 2 ;
+            sh:qualifiedValueShape [ sh:class :cn_01M82ADJQKNCFSCKCDMA3H0R88 ] ] ;
+    sh:targetClass :cn_01M82ADJQKNCFSCKCDMA3H0R86 .
+
+:rl_01M82ADJQKNCFSCKCDMA3H0R8H-shape a sh:NodeShape ;
+    sh:property [ sh:path :rl_01M82ADJQKNCFSCKCDMA3H0R8H ;
+            sh:qualifiedMaxCount 4 ;
+            sh:qualifiedMinCount 3 ;
+            sh:qualifiedValueShape [ sh:class :cn_01M82ADJQKNCFSCKCDMA3H0R88 ] ] ;
+    sh:targetClass :cn_01M82AF7YTEGBGGS9B245D10JJ .
+
+:rl_01M82AE56ZYS5Y2Z0C35ECC9YD a owl:ObjectProperty ;
+    rdfs:label "receives" ;
+    rdfs:domain :cn_01M82AF7YTEGBGGS9B245D10JJ ;
+    rdfs:range :cn_01M82AE56ZYS5Y2Z0C35ECC9Y9 ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBK ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82AEQW4JVCNX0WEDNNR61W7 a owl:ObjectProperty ;
+    rdfs:label "has" ;
+    rdfs:domain :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
+    rdfs:range :cn_01M82AEQW4JVCNX0WEDNNR61W4 ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBN ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82AH1GXVV72WP99JQXMH6XW-shape a sh:NodeShape ;
+    sh:property [ sh:path :rl_01M82AH1GXVV72WP99JQXMH6XW ;
+            sh:qualifiedMinCount 2 ;
+            sh:qualifiedValueShape [ sh:class :cn_01M82AFTZDSHCD0SK6T4N2YZWA ] ] ;
+    sh:targetClass :cn_01M82ADJQKNCFSCKCDMA3H0R86 .
+
+:rl_01M82AJ8HWH90DHFSC2JB20DG3-shape a sh:NodeShape ;
+    sh:property [ sh:path :rl_01M82AJ8HWH90DHFSC2JB20DG3 ;
+            sh:qualifiedMaxCount 5 ;
+            sh:qualifiedMinCount 5 ;
+            sh:qualifiedValueShape [ sh:class :cn_01M82AJ8HWH90DHFSC2JB20DFW ] ] ;
+    sh:targetClass :cn_01M82AC66KMJH32E2MQ3Z7ZBKM .
+
+:rl_01M82AJ8HWH90DHFSC2JB20DG5 a owl:ObjectProperty ;
+    rdfs:label "belongs to" ;
+    rdfs:domain :cn_01M82AJ8HWH90DHFSC2JB20DG1 ;
+    rdfs:range :cn_01M82ACZDNRYXG7FZCA8KC7FD2 ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZS ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:ru_01M82AC66KMJH32E2MQ3Z7ZBM2 a dai:Rule ;
+    rdfs:label "Check fit before getting a dog" ;
+    dai:action "check that their home, working hours and budget fit the dog they want" ;
+    dai:actor "person who wants to get a dog" ;
+    dai:condition "before getting a dog" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHB8 ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AC66KMJH32E2MQ3Z7ZBM3 a dai:Rule ;
+    rdfs:label "Dog registration" ;
+    dai:action "register the dog with the local authority" ;
+    dai:actor "dog owner" ;
+    dai:condition "the dog is older than 4 months" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHB9 ;
+    dai:level dai:level-1 ;
+    dai:limitComparator ">" ;
+    dai:limitUnit "months" ;
+    dai:limitValue 4.0 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AC66KMJH32E2MQ3Z7ZBKM,
+        :cn_01M82AC66KMJH32E2MQ3Z7ZBKS,
+        :cn_01M82AC66KMJH32E2MQ3Z7ZBKV,
+        :rl_01M82AC66KMJH32E2MQ3Z7ZBM0 ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AC66KMJH32E2MQ3Z7ZBM4 a dai:Rule ;
+    rdfs:label "Dog microchip" ;
+    dai:action "ensure the dog carries a microchip" ;
+    dai:actor "dog owner" ;
+    dai:condition "the dog is older than 4 months" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHB9 ;
+    dai:level dai:level-1 ;
+    dai:limitComparator ">" ;
+    dai:limitUnit "months" ;
+    dai:limitValue 4.0 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AC66KMJH32E2MQ3Z7ZBKM,
+        :cn_01M82AC66KMJH32E2MQ3Z7ZBKT,
+        :rl_01M82AC66KMJH32E2MQ3Z7ZBM1 ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82ACZDNRYXG7FZCA8KC7FDE a dai:Rule ;
+    rdfs:label "Check the local list of dangerous breeds before choosing" ;
+    dai:action "check the local list of dangerous breeds" ;
+    dai:actor "person choosing a breed" ;
+    dai:condition "before choosing a breed" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBF ;
+    dai:level dai:level-3 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AC66KMJH32E2MQ3Z7ZBKS,
+        :cn_01M82ACZDNRYXG7FZCA8KC7FD2,
+        :cn_01M82ACZDNRYXG7FZCA8KC7FD4,
+        :rl_01M82ACZDNRYXG7FZCA8KC7FD8 ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82ADJQKNCFSCKCDMA3H0R8J a dai:Rule ;
+    rdfs:label "Feed an adult dog twice a day" ;
+    dai:action "feed an adult dog twice a day" ;
+    dai:actor "owner" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBH ;
+    dai:level dai:level-2 ;
+    dai:limitComparator "=" ;
+    dai:limitUnit "times per day" ;
+    dai:limitValue 2.0 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82ADJQKNCFSCKCDMA3H0R86,
+        :cn_01M82ADJQKNCFSCKCDMA3H0R88,
+        :rl_01M82ADJQKNCFSCKCDMA3H0R8G ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82ADJQKNCFSCKCDMA3H0R8K a dai:Rule ;
+    rdfs:label "Feed a puppy three to four times a day" ;
+    dai:action "feed a puppy three to four times a day" ;
+    dai:actor "owner" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBH ;
+    dai:level dai:level-3 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82ADJQKNCFSCKCDMA3H0R88,
+        :cn_01M82AF7YTEGBGGS9B245D10JJ,
+        :rl_01M82ADJQKNCFSCKCDMA3H0R8H ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82ADJQKNCFSCKCDMA3H0R8K-shape a sh:NodeShape ;
+    sh:property [ sh:path :rl_01M82ADJQKNCFSCKCDMA3H0R8H ;
+            sh:qualifiedMaxCount 4 ;
+            sh:qualifiedMinCount 3 ;
+            sh:qualifiedValueShape [ sh:class :cn_01M82ADJQKNCFSCKCDMA3H0R88 ] ] ;
+    sh:targetClass :cn_01M82AF7YTEGBGGS9B245D10JJ .
+
+:ru_01M82ADJQKNCFSCKCDMA3H0R8M a dai:Rule ;
+    rdfs:label "Fresh water always available" ;
+    dai:action "keep fresh water always available to the dog" ;
+    dai:actor "owner" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBH ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AC66KMJH32E2MQ3Z7ZBKM,
+        :cn_01M82ADJQKNCFSCKCDMA3H0R89 ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AE56ZYS5Y2Z0C35ECC9YH a dai:Rule ;
+    rdfs:label "Rabies vaccination is mandatory" ;
+    dai:action "have the dog vaccinated against rabies" ;
+    dai:actor "owner" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBK ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AC66KMJH32E2MQ3Z7ZBKM,
+        :cn_01M82AE56ZYS5Y2Z0C35ECC9Y8,
+        :cn_01M82AE56ZYS5Y2Z0C35ECC9YA,
+        :rl_01M82AE56ZYS5Y2Z0C35ECC9YG ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AE56ZYS5Y2Z0C35ECC9YJ a dai:Rule ;
+    rdfs:label "Rabies vaccination renewed every year" ;
+    dai:action "renew the dog's rabies vaccination every year" ;
+    dai:actor "owner" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBK ;
+    dai:level dai:level-2 ;
+    dai:limitComparator "<=" ;
+    dai:limitUnit "year" ;
+    dai:limitValue 1.0 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AC66KMJH32E2MQ3Z7ZBKM,
+        :cn_01M82AE56ZYS5Y2Z0C35ECC9YA,
+        :rl_01M82AE56ZYS5Y2Z0C35ECC9YG ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AE56ZYS5Y2Z0C35ECC9YK a dai:Rule ;
+    rdfs:label "Yearly veterinary check-up" ;
+    dai:action "take the dog to the veterinarian for a check-up at least once a year" ;
+    dai:actor "owner" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBK ;
+    dai:level dai:level-2 ;
+    dai:limitComparator ">=" ;
+    dai:limitUnit "per year" ;
+    dai:limitValue 1.0 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AC66KMJH32E2MQ3Z7ZBKM,
+        :cn_01M82AE56ZYS5Y2Z0C35ECC9Y8,
+        :cn_01M82AE56ZYS5Y2Z0C35ECC9YB,
+        :cn_01M82AE56ZYS5Y2Z0C35ECC9YC,
+        :rl_01M82AE56ZYS5Y2Z0C35ECC9YE,
+        :rl_01M82AE56ZYS5Y2Z0C35ECC9YF ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AEQW4JVCNX0WEDNNR61WB a dai:Rule ;
+    rdfs:label "Brush dog at least once a week" ;
+    dai:action "brush the dog at least once a week" ;
+    dai:actor "dog owner" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBN ;
+    dai:level dai:level-2 ;
+    dai:limitComparator ">=" ;
+    dai:limitUnit "times per week" ;
+    dai:limitValue 1.0 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AC66KMJH32E2MQ3Z7ZBKM,
+        :cn_01M82AEQW4JVCNX0WEDNNR61W1,
+        :rl_01M82AEQW4JVCNX0WEDNNR61W9 ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AEQW4JVCNX0WEDNNR61WC a dai:Rule ;
+    rdfs:label "Brush long-haired breeds daily" ;
+    dai:action "brush the dog every day" ;
+    dai:actor "dog owner" ;
+    dai:condition "the dog is of a long-haired breed" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBN ;
+    dai:level dai:level-2 ;
+    dai:limitComparator "=" ;
+    dai:limitUnit "times per day" ;
+    dai:limitValue 1.0 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82ACZDNRYXG7FZCA8KC7FD0,
+        :cn_01M82AEQW4JVCNX0WEDNNR61W1 ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AEQW4JVCNX0WEDNNR61WD a dai:Rule ;
+    rdfs:label "Trim claws when they click" ;
+    dai:action "trim the dog's claws" ;
+    dai:actor "dog owner" ;
+    dai:condition "the claws can be heard clicking on the floor" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBN ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AEQW4JVCNX0WEDNNR61W2,
+        :cn_01M82AEQW4JVCNX0WEDNNR61W4,
+        :rl_01M82AEQW4JVCNX0WEDNNR61W8 ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AF7YTEGBGGS9B245D10JQ a dai:Rule ;
+    rdfs:label "Puppy stays with mother until 8 weeks" ;
+    dai:action "leave its mother" ;
+    dai:actor "puppy" ;
+    dai:condition "before 8 weeks of age" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZ9 ;
+    dai:level dai:level-3 ;
+    dai:limitComparator "<" ;
+    dai:limitUnit "weeks" ;
+    dai:limitValue 8.0 ;
+    dai:modality dai:must_not ;
+    dai:refersTo :cn_01M82AF7YTEGBGGS9B245D10JJ,
+        :cn_01M82AF7YTEGBGGS9B245D10JK,
+        :rl_01M82AF7YTEGBGGS9B245D10JN ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AF7YTEGBGGS9B245D10JR a dai:Rule ;
+    rdfs:label "Take puppy outside for house training" ;
+    dai:action "take the puppy outside after every meal, after every nap and after play, starting on the first day" ;
+    dai:actor "owner" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZA ;
+    dai:level dai:level-3 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AF7YTEGBGGS9B245D10JJ,
+        :cn_01M82AF7YTEGBGGS9B245D10JM,
+        :rl_01M82AF7YTEGBGGS9B245D10JP ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AF7YTEGBGGS9B245D10JS a dai:Rule ;
+    rdfs:label "Praise puppy when relieving outside" ;
+    dai:action "praise the puppy when it relieves itself outside" ;
+    dai:actor "owner" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZA ;
+    dai:level dai:level-3 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AF7YTEGBGGS9B245D10JJ,
+        :cn_01M82AF7YTEGBGGS9B245D10JM ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AF7YTEGBGGS9B245D10JT a dai:Rule ;
+    rdfs:label "Socialise puppy between 8 and 16 weeks" ;
+    dai:action "let the puppy get to know many people, sounds, surfaces and traffic in a calm way" ;
+    dai:actor "owner" ;
+    dai:condition "between 8 and 16 weeks of age" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZA ;
+    dai:level dai:level-3 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AF7YTEGBGGS9B245D10JJ ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AFTZDSHCD0SK6T4N2YZWG a dai:Rule ;
+    rdfs:label "Everyday leash at least 1.5 m" ;
+    dai:action "use a leash of at least 1.5 metres for everyday walks" ;
+    dai:actor "dog owner" ;
+    dai:condition "on everyday walks" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZC ;
+    dai:level dai:level-2 ;
+    dai:limitComparator ">=" ;
+    dai:limitUnit "m" ;
+    dai:limitValue 1.5 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AFTZDSHCD0SK6T4N2YZW6,
+        :cn_01M82AFTZDSHCD0SK6T4N2YZWA,
+        :rl_01M82AFTZDSHCD0SK6T4N2YZWE ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AFTZDSHCD0SK6T4N2YZWH a dai:Rule ;
+    rdfs:label "Everyday leash at most 2 m" ;
+    dai:action "use a leash of at most 2 metres for everyday walks" ;
+    dai:actor "dog owner" ;
+    dai:condition "on everyday walks" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZC ;
+    dai:level dai:level-2 ;
+    dai:limitComparator "<=" ;
+    dai:limitUnit "m" ;
+    dai:limitValue 2.0 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AFTZDSHCD0SK6T4N2YZW6,
+        :cn_01M82AFTZDSHCD0SK6T4N2YZWA,
+        :rl_01M82AFTZDSHCD0SK6T4N2YZWE ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AFTZDSHCD0SK6T4N2YZWJ a dai:Rule ;
+    rdfs:label "No retractable leash in busy streets" ;
+    dai:action "use a retractable leash" ;
+    dai:actor "dog owner" ;
+    dai:condition "in busy streets" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZC ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must_not ;
+    dai:refersTo :cn_01M82AFTZDSHCD0SK6T4N2YZW7,
+        :cn_01M82AFTZDSHCD0SK6T4N2YZWB,
+        :rl_01M82AFTZDSHCD0SK6T4N2YZWF ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AFTZDSHCD0SK6T4N2YZWK a dai:Rule ;
+    rdfs:label "Attach leash to well-fitting collar or harness" ;
+    dai:action "attach the leash to a well-fitting collar or harness" ;
+    dai:actor "dog owner" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZC ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AFTZDSHCD0SK6T4N2YZW6,
+        :cn_01M82AFTZDSHCD0SK6T4N2YZW8,
+        :cn_01M82AFTZDSHCD0SK6T4N2YZW9,
+        :rl_01M82AFTZDSHCD0SK6T4N2YZWC,
+        :rl_01M82AFTZDSHCD0SK6T4N2YZWD ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AFTZDSHCD0SK6T4N2YZWM a dai:Rule ;
+    rdfs:label "Two fingers fit under collar" ;
+    dai:action "be able to slide two fingers under the collar" ;
+    dai:actor "dog owner" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZC ;
+    dai:level dai:level-2 ;
+    dai:limitComparator "=" ;
+    dai:limitUnit "fingers" ;
+    dai:limitValue 2.0 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AFTZDSHCD0SK6T4N2YZW8 ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AG9DZ4Q7M3Z8RX016AKWR a dai:Rule ;
+    rdfs:label "Start leash training at 8 to 10 weeks" ;
+    dai:action "start leash training when the puppy is 8 to 10 weeks old" ;
+    dai:actor "owner" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZE ;
+    dai:level dai:level-3 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AF7YTEGBGGS9B245D10JJ,
+        :cn_01M82AG9DZ4Q7M3Z8RX016AKWJ,
+        :rl_01M82AG9DZ4Q7M3Z8RX016AKWP ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AG9DZ4Q7M3Z8RX016AKWS a dai:Rule ;
+    rdfs:label "Reward the dog when the leash is loose" ;
+    dai:action "reward the dog" ;
+    dai:actor "owner" ;
+    dai:condition "when the leash is loose" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZE ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AC66KMJH32E2MQ3Z7ZBKM,
+        :cn_01M82AFTZDSHCD0SK6T4N2YZW6,
+        :cn_01M82AG9DZ4Q7M3Z8RX016AKWJ ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AG9DZ4Q7M3Z8RX016AKWT a dai:Rule ;
+    rdfs:label "Stop walking when the dog pulls" ;
+    dai:action "stop walking" ;
+    dai:actor "owner" ;
+    dai:condition "when the dog pulls" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZE ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AC66KMJH32E2MQ3Z7ZBKM,
+        :cn_01M82AG9DZ4Q7M3Z8RX016AKWJ ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AG9DZ4Q7M3Z8RX016AKWV a dai:Rule ;
+    rdfs:label "Never jerk the leash" ;
+    dai:action "jerk the leash" ;
+    dai:actor "owner" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZE ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must_not ;
+    dai:refersTo :cn_01M82AFTZDSHCD0SK6T4N2YZW6,
+        :rl_01M82AG9DZ4Q7M3Z8RX016AKWQ ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AH1GXVV72WP99JQXMH6XZ a dai:Rule ;
+    rdfs:label "Adult dog needs at least two walks a day" ;
+    dai:action "take an adult dog for walks every day" ;
+    dai:actor "owner" ;
+    dai:condition "the dog is an adult dog" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZG ;
+    dai:level dai:level-2 ;
+    dai:limitComparator ">=" ;
+    dai:limitUnit "walks per day" ;
+    dai:limitValue 2.0 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82ADJQKNCFSCKCDMA3H0R86,
+        :cn_01M82AFTZDSHCD0SK6T4N2YZWA,
+        :rl_01M82AH1GXVV72WP99JQXMH6XW ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AH1GXVV72WP99JQXMH6Y0 a dai:Rule ;
+    rdfs:label "Total daily walk time for small breeds" ;
+    dai:action "walk an adult small-breed dog 30 to 60 minutes in total per day" ;
+    dai:actor "owner" ;
+    dai:condition "the adult dog is of a small breed" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZG ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82ADJQKNCFSCKCDMA3H0R86,
+        :cn_01M82AFTZDSHCD0SK6T4N2YZWA,
+        :cn_01M82AH1GXVV72WP99JQXMH6XP ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AH1GXVV72WP99JQXMH6Y1 a dai:Rule ;
+    rdfs:label "Total daily walk time for large and working breeds" ;
+    dai:action "walk an adult large or working breed dog up to 2 hours in total per day" ;
+    dai:actor "owner" ;
+    dai:condition "the adult dog is of a large or working breed" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZG ;
+    dai:level dai:level-2 ;
+    dai:limitComparator "<=" ;
+    dai:limitUnit "hours per day" ;
+    dai:limitValue 2.0 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82ADJQKNCFSCKCDMA3H0R86,
+        :cn_01M82AFTZDSHCD0SK6T4N2YZWA,
+        :cn_01M82AH1GXVV72WP99JQXMH6XQ,
+        :cn_01M82AH1GXVV72WP99JQXMH6XR ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AH1GXVV72WP99JQXMH6Y2 a dai:Rule ;
+    rdfs:label "Take a puppy outside to relieve itself every 2 to 3 hours" ;
+    dai:action "take the puppy outside to relieve itself every 2 to 3 hours" ;
+    dai:actor "owner" ;
+    dai:condition "the dog is a puppy" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZG ;
+    dai:level dai:level-3 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AF7YTEGBGGS9B245D10JJ ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AH1GXVV72WP99JQXMH6Y3 a dai:Rule ;
+    rdfs:label "Always pick up dog waste and put it in a waste bin" ;
+    dai:action "always pick up the dog's waste and put it in a waste bin" ;
+    dai:actor "owner" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZG ;
+    dai:level dai:level-1 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AE56ZYS5Y2Z0C35ECC9Y8,
+        :cn_01M82AH1GXVV72WP99JQXMH6XS,
+        :cn_01M82AH1GXVV72WP99JQXMH6XT,
+        :rl_01M82AH1GXVV72WP99JQXMH6XX,
+        :rl_01M82AH1GXVV72WP99JQXMH6XY ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AHPS6SQKW9E9EPJYC3KMY a dai:Rule ;
+    rdfs:label "Owner must be the dog's lead" ;
+    dai:action "be the dog's lead: a calm, consistent and confident leader whose signals it can trust" ;
+    dai:actor "owner" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZJ ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AC66KMJH32E2MQ3Z7ZBKM,
+        :cn_01M82AE56ZYS5Y2Z0C35ECC9Y8,
+        :cn_01M82AHPS6SQKW9E9EPJYC3KMM,
+        :rl_01M82AHPS6SQKW9E9EPJYC3KMV ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AHPS6SQKW9E9EPJYC3KMZ a dai:Rule ;
+    rdfs:label "Use the same command words every time" ;
+    dai:action "use the same command words every time and make sure everyone in the family uses them too" ;
+    dai:actor "owner" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZK ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AE56ZYS5Y2Z0C35ECC9Y8,
+        :cn_01M82AHPS6SQKW9E9EPJYC3KMN,
+        :cn_01M82AHPS6SQKW9E9EPJYC3KMP,
+        :rl_01M82AHPS6SQKW9E9EPJYC3KMW ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AHPS6SQKW9E9EPJYC3KN0 a dai:Rule ;
+    rdfs:label "Set clear rules and keep them" ;
+    dai:action "set clear rules for the dog (for example, whether it may lie on the sofa) and keep them" ;
+    dai:actor "owner" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZM ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AC66KMJH32E2MQ3Z7ZBKM,
+        :cn_01M82AE56ZYS5Y2Z0C35ECC9Y8,
+        :cn_01M82AHPS6SQKW9E9EPJYC3KMQ ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AHPS6SQKW9E9EPJYC3KN1 a dai:Rule ;
+    rdfs:label "Reward good behaviour immediately" ;
+    dai:action "reward good behaviour immediately" ;
+    dai:actor "owner" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZN ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AE56ZYS5Y2Z0C35ECC9Y8,
+        :cn_01M82AHPS6SQKW9E9EPJYC3KMR,
+        :cn_01M82AHPS6SQKW9E9EPJYC3KMT,
+        :rl_01M82AHPS6SQKW9E9EPJYC3KMX ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AHPS6SQKW9E9EPJYC3KN2 a dai:Rule ;
+    rdfs:label "Ignore unwanted behaviour instead of shouting" ;
+    dai:action "ignore unwanted behaviour instead of shouting" ;
+    dai:actor "owner" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZN ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AE56ZYS5Y2Z0C35ECC9Y8,
+        :cn_01M82AHPS6SQKW9E9EPJYC3KMS ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AHPS6SQKW9E9EPJYC3KN3 a dai:Rule ;
+    rdfs:label "Do not shout at unwanted behaviour" ;
+    dai:action "shout at the dog for unwanted behaviour" ;
+    dai:actor "owner" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZN ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must_not ;
+    dai:refersTo :cn_01M82AE56ZYS5Y2Z0C35ECC9Y8,
+        :cn_01M82AHPS6SQKW9E9EPJYC3KMS ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AJ8HWH90DHFSC2JB20DG7 a dai:Rule ;
+    rdfs:label "Dog should learn five basic commands" ;
+    dai:action "learn the five basic commands sit, down, stay, come and leave it" ;
+    dai:actor "dog" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZR ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AC66KMJH32E2MQ3Z7ZBKM,
+        :cn_01M82AJ8HWH90DHFSC2JB20DFW,
+        :rl_01M82AJ8HWH90DHFSC2JB20DG3 ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AJ8HWH90DHFSC2JB20DG8 a dai:Rule ;
+    rdfs:label "Training session at least 5 minutes" ;
+    dai:action "train in sessions of at least 5 minutes" ;
+    dai:actor "owner" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZR ;
+    dai:level dai:level-2 ;
+    dai:limitComparator ">=" ;
+    dai:limitUnit "min" ;
+    dai:limitValue 5.0 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AJ8HWH90DHFSC2JB20DFX ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AJ8HWH90DHFSC2JB20DG9 a dai:Rule ;
+    rdfs:label "Training session at most 10 minutes" ;
+    dai:action "train in short sessions of at most 10 minutes, several times a day" ;
+    dai:actor "owner" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZR ;
+    dai:level dai:level-2 ;
+    dai:limitComparator "<=" ;
+    dai:limitUnit "min" ;
+    dai:limitValue 10.0 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AJ8HWH90DHFSC2JB20DFX ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AJ8HWH90DHFSC2JB20DGA a dai:Rule ;
+    rdfs:label "End training with a success" ;
+    dai:action "always end a training session with a success" ;
+    dai:actor "owner" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZR ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AJ8HWH90DHFSC2JB20DFX ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AJ8HWH90DHFSC2JB20DGB a dai:Rule ;
+    rdfs:label "Training course recommended in first year" ;
+    dai:action "attend a dog training course with a certified trainer" ;
+    dai:actor "owner" ;
+    dai:condition "in the dog's first year (recommended)" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZS ;
+    dai:level dai:level-2 ;
+    dai:modality dai:may ;
+    dai:refersTo :cn_01M82AJ8HWH90DHFSC2JB20DFY,
+        :cn_01M82AJ8HWH90DHFSC2JB20DFZ,
+        :rl_01M82AJ8HWH90DHFSC2JB20DG4 ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AJ8HWH90DHFSC2JB20DGC a dai:Rule ;
+    rdfs:label "Dangerous breeds must pass obedience test" ;
+    dai:action "pass an obedience test" ;
+    dai:actor "dog of a dangerous breed" ;
+    dai:condition "the dog's breed is classified as dangerous" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZS ;
+    dai:level dai:level-3 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82ACZDNRYXG7FZCA8KC7FD2,
+        :cn_01M82AJ8HWH90DHFSC2JB20DG1,
+        :cn_01M82AJ8HWH90DHFSC2JB20DG2,
+        :rl_01M82AJ8HWH90DHFSC2JB20DG6 ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AK1Z9HNB4ZNT1JN5CCR70 a dai:Rule ;
+    rdfs:label "Adult dog alone at most 6 hours" ;
+    dai:action "leave an adult dog alone at home for more than 6 hours" ;
+    dai:actor "owner" ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX2 ;
+    dai:level dai:level-2 ;
+    dai:limitComparator "<=" ;
+    dai:limitUnit "h" ;
+    dai:limitValue 6.0 ;
+    dai:modality dai:must_not ;
+    dai:refersTo :cn_01M82ADJQKNCFSCKCDMA3H0R86,
+        :cn_01M82AE56ZYS5Y2Z0C35ECC9Y8,
+        :cn_01M82AK1Z8YRQBGAGXAECRMD6W,
+        :rl_01M82AK1Z9HNB4ZNT1JN5CCR6V ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AK1Z9HNB4ZNT1JN5CCR71 a dai:Rule ;
+    rdfs:label "Puppy alone at most 2 hours" ;
+    dai:action "leave a puppy alone for more than 2 hours" ;
+    dai:actor "owner" ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX2 ;
+    dai:level dai:level-3 ;
+    dai:limitComparator "<=" ;
+    dai:limitUnit "h" ;
+    dai:limitValue 2.0 ;
+    dai:modality dai:must_not ;
+    dai:refersTo :cn_01M82AE56ZYS5Y2Z0C35ECC9Y8,
+        :cn_01M82AF7YTEGBGGS9B245D10JJ,
+        :cn_01M82AK1Z8YRQBGAGXAECRMD6W,
+        :rl_01M82AK1Z9HNB4ZNT1JN5CCR6V ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AK1Z9HNB4ZNT1JN5CCR72 a dai:Rule ;
+    rdfs:label "Walk the dog before leaving" ;
+    dai:action "walk the dog" ;
+    dai:actor "owner" ;
+    dai:condition "before leaving the dog alone" ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX3 ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AE56ZYS5Y2Z0C35ECC9Y8,
+        :cn_01M82AFTZDSHCD0SK6T4N2YZWA,
+        :rl_01M82AK1Z9HNB4ZNT1JN5CCR6W ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AK1Z9HNB4ZNT1JN5CCR73 a dai:Rule ;
+    rdfs:label "Leave water and a safe chew toy" ;
+    dai:action "leave water and a safe chew toy for the dog" ;
+    dai:actor "owner" ;
+    dai:condition "before leaving the dog alone" ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX3 ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82ADJQKNCFSCKCDMA3H0R89,
+        :cn_01M82AE56ZYS5Y2Z0C35ECC9Y8,
+        :cn_01M82AK1Z9HNB4ZNT1JN5CCR6R,
+        :rl_01M82AK1Z9HNB4ZNT1JN5CCR6X,
+        :rl_01M82AK1Z9HNB4ZNT1JN5CCR6Y ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AK1Z9HNB4ZNT1JN5CCR74 a dai:Rule ;
+    rdfs:label "Keep departure low-key" ;
+    dai:action "keep the departure low-key" ;
+    dai:actor "owner" ;
+    dai:condition "when leaving the dog alone" ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX3 ;
+    dai:level dai:level-2 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AE56ZYS5Y2Z0C35ECC9Y8,
+        :cn_01M82AK1Z8YRQBGAGXAECRMD6W ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AK1Z9HNB4ZNT1JN5CCR75 a dai:Rule ;
+    rdfs:label "Train a barking dog to be alone" ;
+    dai:action "train the dog to be alone step by step, starting with a few minutes" ;
+    dai:actor "owner" ;
+    dai:condition "if the dog barks or howls while the owner is away" ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX3 ;
+    dai:level dai:level-3 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AE56ZYS5Y2Z0C35ECC9Y8,
+        :cn_01M82AK1Z9HNB4ZNT1JN5CCR6S,
+        :cn_01M82AK1Z9HNB4ZNT1JN5CCR6T,
+        :rl_01M82AK1Z9HNB4ZNT1JN5CCR6Z ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AKNKHBHSK6HA7XAZBSVGW a dai:Rule ;
+    rdfs:label "Dog in car must travel in crate or wear harness" ;
+    dai:action "travel in a crate or wear a safety harness attached to the seat belt" ;
+    dai:actor "dog" ;
+    dai:condition "when travelling in a car" ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX5 ;
+    dai:level dai:level-3 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AC66KMJH32E2MQ3Z7ZBKM,
+        :cn_01M82AKNKGVB3WQ6AJ3QXNT524,
+        :cn_01M82AKNKGVB3WQ6AJ3QXNT525,
+        :cn_01M82AKNKGVB3WQ6AJ3QXNT526,
+        :cn_01M82AKNKGVB3WQ6AJ3QXNT527,
+        :rl_01M82AKNKGVB3WQ6AJ3QXNT52C,
+        :rl_01M82AKNKGVB3WQ6AJ3QXNT52D,
+        :rl_01M82AKNKGVB3WQ6AJ3QXNT52E ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AKNKHBHSK6HA7XAZBSVGX a dai:Rule ;
+    rdfs:label "Never leave dog in parked car in warm weather" ;
+    dai:action "leave a dog in a parked car" ;
+    dai:actor "owner" ;
+    dai:condition "in warm weather" ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX5 ;
+    dai:level dai:level-3 ;
+    dai:modality dai:must_not ;
+    dai:refersTo :cn_01M82AC66KMJH32E2MQ3Z7ZBKM,
+        :cn_01M82AKNKGVB3WQ6AJ3QXNT524 ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AKNKHBHSK6HA7XAZBSVGY a dai:Rule ;
+    rdfs:label "Dog needs pet passport for travel abroad" ;
+    dai:action "have a pet passport" ;
+    dai:actor "dog" ;
+    dai:condition "for travel abroad" ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX5 ;
+    dai:level dai:level-3 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AC66KMJH32E2MQ3Z7ZBKM,
+        :cn_01M82AKNKGVB3WQ6AJ3QXNT528,
+        :cn_01M82AKNKGVB3WQ6AJ3QXNT52B,
+        :rl_01M82AKNKHBHSK6HA7XAZBSVGS ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AKNKHBHSK6HA7XAZBSVGZ a dai:Rule ;
+    rdfs:label "Dog needs microchip for travel abroad" ;
+    dai:action "have a microchip" ;
+    dai:actor "dog" ;
+    dai:condition "for travel abroad" ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX5 ;
+    dai:level dai:level-3 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AC66KMJH32E2MQ3Z7ZBKM,
+        :cn_01M82AC66KMJH32E2MQ3Z7ZBKT,
+        :cn_01M82AKNKGVB3WQ6AJ3QXNT52B,
+        :rl_01M82AKNKHBHSK6HA7XAZBSVGT ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AKNKHBHSK6HA7XAZBSVH0 a dai:Rule ;
+    rdfs:label "Dog needs valid rabies vaccination for travel abroad" ;
+    dai:action "have a valid rabies vaccination" ;
+    dai:actor "dog" ;
+    dai:condition "for travel abroad" ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX5 ;
+    dai:level dai:level-3 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AC66KMJH32E2MQ3Z7ZBKM,
+        :cn_01M82AE56ZYS5Y2Z0C35ECC9YA,
+        :cn_01M82AKNKGVB3WQ6AJ3QXNT52B,
+        :rl_01M82AKNKHBHSK6HA7XAZBSVGV ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AM9P6EWS5D1VJCAH8Z7VQ a dai:Rule ;
+    rdfs:label "Owner is liable for dog damage" ;
+    dai:action "be liable for any damage the dog causes" ;
+    dai:actor "dog owner" ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX7 ;
+    dai:level dai:level-1 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AE56ZYS5Y2Z0C35ECC9Y8,
+        :cn_01M82AM9P6EWS5D1VJCAH8Z7VF,
+        :rl_01M82AM9P6EWS5D1VJCAH8Z7VH,
+        :rl_01M82AM9P6EWS5D1VJCAH8Z7VJ ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AM9P6EWS5D1VJCAH8Z7VR a dai:Rule ;
+    rdfs:label "Liability insurance recommended" ;
+    dai:action "take out third-party liability insurance (strongly recommended)" ;
+    dai:actor "dog owner" ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX7 ;
+    dai:level dai:level-2 ;
+    dai:modality dai:may ;
+    dai:refersTo :cn_01M82AE56ZYS5Y2Z0C35ECC9Y8,
+        :cn_01M82AM9P6EWS5D1VJCAH8Z7VA,
+        :rl_01M82AM9P6EWS5D1VJCAH8Z7VP ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AM9P6EWS5D1VJCAH8Z7VS a dai:Rule ;
+    rdfs:label "Insurance mandatory for dangerous breeds" ;
+    dai:action "hold third-party liability insurance" ;
+    dai:actor "dog owner" ;
+    dai:condition "the dog is of a breed classified as dangerous by the local authority" ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX7 ;
+    dai:level dai:level-3 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AC66KMJH32E2MQ3Z7ZBKS,
+        :cn_01M82ACZDNRYXG7FZCA8KC7FD2,
+        :cn_01M82AE56ZYS5Y2Z0C35ECC9Y8,
+        :cn_01M82AM9P6EWS5D1VJCAH8Z7VA,
+        :rl_01M82AM9P6EWS5D1VJCAH8Z7VK,
+        :rl_01M82AM9P6EWS5D1VJCAH8Z7VP ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:ru_01M82AM9P6EWS5D1VJCAH8Z7VT a dai:Rule ;
+    rdfs:label "Leash in public places" ;
+    dai:action "keep the dog on a leash in public places" ;
+    dai:actor "dog owner" ;
+    dai:condition "unless a sign allows free running" ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX7 ;
+    dai:level dai:level-1 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AC66KMJH32E2MQ3Z7ZBKM,
+        :cn_01M82AFTZDSHCD0SK6T4N2YZW6,
+        :cn_01M82AM9P6EWS5D1VJCAH8Z7VE,
+        :cn_01M82AM9P6EWS5D1VJCAH8Z7VG,
+        :rl_01M82AM9P6EWS5D1VJCAH8Z7VM,
+        :rl_01M82AM9P6EWS5D1VJCAH8Z7VN ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:st_01M82AC66KMJH32E2MQ3Z7ZBK7 a dai:Statement ;
+    rdfs:label "A dog lives 10 to 15 years." ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHB8 ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:st_01M82AC66KMJH32E2MQ3Z7ZBK8 a dai:Statement ;
+    rdfs:label "A dog needs daily exercise, company, training and veterinary care for its whole life." ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHB8 ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:st_01M82AC66KMJH32E2MQ3Z7ZBK9 a dai:Statement ;
+    rdfs:label "Before you get a dog, check that your home, your working hours and your budget fit the dog you want." ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHB8 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82AC66KMJH32E2MQ3Z7ZBKA a dai:Statement ;
+    rdfs:label "A dog older than 4 months must be registered with the local authority." ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHB9 ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:st_01M82AC66KMJH32E2MQ3Z7ZBKB a dai:Statement ;
+    rdfs:label "A dog older than 4 months must carry a microchip." ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHB9 ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:st_01M82ACZDMSZ5RR2QTW9X92PB7 a dai:Statement ;
+    rdfs:label "Breeds differ in size, energy and the care they need." ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBB ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82ACZDNRYXG7FZCA8KC7FCD a dai:Statement ;
+    rdfs:label "Small companion breeds need less space and less exercise and adapt well to flats." ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBC ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82ACZDNRYXG7FZCA8KC7FCE a dai:Statement ;
+    rdfs:label "Large and working breeds need more space, more exercise and more mental work." ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBD ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82ACZDNRYXG7FZCA8KC7FCF a dai:Statement ;
+    rdfs:label "Long-haired breeds need more grooming than short-haired breeds." ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBE ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82ACZDNRYXG7FZCA8KC7FCG a dai:Statement ;
+    rdfs:label "Some breeds are classified as dangerous by the local authority." ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBF ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82ACZDNRYXG7FZCA8KC7FCH a dai:Statement ;
+    rdfs:label "Check the local list of dangerous breeds before you choose a breed." ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBF ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82ADJQKNCFSCKCDMA3H0R7R a dai:Statement ;
+    rdfs:label "An adult dog is fed twice a day." ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBH ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82ADJQKNCFSCKCDMA3H0R7S a dai:Statement ;
+    rdfs:label "A puppy is fed three to four times a day." ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBH ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82ADJQKNCFSCKCDMA3H0R7T a dai:Statement ;
+    rdfs:label "Fresh water must always be available." ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBH ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82ADJQKNCFSCKCDMA3H0R7V a dai:Statement ;
+    rdfs:label "Chocolate, grapes, onions and xylitol are poisonous to dogs." ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBH ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82AE56ZYS5Y2Z0C35ECC9Y2 a dai:Statement ;
+    rdfs:label "A puppy receives its first vaccinations at 8 weeks of age." ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBK ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82AE56ZYS5Y2Z0C35ECC9Y3 a dai:Statement ;
+    rdfs:label "The rabies vaccination is mandatory." ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBK ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82AE56ZYS5Y2Z0C35ECC9Y4 a dai:Statement ;
+    rdfs:label "The rabies vaccination must be renewed every year." ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBK ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82AE56ZYS5Y2Z0C35ECC9Y5 a dai:Statement ;
+    rdfs:label "The owner must take the dog to the veterinarian for a check-up at least once a year." ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBK ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82AEQW4JVCNX0WEDNNR61VN a dai:Statement ;
+    rdfs:label "A dog should be brushed at least once a week." ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBN ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82AEQW4JVCNX0WEDNNR61VP a dai:Statement ;
+    rdfs:label "Long-haired breeds need brushing every day." ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBN ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82AEQW4JVCNX0WEDNNR61VQ a dai:Statement ;
+    rdfs:label "Trim the dog's claws when you can hear them clicking on the floor." ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBN ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82AEQW4JVCNX0WEDNNR61VR a dai:Statement ;
+    rdfs:label "Wash the dog's bed and blankets once a week at 60 °C." ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBN ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82AF7YTEGBGGS9B245D10J7 a dai:Statement ;
+    rdfs:label "A puppy is a dog younger than 6 months." ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZ9 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82AF7YTEGBGGS9B245D10J8 a dai:Statement ;
+    rdfs:label "Puppies should not leave their mother before 8 weeks of age." ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZ9 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82AF7YTEGBGGS9B245D10J9 a dai:Statement ;
+    rdfs:label "House training of a puppy starts on the first day." ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZA ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82AF7YTEGBGGS9B245D10JA a dai:Statement ;
+    rdfs:label "During house training, the puppy is taken outside after every meal, after every nap and after play." ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZA ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82AF7YTEGBGGS9B245D10JB a dai:Statement ;
+    rdfs:label "The puppy is praised when it relieves itself outside." ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZA ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82AF7YTEGBGGS9B245D10JC a dai:Statement ;
+    rdfs:label "Between 8 and 16 weeks, the puppy should get to know many people, sounds, surfaces and traffic in a calm way." ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZA ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82AFTZDSHCD0SK6T4N2YZVW a dai:Statement ;
+    rdfs:label "A leash of 1.5 to 2 metres should be used for everyday walks." ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZC ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82AFTZDSHCD0SK6T4N2YZVX a dai:Statement ;
+    rdfs:label "A retractable leash is not suitable in busy streets." ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZC ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82AFTZDSHCD0SK6T4N2YZVY a dai:Statement ;
+    rdfs:label "The leash is attached to a well-fitting collar or harness." ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZC ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82AFTZDSHCD0SK6T4N2YZVZ a dai:Statement ;
+    rdfs:label "You should be able to slide two fingers under the collar." ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZC ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82AG9DZ4Q7M3Z8RX016AKWA a dai:Statement ;
+    rdfs:label "Leash training starts when the puppy is 8 to 10 weeks old." ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZE ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82AG9DZ4Q7M3Z8RX016AKWB a dai:Statement ;
+    rdfs:label "The dog is rewarded when the leash is loose." ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZE ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82AG9DZ4Q7M3Z8RX016AKWC a dai:Statement ;
+    rdfs:label "The walk is stopped when the dog pulls." ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZE ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82AG9DZ4Q7M3Z8RX016AKWD a dai:Statement ;
+    rdfs:label "The leash is never jerked." ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZE ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82AH1GXVV72WP99JQXMH6X5 a dai:Statement ;
+    rdfs:label "An adult dog needs at least two walks a day." ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZG ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82AH1GXVV72WP99JQXMH6X6 a dai:Statement ;
+    rdfs:label "Small breeds need 30 to 60 minutes of walking a day in total." ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZG ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82AH1GXVV72WP99JQXMH6X7 a dai:Statement ;
+    rdfs:label "Large and working breeds need up to 2 hours of walking a day." ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZG ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82AH1GXVV72WP99JQXMH6X8 a dai:Statement ;
+    rdfs:label "A puppy must be taken outside to relieve itself every 2 to 3 hours." ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZG ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82AH1GXVV72WP99JQXMH6X9 a dai:Statement ;
+    rdfs:label "The owner must always pick up the dog's waste and put it in a waste bin." ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZG ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:st_01M82AHPS6SQKW9E9EPJYC3KMB a dai:Statement ;
+    rdfs:label "A dog looks to its owner for direction." ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZJ ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82AHPS6SQKW9E9EPJYC3KMC a dai:Statement ;
+    rdfs:label "The owner should be the dog's lead: a calm, consistent and confident leader whose signals the dog can trust." ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZJ ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82AHPS6SQKW9E9EPJYC3KMD a dai:Statement ;
+    rdfs:label "The same command words should be used every time, and everyone in the family should use them too." ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZK ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82AHPS6SQKW9E9EPJYC3KME a dai:Statement ;
+    rdfs:label "The owner should set clear rules for the dog, such as whether it may lie on the sofa, and keep them." ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZM ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82AHPS6SQKW9E9EPJYC3KMF a dai:Statement ;
+    rdfs:label "Good behaviour should be rewarded immediately." ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZN ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82AHPS6SQKW9E9EPJYC3KMG a dai:Statement ;
+    rdfs:label "Unwanted behaviour should be ignored instead of shouting." ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZN ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82AHPS6SQKW9E9EPJYC3KMH a dai:Statement ;
+    rdfs:label "A dog that does not see its owner as a reliable lead may become anxious or try to take control." ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZP ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82AJ8HWH90DHFSC2JB20DFP a dai:Statement ;
+    rdfs:label "Every dog should learn five basic commands: sit, down, stay, come and leave it." ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZR ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82AJ8HWH90DHFSC2JB20DFQ a dai:Statement ;
+    rdfs:label "Training is done in short sessions of 5 to 10 minutes, several times a day." ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZR ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82AJ8HWH90DHFSC2JB20DFR a dai:Statement ;
+    rdfs:label "A training session should always end with a success." ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZR ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82AJ8HWH90DHFSC2JB20DFS a dai:Statement ;
+    rdfs:label "A dog training course with a certified trainer is recommended in the first year." ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZS ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82AJ8HWH90DHFSC2JB20DFT a dai:Statement ;
+    rdfs:label "Dogs of breeds classified as dangerous must pass an obedience test." ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZS ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82AK1Z8YRQBGAGXAECRMD6B a dai:Statement ;
+    rdfs:label "Dogs are social animals." ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX2 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82AK1Z8YRQBGAGXAECRMD6C a dai:Statement ;
+    rdfs:label "An adult dog must never be left alone at home for more than 6 hours." ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX2 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82AK1Z8YRQBGAGXAECRMD6D a dai:Statement ;
+    rdfs:label "Puppies should not be left alone for more than 2 hours." ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX2 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82AK1Z8YRQBGAGXAECRMD6E a dai:Statement ;
+    rdfs:label "Before leaving, the owner should walk the dog, leave water and a safe chew toy, and keep the departure low-key." ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX3 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82AK1Z8YRQBGAGXAECRMD6F a dai:Statement ;
+    rdfs:label "If a dog barks or howls while the owner is away, the owner should train it to be alone step by step, starting with a few minutes." ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX3 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82AKNKGVB3WQ6AJ3QXNT51Q a dai:Statement ;
+    rdfs:label "In a car, a dog must travel in a crate or wear a safety harness attached to the seat belt." ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX5 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82AKNKGVB3WQ6AJ3QXNT51R a dai:Statement ;
+    rdfs:label "A dog must never be left in a parked car in warm weather." ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX5 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82AKNKGVB3WQ6AJ3QXNT51S a dai:Statement ;
+    rdfs:label "For travel abroad, a dog needs a pet passport, a microchip and a valid rabies vaccination." ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX5 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82AM9P5HMXJKJ1997DWSW20 a dai:Statement ;
+    rdfs:label "The dog owner is liable for any damage the dog causes." ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX7 ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:st_01M82AM9P5HMXJKJ1997DWSW21 a dai:Statement ;
+    rdfs:label "Third-party liability insurance for dog owners is strongly recommended." ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX7 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:st_01M82AM9P6EWS5D1VJCAH8Z7TX a dai:Statement ;
+    rdfs:label "Third-party liability insurance is mandatory for breeds classified as dangerous by the local authority." ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX7 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:st_01M82AM9P6EWS5D1VJCAH8Z7TY a dai:Statement ;
+    rdfs:label "In public places, a dog must be kept on a leash unless a sign allows free running." ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX7 ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:cn_01M82AC66KMJH32E2MQ3Z7ZBKN a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "daily exercise" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHB8 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AC66KMJH32E2MQ3Z7ZBKP a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "company" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHB8 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AC66KMJH32E2MQ3Z7ZBKQ a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "training" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHB8 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AC66KMJH32E2MQ3Z7ZBKR a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "veterinary care" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHB8 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AC66KMJH32E2MQ3Z7ZBKV a owl:Class,
+        skos:Concept ;
+    skos:altLabel "registered" ;
+    skos:prefLabel "dog registration" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHB9 ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:cn_01M82ACZDNRYXG7FZCA8KC7FD5 a owl:Class,
+        skos:Concept ;
+    skos:altLabel "flats" ;
+    skos:prefLabel "flat" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBC ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AEQW4JVCNX0WEDNNR61W6 a owl:Class,
+        skos:Concept ;
+    skos:altLabel "blankets" ;
+    skos:prefLabel "blanket" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBN ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AHPS6SQKW9E9EPJYC3KMQ a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "household rule for the dog" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZM ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82AC66KMJH32E2MQ3Z7ZBM0 a owl:ObjectProperty ;
+    rdfs:label "is registered with" ;
+    rdfs:domain :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
+    rdfs:range :cn_01M82AC66KMJH32E2MQ3Z7ZBKS ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHB9 ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:rl_01M82AC66KMJH32E2MQ3Z7ZBM1 a owl:ObjectProperty ;
+    rdfs:label "carries" ;
+    rdfs:domain :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
+    rdfs:range :cn_01M82AC66KMJH32E2MQ3Z7ZBKT ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHB9 ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:rl_01M82ACZDNRYXG7FZCA8KC7FD8 a owl:ObjectProperty ;
+    rdfs:label "classifies as dangerous" ;
+    rdfs:domain :cn_01M82AC66KMJH32E2MQ3Z7ZBKS ;
+    rdfs:range :cn_01M82ACZDNRYXG7FZCA8KC7FD2 ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBF ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82AE56ZYS5Y2Z0C35ECC9YE a owl:ObjectProperty ;
+    rdfs:label "takes dog to" ;
+    rdfs:domain :cn_01M82AE56ZYS5Y2Z0C35ECC9Y8 ;
+    rdfs:range :cn_01M82AE56ZYS5Y2Z0C35ECC9YB ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBK ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82AE56ZYS5Y2Z0C35ECC9YF a owl:ObjectProperty ;
+    rdfs:label "has" ;
+    rdfs:domain :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
+    rdfs:range :cn_01M82AE56ZYS5Y2Z0C35ECC9YC ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBK ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82AEQW4JVCNX0WEDNNR61W8 a owl:ObjectProperty ;
+    rdfs:label "is applied to" ;
+    rdfs:domain :cn_01M82AEQW4JVCNX0WEDNNR61W2 ;
+    rdfs:range :cn_01M82AEQW4JVCNX0WEDNNR61W4 ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBN ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82AEQW4JVCNX0WEDNNR61W9 a owl:ObjectProperty ;
+    rdfs:label "is applied to" ;
+    rdfs:domain :cn_01M82AEQW4JVCNX0WEDNNR61W1 ;
+    rdfs:range :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBN ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82AEQW4JVCNX0WEDNNR61WA a owl:ObjectProperty ;
+    rdfs:label "has" ;
+    rdfs:domain :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
+    rdfs:range :cn_01M82AEQW4JVCNX0WEDNNR61W5 ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBN ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82AF7YTEGBGGS9B245D10JN a owl:ObjectProperty ;
+    rdfs:label "should not leave before 8 weeks" ;
+    rdfs:domain :cn_01M82AF7YTEGBGGS9B245D10JJ ;
+    rdfs:range :cn_01M82AF7YTEGBGGS9B245D10JK ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZ9 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82AF7YTEGBGGS9B245D10JP a owl:ObjectProperty ;
+    rdfs:label "undergoes" ;
+    rdfs:domain :cn_01M82AF7YTEGBGGS9B245D10JJ ;
+    rdfs:range :cn_01M82AF7YTEGBGGS9B245D10JM ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZA ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82AFTZDSHCD0SK6T4N2YZWC a owl:ObjectProperty ;
+    rdfs:label "is attached to" ;
+    rdfs:domain :cn_01M82AFTZDSHCD0SK6T4N2YZW6 ;
+    rdfs:range :cn_01M82AFTZDSHCD0SK6T4N2YZW8 ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZC ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82AFTZDSHCD0SK6T4N2YZWD a owl:ObjectProperty ;
+    rdfs:label "is attached to" ;
+    rdfs:domain :cn_01M82AFTZDSHCD0SK6T4N2YZW6 ;
+    rdfs:range :cn_01M82AFTZDSHCD0SK6T4N2YZW9 ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZC ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82AFTZDSHCD0SK6T4N2YZWF a owl:ObjectProperty ;
+    rdfs:label "is not suitable in" ;
+    rdfs:domain :cn_01M82AFTZDSHCD0SK6T4N2YZW7 ;
+    rdfs:range :cn_01M82AFTZDSHCD0SK6T4N2YZWB ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZC ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82AG9DZ4Q7M3Z8RX016AKWP a owl:ObjectProperty ;
+    rdfs:label "undergoes" ;
+    rdfs:domain :cn_01M82AF7YTEGBGGS9B245D10JJ ;
+    rdfs:range :cn_01M82AG9DZ4Q7M3Z8RX016AKWJ ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZE ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82AG9DZ4Q7M3Z8RX016AKWQ a owl:ObjectProperty ;
+    rdfs:label "uses" ;
+    rdfs:domain :cn_01M82AG9DZ4Q7M3Z8RX016AKWJ ;
+    rdfs:range :cn_01M82AFTZDSHCD0SK6T4N2YZW6 ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZE ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82AH1GXVV72WP99JQXMH6XX a owl:ObjectProperty ;
+    rdfs:label "picks up" ;
+    rdfs:domain :cn_01M82AE56ZYS5Y2Z0C35ECC9Y8 ;
+    rdfs:range :cn_01M82AH1GXVV72WP99JQXMH6XS ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZG ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:rl_01M82AH1GXVV72WP99JQXMH6XY a owl:ObjectProperty ;
+    rdfs:label "is put in" ;
+    rdfs:domain :cn_01M82AH1GXVV72WP99JQXMH6XS ;
+    rdfs:range :cn_01M82AH1GXVV72WP99JQXMH6XT ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZG ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:rl_01M82AHPS6SQKW9E9EPJYC3KMV a owl:ObjectProperty ;
+    rdfs:label "is the lead of" ;
+    rdfs:domain :cn_01M82AE56ZYS5Y2Z0C35ECC9Y8 ;
+    rdfs:range :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZJ,
+        :su_01M82ABDR28HTPAFF4C44FRBZP ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82AHPS6SQKW9E9EPJYC3KMW a owl:ObjectProperty ;
+    rdfs:label "uses" ;
+    rdfs:domain :cn_01M82AHPS6SQKW9E9EPJYC3KMP ;
+    rdfs:range :cn_01M82AHPS6SQKW9E9EPJYC3KMN ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZK ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82AHPS6SQKW9E9EPJYC3KMX a owl:ObjectProperty ;
+    rdfs:label "is given for" ;
+    rdfs:domain :cn_01M82AHPS6SQKW9E9EPJYC3KMT ;
+    rdfs:range :cn_01M82AHPS6SQKW9E9EPJYC3KMR ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZN ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82AJ8HWH90DHFSC2JB20DG4 a owl:ObjectProperty ;
+    rdfs:label "is given by" ;
+    rdfs:domain :cn_01M82AJ8HWH90DHFSC2JB20DFY ;
+    rdfs:range :cn_01M82AJ8HWH90DHFSC2JB20DFZ ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZS ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82AJ8HWH90DHFSC2JB20DG6 a owl:ObjectProperty ;
+    rdfs:label "must pass" ;
+    rdfs:domain :cn_01M82AJ8HWH90DHFSC2JB20DG1 ;
+    rdfs:range :cn_01M82AJ8HWH90DHFSC2JB20DG2 ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZS ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82AK1Z9HNB4ZNT1JN5CCR6W a owl:ObjectProperty ;
+    rdfs:label "walks before leaving" ;
+    rdfs:domain :cn_01M82AE56ZYS5Y2Z0C35ECC9Y8 ;
+    rdfs:range :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX3 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82AK1Z9HNB4ZNT1JN5CCR6X a owl:ObjectProperty ;
+    rdfs:label "leaves for the dog" ;
+    rdfs:domain :cn_01M82AE56ZYS5Y2Z0C35ECC9Y8 ;
+    rdfs:range :cn_01M82ADJQKNCFSCKCDMA3H0R89 ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX3 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82AK1Z9HNB4ZNT1JN5CCR6Y a owl:ObjectProperty ;
+    rdfs:label "leaves for the dog" ;
+    rdfs:domain :cn_01M82AE56ZYS5Y2Z0C35ECC9Y8 ;
+    rdfs:range :cn_01M82AK1Z9HNB4ZNT1JN5CCR6R ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX3 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82AK1Z9HNB4ZNT1JN5CCR6Z a owl:ObjectProperty ;
+    rdfs:label "is addressed by" ;
+    rdfs:domain :cn_01M82AK1Z9HNB4ZNT1JN5CCR6S ;
+    rdfs:range :cn_01M82AK1Z9HNB4ZNT1JN5CCR6T ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX3 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82AKNKGVB3WQ6AJ3QXNT52C a owl:ObjectProperty ;
+    rdfs:label "travels in" ;
+    rdfs:domain :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
+    rdfs:range :cn_01M82AKNKGVB3WQ6AJ3QXNT525 ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX5 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82AKNKGVB3WQ6AJ3QXNT52D a owl:ObjectProperty ;
+    rdfs:label "wears" ;
+    rdfs:domain :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
+    rdfs:range :cn_01M82AKNKGVB3WQ6AJ3QXNT526 ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX5 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82AKNKGVB3WQ6AJ3QXNT52E a owl:ObjectProperty ;
+    rdfs:label "is attached to" ;
+    rdfs:domain :cn_01M82AKNKGVB3WQ6AJ3QXNT526 ;
+    rdfs:range :cn_01M82AKNKGVB3WQ6AJ3QXNT527 ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX5 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82AKNKHBHSK6HA7XAZBSVGS a owl:ObjectProperty ;
+    rdfs:label "requires" ;
+    rdfs:domain :cn_01M82AKNKGVB3WQ6AJ3QXNT52B ;
+    rdfs:range :cn_01M82AKNKGVB3WQ6AJ3QXNT528 ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX5 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82AKNKHBHSK6HA7XAZBSVGT a owl:ObjectProperty ;
+    rdfs:label "requires" ;
+    rdfs:domain :cn_01M82AKNKGVB3WQ6AJ3QXNT52B ;
+    rdfs:range :cn_01M82AC66KMJH32E2MQ3Z7ZBKT ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX5 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82AKNKHBHSK6HA7XAZBSVGV a owl:ObjectProperty ;
+    rdfs:label "requires" ;
+    rdfs:domain :cn_01M82AKNKGVB3WQ6AJ3QXNT52B ;
+    rdfs:range :cn_01M82AE56ZYS5Y2Z0C35ECC9YA ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX5 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82AM9P6EWS5D1VJCAH8Z7VH a owl:ObjectProperty ;
+    rdfs:label "is liable for" ;
+    rdfs:domain :cn_01M82AE56ZYS5Y2Z0C35ECC9Y8 ;
+    rdfs:range :cn_01M82AM9P6EWS5D1VJCAH8Z7VF ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX7 ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:rl_01M82AM9P6EWS5D1VJCAH8Z7VJ a owl:ObjectProperty ;
+    rdfs:label "causes" ;
+    rdfs:domain :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
+    rdfs:range :cn_01M82AM9P6EWS5D1VJCAH8Z7VF ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX7 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82AM9P6EWS5D1VJCAH8Z7VK a owl:ObjectProperty ;
+    rdfs:label "classifies as dangerous" ;
+    rdfs:domain :cn_01M82AC66KMJH32E2MQ3Z7ZBKS ;
+    rdfs:range :cn_01M82ACZDNRYXG7FZCA8KC7FD2 ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX7 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:rl_01M82AM9P6EWS5D1VJCAH8Z7VM a owl:ObjectProperty ;
+    rdfs:label "is kept on" ;
+    rdfs:domain :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
+    rdfs:range :cn_01M82AFTZDSHCD0SK6T4N2YZW6 ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX7 ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:rl_01M82AM9P6EWS5D1VJCAH8Z7VN a owl:ObjectProperty ;
+    rdfs:label "is located in" ;
+    rdfs:domain :cn_01M82AM9P6EWS5D1VJCAH8Z7VG ;
+    rdfs:range :cn_01M82AM9P6EWS5D1VJCAH8Z7VE ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX7 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:ru_01M82AEQW4JVCNX0WEDNNR61WE a dai:Rule ;
+    rdfs:label "Wash bed and blankets weekly at 60 °C" ;
+    dai:action "wash the dog's bed and blankets once a week" ;
+    dai:actor "dog owner" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBN ;
+    dai:level dai:level-2 ;
+    dai:limitComparator "=" ;
+    dai:limitUnit "times per week" ;
+    dai:limitValue 1.0 ;
+    dai:modality dai:must ;
+    dai:refersTo :cn_01M82AEQW4JVCNX0WEDNNR61W5,
+        :cn_01M82AEQW4JVCNX0WEDNNR61W6,
+        :rl_01M82AEQW4JVCNX0WEDNNR61WA ;
+    dai:scope :co_01M82ABDR0997QP7DGZPPDNF4H ;
+    dai:status dai:proposed .
+
+:cn_01M82ACZDNRYXG7FZCA8KC7FD4 a owl:Class,
+        skos:Concept ;
+    skos:altLabel "local list" ;
+    skos:prefLabel "local list of dangerous breeds" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBF ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82ACZDNRYXG7FZCA8KC7FD7 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "exercise" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBC,
+        :su_01M82ABDR1CAX5PFZ2HWSEQHBD ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AE56ZYS5Y2Z0C35ECC9YB a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "veterinarian" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBK ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AE56ZYS5Y2Z0C35ECC9YC a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "check-up" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBK ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AEQW4JVCNX0WEDNNR61W2 a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82ACZDNRYXG7FZCA8KC7FD6 ;
+    skos:broader :cn_01M82ACZDNRYXG7FZCA8KC7FD6 ;
+    skos:prefLabel "claw trimming" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBN ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AEQW4JVCNX0WEDNNR61W5 a owl:Class,
+        skos:Concept ;
+    skos:altLabel "bed" ;
+    skos:prefLabel "dog bed" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBN ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AF7YTEGBGGS9B245D10JK a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
+    skos:broader :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
+    skos:prefLabel "mother" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZ9 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82AFTZDSHCD0SK6T4N2YZW7 a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82AFTZDSHCD0SK6T4N2YZW6 ;
+    skos:broader :cn_01M82AFTZDSHCD0SK6T4N2YZW6 ;
+    skos:prefLabel "retractable leash" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZC ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AFTZDSHCD0SK6T4N2YZW9 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "harness" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZC ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AFTZDSHCD0SK6T4N2YZWB a owl:Class,
+        skos:Concept ;
+    skos:altLabel "busy streets" ;
+    skos:prefLabel "busy street" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZC ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AH1GXVV72WP99JQXMH6XP a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "small breed" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZG ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AH1GXVV72WP99JQXMH6XQ a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "large breed" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZG ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AH1GXVV72WP99JQXMH6XR a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "working breed" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZG ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AH1GXVV72WP99JQXMH6XT a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "waste bin" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZG ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:cn_01M82AHPS6SQKW9E9EPJYC3KMM a owl:Class,
+        skos:Concept ;
+    skos:definition "A calm, consistent and confident leader whose signals the dog can trust." ;
+    skos:prefLabel "lead (leader)" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZJ,
+        :su_01M82ABDR28HTPAFF4C44FRBZP ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AHPS6SQKW9E9EPJYC3KMN a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "command word" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZK ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AHPS6SQKW9E9EPJYC3KMP a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "family" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZK ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AHPS6SQKW9E9EPJYC3KMR a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "good behaviour" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZN ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AHPS6SQKW9E9EPJYC3KMS a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "unwanted behaviour" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZN ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AHPS6SQKW9E9EPJYC3KMT a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "reward" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZN ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AJ8HWH90DHFSC2JB20DFY a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "dog training course" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZS ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AJ8HWH90DHFSC2JB20DFZ a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "certified trainer" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZS ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AJ8HWH90DHFSC2JB20DG2 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "obedience test" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZS ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82AK1Z9HNB4ZNT1JN5CCR6R a owl:Class,
+        skos:Concept ;
+    skos:altLabel "chew toy" ;
+    skos:prefLabel "safe chew toy" ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX3 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AK1Z9HNB4ZNT1JN5CCR6S a owl:Class,
+        skos:Concept ;
+    skos:altLabel "barks or howls" ;
+    skos:prefLabel "barking or howling" ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX3 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82AKNKGVB3WQ6AJ3QXNT524 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "car" ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX5 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82AKNKGVB3WQ6AJ3QXNT525 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "crate" ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX5 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82AKNKGVB3WQ6AJ3QXNT527 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "seat belt" ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX5 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82AKNKGVB3WQ6AJ3QXNT528 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "pet passport" ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX5 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82AM9P6EWS5D1VJCAH8Z7VE a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "public place" ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX7 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AM9P6EWS5D1VJCAH8Z7VG a owl:Class,
+        skos:Concept ;
+    skos:altLabel "sign allowing free running" ;
+    skos:prefLabel "free-running sign" ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX7 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82AE56ZYS5Y2Z0C35ECC9YG a owl:ObjectProperty ;
+    rdfs:label "receives" ;
+    rdfs:domain :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
+    rdfs:range :cn_01M82AE56ZYS5Y2Z0C35ECC9YA ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBK ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82AFTZDSHCD0SK6T4N2YZWE a owl:ObjectProperty ;
+    rdfs:label "is used for" ;
+    rdfs:domain :cn_01M82AFTZDSHCD0SK6T4N2YZW6 ;
+    rdfs:range :cn_01M82AFTZDSHCD0SK6T4N2YZWA ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZC ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82AK1Z9HNB4ZNT1JN5CCR6V a owl:ObjectProperty ;
+    rdfs:label "leaves alone" ;
+    rdfs:domain :cn_01M82AE56ZYS5Y2Z0C35ECC9Y8 ;
+    rdfs:range :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX2,
+        :su_01M82ABDR30PE47ZK8WSGY3HX3 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82AM9P6EWS5D1VJCAH8Z7VP a owl:ObjectProperty ;
+    rdfs:label "holds" ;
+    rdfs:domain :cn_01M82AE56ZYS5Y2Z0C35ECC9Y8 ;
+    rdfs:range :cn_01M82AM9P6EWS5D1VJCAH8Z7VA ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX7 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:su_01M82ABDR1CAX5PFZ2HWSEQHBB a dai:SourceUnit ;
+    rdfs:label "Breeds differ in size, energy and the care they need." .
+
+:cn_01M82ACZDNRYXG7FZCA8KC7FD0 a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82ACZDNRYXG7FZCA8KC7FCX ;
+    skos:altLabel "long-haired breeds" ;
+    skos:broader :cn_01M82ACZDNRYXG7FZCA8KC7FCX ;
+    skos:prefLabel "long-haired breed" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBE,
+        :su_01M82ABDR1CAX5PFZ2HWSEQHBN ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82ADJQKNCFSCKCDMA3H0R89 a owl:Class,
+        skos:Concept ;
+    skos:altLabel "water" ;
+    skos:prefLabel "fresh water" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBH,
+        :su_01M82ABDR30PE47ZK8WSGY3HX3 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AE56ZYS5Y2Z0C35ECC9Y9 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "vaccination" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBK ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AEQW4JVCNX0WEDNNR61W1 a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82ACZDNRYXG7FZCA8KC7FD6 ;
+    skos:broader :cn_01M82ACZDNRYXG7FZCA8KC7FD6 ;
+    skos:prefLabel "brushing" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBN ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AEQW4JVCNX0WEDNNR61W4 a owl:Class,
+        skos:Concept ;
+    skos:altLabel "claws" ;
+    skos:prefLabel "claw" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBN ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AF7YTEGBGGS9B245D10JM a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "house training" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZA ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82AH1GXVV72WP99JQXMH6XS a owl:Class,
+        skos:Concept ;
+    skos:altLabel "waste" ;
+    skos:prefLabel "dog waste" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZG ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:cn_01M82AJ8HWH90DHFSC2JB20DG1 a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
+    skos:broader :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
+    skos:prefLabel "dog of a dangerous breed" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZS ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82AK1Z8YRQBGAGXAECRMD6W a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "leaving the dog alone" ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX2,
+        :su_01M82ABDR30PE47ZK8WSGY3HX3 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AK1Z9HNB4ZNT1JN5CCR6T a owl:Class,
+        skos:Concept ;
+    skos:altLabel "train it to be alone" ;
+    skos:prefLabel "step-by-step alone training" ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX3 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82AKNKGVB3WQ6AJ3QXNT526 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "safety harness" ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX5 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:cn_01M82AM9P6EWS5D1VJCAH8Z7VA a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "third-party liability insurance" ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX7 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AM9P6EWS5D1VJCAH8Z7VF a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "damage" ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX7 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82ADJQKNCFSCKCDMA3H0R8G a owl:ObjectProperty ;
+    rdfs:label "is fed times per day" ;
+    rdfs:domain :cn_01M82ADJQKNCFSCKCDMA3H0R86 ;
+    rdfs:range :cn_01M82ADJQKNCFSCKCDMA3H0R88 ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBH ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82AH1GXVV72WP99JQXMH6XW a owl:ObjectProperty ;
+    rdfs:label "needs" ;
+    rdfs:domain :cn_01M82ADJQKNCFSCKCDMA3H0R86 ;
+    rdfs:range :cn_01M82AFTZDSHCD0SK6T4N2YZWA ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZG ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82AJ8HWH90DHFSC2JB20DG3 a owl:ObjectProperty ;
+    rdfs:label "should learn" ;
+    rdfs:domain :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
+    rdfs:range :cn_01M82AJ8HWH90DHFSC2JB20DFW ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZR ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:su_01M82ABDR28HTPAFF4C44FRBZM a dai:SourceUnit ;
+    rdfs:label "Set clear rules (for example, whether the dog may lie on the sofa) and keep them." .
+
+:cn_01M82AC66KMJH32E2MQ3Z7ZBKT a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "microchip" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHB9,
+        :su_01M82ABDR30PE47ZK8WSGY3HX5 ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:cn_01M82ACZDNRYXG7FZCA8KC7FCY a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82ACZDNRYXG7FZCA8KC7FCX ;
+    skos:altLabel "small companion breeds" ;
+    skos:broader :cn_01M82ACZDNRYXG7FZCA8KC7FCX ;
+    skos:prefLabel "small companion breed" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBC ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82ACZDNRYXG7FZCA8KC7FCZ a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82ACZDNRYXG7FZCA8KC7FCX ;
+    skos:altLabel "large and working breeds" ;
+    skos:broader :cn_01M82ACZDNRYXG7FZCA8KC7FCX ;
+    skos:prefLabel "large and working breed" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBD ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AFTZDSHCD0SK6T4N2YZW8 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "collar" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZC ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82ACZDNRYXG7FZCA8KC7FD6 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "grooming" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBE,
+        :su_01M82ABDR1CAX5PFZ2HWSEQHBN ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AJ8HWH90DHFSC2JB20DFW a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "basic command" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZR ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AJ8HWH90DHFSC2JB20DFX a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "training session" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZR ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:rl_01M82ADJQKNCFSCKCDMA3H0R8H a owl:ObjectProperty ;
+    rdfs:label "is fed times per day" ;
+    rdfs:domain :cn_01M82AF7YTEGBGGS9B245D10JJ ;
+    rdfs:range :cn_01M82ADJQKNCFSCKCDMA3H0R88 ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBH ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:su_01M82ABDR28HTPAFF4C44FRBZK a dai:SourceUnit ;
+    rdfs:label "Use the same command words every time, and make sure everyone in the family uses them too." .
+
+:cn_01M82AC66KMJH32E2MQ3Z7ZBKS a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "local authority" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHB9,
+        :su_01M82ABDR1CAX5PFZ2HWSEQHBF,
+        :su_01M82ABDR30PE47ZK8WSGY3HX7 ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:cn_01M82AE56ZYS5Y2Z0C35ECC9YA a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82AE56ZYS5Y2Z0C35ECC9Y9 ;
+    skos:broader :cn_01M82AE56ZYS5Y2Z0C35ECC9Y9 ;
+    skos:prefLabel "rabies vaccination" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBK,
+        :su_01M82ABDR30PE47ZK8WSGY3HX5 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AG9DZ4Q7M3Z8RX016AKWJ a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "leash training" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZE ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AKNKGVB3WQ6AJ3QXNT52B a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "travel abroad" ;
+    dai:evidence :su_01M82ABDR30PE47ZK8WSGY3HX5 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:su_01M82ABDR1CAX5PFZ2HWSEQHBE a dai:SourceUnit ;
+    rdfs:label "**Long-haired breeds** need more grooming than short-haired breeds." .
+
+:su_01M82ABDR28HTPAFF4C44FRBZP a dai:SourceUnit ;
+    rdfs:label "A dog that does not see its owner as a reliable lead may become anxious or try to take control." .
+
+:cn_01M82ACZDNRYXG7FZCA8KC7FD2 a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf :cn_01M82ACZDNRYXG7FZCA8KC7FCX ;
+    skos:altLabel "breeds classified as dangerous",
+        "dangerous" ;
+    skos:broader :cn_01M82ACZDNRYXG7FZCA8KC7FCX ;
+    skos:definition "A breed classified as dangerous by the local authority." ;
+    skos:prefLabel "dangerous breed" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBF,
+        :su_01M82ABDR28HTPAFF4C44FRBZS,
+        :su_01M82ABDR30PE47ZK8WSGY3HX7 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:su_01M82ABDR1CAX5PFZ2HWSEQHBD a dai:SourceUnit ;
+    rdfs:label "**Large and working breeds** (for example, Border Collie or German Shepherd) need more space, more exercise and more mental work." .
+
+:su_01M82ABDR28HTPAFF4C44FRBZJ a dai:SourceUnit ;
+    rdfs:label "Your dog looks to you for direction. Be its lead: a calm, consistent and confident leader whose signals it can trust." .
+
+:su_01M82ABDR1CAX5PFZ2HWSEQHBC a dai:SourceUnit ;
+    rdfs:label "**Small companion breeds** (for example, Maltese or Pug) need less space and less exercise and adapt well to flats." .
+
+:su_01M82ABDR28HTPAFF4C44FRBZ9 a dai:SourceUnit ;
+    rdfs:label "A puppy is a dog younger than 6 months. Puppies should not leave their mother before 8 weeks of age." .
+
+:cn_01M82ADJQKNCFSCKCDMA3H0R8A a owl:Class,
+        skos:Concept ;
+    skos:altLabel "poisonous" ;
+    skos:prefLabel "food poisonous to dogs" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBH ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:su_01M82ABDR1CAX5PFZ2HWSEQHBF a dai:SourceUnit ;
+    rdfs:label "Some breeds are classified as dangerous by the local authority. Check the local list before you choose a breed." .
+
+:su_01M82ABDR28HTPAFF4C44FRBZN a dai:SourceUnit ;
+    rdfs:label "Reward good behaviour immediately; ignore unwanted behaviour instead of shouting." .
+
+:cn_01M82ACZDNRYXG7FZCA8KC7FCX a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "breed" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBB,
+        :su_01M82ABDR1CAX5PFZ2HWSEQHBF ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82ADJQKNCFSCKCDMA3H0R88 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "feeding" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBH ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:cn_01M82AFTZDSHCD0SK6T4N2YZWA a owl:Class,
+        skos:Concept ;
+    skos:altLabel "everyday walks" ;
+    skos:prefLabel "walk" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZC,
+        :su_01M82ABDR28HTPAFF4C44FRBZG,
+        :su_01M82ABDR30PE47ZK8WSGY3HX3 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:su_01M82ABDR1CAX5PFZ2HWSEQHB9 a dai:SourceUnit ;
+    rdfs:label "A dog older than 4 months must be registered with the local authority and must carry a microchip." .
+
+:su_01M82ABDR28HTPAFF4C44FRBZA a dai:SourceUnit ;
+    rdfs:label "House training starts on the first day: take the puppy outside after every meal, after every nap and after play, and praise it when it relieves itself outside. Between 8 and 16 weeks, let the puppy get to know many people, sounds, surfaces and traffic in a calm way." .
+
+:cn_01M82ADJQKNCFSCKCDMA3H0R86 a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+            owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+            owl:onClass :cn_01M82ADJQKNCFSCKCDMA3H0R88 ;
+            owl:onProperty :rl_01M82ADJQKNCFSCKCDMA3H0R8G ],
+        [ a owl:Restriction ;
+            owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+            owl:onClass :cn_01M82AFTZDSHCD0SK6T4N2YZWA ;
+            owl:onProperty :rl_01M82AH1GXVV72WP99JQXMH6XW ],
+        :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
+    skos:broader :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
+    skos:prefLabel "adult dog" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBH,
+        :su_01M82ABDR28HTPAFF4C44FRBZG,
+        :su_01M82ABDR30PE47ZK8WSGY3HX2 ;
+    dai:level dai:level-2 ;
+    dai:status dai:proposed .
+
+:su_01M82ABDR30PE47ZK8WSGY3HX2 a dai:SourceUnit ;
+    rdfs:label "Dogs are social animals. **Never leave an adult dog alone at home for more than 6 hours.** Puppies should not be left alone for more than 2 hours." .
+
+:su_01M82ABDR28HTPAFF4C44FRBZS a dai:SourceUnit ;
+    rdfs:label "A dog training course with a certified trainer is recommended in the first year. Dogs of breeds classified as dangerous must pass an obedience test." .
+
+:cn_01M82AFTZDSHCD0SK6T4N2YZW6 a owl:Class,
+        skos:Concept ;
+    skos:prefLabel "leash" ;
+    dai:evidence :su_01M82ABDR28HTPAFF4C44FRBZC,
+        :su_01M82ABDR28HTPAFF4C44FRBZE,
+        :su_01M82ABDR30PE47ZK8WSGY3HX7 ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:su_01M82ABDR1CAX5PFZ2HWSEQHB8 a dai:SourceUnit ;
+    rdfs:label "A dog lives 10 to 15 years. It needs daily exercise, company, training and veterinary care for its whole life. Before you get a dog, check that your home, your working hours and your budget fit the dog you want." .
+
+:su_01M82ABDR28HTPAFF4C44FRBZR a dai:SourceUnit ;
+    rdfs:label "Every dog should learn five basic commands: *sit*, *down*, *stay*, *come* and *leave it*. Train in short sessions of 5 to 10 minutes, several times a day, and always end with a success." .
+
+:su_01M82ABDR28HTPAFF4C44FRBZE a dai:SourceUnit ;
+    rdfs:label "Start leash training when the puppy is 8 to 10 weeks old. Reward the dog when the leash is loose, and stop walking when the dog pulls. Never jerk the leash." .
+
+:su_01M82ABDR1CAX5PFZ2HWSEQHBK a dai:SourceUnit ;
+    rdfs:label "A puppy receives its first vaccinations at 8 weeks of age. The rabies vaccination is mandatory and must be renewed every year. Take your dog to the veterinarian for a check-up at least once a year." .
+
+:su_01M82ABDR30PE47ZK8WSGY3HX3 a dai:SourceUnit ;
+    rdfs:label "Before you leave, walk the dog, leave water and a safe chew toy, and keep your departure low-key. If your dog barks or howls while you are away, train it to be alone step by step, starting with a few minutes." .
+
+:cn_01M82AF7YTEGBGGS9B245D10JJ a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "4"^^xsd:nonNegativeInteger ;
+            owl:minQualifiedCardinality "3"^^xsd:nonNegativeInteger ;
+            owl:onClass :cn_01M82ADJQKNCFSCKCDMA3H0R88 ;
+            owl:onProperty :rl_01M82ADJQKNCFSCKCDMA3H0R8H ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "4"^^xsd:nonNegativeInteger ;
+            owl:minQualifiedCardinality "3"^^xsd:nonNegativeInteger ;
+            owl:onClass :cn_01M82ADJQKNCFSCKCDMA3H0R88 ;
+            owl:onProperty :rl_01M82ADJQKNCFSCKCDMA3H0R8H ],
+        :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
+    skos:broader :cn_01M82AC66KMJH32E2MQ3Z7ZBKM ;
+    skos:definition "A dog younger than 6 months." ;
+    skos:prefLabel "puppy" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBH,
+        :su_01M82ABDR1CAX5PFZ2HWSEQHBK,
+        :su_01M82ABDR28HTPAFF4C44FRBZ9,
+        :su_01M82ABDR28HTPAFF4C44FRBZA,
+        :su_01M82ABDR28HTPAFF4C44FRBZE,
+        :su_01M82ABDR28HTPAFF4C44FRBZG,
+        :su_01M82ABDR30PE47ZK8WSGY3HX2 ;
+    dai:level dai:level-3 ;
+    dai:status dai:proposed .
+
+:su_01M82ABDR1CAX5PFZ2HWSEQHBN a dai:SourceUnit ;
+    rdfs:label "Brush your dog at least once a week; long-haired breeds need brushing every day. Trim the claws when you can hear them clicking on the floor. Wash your dog's bed and blankets once a week at 60 °C." .
+
+:su_01M82ABDR28HTPAFF4C44FRBZC a dai:SourceUnit ;
+    rdfs:label "Use a leash of 1.5 to 2 metres for everyday walks. A retractable leash is not suitable in busy streets. Attach the leash to a well-fitting collar or harness: you should be able to slide two fingers under the collar." .
+
+:su_01M82ABDR1CAX5PFZ2HWSEQHBH a dai:SourceUnit ;
+    rdfs:label "Feed an adult dog twice a day and a puppy three to four times a day. Fresh water must always be available. Chocolate, grapes, onions and xylitol are poisonous to dogs." .
+
+:su_01M82ABDR30PE47ZK8WSGY3HX5 a dai:SourceUnit ;
+    rdfs:label "In a car, a dog must travel in a crate or wear a safety harness attached to the seat belt. Never leave a dog in a parked car in warm weather. For travel abroad, your dog needs a pet passport, a microchip and a valid rabies vaccination." .
+
+:su_01M82ABDR30PE47ZK8WSGY3HX7 a dai:SourceUnit ;
+    rdfs:label "You are liable for any damage your dog causes. Third-party liability insurance for dog owners is strongly recommended, and it is mandatory for breeds classified as dangerous by the local authority. In public places, your dog must be kept on a leash unless a sign allows free running." .
+
+:cn_01M82AE56ZYS5Y2Z0C35ECC9Y8 a owl:Class,
+        skos:Concept ;
+    skos:altLabel "dog owner" ;
+    skos:prefLabel "owner" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHBK,
+        :su_01M82ABDR28HTPAFF4C44FRBZG,
+        :su_01M82ABDR28HTPAFF4C44FRBZP,
+        :su_01M82ABDR30PE47ZK8WSGY3HX3,
+        :su_01M82ABDR30PE47ZK8WSGY3HX7 ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
+
+:su_01M82ABDR28HTPAFF4C44FRBZG a dai:SourceUnit ;
+    rdfs:label "An adult dog needs at least two walks a day: 30 to 60 minutes in total for small breeds and up to 2 hours for large and working breeds. A puppy must be taken outside to relieve itself every 2 to 3 hours. Always pick up your dog's waste and put it in a waste bin." .
+
+:cn_01M82AC66KMJH32E2MQ3Z7ZBKM a owl:Class,
+        skos:Concept ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
+            owl:minQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
+            owl:onClass :cn_01M82AJ8HWH90DHFSC2JB20DFW ;
+            owl:onProperty :rl_01M82AJ8HWH90DHFSC2JB20DG3 ] ;
+    skos:definition "A social animal." ;
+    skos:prefLabel "dog" ;
+    dai:evidence :su_01M82ABDR1CAX5PFZ2HWSEQHB8,
+        :su_01M82ABDR1CAX5PFZ2HWSEQHB9,
+        :su_01M82ABDR1CAX5PFZ2HWSEQHBH,
+        :su_01M82ABDR1CAX5PFZ2HWSEQHBK,
+        :su_01M82ABDR1CAX5PFZ2HWSEQHBN,
+        :su_01M82ABDR28HTPAFF4C44FRBZ9,
+        :su_01M82ABDR28HTPAFF4C44FRBZE,
+        :su_01M82ABDR28HTPAFF4C44FRBZG,
+        :su_01M82ABDR28HTPAFF4C44FRBZJ,
+        :su_01M82ABDR28HTPAFF4C44FRBZP,
+        :su_01M82ABDR28HTPAFF4C44FRBZR,
+        :su_01M82ABDR28HTPAFF4C44FRBZS,
+        :su_01M82ABDR30PE47ZK8WSGY3HX2,
+        :su_01M82ABDR30PE47ZK8WSGY3HX3,
+        :su_01M82ABDR30PE47ZK8WSGY3HX5,
+        :su_01M82ABDR30PE47ZK8WSGY3HX7 ;
+    dai:level dai:level-1 ;
+    dai:status dai:proposed .
 

@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82ABDR28HTPAFF4C44FRBZG
+id: st_01M82AH1GXVV72WP99JQXMH6X8
+label: Puppy relief interval
+level: level-3
+level_reason: Puppies are a special case.
+origin:
+  created_at: '2026-11-22T19:08:02.973571Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+status: proposed
+text: A puppy must be taken outside to relieve itself every 2 to 3 hours.

@@ -1,0 +1,19 @@
+action: keep fresh water always available to the dog
+actor: owner
+evidence:
+- unit: su_01M82ABDR1CAX5PFZ2HWSEQHBH
+id: ru_01M82ADJQKNCFSCKCDMA3H0R8M
+label: Fresh water always available
+level: level-2
+level_reason: Normal daily care requirement for the owner.
+modality: must
+origin:
+  created_at: '2026-11-22T19:06:09.524750Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+refers_to:
+- cn_01M82ADJQKNCFSCKCDMA3H0R89
+- cn_01M82AC66KMJH32E2MQ3Z7ZBKM
+scope:
+- co_01M82ABDR0997QP7DGZPPDNF4H
+status: proposed

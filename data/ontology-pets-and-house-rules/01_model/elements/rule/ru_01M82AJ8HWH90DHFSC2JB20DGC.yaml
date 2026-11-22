@@ -1,0 +1,22 @@
+action: pass an obedience test
+actor: dog of a dangerous breed
+condition: the dog's breed is classified as dangerous
+evidence:
+- unit: su_01M82ABDR28HTPAFF4C44FRBZS
+id: ru_01M82AJ8HWH90DHFSC2JB20DGC
+label: Dangerous breeds must pass obedience test
+level: level-3
+level_reason: Special case of dangerous breeds.
+modality: must
+origin:
+  created_at: '2026-11-22T19:08:42.941931Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+refers_to:
+- cn_01M82AJ8HWH90DHFSC2JB20DG1
+- cn_01M82ACZDNRYXG7FZCA8KC7FD2
+- cn_01M82AJ8HWH90DHFSC2JB20DG2
+- rl_01M82AJ8HWH90DHFSC2JB20DG6
+scope:
+- co_01M82ABDR0997QP7DGZPPDNF4H
+status: proposed

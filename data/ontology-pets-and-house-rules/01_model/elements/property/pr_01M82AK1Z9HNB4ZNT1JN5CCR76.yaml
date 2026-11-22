@@ -1,0 +1,15 @@
+evidence:
+- unit: su_01M82ABDR30PE47ZK8WSGY3HX2
+id: pr_01M82AK1Z9HNB4ZNT1JN5CCR76
+label: Maximum time an adult dog may be alone
+level: level-2
+level_reason: Normal-day limit for leaving an adult dog alone.
+name: maximum time alone at home
+of: cn_01M82ADJQKNCFSCKCDMA3H0R86
+origin:
+  created_at: '2026-11-22T19:09:08.970471Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+status: proposed
+unit: h
+value: '6'

@@ -1,0 +1,26 @@
+action: travel in a crate or wear a safety harness attached to the seat belt
+actor: dog
+condition: when travelling in a car
+evidence:
+- unit: su_01M82ABDR30PE47ZK8WSGY3HX5
+id: ru_01M82AKNKHBHSK6HA7XAZBSVGW
+label: Dog in car must travel in crate or wear harness
+level: level-3
+level_reason: Travel is a special case.
+modality: must
+origin:
+  created_at: '2026-11-22T19:09:29.073877Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+refers_to:
+- cn_01M82AC66KMJH32E2MQ3Z7ZBKM
+- cn_01M82AKNKGVB3WQ6AJ3QXNT524
+- cn_01M82AKNKGVB3WQ6AJ3QXNT525
+- cn_01M82AKNKGVB3WQ6AJ3QXNT526
+- cn_01M82AKNKGVB3WQ6AJ3QXNT527
+- rl_01M82AKNKGVB3WQ6AJ3QXNT52C
+- rl_01M82AKNKGVB3WQ6AJ3QXNT52D
+- rl_01M82AKNKGVB3WQ6AJ3QXNT52E
+scope:
+- co_01M82ABDR0997QP7DGZPPDNF4H
+status: proposed

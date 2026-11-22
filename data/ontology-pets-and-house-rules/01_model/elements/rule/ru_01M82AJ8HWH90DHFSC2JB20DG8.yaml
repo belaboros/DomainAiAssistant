@@ -1,0 +1,22 @@
+action: train in sessions of at least 5 minutes
+actor: owner
+evidence:
+- unit: su_01M82ABDR28HTPAFF4C44FRBZR
+id: ru_01M82AJ8HWH90DHFSC2JB20DG8
+label: Training session at least 5 minutes
+level: level-2
+level_reason: Practical training guidance for owners.
+limit:
+  comparator: ge
+  unit: min
+  value: 5.0
+modality: must
+origin:
+  created_at: '2026-11-22T19:08:42.941699Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+refers_to:
+- cn_01M82AJ8HWH90DHFSC2JB20DFX
+scope:
+- co_01M82ABDR0997QP7DGZPPDNF4H
+status: proposed

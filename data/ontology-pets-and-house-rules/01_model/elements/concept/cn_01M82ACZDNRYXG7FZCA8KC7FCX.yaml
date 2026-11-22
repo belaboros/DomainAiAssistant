@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82ABDR1CAX5PFZ2HWSEQHBB
+- unit: su_01M82ABDR1CAX5PFZ2HWSEQHBF
+id: cn_01M82ACZDNRYXG7FZCA8KC7FCX
+label: breed
+level: level-2
+level_reason: Needed when choosing a pet.
+origin:
+  created_at: '2026-11-22T19:05:49.749968Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+status: proposed

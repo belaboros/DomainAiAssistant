@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82ABDR28HTPAFF4C44FRBZE
+id: tm_01M82AG9DZ4Q7M3Z8RX016AKWE
+label: leash training
+level: level-2
+level_reason: Part of everyday walking.
+mentions:
+- concept: cn_01M82AG9DZ4Q7M3Z8RX016AKWJ
+  unit: su_01M82ABDR28HTPAFF4C44FRBZE
+origin:
+  created_at: '2026-11-22T19:07:38.303454Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+status: proposed

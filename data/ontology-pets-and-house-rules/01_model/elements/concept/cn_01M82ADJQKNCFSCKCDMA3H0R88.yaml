@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82ABDR1CAX5PFZ2HWSEQHBH
+id: cn_01M82ADJQKNCFSCKCDMA3H0R88
+label: feeding
+level: level-2
+level_reason: Everyday owner task.
+origin:
+  created_at: '2026-11-22T19:06:09.524388Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+status: proposed

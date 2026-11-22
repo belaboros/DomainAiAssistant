@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82ABDR28HTPAFF4C44FRBZE
+id: st_01M82AG9DZ4Q7M3Z8RX016AKWB
+label: Reward loose leash
+level: level-2
+level_reason: Normal walking practice for an owner.
+origin:
+  created_at: '2026-11-22T19:07:38.303398Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+status: proposed
+text: The dog is rewarded when the leash is loose.

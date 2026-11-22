@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82ABDR1CAX5PFZ2HWSEQHBK
+id: rl_01M82AE56ZYS5Y2Z0C35ECC9YE
+label: takes dog to
+level: level-2
+level_reason: Routine care.
+object: cn_01M82AE56ZYS5Y2Z0C35ECC9YB
+origin:
+  created_at: '2026-11-22T19:06:28.448015Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+predicate_label: takes dog to
+status: proposed
+subject: cn_01M82AE56ZYS5Y2Z0C35ECC9Y8

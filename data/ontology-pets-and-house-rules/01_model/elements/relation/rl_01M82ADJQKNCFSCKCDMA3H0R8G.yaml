@@ -1,0 +1,17 @@
+cardinality:
+  max: 2
+  min: 2
+evidence:
+- unit: su_01M82ABDR1CAX5PFZ2HWSEQHBH
+id: rl_01M82ADJQKNCFSCKCDMA3H0R8G
+label: is fed times per day
+level: level-2
+level_reason: Normal feeding schedule.
+object: cn_01M82ADJQKNCFSCKCDMA3H0R88
+origin:
+  created_at: '2026-11-22T19:06:09.524576Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+predicate_label: is fed times per day
+status: proposed
+subject: cn_01M82ADJQKNCFSCKCDMA3H0R86

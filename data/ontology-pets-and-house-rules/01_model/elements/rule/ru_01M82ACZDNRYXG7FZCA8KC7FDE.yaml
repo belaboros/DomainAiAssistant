@@ -1,0 +1,22 @@
+action: check the local list of dangerous breeds
+actor: person choosing a breed
+condition: before choosing a breed
+evidence:
+- unit: su_01M82ABDR1CAX5PFZ2HWSEQHBF
+id: ru_01M82ACZDNRYXG7FZCA8KC7FDE
+label: Check the local list of dangerous breeds before choosing
+level: level-3
+level_reason: Dangerous breeds are a special case named for level-3.
+modality: must
+origin:
+  created_at: '2026-11-22T19:05:49.750444Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+refers_to:
+- cn_01M82ACZDNRYXG7FZCA8KC7FD4
+- cn_01M82ACZDNRYXG7FZCA8KC7FD2
+- cn_01M82AC66KMJH32E2MQ3Z7ZBKS
+- rl_01M82ACZDNRYXG7FZCA8KC7FD8
+scope:
+- co_01M82ABDR0997QP7DGZPPDNF4H
+status: proposed

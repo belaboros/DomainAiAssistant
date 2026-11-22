@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82ABDR1CAX5PFZ2HWSEQHBN
+id: rl_01M82AEQW4JVCNX0WEDNNR61WA
+label: has
+level: level-2
+level_reason: The dog's own bed.
+object: cn_01M82AEQW4JVCNX0WEDNNR61W5
+origin:
+  created_at: '2026-11-22T19:06:47.557236Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+predicate_label: has
+status: proposed
+subject: cn_01M82AC66KMJH32E2MQ3Z7ZBKM

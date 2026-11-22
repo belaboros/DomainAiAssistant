@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82ABDR28HTPAFF4C44FRBZE
+id: rl_01M82AG9DZ4Q7M3Z8RX016AKWQ
+label: uses
+level: level-2
+level_reason: Normal walking practice.
+object: cn_01M82AFTZDSHCD0SK6T4N2YZW6
+origin:
+  created_at: '2026-11-22T19:07:38.303683Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+predicate_label: uses
+status: proposed
+subject: cn_01M82AG9DZ4Q7M3Z8RX016AKWJ

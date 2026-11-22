@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82ABDR1CAX5PFZ2HWSEQHB8
+id: st_01M82AC66KMJH32E2MQ3Z7ZBK8
+label: Lifelong needs of a dog
+level: level-1
+level_reason: Core understanding of dog ownership.
+origin:
+  created_at: '2026-11-22T19:05:23.924202Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+status: proposed
+text: A dog needs daily exercise, company, training and veterinary care for its whole life.

@@ -1,0 +1,15 @@
+evidence:
+- unit: su_01M82ABDR1CAX5PFZ2HWSEQHBK
+id: pr_01M82AE56ZYS5Y2Z0C35ECC9YN
+label: Rabies vaccination renewal interval
+level: level-2
+level_reason: Routine vaccination detail for normal care.
+name: renewal interval
+of: cn_01M82AE56ZYS5Y2Z0C35ECC9YA
+origin:
+  created_at: '2026-11-22T19:06:28.448252Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+status: proposed
+unit: year
+value: '1'

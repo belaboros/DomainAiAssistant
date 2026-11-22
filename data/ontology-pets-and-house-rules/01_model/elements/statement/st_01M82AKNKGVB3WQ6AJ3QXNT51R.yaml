@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82ABDR30PE47ZK8WSGY3HX5
+id: st_01M82AKNKGVB3WQ6AJ3QXNT51R
+label: Never leave dog in parked car in warm weather
+level: level-3
+level_reason: Travel is a special case.
+origin:
+  created_at: '2026-11-22T19:09:29.073256Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+status: proposed
+text: A dog must never be left in a parked car in warm weather.

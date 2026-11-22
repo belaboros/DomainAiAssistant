@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82ABDR1CAX5PFZ2HWSEQHBC
+id: rl_01M82ACZDNRYXG7FZCA8KC7FDA
+label: adapts well to
+level: level-2
+level_reason: Normal-case guidance.
+object: cn_01M82ACZDNRYXG7FZCA8KC7FD5
+origin:
+  created_at: '2026-11-22T19:05:49.750307Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+predicate_label: adapts well to
+status: proposed
+subject: cn_01M82ACZDNRYXG7FZCA8KC7FCY

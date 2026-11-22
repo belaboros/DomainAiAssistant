@@ -1,0 +1,20 @@
+action: keep the departure low-key
+actor: owner
+condition: when leaving the dog alone
+evidence:
+- unit: su_01M82ABDR30PE47ZK8WSGY3HX3
+id: ru_01M82AK1Z9HNB4ZNT1JN5CCR74
+label: Keep departure low-key
+level: level-2
+level_reason: Normal-day advice for leaving the dog alone.
+modality: must
+origin:
+  created_at: '2026-11-22T19:09:08.970401Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+refers_to:
+- cn_01M82AE56ZYS5Y2Z0C35ECC9Y8
+- cn_01M82AK1Z8YRQBGAGXAECRMD6W
+scope:
+- co_01M82ABDR0997QP7DGZPPDNF4H
+status: proposed

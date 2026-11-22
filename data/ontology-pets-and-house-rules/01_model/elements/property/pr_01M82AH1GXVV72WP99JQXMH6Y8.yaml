@@ -1,0 +1,15 @@
+evidence:
+- unit: su_01M82ABDR28HTPAFF4C44FRBZG
+id: pr_01M82AH1GXVV72WP99JQXMH6Y8
+label: Minimum walks per day for an adult dog
+level: level-2
+level_reason: Normal-day walk requirement.
+name: minimum walks per day
+of: cn_01M82ADJQKNCFSCKCDMA3H0R86
+origin:
+  created_at: '2026-11-22T19:08:02.974621Z'
+  kind: llm
+  run_id: run_01M82ABDR0997QP7DGZPPDNF4G
+status: proposed
+unit: walks
+value: '2'
