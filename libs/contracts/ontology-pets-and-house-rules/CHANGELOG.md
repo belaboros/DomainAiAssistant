@@ -1,5 +1,8 @@
 # Changelog · ontology-pets-and-house-rules contract
 
+## 0.2.1 · 2026-11-22
+- Pins the shared `ontology` contract 0.2.1 (a clarification).
+
 ## 0.2.0 · 2026-11-22
 - Pins the shared `ontology` contract 0.2.0 (the releases add `ontology.jsonld`).
 

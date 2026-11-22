@@ -341,7 +341,10 @@ def test_leash_lead_synonym_and_lead_senses(pet_extraction: Any, pet_terms: Any)
     }
     assert {"leash", "lead"} <= leash_labels
     assert leash.scope_note and role.scope_note
-    assert "lead" not in {"leash"} - leash_labels
+    role_labels = {role.label.lower()} | {
+        t.label.lower() for t in terms if any(m.concept == role.id for m in t.mentions or [])
+    }
+    assert "leash" not in role_labels  # the owner's role is a sense of "lead", not a leash
     rules = [
         e
         for e in elements.values()

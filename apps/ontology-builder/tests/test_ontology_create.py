@@ -1,4 +1,8 @@
-"""Creating an ontology, and the scope-record guard of ingestion (plan 0002, T5: AC-1)."""
+"""Creating an ontology (plan 0002, T5: AC-1).
+
+The scope-record guard of ingestion is tested where ingestion applies it:
+``test_ingestion_estimate.py::test_refused_while_scope_record_is_empty``.
+"""
 
 from __future__ import annotations
 
@@ -7,12 +11,7 @@ from pathlib import Path
 from typing import Any
 
 import pytest
-from ontology_builder.governance import (
-    Actor,
-    GovernanceRefusedError,
-    create_ontology,
-    require_scope,
-)
+from ontology_builder.governance import Actor, GovernanceRefusedError, create_ontology
 from ontology_builder.model import FixedClock, Role, UlidMinter
 from ontology_builder.store import DatasetStore
 
@@ -47,7 +46,6 @@ def test_create_makes_layout_and_scope(tmp_path: Path, scope_record: dict[str, A
     [decision] = store.read().decisions()
     assert (decision.action, decision.user, decision.role) == ("create", "bela", "domain_admin")
     assert decision.at == AT
-    require_scope(store)  # ingestion may go ahead
 
 
 def test_create_keeps_a_given_base_iri(tmp_path: Path, scope_record: dict[str, Any]) -> None:
@@ -94,23 +92,3 @@ def test_incomplete_scope_is_refused_with_the_field(
     with pytest.raises(GovernanceRefusedError, match=field):
         create_ontology(_store(tmp_path), scope, ADMIN)
     assert list(tmp_path.iterdir()) == []
-
-
-@pytest.mark.parametrize("content", [None, "", "   \n", "purpose: ''\n"])
-def test_ingest_refused_when_scope_missing_or_empty(
-    tmp_path: Path, scope_record: dict[str, Any], content: str | None
-) -> None:
-    store = _store(tmp_path)
-    create_ontology(store, _scope(scope_record), ADMIN)
-    scope_file = store.root / "01_model" / "scope.yaml"
-    if content is None:
-        scope_file.unlink()
-    else:
-        scope_file.write_text(content, encoding="utf-8")
-    with pytest.raises(GovernanceRefusedError, match="scope record"):
-        require_scope(store)
-
-
-def test_ingest_refused_when_ontology_missing(tmp_path: Path) -> None:
-    with pytest.raises(GovernanceRefusedError, match="does not exist"):
-        require_scope(_store(tmp_path))

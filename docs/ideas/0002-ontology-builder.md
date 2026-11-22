@@ -1,6 +1,6 @@
 # 0002 · OntologyBuilder: build leveled ontologies from text corpora and human input
 
-- **Status:** in-progress
+- **Status:** done
 - **Scope:** system
 - **Captured:** 2026-11-20
 - **Spec:** [0002-ontology-builder](../specs/0002-ontology-builder/spec.md) (approved) · [plan](../specs/0002-ontology-builder/plan.md) (approved)
@@ -471,3 +471,17 @@ Append one entry per question, oldest first. Never delete entries.
 **Options offered:** Commit per task (Recommended): two commits, nothing pushed / Don't commit
 **A:** "Commit per task (Recommended)"
 **Effect:** T30 and T31 are committed separately on spec/0002-t30-t31; nothing is pushed.
+
+### 2026-11-22 · review · Q59
+**Asked by:** Claude
+**Q:** [review-spec · spec gap] The independent review passes all 33 acceptance criteria. One finding (medium): the GUI has no screen for creating an ontology or editing the scope record; both exist only in the API (POST /api/ontologies, PUT …/scope) and the CLI (`create`). FR-3 says "the GUI enforces the role … edit the scope record", which reads as if the GUI offered it. How should this be resolved?
+**Options offered:** Clarify spec: CLI/API (Recommended): state in FR-1/FR-3 that create and scope editing are CLI/API actions in v1 / Add a follow-up GUI task (T32, scope editor dialog)
+**A:** "Clarify spec: CLI/API (Recommended)"
+**Effect:** FR-1 and FR-3 say that creating an ontology and editing its scope record are CLI/API actions in v1; the API refuses them for a user (403).
+
+### 2026-11-22 · review · Q60
+**Asked by:** Claude
+**Q:** [review-spec · small fixes] Low-severity review findings: (2) the contract doesn't say the governed release leaves out approved ignorable elements; (3) ingestion has its own require_scope that may raise RecordInvalidError instead of a refusal for an invalid scope record; (4) the plan's verification map names 2 renamed tests; (5) a no-op assertion in test_extraction_terms.py. Which to fix now?
+**Options offered (multi-select):** Contract wording (2) / Unify require_scope (3) / Plan test names (4) / No-op assert (5)
+**A:** all four
+**Effect:** Fixed as follow-up T32 to T35 in tasks.md.

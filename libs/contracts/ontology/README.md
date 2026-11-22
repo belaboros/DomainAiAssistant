@@ -5,7 +5,7 @@
 | **Applies to** | every dataset `ontology-<name>` (`data/ontology-<name>/`); each has a thin contract `libs/contracts/ontology-<name>/README.md` that pins a version of this one |
 | **Owner (only writer)** | `ontology-builder` |
 | **Readers** | see each dataset in the system map of the [root architecture](../../../docs/architecture/architecture.md) |
-| **Contract version** | 0.2.0 (see [CHANGELOG.md](CHANGELOG.md)) |
+| **Contract version** | 0.2.1 (see [CHANGELOG.md](CHANGELOG.md)) |
 | **Decision** | [ADR-0019](../../../docs/architecture/adr/0019-ontology-builder-app-and-shared-ontology-contract.md) |
 
 This is a **contract family**, not a dataset: it is not registered in `components.json`. It describes what readers of any ontology dataset may rely on (ADR-0013). Anything not written here, in particular `01_model/` and `02_decisions/`, is internal to `ontology-builder` and may change without notice.
@@ -53,7 +53,7 @@ A **source unit** is one Markdown block: a paragraph, a list item, a blockquote 
 | Variant | Folder | Contains | Built |
 |---------|--------|----------|-------|
 | **raw** | `00_raw/` | every element except excluded, rejected and ignorable ones, each with its status | on every save |
-| **governed** | `01_governed/` | approved and deprecated elements only, in their approved version | when a domain admin publishes a version |
+| **governed** | `01_governed/` | approved and deprecated elements only, in their approved version; elements whose level is `ignorable` are left out, as in raw | when a domain admin publishes a version |
 
 Both variants hold the same files:
 
@@ -100,7 +100,7 @@ Terms are not separate resources: a term is the label (`skos:prefLabel`, `skos:a
 - **Deterministic.** Two builds from the same records give byte-identical files, apart from `built_at` in `manifest.json`. Git diffs therefore show only real changes.
 - **Stable IDs.** IDs are minted, opaque and never derived from a unit's text or position. An ID is never reused, and an approved element is never deleted: it is deprecated, optionally with a replacement.
 - **Evidence.** Every element in a release cites at least one source unit that exists in `00_sources/`.
-- **Governed means approved.** `01_governed/` contains approved and deprecated elements only, and a publish fails rather than publish an approved element that refers to an element that is not approved.
+- **Governed means approved.** `01_governed/` contains approved and deprecated elements only (never an ignorable one), and a publish fails rather than publish an approved element that refers to an element that is not approved.
 - **No personal data.** User names are handles; only corpus text and user statements are stored.
 
 ## Versioning

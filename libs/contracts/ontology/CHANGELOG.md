@@ -1,5 +1,8 @@
 # Changelog · ontology contract family
 
+## 0.2.1 · 2026-11-22
+- Clarification: the governed release, like the raw one, leaves out elements whose level is `ignorable` (spec 0002 review). The releases did not change.
+
 ## 0.2.0 · 2026-11-22
 - Both releases also hold `ontology.jsonld`, the graph of `ontology.ttl` as JSON-LD (spec 0002, FR-37); the manifest lists it. Readers that ignore unknown files are not affected.
 

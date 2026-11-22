@@ -22,7 +22,6 @@ from ontology_builder.governance.ontology import (
     create_ontology,
     default_base_iri,
     edit_scope,
-    require_scope,
 )
 from ontology_builder.governance.statements import add_user_statement, revise_user_statement
 from ontology_builder.governance.status import (
@@ -52,7 +51,6 @@ __all__ = [
     "new_decision",
     "publish_decision",
     "require_admin",
-    "require_scope",
     "revise_user_statement",
     "snapshot_of",
     "state_of",

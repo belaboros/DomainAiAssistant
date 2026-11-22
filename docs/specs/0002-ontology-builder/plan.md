@@ -225,7 +225,7 @@ Back-end tests live in `apps/ontology-builder/tests/`, front-end tests in `apps/
 
 | Acceptance criterion | How it is verified (test name / command) |
 |----------------------|------------------------------------------|
-| AC-1  | `test_ontology_create.py::test_create_makes_layout_and_scope`, `::test_ingest_refused_when_scope_missing_or_empty` |
+| AC-1  | `test_ontology_create.py::test_create_makes_layout_and_scope`; `test_ingestion_estimate.py::test_refused_while_scope_record_is_empty[missing,empty,blank,incomplete]`, `::test_refused_when_ontology_missing` |
 | AC-2  | `test_api_session.py::test_decisions_carry_user_and_role`, `::test_email_like_name_warns`; `web/src/signin/SignIn.test.tsx::shows_handle_hint` |
 | AC-3  | `test_api_roles.py::test_user_refused[approve,reject,deprecate,scope,publish]`: 403, and the dataset tree hash is unchanged; `web/src/review/Actions.test.tsx::admin_actions_disabled_for_user`, `web/src/dialogs/PublishDialog.test.tsx::user_cannot_publish` |
 | AC-4  | `test_sources_registry.py::test_two_corpora_get_00_and_01` (fixture), `::test_unit_fields_present`, `::test_ids_contain_no_text_or_position` |
@@ -240,7 +240,7 @@ Back-end tests live in `apps/ontology-builder/tests/`, front-end tests in `apps/
 | AC-13 | `test_extraction_ignorable.py::test_bodza_egypt_cicero_ignorable_with_categories`, `::test_no_element_cites_ignorable_units`, `::test_not_ignorable_runs_extraction_after_confirm` (fixture); `web/src/dialogs/NotIgnorableDialog.test.tsx::extraction_runs_after_the_cost_confirmation`; `eval` reports the live score and the traps |
 | AC-14 | `test_model_extensibility.py::test_new_optional_concept_slot_keeps_records_valid_and_releases_build` |
 | AC-15 | `web/src/review/ElementDetail.test.tsx::evidence_rendered_before_proposal`; `web/e2e/save.spec.ts` (in the browser) |
-| AC-16 | `test_governance_actions.py::test_action_records_decision[include,exclude,correct,level,merge,split,reassign]`; `web/src/review/Actions.test.tsx::each_action_calls_api` |
+| AC-16 | `test_governance_actions.py::test_action_records_decision[include,exclude,correct,level,merge,split,reassign]`; `web/src/review/Actions.test.tsx` (one test per action: `include`, `exclude_with_a_reason`, `correct_a_field`, `override_the_level`, `merge_as_synonym_offers_other_concepts_only`, `split_senses_of_a_term`, `reassign_a_mention`) |
 | AC-17 | `test_governance_bulk.py::test_bulk_level3_on_20_records_20_decisions`, `::test_bulk_approve_admin_only`; `web/src/review/BulkBar.test.tsx` |
 | AC-18 | `test_api_elements.py::test_filter_rule_level1_building_rules`, `::test_search_lead_matches_label_definition_evidence`; `web/src/review/filter.test.ts` (same cases on the client filter) |
 | AC-19 | `web/src/review/StatusBadge.test.tsx::each_status_has_distinct_colour_class_and_label`; `web/e2e/save.spec.ts` (computed colours) |
@@ -260,7 +260,7 @@ Back-end tests live in `apps/ontology-builder/tests/`, front-end tests in `apps/
 | AC-33 | `test_evaluation.py::test_report_scores_each_answer_key_item` (fixture run), `::test_ingestion_never_opens_answer_key` (open/Path hooks during a fixture ingestion) and `::test_only_evaluation_mentions_answer_key_path` (source scan); live: `tools/env/with-env.sh ontology-builder -- uv run --package ontology-builder ontology-builder eval` |
 | NFR responsiveness | `test_api_perf.py::test_5000_elements_list_and_action_under_1s`; `web/src/review/filter.perf.test.ts` (filter 5,000 in < 100 ms) |
 | NFR local only | `test_api_guards.py::test_binds_localhost_rejects_foreign_host_and_missing_header` |
-| Edge cases | `test_extraction_validation.py` (invalid output retried once then reported; unknown unit ID dropped), `test_sources_registry.py::test_empty_and_headingless_files`, `::test_identical_text_separate_ids_same_hash`, `test_workflows_lock.py::test_second_server_refused`, `test_vcs_commit.py::test_refuse_on_conflicts_or_no_git`, `test_release_governed.py::test_deprecated_reference_warns` |
+| Edge cases | `test_extraction_validation.py` (invalid output retried once then reported; unknown unit ID dropped), `test_sources_registry.py::test_empty_and_headingless_files`, `::test_identical_text_separate_ids_same_hash`, `test_workflows_lock.py::test_second_server_refused`, `test_vcs_commit.py::test_refuse_on_conflicts_or_detached`, `::test_refuse_on_no_git`, `::test_refuse_outside_a_repository`, `test_release_governed.py::test_deprecated_reference_warns` |
 
 ## Risks and mitigations
 

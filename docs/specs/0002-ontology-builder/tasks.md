@@ -106,3 +106,9 @@ Tick a box only once its check passes.
   - Update the indexes.
 
   — covers: rule 5, rule 11 — check: `tools/monorepo/system-map.sh --check`; `/arch-metrics`: no `fail` and no new violations against the previous snapshot (was `pass`; changed in Q57) — note: 2026-11-22, the system and ontology-builder are `warn`, generate-pets-and-building-user-manual `pass`; the warnings are all in the 2026-11-21 baseline: SDP workflows → ingestion (ontology-builder/ADR-0009), Ce 5 (ingestion) and 6 (workflows), and D > 0.5 for the concrete stable components model, store, llm and vcs (and for ontology-builder at system level); measured edges match the declared ones
+
+### Review follow-ups (2026-11-22, Q59, Q60)
+- [x] T32 · [spec] FR-1 and FR-3: creating an ontology and editing its scope record are CLI and API actions in v1; the GUI has no screen for them (Q59). — covers: review finding 1 — check: spec text; `test_api_roles.py::test_user_refused[scope]`
+- [x] T33 · [contract] The governed release leaves out ignorable elements, as the raw one does (FR-29 wording; `ontology` 0.2.1 and `ontology-pets-and-house-rules` 0.2.1, a clarification). — covers: review finding 2 — check: `pytest …/test_contract_schemas.py`, `…/test_release_governed.py`
+- [x] T34 · [ingestion] One scope-record guard: ingestion also refuses an incomplete scope record (was a `RecordInvalidError`); the unused copy in `governance` is gone and the AC-1 cases test the ingestion path. — covers: AC-1, review finding 3 — check: `pytest …/test_ingestion_estimate.py -k refused`
+- [x] T35 · [tests, plan] The verification map names the current tests (`test_vcs_commit.py`, `Actions.test.tsx`, AC-1); the no-op assertion in `test_extraction_terms.py` now checks that the role sense of "lead" is not labelled "leash". — covers: review findings 4 and 5 — check: `pytest …/test_extraction_terms.py`
