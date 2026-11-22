@@ -133,9 +133,9 @@ flowchart TD
   governance -->|3| store
   ingestion -->|3| extraction
   ingestion -->|3| llm
-  ingestion -->|3| model
+  ingestion -->|4| model
   ingestion -->|1| sources
-  ingestion -->|3| store
+  ingestion -->|4| store
   release -->|6| model
   release -->|2| store
   sources -->|3| model
