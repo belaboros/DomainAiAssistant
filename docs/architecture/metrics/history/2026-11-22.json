@@ -1,13 +1,13 @@
 {
   "date": "2026-11-22",
-  "commit": "52f88cfb1a125322ae570e73e2d9daafcccc4082",
+  "commit": "9aa9781e8260e14b3e3d6650f6db7dce2991cefc",
   "languages": [
     "js-ts",
     "python"
   ],
   "functions": {
-    "count": 1315,
-    "ccAvg": 2.59,
+    "count": 1326,
+    "ccAvg": 2.6,
     "ccMax": 10,
     "overWarn": []
   },
@@ -27,7 +27,7 @@
       "ca": 0,
       "ce": 0,
       "instability": 0.0,
-      "relationalCohesion": 2.91,
+      "relationalCohesion": 2.924,
       "abstractness": 0.015,
       "distance": 0.985,
       "externalDeps": [

@@ -1,6 +1,6 @@
 # Spec 0002 · OntologyBuilder
 
-- **Status:** approved
+- **Status:** implemented
 - **Scope:** system
 - **Idea:** [0002-ontology-builder](../../ideas/0002-ontology-builder.md)
 - **Last updated:** 2026-11-22

@@ -1,6 +1,6 @@
 # 0002 · OntologyBuilder: build leveled ontologies from text corpora and human input
 
-- **Status:** in-progress
+- **Status:** done
 - **Scope:** system
 - **Captured:** 2026-11-20
 - **Spec:** [0002-ontology-builder](../specs/0002-ontology-builder/spec.md) (approved) · [plan](../specs/0002-ontology-builder/plan.md) (approved)
@@ -499,3 +499,10 @@ Append one entry per question, oldest first. Never delete entries.
 **Options offered:** Re-ingest from scratch (Recommended): recreate the ontology and ingest the three manuals again (about $3.60; estimate shown first; nothing has been reviewed yet) / Fix by hand in the GUI / Leave it for now
 **A:** "Re-ingest from scratch (Recommended)"
 **Effect:** Task T37: recreate the ontology with the same scope record and re-ingest the three manuals live after the estimate is confirmed.
+
+### 2026-11-22 · implement · Q63
+**Asked by:** Claude
+**Q:** [implement · T37 live ingestion] The fix is committed (e9c14cd) and the ontology `pets-and-house-rules` is re-created with the same scope record and handle (e90c876). Ingesting the three manuals with claude-opus-5-5 is estimated at dog $2.00, cat $1.56, building rules $1.70 ($5.26 total; the last identical run cost about $3.60). Each run commits the dataset. Run all three?
+**Options offered:** Run all three (Recommended): dog, cat, building rules in the earlier order, one commit per run / Not now
+**A:** "Run all three (Recommended)"
+**Effect:** The three manuals are re-ingested live, one run and one commit each.
