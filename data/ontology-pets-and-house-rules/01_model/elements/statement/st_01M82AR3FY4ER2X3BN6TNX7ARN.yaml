@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82APMQ68JDJRTYQDVNXFWWN
+id: st_01M82AR3FY4ER2X3BN6TNX7ARN
+label: Indoor cat needs play and climbing places
+level: level-2
+level_reason: Normal daily care need.
+origin:
+  created_at: '2026-11-22T19:11:54.367298Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+status: proposed
+text: An indoor cat needs more play and climbing places.

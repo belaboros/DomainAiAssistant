@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82APMQ7MGEVFK2CW6002H34
+id: cn_01M82AX2AYWV44F1MEHFVJNNFY
+label: absence
+level: level-2
+level_reason: Leaving the pet alone is a normal-day topic.
+origin:
+  created_at: '2026-11-22T19:14:37.022885Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+status: proposed

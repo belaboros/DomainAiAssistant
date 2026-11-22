@@ -1,0 +1,16 @@
+definition: A cat younger than 6 months.
+evidence:
+- unit: su_01M82APMQ7MGEVFK2CW6002H2Y
+- unit: su_01M82APMQ7MGEVFK2CW6002H2R
+- unit: su_01M82APMQ7MGEVFK2CW6002H2T
+id: cn_01M82AVB4Q3YP83EB2BM9CVNH9
+label: kitten
+level: level-3
+level_reason: Kittens are a special case.
+origin:
+  created_at: '2026-11-22T19:13:40.504360Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+parents:
+- cn_01M82AQDR2NPZDR8C737517K86
+status: proposed

@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82APMQ7MGEVFK2CW6002H34
+id: pr_01M82AX2AYWV44F1MEHFVJNNG7
+label: Minimum visit frequency during longer absence
+level: level-2
+level_reason: Normal-day knowledge about leaving the cat alone.
+name: minimum frequency
+of: cn_01M82AX2AYWV44F1MEHFVJNNFZ
+origin:
+  created_at: '2026-11-22T19:14:37.023184Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+status: proposed
+value: once a day

@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82APMQ7MGEVFK2CW6002H2P
+id: st_01M82ARW4GRHWZH2QAVQ4Z6C2E
+label: Cats can fall from height
+level: level-2
+level_reason: Reason for the safety net measure.
+origin:
+  created_at: '2026-11-22T19:12:19.600674Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+status: proposed
+text: Cats can fall from height.

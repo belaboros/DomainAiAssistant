@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82APMQ7MGEVFK2CW6002H34
+id: tm_01M82AX2AYWV44F1MEHFVJNNFP
+label: fresh water
+level: level-2
+level_reason: Everyday care item.
+mentions:
+- concept: cn_01M82ADJQKNCFSCKCDMA3H0R89
+  unit: su_01M82APMQ7MGEVFK2CW6002H34
+origin:
+  created_at: '2026-11-22T19:14:37.022695Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+status: proposed

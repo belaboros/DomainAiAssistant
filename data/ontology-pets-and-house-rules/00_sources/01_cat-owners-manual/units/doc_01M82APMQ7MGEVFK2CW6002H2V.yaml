@@ -1,0 +1,12 @@
+- content_hash: sha256:1b791f079acb939f41118b7302425c663e943292923f889ce48b2b758632df06
+  document_id: doc_01M82APMQ7MGEVFK2CW6002H2V
+  id: su_01M82APMQ7MGEVFK2CW6002H2W
+  kind: paragraph
+  location:
+    heading_path:
+    - 4. Health and Care — 4.3 Litter Box Hygiene
+    index_in_section: 0
+    line_end: 3
+    line_start: 3
+    path: 04-health-and-care/03-litter-box-hygiene.md
+  text: Provide one litter box per cat plus one extra. Remove clumps every day and replace all litter once a week. Used litter goes into the residual waste, never into the toilet or the compost.

@@ -1,0 +1,29 @@
+action: leave an adult cat alone
+actor: owner
+condition: the cat has enough food, fresh water and a clean litter box
+evidence:
+- unit: su_01M82APMQ7MGEVFK2CW6002H34
+id: ru_01M82AX2AYWV44F1MEHFVJNNG4
+label: Adult cat may stay alone up to 24 hours
+level: level-2
+level_reason: Leaving the pet alone is normal-day owner knowledge.
+limit:
+  comparator: le
+  unit: hours
+  value: 24.0
+modality: may
+origin:
+  created_at: '2026-11-22T19:14:37.023034Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+refers_to:
+- cn_01M82ASKHG81R2G0W9373Z4V8D
+- cn_01M82AQDR2NPZDR8C737517K88
+- cn_01M82ADJQKNCFSCKCDMA3H0R89
+- cn_01M82ARW4GRHWZH2QAVQ4Z6C2S
+- rl_01M82AX2AYWV44F1MEHFVJNNG0
+- rl_01M82AX2AYWV44F1MEHFVJNNG1
+- rl_01M82AX2AYWV44F1MEHFVJNNG2
+scope:
+- co_01M82APMQ5V0PTBT5SDYAF1JAP
+status: proposed

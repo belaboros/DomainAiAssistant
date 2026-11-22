@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82APMQ7MGEVFK2CW6002H2T
+id: st_01M82AT58GVN9GHPNG420CQGD6
+label: Kitten first vaccinations
+level: level-3
+level_reason: Kittens are a special case.
+origin:
+  created_at: '2026-11-22T19:13:01.713010Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+status: proposed
+text: A kitten receives its first vaccinations at 8 weeks of age.

@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82APMQ68JDJRTYQDVNXFWWJ
+id: st_01M82AQDR2NPZDR8C737517K7Z
+label: Plan care during travel
+level: level-3
+level_reason: Travel is a special case.
+origin:
+  created_at: '2026-11-22T19:11:32.098943Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+status: proposed
+text: A future cat owner should plan for someone to look after the cat when they travel.

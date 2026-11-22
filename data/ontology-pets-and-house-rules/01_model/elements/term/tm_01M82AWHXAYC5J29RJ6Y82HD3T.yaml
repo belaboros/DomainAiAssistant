@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82APMQ7MGEVFK2CW6002H32
+id: tm_01M82AWHXAYC5J29RJ6Y82HD3T
+label: matting
+level: level-2
+level_reason: Reason for daily brushing.
+mentions:
+- concept: cn_01M82AWHXAYC5J29RJ6Y82HD43
+  unit: su_01M82APMQ7MGEVFK2CW6002H32
+origin:
+  created_at: '2026-11-22T19:14:20.202474Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+status: proposed

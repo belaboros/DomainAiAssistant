@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82APMQ7MGEVFK2CW6002H30
+id: tm_01M82AVWYQTEWX0BYTM82R487B
+label: play
+level: level-2
+level_reason: Daily activity with a cat.
+mentions:
+- concept: cn_01M82AVWYQTEWX0BYTM82R487J
+  unit: su_01M82APMQ7MGEVFK2CW6002H30
+origin:
+  created_at: '2026-11-22T19:13:58.744149Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+status: proposed

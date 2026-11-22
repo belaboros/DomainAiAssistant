@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82APMQ7MGEVFK2CW6002H2T
+id: rl_01M82AT58GVN9GHPNG420CQGDP
+label: is a visit to
+level: level-2
+level_reason: Routine care.
+object: cn_01M82AE56ZYS5Y2Z0C35ECC9YB
+origin:
+  created_at: '2026-11-22T19:13:01.713318Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+predicate_label: is a visit to
+status: proposed
+subject: cn_01M82AQDR2NPZDR8C737517K8A

@@ -1,0 +1,15 @@
+evidence:
+- unit: su_01M82APMQ7MGEVFK2CW6002H2T
+id: pr_01M82AT58GVN9GHPNG420CQGDV
+label: Age at first vaccinations
+level: level-3
+level_reason: Kittens are a special case.
+name: age at first vaccinations
+of: cn_01M82AVB4Q3YP83EB2BM9CVNH9
+origin:
+  created_at: '2026-11-22T19:13:01.713453Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+status: proposed
+unit: weeks
+value: '8'

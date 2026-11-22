@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82APMQ68JDJRTYQDVNXFWWJ
+id: rl_01M82AQDR2NPZDR8C737517K8E
+label: needs
+level: level-2
+level_reason: Daily care need.
+object: cn_01M82AQDR2NPZDR8C737517K88
+origin:
+  created_at: '2026-11-22T19:11:32.099376Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+predicate_label: needs
+status: proposed
+subject: cn_01M82AQDR2NPZDR8C737517K86

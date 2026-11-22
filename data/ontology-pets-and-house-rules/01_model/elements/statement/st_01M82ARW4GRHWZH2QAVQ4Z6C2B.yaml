@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82APMQ7MGEVFK2CW6002H2P
+id: st_01M82ARW4GRHWZH2QAVQ4Z6C2B
+label: Bowls away from litter box
+level: level-2
+level_reason: Normal-day setup detail.
+origin:
+  created_at: '2026-11-22T19:12:19.600609Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+status: proposed
+text: A cat's food and water bowls are placed away from the litter box.

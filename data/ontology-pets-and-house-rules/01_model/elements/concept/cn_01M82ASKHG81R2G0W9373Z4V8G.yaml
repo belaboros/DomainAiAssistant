@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82APMQ7MGEVFK2CW6002H2R
+id: cn_01M82ASKHG81R2G0W9373Z4V8G
+label: meal
+level: level-2
+level_reason: Unit of feeding.
+origin:
+  created_at: '2026-11-22T19:12:43.568872Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+status: proposed

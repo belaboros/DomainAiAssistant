@@ -1,0 +1,26 @@
+action: brush a long-haired cat every day to prevent matting
+actor: cat owner
+evidence:
+- unit: su_01M82APMQ7MGEVFK2CW6002H32
+id: ru_01M82AWHXAYC5J29RJ6Y82HD4B
+label: Brush long-haired cats every day
+level: level-2
+level_reason: Grooming is part of an owner's normal routine.
+limit:
+  comparator: eq
+  unit: times per day
+  value: 1.0
+modality: must
+origin:
+  created_at: '2026-11-22T19:14:20.202945Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+refers_to:
+- cn_01M82AWHXAYC5J29RJ6Y82HD3Z
+- cn_01M82AEQW4JVCNX0WEDNNR61W1
+- cn_01M82AWHXAYC5J29RJ6Y82HD43
+- rl_01M82AWHXAYC5J29RJ6Y82HD49
+- rl_01M82AWHXAYC5J29RJ6Y82HD46
+scope:
+- co_01M82APMQ5V0PTBT5SDYAF1JAP
+status: proposed

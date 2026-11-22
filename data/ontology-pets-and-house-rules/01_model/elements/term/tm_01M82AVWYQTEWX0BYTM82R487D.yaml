@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82APMQ7MGEVFK2CW6002H30
+id: tm_01M82AVWYQTEWX0BYTM82R487D
+label: furniture
+level: level-3
+level_reason: Only relevant to the scratching problem.
+mentions:
+- concept: cn_01M82AVWYQTEWX0BYTM82R487M
+  unit: su_01M82APMQ7MGEVFK2CW6002H30
+origin:
+  created_at: '2026-11-22T19:13:58.744209Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+status: proposed

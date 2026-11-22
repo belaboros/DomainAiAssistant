@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82APMQ7MGEVFK2CW6002H36
+id: rl_01M82AXJ1250JDQ3F0HM8ET4QZ
+label: is attached to
+level: level-3
+level_reason: Explains special handling when moving.
+object: cn_01M82AXJ1250JDQ3F0HM8ET4QW
+origin:
+  created_at: '2026-11-22T19:14:53.091139Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+predicate_label: is attached to
+status: proposed
+subject: cn_01M82AQDR2NPZDR8C737517K86

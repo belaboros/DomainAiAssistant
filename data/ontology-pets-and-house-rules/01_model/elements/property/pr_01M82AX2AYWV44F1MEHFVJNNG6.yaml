@@ -1,0 +1,15 @@
+evidence:
+- unit: su_01M82APMQ7MGEVFK2CW6002H34
+id: pr_01M82AX2AYWV44F1MEHFVJNNG6
+label: Maximum time an adult cat can stay alone
+level: level-2
+level_reason: Normal-day knowledge about leaving the cat alone.
+name: maximum time alone
+of: cn_01M82ASKHG81R2G0W9373Z4V8D
+origin:
+  created_at: '2026-11-22T19:14:37.023147Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+status: proposed
+unit: hours
+value: '24'

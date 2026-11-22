@@ -1,0 +1,21 @@
+action: be microchipped
+actor: outdoor cat
+condition: before it goes outside for the first time
+evidence:
+- unit: su_01M82APMQ68JDJRTYQDVNXFWWP
+id: ru_01M82AR3FZSQYQ8M2V93VDTTRW
+label: Outdoor cat microchipped before first going outside
+level: level-2
+level_reason: Normal-case requirement for outdoor cats.
+modality: must
+origin:
+  created_at: '2026-11-22T19:11:54.368356Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+refers_to:
+- cn_01M82AR3FZSQYQ8M2V93VDTTRG
+- cn_01M82AC66KMJH32E2MQ3Z7ZBKT
+- rl_01M82AR3FZSQYQ8M2V93VDTTRR
+scope:
+- co_01M82APMQ5V0PTBT5SDYAF1JAP
+status: proposed

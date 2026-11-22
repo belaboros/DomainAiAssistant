@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82APMQ7MGEVFK2CW6002H32
+id: st_01M82AWHX95SVMSNEZPEX87TRE
+label: No bathing without vet advice
+level: level-2
+level_reason: Normal grooming guidance.
+origin:
+  created_at: '2026-11-22T19:14:20.202324Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+status: proposed
+text: A cat should not be bathed unless the veterinarian advises it.

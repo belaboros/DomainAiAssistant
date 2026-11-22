@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82APMQ7MGEVFK2CW6002H34
+id: st_01M82AX2AYWV44F1MEHFVJNNFG
+label: Adult cat alone up to 24 hours
+level: level-2
+level_reason: Leaving the pet alone is normal-day owner knowledge.
+origin:
+  created_at: '2026-11-22T19:14:37.022463Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+status: proposed
+text: An adult cat can stay alone for up to 24 hours if it has enough food, fresh water and a clean litter box.

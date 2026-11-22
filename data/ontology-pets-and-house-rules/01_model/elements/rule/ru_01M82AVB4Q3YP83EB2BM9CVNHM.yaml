@@ -1,0 +1,22 @@
+action: let a new kitten explore one room first, then the rest of the flat
+actor: owner
+condition: when a new kitten arrives
+evidence:
+- unit: su_01M82APMQ7MGEVFK2CW6002H2Y
+id: ru_01M82AVB4Q3YP83EB2BM9CVNHM
+label: New kitten explores one room first
+level: level-3
+level_reason: Kittens are a special case.
+modality: must
+origin:
+  created_at: '2026-11-22T19:13:40.504822Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+refers_to:
+- cn_01M82AVB4Q3YP83EB2BM9CVNH9
+- cn_01M82AVB4Q3YP83EB2BM9CVNHE
+- cn_01M82ACZDNRYXG7FZCA8KC7FD5
+- rl_01M82AVB4Q3YP83EB2BM9CVNHH
+scope:
+- co_01M82APMQ5V0PTBT5SDYAF1JAP
+status: proposed

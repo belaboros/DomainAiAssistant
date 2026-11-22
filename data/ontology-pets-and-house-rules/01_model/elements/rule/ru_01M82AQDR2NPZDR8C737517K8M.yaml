@@ -1,0 +1,22 @@
+action: plan for someone to look after the cat
+actor: cat owner
+condition: when the owner travels
+evidence:
+- unit: su_01M82APMQ68JDJRTYQDVNXFWWJ
+id: ru_01M82AQDR2NPZDR8C737517K8M
+label: Plan care during travel
+level: level-3
+level_reason: Travel is a special case.
+modality: must
+origin:
+  created_at: '2026-11-22T19:11:32.099588Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+refers_to:
+- cn_01M82AQDR2NPZDR8C737517K87
+- cn_01M82AQDR2NPZDR8C737517K8B
+- cn_01M82AQDR2NPZDR8C737517K8C
+- rl_01M82AQDR2NPZDR8C737517K8H
+scope:
+- co_01M82APMQ5V0PTBT5SDYAF1JAP
+status: proposed

@@ -1,0 +1,36 @@
+- content_hash: sha256:46ead929b7caab7f92db81ba56b70102d2c205ca35640c7a2a2e3866796a9e64
+  document_id: doc_01M82APMQ68JDJRTYQDVNXFWWK
+  id: su_01M82APMQ68JDJRTYQDVNXFWWM
+  kind: paragraph
+  location:
+    heading_path:
+    - 2. Indoor or Outdoor Cat
+    index_in_section: 0
+    line_end: 3
+    line_start: 3
+    path: 02-indoor-or-outdoor-cat.md
+  text: Decide early whether your cat will be an indoor cat or an outdoor cat.
+- content_hash: sha256:1c5e367d2b6ea96a256094eb35aa17805fefe8ac35d6942d23b6ac2d88c44ef0
+  document_id: doc_01M82APMQ68JDJRTYQDVNXFWWK
+  id: su_01M82APMQ68JDJRTYQDVNXFWWN
+  kind: list_item
+  location:
+    heading_path:
+    - 2. Indoor or Outdoor Cat
+    index_in_section: 1
+    line_end: 5
+    line_start: 5
+    path: 02-indoor-or-outdoor-cat.md
+  text: An **indoor cat** never leaves the flat. On average it lives longer, but it needs more play and climbing places.
+- content_hash: sha256:54c5a80b6ca8d477a5ac2375173716baa44cff1ccb739758f8618551a222d3d7
+  document_id: doc_01M82APMQ68JDJRTYQDVNXFWWK
+  id: su_01M82APMQ68JDJRTYQDVNXFWWP
+  kind: list_item
+  location:
+    heading_path:
+    - 2. Indoor or Outdoor Cat
+    index_in_section: 2
+    line_end: 6
+    line_start: 6
+    path: 02-indoor-or-outdoor-cat.md
+  text: An **outdoor cat** goes outside on its own. It must be vaccinated and microchipped before it goes outside for the first time.

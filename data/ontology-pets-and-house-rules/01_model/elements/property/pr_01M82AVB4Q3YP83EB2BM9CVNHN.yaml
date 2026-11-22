@@ -1,0 +1,15 @@
+evidence:
+- unit: su_01M82APMQ7MGEVFK2CW6002H2Y
+id: pr_01M82AVB4Q3YP83EB2BM9CVNHN
+label: Kitten maximum age
+level: level-3
+level_reason: Kittens are a special case.
+name: age
+of: cn_01M82AVB4Q3YP83EB2BM9CVNH9
+origin:
+  created_at: '2026-11-22T19:13:40.504866Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+status: proposed
+unit: months
+value: younger than 6

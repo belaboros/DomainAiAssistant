@@ -1,0 +1,17 @@
+evidence:
+- unit: su_01M82APMQ68JDJRTYQDVNXFWWJ
+- unit: su_01M82APMQ7MGEVFK2CW6002H2W
+id: tm_01M82AQDR2NPZDR8C737517K82
+label: litter
+level: level-2
+level_reason: Daily care item.
+mentions:
+- concept: cn_01M82AQDR2NPZDR8C737517K89
+  unit: su_01M82APMQ68JDJRTYQDVNXFWWJ
+- concept: cn_01M82AQDR2NPZDR8C737517K89
+  unit: su_01M82APMQ7MGEVFK2CW6002H2W
+origin:
+  created_at: '2026-11-22T19:11:32.099041Z'
+  kind: llm
+  run_id: run_01M82APMQ5V0PTBT5SDYAF1JAN
+status: proposed
