@@ -3,8 +3,22 @@
   "compilerOptions": {
     "module": "esnext",
     "moduleResolution": "bundler",
-    "lib": ["ES2024", "DOM", "DOM.Iterable"],
-    "types": ["node"]
+    "lib": [
+      "ES2024",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "types": [
+      "node",
+      "vite/client"
+    ],
+    "jsx": "react-jsx",
+    "resolveJsonModule": true
   },
-  "include": ["src", "e2e", "*.config.ts"]
+  "include": [
+    "src",
+    "e2e",
+    "scripts",
+    "*.config.ts"
+  ]
 }

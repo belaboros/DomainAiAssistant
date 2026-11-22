@@ -1,0 +1,3441 @@
+{
+  "cases": [
+    {
+      "expected": [
+        "ru_01M7YZMHG0B9D5MPJTB9D5MQE9",
+        "ru_01M7YZMHG0B9D5MPJTB9D5MQEA",
+        "ru_01M7YZMHG0B9D5MPJTB9D5MQGK",
+        "ru_01M7YZMHG0B9D5MPJTB9D5MQGM",
+        "ru_01M7YZMHG0B9D5MPJTB9D5MQJ4",
+        "ru_01M7YZMHG0B9D5MPJTB9D5MQJ5",
+        "ru_01M7YZMHG0B9D5MPJTB9D5MQJ6",
+        "ru_01M7YZMHG0B9D5MPJTB9D5MQJ7",
+        "ru_01M7YZMHG0B9D5MPJTB9D5MQJZ",
+        "ru_01M7YZMHG0B9D5MPJTB9D5MQK0",
+        "ru_01M7YZMHG0B9D5MPJTB9D5MQKX",
+        "ru_01M7YZMHG0B9D5MPJTB9D5MQKY"
+      ],
+      "filters": {
+        "corpus": "02_building-and-house-rules",
+        "level": "level-1",
+        "type": "rule"
+      }
+    },
+    {
+      "expected": ["ru_01M7YZMHG0B9D5MPJTB9D5MQE9", "ru_01M7YZMHG0B9D5MPJTB9D5MQEA"],
+      "filters": {
+        "document": "doc_01M7YZMHG0B9D5MPJTB9D5MPMZ",
+        "type": "rule"
+      }
+    },
+    {
+      "expected": [
+        "cn_01M7YZMHG0B9D5MPJTB9D5MPYE",
+        "cn_01M7YZMHG0B9D5MPJTB9D5MPYF",
+        "cn_01M7YZMHG0B9D5MPJTB9D5MPYG",
+        "cn_01M7YZMHG0B9D5MPJTB9D5MQHC",
+        "cn_01M7YZMHG0B9D5MPJTB9D5MQHE",
+        "cn_01M7YZMHG0B9D5MPJTB9D5MQHF",
+        "cn_01M7YZMHG0B9D5MPJTB9D5MQHG",
+        "cn_01M7YZMHG0B9D5MPJTB9D5MQHH",
+        "cn_01M7YZMHG0B9D5MPJTB9D5MQQZ",
+        "cn_01M7YZMHG0B9D5MPJTB9D5MQR0",
+        "cn_01M7YZMHG0B9D5MPJTB9D5MQR1",
+        "cn_01M7YZMHG0B9D5MPJTB9D5MQR2",
+        "cn_01M7YZMHG0B9D5MPJTB9D5MQR3",
+        "cn_01M7YZMHG0B9D5MPJTB9D5MQR4",
+        "cn_01M7YZMHG0B9D5MPJTB9D5MQR5",
+        "cn_01M7YZMHG0B9D5MPJTB9D5MQR6",
+        "pr_01M7YZMHG0B9D5MPJTB9D5MQJA",
+        "rl_01M7YZMHG0B9D5MPJTB9D5MPYP",
+        "rl_01M7YZMHG0B9D5MPJTB9D5MPYQ",
+        "rl_01M7YZMHG0B9D5MPJTB9D5MQHW",
+        "rl_01M7YZMHG0B9D5MPJTB9D5MQR7",
+        "rl_01M7YZMHG0B9D5MPJTB9D5MQR8",
+        "rl_01M7YZMHG0B9D5MPJTB9D5MQR9",
+        "rl_01M7YZMHG0B9D5MPJTB9D5MQRA",
+        "rl_01M7YZMHG0B9D5MPJTB9D5MQRB",
+        "rl_01M7YZMHG0B9D5MPJTB9D5MQRC",
+        "rl_01M7YZMHG0B9D5MPJTB9D5MQRD",
+        "ru_01M7YZMHG0B9D5MPJTB9D5MPYW",
+        "ru_01M7YZMHG0B9D5MPJTB9D5MQJ4",
+        "ru_01M7YZMHG0B9D5MPJTB9D5MQJ5",
+        "ru_01M7YZMHG0B9D5MPJTB9D5MQRE",
+        "ru_01M7YZMHG0B9D5MPJTB9D5MQRF",
+        "st_01M7YZMHG0B9D5MPJTB9D5MPXZ",
+        "st_01M7YZMHG0B9D5MPJTB9D5MPY0",
+        "st_01M7YZMHG0B9D5MPJTB9D5MPY5",
+        "st_01M7YZMHG0B9D5MPJTB9D5MQGN",
+        "st_01M7YZMHG0B9D5MPJTB9D5MQGP",
+        "st_01M7YZMHG0B9D5MPJTB9D5MQQQ",
+        "st_01M7YZMHG0B9D5MPJTB9D5MQQR",
+        "tm_01M7YZMHG0B9D5MPJTB9D5MPY6",
+        "tm_01M7YZMHG0B9D5MPJTB9D5MPY7",
+        "tm_01M7YZMHG0B9D5MPJTB9D5MPY8",
+        "tm_01M7YZMHG0B9D5MPJTB9D5MQGW",
+        "tm_01M7YZMHG0B9D5MPJTB9D5MQGX",
+        "tm_01M7YZMHG0B9D5MPJTB9D5MQGY",
+        "tm_01M7YZMHG0B9D5MPJTB9D5MQGZ",
+        "tm_01M7YZMHG0B9D5MPJTB9D5MQH0",
+        "tm_01M7YZMHG0B9D5MPJTB9D5MQQS",
+        "tm_01M7YZMHG0B9D5MPJTB9D5MQQT",
+        "tm_01M7YZMHG0B9D5MPJTB9D5MQQV",
+        "tm_01M7YZMHG0B9D5MPJTB9D5MQQW",
+        "tm_01M7YZMHG0B9D5MPJTB9D5MQQX",
+        "tm_01M7YZMHG0B9D5MPJTB9D5MQQY"
+      ],
+      "filters": {
+        "q": "Lead"
+      }
+    },
+    {
+      "expected": ["cn_01M7YZMHG0B9D5MPJTB9D5MPXC", "cn_01M7YZMHG0B9D5MPJTB9D5MQHT"],
+      "filters": {
+        "level": "level-3",
+        "q": "dog",
+        "type": "concept"
+      }
+    },
+    {
+      "expected": [
+        "pr_01M7YZMHG0B9D5MPJTB9D5MPR1",
+        "pr_01M7YZMHG0B9D5MPJTB9D5MPVH",
+        "pr_01M7YZMHG0B9D5MPJTB9D5MQ01",
+        "pr_01M7YZMHG0B9D5MPJTB9D5MQ7C",
+        "pr_01M7YZMHG0B9D5MPJTB9D5MQAX",
+        "pr_01M7YZMHG0B9D5MPJTB9D5MQJA",
+        "pr_01M7YZMHG0B9D5MPJTB9D5MQNS"
+      ],
+      "filters": {
+        "status": "proposed",
+        "type": "property"
+      }
+    },
+    {
+      "expected": [],
+      "filters": {
+        "status": "approved"
+      }
+    }
+  ],
+  "corpora": [
+    {
+      "documents": [
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPJV",
+          "path": "01-before-you-get-a-dog.md",
+          "title": "1. Before You Get a Dog"
+        },
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPJZ",
+          "path": "02-choosing-a-breed.md",
+          "title": "2. Choosing a Breed"
+        },
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPK5",
+          "path": "03-health-and-care/01-feeding.md",
+          "title": "3. Health and Care — 3.1 Feeding"
+        },
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPK7",
+          "path": "03-health-and-care/02-vaccination-and-the-veterinarian.md",
+          "title": "3. Health and Care — 3.2 Vaccination and the Veterinarian"
+        },
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPK9",
+          "path": "03-health-and-care/03-grooming-and-hygiene.md",
+          "title": "3. Health and Care — 3.3 Grooming and Hygiene"
+        },
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPKB",
+          "path": "04-puppy-basics.md",
+          "title": "4. Puppy Basics"
+        },
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPKE",
+          "path": "05-walking-and-the-leash/01-choosing-a-leash.md",
+          "title": "5. Walking and the Leash — 5.1 Choosing a Leash"
+        },
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPKG",
+          "path": "05-walking-and-the-leash/02-leash-training.md",
+          "title": "5. Walking and the Leash — 5.2 Leash Training"
+        },
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPKJ",
+          "path": "05-walking-and-the-leash/03-daily-walks.md",
+          "title": "5. Walking and the Leash — 5.3 Daily Walks"
+        },
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPKM",
+          "path": "06-being-a-good-lead-for-your-dog.md",
+          "title": "6. Being a Good Lead for Your Dog"
+        },
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPKT",
+          "path": "07-training-and-commands.md",
+          "title": "7. Training and Commands"
+        },
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPKX",
+          "path": "08-leaving-your-dog-alone.md",
+          "title": "8. Leaving Your Dog Alone"
+        },
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPM0",
+          "path": "09-travelling-with-your-dog.md",
+          "title": "9. Travelling with Your Dog"
+        },
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPM2",
+          "path": "10-legal-obligations-and-responsibility.md",
+          "title": "10. Legal Obligations and Responsibility"
+        }
+      ],
+      "folder": "00_dog-owners-manual",
+      "source_path": "user-manuals-pets-and-house-rules/dog-owners-manual"
+    },
+    {
+      "documents": [
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPM5",
+          "path": "01-before-you-get-a-cat.md",
+          "title": "1. Before You Get a Cat"
+        },
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPM8",
+          "path": "02-indoor-or-outdoor-cat.md",
+          "title": "2. Indoor or Outdoor Cat"
+        },
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPMC",
+          "path": "03-home-and-equipment.md",
+          "title": "3. Home and Equipment"
+        },
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPME",
+          "path": "04-health-and-care/01-feeding.md",
+          "title": "4. Health and Care — 4.1 Feeding"
+        },
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPMG",
+          "path": "04-health-and-care/02-vaccination-and-the-veterinarian.md",
+          "title": "4. Health and Care — 4.2 Vaccination and the Veterinarian"
+        },
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPMJ",
+          "path": "04-health-and-care/03-litter-box-hygiene.md",
+          "title": "4. Health and Care — 4.3 Litter Box Hygiene"
+        },
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPMM",
+          "path": "05-kittens.md",
+          "title": "5. Kittens"
+        },
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPMP",
+          "path": "06-play-and-behaviour.md",
+          "title": "6. Play and Behaviour"
+        },
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPMR",
+          "path": "07-grooming.md",
+          "title": "7. Grooming"
+        },
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPMT",
+          "path": "08-leaving-your-cat-alone.md",
+          "title": "8. Leaving Your Cat Alone"
+        },
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPMW",
+          "path": "09-moving-house-with-a-cat.md",
+          "title": "9. Moving House with a Cat"
+        }
+      ],
+      "folder": "01_cat-owners-manual",
+      "source_path": "user-manuals-pets-and-house-rules/cat-owners-manual"
+    },
+    {
+      "documents": [
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPMZ",
+          "path": "01-scope-and-definitions.md",
+          "title": "1. Scope and Definitions"
+        },
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPN3",
+          "path": "02-quiet-hours.md",
+          "title": "2. Quiet Hours"
+        },
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPN5",
+          "path": "03-the-shared-inner-yard.md",
+          "title": "3. The Shared Inner Yard"
+        },
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPN7",
+          "path": "04-pets/01-registering-pets.md",
+          "title": "4. Pets — 4.1 Registering Pets"
+        },
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPN9",
+          "path": "04-pets/02-dogs.md",
+          "title": "4. Pets — 4.2 Dogs"
+        },
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPNE",
+          "path": "04-pets/03-cats.md",
+          "title": "4. Pets — 4.3 Cats"
+        },
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPNG",
+          "path": "05-waste-and-recycling.md",
+          "title": "5. Waste and Recycling"
+        },
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPNJ",
+          "path": "06-shared-spaces-and-escape-routes.md",
+          "title": "6. Shared Spaces and Escape Routes"
+        },
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPNM",
+          "path": "07-security-and-access.md",
+          "title": "7. Security and Access"
+        },
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPNP",
+          "path": "08-laundry-and-cellar.md",
+          "title": "8. Laundry and Cellar"
+        },
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPNR",
+          "path": "09-renovation-and-moving.md",
+          "title": "9. Renovation and Moving"
+        },
+        {
+          "id": "doc_01M7YZMHG0B9D5MPJTB9D5MPNT",
+          "path": "10-reporting-and-enforcement.md",
+          "title": "10. Reporting and Enforcement"
+        }
+      ],
+      "folder": "02_building-and-house-rules",
+      "source_path": "user-manuals-pets-and-house-rules/building-and-house-rules"
+    }
+  ],
+  "elements": [
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPJV"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MPP8",
+      "label": "dog",
+      "level": "level-1",
+      "search": "dog a dog lives 10 to 15 years. it needs daily exercise, company, training and veterinary care for its whole life. before you get a dog, check that your home, your working hours and your budget fit the dog you want. a dog older than 4 months must be registered with the local authority and must carry a microchip.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPJZ"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MPQE",
+      "label": "large or working breed",
+      "level": "level-2",
+      "search": "large or working breed **large and working breeds** (for example, border collie or german shepherd) need more space, more exercise and more mental work.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPK5"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MPRH",
+      "label": "adult dog",
+      "level": "level-2",
+      "search": "adult dog feed an adult dog twice a day and a puppy three to four times a day. fresh water must always be available. chocolate, grapes, onions and xylitol are poisonous to dogs.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPK7"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MPSE",
+      "label": "vaccination",
+      "level": "level-2",
+      "search": "vaccination a puppy receives its first vaccinations at 8 weeks of age. the rabies vaccination is mandatory and must be renewed every year. take your dog to the veterinarian for a check-up at least once a year.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPK9"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MPTB",
+      "label": "dog bed",
+      "level": "level-2",
+      "search": "dog bed brush your dog at least once a week; long-haired breeds need brushing every day. trim the claws when you can hear them clicking on the floor. wash your dog's bed and blankets once a week at 60 °c.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKE"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MPVS",
+      "label": "harness",
+      "level": "level-2",
+      "search": "harness use a leash of 1.5 to 2 metres for everyday walks. a retractable leash is not suitable in busy streets. attach the leash to a well-fitting collar or harness: you should be able to slide two fingers under the collar.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKJ"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MPXC",
+      "label": "puppy",
+      "level": "level-3",
+      "search": "puppy an adult dog needs at least two walks a day: 30 to 60 minutes in total for small breeds and up to 2 hours for large and working breeds. a puppy must be taken outside to relieve itself every 2 to 3 hours. always pick up your dog's waste and put it in a waste bin.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKM"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MPYE",
+      "label": "dog",
+      "level": "level-1",
+      "search": "dog your dog looks to you for direction. be its lead: a calm, consistent and confident leader whose signals it can trust. set clear rules (for example, whether the dog may lie on the sofa) and keep them. a dog that does not see its owner as a reliable lead may become anxious or try to take control.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKM"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MPYF",
+      "label": "owner",
+      "level": "level-1",
+      "search": "owner a dog that does not see its owner as a reliable lead may become anxious or try to take control.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "A calm, consistent and confident leader whose signals the dog can trust.",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKM"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MPYG",
+      "label": "lead (leader of the dog)",
+      "level": "level-2",
+      "search": "lead (leader of the dog) a calm, consistent and confident leader whose signals the dog can trust. your dog looks to you for direction. be its lead: a calm, consistent and confident leader whose signals it can trust. a dog that does not see its owner as a reliable lead may become anxious or try to take control.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKM"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MPYK",
+      "label": "household rule for the dog",
+      "level": "level-2",
+      "search": "household rule for the dog set clear rules (for example, whether the dog may lie on the sofa) and keep them.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "A social animal.",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKX"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MQ0C",
+      "label": "dog",
+      "level": "level-1",
+      "search": "dog a social animal. dogs are social animals. **never leave an adult dog alone at home for more than 6 hours.** puppies should not be left alone for more than 2 hours. before you leave, walk the dog, leave water and a safe chew toy, and keep your departure low-key. if your dog barks or howls while you are away, train it to be alone step by step, starting with a few minutes.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPM0"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MQ1G",
+      "label": "dog",
+      "level": "level-1",
+      "search": "dog in a car, a dog must travel in a crate or wear a safety harness attached to the seat belt. never leave a dog in a parked car in warm weather. for travel abroad, your dog needs a pet passport, a microchip and a valid rabies vaccination.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPM2"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MQ2J",
+      "label": "dog owner",
+      "level": "level-1",
+      "search": "dog owner you are liable for any damage your dog causes. third-party liability insurance for dog owners is strongly recommended, and it is mandatory for breeds classified as dangerous by the local authority. in public places, your dog must be kept on a leash unless a sign allows free running.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPM5"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MQ3K",
+      "label": "litter",
+      "level": "level-2",
+      "search": "litter a cat lives 12 to 18 years. cats are independent, but they still need daily attention, play and a clean environment. plan for food, litter, yearly veterinary visits and someone to look after the cat when you travel.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPM8"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MQ4M",
+      "label": "play and climbing place",
+      "level": "level-2",
+      "search": "play and climbing place an **indoor cat** never leaves the flat. on average it lives longer, but it needs more play and climbing places.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPME"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MQ6P",
+      "label": "cat",
+      "level": "level-1",
+      "search": "cat feed an adult cat two to three small meals a day; kittens need four meals a day. cats need meat-based food. lilies, onions, chocolate and dog food are not suitable for cats; lilies are highly poisonous.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMG"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MQ7V",
+      "label": "kitten",
+      "level": "level-3",
+      "search": "kitten a kitten receives its first vaccinations at 8 weeks of age. a cat that goes outdoors must also be vaccinated against rabies, renewed every year. neuter your cat at about 5 to 6 months of age. visit the veterinarian at least once a year.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMJ"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MQ8W",
+      "label": "used litter",
+      "level": "level-1",
+      "search": "used litter provide one litter box per cat plus one extra. remove clumps every day and replace all litter once a week. used litter goes into the residual waste, never into the toilet or the compost.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMP"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MQAD",
+      "label": "cat",
+      "level": "level-1",
+      "search": "cat play with your cat for at least 15 minutes twice a day. a cat that scratches furniture usually needs a better scratching post, not punishment. never punish a cat physically. a cat that suddenly stops using its litter box may be ill and should see a veterinarian.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMR"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MQBE",
+      "label": "long-haired cat",
+      "level": "level-2",
+      "search": "long-haired cat short-haired cats groom themselves; brush them once a week to reduce hair in the flat. long-haired cats need brushing every day to prevent matting. do not bathe a cat unless the veterinarian advises it.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMT"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MQCA",
+      "label": "fresh water",
+      "level": "level-2",
+      "search": "fresh water an adult cat can stay alone for up to 24 hours if it has enough food, fresh water and a clean litter box. for longer absences, arrange for someone to visit the cat at least once a day.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMW"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MQD6",
+      "label": "closed room",
+      "level": "level-3",
+      "search": "closed room cats are attached to their territory. on moving day, keep the cat in a closed room with its litter box. after the move, keep an outdoor cat indoors for at least 2 weeks before you let it outside, so that it learns its new home.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "From 22:00 to 07:00 on weekdays and from 22:00 to 09:00 on weekends and public holidays.",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN3"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MQEP",
+      "label": "quiet hours",
+      "level": "level-2",
+      "search": "quiet hours from 22:00 to 07:00 on weekdays and from 22:00 to 09:00 on weekends and public holidays. quiet hours are from 22:00 to 07:00 on weekdays and from 22:00 to 09:00 on weekends and public holidays. during quiet hours, residents must avoid noise that can be heard in other flats or in the inner yard, including music, drilling and persistent barking.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN5"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MQFK",
+      "label": "bicycle rack",
+      "level": "level-3",
+      "search": "bicycle rack the inner yard is shared by all residents. children may play there between 08:00 and 20:00. bicycles must be parked in the bicycle racks only. barbecues are allowed only in the marked barbecue area and never during quiet hours.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN7"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MQGF",
+      "label": "pet registration",
+      "level": "level-1",
+      "search": "pet registration every pet (dog or cat) must be registered with the house management within 14 days of moving in or acquiring the pet. a pet owner must make sure that their pet does not disturb other residents.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN9"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MQHC",
+      "label": "dog",
+      "level": "level-1",
+      "search": "dog dogs must be kept on a lead at all times in the inner yard, the stairwells and the lifts. the lead may not be longer than 2 metres. dogs may not relieve themselves in the inner yard or the flower beds. dog owners take their dogs outside the building complex for this. the maximum time a dog may be left alone in a flat depends on the dog's education (training) and its specific breed. owners are responsible for knowing the limit that applies to their dog. if a dog barks persistently while left alone, the house management may require the owner to arrange care.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN9"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MQHE",
+      "label": "lead",
+      "level": "level-1",
+      "search": "lead dogs must be kept on a lead at all times in the inner yard, the stairwells and the lifts. the lead may not be longer than 2 metres.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN9"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MQHF",
+      "label": "inner yard",
+      "level": "level-2",
+      "search": "inner yard dogs must be kept on a lead at all times in the inner yard, the stairwells and the lifts. the lead may not be longer than 2 metres. dogs may not relieve themselves in the inner yard or the flower beds. dog owners take their dogs outside the building complex for this.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN9"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MQHG",
+      "label": "stairwell",
+      "level": "level-2",
+      "search": "stairwell dogs must be kept on a lead at all times in the inner yard, the stairwells and the lifts. the lead may not be longer than 2 metres.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN9"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MQHH",
+      "label": "lift",
+      "level": "level-2",
+      "search": "lift dogs must be kept on a lead at all times in the inner yard, the stairwells and the lifts. the lead may not be longer than 2 metres.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN9"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MQHT",
+      "label": "care arrangement",
+      "level": "level-3",
+      "search": "care arrangement if a dog barks persistently while left alone, the house management may require the owner to arrange care.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNG"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MQKE",
+      "label": "paper",
+      "level": "level-3",
+      "search": "paper waste is sorted in the bin room of building b: paper, plastic, glass, organic waste and residual waste. pet waste and used cat litter go into the residual waste bin only. bulky items must be booked for collection with the house management.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNJ"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MQME",
+      "label": "shared indoor space",
+      "level": "level-2",
+      "search": "shared indoor space stairwells, corridors and escape routes must be kept free of objects, including prams, shoes and pet equipment. smoking is not allowed in any shared indoor space.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNM"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MQNB",
+      "label": "building",
+      "level": "level-2",
+      "search": "building the main doors of each building stay closed and locked from 22:00 to 06:00; residents open them with their own key. do not let strangers into the building. lost keys must be reported to the house management at once.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNP"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MQP9",
+      "label": "booking list",
+      "level": "level-3",
+      "search": "booking list the shared laundry room is in the cellar of building a and may be used from 07:00 to 21:00. book a slot on the list at the door. pet blankets, pet beds and other pet textiles may not be washed in the shared washing machines. each flat has one cellar compartment; flammable liquids may not be stored there.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNR"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MQQA",
+      "label": "drilling",
+      "level": "level-3",
+      "search": "drilling noisy work such as drilling is allowed on weekdays from 08:00 to 12:00 and from 14:00 to 18:00, and on saturdays from 09:00 to 12:00. announce a move to the house management at least 7 days in advance, and protect the lift with the covers provided.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNT"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MQQZ",
+      "label": "house management",
+      "level": "level-1",
+      "search": "house management report damage, noise complaints and rule violations to the house management in writing. repeated violations after a written warning may lead to termination of the tenancy.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNT"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MQR0",
+      "label": "written report",
+      "level": "level-3",
+      "search": "written report report damage, noise complaints and rule violations to the house management in writing. repeated violations after a written warning may lead to termination of the tenancy.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNT"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MQR1",
+      "label": "damage",
+      "level": "level-3",
+      "search": "damage report damage, noise complaints and rule violations to the house management in writing. repeated violations after a written warning may lead to termination of the tenancy.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNT"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MQR2",
+      "label": "noise complaint",
+      "level": "level-3",
+      "search": "noise complaint report damage, noise complaints and rule violations to the house management in writing. repeated violations after a written warning may lead to termination of the tenancy.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNT"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MQR3",
+      "label": "rule violation",
+      "level": "level-3",
+      "search": "rule violation report damage, noise complaints and rule violations to the house management in writing. repeated violations after a written warning may lead to termination of the tenancy.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNT"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MQR4",
+      "label": "written warning",
+      "level": "level-3",
+      "search": "written warning report damage, noise complaints and rule violations to the house management in writing. repeated violations after a written warning may lead to termination of the tenancy.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNT"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MQR5",
+      "label": "termination of the tenancy",
+      "level": "level-3",
+      "search": "termination of the tenancy report damage, noise complaints and rule violations to the house management in writing. repeated violations after a written warning may lead to termination of the tenancy.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNT"],
+      "id": "cn_01M7YZMHG0B9D5MPJTB9D5MQR6",
+      "label": "tenancy",
+      "level": "level-3",
+      "search": "tenancy report damage, noise complaints and rule violations to the house management in writing. repeated violations after a written warning may lead to termination of the tenancy.",
+      "status": "proposed",
+      "type": "concept"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPJZ"],
+      "id": "pr_01M7YZMHG0B9D5MPJTB9D5MPR1",
+      "label": "Exercise need of large and working breeds",
+      "level": "level-2",
+      "search": "exercise need of large and working breeds **large and working breeds** (for example, border collie or german shepherd) need more space, more exercise and more mental work.",
+      "status": "proposed",
+      "type": "property"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKB"],
+      "id": "pr_01M7YZMHG0B9D5MPJTB9D5MPVH",
+      "label": "Minimum age to leave mother",
+      "level": "level-3",
+      "search": "minimum age to leave mother a puppy is a dog younger than 6 months. puppies should not leave their mother before 8 weeks of age.",
+      "status": "proposed",
+      "type": "property"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKT"],
+      "id": "pr_01M7YZMHG0B9D5MPJTB9D5MQ01",
+      "label": "Training session frequency",
+      "level": "level-2",
+      "search": "training session frequency every dog should learn five basic commands: *sit*, *down*, *stay*, *come* and *leave it*. train in short sessions of 5 to 10 minutes, several times a day, and always end with a success.",
+      "status": "proposed",
+      "type": "property"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPME"],
+      "id": "pr_01M7YZMHG0B9D5MPJTB9D5MQ7C",
+      "label": "Kitten meals per day",
+      "level": "level-3",
+      "search": "kitten meals per day feed an adult cat two to three small meals a day; kittens need four meals a day. cats need meat-based food. lilies, onions, chocolate and dog food are not suitable for cats; lilies are highly poisonous.",
+      "status": "proposed",
+      "type": "property"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMP"],
+      "id": "pr_01M7YZMHG0B9D5MPJTB9D5MQAX",
+      "label": "Minimum play session length",
+      "level": "level-2",
+      "search": "minimum play session length play with your cat for at least 15 minutes twice a day. a cat that scratches furniture usually needs a better scratching post, not punishment. never punish a cat physically. a cat that suddenly stops using its litter box may be ill and should see a veterinarian.",
+      "status": "proposed",
+      "type": "property"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN9"],
+      "id": "pr_01M7YZMHG0B9D5MPJTB9D5MQJA",
+      "label": "Maximum lead length",
+      "level": "level-1",
+      "search": "maximum lead length dogs must be kept on a lead at all times in the inner yard, the stairwells and the lifts. the lead may not be longer than 2 metres.",
+      "status": "proposed",
+      "type": "property"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNM"],
+      "id": "pr_01M7YZMHG0B9D5MPJTB9D5MQNS",
+      "label": "Main door locking period",
+      "level": "level-2",
+      "search": "main door locking period the main doors of each building stay closed and locked from 22:00 to 06:00; residents open them with their own key. do not let strangers into the building. lost keys must be reported to the house management at once.",
+      "status": "proposed",
+      "type": "property"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPJV"],
+      "id": "rl_01M7YZMHG0B9D5MPJTB9D5MPPN",
+      "label": "needs",
+      "level": "level-2",
+      "search": "needs a dog lives 10 to 15 years. it needs daily exercise, company, training and veterinary care for its whole life. before you get a dog, check that your home, your working hours and your budget fit the dog you want.",
+      "status": "proposed",
+      "type": "relation"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPK5"],
+      "id": "rl_01M7YZMHG0B9D5MPJTB9D5MPRW",
+      "label": "is poisonous to",
+      "level": "level-2",
+      "search": "is poisonous to feed an adult dog twice a day and a puppy three to four times a day. fresh water must always be available. chocolate, grapes, onions and xylitol are poisonous to dogs.",
+      "status": "proposed",
+      "type": "relation"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPK9"],
+      "id": "rl_01M7YZMHG0B9D5MPJTB9D5MPTJ",
+      "label": "is a breed of",
+      "level": "level-2",
+      "search": "is a breed of brush your dog at least once a week; long-haired breeds need brushing every day. trim the claws when you can hear them clicking on the floor. wash your dog's bed and blankets once a week at 60 °c.",
+      "status": "proposed",
+      "type": "relation"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKJ"],
+      "id": "rl_01M7YZMHG0B9D5MPJTB9D5MPXM",
+      "label": "needs",
+      "level": "level-2",
+      "search": "needs an adult dog needs at least two walks a day: 30 to 60 minutes in total for small breeds and up to 2 hours for large and working breeds. a puppy must be taken outside to relieve itself every 2 to 3 hours. always pick up your dog's waste and put it in a waste bin.",
+      "status": "proposed",
+      "type": "relation"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKM"],
+      "id": "rl_01M7YZMHG0B9D5MPJTB9D5MPYP",
+      "label": "looks to for direction",
+      "level": "level-2",
+      "search": "looks to for direction your dog looks to you for direction. be its lead: a calm, consistent and confident leader whose signals it can trust.",
+      "status": "proposed",
+      "type": "relation"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKM"],
+      "id": "rl_01M7YZMHG0B9D5MPJTB9D5MPYQ",
+      "label": "acts as",
+      "level": "level-2",
+      "search": "acts as your dog looks to you for direction. be its lead: a calm, consistent and confident leader whose signals it can trust. a dog that does not see its owner as a reliable lead may become anxious or try to take control.",
+      "status": "proposed",
+      "type": "relation"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKT"],
+      "id": "rl_01M7YZMHG0B9D5MPJTB9D5MPZR",
+      "label": "must pass",
+      "level": "level-3",
+      "search": "must pass a dog training course with a certified trainer is recommended in the first year. dogs of breeds classified as dangerous must pass an obedience test.",
+      "status": "proposed",
+      "type": "relation"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPM0"],
+      "id": "rl_01M7YZMHG0B9D5MPJTB9D5MQ1X",
+      "label": "requires",
+      "level": "level-3",
+      "search": "requires in a car, a dog must travel in a crate or wear a safety harness attached to the seat belt. never leave a dog in a parked car in warm weather. for travel abroad, your dog needs a pet passport, a microchip and a valid rabies vaccination.",
+      "status": "proposed",
+      "type": "relation"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPM5"],
+      "id": "rl_01M7YZMHG0B9D5MPJTB9D5MQ3S",
+      "label": "has yearly",
+      "level": "level-2",
+      "search": "has yearly a cat lives 12 to 18 years. cats are independent, but they still need daily attention, play and a clean environment. plan for food, litter, yearly veterinary visits and someone to look after the cat when you travel.",
+      "status": "proposed",
+      "type": "relation"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMC"],
+      "id": "rl_01M7YZMHG0B9D5MPJTB9D5MQ5X",
+      "label": "needs",
+      "level": "level-2",
+      "search": "needs every cat needs a litter box, a scratching post, food and water bowls placed away from the litter box, and a quiet place to sleep. secure windows and balconies with a net, because cats can fall from height.",
+      "status": "proposed",
+      "type": "relation"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPME"],
+      "id": "rl_01M7YZMHG0B9D5MPJTB9D5MQ74",
+      "label": "is not suitable for",
+      "level": "level-2",
+      "search": "is not suitable for feed an adult cat two to three small meals a day; kittens need four meals a day. cats need meat-based food. lilies, onions, chocolate and dog food are not suitable for cats; lilies are highly poisonous.",
+      "status": "proposed",
+      "type": "relation"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMJ"],
+      "id": "rl_01M7YZMHG0B9D5MPJTB9D5MQ94",
+      "label": "is removed from",
+      "level": "level-2",
+      "search": "is removed from provide one litter box per cat plus one extra. remove clumps every day and replace all litter once a week. used litter goes into the residual waste, never into the toilet or the compost.",
+      "status": "proposed",
+      "type": "relation"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMR"],
+      "id": "rl_01M7YZMHG0B9D5MPJTB9D5MQBQ",
+      "label": "is brushed by",
+      "level": "level-2",
+      "search": "is brushed by short-haired cats groom themselves; brush them once a week to reduce hair in the flat. long-haired cats need brushing every day to prevent matting. do not bathe a cat unless the veterinarian advises it.",
+      "status": "proposed",
+      "type": "relation"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMW"],
+      "id": "rl_01M7YZMHG0B9D5MPJTB9D5MQDB",
+      "label": "learns",
+      "level": "level-3",
+      "search": "learns cats are attached to their territory. on moving day, keep the cat in a closed room with its litter box. after the move, keep an outdoor cat indoors for at least 2 weeks before you let it outside, so that it learns its new home.",
+      "status": "proposed",
+      "type": "relation"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN5"],
+      "id": "rl_01M7YZMHG0B9D5MPJTB9D5MQFQ",
+      "label": "is shared by",
+      "level": "level-2",
+      "search": "is shared by the inner yard is shared by all residents. children may play there between 08:00 and 20:00. bicycles must be parked in the bicycle racks only. barbecues are allowed only in the marked barbecue area and never during quiet hours.",
+      "status": "proposed",
+      "type": "relation"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN9"],
+      "id": "rl_01M7YZMHG0B9D5MPJTB9D5MQHW",
+      "label": "is kept on",
+      "level": "level-1",
+      "search": "is kept on dogs must be kept on a lead at all times in the inner yard, the stairwells and the lifts. the lead may not be longer than 2 metres.",
+      "status": "proposed",
+      "type": "relation"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN9"],
+      "id": "rl_01M7YZMHG0B9D5MPJTB9D5MQHZ",
+      "label": "depends on",
+      "level": "level-2",
+      "search": "depends on the maximum time a dog may be left alone in a flat depends on the dog's education (training) and its specific breed. owners are responsible for knowing the limit that applies to their dog.",
+      "status": "proposed",
+      "type": "relation"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNG"],
+      "id": "rl_01M7YZMHG0B9D5MPJTB9D5MQKS",
+      "label": "is sorted in",
+      "level": "level-2",
+      "search": "is sorted in waste is sorted in the bin room of building b: paper, plastic, glass, organic waste and residual waste. pet waste and used cat litter go into the residual waste bin only. bulky items must be booked for collection with the house management.",
+      "status": "proposed",
+      "type": "relation"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNM"],
+      "id": "rl_01M7YZMHG0B9D5MPJTB9D5MQNK",
+      "label": "has own",
+      "level": "level-2",
+      "search": "has own the main doors of each building stay closed and locked from 22:00 to 06:00; residents open them with their own key. do not let strangers into the building. lost keys must be reported to the house management at once.",
+      "status": "proposed",
+      "type": "relation"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNT"],
+      "id": "rl_01M7YZMHG0B9D5MPJTB9D5MQR7",
+      "label": "is submitted to",
+      "level": "level-3",
+      "search": "is submitted to report damage, noise complaints and rule violations to the house management in writing. repeated violations after a written warning may lead to termination of the tenancy.",
+      "status": "proposed",
+      "type": "relation"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNT"],
+      "id": "rl_01M7YZMHG0B9D5MPJTB9D5MQR8",
+      "label": "reports",
+      "level": "level-3",
+      "search": "reports report damage, noise complaints and rule violations to the house management in writing. repeated violations after a written warning may lead to termination of the tenancy.",
+      "status": "proposed",
+      "type": "relation"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNT"],
+      "id": "rl_01M7YZMHG0B9D5MPJTB9D5MQR9",
+      "label": "reports",
+      "level": "level-3",
+      "search": "reports report damage, noise complaints and rule violations to the house management in writing. repeated violations after a written warning may lead to termination of the tenancy.",
+      "status": "proposed",
+      "type": "relation"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNT"],
+      "id": "rl_01M7YZMHG0B9D5MPJTB9D5MQRA",
+      "label": "reports",
+      "level": "level-3",
+      "search": "reports report damage, noise complaints and rule violations to the house management in writing. repeated violations after a written warning may lead to termination of the tenancy.",
+      "status": "proposed",
+      "type": "relation"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNT"],
+      "id": "rl_01M7YZMHG0B9D5MPJTB9D5MQRB",
+      "label": "may lead to",
+      "level": "level-3",
+      "search": "may lead to report damage, noise complaints and rule violations to the house management in writing. repeated violations after a written warning may lead to termination of the tenancy.",
+      "status": "proposed",
+      "type": "relation"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNT"],
+      "id": "rl_01M7YZMHG0B9D5MPJTB9D5MQRC",
+      "label": "ends",
+      "level": "level-3",
+      "search": "ends report damage, noise complaints and rule violations to the house management in writing. repeated violations after a written warning may lead to termination of the tenancy.",
+      "status": "proposed",
+      "type": "relation"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNT"],
+      "id": "rl_01M7YZMHG0B9D5MPJTB9D5MQRD",
+      "label": "precedes",
+      "level": "level-3",
+      "search": "precedes report damage, noise complaints and rule violations to the house management in writing. repeated violations after a written warning may lead to termination of the tenancy.",
+      "status": "proposed",
+      "type": "relation"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPJV"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPPP",
+      "label": "Dog registration over 4 months",
+      "level": "level-1",
+      "search": "dog registration over 4 months a dog older than 4 months must be registered with the local authority and must carry a microchip.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPJV"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPPQ",
+      "label": "Dog microchip over 4 months",
+      "level": "level-1",
+      "search": "dog microchip over 4 months a dog older than 4 months must be registered with the local authority and must carry a microchip.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPJV"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPPR",
+      "label": "Check fit before getting a dog",
+      "level": "level-2",
+      "search": "check fit before getting a dog a dog lives 10 to 15 years. it needs daily exercise, company, training and veterinary care for its whole life. before you get a dog, check that your home, your working hours and your budget fit the dog you want.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPJZ"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPQX",
+      "label": "Check the local dangerous breed list before choosing",
+      "level": "level-3",
+      "search": "check the local dangerous breed list before choosing some breeds are classified as dangerous by the local authority. check the local list before you choose a breed.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPK5"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPRX",
+      "label": "Feed an adult dog twice a day",
+      "level": "level-2",
+      "search": "feed an adult dog twice a day feed an adult dog twice a day and a puppy three to four times a day. fresh water must always be available. chocolate, grapes, onions and xylitol are poisonous to dogs.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPK5"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPRY",
+      "label": "Feed a puppy three to four times a day",
+      "level": "level-3",
+      "search": "feed a puppy three to four times a day feed an adult dog twice a day and a puppy three to four times a day. fresh water must always be available. chocolate, grapes, onions and xylitol are poisonous to dogs.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPK5"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPRZ",
+      "label": "Fresh water always available",
+      "level": "level-2",
+      "search": "fresh water always available feed an adult dog twice a day and a puppy three to four times a day. fresh water must always be available. chocolate, grapes, onions and xylitol are poisonous to dogs.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPK7"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPSP",
+      "label": "Rabies vaccination is mandatory",
+      "level": "level-2",
+      "search": "rabies vaccination is mandatory a puppy receives its first vaccinations at 8 weeks of age. the rabies vaccination is mandatory and must be renewed every year. take your dog to the veterinarian for a check-up at least once a year.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPK7"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPSQ",
+      "label": "Renew rabies vaccination every year",
+      "level": "level-2",
+      "search": "renew rabies vaccination every year a puppy receives its first vaccinations at 8 weeks of age. the rabies vaccination is mandatory and must be renewed every year. take your dog to the veterinarian for a check-up at least once a year.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPK7"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPSR",
+      "label": "Veterinary check-up at least once a year",
+      "level": "level-2",
+      "search": "veterinary check-up at least once a year a puppy receives its first vaccinations at 8 weeks of age. the rabies vaccination is mandatory and must be renewed every year. take your dog to the veterinarian for a check-up at least once a year.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPK9"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPTK",
+      "label": "Brush dog at least once a week",
+      "level": "level-2",
+      "search": "brush dog at least once a week brush your dog at least once a week; long-haired breeds need brushing every day. trim the claws when you can hear them clicking on the floor. wash your dog's bed and blankets once a week at 60 °c.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPK9"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPTM",
+      "label": "Brush long-haired breeds daily",
+      "level": "level-2",
+      "search": "brush long-haired breeds daily brush your dog at least once a week; long-haired breeds need brushing every day. trim the claws when you can hear them clicking on the floor. wash your dog's bed and blankets once a week at 60 °c.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPK9"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPTN",
+      "label": "Trim claws when they click",
+      "level": "level-2",
+      "search": "trim claws when they click brush your dog at least once a week; long-haired breeds need brushing every day. trim the claws when you can hear them clicking on the floor. wash your dog's bed and blankets once a week at 60 °c.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPK9"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPTP",
+      "label": "Wash bed and blankets weekly",
+      "level": "level-2",
+      "search": "wash bed and blankets weekly brush your dog at least once a week; long-haired breeds need brushing every day. trim the claws when you can hear them clicking on the floor. wash your dog's bed and blankets once a week at 60 °c.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKB"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPVA",
+      "label": "Puppy stays with mother until 8 weeks",
+      "level": "level-3",
+      "search": "puppy stays with mother until 8 weeks a puppy is a dog younger than 6 months. puppies should not leave their mother before 8 weeks of age.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKB"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPVB",
+      "label": "House training starts on the first day",
+      "level": "level-3",
+      "search": "house training starts on the first day house training starts on the first day: take the puppy outside after every meal, after every nap and after play, and praise it when it relieves itself outside. between 8 and 16 weeks, let the puppy get to know many people, sounds, surfaces and traffic in a calm way.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKB"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPVC",
+      "label": "Take puppy outside after meals, naps and play",
+      "level": "level-3",
+      "search": "take puppy outside after meals, naps and play house training starts on the first day: take the puppy outside after every meal, after every nap and after play, and praise it when it relieves itself outside. between 8 and 16 weeks, let the puppy get to know many people, sounds, surfaces and traffic in a calm way.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKB"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPVD",
+      "label": "Praise puppy for relieving itself outside",
+      "level": "level-3",
+      "search": "praise puppy for relieving itself outside house training starts on the first day: take the puppy outside after every meal, after every nap and after play, and praise it when it relieves itself outside. between 8 and 16 weeks, let the puppy get to know many people, sounds, surfaces and traffic in a calm way.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKB"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPVE",
+      "label": "Socialise puppy between 8 and 16 weeks",
+      "level": "level-3",
+      "search": "socialise puppy between 8 and 16 weeks house training starts on the first day: take the puppy outside after every meal, after every nap and after play, and praise it when it relieves itself outside. between 8 and 16 weeks, let the puppy get to know many people, sounds, surfaces and traffic in a calm way.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKE"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPW0",
+      "label": "Everyday leash at least 1.5 m",
+      "level": "level-2",
+      "search": "everyday leash at least 1.5 m use a leash of 1.5 to 2 metres for everyday walks. a retractable leash is not suitable in busy streets. attach the leash to a well-fitting collar or harness: you should be able to slide two fingers under the collar.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKE"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPW1",
+      "label": "Everyday leash at most 2 m",
+      "level": "level-2",
+      "search": "everyday leash at most 2 m use a leash of 1.5 to 2 metres for everyday walks. a retractable leash is not suitable in busy streets. attach the leash to a well-fitting collar or harness: you should be able to slide two fingers under the collar.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKE"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPW2",
+      "label": "No retractable leash in busy streets",
+      "level": "level-2",
+      "search": "no retractable leash in busy streets use a leash of 1.5 to 2 metres for everyday walks. a retractable leash is not suitable in busy streets. attach the leash to a well-fitting collar or harness: you should be able to slide two fingers under the collar.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKE"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPW3",
+      "label": "Attach leash to well-fitting collar or harness",
+      "level": "level-2",
+      "search": "attach leash to well-fitting collar or harness use a leash of 1.5 to 2 metres for everyday walks. a retractable leash is not suitable in busy streets. attach the leash to a well-fitting collar or harness: you should be able to slide two fingers under the collar.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKE"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPW4",
+      "label": "Two fingers fit under collar",
+      "level": "level-2",
+      "search": "two fingers fit under collar use a leash of 1.5 to 2 metres for everyday walks. a retractable leash is not suitable in busy streets. attach the leash to a well-fitting collar or harness: you should be able to slide two fingers under the collar.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKG"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPWP",
+      "label": "Start leash training at 8 weeks at the earliest",
+      "level": "level-3",
+      "search": "start leash training at 8 weeks at the earliest start leash training when the puppy is 8 to 10 weeks old. reward the dog when the leash is loose, and stop walking when the dog pulls. never jerk the leash.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKG"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPWQ",
+      "label": "Start leash training by 10 weeks",
+      "level": "level-3",
+      "search": "start leash training by 10 weeks start leash training when the puppy is 8 to 10 weeks old. reward the dog when the leash is loose, and stop walking when the dog pulls. never jerk the leash.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKG"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPWR",
+      "label": "Reward the dog for a loose leash",
+      "level": "level-2",
+      "search": "reward the dog for a loose leash start leash training when the puppy is 8 to 10 weeks old. reward the dog when the leash is loose, and stop walking when the dog pulls. never jerk the leash.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKG"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPWS",
+      "label": "Stop walking when the dog pulls",
+      "level": "level-2",
+      "search": "stop walking when the dog pulls start leash training when the puppy is 8 to 10 weeks old. reward the dog when the leash is loose, and stop walking when the dog pulls. never jerk the leash.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKG"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPWT",
+      "label": "Never jerk the leash",
+      "level": "level-2",
+      "search": "never jerk the leash start leash training when the puppy is 8 to 10 weeks old. reward the dog when the leash is loose, and stop walking when the dog pulls. never jerk the leash.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKJ"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPXR",
+      "label": "Adult dog needs at least two walks a day",
+      "level": "level-2",
+      "search": "adult dog needs at least two walks a day an adult dog needs at least two walks a day: 30 to 60 minutes in total for small breeds and up to 2 hours for large and working breeds. a puppy must be taken outside to relieve itself every 2 to 3 hours. always pick up your dog's waste and put it in a waste bin.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKJ"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPXS",
+      "label": "Puppy taken outside every 2 to 3 hours",
+      "level": "level-3",
+      "search": "puppy taken outside every 2 to 3 hours an adult dog needs at least two walks a day: 30 to 60 minutes in total for small breeds and up to 2 hours for large and working breeds. a puppy must be taken outside to relieve itself every 2 to 3 hours. always pick up your dog's waste and put it in a waste bin.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKJ"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPXT",
+      "label": "Pick up dog waste and put it in a waste bin",
+      "level": "level-1",
+      "search": "pick up dog waste and put it in a waste bin an adult dog needs at least two walks a day: 30 to 60 minutes in total for small breeds and up to 2 hours for large and working breeds. a puppy must be taken outside to relieve itself every 2 to 3 hours. always pick up your dog's waste and put it in a waste bin.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKM"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPYW",
+      "label": "Owner must be a calm, consistent, confident lead",
+      "level": "level-2",
+      "search": "owner must be a calm, consistent, confident lead your dog looks to you for direction. be its lead: a calm, consistent and confident leader whose signals it can trust.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKM"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPYX",
+      "label": "Use the same command words every time",
+      "level": "level-2",
+      "search": "use the same command words every time use the same command words every time, and make sure everyone in the family uses them too.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKM"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPYY",
+      "label": "Everyone in the family uses the same command words",
+      "level": "level-2",
+      "search": "everyone in the family uses the same command words use the same command words every time, and make sure everyone in the family uses them too.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKM"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPYZ",
+      "label": "Set clear rules and keep them",
+      "level": "level-2",
+      "search": "set clear rules and keep them set clear rules (for example, whether the dog may lie on the sofa) and keep them.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKM"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPZ0",
+      "label": "Reward good behaviour immediately",
+      "level": "level-2",
+      "search": "reward good behaviour immediately reward good behaviour immediately; ignore unwanted behaviour instead of shouting.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKM"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPZ1",
+      "label": "Ignore unwanted behaviour",
+      "level": "level-2",
+      "search": "ignore unwanted behaviour reward good behaviour immediately; ignore unwanted behaviour instead of shouting.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKM"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPZ2",
+      "label": "Do not shout at unwanted behaviour",
+      "level": "level-2",
+      "search": "do not shout at unwanted behaviour reward good behaviour immediately; ignore unwanted behaviour instead of shouting.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKT"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPZS",
+      "label": "Dog should learn five basic commands",
+      "level": "level-2",
+      "search": "dog should learn five basic commands every dog should learn five basic commands: *sit*, *down*, *stay*, *come* and *leave it*. train in short sessions of 5 to 10 minutes, several times a day, and always end with a success.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKT"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPZT",
+      "label": "Training session at least 5 minutes",
+      "level": "level-2",
+      "search": "training session at least 5 minutes every dog should learn five basic commands: *sit*, *down*, *stay*, *come* and *leave it*. train in short sessions of 5 to 10 minutes, several times a day, and always end with a success.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKT"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPZV",
+      "label": "Training session at most 10 minutes",
+      "level": "level-2",
+      "search": "training session at most 10 minutes every dog should learn five basic commands: *sit*, *down*, *stay*, *come* and *leave it*. train in short sessions of 5 to 10 minutes, several times a day, and always end with a success.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKT"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPZW",
+      "label": "Always end training with a success",
+      "level": "level-2",
+      "search": "always end training with a success every dog should learn five basic commands: *sit*, *down*, *stay*, *come* and *leave it*. train in short sessions of 5 to 10 minutes, several times a day, and always end with a success.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKT"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPZX",
+      "label": "Training course recommended in first year",
+      "level": "level-2",
+      "search": "training course recommended in first year a dog training course with a certified trainer is recommended in the first year. dogs of breeds classified as dangerous must pass an obedience test.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKT"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MPZY",
+      "label": "Dangerous breeds must pass obedience test",
+      "level": "level-3",
+      "search": "dangerous breeds must pass obedience test a dog training course with a certified trainer is recommended in the first year. dogs of breeds classified as dangerous must pass an obedience test.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKX"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ0V",
+      "label": "Adult dog alone at most 6 hours",
+      "level": "level-2",
+      "search": "adult dog alone at most 6 hours dogs are social animals. **never leave an adult dog alone at home for more than 6 hours.** puppies should not be left alone for more than 2 hours.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKX"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ0W",
+      "label": "Puppy alone at most 2 hours",
+      "level": "level-3",
+      "search": "puppy alone at most 2 hours dogs are social animals. **never leave an adult dog alone at home for more than 6 hours.** puppies should not be left alone for more than 2 hours.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKX"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ0X",
+      "label": "Walk the dog before leaving",
+      "level": "level-2",
+      "search": "walk the dog before leaving before you leave, walk the dog, leave water and a safe chew toy, and keep your departure low-key. if your dog barks or howls while you are away, train it to be alone step by step, starting with a few minutes.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKX"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ0Y",
+      "label": "Leave water",
+      "level": "level-2",
+      "search": "leave water before you leave, walk the dog, leave water and a safe chew toy, and keep your departure low-key. if your dog barks or howls while you are away, train it to be alone step by step, starting with a few minutes.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKX"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ0Z",
+      "label": "Leave a safe chew toy",
+      "level": "level-2",
+      "search": "leave a safe chew toy before you leave, walk the dog, leave water and a safe chew toy, and keep your departure low-key. if your dog barks or howls while you are away, train it to be alone step by step, starting with a few minutes.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKX"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ10",
+      "label": "Keep departure low-key",
+      "level": "level-2",
+      "search": "keep departure low-key before you leave, walk the dog, leave water and a safe chew toy, and keep your departure low-key. if your dog barks or howls while you are away, train it to be alone step by step, starting with a few minutes.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKX"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ11",
+      "label": "Train a barking dog to be alone",
+      "level": "level-3",
+      "search": "train a barking dog to be alone before you leave, walk the dog, leave water and a safe chew toy, and keep your departure low-key. if your dog barks or howls while you are away, train it to be alone step by step, starting with a few minutes.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPM0"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ1Z",
+      "label": "Dog in car must be in crate or harness",
+      "level": "level-3",
+      "search": "dog in car must be in crate or harness in a car, a dog must travel in a crate or wear a safety harness attached to the seat belt. never leave a dog in a parked car in warm weather. for travel abroad, your dog needs a pet passport, a microchip and a valid rabies vaccination.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPM0"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ20",
+      "label": "Never leave dog in parked car in warm weather",
+      "level": "level-3",
+      "search": "never leave dog in parked car in warm weather in a car, a dog must travel in a crate or wear a safety harness attached to the seat belt. never leave a dog in a parked car in warm weather. for travel abroad, your dog needs a pet passport, a microchip and a valid rabies vaccination.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPM0"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ21",
+      "label": "Pet passport for travel abroad",
+      "level": "level-3",
+      "search": "pet passport for travel abroad in a car, a dog must travel in a crate or wear a safety harness attached to the seat belt. never leave a dog in a parked car in warm weather. for travel abroad, your dog needs a pet passport, a microchip and a valid rabies vaccination.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPM0"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ22",
+      "label": "Microchip for travel abroad",
+      "level": "level-3",
+      "search": "microchip for travel abroad in a car, a dog must travel in a crate or wear a safety harness attached to the seat belt. never leave a dog in a parked car in warm weather. for travel abroad, your dog needs a pet passport, a microchip and a valid rabies vaccination.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPM0"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ23",
+      "label": "Valid rabies vaccination for travel abroad",
+      "level": "level-3",
+      "search": "valid rabies vaccination for travel abroad in a car, a dog must travel in a crate or wear a safety harness attached to the seat belt. never leave a dog in a parked car in warm weather. for travel abroad, your dog needs a pet passport, a microchip and a valid rabies vaccination.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPM2"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ30",
+      "label": "Owner is liable for dog damage",
+      "level": "level-1",
+      "search": "owner is liable for dog damage you are liable for any damage your dog causes. third-party liability insurance for dog owners is strongly recommended, and it is mandatory for breeds classified as dangerous by the local authority. in public places, your dog must be kept on a leash unless a sign allows free running.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPM2"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ31",
+      "label": "Insurance mandatory for dangerous breeds",
+      "level": "level-3",
+      "search": "insurance mandatory for dangerous breeds you are liable for any damage your dog causes. third-party liability insurance for dog owners is strongly recommended, and it is mandatory for breeds classified as dangerous by the local authority. in public places, your dog must be kept on a leash unless a sign allows free running.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPM2"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ32",
+      "label": "Leash in public places",
+      "level": "level-1",
+      "search": "leash in public places you are liable for any damage your dog causes. third-party liability insurance for dog owners is strongly recommended, and it is mandatory for breeds classified as dangerous by the local authority. in public places, your dog must be kept on a leash unless a sign allows free running.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPM2"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ33",
+      "label": "Free running where a sign allows",
+      "level": "level-2",
+      "search": "free running where a sign allows you are liable for any damage your dog causes. third-party liability insurance for dog owners is strongly recommended, and it is mandatory for breeds classified as dangerous by the local authority. in public places, your dog must be kept on a leash unless a sign allows free running.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPM5"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ3V",
+      "label": "Plan for food and litter",
+      "level": "level-2",
+      "search": "plan for food and litter a cat lives 12 to 18 years. cats are independent, but they still need daily attention, play and a clean environment. plan for food, litter, yearly veterinary visits and someone to look after the cat when you travel.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPM5"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ3W",
+      "label": "Plan for yearly veterinary visits",
+      "level": "level-2",
+      "search": "plan for yearly veterinary visits a cat lives 12 to 18 years. cats are independent, but they still need daily attention, play and a clean environment. plan for food, litter, yearly veterinary visits and someone to look after the cat when you travel.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPM5"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ3X",
+      "label": "Plan for care during travel",
+      "level": "level-3",
+      "search": "plan for care during travel a cat lives 12 to 18 years. cats are independent, but they still need daily attention, play and a clean environment. plan for food, litter, yearly veterinary visits and someone to look after the cat when you travel.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPM5"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ3Y",
+      "label": "Give daily attention, play and a clean environment",
+      "level": "level-2",
+      "search": "give daily attention, play and a clean environment a cat lives 12 to 18 years. cats are independent, but they still need daily attention, play and a clean environment. plan for food, litter, yearly veterinary visits and someone to look after the cat when you travel.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPM8"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ4S",
+      "label": "Decide early between indoor and outdoor cat",
+      "level": "level-2",
+      "search": "decide early between indoor and outdoor cat decide early whether your cat will be an indoor cat or an outdoor cat.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPM8"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ4T",
+      "label": "Indoor cat never leaves the flat",
+      "level": "level-2",
+      "search": "indoor cat never leaves the flat an **indoor cat** never leaves the flat. on average it lives longer, but it needs more play and climbing places.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPM8"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ4V",
+      "label": "Outdoor cat vaccinated before first outing",
+      "level": "level-2",
+      "search": "outdoor cat vaccinated before first outing an **outdoor cat** goes outside on its own. it must be vaccinated and microchipped before it goes outside for the first time.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPM8"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ4W",
+      "label": "Outdoor cat microchipped before first outing",
+      "level": "level-2",
+      "search": "outdoor cat microchipped before first outing an **outdoor cat** goes outside on its own. it must be vaccinated and microchipped before it goes outside for the first time.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMC"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ62",
+      "label": "Cat owner must provide a litter box",
+      "level": "level-2",
+      "search": "cat owner must provide a litter box every cat needs a litter box, a scratching post, food and water bowls placed away from the litter box, and a quiet place to sleep. secure windows and balconies with a net, because cats can fall from height.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMC"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ63",
+      "label": "Cat owner must provide a scratching post",
+      "level": "level-2",
+      "search": "cat owner must provide a scratching post every cat needs a litter box, a scratching post, food and water bowls placed away from the litter box, and a quiet place to sleep. secure windows and balconies with a net, because cats can fall from height.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMC"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ64",
+      "label": "Cat owner must provide food and water bowls",
+      "level": "level-2",
+      "search": "cat owner must provide food and water bowls every cat needs a litter box, a scratching post, food and water bowls placed away from the litter box, and a quiet place to sleep. secure windows and balconies with a net, because cats can fall from height.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMC"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ65",
+      "label": "Bowls must be placed away from the litter box",
+      "level": "level-2",
+      "search": "bowls must be placed away from the litter box every cat needs a litter box, a scratching post, food and water bowls placed away from the litter box, and a quiet place to sleep. secure windows and balconies with a net, because cats can fall from height.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMC"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ66",
+      "label": "Cat owner must provide a quiet place to sleep",
+      "level": "level-2",
+      "search": "cat owner must provide a quiet place to sleep every cat needs a litter box, a scratching post, food and water bowls placed away from the litter box, and a quiet place to sleep. secure windows and balconies with a net, because cats can fall from height.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMC"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ67",
+      "label": "Secure windows and balconies with a net",
+      "level": "level-2",
+      "search": "secure windows and balconies with a net every cat needs a litter box, a scratching post, food and water bowls placed away from the litter box, and a quiet place to sleep. secure windows and balconies with a net, because cats can fall from height.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPME"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ77",
+      "label": "Feed an adult cat two to three small meals a day",
+      "level": "level-2",
+      "search": "feed an adult cat two to three small meals a day feed an adult cat two to three small meals a day; kittens need four meals a day. cats need meat-based food. lilies, onions, chocolate and dog food are not suitable for cats; lilies are highly poisonous.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPME"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ78",
+      "label": "Kittens need four meals a day",
+      "level": "level-3",
+      "search": "kittens need four meals a day feed an adult cat two to three small meals a day; kittens need four meals a day. cats need meat-based food. lilies, onions, chocolate and dog food are not suitable for cats; lilies are highly poisonous.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPME"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ79",
+      "label": "Give cats meat-based food",
+      "level": "level-2",
+      "search": "give cats meat-based food feed an adult cat two to three small meals a day; kittens need four meals a day. cats need meat-based food. lilies, onions, chocolate and dog food are not suitable for cats; lilies are highly poisonous.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPME"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ7A",
+      "label": "Do not feed cats lilies, onions, chocolate or dog food",
+      "level": "level-2",
+      "search": "do not feed cats lilies, onions, chocolate or dog food feed an adult cat two to three small meals a day; kittens need four meals a day. cats need meat-based food. lilies, onions, chocolate and dog food are not suitable for cats; lilies are highly poisonous.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMG"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ86",
+      "label": "Outdoor cat must be vaccinated against rabies",
+      "level": "level-2",
+      "search": "outdoor cat must be vaccinated against rabies a kitten receives its first vaccinations at 8 weeks of age. a cat that goes outdoors must also be vaccinated against rabies, renewed every year. neuter your cat at about 5 to 6 months of age. visit the veterinarian at least once a year.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMG"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ87",
+      "label": "Rabies vaccination renewed every year",
+      "level": "level-2",
+      "search": "rabies vaccination renewed every year a kitten receives its first vaccinations at 8 weeks of age. a cat that goes outdoors must also be vaccinated against rabies, renewed every year. neuter your cat at about 5 to 6 months of age. visit the veterinarian at least once a year.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMG"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ88",
+      "label": "Neuter the cat at about 5 to 6 months",
+      "level": "level-2",
+      "search": "neuter the cat at about 5 to 6 months a kitten receives its first vaccinations at 8 weeks of age. a cat that goes outdoors must also be vaccinated against rabies, renewed every year. neuter your cat at about 5 to 6 months of age. visit the veterinarian at least once a year.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMG"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ89",
+      "label": "Visit the veterinarian at least once a year",
+      "level": "level-2",
+      "search": "visit the veterinarian at least once a year a kitten receives its first vaccinations at 8 weeks of age. a cat that goes outdoors must also be vaccinated against rabies, renewed every year. neuter your cat at about 5 to 6 months of age. visit the veterinarian at least once a year.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMJ"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ95",
+      "label": "One litter box per cat plus one extra",
+      "level": "level-2",
+      "search": "one litter box per cat plus one extra provide one litter box per cat plus one extra. remove clumps every day and replace all litter once a week. used litter goes into the residual waste, never into the toilet or the compost.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMJ"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ96",
+      "label": "Remove clumps daily",
+      "level": "level-2",
+      "search": "remove clumps daily provide one litter box per cat plus one extra. remove clumps every day and replace all litter once a week. used litter goes into the residual waste, never into the toilet or the compost.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMJ"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ97",
+      "label": "Replace all litter weekly",
+      "level": "level-2",
+      "search": "replace all litter weekly provide one litter box per cat plus one extra. remove clumps every day and replace all litter once a week. used litter goes into the residual waste, never into the toilet or the compost.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMJ"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ98",
+      "label": "Used litter into residual waste",
+      "level": "level-1",
+      "search": "used litter into residual waste provide one litter box per cat plus one extra. remove clumps every day and replace all litter once a week. used litter goes into the residual waste, never into the toilet or the compost.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMJ"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ99",
+      "label": "No used litter in the toilet",
+      "level": "level-1",
+      "search": "no used litter in the toilet provide one litter box per cat plus one extra. remove clumps every day and replace all litter once a week. used litter goes into the residual waste, never into the toilet or the compost.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMJ"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ9A",
+      "label": "No used litter in the compost",
+      "level": "level-1",
+      "search": "no used litter in the compost provide one litter box per cat plus one extra. remove clumps every day and replace all litter once a week. used litter goes into the residual waste, never into the toilet or the compost.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMM"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQ9Z",
+      "label": "Kitten stays with mother until 12 weeks",
+      "level": "level-3",
+      "search": "kitten stays with mother until 12 weeks a kitten is a cat younger than 6 months. kittens should not leave their mother before 12 weeks of age. let a new kitten explore one room first, then the rest of the flat. kittens learn to use the litter box quickly if it is easy to reach.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMM"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQA0",
+      "label": "New kitten explores one room first",
+      "level": "level-3",
+      "search": "new kitten explores one room first a kitten is a cat younger than 6 months. kittens should not leave their mother before 12 weeks of age. let a new kitten explore one room first, then the rest of the flat. kittens learn to use the litter box quickly if it is easy to reach.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMP"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQAS",
+      "label": "Play with the cat at least 15 minutes per session",
+      "level": "level-2",
+      "search": "play with the cat at least 15 minutes per session play with your cat for at least 15 minutes twice a day. a cat that scratches furniture usually needs a better scratching post, not punishment. never punish a cat physically. a cat that suddenly stops using its litter box may be ill and should see a veterinarian.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMP"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQAT",
+      "label": "Play with the cat twice a day",
+      "level": "level-2",
+      "search": "play with the cat twice a day play with your cat for at least 15 minutes twice a day. a cat that scratches furniture usually needs a better scratching post, not punishment. never punish a cat physically. a cat that suddenly stops using its litter box may be ill and should see a veterinarian.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMP"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQAV",
+      "label": "Never punish a cat physically",
+      "level": "level-2",
+      "search": "never punish a cat physically play with your cat for at least 15 minutes twice a day. a cat that scratches furniture usually needs a better scratching post, not punishment. never punish a cat physically. a cat that suddenly stops using its litter box may be ill and should see a veterinarian.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMP"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQAW",
+      "label": "Cat avoiding litter box should see a veterinarian",
+      "level": "level-3",
+      "search": "cat avoiding litter box should see a veterinarian play with your cat for at least 15 minutes twice a day. a cat that scratches furniture usually needs a better scratching post, not punishment. never punish a cat physically. a cat that suddenly stops using its litter box may be ill and should see a veterinarian.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMR"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQBT",
+      "label": "Brush short-haired cats once a week",
+      "level": "level-2",
+      "search": "brush short-haired cats once a week short-haired cats groom themselves; brush them once a week to reduce hair in the flat. long-haired cats need brushing every day to prevent matting. do not bathe a cat unless the veterinarian advises it.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMR"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQBV",
+      "label": "Brush long-haired cats every day",
+      "level": "level-2",
+      "search": "brush long-haired cats every day short-haired cats groom themselves; brush them once a week to reduce hair in the flat. long-haired cats need brushing every day to prevent matting. do not bathe a cat unless the veterinarian advises it.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMR"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQBW",
+      "label": "Do not bathe a cat without vet advice",
+      "level": "level-2",
+      "search": "do not bathe a cat without vet advice short-haired cats groom themselves; brush them once a week to reduce hair in the flat. long-haired cats need brushing every day to prevent matting. do not bathe a cat unless the veterinarian advises it.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMT"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQCJ",
+      "label": "Adult cat may stay alone up to 24 hours",
+      "level": "level-2",
+      "search": "adult cat may stay alone up to 24 hours an adult cat can stay alone for up to 24 hours if it has enough food, fresh water and a clean litter box. for longer absences, arrange for someone to visit the cat at least once a day.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMT"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQCK",
+      "label": "Arrange daily visit for longer absences",
+      "level": "level-2",
+      "search": "arrange daily visit for longer absences an adult cat can stay alone for up to 24 hours if it has enough food, fresh water and a clean litter box. for longer absences, arrange for someone to visit the cat at least once a day.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMW"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQDC",
+      "label": "Keep cat in closed room on moving day",
+      "level": "level-3",
+      "search": "keep cat in closed room on moving day cats are attached to their territory. on moving day, keep the cat in a closed room with its litter box. after the move, keep an outdoor cat indoors for at least 2 weeks before you let it outside, so that it learns its new home.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMW"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQDD",
+      "label": "Keep outdoor cat indoors after move",
+      "level": "level-3",
+      "search": "keep outdoor cat indoors after move cats are attached to their territory. on moving day, keep the cat in a closed room with its litter box. after the move, keep an outdoor cat indoors for at least 2 weeks before you let it outside, so that it learns its new home.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMZ"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQE9",
+      "label": "Every resident must follow the house rules",
+      "level": "level-1",
+      "search": "every resident must follow the house rules these rules apply to buildings a, b and c around the shared inner yard. a **resident** is anyone who lives in one of the buildings: tenants, owners and their household members. the **house management** administers the buildings and enforces these rules. every resident must follow them.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMZ"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQEA",
+      "label": "House management enforces the house rules",
+      "level": "level-1",
+      "search": "house management enforces the house rules these rules apply to buildings a, b and c around the shared inner yard. a **resident** is anyone who lives in one of the buildings: tenants, owners and their household members. the **house management** administers the buildings and enforces these rules. every resident must follow them.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN3"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQEZ",
+      "label": "Avoid audible noise during quiet hours",
+      "level": "level-2",
+      "search": "avoid audible noise during quiet hours quiet hours are from 22:00 to 07:00 on weekdays and from 22:00 to 09:00 on weekends and public holidays. during quiet hours, residents must avoid noise that can be heard in other flats or in the inner yard, including music, drilling and persistent barking.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN5"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQFV",
+      "label": "Children may play in the yard between 08:00 and 20:00",
+      "level": "level-2",
+      "search": "children may play in the yard between 08:00 and 20:00 the inner yard is shared by all residents. children may play there between 08:00 and 20:00. bicycles must be parked in the bicycle racks only. barbecues are allowed only in the marked barbecue area and never during quiet hours.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN5"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQFW",
+      "label": "Bicycles must be parked only in the bicycle racks",
+      "level": "level-2",
+      "search": "bicycles must be parked only in the bicycle racks the inner yard is shared by all residents. children may play there between 08:00 and 20:00. bicycles must be parked in the bicycle racks only. barbecues are allowed only in the marked barbecue area and never during quiet hours.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN5"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQFX",
+      "label": "Barbecues only in the marked barbecue area",
+      "level": "level-2",
+      "search": "barbecues only in the marked barbecue area the inner yard is shared by all residents. children may play there between 08:00 and 20:00. bicycles must be parked in the bicycle racks only. barbecues are allowed only in the marked barbecue area and never during quiet hours.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN5"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQFY",
+      "label": "No barbecues during quiet hours",
+      "level": "level-2",
+      "search": "no barbecues during quiet hours the inner yard is shared by all residents. children may play there between 08:00 and 20:00. bicycles must be parked in the bicycle racks only. barbecues are allowed only in the marked barbecue area and never during quiet hours.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN7"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQGK",
+      "label": "Register pet within 14 days",
+      "level": "level-1",
+      "search": "register pet within 14 days every pet (dog or cat) must be registered with the house management within 14 days of moving in or acquiring the pet. a pet owner must make sure that their pet does not disturb other residents.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN7"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQGM",
+      "label": "Pet must not disturb other residents",
+      "level": "level-1",
+      "search": "pet must not disturb other residents every pet (dog or cat) must be registered with the house management within 14 days of moving in or acquiring the pet. a pet owner must make sure that their pet does not disturb other residents.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN9"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQJ4",
+      "label": "Dogs on lead in shared spaces",
+      "level": "level-1",
+      "search": "dogs on lead in shared spaces dogs must be kept on a lead at all times in the inner yard, the stairwells and the lifts. the lead may not be longer than 2 metres.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN9"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQJ5",
+      "label": "Lead at most 2 metres",
+      "level": "level-1",
+      "search": "lead at most 2 metres dogs must be kept on a lead at all times in the inner yard, the stairwells and the lifts. the lead may not be longer than 2 metres.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN9"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQJ6",
+      "label": "No relieving in yard or flower beds",
+      "level": "level-1",
+      "search": "no relieving in yard or flower beds dogs may not relieve themselves in the inner yard or the flower beds. dog owners take their dogs outside the building complex for this.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN9"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQJ7",
+      "label": "Take dogs outside the complex to relieve themselves",
+      "level": "level-1",
+      "search": "take dogs outside the complex to relieve themselves dogs may not relieve themselves in the inner yard or the flower beds. dog owners take their dogs outside the building complex for this.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN9"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQJ8",
+      "label": "Owner knows the alone-time limit",
+      "level": "level-2",
+      "search": "owner knows the alone-time limit the maximum time a dog may be left alone in a flat depends on the dog's education (training) and its specific breed. owners are responsible for knowing the limit that applies to their dog.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN9"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQJ9",
+      "label": "Management may require care for barking dog",
+      "level": "level-3",
+      "search": "management may require care for barking dog if a dog barks persistently while left alone, the house management may require the owner to arrange care.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNE"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQJY",
+      "label": "Cats may move freely in the inner yard",
+      "level": "level-2",
+      "search": "cats may move freely in the inner yard cats may move freely in the inner yard. cats may not be kept in the stairwells or the cellar. litter boxes must be kept inside the flat.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNE"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQJZ",
+      "label": "Cats not kept in stairwells or cellar",
+      "level": "level-1",
+      "search": "cats not kept in stairwells or cellar cats may move freely in the inner yard. cats may not be kept in the stairwells or the cellar. litter boxes must be kept inside the flat.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNE"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQK0",
+      "label": "Litter boxes kept inside the flat",
+      "level": "level-1",
+      "search": "litter boxes kept inside the flat cats may move freely in the inner yard. cats may not be kept in the stairwells or the cellar. litter boxes must be kept inside the flat.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNG"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQKX",
+      "label": "Pet waste only into residual waste bin",
+      "level": "level-1",
+      "search": "pet waste only into residual waste bin waste is sorted in the bin room of building b: paper, plastic, glass, organic waste and residual waste. pet waste and used cat litter go into the residual waste bin only. bulky items must be booked for collection with the house management.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNG"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQKY",
+      "label": "Used cat litter only into residual waste bin",
+      "level": "level-1",
+      "search": "used cat litter only into residual waste bin waste is sorted in the bin room of building b: paper, plastic, glass, organic waste and residual waste. pet waste and used cat litter go into the residual waste bin only. bulky items must be booked for collection with the house management.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNG"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQKZ",
+      "label": "Waste is sorted in the bin room",
+      "level": "level-2",
+      "search": "waste is sorted in the bin room waste is sorted in the bin room of building b: paper, plastic, glass, organic waste and residual waste. pet waste and used cat litter go into the residual waste bin only. bulky items must be booked for collection with the house management.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNG"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQM0",
+      "label": "Book bulky items for collection",
+      "level": "level-3",
+      "search": "book bulky items for collection waste is sorted in the bin room of building b: paper, plastic, glass, organic waste and residual waste. pet waste and used cat litter go into the residual waste bin only. bulky items must be booked for collection with the house management.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNJ"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQMV",
+      "label": "Keep stairwells, corridors and escape routes free of objects",
+      "level": "level-2",
+      "search": "keep stairwells, corridors and escape routes free of objects stairwells, corridors and escape routes must be kept free of objects, including prams, shoes and pet equipment. smoking is not allowed in any shared indoor space.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNJ"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQMW",
+      "label": "No pet equipment in stairwells, corridors or escape routes",
+      "level": "level-2",
+      "search": "no pet equipment in stairwells, corridors or escape routes stairwells, corridors and escape routes must be kept free of objects, including prams, shoes and pet equipment. smoking is not allowed in any shared indoor space.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNJ"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQMX",
+      "label": "No prams or shoes in stairwells, corridors or escape routes",
+      "level": "level-2",
+      "search": "no prams or shoes in stairwells, corridors or escape routes stairwells, corridors and escape routes must be kept free of objects, including prams, shoes and pet equipment. smoking is not allowed in any shared indoor space.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNJ"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQMY",
+      "label": "No smoking in shared indoor spaces",
+      "level": "level-2",
+      "search": "no smoking in shared indoor spaces stairwells, corridors and escape routes must be kept free of objects, including prams, shoes and pet equipment. smoking is not allowed in any shared indoor space.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNM"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQNN",
+      "label": "Main doors locked at night",
+      "level": "level-2",
+      "search": "main doors locked at night the main doors of each building stay closed and locked from 22:00 to 06:00; residents open them with their own key. do not let strangers into the building. lost keys must be reported to the house management at once.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNM"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQNP",
+      "label": "Residents open doors with own key",
+      "level": "level-2",
+      "search": "residents open doors with own key the main doors of each building stay closed and locked from 22:00 to 06:00; residents open them with their own key. do not let strangers into the building. lost keys must be reported to the house management at once.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNM"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQNQ",
+      "label": "Do not let strangers in",
+      "level": "level-2",
+      "search": "do not let strangers in the main doors of each building stay closed and locked from 22:00 to 06:00; residents open them with their own key. do not let strangers into the building. lost keys must be reported to the house management at once.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNM"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQNR",
+      "label": "Report lost keys at once",
+      "level": "level-3",
+      "search": "report lost keys at once the main doors of each building stay closed and locked from 22:00 to 06:00; residents open them with their own key. do not let strangers into the building. lost keys must be reported to the house management at once.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNP"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQPR",
+      "label": "Laundry room usage hours",
+      "level": "level-2",
+      "search": "laundry room usage hours the shared laundry room is in the cellar of building a and may be used from 07:00 to 21:00. book a slot on the list at the door. pet blankets, pet beds and other pet textiles may not be washed in the shared washing machines. each flat has one cellar compartment; flammable liquids may not be stored there.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNP"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQPS",
+      "label": "Book a laundry slot",
+      "level": "level-2",
+      "search": "book a laundry slot the shared laundry room is in the cellar of building a and may be used from 07:00 to 21:00. book a slot on the list at the door. pet blankets, pet beds and other pet textiles may not be washed in the shared washing machines. each flat has one cellar compartment; flammable liquids may not be stored there.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNP"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQPT",
+      "label": "No pet textiles in shared washing machines",
+      "level": "level-2",
+      "search": "no pet textiles in shared washing machines the shared laundry room is in the cellar of building a and may be used from 07:00 to 21:00. book a slot on the list at the door. pet blankets, pet beds and other pet textiles may not be washed in the shared washing machines. each flat has one cellar compartment; flammable liquids may not be stored there.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNP"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQPV",
+      "label": "No flammable liquids in cellar compartment",
+      "level": "level-2",
+      "search": "no flammable liquids in cellar compartment the shared laundry room is in the cellar of building a and may be used from 07:00 to 21:00. book a slot on the list at the door. pet blankets, pet beds and other pet textiles may not be washed in the shared washing machines. each flat has one cellar compartment; flammable liquids may not be stored there.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNP"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQPW",
+      "label": "One cellar compartment per flat",
+      "level": "level-2",
+      "search": "one cellar compartment per flat the shared laundry room is in the cellar of building a and may be used from 07:00 to 21:00. book a slot on the list at the door. pet blankets, pet beds and other pet textiles may not be washed in the shared washing machines. each flat has one cellar compartment; flammable liquids may not be stored there.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNR"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQQH",
+      "label": "Noisy work on weekdays only 08:00-12:00 and 14:00-18:00",
+      "level": "level-3",
+      "search": "noisy work on weekdays only 08:00-12:00 and 14:00-18:00 noisy work such as drilling is allowed on weekdays from 08:00 to 12:00 and from 14:00 to 18:00, and on saturdays from 09:00 to 12:00. announce a move to the house management at least 7 days in advance, and protect the lift with the covers provided.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNR"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQQJ",
+      "label": "Noisy work on Saturdays only 09:00-12:00",
+      "level": "level-3",
+      "search": "noisy work on saturdays only 09:00-12:00 noisy work such as drilling is allowed on weekdays from 08:00 to 12:00 and from 14:00 to 18:00, and on saturdays from 09:00 to 12:00. announce a move to the house management at least 7 days in advance, and protect the lift with the covers provided.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNR"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQQK",
+      "label": "Announce a move at least 7 days in advance",
+      "level": "level-3",
+      "search": "announce a move at least 7 days in advance noisy work such as drilling is allowed on weekdays from 08:00 to 12:00 and from 14:00 to 18:00, and on saturdays from 09:00 to 12:00. announce a move to the house management at least 7 days in advance, and protect the lift with the covers provided.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNR"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQQM",
+      "label": "Protect the lift with the covers provided during a move",
+      "level": "level-3",
+      "search": "protect the lift with the covers provided during a move noisy work such as drilling is allowed on weekdays from 08:00 to 12:00 and from 14:00 to 18:00, and on saturdays from 09:00 to 12:00. announce a move to the house management at least 7 days in advance, and protect the lift with the covers provided.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNT"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQRE",
+      "label": "Report damage, noise complaints and violations in writing to house management",
+      "level": "level-3",
+      "search": "report damage, noise complaints and violations in writing to house management report damage, noise complaints and rule violations to the house management in writing. repeated violations after a written warning may lead to termination of the tenancy.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNT"],
+      "id": "ru_01M7YZMHG0B9D5MPJTB9D5MQRF",
+      "label": "Repeated violations after written warning may lead to termination",
+      "level": "level-3",
+      "search": "repeated violations after written warning may lead to termination report damage, noise complaints and rule violations to the house management in writing. repeated violations after a written warning may lead to termination of the tenancy.",
+      "status": "proposed",
+      "type": "rule"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "A dog lives 10 to 15 years.",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPJV"],
+      "id": "st_01M7YZMHG0B9D5MPJTB9D5MPNW",
+      "label": "Dog lifespan",
+      "level": "level-2",
+      "search": "dog lifespan a dog lives 10 to 15 years. a dog lives 10 to 15 years. it needs daily exercise, company, training and veterinary care for its whole life. before you get a dog, check that your home, your working hours and your budget fit the dog you want.",
+      "status": "proposed",
+      "type": "statement"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "Check the local list of dangerous breeds before you choose a breed.",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPJZ"],
+      "id": "st_01M7YZMHG0B9D5MPJTB9D5MPQ0",
+      "label": "Check the local list",
+      "level": "level-3",
+      "search": "check the local list check the local list of dangerous breeds before you choose a breed. some breeds are classified as dangerous by the local authority. check the local list before you choose a breed.",
+      "status": "proposed",
+      "type": "statement"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "Long-haired breeds need brushing every day.",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPK9"],
+      "id": "st_01M7YZMHG0B9D5MPJTB9D5MPSW",
+      "label": "Daily brushing for long-haired breeds",
+      "level": "level-2",
+      "search": "daily brushing for long-haired breeds long-haired breeds need brushing every day. brush your dog at least once a week; long-haired breeds need brushing every day. trim the claws when you can hear them clicking on the floor. wash your dog's bed and blankets once a week at 60 °c.",
+      "status": "proposed",
+      "type": "statement"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "A retractable leash is not suitable in busy streets.",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKE"],
+      "id": "st_01M7YZMHG0B9D5MPJTB9D5MPVK",
+      "label": "Retractable leash unsuitable in busy streets",
+      "level": "level-2",
+      "search": "retractable leash unsuitable in busy streets a retractable leash is not suitable in busy streets. use a leash of 1.5 to 2 metres for everyday walks. a retractable leash is not suitable in busy streets. attach the leash to a well-fitting collar or harness: you should be able to slide two fingers under the collar.",
+      "status": "proposed",
+      "type": "statement"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "A puppy must be taken outside to relieve itself every 2 to 3 hours.",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKJ"],
+      "id": "st_01M7YZMHG0B9D5MPJTB9D5MPWZ",
+      "label": "Puppy toilet breaks",
+      "level": "level-3",
+      "search": "puppy toilet breaks a puppy must be taken outside to relieve itself every 2 to 3 hours. an adult dog needs at least two walks a day: 30 to 60 minutes in total for small breeds and up to 2 hours for large and working breeds. a puppy must be taken outside to relieve itself every 2 to 3 hours. always pick up your dog's waste and put it in a waste bin.",
+      "status": "proposed",
+      "type": "statement"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "A dog looks to its owner for direction.",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKM"],
+      "id": "st_01M7YZMHG0B9D5MPJTB9D5MPXZ",
+      "label": "Dog looks to owner for direction",
+      "level": "level-2",
+      "search": "dog looks to owner for direction a dog looks to its owner for direction. your dog looks to you for direction. be its lead: a calm, consistent and confident leader whose signals it can trust.",
+      "status": "proposed",
+      "type": "statement"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "The owner should be the dog's lead: a calm, consistent and confident leader whose signals the dog can trust.",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKM"],
+      "id": "st_01M7YZMHG0B9D5MPJTB9D5MPY0",
+      "label": "Owner should be a calm, consistent, confident lead",
+      "level": "level-2",
+      "search": "owner should be a calm, consistent, confident lead the owner should be the dog's lead: a calm, consistent and confident leader whose signals the dog can trust. your dog looks to you for direction. be its lead: a calm, consistent and confident leader whose signals it can trust.",
+      "status": "proposed",
+      "type": "statement"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "A dog that does not see its owner as a reliable lead may become anxious or try to take control.",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKM"],
+      "id": "st_01M7YZMHG0B9D5MPJTB9D5MPY5",
+      "label": "Consequence of an unreliable lead",
+      "level": "level-3",
+      "search": "consequence of an unreliable lead a dog that does not see its owner as a reliable lead may become anxious or try to take control. a dog that does not see its owner as a reliable lead may become anxious or try to take control.",
+      "status": "proposed",
+      "type": "statement"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "Dogs of breeds classified as dangerous must pass an obedience test.",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKT"],
+      "id": "st_01M7YZMHG0B9D5MPJTB9D5MPZ7",
+      "label": "Obedience test for dangerous breeds",
+      "level": "level-3",
+      "search": "obedience test for dangerous breeds dogs of breeds classified as dangerous must pass an obedience test. a dog training course with a certified trainer is recommended in the first year. dogs of breeds classified as dangerous must pass an obedience test.",
+      "status": "proposed",
+      "type": "statement"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "Third-party liability insurance for dog owners is strongly recommended.",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPM2"],
+      "id": "st_01M7YZMHG0B9D5MPJTB9D5MQ25",
+      "label": "Liability insurance recommended",
+      "level": "level-2",
+      "search": "liability insurance recommended third-party liability insurance for dog owners is strongly recommended. you are liable for any damage your dog causes. third-party liability insurance for dog owners is strongly recommended, and it is mandatory for breeds classified as dangerous by the local authority. in public places, your dog must be kept on a leash unless a sign allows free running.",
+      "status": "proposed",
+      "type": "statement"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "An indoor cat never leaves the flat.",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPM8"],
+      "id": "st_01M7YZMHG0B9D5MPJTB9D5MQ42",
+      "label": "Indoor cat never leaves the flat",
+      "level": "level-2",
+      "search": "indoor cat never leaves the flat an indoor cat never leaves the flat. an **indoor cat** never leaves the flat. on average it lives longer, but it needs more play and climbing places.",
+      "status": "proposed",
+      "type": "statement"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "Windows and balconies should be secured with a net.",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMC"],
+      "id": "st_01M7YZMHG0B9D5MPJTB9D5MQ55",
+      "label": "Secure windows and balconies with a net",
+      "level": "level-2",
+      "search": "secure windows and balconies with a net windows and balconies should be secured with a net. every cat needs a litter box, a scratching post, food and water bowls placed away from the litter box, and a quiet place to sleep. secure windows and balconies with a net, because cats can fall from height.",
+      "status": "proposed",
+      "type": "statement"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "A cat should be neutered at about 5 to 6 months of age.",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMG"],
+      "id": "st_01M7YZMHG0B9D5MPJTB9D5MQ7H",
+      "label": "Cat neutering age",
+      "level": "level-2",
+      "search": "cat neutering age a cat should be neutered at about 5 to 6 months of age. a kitten receives its first vaccinations at 8 weeks of age. a cat that goes outdoors must also be vaccinated against rabies, renewed every year. neuter your cat at about 5 to 6 months of age. visit the veterinarian at least once a year.",
+      "status": "proposed",
+      "type": "statement"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "An owner should play with their cat for at least 15 minutes twice a day.",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMP"],
+      "id": "st_01M7YZMHG0B9D5MPJTB9D5MQA3",
+      "label": "Daily play with a cat",
+      "level": "level-2",
+      "search": "daily play with a cat an owner should play with their cat for at least 15 minutes twice a day. play with your cat for at least 15 minutes twice a day. a cat that scratches furniture usually needs a better scratching post, not punishment. never punish a cat physically. a cat that suddenly stops using its litter box may be ill and should see a veterinarian.",
+      "status": "proposed",
+      "type": "statement"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "Cats are attached to their territory.",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMW"],
+      "id": "st_01M7YZMHG0B9D5MPJTB9D5MQCN",
+      "label": "Cats are territorial",
+      "level": "level-3",
+      "search": "cats are territorial cats are attached to their territory. cats are attached to their territory. on moving day, keep the cat in a closed room with its litter box. after the move, keep an outdoor cat indoors for at least 2 weeks before you let it outside, so that it learns its new home.",
+      "status": "proposed",
+      "type": "statement"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "During quiet hours, residents must avoid noise that can be heard in other flats or in the inner yard.",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN3"],
+      "id": "st_01M7YZMHG0B9D5MPJTB9D5MQEE",
+      "label": "Residents avoid audible noise during quiet hours",
+      "level": "level-2",
+      "search": "residents avoid audible noise during quiet hours during quiet hours, residents must avoid noise that can be heard in other flats or in the inner yard. quiet hours are from 22:00 to 07:00 on weekdays and from 22:00 to 09:00 on weekends and public holidays. during quiet hours, residents must avoid noise that can be heard in other flats or in the inner yard, including music, drilling and persistent barking.",
+      "status": "proposed",
+      "type": "statement"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "Dogs must be kept on a lead at all times in the inner yard, the stairwells and the lifts.",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN9"],
+      "id": "st_01M7YZMHG0B9D5MPJTB9D5MQGN",
+      "label": "Lead required in shared spaces",
+      "level": "level-1",
+      "search": "lead required in shared spaces dogs must be kept on a lead at all times in the inner yard, the stairwells and the lifts. dogs must be kept on a lead at all times in the inner yard, the stairwells and the lifts. the lead may not be longer than 2 metres.",
+      "status": "proposed",
+      "type": "statement"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "The lead may not be longer than 2 metres.",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN9"],
+      "id": "st_01M7YZMHG0B9D5MPJTB9D5MQGP",
+      "label": "Maximum lead length",
+      "level": "level-1",
+      "search": "maximum lead length the lead may not be longer than 2 metres. dogs must be kept on a lead at all times in the inner yard, the stairwells and the lifts. the lead may not be longer than 2 metres.",
+      "status": "proposed",
+      "type": "statement"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "Dog owners take their dogs outside the building complex to relieve themselves.",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN9"],
+      "id": "st_01M7YZMHG0B9D5MPJTB9D5MQGR",
+      "label": "Owners take dogs outside the complex to relieve themselves",
+      "level": "level-1",
+      "search": "owners take dogs outside the complex to relieve themselves dog owners take their dogs outside the building complex to relieve themselves. dogs may not relieve themselves in the inner yard or the flower beds. dog owners take their dogs outside the building complex for this.",
+      "status": "proposed",
+      "type": "statement"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "Stairwells, corridors and escape routes must be kept free of objects.",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNJ"],
+      "id": "st_01M7YZMHG0B9D5MPJTB9D5MQM2",
+      "label": "Escape routes kept free",
+      "level": "level-2",
+      "search": "escape routes kept free stairwells, corridors and escape routes must be kept free of objects. stairwells, corridors and escape routes must be kept free of objects, including prams, shoes and pet equipment. smoking is not allowed in any shared indoor space.",
+      "status": "proposed",
+      "type": "statement"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "A slot for the laundry room is booked on the list at the door.",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNP"],
+      "id": "st_01M7YZMHG0B9D5MPJTB9D5MQNW",
+      "label": "Laundry slot booking",
+      "level": "level-2",
+      "search": "laundry slot booking a slot for the laundry room is booked on the list at the door. the shared laundry room is in the cellar of building a and may be used from 07:00 to 21:00. book a slot on the list at the door. pet blankets, pet beds and other pet textiles may not be washed in the shared washing machines. each flat has one cellar compartment; flammable liquids may not be stored there.",
+      "status": "proposed",
+      "type": "statement"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "Damage, noise complaints and rule violations are reported to the house management in writing.",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNT"],
+      "id": "st_01M7YZMHG0B9D5MPJTB9D5MQQQ",
+      "label": "Reports in writing to house management",
+      "level": "level-3",
+      "search": "reports in writing to house management damage, noise complaints and rule violations are reported to the house management in writing. report damage, noise complaints and rule violations to the house management in writing. repeated violations after a written warning may lead to termination of the tenancy.",
+      "status": "proposed",
+      "type": "statement"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "Repeated violations after a written warning may lead to termination of the tenancy.",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNT"],
+      "id": "st_01M7YZMHG0B9D5MPJTB9D5MQQR",
+      "label": "Repeated violations may end tenancy",
+      "level": "level-3",
+      "search": "repeated violations may end tenancy repeated violations after a written warning may lead to termination of the tenancy. report damage, noise complaints and rule violations to the house management in writing. repeated violations after a written warning may lead to termination of the tenancy.",
+      "status": "proposed",
+      "type": "statement"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPJV"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MPP3",
+      "label": "microchip",
+      "level": "level-1",
+      "search": "microchip a dog older than 4 months must be registered with the local authority and must carry a microchip.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPJZ"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MPQ6",
+      "label": "dangerous",
+      "level": "level-3",
+      "search": "dangerous some breeds are classified as dangerous by the local authority. check the local list before you choose a breed.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPK5"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MPRC",
+      "label": "chocolate",
+      "level": "level-2",
+      "search": "chocolate feed an adult dog twice a day and a puppy three to four times a day. fresh water must always be available. chocolate, grapes, onions and xylitol are poisonous to dogs.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPK9"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MPSZ",
+      "label": "dog",
+      "level": "level-1",
+      "search": "dog brush your dog at least once a week; long-haired breeds need brushing every day. trim the claws when you can hear them clicking on the floor. wash your dog's bed and blankets once a week at 60 °c.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKG"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MPWB",
+      "label": "leash training",
+      "level": "level-2",
+      "search": "leash training start leash training when the puppy is 8 to 10 weeks old. reward the dog when the leash is loose, and stop walking when the dog pulls. never jerk the leash.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKJ"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MPX7",
+      "label": "dog",
+      "level": "level-1",
+      "search": "dog an adult dog needs at least two walks a day: 30 to 60 minutes in total for small breeds and up to 2 hours for large and working breeds. a puppy must be taken outside to relieve itself every 2 to 3 hours. always pick up your dog's waste and put it in a waste bin.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKM"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MPY6",
+      "label": "dog",
+      "level": "level-1",
+      "search": "dog your dog looks to you for direction. be its lead: a calm, consistent and confident leader whose signals it can trust. set clear rules (for example, whether the dog may lie on the sofa) and keep them. a dog that does not see its owner as a reliable lead may become anxious or try to take control.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKM"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MPY7",
+      "label": "lead",
+      "level": "level-2",
+      "search": "lead your dog looks to you for direction. be its lead: a calm, consistent and confident leader whose signals it can trust. a dog that does not see its owner as a reliable lead may become anxious or try to take control.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKM"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MPY8",
+      "label": "owner",
+      "level": "level-1",
+      "search": "owner a dog that does not see its owner as a reliable lead may become anxious or try to take control.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPKT"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MPZA",
+      "label": "session",
+      "level": "level-2",
+      "search": "session every dog should learn five basic commands: *sit*, *down*, *stay*, *come* and *leave it*. train in short sessions of 5 to 10 minutes, several times a day, and always end with a success.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPM0"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MQ17",
+      "label": "dog",
+      "level": "level-1",
+      "search": "dog in a car, a dog must travel in a crate or wear a safety harness attached to the seat belt. never leave a dog in a parked car in warm weather. for travel abroad, your dog needs a pet passport, a microchip and a valid rabies vaccination.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["00_dog-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPM2"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MQ29",
+      "label": "dog owner",
+      "level": "level-1",
+      "search": "dog owner you are liable for any damage your dog causes. third-party liability insurance for dog owners is strongly recommended, and it is mandatory for breeds classified as dangerous by the local authority. in public places, your dog must be kept on a leash unless a sign allows free running.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPM5"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MQ3D",
+      "label": "litter",
+      "level": "level-2",
+      "search": "litter a cat lives 12 to 18 years. cats are independent, but they still need daily attention, play and a clean environment. plan for food, litter, yearly veterinary visits and someone to look after the cat when you travel.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPM8"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MQ4D",
+      "label": "play and climbing places",
+      "level": "level-2",
+      "search": "play and climbing places an **indoor cat** never leaves the flat. on average it lives longer, but it needs more play and climbing places.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPME"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MQ6D",
+      "label": "cat",
+      "level": "level-1",
+      "search": "cat feed an adult cat two to three small meals a day; kittens need four meals a day. cats need meat-based food. lilies, onions, chocolate and dog food are not suitable for cats; lilies are highly poisonous.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMG"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MQ7M",
+      "label": "cat",
+      "level": "level-1",
+      "search": "cat a kitten receives its first vaccinations at 8 weeks of age. a cat that goes outdoors must also be vaccinated against rabies, renewed every year. neuter your cat at about 5 to 6 months of age. visit the veterinarian at least once a year.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMJ"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MQ8N",
+      "label": "clump",
+      "level": "level-2",
+      "search": "clump provide one litter box per cat plus one extra. remove clumps every day and replace all litter once a week. used litter goes into the residual waste, never into the toilet or the compost.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMP"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MQA8",
+      "label": "scratching post",
+      "level": "level-2",
+      "search": "scratching post play with your cat for at least 15 minutes twice a day. a cat that scratches furniture usually needs a better scratching post, not punishment. never punish a cat physically. a cat that suddenly stops using its litter box may be ill and should see a veterinarian.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMR"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MQB8",
+      "label": "bathing",
+      "level": "level-2",
+      "search": "bathing short-haired cats groom themselves; brush them once a week to reduce hair in the flat. long-haired cats need brushing every day to prevent matting. do not bathe a cat unless the veterinarian advises it.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["01_cat-owners-manual"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMW"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MQCR",
+      "label": "cat",
+      "level": "level-1",
+      "search": "cat cats are attached to their territory. on moving day, keep the cat in a closed room with its litter box. after the move, keep an outdoor cat indoors for at least 2 weeks before you let it outside, so that it learns its new home.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPMZ"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MQDN",
+      "label": "tenant",
+      "level": "level-1",
+      "search": "tenant these rules apply to buildings a, b and c around the shared inner yard. a **resident** is anyone who lives in one of the buildings: tenants, owners and their household members. the **house management** administers the buildings and enforces these rules. every resident must follow them.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN3"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MQEM",
+      "label": "flats",
+      "level": "level-2",
+      "search": "flats quiet hours are from 22:00 to 07:00 on weekdays and from 22:00 to 09:00 on weekends and public holidays. during quiet hours, residents must avoid noise that can be heard in other flats or in the inner yard, including music, drilling and persistent barking.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN7"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MQG2",
+      "label": "pet",
+      "level": "level-1",
+      "search": "pet every pet (dog or cat) must be registered with the house management within 14 days of moving in or acquiring the pet. a pet owner must make sure that their pet does not disturb other residents.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN9"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MQGW",
+      "label": "dog",
+      "level": "level-1",
+      "search": "dog dogs must be kept on a lead at all times in the inner yard, the stairwells and the lifts. the lead may not be longer than 2 metres. dogs may not relieve themselves in the inner yard or the flower beds. dog owners take their dogs outside the building complex for this. the maximum time a dog may be left alone in a flat depends on the dog's education (training) and its specific breed. owners are responsible for knowing the limit that applies to their dog. if a dog barks persistently while left alone, the house management may require the owner to arrange care.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN9"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MQGX",
+      "label": "lead",
+      "level": "level-1",
+      "search": "lead dogs must be kept on a lead at all times in the inner yard, the stairwells and the lifts. the lead may not be longer than 2 metres.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN9"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MQGY",
+      "label": "inner yard",
+      "level": "level-2",
+      "search": "inner yard dogs must be kept on a lead at all times in the inner yard, the stairwells and the lifts. the lead may not be longer than 2 metres. dogs may not relieve themselves in the inner yard or the flower beds. dog owners take their dogs outside the building complex for this.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN9"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MQGZ",
+      "label": "stairwell",
+      "level": "level-2",
+      "search": "stairwell dogs must be kept on a lead at all times in the inner yard, the stairwells and the lifts. the lead may not be longer than 2 metres.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN9"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MQH0",
+      "label": "lift",
+      "level": "level-2",
+      "search": "lift dogs must be kept on a lead at all times in the inner yard, the stairwells and the lifts. the lead may not be longer than 2 metres.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPN9"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MQH4",
+      "label": "building complex",
+      "level": "level-1",
+      "search": "building complex dogs may not relieve themselves in the inner yard or the flower beds. dog owners take their dogs outside the building complex for this.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNE"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MQJG",
+      "label": "stairwell",
+      "level": "level-2",
+      "search": "stairwell cats may move freely in the inner yard. cats may not be kept in the stairwells or the cellar. litter boxes must be kept inside the flat.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNG"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MQKA",
+      "label": "building B",
+      "level": "level-2",
+      "search": "building b waste is sorted in the bin room of building b: paper, plastic, glass, organic waste and residual waste. pet waste and used cat litter go into the residual waste bin only. bulky items must be booked for collection with the house management.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNM"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MQN4",
+      "label": "building",
+      "level": "level-2",
+      "search": "building the main doors of each building stay closed and locked from 22:00 to 06:00; residents open them with their own key. do not let strangers into the building. lost keys must be reported to the house management at once.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNP"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MQP4",
+      "label": "cellar compartment",
+      "level": "level-2",
+      "search": "cellar compartment the shared laundry room is in the cellar of building a and may be used from 07:00 to 21:00. book a slot on the list at the door. pet blankets, pet beds and other pet textiles may not be washed in the shared washing machines. each flat has one cellar compartment; flammable liquids may not be stored there.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNT"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MQQS",
+      "label": "house management",
+      "level": "level-1",
+      "search": "house management report damage, noise complaints and rule violations to the house management in writing. repeated violations after a written warning may lead to termination of the tenancy.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNT"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MQQT",
+      "label": "damage",
+      "level": "level-3",
+      "search": "damage report damage, noise complaints and rule violations to the house management in writing. repeated violations after a written warning may lead to termination of the tenancy.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNT"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MQQV",
+      "label": "noise complaint",
+      "level": "level-3",
+      "search": "noise complaint report damage, noise complaints and rule violations to the house management in writing. repeated violations after a written warning may lead to termination of the tenancy.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNT"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MQQW",
+      "label": "rule violation",
+      "level": "level-3",
+      "search": "rule violation report damage, noise complaints and rule violations to the house management in writing. repeated violations after a written warning may lead to termination of the tenancy.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNT"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MQQX",
+      "label": "written warning",
+      "level": "level-3",
+      "search": "written warning report damage, noise complaints and rule violations to the house management in writing. repeated violations after a written warning may lead to termination of the tenancy.",
+      "status": "proposed",
+      "type": "term"
+    },
+    {
+      "corpora": ["02_building-and-house-rules"],
+      "definition": "",
+      "documents": ["doc_01M7YZMHG0B9D5MPJTB9D5MPNT"],
+      "id": "tm_01M7YZMHG0B9D5MPJTB9D5MQQY",
+      "label": "termination of the tenancy",
+      "level": "level-3",
+      "search": "termination of the tenancy report damage, noise complaints and rule violations to the house management in writing. repeated violations after a written warning may lead to termination of the tenancy.",
+      "status": "proposed",
+      "type": "term"
+    }
+  ]
+}

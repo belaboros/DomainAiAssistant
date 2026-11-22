@@ -16,3 +16,4 @@ Create one with `/adr --app ontology-builder <decision>`, from [the template](..
 | [0008](0008-ingestion-depends-on-model.md) | Let ingestion depend on model | accepted | 2026-11-21 |
 | [0009](0009-workflows-depends-on-store-and-llm.md) | Let workflows depend on store and llm | accepted | 2026-11-21 |
 | [0010](0010-cli-depends-on-api.md) | Let cli depend on api | accepted | 2026-11-21 |
+| [0011](0011-api-types-with-openapi-typescript-calls-through-openapi-fetch.md) | Generate the GUI's API types with openapi-typescript and call the API through openapi-fetch | accepted | 2026-11-21 |

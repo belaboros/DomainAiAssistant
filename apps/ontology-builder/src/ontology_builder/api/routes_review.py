@@ -13,10 +13,12 @@ from ontology_builder.api.schemas import (
     ActionsOut,
     AuthorIn,
     CommitOut,
+    CorpusOut,
     CreateOntology,
     ElementFilter,
     ElementsOut,
     IdOut,
+    IndexEntryOut,
     StatementIn,
 )
 from ontology_builder.workflows import ADMIN_ACTIONS, create_ontology, filter_index
@@ -65,7 +67,9 @@ def elements(
     """The compact index of every element; the optional filters are those of the GUI."""
     found = filter_index(ontology.index(), filters.model_dump())
     return ElementsOut(
-        elements=[dict(e) for e in found], corpora=ontology.corpora(), pending=ontology.pending
+        elements=[IndexEntryOut.model_validate(e) for e in found],
+        corpora=[CorpusOut.model_validate(c) for c in ontology.corpora()],
+        pending=ontology.pending,
     )
 
 

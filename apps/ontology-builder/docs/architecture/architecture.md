@@ -43,7 +43,7 @@ flowchart LR
 
 ## 3. Components
 
-An arrow `A --> B` means "A depends on B". No cycles. `web` reaches `api` over HTTP only, through a client generated from the OpenAPI schema.
+An arrow `A --> B` means "A depends on B". No cycles. `web` reaches `api` over HTTP only: `web/src/api/schema.gen.ts` holds types generated from the exported OpenAPI schema (`web/openapi.json`), and every call goes through openapi-fetch in `web/src/api/index.ts` (ADR-0011).
 
 ```mermaid
 flowchart TB
@@ -97,7 +97,7 @@ flowchart TB
 | api | Exposes the use cases as a localhost JSON API and serves the built front end. | workflows, model | `src/ontology_builder/api/` |
 | cli | Exposes the use cases as `ontology-builder` commands. | workflows, evaluation, api (ADR-0010) | `src/ontology_builder/cli/` |
 | evaluation | Scores a live ingestion of the pet manuals against the answer key (the only component that may read it). | workflows, store | `src/ontology_builder/evaluation/` |
-| web | Renders the review GUI in the browser and talks to the API only over HTTP. | (api over HTTP) | `web/` |
+| web | Renders the review GUI in the browser and talks to the API only over HTTP. | (api over HTTP, generated types; ADR-0011) | `web/` |
 
 ## 4. Coupling and modularity
 

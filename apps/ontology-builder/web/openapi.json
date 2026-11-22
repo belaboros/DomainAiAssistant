@@ -142,6 +142,32 @@
         "title": "CommitOut",
         "type": "object"
       },
+      "CorpusOut": {
+        "properties": {
+          "documents": {
+            "items": {
+              "$ref": "#/components/schemas/DocumentOut"
+            },
+            "title": "Documents",
+            "type": "array"
+          },
+          "folder": {
+            "title": "Folder",
+            "type": "string"
+          },
+          "source_path": {
+            "title": "Source Path",
+            "type": "string"
+          }
+        },
+        "required": [
+          "folder",
+          "source_path",
+          "documents"
+        ],
+        "title": "CorpusOut",
+        "type": "object"
+      },
       "CreateOntology": {
         "properties": {
           "name": {
@@ -161,6 +187,35 @@
         "title": "CreateOntology",
         "type": "object"
       },
+      "DocumentOut": {
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "path": {
+            "title": "Path",
+            "type": "string"
+          },
+          "title": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Title"
+          }
+        },
+        "required": [
+          "id",
+          "path"
+        ],
+        "title": "DocumentOut",
+        "type": "object"
+      },
       "Done": {
         "properties": {
           "ok": {
@@ -172,20 +227,31 @@
         "title": "Done",
         "type": "object"
       },
+      "ElementStatus": {
+        "description": "Review status of an element (FR-23).",
+        "enum": [
+          "proposed",
+          "included",
+          "excluded",
+          "approved",
+          "rejected",
+          "deprecated"
+        ],
+        "title": "ElementStatus",
+        "type": "string"
+      },
       "ElementsOut": {
         "properties": {
           "corpora": {
             "items": {
-              "additionalProperties": true,
-              "type": "object"
+              "$ref": "#/components/schemas/CorpusOut"
             },
             "title": "Corpora",
             "type": "array"
           },
           "elements": {
             "items": {
-              "additionalProperties": true,
-              "type": "object"
+              "$ref": "#/components/schemas/IndexEntryOut"
             },
             "title": "Elements",
             "type": "array"
@@ -274,6 +340,72 @@
         "title": "IdOut",
         "type": "object"
       },
+      "IndexEntryOut": {
+        "description": "One element in the compact index the GUI filters (FR-19).",
+        "properties": {
+          "corpora": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Corpora",
+            "type": "array"
+          },
+          "definition": {
+            "title": "Definition",
+            "type": "string"
+          },
+          "documents": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Documents",
+            "type": "array"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "label": {
+            "title": "Label",
+            "type": "string"
+          },
+          "level": {
+            "$ref": "#/components/schemas/Level"
+          },
+          "search": {
+            "title": "Search",
+            "type": "string"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ElementStatus"
+          },
+          "type": {
+            "enum": [
+              "statement",
+              "term",
+              "concept",
+              "relation",
+              "rule",
+              "property"
+            ],
+            "title": "Type",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "type",
+          "label",
+          "status",
+          "level",
+          "definition",
+          "corpora",
+          "documents",
+          "search"
+        ],
+        "title": "IndexEntryOut",
+        "type": "object"
+      },
       "IngestIn": {
         "description": "A folder (under the sources root) as a new corpus, or units marked not ignorable.",
         "properties": {
@@ -332,6 +464,17 @@
         ],
         "title": "IngestOut",
         "type": "object"
+      },
+      "Level": {
+        "description": "How important an element is for a reader of the domain (FR-13).",
+        "enum": [
+          "level-1",
+          "level-2",
+          "level-3",
+          "ignorable"
+        ],
+        "title": "Level",
+        "type": "string"
       },
       "PublishIn": {
         "properties": {
@@ -445,6 +588,10 @@
       },
       "SessionOut": {
         "properties": {
+          "ontology": {
+            "title": "Ontology",
+            "type": "string"
+          },
           "role": {
             "$ref": "#/components/schemas/Role"
           },
@@ -471,7 +618,8 @@
         "required": [
           "user",
           "role",
-          "writer"
+          "writer",
+          "ontology"
         ],
         "title": "SessionOut",
         "type": "object"
