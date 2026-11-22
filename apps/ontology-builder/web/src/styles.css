@@ -1,0 +1,305 @@
+/* Base styles of the review GUI. Colours are tokens, redefined for dark mode. */
+:root {
+  color-scheme: light dark;
+  --bg: #ffffff;
+  --fg: #1d1d1f;
+  --muted: #5b5b66;
+  --line: #d4d4dc;
+  --accent: #2456c8;
+  --warn-bg: #fff4d6;
+  --warn-fg: #6b4a00;
+  --problem-fg: #a11d1d;
+  /* Status colours (FR-20). Every badge also has an icon and a text label. */
+  --status-proposed: #6a4fc4;
+  --status-included: #b26a00;
+  --status-approved: #1d7a3a;
+  --status-excluded: #6b6b75;
+  --status-rejected: #b3261e;
+  --status-deprecated: #8a5a44;
+  --level: #2456c8;
+  --ignorable: #6b6b75;
+  --selected-bg: #eaf0ff;
+  font-family: system-ui, sans-serif;
+  line-height: 1.45;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #17171a;
+    --fg: #ececf1;
+    --muted: #a3a3b2;
+    --line: #3a3a44;
+    --accent: #7ea2ff;
+    --warn-bg: #3d3214;
+    --warn-fg: #ffe3a1;
+    --problem-fg: #ff9a9a;
+    --status-proposed: #b9a6ff;
+    --status-included: #ffc46b;
+    --status-approved: #7ad694;
+    --status-excluded: #a3a3b2;
+    --status-rejected: #ff9a90;
+    --status-deprecated: #d6a68f;
+    --level: #7ea2ff;
+    --ignorable: #a3a3b2;
+    --selected-bg: #232c45;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+button {
+  font: inherit;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  background: var(--accent);
+  color: var(--bg);
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+input {
+  font: inherit;
+  padding: 0.35rem 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.sign-in {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 0 16px;
+}
+
+.sign-in form {
+  display: grid;
+  gap: 0.9rem;
+  width: min(26rem, 100%);
+}
+
+.sign-in label {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.sign-in fieldset {
+  display: flex;
+  gap: 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.sign-in fieldset label {
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+.hint {
+  color: var(--muted);
+  margin: 0;
+}
+
+.problem {
+  color: var(--problem-fg);
+  margin: 0;
+}
+
+.warning,
+.read-only {
+  background: var(--warn-bg);
+  color: var(--warn-fg);
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+}
+
+.shell-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.6rem 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.shell-header .app-name {
+  font-weight: 600;
+}
+
+.shell-header button {
+  margin-left: auto;
+}
+
+.review,
+.loading,
+body > #root > .problem,
+body > #root > .warning {
+  padding: 0 16px;
+}
+
+/* Review screen (T24): filters, the element list and the bulk bar. */
+select {
+  font: inherit;
+  padding: 0.3rem 0.4rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+button.secondary {
+  background: transparent;
+  color: var(--accent);
+}
+
+.review {
+  display: grid;
+  gap: 0.8rem;
+  padding-top: 0.8rem;
+  padding-bottom: 1.5rem;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: end;
+}
+
+.filters label {
+  display: grid;
+  gap: 0.15rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.filters .search {
+  flex: 1 1 14rem;
+}
+
+.counts {
+  color: var(--muted);
+  margin: 0;
+}
+
+.bulk-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.bulk-bar .reason {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.bulk-result {
+  margin: 0;
+}
+
+.bulk-result ul {
+  margin: 0.2rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.element-list-wrap {
+  overflow-x: auto;
+}
+
+.element-list {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.element-list th,
+.element-list td {
+  text-align: left;
+  padding: 0.35rem 0.5rem;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.element-list tr.selected {
+  background: var(--selected-bg);
+}
+
+.element-list .definition {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.badge {
+  --badge: var(--muted);
+  display: inline-flex;
+  gap: 0.25rem;
+  align-items: center;
+  padding: 0.05rem 0.45rem;
+  border: 1px solid var(--badge);
+  border-radius: 999px;
+  color: var(--badge);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.status-proposed {
+  --badge: var(--status-proposed);
+  border-style: dashed;
+}
+
+.status-included {
+  --badge: var(--status-included);
+  border-style: dashed;
+}
+
+.status-approved {
+  --badge: var(--status-approved);
+}
+
+.status-excluded {
+  --badge: var(--status-excluded);
+}
+
+.status-rejected {
+  --badge: var(--status-rejected);
+}
+
+.status-deprecated {
+  --badge: var(--status-deprecated);
+}
+
+.level-level-1,
+.level-level-2,
+.level-level-3 {
+  --badge: var(--level);
+}
+
+.level-level-1 {
+  font-weight: 700;
+}
+
+.level-ignorable {
+  --badge: var(--ignorable);
+  font-style: italic;
+}
+
+.shell-header .ontology {
+  color: var(--muted);
+  font-family: ui-monospace, monospace;
+}

@@ -3,11 +3,18 @@ ingestion (T19: AC-18 on the server; AC-16 and AC-6 through the API)."""
 
 from __future__ import annotations
 
+import json
+import os
 from pathlib import Path
 from typing import Any
 
 import pytest
+from ontology_builder.api import openapi_schema
 from ontology_builder.model import Element
+from ontology_builder.workflows import filter_index
+
+GUI_PET_INDEX = Path(__file__).parents[1] / "web" / "src" / "review" / "fixtures" / "pet-index.json"
+"""Part of the pet fixture's index, as the GUI gets it, for the client filter test (AC-18, T24)."""
 
 
 def _index(kit: Any, **filters: str) -> list[dict[str, Any]]:
@@ -68,6 +75,73 @@ def test_search_lead_matches_label_definition_evidence(
     assert expected and found == expected
     by_label = [e for e in pet_extraction.elements if "lead" in e.label.casefold()]
     assert by_label and {e.id for e in by_label} <= found
+
+
+def test_index_entries_are_typed_in_openapi() -> None:
+    """The GUI's types of the index come from the OpenAPI schema (ontology-builder/ADR-0011)."""
+    schemas = openapi_schema()["components"]["schemas"]
+    entry = schemas["IndexEntryOut"]["properties"]
+    assert set(entry) == {
+        "id",
+        "type",
+        "label",
+        "status",
+        "level",
+        "definition",
+        "corpora",
+        "documents",
+        "search",
+    }
+    statuses = schemas["ElementStatus"]["enum"]
+    assert statuses == ["proposed", "included", "excluded", "approved", "rejected", "deprecated"]
+    assert schemas["Level"]["enum"] == ["level-1", "level-2", "level-3", "ignorable"]
+    assert set(schemas["CorpusOut"]["properties"]) == {"folder", "source_path", "documents"}
+
+
+def _gui_cases(corpora: list[dict[str, Any]]) -> list[dict[str, str]]:
+    """The AC-18 cases, plus a few more filters, that the client filter test repeats."""
+    [rules] = [c for c in corpora if c["folder"].endswith("building-and-house-rules")]
+    return [
+        {"type": "rule", "level": "level-1", "corpus": rules["folder"]},
+        {"type": "rule", "document": rules["documents"][0]["id"]},
+        {"q": "Lead"},
+        {"type": "concept", "level": "level-3", "q": "dog"},
+        {"status": "proposed", "type": "property"},
+        {"status": "approved"},
+    ]
+
+
+def _gui_fixture(served: dict[str, Any]) -> dict[str, Any]:
+    """Every rule and every element mentioning "lead", every tenth other element as a negative
+    (the whole index is over the repo's file-size limit), and the server's answer to each case
+    on that subset."""
+    every = served["elements"]
+    wanted = [e for e in every if e["type"] == "rule" or "lead" in e["search"]]
+    others = [e for e in every if e not in wanted][::10]
+    subset = sorted(wanted + others, key=lambda e: e["id"])
+    cases = [
+        {"filters": case, "expected": [e["id"] for e in filter_index(subset, case)]}
+        for case in _gui_cases(served["corpora"])
+    ]
+    return {"elements": subset, "corpora": served["corpora"], "cases": cases}
+
+
+def test_gui_pet_index_fixture_matches(pet_api_kit: Any) -> None:
+    """``web/src/review/fixtures/pet-index.json`` is part of the index the API serves for the
+    pet fixture, with the server's filter results, so the client filter test runs the same
+    AC-18 cases (drift check). Regenerate it with
+    ``ONTOLOGY_BUILDER_WRITE_GUI_FIXTURES=1 uv run pytest …/test_api_elements.py -k gui_pet``."""
+    pet_api_kit.sign_in()
+    served = pet_api_kit.client.get(pet_api_kit.url("/elements")).json()
+    fixture = _gui_fixture(served)
+    for case in fixture["cases"][:3]:
+        # The AC-18 cases lose no match by the subset: it answers as the whole index does.
+        assert case["expected"] == [e["id"] for e in _index(pet_api_kit, **case["filters"])]
+    if os.environ.get("ONTOLOGY_BUILDER_WRITE_GUI_FIXTURES") == "1":
+        GUI_PET_INDEX.parent.mkdir(parents=True, exist_ok=True)
+        text = json.dumps(fixture, indent=1, ensure_ascii=False, sort_keys=True) + "\n"
+        GUI_PET_INDEX.write_text(text, encoding="utf-8")
+    assert json.loads(GUI_PET_INDEX.read_text(encoding="utf-8")) == fixture
 
 
 def test_detail_shows_evidence_before_the_proposal(pet_api_kit: Any, pet_extraction: Any) -> None:

@@ -7,7 +7,7 @@ from typing import Any, Literal
 
 from pydantic import BaseModel, Field
 
-from ontology_builder.model import Role
+from ontology_builder.model import ElementStatus, Level, Role
 
 ActionName = Literal[
     "include",
@@ -35,6 +35,8 @@ class SessionOut(BaseModel):
     role: Role
     writer: bool
     """False for a second browser session: it may read but not change anything."""
+    ontology: str
+    """The ontology this server opened; the review routes address it by this name."""
     warning: str | None = None
 
 
@@ -58,10 +60,39 @@ class ElementFilter(BaseModel):
     q: str | None = None
 
 
+class IndexEntryOut(BaseModel):
+    """One element in the compact index the GUI filters (FR-19)."""
+
+    id: str
+    type: ElementTypeName
+    label: str
+    status: ElementStatus
+    level: Level
+    definition: str
+    """The definition, or the text of a statement; empty when there is neither."""
+    corpora: list[str]
+    """The corpus folders of its evidence (``90_user_statements`` for user statements)."""
+    documents: list[str]
+    """The document IDs of its evidence."""
+    search: str
+    """Labels, definitions, statement text, quotes and evidence text, case-folded."""
+
+
+class DocumentOut(BaseModel):
+    id: str
+    path: str
+    title: str | None = None
+
+
+class CorpusOut(BaseModel):
+    folder: str
+    source_path: str
+    documents: list[DocumentOut]
+
+
 class ElementsOut(BaseModel):
-    elements: list[dict[str, Any]]
-    """Compact entries: id, type, label, status, level, definition, corpora, documents, search."""
-    corpora: list[dict[str, Any]]
+    elements: list[IndexEntryOut]
+    corpora: list[CorpusOut]
     pending: int
 
 

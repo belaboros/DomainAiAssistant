@@ -40,6 +40,13 @@ def test_handle_signs_in_without_warning(api_kit: Any) -> None:
     assert api_kit.client.get("/api/session").json()["user"] == "alice"
 
 
+def test_session_names_the_open_ontology(api_kit: Any, review_kit: Any) -> None:
+    """The GUI learns from the session which ontology its routes address."""
+    signed = api_kit.sign_in("alice", "user")
+    assert signed["ontology"] == review_kit.store.name
+    assert api_kit.client.get("/api/session").json()["ontology"] == review_kit.store.name
+
+
 def test_signed_out_requests_are_refused(api_kit: Any) -> None:
     assert api_kit.client.get(api_kit.url("/elements")).status_code == 401
     api_kit.sign_in()

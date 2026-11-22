@@ -66,14 +66,14 @@ Tick a box only once its check passes.
 
 ### Front end
 - [x] T22 · `/add-language js-ts`: TypeScript strict, ESLint complexity ≤ 10/15, dependency-cruiser rules from `components.json`, Vitest, Playwright, npm audit, eslint-plugin-security and Dependabot, with `apps/ontology-builder/web` as the workspace. Root ADR written by the skill. Ask npm vs pnpm there. — covers: none (prerequisite) — check: the skill's step 8 proof — note: npm workspaces (Q47), root ADR-0021; TypeScript 6.0.3, because typescript-eslint does not support TypeScript 7 yet
-- [ ] T23 · [web] Vite + React app shell, a TypeScript client generated from `openapi.json` (drift check), and the sign-in screen with the handle hint and the email warning. — covers: AC-2 (GUI) — check: `npm --prefix apps/ontology-builder/web test -- SignIn`
-- [ ] T24 · [web] Element list:
+- [x] T23 · [web] Vite + React app shell, a TypeScript client generated from `openapi.json` (drift check), and the sign-in screen with the handle hint and the email warning. — covers: AC-2 (GUI) — check: `npm --prefix apps/ontology-builder/web test -- SignIn` — note: types by openapi-typescript, calls by openapi-fetch (Q48, ontology-builder/ADR-0011); the GUI warns before signing in with an email-like name, and shows the server's warning too
+- [x] T24 · [web] Element list:
   - filters by type, status, level, corpus and document, and full-text search over the client index;
   - status badges with a colour and a text label plus icon;
   - level badges;
   - multi-select with a bulk bar (include, exclude, set level; approve and reject for an admin only).
 
-  — covers: AC-17, AC-18, AC-19 — check: `npm --prefix apps/ontology-builder/web test -- filter StatusBadge BulkBar`
+  — covers: AC-17, AC-18, AC-19 — check: `npm --prefix apps/ontology-builder/web test -- filter StatusBadge BulkBar` — note: the session response names the open ontology, and the index entries are typed in OpenAPI; the client filter test repeats the server's AC-18 cases on part of the pet fixture's index (`web/src/review/fixtures/pet-index.json`, with the server's answers; kept in step by `test_api_elements.py::test_gui_pet_index_fixture_matches`, because the whole index is over the 500 KB file limit); bulk actions act on the selected elements that are shown; also `filter.perf.test.ts` (NFR responsiveness)
 - [ ] T25 · [web] Element detail:
   - evidence passages first, then the LLM proposal (type, label, level, reason);
   - action buttons for every FR-17 action, with reason dialogs;

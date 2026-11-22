@@ -2,7 +2,7 @@
 
 - **Status:** approved
 - **Spec:** [spec.md](spec.md)
-- **Idea:** [0002-ontology-builder](../../ideas/0002-ontology-builder.md) (plan decisions: Q29–Q35; implement-stage changes: Q37–Q46)
+- **Idea:** [0002-ontology-builder](../../ideas/0002-ontology-builder.md) (plan decisions: Q29–Q35; implement-stage changes: Q37–Q48)
 - **Last updated:** 2026-11-21
 
 ## Approach
@@ -134,9 +134,9 @@ Nothing deletes a record. Merging an approved concept deprecates it with `replac
 `ontology`, `variant` (raw | governed), `version` (governed: semver; raw: `raw+<short git sha>`), `built_at`, `source_commit`, `counts` {`by_type`, `by_status`, `by_level`}, `files` {name → `sha256`}. Schema: `libs/contracts/ontology/manifest.schema.json`. `built_at` is the only field that varies between identical builds (FR-36).
 
 ### HTTP API (localhost only; JSON; OpenAPI → generated TypeScript client)
-- **Session:** `POST /api/session` {user, role} → session cookie. The response warns when the user name looks like an email address. `DELETE /api/session` signs out.
+- **Session:** `POST /api/session` {user, role} → session cookie. The response warns when the user name looks like an email address, and names the ontology the server opened (the GUI addresses the routes below by it). `DELETE /api/session` signs out.
 - **Ontologies:** `GET /api/ontologies`, `POST /api/ontologies` (admin: name + scope), `PUT /api/ontologies/{name}/scope` (admin).
-- **Elements:** `GET /api/ontologies/{name}/elements` (compact index of every element, for filtering in the client) and `GET …/elements/{id}` (full record + evidence units + decisions).
+- **Elements:** `GET /api/ontologies/{name}/elements` (compact index of every element, for filtering in the client; typed entries `IndexEntryOut` and corpora `CorpusOut`, so the generated TypeScript types cover them) and `GET …/elements/{id}` (full record + evidence units + decisions).
 - **Actions:** `POST …/actions` {action, ids[], payload}. Actions are include, exclude, approve, reject, deprecate, level, correct, merge, split and reassign. The server checks role and transition for every ID and returns per-ID results. Marking units not ignorable (FR-14) is an on-demand ingestion (below); confirming an ignorable verdict is not part of v1 (Q45).
 - **Authoring:** `POST …/statements`, `PUT …/statements/{id}` (new revision), `POST …/elements` (authored element; needs evidence).
 - **Ingestion:** `POST …/ingestions/estimate` {folder} or {units[]} (not ignorable) → {documents, units, tokens, cost}; `POST …/ingestions` {folder or units[], confirm: true} → run id; `GET …/runs/{id}`.
@@ -200,7 +200,7 @@ The package manager for the front end (npm or pnpm) is asked in `/add-language j
     - api → workflows, model
     - cli → workflows, evaluation, api (`serve` runs the API server; Q46, [ontology-builder/ADR-0010](../../../apps/ontology-builder/docs/architecture/adr/0010-cli-depends-on-api.md))
     - evaluation → workflows, store
-    - web → api, over HTTP only (no import edge; the generated client is the contract)
+    - web → api, over HTTP only (no import edge; the types generated from `openapi.json` are the contract, ontology-builder/ADR-0011)
   - **Answer-key isolation:** only `evaluation` may refer to the answer-key path. A test enforces this (AC-33).
 - **ADRs:**
   - Root [ADR-0019](../../architecture/adr/0019-ontology-builder-app-and-shared-ontology-contract.md): add the ontology-builder app and the `ontology-<name>` datasets with one shared contract.
@@ -212,6 +212,7 @@ The package manager for the front end (npm or pnpm) is asked in `/add-language j
   - [ontology-builder/ADR-0008](../../../apps/ontology-builder/docs/architecture/adr/0008-ingestion-depends-on-model.md): ingestion may depend on model (implement stage, Q43).
   - [ontology-builder/ADR-0009](../../../apps/ontology-builder/docs/architecture/adr/0009-workflows-depends-on-store-and-llm.md): workflows may depend on store and llm (implement stage, Q44).
   - [ontology-builder/ADR-0010](../../../apps/ontology-builder/docs/architecture/adr/0010-cli-depends-on-api.md): cli may depend on api (implement stage, Q46).
+  - [ontology-builder/ADR-0011](../../../apps/ontology-builder/docs/architecture/adr/0011-api-types-with-openapi-typescript-calls-through-openapi-fetch.md): the GUI's API types are generated with openapi-typescript, calls go through openapi-fetch (implement stage, Q48).
   - [ontology-builder/ADR-0006](../../../apps/ontology-builder/docs/architecture/adr/0006-json-structured-outputs-instead-of-a-forced-tool-call.md): JSON structured outputs instead of a forced tool call (implement stage, Q37).
   - The language ADRs are written by `/add-language` (T1, T22).
 - **App environment variables:** `ONTOLOGY_BUILDER_PORT`, `ONTOLOGY_BUILDER_WORK_DIR`, `ONTOLOGY_BUILDER_LLM_MODE`.

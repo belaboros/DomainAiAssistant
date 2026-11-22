@@ -4,12 +4,30 @@
   "description": "The review GUI of ontology-builder (plan 0002): React + TypeScript, talks to the API only over HTTP.",
   "type": "module",
   "scripts": {
+    "dev": "vite",
+    "build": "tsc -p tsconfig.json && vite build",
+    "gen:api": "node scripts/gen-api.ts",
     "test": "vitest run --passWithNoTests",
     "e2e": "playwright test --pass-with-no-tests",
     "typecheck": "tsc -p tsconfig.json"
   },
   "devDependencies": {
     "@playwright/test": "1.65.1",
+    "@testing-library/dom": "10.4.2",
+    "@testing-library/jest-dom": "7.0.1",
+    "@testing-library/react": "16.3.3",
+    "@testing-library/user-event": "14.6.10",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.3.0",
+    "happy-dom": "21.0.4",
+    "openapi-typescript": "7.13.0",
+    "vite": "8.3.8",
     "vitest": "5.1.0"
+  },
+  "dependencies": {
+    "openapi-fetch": "0.17.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
   }
 }
