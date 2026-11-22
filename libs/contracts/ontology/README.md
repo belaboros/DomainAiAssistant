@@ -5,7 +5,7 @@
 | **Applies to** | every dataset `ontology-<name>` (`data/ontology-<name>/`); each has a thin contract `libs/contracts/ontology-<name>/README.md` that pins a version of this one |
 | **Owner (only writer)** | `ontology-builder` |
 | **Readers** | see each dataset in the system map of the [root architecture](../../../docs/architecture/architecture.md) |
-| **Contract version** | 0.2.1 (see [CHANGELOG.md](CHANGELOG.md)) |
+| **Contract version** | 0.2.2 (see [CHANGELOG.md](CHANGELOG.md)) |
 | **Decision** | [ADR-0019](../../../docs/architecture/adr/0019-ontology-builder-app-and-shared-ontology-contract.md) |
 
 This is a **contract family**, not a dataset: it is not registered in `components.json`. It describes what readers of any ontology dataset may rely on (ADR-0013). Anything not written here, in particular `01_model/` and `02_decisions/`, is internal to `ontology-builder` and may change without notice.
@@ -88,7 +88,7 @@ Terms are not separate resources: a term is the label (`skos:prefLabel`, `skos:a
 ## The level files
 
 - **Levels are cumulative:** `level-2.md` holds everything in `level-1.md` plus the level-2 elements; `level-3.md` holds every element of the release. Ignorable and deprecated elements are in no level file.
-- **Sections, in order:** title and version; a taxonomy diagram (Mermaid `flowchart TB`, is-a); a concept-relation diagram (Mermaid `flowchart LR`); catalogues of concepts (labels, synonyms, definition), relations and rules; an **Evidence** appendix.
+- **Sections, in order:** title and version; a taxonomy diagram (Mermaid `flowchart TB`, is-a; concepts without an is-a link in it sit in a "Not linked yet" box, and large families and boxes are laid out in rows near 16:9); a concept-relation diagram (Mermaid `flowchart LR`, with the is-a links as edges labelled "is a", child to parent); catalogues of concepts (labels, synonyms, definition), relations and rules; an **Evidence** appendix.
 - **Large diagrams:** a diagram with more than 40 nodes is split into one diagram per top-level concept.
 - **Evidence links:** every catalogue entry links to `#su_…`. The Evidence appendix has one anchor `<a id="su_…"></a>` per cited unit, with its text and location, so every link resolves inside the same file.
 - **Raw release:** every element that is not approved carries a text badge (`● proposed`, `◐ waiting for approval`) and a dashed Mermaid class.

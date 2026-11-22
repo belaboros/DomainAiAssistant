@@ -7,13 +7,13 @@
 | **Readers** | see the system map in the [root architecture](../../../docs/architecture/architecture.md) |
 | **Location at runtime** | `${SHARED_DATA_DIR}/ontology-pets-and-house-rules/` (`SHARED_DATA_DIR` comes from the root `.env`) |
 | **In git** | commit: see `git` in the root `components.json` and `.gitignore` (ADR-0016) |
-| **Contract version** | 0.2.1 (see [CHANGELOG.md](CHANGELOG.md)); conforms to `ontology` 0.2.1 |
+| **Contract version** | 0.2.2 (see [CHANGELOG.md](CHANGELOG.md)); conforms to `ontology` 0.2.2 |
 
 The contract is what readers may rely on (ADR-0013). Anything not written here is an implementation detail of `ontology-builder` and may change without notice.
 
 ## Format
 
-This dataset conforms to the shared contract **[`ontology` 0.2.1](../ontology/README.md)** (ADR-0019): the layout of `00_sources/` and `03_release/`, the schemas, the `dai:` vocabulary, the IRIs and the level files are all defined there.
+This dataset conforms to the shared contract **[`ontology` 0.2.2](../ontology/README.md)** (ADR-0019): the layout of `00_sources/` and `03_release/`, the schemas, the `dai:` vocabulary, the IRIs and the level files are all defined there.
 
 Dataset-specific values:
 - **Ontology name:** `pets-and-house-rules`

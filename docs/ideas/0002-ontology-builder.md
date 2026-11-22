@@ -513,3 +513,10 @@ Append one entry per question, oldest first. Never delete entries.
 **Options offered:** Linked concepts only (Recommended): diagram of linked concepts, the rest listed below it / Linked + other levels: also draw level-2/3 children, faded / Keep all, wrap rows: unlinked concepts in a box laid out in several rows
 **A:** "Keep all, wrap rows"
 **Effect:** Task T38: the taxonomy diagram puts concepts without an is-a link in the level into a "not linked yet" box, laid out in rows.
+
+### 2026-11-22 · implement · Q65
+**Asked by:** Claude
+**Q:** [Claude] (1) In Markdown Preview Enhanced, what is under the "Taxonomy" heading of the pets `level-1.md`? (2) The "Concepts and relations" diagram shows only relation elements; is-a links are only in the taxonomy, so pet → cat/dog is missing from it. Should it also show is-a links?
+**Options offered:** (1) Heading, then nothing / No Taxonomy heading / Code or error text / A thin strip. (2) Yes, as 'is a' edges (Recommended): child → parent edges labelled "is a" / No, taxonomy only
+**A:** (1) "I found the diagram. It was vertically pushed together. Redraw the diagram, as 16x9 ratio and start new rows to avoid drawing one single wide row." (2) "Yes, as 'is a' edges (Recommended)"
+**Effect:** Task T39: the taxonomy stacks the "Not linked yet" box below the tree and picks its columns for a 16:9 diagram; the concept-relation diagram also draws is-a links as "is a" edges (child → parent).

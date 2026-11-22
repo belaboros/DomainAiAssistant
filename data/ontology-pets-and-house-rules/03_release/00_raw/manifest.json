@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-11-22T21:29:47Z",
+  "built_at": "2026-11-22T21:57:35Z",
   "counts": {
     "by_level": {
       "level-1": 114,
@@ -22,14 +22,14 @@
     }
   },
   "files": {
-    "level-1.md": "sha256:19eddfd20b84c7dafef29b64aae9c8fc7941903239a6623debcbcd1bf97ad6ef",
-    "level-2.md": "sha256:e93a96eba5086cfabd9e96c38ad9b41c4bd095a4a0f817fcc9474cec44dd9499",
-    "level-3.md": "sha256:9b89e2f8f91d06d067c8212b4d370daea35dd5609e15a971f6637c24b45a7af7",
-    "ontology.jsonld": "sha256:7719cba39f3f571ad30bf304210eeef8f535095ae175b890d00d55a1d17db19b",
-    "ontology.ttl": "sha256:3b80ceeb223d0814dedb8d3a32dba368c2c28d22d143136d8ed42f571bcf72d0"
+    "level-1.md": "sha256:9b50f19dc571080386f097b880992795393ebcd4bf17d41e9cb9dd4599c652b5",
+    "level-2.md": "sha256:c8f98075b968576e54cd825b0626e27c6a65634c3f65a5203a0be0029e3be34c",
+    "level-3.md": "sha256:8d694d3ec8db1eecce58d5a232b0d1da95872da255cf8eb6a79625c1497f7386",
+    "ontology.jsonld": "sha256:4cdb9837f2adf4339884bfa5e8a268040b86e3dc668fe1547f19692f4179500e",
+    "ontology.ttl": "sha256:6b16f0a41dcd48b9e573f1fcdc4718cbee8620b2416a89cfbbe9140e54c46a2b"
   },
   "ontology": "pets-and-house-rules",
-  "source_commit": "2eff3b248a0edc6ad3765b9f6003f8531546b1db",
+  "source_commit": "aa825e48f2d15435d2da899ce0e401fb697716f9",
   "variant": "raw",
-  "version": "raw+2eff3b2"
+  "version": "raw+aa825e4"
 }

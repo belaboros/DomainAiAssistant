@@ -1,5 +1,8 @@
 # Changelog · ontology-pets-and-house-rules contract
 
+## 0.2.2 · 2026-11-22
+- Pins the shared `ontology` contract 0.2.2 (diagrams of the level files).
+
 ## 0.2.1 · 2026-11-22
 - Pins the shared `ontology` contract 0.2.1 (a clarification).
 
