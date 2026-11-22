@@ -1,0 +1,19 @@
+action: shout at unwanted behaviour; ignore it instead
+actor: owner
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDPA
+id: ru_01M82GR8C6YNAW05QP8GX3MF87
+label: Ignore unwanted behaviour instead of shouting
+level: level-2
+level_reason: Everyday training practice for owners.
+modality: must_not
+origin:
+  created_at: '2026-11-22T20:56:50.823326Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+refers_to:
+- cn_01M82GR8C6YNAW05QP8GX3MF7P
+- cn_01M82GR8C6YNAW05QP8GX3MF7W
+scope:
+- co_01M82GHYMN49VHXB6YMXXC893Z
+status: proposed

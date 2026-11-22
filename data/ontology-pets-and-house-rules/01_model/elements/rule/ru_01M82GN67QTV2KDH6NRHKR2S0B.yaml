@@ -1,0 +1,21 @@
+action: trim the dog's claws
+actor: owner
+condition: the claws can be heard clicking on the floor
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCV
+id: ru_01M82GN67QTV2KDH6NRHKR2S0B
+label: Trim claws when clicking
+level: level-2
+level_reason: Routine grooming care.
+modality: must
+origin:
+  created_at: '2026-11-22T20:55:10.328528Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+refers_to:
+- cn_01M82GN67QTV2KDH6NRHKR2S00
+- cn_01M82GN67QTV2KDH6NRHKR2S01
+- rl_01M82GN67QTV2KDH6NRHKR2S05
+scope:
+- co_01M82GHYMN49VHXB6YMXXC893Z
+status: proposed

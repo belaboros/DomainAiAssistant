@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDNY
+id: st_01M82GNRCASH6DKSRYKE0WQE7G
+label: Puppy definition
+level: level-3
+level_reason: Puppies are a special case.
+origin:
+  created_at: '2026-11-22T20:55:28.906948Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+text: A puppy is a dog younger than 6 months.

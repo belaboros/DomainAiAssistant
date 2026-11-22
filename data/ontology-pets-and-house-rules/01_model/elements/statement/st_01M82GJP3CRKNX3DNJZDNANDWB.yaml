@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCF
+id: st_01M82GJP3CRKNX3DNJZDNANDWB
+label: Dog registration
+level: level-1
+level_reason: Registration is a core rule every pet owner must know.
+origin:
+  created_at: '2026-11-22T20:53:48.268984Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+text: A dog older than 4 months must be registered with the local authority.

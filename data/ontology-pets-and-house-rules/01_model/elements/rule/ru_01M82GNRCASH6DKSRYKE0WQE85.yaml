@@ -1,0 +1,20 @@
+action: praise the puppy
+actor: owner
+condition: when it relieves itself outside
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDNZ
+id: ru_01M82GNRCASH6DKSRYKE0WQE85
+label: Praise puppy for relieving itself outside
+level: level-3
+level_reason: Puppy care is a special case.
+modality: must
+origin:
+  created_at: '2026-11-22T20:55:28.907861Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+refers_to:
+- cn_01M82GNRCASH6DKSRYKE0WQE7V
+- cn_01M82GNRCASH6DKSRYKE0WQE7X
+scope:
+- co_01M82GHYMN49VHXB6YMXXC893Z
+status: proposed

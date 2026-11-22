@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82GHYMR2WSZZZXCEPR86V3R
+id: cn_01M82GSR24145KC6KF8V0HWF9M
+label: training to be alone
+level: level-3
+level_reason: Remedy for the problem case of barking or howling.
+origin:
+  created_at: '2026-11-22T20:57:39.653666Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed

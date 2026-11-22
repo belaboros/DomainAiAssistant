@@ -1,0 +1,15 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCS
+id: pr_01M82GMKV1KS5PBE1QB2P99CPM
+label: Age at first vaccinations
+level: level-3
+level_reason: Puppies are a special case.
+name: age at first vaccinations
+of: cn_01M82GNRCASH6DKSRYKE0WQE7V
+origin:
+  created_at: '2026-11-22T20:54:51.490826Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+unit: weeks
+value: '8'

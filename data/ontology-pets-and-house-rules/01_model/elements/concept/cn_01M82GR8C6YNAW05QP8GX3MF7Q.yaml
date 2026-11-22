@@ -1,0 +1,13 @@
+definition: A calm, consistent and confident leader whose signals the dog can trust.
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDP7
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDPB
+id: cn_01M82GR8C6YNAW05QP8GX3MF7Q
+label: lead (leader)
+level: level-2
+level_reason: Role the owner takes in everyday handling.
+origin:
+  created_at: '2026-11-22T20:56:50.822992Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed

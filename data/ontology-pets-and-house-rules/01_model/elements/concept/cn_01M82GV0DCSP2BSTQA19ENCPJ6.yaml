@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82GHYMR2WSZZZXCEPR86V3W
+id: cn_01M82GV0DCSP2BSTQA19ENCPJ6
+label: public place
+level: level-2
+level_reason: Place where the leash rule applies.
+origin:
+  created_at: '2026-11-22T20:58:20.973554Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed

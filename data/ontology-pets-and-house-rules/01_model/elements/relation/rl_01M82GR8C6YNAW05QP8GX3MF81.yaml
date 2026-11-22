@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDP9
+id: rl_01M82GR8C6YNAW05QP8GX3MF81
+label: sets
+level: level-2
+level_reason: Everyday training practice.
+object: cn_01M82GR8C6YNAW05QP8GX3MF7T
+origin:
+  created_at: '2026-11-22T20:56:50.823188Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+predicate_label: sets
+status: proposed
+subject: cn_01M82GR8C6YNAW05QP8GX3MF7P

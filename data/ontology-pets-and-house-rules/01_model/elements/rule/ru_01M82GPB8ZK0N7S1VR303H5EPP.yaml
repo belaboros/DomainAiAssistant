@@ -1,0 +1,25 @@
+action: use a leash of at most 2 metres
+actor: dog owner
+condition: for everyday walks
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDP1
+id: ru_01M82GPB8ZK0N7S1VR303H5EPP
+label: Everyday leash at most 2 m
+level: level-2
+level_reason: Normal-day walking equipment for owners.
+limit:
+  comparator: le
+  unit: m
+  value: 2.0
+modality: must
+origin:
+  created_at: '2026-11-22T20:55:48.256324Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+refers_to:
+- cn_01M82GPB8ZK0N7S1VR303H5EPB
+- cn_01M82GPB8ZK0N7S1VR303H5EPF
+- rl_01M82GPB8ZK0N7S1VR303H5EPH
+scope:
+- co_01M82GHYMN49VHXB6YMXXC893Z
+status: proposed

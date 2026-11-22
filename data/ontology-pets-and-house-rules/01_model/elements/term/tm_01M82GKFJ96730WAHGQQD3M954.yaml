@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCN
+id: tm_01M82GKFJ96730WAHGQQD3M954
+label: local list
+level: level-3
+level_reason: Relevant for dangerous breeds.
+mentions:
+- concept: cn_01M82GKFJ96730WAHGQQD3M95F
+  unit: su_01M82GHYMP28WWGVJCAF7BMQCN
+origin:
+  created_at: '2026-11-22T20:54:14.345799Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed

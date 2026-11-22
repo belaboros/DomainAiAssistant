@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDP5
+id: st_01M82GQHZCWYDZ4FY134N19HQT
+label: Walk time for large and working breeds
+level: level-2
+level_reason: Normal daily care detail.
+origin:
+  created_at: '2026-11-22T20:56:27.885150Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+text: Large and working breeds need up to 2 hours of walks a day.

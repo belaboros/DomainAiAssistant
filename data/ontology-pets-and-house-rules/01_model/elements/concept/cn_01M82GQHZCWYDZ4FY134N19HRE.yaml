@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDP5
+id: cn_01M82GQHZCWYDZ4FY134N19HRE
+label: dog waste
+level: level-1
+level_reason: Subject of core waste rule.
+origin:
+  created_at: '2026-11-22T20:56:27.885724Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed

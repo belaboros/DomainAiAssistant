@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDP5
+id: tm_01M82GQHZCWYDZ4FY134N19HR4
+label: waste bin
+level: level-1
+level_reason: Part of the waste rule.
+mentions:
+- concept: cn_01M82GQHZCWYDZ4FY134N19HRF
+  unit: su_01M82GHYMQYRXNHXCXTMK9HDP5
+origin:
+  created_at: '2026-11-22T20:56:27.885470Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed

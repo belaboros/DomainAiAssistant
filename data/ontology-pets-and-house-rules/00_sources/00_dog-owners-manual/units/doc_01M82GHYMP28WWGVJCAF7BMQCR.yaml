@@ -1,0 +1,12 @@
+- content_hash: sha256:6a9399bca3ad0f118e741b1fcc481ab95ff34d8cff7ae9fbdf6f5a8bd3f57367
+  document_id: doc_01M82GHYMP28WWGVJCAF7BMQCR
+  id: su_01M82GHYMP28WWGVJCAF7BMQCS
+  kind: paragraph
+  location:
+    heading_path:
+    - 3. Health and Care — 3.2 Vaccination and the Veterinarian
+    index_in_section: 0
+    line_end: 3
+    line_start: 3
+    path: 03-health-and-care/02-vaccination-and-the-veterinarian.md
+  text: A puppy receives its first vaccinations at 8 weeks of age. The rabies vaccination is mandatory and must be renewed every year. Take your dog to the veterinarian for a check-up at least once a year.

@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCS
+id: st_01M82GMKV1KS5PBE1QB2P99CNY
+label: Puppy first vaccinations
+level: level-3
+level_reason: Puppies are a special case.
+origin:
+  created_at: '2026-11-22T20:54:51.489943Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+text: A puppy receives its first vaccinations at 8 weeks of age.

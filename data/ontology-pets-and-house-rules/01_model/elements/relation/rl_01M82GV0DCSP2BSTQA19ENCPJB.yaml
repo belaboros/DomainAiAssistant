@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GHYMR2WSZZZXCEPR86V3W
+id: rl_01M82GV0DCSP2BSTQA19ENCPJB
+label: classifies
+level: level-3
+level_reason: Dangerous breed classification.
+object: cn_01M82GKFJ96730WAHGQQD3M95D
+origin:
+  created_at: '2026-11-22T20:58:20.973729Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+predicate_label: classifies
+status: proposed
+subject: cn_01M82GJP3CRKNX3DNJZDNANDWN

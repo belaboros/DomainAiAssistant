@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCV
+id: tm_01M82GN67QTV2KDH6NRHKR2RZQ
+label: long-haired breed
+level: level-2
+level_reason: Affects daily grooming.
+mentions:
+- concept: cn_01M82GKFJ96730WAHGQQD3M95B
+  unit: su_01M82GHYMP28WWGVJCAF7BMQCV
+origin:
+  created_at: '2026-11-22T20:55:10.327785Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed

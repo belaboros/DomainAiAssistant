@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDP1
+id: rl_01M82GPB8ZK0N7S1VR303H5EPK
+label: is attached to
+level: level-2
+level_reason: Normal-day equipment use.
+object: cn_01M82GPB8ZK0N7S1VR303H5EPE
+origin:
+  created_at: '2026-11-22T20:55:48.256175Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+predicate_label: is attached to
+status: proposed
+subject: cn_01M82GPB8ZK0N7S1VR303H5EPB

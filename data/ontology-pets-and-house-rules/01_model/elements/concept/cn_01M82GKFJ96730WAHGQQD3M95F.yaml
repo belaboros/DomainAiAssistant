@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCN
+id: cn_01M82GKFJ96730WAHGQQD3M95F
+label: local list of dangerous breeds
+level: level-3
+level_reason: Special case.
+origin:
+  created_at: '2026-11-22T20:54:14.346125Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed

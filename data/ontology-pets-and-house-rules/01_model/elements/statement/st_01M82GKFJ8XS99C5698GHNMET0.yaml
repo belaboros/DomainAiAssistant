@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCH
+id: st_01M82GKFJ8XS99C5698GHNMET0
+label: Breeds differ
+level: level-2
+level_reason: Helps a prospective owner choose a breed for normal living.
+origin:
+  created_at: '2026-11-22T20:54:14.345321Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+text: Breeds differ in size, energy and the care they need.

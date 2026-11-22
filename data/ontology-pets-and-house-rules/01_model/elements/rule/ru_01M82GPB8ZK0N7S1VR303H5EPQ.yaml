@@ -1,0 +1,21 @@
+action: use a retractable leash
+actor: dog owner
+condition: in busy streets
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDP1
+id: ru_01M82GPB8ZK0N7S1VR303H5EPQ
+label: No retractable leash in busy streets
+level: level-2
+level_reason: Guidance for normal walks in the street.
+modality: must_not
+origin:
+  created_at: '2026-11-22T20:55:48.256361Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+refers_to:
+- cn_01M82GPB8ZK0N7S1VR303H5EPC
+- cn_01M82GPB8ZK0N7S1VR303H5EPG
+- rl_01M82GPB8ZK0N7S1VR303H5EPM
+scope:
+- co_01M82GHYMN49VHXB6YMXXC893Z
+status: proposed

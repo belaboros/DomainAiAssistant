@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCF
+id: st_01M82GJP3CRKNX3DNJZDNANDWC
+label: Dog microchip
+level: level-1
+level_reason: Part of the core registration rule.
+origin:
+  created_at: '2026-11-22T20:53:48.268999Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+text: A dog older than 4 months must carry a microchip.

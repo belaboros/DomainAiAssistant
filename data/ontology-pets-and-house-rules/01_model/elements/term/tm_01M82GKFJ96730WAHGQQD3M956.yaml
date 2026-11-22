@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCM
+id: tm_01M82GKFJ96730WAHGQQD3M956
+label: grooming
+level: level-2
+level_reason: Everyday care.
+mentions:
+- concept: cn_01M82GKFJ96730WAHGQQD3M95H
+  unit: su_01M82GHYMP28WWGVJCAF7BMQCM
+origin:
+  created_at: '2026-11-22T20:54:14.345856Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed

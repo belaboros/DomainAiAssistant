@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GHYMR2WSZZZXCEPR86V3W
+id: rl_01M82GV0DCSP2BSTQA19ENCPJ8
+label: is liable for
+level: level-1
+level_reason: Core owner responsibility.
+object: cn_01M82GV0DCSP2BSTQA19ENCPJ1
+origin:
+  created_at: '2026-11-22T20:58:20.973591Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+predicate_label: is liable for
+status: proposed
+subject: cn_01M82GR8C6YNAW05QP8GX3MF7P

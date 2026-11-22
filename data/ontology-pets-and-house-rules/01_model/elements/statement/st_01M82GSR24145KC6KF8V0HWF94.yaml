@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GHYMR2WSZZZXCEPR86V3R
+id: st_01M82GSR24145KC6KF8V0HWF94
+label: Preparing before leaving
+level: level-2
+level_reason: Normal-day preparation when leaving the dog alone.
+origin:
+  created_at: '2026-11-22T20:57:39.653252Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+text: Before leaving, the owner should walk the dog, leave water and a safe chew toy, and keep the departure low-key.

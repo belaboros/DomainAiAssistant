@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCN
+id: rl_01M82GKFJ96730WAHGQQD3M95K
+label: classifies as dangerous
+level: level-3
+level_reason: Special case of dangerous breeds.
+object: cn_01M82GKFJ96730WAHGQQD3M95D
+origin:
+  created_at: '2026-11-22T20:54:14.346219Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+predicate_label: classifies as dangerous
+status: proposed
+subject: cn_01M82GJP3CRKNX3DNJZDNANDWN

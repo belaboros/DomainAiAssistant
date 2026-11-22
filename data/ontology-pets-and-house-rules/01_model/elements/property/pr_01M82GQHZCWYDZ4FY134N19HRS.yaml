@@ -1,0 +1,15 @@
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDP5
+id: pr_01M82GQHZCWYDZ4FY134N19HRS
+label: Daily walk time for large breeds
+level: level-2
+level_reason: Normal-day walking detail.
+name: total daily walk time
+of: cn_01M82GQHZCWYDZ4FY134N19HRB
+origin:
+  created_at: '2026-11-22T20:56:27.886336Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+unit: hours
+value: up to 2

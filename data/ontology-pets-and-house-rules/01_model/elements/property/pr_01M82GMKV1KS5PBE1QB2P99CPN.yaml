@@ -1,0 +1,15 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCS
+id: pr_01M82GMKV1KS5PBE1QB2P99CPN
+label: Rabies renewal interval
+level: level-2
+level_reason: Routine vaccination schedule.
+name: renewal interval
+of: cn_01M82GMKV1KS5PBE1QB2P99CPB
+origin:
+  created_at: '2026-11-22T20:54:51.490872Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+unit: year
+value: '1'

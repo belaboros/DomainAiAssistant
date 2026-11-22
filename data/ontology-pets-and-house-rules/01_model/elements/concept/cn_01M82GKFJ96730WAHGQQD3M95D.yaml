@@ -1,0 +1,16 @@
+definition: A breed classified as dangerous by the local authority.
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCN
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDPE
+- unit: su_01M82GHYMR2WSZZZXCEPR86V3W
+id: cn_01M82GKFJ96730WAHGQQD3M95D
+label: dangerous breed
+level: level-3
+level_reason: Dangerous breeds are a special case.
+origin:
+  created_at: '2026-11-22T20:54:14.346055Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+parents:
+- cn_01M82GKFJ96730WAHGQQD3M958
+status: proposed

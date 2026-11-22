@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDP1
+id: st_01M82GPB8ZK0N7S1VR303H5EP4
+label: Collar fit check
+level: level-2
+level_reason: Normal-day equipment detail.
+origin:
+  created_at: '2026-11-22T20:55:48.255716Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+text: A well-fitting collar allows two fingers to slide under it.

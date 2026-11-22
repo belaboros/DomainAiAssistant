@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDP3
+id: cn_01M82GPTF0J0A1WWEWDR3G29FM
+label: walk
+level: level-2
+level_reason: Walks are a normal-day activity.
+origin:
+  created_at: '2026-11-22T20:56:03.808914Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed

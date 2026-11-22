@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDPE
+id: tm_01M82GS0NSGHH6X6DCYVS251BQ
+label: certified trainer
+level: level-2
+level_reason: Actor in normal training.
+mentions:
+- concept: cn_01M82GS0NSGHH6X6DCYVS251C3
+  unit: su_01M82GHYMQYRXNHXCXTMK9HDPE
+origin:
+  created_at: '2026-11-22T20:57:15.705913Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed

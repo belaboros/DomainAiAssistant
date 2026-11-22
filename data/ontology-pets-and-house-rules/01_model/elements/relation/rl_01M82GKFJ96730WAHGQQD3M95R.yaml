@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCJ
+id: rl_01M82GKFJ96730WAHGQQD3M95R
+label: needs less
+level: level-2
+level_reason: Exercise is everyday care.
+object: cn_01M82GKFJ96730WAHGQQD3M95J
+origin:
+  created_at: '2026-11-22T20:54:14.346380Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+predicate_label: needs less
+status: proposed
+subject: cn_01M82GKFJ96730WAHGQQD3M959

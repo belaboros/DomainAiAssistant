@@ -1,0 +1,15 @@
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDNZ
+id: pr_01M82GNRCASH6DKSRYKE0WQE88
+label: Socialisation period
+level: level-3
+level_reason: Puppy detail.
+name: age period
+of: cn_01M82GNRCASH6DKSRYKE0WQE7Y
+origin:
+  created_at: '2026-11-22T20:55:28.907974Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+unit: weeks
+value: 8 to 16

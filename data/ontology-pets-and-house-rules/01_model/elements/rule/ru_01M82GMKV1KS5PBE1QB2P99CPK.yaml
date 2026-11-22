@@ -1,0 +1,25 @@
+action: take the dog to the veterinarian for a check-up at least once a year
+actor: dog owner
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCS
+id: ru_01M82GMKV1KS5PBE1QB2P99CPK
+label: Yearly veterinary check-up
+level: level-2
+level_reason: Routine health care an owner needs to know.
+limit:
+  comparator: ge
+  unit: times per year
+  value: 1.0
+modality: must
+origin:
+  created_at: '2026-11-22T20:54:51.490780Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+refers_to:
+- cn_01M82GMKV1KS5PBE1QB2P99CPD
+- cn_01M82GMKV1KS5PBE1QB2P99CPC
+- rl_01M82GMKV1KS5PBE1QB2P99CPF
+- rl_01M82GMKV1KS5PBE1QB2P99CPG
+scope:
+- co_01M82GHYMN49VHXB6YMXXC893Z
+status: proposed

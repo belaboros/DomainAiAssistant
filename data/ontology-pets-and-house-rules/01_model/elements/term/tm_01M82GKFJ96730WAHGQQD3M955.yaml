@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCJ
+id: tm_01M82GKFJ96730WAHGQQD3M955
+label: flats
+level: level-2
+level_reason: Living space context.
+mentions:
+- concept: cn_01M82GKFJ96730WAHGQQD3M95G
+  unit: su_01M82GHYMP28WWGVJCAF7BMQCJ
+origin:
+  created_at: '2026-11-22T20:54:14.345829Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed

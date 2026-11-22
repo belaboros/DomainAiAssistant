@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDP1
+id: pr_01M82GPB8ZK0N7S1VR303H5EPV
+label: Collar fit
+level: level-2
+level_reason: Normal-day equipment detail.
+name: fit
+of: cn_01M82GPB8ZK0N7S1VR303H5EPD
+origin:
+  created_at: '2026-11-22T20:55:48.256487Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+value: two fingers can slide under the collar

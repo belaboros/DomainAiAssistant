@@ -1,0 +1,15 @@
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDP3
+id: pr_01M82GPTF0J0A1WWEWDR3G29FV
+label: Leash training start age
+level: level-3
+level_reason: Concerns puppies, a special case.
+name: start age
+of: cn_01M82GPTF0J0A1WWEWDR3G29FG
+origin:
+  created_at: '2026-11-22T20:56:03.809221Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+unit: weeks
+value: 8 to 10

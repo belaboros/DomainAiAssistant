@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDNZ
+id: tm_01M82GNRCASH6DKSRYKE0WQE7S
+label: house training
+level: level-3
+level_reason: Puppy-related process.
+mentions:
+- concept: cn_01M82GNRCASH6DKSRYKE0WQE7X
+  unit: su_01M82GHYMQYRXNHXCXTMK9HDNZ
+origin:
+  created_at: '2026-11-22T20:55:28.907395Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed

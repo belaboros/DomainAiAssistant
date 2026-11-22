@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCK
+id: pr_01M82GKFJ96730WAHGQQD3M95X
+label: Exercise need of large and working breeds
+level: level-2
+level_reason: Normal daily care need.
+name: exercise need
+of: cn_01M82GKFJ96730WAHGQQD3M95A
+origin:
+  created_at: '2026-11-22T20:54:14.346590Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+value: more

@@ -1,0 +1,13 @@
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDP1
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDP3
+- unit: su_01M82GHYMR2WSZZZXCEPR86V3W
+id: cn_01M82GPB8ZK0N7S1VR303H5EPB
+label: leash
+level: level-1
+level_reason: The lead is a core rule every pet owner must know.
+origin:
+  created_at: '2026-11-22T20:55:48.255907Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed

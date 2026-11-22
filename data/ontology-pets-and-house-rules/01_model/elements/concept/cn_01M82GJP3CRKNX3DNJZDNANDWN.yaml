@@ -1,0 +1,13 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCF
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCN
+- unit: su_01M82GHYMR2WSZZZXCEPR86V3W
+id: cn_01M82GJP3CRKNX3DNJZDNANDWN
+label: local authority
+level: level-1
+level_reason: Registers dogs under a core rule.
+origin:
+  created_at: '2026-11-22T20:53:48.269329Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed

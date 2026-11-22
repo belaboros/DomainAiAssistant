@@ -1,0 +1,17 @@
+cardinality:
+  max: 5
+  min: 5
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDPD
+id: rl_01M82GS0NSGHH6X6DCYVS251C7
+label: should learn
+level: level-2
+level_reason: Everyday training.
+object: cn_01M82GS0NSGHH6X6DCYVS251BV
+origin:
+  created_at: '2026-11-22T20:57:15.706349Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+predicate_label: should learn
+status: proposed
+subject: cn_01M82GJP3CRKNX3DNJZDNANDWM

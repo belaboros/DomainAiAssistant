@@ -1,0 +1,19 @@
+action: have the dog vaccinated against rabies
+actor: dog owner
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCS
+id: ru_01M82GMKV1KS5PBE1QB2P99CPH
+label: Rabies vaccination is mandatory
+level: level-2
+level_reason: Vaccination is part of normal pet care an owner needs.
+modality: must
+origin:
+  created_at: '2026-11-22T20:54:51.490644Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+refers_to:
+- cn_01M82GMKV1KS5PBE1QB2P99CPB
+- cn_01M82GJP3CRKNX3DNJZDNANDWM
+scope:
+- co_01M82GHYMN49VHXB6YMXXC893Z
+status: proposed

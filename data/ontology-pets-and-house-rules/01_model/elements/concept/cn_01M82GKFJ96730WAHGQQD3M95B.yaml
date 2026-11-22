@@ -1,0 +1,15 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCM
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCV
+id: cn_01M82GKFJ96730WAHGQQD3M95B
+label: long-haired breed
+level: level-2
+level_reason: Breed group with grooming needs.
+origin:
+  created_at: '2026-11-22T20:54:14.346010Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+parents:
+- cn_01M82GKFJ96730WAHGQQD3M958
+- cn_01M82GJP3CRKNX3DNJZDNANDWM
+status: proposed

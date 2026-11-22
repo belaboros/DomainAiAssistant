@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCQ
+id: tm_01M82GM2G2RQN4BGFYPS36BGYP
+label: onions
+level: level-2
+level_reason: Poisonous food.
+mentions:
+- concept: cn_01M82GM2G3AM0SX444VHV3202P
+  unit: su_01M82GHYMP28WWGVJCAF7BMQCQ
+origin:
+  created_at: '2026-11-22T20:54:33.731606Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed

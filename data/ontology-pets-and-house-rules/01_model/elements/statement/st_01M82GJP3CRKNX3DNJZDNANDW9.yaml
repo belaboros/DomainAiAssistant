@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCE
+id: st_01M82GJP3CRKNX3DNJZDNANDW9
+label: Lifelong needs of a dog
+level: level-2
+level_reason: Normal daily care an owner must provide.
+origin:
+  created_at: '2026-11-22T20:53:48.268940Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+text: A dog needs daily exercise, company, training and veterinary care for its whole life.

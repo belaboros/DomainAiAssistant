@@ -1,0 +1,24 @@
+action: leave an adult dog alone at home for more than 6 hours
+actor: owner
+evidence:
+- unit: su_01M82GHYMR2WSZZZXCEPR86V3Q
+id: ru_01M82GSR25X2Z0HPSPM2814WPN
+label: Adult dog not left alone more than 6 hours
+level: level-2
+level_reason: Leaving the pet alone is a normal-day concern for owners.
+limit:
+  comparator: le
+  unit: hours
+  value: 6.0
+modality: must_not
+origin:
+  created_at: '2026-11-22T20:57:39.653850Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+refers_to:
+- cn_01M82GM2G3AM0SX444VHV3202F
+- cn_01M82GR8C6YNAW05QP8GX3MF7P
+- cn_01M82GSR24145KC6KF8V0HWF9G
+scope:
+- co_01M82GHYMN49VHXB6YMXXC893Z
+status: proposed

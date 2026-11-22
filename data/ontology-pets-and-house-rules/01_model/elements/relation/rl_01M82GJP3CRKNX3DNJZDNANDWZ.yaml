@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCE
+id: rl_01M82GJP3CRKNX3DNJZDNANDWZ
+label: needs
+level: level-2
+level_reason: Normal-day care.
+object: cn_01M82GJP3CRKNX3DNJZDNANDWS
+origin:
+  created_at: '2026-11-22T20:53:48.269558Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+predicate_label: needs
+status: proposed
+subject: cn_01M82GJP3CRKNX3DNJZDNANDWM

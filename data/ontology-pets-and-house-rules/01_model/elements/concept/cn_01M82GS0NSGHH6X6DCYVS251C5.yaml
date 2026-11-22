@@ -1,0 +1,13 @@
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDPE
+id: cn_01M82GS0NSGHH6X6DCYVS251C5
+label: dog of a dangerous breed
+level: level-3
+level_reason: Special case.
+origin:
+  created_at: '2026-11-22T20:57:15.706300Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+parents:
+- cn_01M82GJP3CRKNX3DNJZDNANDWM
+status: proposed

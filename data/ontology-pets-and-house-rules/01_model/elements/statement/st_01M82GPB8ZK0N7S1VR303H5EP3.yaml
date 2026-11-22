@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDP1
+id: st_01M82GPB8ZK0N7S1VR303H5EP3
+label: Leash attachment
+level: level-2
+level_reason: Normal-day walking equipment.
+origin:
+  created_at: '2026-11-22T20:55:48.255697Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+text: The leash is attached to a well-fitting collar or harness.

@@ -1,0 +1,22 @@
+action: have a valid rabies vaccination
+actor: dog
+condition: for travel abroad
+evidence:
+- unit: su_01M82GHYMR2WSZZZXCEPR86V3T
+id: ru_01M82GTCETZPKT468GHR8KKFAE
+label: Valid rabies vaccination for travel abroad
+level: level-3
+level_reason: Travel abroad is a special case.
+modality: must
+origin:
+  created_at: '2026-11-22T20:58:00.539741Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+refers_to:
+- cn_01M82GJP3CRKNX3DNJZDNANDWM
+- cn_01M82GMKV1KS5PBE1QB2P99CPB
+- cn_01M82GTCESJWWYNZ6F9GB3P9W8
+- rl_01M82GTCESJWWYNZ6F9GB3P9WE
+scope:
+- co_01M82GHYMN49VHXB6YMXXC893Z
+status: proposed

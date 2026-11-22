@@ -1,0 +1,21 @@
+action: be liable for any damage the dog causes
+actor: dog owner
+evidence:
+- unit: su_01M82GHYMR2WSZZZXCEPR86V3W
+id: ru_01M82GV0DCSP2BSTQA19ENCPJE
+label: Owner is liable for damage caused by the dog
+level: level-2
+level_reason: Normal responsibility an owner needs to know.
+modality: must
+origin:
+  created_at: '2026-11-22T20:58:20.973802Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+refers_to:
+- cn_01M82GR8C6YNAW05QP8GX3MF7P
+- cn_01M82GV0DCSP2BSTQA19ENCPJ1
+- rl_01M82GV0DCSP2BSTQA19ENCPJ8
+- rl_01M82GV0DCSP2BSTQA19ENCPJ9
+scope:
+- co_01M82GHYMN49VHXB6YMXXC893Z
+status: proposed

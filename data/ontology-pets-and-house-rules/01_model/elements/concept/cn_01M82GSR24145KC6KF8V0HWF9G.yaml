@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GHYMR2WSZZZXCEPR86V3Q
+- unit: su_01M82GHYMR2WSZZZXCEPR86V3R
+id: cn_01M82GSR24145KC6KF8V0HWF9G
+label: leaving the dog alone
+level: level-2
+level_reason: Normal-day topic named in the levels.
+origin:
+  created_at: '2026-11-22T20:57:39.653601Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed

@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCN
+id: st_01M82GKFJ8XS99C5698GHNMET4
+label: Local authority classifies dangerous breeds
+level: level-3
+level_reason: Dangerous breeds are a special case.
+origin:
+  created_at: '2026-11-22T20:54:14.345485Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+text: Some breeds are classified as dangerous by the local authority.

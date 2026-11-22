@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDNY
+id: cn_01M82GNRCASH6DKSRYKE0WQE7W
+label: mother
+level: level-3
+level_reason: Only relevant for puppies.
+origin:
+  created_at: '2026-11-22T20:55:28.907503Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed

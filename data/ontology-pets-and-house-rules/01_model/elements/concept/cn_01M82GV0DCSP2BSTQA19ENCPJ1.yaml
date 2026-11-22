@@ -1,0 +1,11 @@
+evidence:
+- unit: su_01M82GHYMR2WSZZZXCEPR86V3W
+id: cn_01M82GV0DCSP2BSTQA19ENCPJ1
+label: damage
+level: level-2
+level_reason: What the owner is liable for.
+origin:
+  created_at: '2026-11-22T20:58:20.973453Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed

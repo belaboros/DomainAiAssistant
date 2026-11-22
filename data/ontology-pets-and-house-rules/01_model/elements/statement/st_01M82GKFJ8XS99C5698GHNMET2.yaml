@@ -1,0 +1,12 @@
+evidence:
+- unit: su_01M82GHYMP28WWGVJCAF7BMQCK
+id: st_01M82GKFJ8XS99C5698GHNMET2
+label: Large and working breeds need more
+level: level-2
+level_reason: Normal-case guidance on space, exercise and mental work.
+origin:
+  created_at: '2026-11-22T20:54:14.345440Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+status: proposed
+text: Large and working breeds need more space, more exercise and more mental work.

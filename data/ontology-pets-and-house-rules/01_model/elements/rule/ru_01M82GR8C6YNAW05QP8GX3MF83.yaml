@@ -1,0 +1,21 @@
+action: 'be the dog''s lead: a calm, consistent and confident leader whose signals it can trust'
+actor: owner
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDP7
+id: ru_01M82GR8C6YNAW05QP8GX3MF83
+label: Owner should be the dog's lead
+level: level-2
+level_reason: Normal-day guidance on handling the dog.
+modality: must
+origin:
+  created_at: '2026-11-22T20:56:50.823223Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+refers_to:
+- cn_01M82GR8C6YNAW05QP8GX3MF7P
+- cn_01M82GJP3CRKNX3DNJZDNANDWM
+- cn_01M82GR8C6YNAW05QP8GX3MF7Q
+- rl_01M82GR8C6YNAW05QP8GX3MF7Y
+scope:
+- co_01M82GHYMN49VHXB6YMXXC893Z
+status: proposed

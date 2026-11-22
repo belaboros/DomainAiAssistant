@@ -1,0 +1,14 @@
+evidence:
+- unit: su_01M82GHYMQYRXNHXCXTMK9HDP3
+id: rl_01M82GPTF0J0A1WWEWDR3G29FN
+label: undergoes
+level: level-3
+level_reason: Concerns puppies.
+object: cn_01M82GPTF0J0A1WWEWDR3G29FG
+origin:
+  created_at: '2026-11-22T20:56:03.808935Z'
+  kind: llm
+  run_id: run_01M82GHYMN49VHXB6YMXXC893Y
+predicate_label: undergoes
+status: proposed
+subject: cn_01M82GNRCASH6DKSRYKE0WQE7V
