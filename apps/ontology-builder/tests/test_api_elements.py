@@ -98,6 +98,33 @@ def test_index_entries_are_typed_in_openapi() -> None:
     assert set(schemas["CorpusOut"]["properties"]) == {"folder", "source_path", "documents"}
 
 
+def test_element_detail_is_typed_in_openapi() -> None:
+    """The GUI's element detail (T25) is typed too: evidence, record, decisions."""
+    schemas = openapi_schema()["components"]["schemas"]
+    detail = schemas["ElementDetailOut"]["properties"]
+    assert list(detail) == ["id", "type", "evidence", "record", "decisions", "pending"]
+    assert set(schemas["EvidenceOut"]["properties"]) == {
+        "unit",
+        "quote",
+        "text",
+        "corpus",
+        "document",
+    }
+    record = schemas["RecordOut"]
+    assert {"label", "definition", "level", "level_reason", "status", "origin"} <= set(
+        record["properties"]
+    )
+    assert "mentions" in record["properties"]
+    assert record.get("additionalProperties") is True, "type-specific fields pass through"
+    decision = schemas["DecisionOut"]["properties"]
+    assert {"id", "at", "user", "role", "action", "field", "old", "new", "reason"} == set(decision)
+    paths = openapi_schema()["paths"]
+    answer = paths["/api/ontologies/{name}/elements/{element_id}"]["get"]["responses"]["200"]
+    assert answer["content"]["application/json"]["schema"] == {
+        "$ref": "#/components/schemas/ElementDetailOut"
+    }
+
+
 def _gui_cases(corpora: list[dict[str, Any]]) -> list[dict[str, str]]:
     """The AC-18 cases, plus a few more filters, that the client filter test repeats."""
     [rules] = [c for c in corpora if c["folder"].endswith("building-and-house-rules")]
@@ -153,6 +180,9 @@ def test_detail_shows_evidence_before_the_proposal(pet_api_kit: Any, pet_extract
     assert detail["evidence"][0]["unit"] == element.evidence[0].unit
     assert detail["evidence"][0]["text"] == pet_extraction.units[element.evidence[0].unit].text
     assert detail["record"]["level_reason"] == element.level_reason
+    assert detail["record"]["origin"]["kind"] == "llm"
+    stored = element.model_dump(mode="json", exclude_none=True)
+    assert set(stored) <= set(detail["record"]), "type-specific fields pass through"
     unknown = pet_api_kit.client.get(pet_api_kit.url("/elements/cn_01JDK7F3Q8ZX5N6M2W4R9T0ZZZ"))
     assert unknown.status_code == 404
 

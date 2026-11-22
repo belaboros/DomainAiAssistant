@@ -5,7 +5,7 @@ from __future__ import annotations
 
 from typing import Any, Literal
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 
 from ontology_builder.model import ElementStatus, Level, Role
 
@@ -94,6 +94,70 @@ class ElementsOut(BaseModel):
     elements: list[IndexEntryOut]
     corpora: list[CorpusOut]
     pending: int
+
+
+class EvidenceOut(BaseModel):
+    """One evidence passage of an element: the unit, its quote, and where the unit is."""
+
+    unit: str
+    quote: str | None = None
+    text: str | None = None
+    """The unit's text; ``None`` when the unit is unknown."""
+    corpus: str | None = None
+    document: str | None = None
+
+
+class OriginOut(BaseModel):
+    kind: str
+    run_id: str | None = None
+    author: str | None = None
+    created_at: str
+
+
+class MentionOut(BaseModel):
+    unit: str
+    concept: str
+
+
+class RecordOut(BaseModel):
+    """An element record: the fields every type has, typed; the type-specific ones pass through."""
+
+    model_config = ConfigDict(extra="allow")
+
+    label: str
+    definition: str | None = None
+    level: Level
+    level_reason: str
+    status: ElementStatus
+    status_reason: str | None = None
+    origin: OriginOut
+    replaced_by: str | None = None
+    mentions: list[MentionOut] | None = None
+    """A term's mentions (unit → concept), which split and reassign act on."""
+
+
+class DecisionOut(BaseModel):
+    id: str
+    at: str
+    user: str
+    role: Role
+    action: str
+    field: str | None = None
+    old: Any = None
+    new: Any = None
+    reason: str | None = None
+
+
+class ElementDetailOut(BaseModel):
+    """One element: its evidence passages first, then the record and its decisions (FR-16)."""
+
+    id: str
+    type: ElementTypeName
+    evidence: list[EvidenceOut]
+    record: RecordOut
+    decisions: list[DecisionOut]
+    pending: bool
+    """True when the element has unsaved changes."""
 
 
 class ActionIn(BaseModel):

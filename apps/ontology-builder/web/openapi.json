@@ -187,6 +187,66 @@
         "title": "CreateOntology",
         "type": "object"
       },
+      "DecisionOut": {
+        "properties": {
+          "action": {
+            "title": "Action",
+            "type": "string"
+          },
+          "at": {
+            "title": "At",
+            "type": "string"
+          },
+          "field": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Field"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "new": {
+            "title": "New"
+          },
+          "old": {
+            "title": "Old"
+          },
+          "reason": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reason"
+          },
+          "role": {
+            "$ref": "#/components/schemas/Role"
+          },
+          "user": {
+            "title": "User",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "at",
+          "user",
+          "role",
+          "action"
+        ],
+        "title": "DecisionOut",
+        "type": "object"
+      },
       "DocumentOut": {
         "properties": {
           "id": {
@@ -225,6 +285,58 @@
           }
         },
         "title": "Done",
+        "type": "object"
+      },
+      "ElementDetailOut": {
+        "description": "One element: its evidence passages first, then the record and its decisions (FR-16).",
+        "properties": {
+          "decisions": {
+            "items": {
+              "$ref": "#/components/schemas/DecisionOut"
+            },
+            "title": "Decisions",
+            "type": "array"
+          },
+          "evidence": {
+            "items": {
+              "$ref": "#/components/schemas/EvidenceOut"
+            },
+            "title": "Evidence",
+            "type": "array"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "pending": {
+            "title": "Pending",
+            "type": "boolean"
+          },
+          "record": {
+            "$ref": "#/components/schemas/RecordOut"
+          },
+          "type": {
+            "enum": [
+              "statement",
+              "term",
+              "concept",
+              "relation",
+              "rule",
+              "property"
+            ],
+            "title": "Type",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "type",
+          "evidence",
+          "record",
+          "decisions",
+          "pending"
+        ],
+        "title": "ElementDetailOut",
         "type": "object"
       },
       "ElementStatus": {
@@ -312,6 +424,64 @@
           "cost_usd"
         ],
         "title": "EstimateOut",
+        "type": "object"
+      },
+      "EvidenceOut": {
+        "description": "One evidence passage of an element: the unit, its quote, and where the unit is.",
+        "properties": {
+          "corpus": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Corpus"
+          },
+          "document": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Document"
+          },
+          "quote": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Quote"
+          },
+          "text": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Text"
+          },
+          "unit": {
+            "title": "Unit",
+            "type": "string"
+          }
+        },
+        "required": [
+          "unit"
+        ],
+        "title": "EvidenceOut",
         "type": "object"
       },
       "HTTPValidationError": {
@@ -476,6 +646,64 @@
         "title": "Level",
         "type": "string"
       },
+      "MentionOut": {
+        "properties": {
+          "concept": {
+            "title": "Concept",
+            "type": "string"
+          },
+          "unit": {
+            "title": "Unit",
+            "type": "string"
+          }
+        },
+        "required": [
+          "unit",
+          "concept"
+        ],
+        "title": "MentionOut",
+        "type": "object"
+      },
+      "OriginOut": {
+        "properties": {
+          "author": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Author"
+          },
+          "created_at": {
+            "title": "Created At",
+            "type": "string"
+          },
+          "kind": {
+            "title": "Kind",
+            "type": "string"
+          },
+          "run_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Run Id"
+          }
+        },
+        "required": [
+          "kind",
+          "created_at"
+        ],
+        "title": "OriginOut",
+        "type": "object"
+      },
       "PublishIn": {
         "properties": {
           "version": {
@@ -543,6 +771,85 @@
           "commit"
         ],
         "title": "PublishOut",
+        "type": "object"
+      },
+      "RecordOut": {
+        "additionalProperties": true,
+        "description": "An element record: the fields every type has, typed; the type-specific ones pass through.",
+        "properties": {
+          "definition": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Definition"
+          },
+          "label": {
+            "title": "Label",
+            "type": "string"
+          },
+          "level": {
+            "$ref": "#/components/schemas/Level"
+          },
+          "level_reason": {
+            "title": "Level Reason",
+            "type": "string"
+          },
+          "mentions": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/MentionOut"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Mentions"
+          },
+          "origin": {
+            "$ref": "#/components/schemas/OriginOut"
+          },
+          "replaced_by": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Replaced By"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ElementStatus"
+          },
+          "status_reason": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Status Reason"
+          }
+        },
+        "required": [
+          "label",
+          "level",
+          "level_reason",
+          "status",
+          "origin"
+        ],
+        "title": "RecordOut",
         "type": "object"
       },
       "ReferenceOut": {
@@ -1052,9 +1359,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "additionalProperties": true,
-                  "title": "Response Element Api Ontologies  Name  Elements  Element Id  Get",
-                  "type": "object"
+                  "$ref": "#/components/schemas/ElementDetailOut"
                 }
               }
             },

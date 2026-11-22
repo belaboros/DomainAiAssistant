@@ -1,7 +1,15 @@
 // The API wrapper: the write header on every request, the server's message on a refusal, and
 // "nobody signed in" for a 401 on the session.
 import { afterEach, describe, expect, test, vi } from "vitest";
-import { act, type ActionIn, ApiError, currentSession, elementIndex, signIn } from ".";
+import {
+  act,
+  type ActionIn,
+  ApiError,
+  currentSession,
+  elementDetail,
+  elementIndex,
+  signIn,
+} from ".";
 
 function reply(status: number, body: unknown) {
   const fetch = vi.fn<(request: Request) => Promise<Response>>(() =>
@@ -68,6 +76,14 @@ describe("api", () => {
     expect(new URL(request?.url ?? "").pathname).toBe(
       "/api/ontologies/pets-and-house-rules/elements",
     );
+  });
+
+  test("element_detail_reads_one_element", async () => {
+    const fetch = reply(200, { id: "cn_1", type: "concept" });
+    await expect(elementDetail("pets", "cn_1")).resolves.toMatchObject({ id: "cn_1" });
+    const request = fetch.mock.calls[0]?.[0];
+    expect(request?.method).toBe("GET");
+    expect(new URL(request?.url ?? "").pathname).toBe("/api/ontologies/pets/elements/cn_1");
   });
 
   test("act_posts_the_action_ids_and_payload", async () => {

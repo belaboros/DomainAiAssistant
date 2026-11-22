@@ -14,6 +14,7 @@ function api(current: SessionOut | null, signedIn: SessionOut = ALICE): AppApi {
     signIn: vi.fn(() => Promise.resolve(signedIn)),
     signOut: vi.fn(() => Promise.resolve()),
     elementIndex: vi.fn(() => Promise.resolve({ elements: [], corpora: [], pending: 0 })),
+    element: vi.fn(() => Promise.reject(new Error("no elements"))),
     act: vi.fn(() => Promise.resolve({ results: [], pending: 0 })),
   };
 }

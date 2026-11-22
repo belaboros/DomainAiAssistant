@@ -3,7 +3,7 @@
 import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, test, vi } from "vitest";
-import type { ActionIn, ElementsOut, IndexEntry, SessionOut } from "../api";
+import type { ActionIn, ElementDetail, ElementsOut, IndexEntry, SessionOut } from "../api";
 import { ReviewScreen, type ReviewApi } from "./ReviewScreen";
 
 function entry(id: string, fields: Partial<IndexEntry>): IndexEntry {
@@ -63,10 +63,31 @@ const INDEX: ElementsOut = {
 const ALICE: SessionOut = { user: "alice", role: "user", writer: true, ontology: "pets" };
 
 /** A server that accepts every action and counts the unsaved changes. */
+function detailOf(id: string): ElementDetail {
+  const found = INDEX.elements.find((e) => e.id === id);
+  return {
+    id,
+    type: found?.type ?? "concept",
+    evidence: [
+      { unit: "su_1", text: `evidence of ${id}`, corpus: "00_dogs", document: "doc_dogs" },
+    ],
+    record: {
+      label: found?.label ?? id,
+      level: found?.level ?? "level-2",
+      level_reason: "a reason",
+      status: found?.status ?? "proposed",
+      origin: { kind: "llm", created_at: "2026-11-20T10:00:00Z" },
+    },
+    decisions: [],
+    pending: false,
+  };
+}
+
 function fakeApi(): ReviewApi {
   let pending = 0;
   return {
     elementIndex: vi.fn(() => Promise.resolve({ ...INDEX, pending })),
+    element: vi.fn((_name: string, id: string) => Promise.resolve(detailOf(id))),
     act: vi.fn((_name: string, body: ActionIn) => {
       pending += body.ids.length;
       return Promise.resolve({
@@ -189,5 +210,55 @@ describe("ReviewScreen", () => {
     api.elementIndex = () => Promise.reject(new Error("the server is not reachable"));
     setup(ALICE, api);
     expect(await screen.findByRole("alert")).toHaveTextContent("the server is not reachable");
+  });
+});
+
+// The detail pane (FR-16, FR-17): open an element from the list or with j/k, act on it.
+describe("ReviewScreen detail pane", () => {
+  test("opening_an_element_shows_its_detail", async () => {
+    const { api, user } = setup();
+    await user.click(await screen.findByRole("button", { name: "leash" }));
+    const detail = within(await screen.findByRole("article", { name: "Element detail" }));
+    expect(api.element).toHaveBeenCalledWith("pets", "cn_leash");
+    expect(await detail.findByText("evidence of cn_leash")).toBeVisible();
+  });
+
+  test("j_and_k_move_through_the_shown_elements", async () => {
+    const { api, user } = setup();
+    await screen.findByText("leash");
+    await user.selectOptions(screen.getByLabelText("Type"), "rule");
+    await user.click(document.body);
+    await user.keyboard("j");
+    expect(await screen.findByText("evidence of ru_stairs")).toBeVisible();
+    await user.keyboard("j");
+    expect(await screen.findByText("evidence of ru_noise")).toBeVisible();
+    await user.keyboard("j");
+    await user.keyboard("k");
+    expect(await screen.findByText("evidence of ru_stairs")).toBeVisible();
+    expect(api.element).toHaveBeenLastCalledWith("pets", "ru_stairs");
+  });
+
+  test("detail_action_acts_on_the_open_element_and_reloads", async () => {
+    const { api, user } = setup();
+    await user.click(await screen.findByRole("button", { name: "cat" }));
+    const detail = within(await screen.findByRole("article", { name: "Element detail" }));
+    await detail.findByText("evidence of tm_cat");
+    await user.click(detail.getByRole("button", { name: "Include" }));
+    expect(api.act).toHaveBeenCalledWith("pets", {
+      action: "include",
+      ids: ["tm_cat"],
+      payload: {},
+    });
+    expect(await detail.findByText("Done: done")).toBeVisible();
+    expect(api.elementIndex).toHaveBeenCalledTimes(2);
+    expect(api.element).toHaveBeenCalledTimes(2);
+  });
+
+  test("shows_when_the_detail_cannot_be_loaded", async () => {
+    const api = fakeApi();
+    api.element = () => Promise.reject(new Error("unknown element 'cn_leash'"));
+    const { user } = setup(ALICE, api);
+    await user.click(await screen.findByRole("button", { name: "leash" }));
+    expect(await screen.findByRole("alert")).toHaveTextContent("unknown element 'cn_leash'");
   });
 });
