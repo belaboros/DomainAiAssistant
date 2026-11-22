@@ -99,10 +99,10 @@ Tick a box only once its check passes.
 
 ### Optional and closing
 - [x] T30 · [release] JSON-LD twin of `ontology.ttl` in both releases, deterministic, listed in the manifest (FR-37, `could`). — covers: FR-37 — check: `pytest …/test_release_jsonld.py` — note: `release.rdf.build_jsonld` compacts the graph with the Turtle's prefixes plus `ont:` for the base IRI as `@context`, then sorts nodes by `@id`, values and keys, so the bytes do not depend on set order; one node per line keeps the pet raw release at 320 KB (an indented file was 561 KB, over the 500 KB large-file hook) and diffs node by node; the shared contract `ontology` and the thin `ontology-pets-and-house-rules` go to 0.2.0 (a new file is a minor version; `manifest.schema.json` requires it, `vocab.ttl` carries the version); the raw release of `data/ontology-pets-and-house-rules/` was rebuilt to add it
-- [ ] T31 · [system: docs]
+- [x] T31 · [system: docs]
   - Root `architecture.md`: §1 purpose, §2 context (users, the Claude API, git), §6 the flow (ontology-builder publishes → future readers), §7 cross-cutting rows for errors, logging and security.
   - Refresh the app `architecture.md` diagrams and flows to match the code.
   - Run `/arch-metrics` for the system and the app.
   - Update the indexes.
 
-  — covers: rule 5, rule 11 — check: `tools/monorepo/system-map.sh --check`; `/arch-metrics` result `pass`
+  — covers: rule 5, rule 11 — check: `tools/monorepo/system-map.sh --check`; `/arch-metrics`: no `fail` and no new violations against the previous snapshot (was `pass`; changed in Q57) — note: 2026-11-22, the system and ontology-builder are `warn`, generate-pets-and-building-user-manual `pass`; the warnings are all in the 2026-11-21 baseline: SDP workflows → ingestion (ontology-builder/ADR-0009), Ce 5 (ingestion) and 6 (workflows), and D > 0.5 for the concrete stable components model, store, llm and vcs (and for ontology-builder at system level); measured edges match the declared ones

@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-22",
+  "commit": "612bb988d860ab89d03ff5001a08442b5700c010",
+  "languages": [
+    "js-ts",
+    "python"
+  ],
+  "functions": {
+    "count": 1316,
+    "ccAvg": 2.6,
+    "ccMax": 10,
+    "overWarn": []
+  },
+  "components": [
+    {
+      "name": "generate-pets-and-building-user-manual",
+      "ca": 0,
+      "ce": 0,
+      "instability": 0.0,
+      "relationalCohesion": null,
+      "abstractness": null,
+      "distance": null,
+      "externalDeps": []
+    },
+    {
+      "name": "ontology-builder",
+      "ca": 0,
+      "ce": 0,
+      "instability": 0.0,
+      "relationalCohesion": 2.91,
+      "abstractness": 0.015,
+      "distance": 0.985,
+      "externalDeps": [
+        "__future__",
+        "anthropic",
+        "collections",
+        "contextlib",
+        "dataclasses",
+        "datetime",
+        "decimal",
+        "enum",
+        "fastapi",
+        "hashlib",
+        "itertools",
+        "jinja2",
+        "json",
+        "markdown_it",
+        "markupsafe",
+        "math",
+        "os",
+        "pathlib",
+        "pydantic",
+        "rdflib",
+        "re",
+        "secrets",
+        "shutil",
+        "subprocess",
+        "tempfile",
+        "threading",
+        "typer",
+        "types",
+        "typing",
+        "unicodedata",
+        "uvicorn",
+        "yaml"
+      ]
+    }
+  ],
+  "dependencies": [],
+  "cycles": [],
+  "violations": [],
+  "result": "warn"
+}

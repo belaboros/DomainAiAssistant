@@ -457,3 +457,17 @@ Append one entry per question, oldest first. Never delete entries.
 **Options offered:** Run all three (Recommended): dog, cat, building rules in the eval's order, one commit per run / Dog manual only / Not now
 **A:** "Run all three (Recommended)"
 **Effect:** The three manuals are ingested live, one run and one commit each.
+
+### 2026-11-22 · implement · Q57
+**Asked by:** Claude
+**Q:** [implement · T31 deviation] T31's check asks for an /arch-metrics result of `pass`. The result is `warn` for the system and for ontology-builder, and the same warnings were already in the 2026-11-21 baseline, so none are new: the SDP edge workflows → ingestion (I 0.667 → 0.833, an edge ADR-0009 accepted), Ce 5 and 6 for ingestion and workflows, and D > 0.5 for the stable, concrete Python components (model, store, llm, vcs). Nothing is `fail`. Reaching `pass` would mean a refactor that isn't in the plan (e.g. Protocols to raise abstractness, splitting workflows). How should I go on?
+**Options offered:** Accept warn (Recommended): change T31's check to "no fail, no new violations" and record the warnings / Refactor to pass: plan change with app ADRs / Stop here: leave T31 unticked
+**A:** "Accept warn (Recommended)"
+**Effect:** T31's check is now "/arch-metrics: no `fail`, no new violations against the previous snapshot"; the remaining warnings are listed in the T31 note.
+
+### 2026-11-22 · implement · Q58
+**Asked by:** Claude
+**Q:** [implement · commits] T30 (JSON-LD twin, contract 0.2.0, rebuilt raw release) and the T31 docs are on the branch spec/0002-t30-t31 and not committed yet. Make one commit per task?
+**Options offered:** Commit per task (Recommended): two commits, nothing pushed / Don't commit
+**A:** "Commit per task (Recommended)"
+**Effect:** T30 and T31 are committed separately on spec/0002-t30-t31; nothing is pushed.
