@@ -450,3 +450,10 @@ Append one entry per question, oldest first. Never delete entries.
 **Options offered:** belaboros (the user's GitHub login) / admin (a neutral role-style handle)
 **A:** "belaboros"
 **Effect:** The ontology is created and ingested as `belaboros`.
+
+### 2026-11-22 · implement · Q56
+**Asked by:** Claude
+**Q:** [implement · T29 live ingestion] The ontology `pets-and-house-rules` is created and committed (759da11). Ingesting the three manuals with claude-opus-5-5 is estimated at dog $2.00, cat $1.56, building rules $1.70 ($5.26 total; the eval's identical run cost about $3.61). Each ingestion commits `data/ontology-pets-and-house-rules/`. Run all three?
+**Options offered:** Run all three (Recommended): dog, cat, building rules in the eval's order, one commit per run / Dog manual only / Not now
+**A:** "Run all three (Recommended)"
+**Effect:** The three manuals are ingested live, one run and one commit each.
