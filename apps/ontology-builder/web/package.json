@@ -8,7 +8,7 @@
     "build": "tsc -p tsconfig.json && vite build",
     "gen:api": "node scripts/gen-api.ts",
     "test": "vitest run --passWithNoTests",
-    "e2e": "playwright test --pass-with-no-tests",
+    "e2e": "npm run build && playwright test",
     "typecheck": "tsc -p tsconfig.json"
   },
   "devDependencies": {

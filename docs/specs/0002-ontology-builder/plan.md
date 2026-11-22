@@ -239,11 +239,11 @@ Back-end tests live in `apps/ontology-builder/tests/`, front-end tests in `apps/
 | AC-12 | `test_model_validation.py::test_every_element_has_level_and_reason` (fixture), `::test_unknown_level_is_invalid` |
 | AC-13 | `test_extraction_ignorable.py::test_bodza_egypt_cicero_ignorable_with_categories`, `::test_no_element_cites_ignorable_units`, `::test_not_ignorable_runs_extraction_after_confirm` (fixture); `web/src/dialogs/NotIgnorableDialog.test.tsx::extraction_runs_after_the_cost_confirmation`; `eval` reports the live score and the traps |
 | AC-14 | `test_model_extensibility.py::test_new_optional_concept_slot_keeps_records_valid_and_releases_build` |
-| AC-15 | `web/src/review/ElementDetail.test.tsx::evidence_rendered_before_proposal` |
+| AC-15 | `web/src/review/ElementDetail.test.tsx::evidence_rendered_before_proposal`; `web/e2e/save.spec.ts` (in the browser) |
 | AC-16 | `test_governance_actions.py::test_action_records_decision[include,exclude,correct,level,merge,split,reassign]`; `web/src/review/Actions.test.tsx::each_action_calls_api` |
 | AC-17 | `test_governance_bulk.py::test_bulk_level3_on_20_records_20_decisions`, `::test_bulk_approve_admin_only`; `web/src/review/BulkBar.test.tsx` |
 | AC-18 | `test_api_elements.py::test_filter_rule_level1_building_rules`, `::test_search_lead_matches_label_definition_evidence`; `web/src/review/filter.test.ts` (same cases on the client filter) |
-| AC-19 | `web/src/review/StatusBadge.test.tsx::each_status_has_distinct_colour_class_and_label` |
+| AC-19 | `web/src/review/StatusBadge.test.tsx::each_status_has_distinct_colour_class_and_label`; `web/e2e/save.spec.ts` (computed colours) |
 | AC-20 | `test_user_statements.py::test_statement_unit_fields`, `::test_edit_keeps_id_adds_revision_changes_hash`; `web/src/dialogs/StatementDialog.test.tsx` |
 | AC-21 | `test_authoring.py::test_concept_without_definition_from_statement_is_included`, `::test_authoring_without_evidence_refused`; `web/src/dialogs/AuthorDialog.test.tsx::concept_without_definition_from_a_statement`, `::evidence_is_required` |
 | AC-22 | `test_governance_transitions.py::test_allowed_transitions`, `::test_forbidden_transition_refused` (parametrised over the table above) |

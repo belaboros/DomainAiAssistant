@@ -43,6 +43,14 @@ jobs:
         run: npm run boundaries
       - name: Tests (vitest, every workspace)
         run: npm test
+      # The ontology-builder e2e tests serve the GUI from its Python back end (plan 0002, T27).
+      - uses: astral-sh/setup-uv@1db35dd8eee11c5894872e0b383ae6c406cf738d # v10.4.0
+        with:
+          enable-cache: false
+      - name: Install the locked Python workspace
+        run: uv sync --locked
+      - name: Install the Playwright browser
+        run: npx --no-install playwright install --with-deps chromium
       - name: End-to-end tests (playwright, every workspace)
         run: npm run e2e
       - name: Dependency audit
