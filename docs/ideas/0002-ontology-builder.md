@@ -415,3 +415,38 @@ Append one entry per question, oldest first. Never delete entries.
 **Options offered:** Running state, then record (Recommended): while the request runs, the dialog shows "Running…" with the confirmed counts; afterwards the run record from `GET …/runs/{id}` (status, model, tokens used, start and end, skipped items) and the commit or hook output; no back-end change / Live progress (async run): `POST …/ingestions` starts the run in the background and the GUI polls `GET …/runs/{id}` for batches done/total; changes the ingestion API, threading and locking (bigger plan change, likely an ADR)
 **A:** "Running state, then record (Recommended)"
 **Effect:** The ingest dialog shows a running state during the synchronous run, then the run record and the commit. No back-end change; noted in T26.
+
+### 2026-11-22 · implement · Q51
+**Asked by:** Claude
+**Q:** [implement · live LLM cost] T28 runs `ontology-builder eval` live: it ingests the three pet manuals (37 documents, 58 source units) with the model in CLAUDE_MODEL. The estimate is about 329k input and up to 197k output tokens, roughly $5.26. Should I run it now?
+**Options offered:** Run it (Recommended): spend about $5.26 on one live eval run, then review the report / Use a cheaper model: run eval with `--model` set to a cheaper model / Not now: skip T28 and move on to T30
+**A:** "Run it (Recommended)"
+**Effect:** One live eval run with the configured model.
+
+### 2026-11-22 · implement · Q52
+**Asked by:** Claude
+**Q:** [implement · T28 report review] The live eval with claude-opus-5-5 scored 61/61 (ignorable 4/4, kept content 4/4, leash/lead 3/3, concepts 25/25, rules 19/19, traps 6/6), using 388k input and 103k output tokens (about $3.61; estimate $5.26). Not scored: some concepts appear under several unmerged labels ("pet textile" under 4 labels, "residual waste" / "residual waste bin") and some rules appear twice ("Rabies vaccination renewed every year"). T28 only asks to change the prompts where the leash/lead split or the traps fail, and none failed. How should I go on?
+**Options offered:** Accept, tick T28 (Recommended): keep prompts and fixtures, commit the report, duplicates are left for human review in the GUI / Iterate on duplicates: tighten pass 2, re-record and re-curate fixtures, eval again (about $4 more) / Accept, note duplicates: tick T28 and note the duplicates as a follow-up idea
+**A:** "Accept, tick T28 (Recommended)"
+**Effect:** Prompts and fixtures unchanged; the report `apps/ontology-builder/docs/evaluations/2026-11-22-claude-opus-5-5.md` is kept; T28 ticked.
+
+### 2026-11-22 · implement · Q53
+**Asked by:** Claude
+**Q:** [implement · next task] T28 is done (report saved, not committed yet). T29 creates `data/ontology-pets-and-house-rules/` with the user as domain admin: write the scope record together, ingest the three manuals live (about $3.60, judging by the eval), and commit. How should I go on?
+**Options offered:** Start T29 now (Recommended): draft the scope record from the eval's pet_scope.yaml, then show the estimate before ingesting / Commit T28 first: run /commit-push-merge-feature-branch, then T29 in a fresh session / Skip to T30: the JSON-LD twin first
+**A:** "Start T29 now (Recommended)"
+**Effect:** T29 started in this session.
+
+### 2026-11-22 · implement · Q54
+**Asked by:** Claude
+**Q:** [implement · T29 scope record] The real ontology `pets-and-house-rules` needs a scope record (purpose, readers, level 1–3 guidance, ignorable examples, base IRI). The draft is the eval's scope record (`evaluation/pet_scope.yaml`), which scored 61/61. Which scope record should be used?
+**Options offered:** Use the eval draft (Recommended) / Edit the draft
+**A:** "Use the eval draft (Recommended)"
+**Effect:** The ontology is created with the eval's scope record unchanged.
+
+### 2026-11-22 · implement · Q55
+**Asked by:** Claude
+**Q:** [implement · T29 admin handle] Which handle should be recorded as the domain admin who creates the ontology (it lands in committed decision records; the repo is public, so no email)?
+**Options offered:** belaboros (the user's GitHub login) / admin (a neutral role-style handle)
+**A:** "belaboros"
+**Effect:** The ontology is created and ingested as `belaboros`.
