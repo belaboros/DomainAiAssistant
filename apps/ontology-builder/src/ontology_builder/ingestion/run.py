@@ -25,6 +25,7 @@ from ontology_builder.extraction import (
     extract_document,
     resolve_terms,
 )
+from ontology_builder.ingestion.extend import extend_existing
 from ontology_builder.ingestion.plan import (
     Batch,
     IngestionRefusedError,
@@ -46,6 +47,7 @@ from ontology_builder.model import (
     Run,
     RunStatus,
     SourceUnit,
+    Term,
     validate_record,
 )
 from ontology_builder.store import DatasetFiles, DatasetStore
@@ -211,6 +213,14 @@ def _existing_concepts(store: DatasetStore) -> list[Concept]:
     ]
 
 
+def _existing_terms(store: DatasetStore) -> list[Term]:
+    return [
+        element
+        for element in store.read().elements().values()
+        if isinstance(element, Term) and element.status not in _NOT_IN_PLAY
+    ]
+
+
 def _pass2(
     store: DatasetStore,
     folder: RunFolder,
@@ -226,6 +236,7 @@ def _pass2(
         elements=[element for document in documents for element in document.elements],
         units={unit.id: unit for unit in plan.units},
         existing=_existing_concepts(store),
+        existing_terms=_existing_terms(store),
     )
     result = resolve_terms(client, found)
     folder.save_pass2(result)
@@ -257,13 +268,16 @@ def _write(
 ) -> None:
     """Write everything of the run in one transaction (one atomic swap)."""
     verdicts = {unit: verdict for d in documents for unit, verdict in d.verdicts.items()}
+    previous = store.read().elements()
+    extended, decisions = extend_existing(store, plan, terms.extended, previous)
     with store.transaction(hooks.after_swap) as files:
         if plan.corpus is not None:
             _write_corpus(files, plan, plan.corpus, verdicts)
         else:
             _write_kept(store, files, plan)
-        for element in terms.elements:
+        for element in [*terms.elements, *extended]:
             files.write_element(element)
+        files.append_decisions(decisions)
         files.write_run(run)
         if hooks.before_swap is not None:
             hooks.before_swap(files)

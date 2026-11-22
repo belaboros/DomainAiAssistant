@@ -1,6 +1,6 @@
 # 0002 · OntologyBuilder: build leveled ontologies from text corpora and human input
 
-- **Status:** done
+- **Status:** in-progress
 - **Scope:** system
 - **Captured:** 2026-11-20
 - **Spec:** [0002-ontology-builder](../specs/0002-ontology-builder/spec.md) (approved) · [plan](../specs/0002-ontology-builder/plan.md) (approved)
@@ -485,3 +485,17 @@ Append one entry per question, oldest first. Never delete entries.
 **Options offered (multi-select):** Contract wording (2) / Unify require_scope (3) / Plan test names (4) / No-op assert (5)
 **A:** all four
 **Effect:** Fixed as follow-up T32 to T35 in tasks.md.
+
+### 2026-11-22 · implement · Q61
+**Asked by:** Claude
+**Q:** [Claude] Bug found after the review: the user saw no taxonomy edges in `level-1.md`. When a run's new concept is merged into a concept already in the ontology (e.g. the building manual's "dog → pet" into the existing "dog" from the dog run), `extraction/terms_apply.py::_fold_merged` drops its parents and evidence silently. So dog and cat have no parent "pet", and level-1.md's taxonomy has no edges. (Also by design: level-N.md draws only is-a edges whose two ends are in the level.) How should a run treat a concept that already exists?
+**Options offered:** Add, mark for review (Recommended): the run adds the new evidence and parents to the existing concept and records a decision; an approved concept goes back to `included` and the governed release keeps the approved version / Keep as a new concept: no merge into existing concepts, a reviewer merges by hand / Only report the loss: keep the rule, list dropped parents and evidence in the run's skipped items
+**A:** "Add, mark for review (Recommended)"
+**Effect:** Spec FR-11 extended, app ADR added, tasks T36–T37 added; spec 0002 reopened.
+
+### 2026-11-22 · implement · Q62
+**Asked by:** Claude
+**Q:** [Claude] How to repair `data/ontology-pets-and-house-rules/` once the code is fixed?
+**Options offered:** Re-ingest from scratch (Recommended): recreate the ontology and ingest the three manuals again (about $3.60; estimate shown first; nothing has been reviewed yet) / Fix by hand in the GUI / Leave it for now
+**A:** "Re-ingest from scratch (Recommended)"
+**Effect:** Task T37: recreate the ontology with the same scope record and re-ingest the three manuals live after the estimate is confirmed.

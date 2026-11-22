@@ -52,11 +52,15 @@ no change.
 
 @dataclass(frozen=True)
 class TermInput:
-    """What pass 2 resolves: the new elements of a run and the concepts already in the ontology."""
+    """What pass 2 resolves: the new elements of a run and the concepts already in the ontology.
+
+    ``existing_terms`` are not shown to the LLM; a run's term with one of their labels extends it.
+    """
 
     elements: Sequence[Element]
     units: Mapping[str, SourceUnit]
     existing: Sequence[Concept] = ()
+    existing_terms: Sequence[Term] = ()
 
 
 @dataclass

@@ -8,4 +8,4 @@ This table indexes **every** spec, at both levels.
 
 | #  | Spec | Scope | Status |
 |----|------|-------|--------|
-| [0002](0002-ontology-builder/spec.md) | OntologyBuilder: build leveled ontologies from Markdown corpora and user statements, with review, governance and governed + raw releases | system | implemented |
+| [0002](0002-ontology-builder/spec.md) | OntologyBuilder: build leveled ontologies from Markdown corpora and user statements, with review, governance and governed + raw releases | system | approved · plan approved · T36–T37 open |

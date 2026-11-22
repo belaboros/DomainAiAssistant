@@ -250,7 +250,8 @@ def test_new_concept_merges_into_an_existing_concept() -> None:
     group = {"concept": C_EXISTING, "preferred_label": "dog", "terms": ["dog"], "merge": [C_DOG]}
     result, _ = _run({"synonym_groups": [group]}, existing=[EXISTING_DOG])
     ids = {e.id for e in result.elements}
-    assert DOG.id not in ids and EXISTING_DOG.id not in ids  # the existing record is not touched
+    assert DOG.id not in ids and EXISTING_DOG.id not in ids
+    assert result.extended == []  # same evidence, no parents: nothing to add to the existing dog
     assert result.merged == {DOG.id: EXISTING_DOG.id}
     assert _get(result, RELATION.id).subject == EXISTING_DOG.id
     assert [s.reason for s in result.skipped] == ["no term with the label 'dog'"]
@@ -367,3 +368,53 @@ def test_pet_resolution_merges_duplicates_and_keeps_references(pet_terms: Any) -
             assert {element.subject, element.object} <= ids
         if isinstance(element, Term):
             assert {m.concept for m in element.mentions or []} <= ids
+
+
+# ---------- across runs: extending what is already in the ontology (T36, ADR-0012) ----------
+
+PET = _concept(6, "pet", 5)
+NEW_DOG = _concept(1, "dog", 5, parents=[PET.id])
+DOG_TERM = _term(4, "dog", [(5, 1)])
+OLD_DOG = _concept(9, "dog", 1, status="approved")
+OLD_DOG_TERM = _term(9, "Dog", [(1, 9)])
+# aliases: the run's concepts (C1 dog, C2 pet), then the existing one (C3)
+
+
+def _extend_run(*existing: Element) -> Any:
+    group = {"concept": "C3", "preferred_label": "dog", "terms": ["dog"], "merge": ["C1"]}
+    found = TermInput(
+        elements=[NEW_DOG, PET, DOG_TERM],
+        units=_units(),
+        existing=[e for e in existing if isinstance(e, Concept)],
+        existing_terms=[e for e in existing if isinstance(e, Term)],
+    )
+    return resolve_terms(ScriptedClient({"synonym_groups": [group]}), found)
+
+
+def test_merge_into_an_existing_concept_extends_it() -> None:
+    """The parents and evidence of the merged concept are kept on the existing one."""
+    result = _extend_run(OLD_DOG)
+    assert {e.id for e in result.elements} == {PET.id, DOG_TERM.id}
+    [dog] = result.extended
+    assert dog.id == OLD_DOG.id
+    assert dog.parents == [PET.id]
+    assert [e.unit for e in dog.evidence] == [U[1], U[5]]
+    assert (dog.label, dog.status, dog.level) == (OLD_DOG.label, OLD_DOG.status, OLD_DOG.level)
+    assert _mentions(_get(result, DOG_TERM.id)) == [(U[5], OLD_DOG.id)]
+
+
+def test_term_with_an_existing_label_extends_the_existing_term() -> None:
+    """One term record per label across runs: the run's "dog" goes into the existing "Dog"."""
+    result = _extend_run(OLD_DOG, OLD_DOG_TERM)
+    assert {e.id for e in result.elements} == {PET.id}
+    extended = {e.id: e for e in result.extended}
+    assert set(extended) == {OLD_DOG.id, OLD_DOG_TERM.id}
+    term = extended[OLD_DOG_TERM.id]
+    assert term.label == "Dog"
+    assert _mentions(term) == [(U[1], OLD_DOG.id), (U[5], OLD_DOG.id)]
+    assert [e.unit for e in term.evidence] == [U[1], U[5]]
+
+
+def test_nothing_merged_into_existing_extends_nothing() -> None:
+    result, _ = _run(_answer(), existing=[EXISTING_DOG])
+    assert result.extended == []

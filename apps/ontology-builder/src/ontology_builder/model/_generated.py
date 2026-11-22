@@ -195,6 +195,10 @@ class DecisionAction(StrEnum):
     author = "author"
     confirm_ignorable = "confirm_ignorable"
     not_ignorable = "not_ignorable"
+    extend = "extend"
+    """
+    A run added evidence, parents or mentions to an element already in the ontology (ADR-0012).
+    """
     edit_scope = "edit_scope"
     publish = "publish"
 

@@ -48,6 +48,8 @@ class TermResolution:
     skipped: list[SkippedItem] = field(default_factory=list)
     input_tokens: int = 0
     output_tokens: int = 0
+    extended: list[Element] = field(default_factory=list)
+    """Concepts and terms already in the ontology that the run added to (ADR-0012)."""
 
 
 class _Caller:
@@ -105,8 +107,9 @@ def resolve_terms(client: LlmClient, found: TermInput) -> TermResolution:
         reason = "no usable answer after one retry: " + caller.failures[-1]
         result.skipped = [SkippedItem(where=WHERE, item="term resolution", reason=reason)]
         return result
-    existing = {concept.id: concept for concept in found.existing}
+    existing = [*found.existing, *found.existing_terms]
     applied = apply_answer(prompt, found.elements, existing, answer)
     result.elements, result.merged = applied.elements, applied.merged
+    result.extended = applied.extended
     result.skipped = reported + applied.skipped
     return result

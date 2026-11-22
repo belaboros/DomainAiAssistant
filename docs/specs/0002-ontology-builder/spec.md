@@ -1,6 +1,6 @@
 # Spec 0002 · OntologyBuilder
 
-- **Status:** implemented
+- **Status:** approved
 - **Scope:** system
 - **Idea:** [0002-ontology-builder](../../ideas/0002-ontology-builder.md)
 - **Last updated:** 2026-11-22
@@ -66,7 +66,7 @@ Roles: **user** (reviews, corrects and authors) and **domain admin** (does every
 |------|-------------|----------|
 | FR-9 | The LLM proposes **statements** (atomic claims) from source units, and from them **terms**, **concepts** (label, definition if the text gives one), **relations** (between concepts, with domain, range and cardinality where stated), **rules** (who must or must not do what, under which condition, with any limit or cardinality, e.g. "a dog on a lead of at most 2 m in the stairwell") and **properties** of any of these. | must |
 | FR-10 | Every proposed element cites at least one source unit as evidence, by ID. An element without evidence is never created by ingestion. | must |
-| FR-11 | The LLM proposes **synonyms**: different terms that name one concept (e.g. "leash" in the dog manual and "lead" in the building rules), as a preferred label plus alternative labels. | must |
+| FR-11 | The LLM proposes **synonyms**: different terms that name one concept (e.g. "leash" in the dog manual and "lead" in the building rules), as a preferred label plus alternative labels. When a later ingestion finds a concept or term that is already in the ontology, its evidence, parents and mentions are added to the existing element, with a decision; an approved element goes back to `included` (FR-24) (Q61). | must |
 | FR-12 | The LLM proposes **senses** for homonyms: one term that names different concepts in different places (e.g. "lead" the rope vs "lead" the owner's role). Each mention is resolved to one concept, so facts attach to the right concept (the 2 m lead rule attaches to the leash concept, not to the role). | must |
 | FR-13 | The LLM proposes a level for every element: `level-1`, `level-2`, `level-3` or `ignorable`, guided by the scope record and the level definitions of the idea, with a short reason. | must |
 | FR-14 | The LLM proposes whole source units as `ignorable` with a reason category (instance-level/anecdote, generic or historical story, quote or motivational text, procedure/step list, other). Nothing is extracted from a unit proposed ignorable. If a user marks such a unit as not ignorable, extraction runs on it on demand (after the cost confirmation of FR-6). | must |
