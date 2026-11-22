@@ -1,0 +1,12 @@
+base_iri: 'urn:domain-ai-assistant:ontology:pets-and-house-rules:'
+ignorable_examples:
+- Stories about one particular dog, cat or owner (names, places, memories)
+- History or folklore about animals
+- Quotes and motivational paragraphs that state no rule
+level_guidance:
+  level_1: 'The core of the domain: dog, cat, owner, resident, house management, and the rules every pet owner in the complex must know (registration, the lead, waste).'
+  level_2: 'What an owner needs on a normal day: feeding, walks, vaccination, grooming, leaving the pet alone, the shared spaces.'
+  level_3: 'Special cases and error scenarios: puppies and kittens, dangerous breeds, moving house, travel, complaints and enforcement.'
+name: pets-and-house-rules
+purpose: Explain what it takes to own a dog or a cat in a residential complex, and which house rules apply to pets and their owners.
+readers: People who consider getting a dog or a cat, pet owners living in the complex, and the house management.
